@@ -1,0 +1,35 @@
+
+/* ::::: http://smallcontent.ebsco-content.com/interfacefiles/14.1.0.78/css/abstractdisplay/abstractdisplaypage.css ::::: */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0px; padding: 0px; border: 0px none; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none outside none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: none; }
+table { border-collapse: collapse; border-spacing: 0px; }
+.clear:before, .clear:after { content: " "; display: block; height: 0px; overflow: hidden; }
+.clear:after { clear: both; }
+body { font-family: Helvetica,Arial,sans-serif; color: rgb(51, 51, 51); font-size: 0.62em; padding: 2.5em; min-width: 700px; }
+li, p { font-size: 1.2em; line-height: 1.75em; display: block; }
+p { margin-bottom: 20px; }
+li { display: block; padding: 0px 0px 5px; }
+a:link, a:visited { color: rgb(0, 91, 198); text-decoration: none; }
+a:link:hover, a:link:focus { text-decoration: underline; }
+strong { font-weight: bold; color: rgb(0, 0, 0); padding-right: 10px; }
+.button { padding: 5px 15px; margin: 5px 3px; color: rgb(86, 86, 86); font-family: Verdana,Arial,sans-serif; font-size: 1.125em; font-weight: bold; text-decoration: none ! important; background: url('gradient-x.png') repeat-x scroll 0px 50% rgb(230, 228, 228); border: 1px solid rgb(197, 197, 196); border-radius: 5px; clear: both; cursor: pointer; display: inline-block; }
+.login .primary-action, .login .primary-action:link { color: rgb(0, 0, 0) ! important; background-color: rgb(255, 195, 1) ! important; border-color: rgb(232, 121, 13) ! important; font-size: 1.5em; }
+h1 { font-family: Georgia,Serif; color: rgb(15, 97, 163); font-size: 2.5em; line-height: 1.5em; padding-bottom: 20px; font-weight: normal; }
+.meta { padding-bottom: 20px; }
+.abstract { padding-bottom: 20px; }
+.abstract li cite, .abstract li strong { display: block; }
+.abstract li cite { padding-top: 20px; font-style: normal; }
+.login { padding-bottom: 20px; display: table; width: 100%; }
+.login-row { display: table-row; width: 100%; }
+.login-cell { width: 44%; display: table-cell; padding: 20px; text-align: left; vertical-align: middle; min-width: 300px; }
+.login-cell .button { position: relative; }
+.login-cell:first-child { text-align: right; border-right: 1px solid rgb(231, 231, 231); }
+.footer { padding-top: 20px; text-align: center; border-top: 1px solid rgb(231, 231, 231); font-size: 1.125em; }
+.footer a { border-left: 1px dotted rgb(51, 51, 51); padding: 0px 10px; }
+.footer a:first-child { border-left: medium none; }
+.footer p { margin-top: 1em; }

@@ -1,0 +1,266 @@
+ORIGINAL ARTICLE
+
+Four Types of Effect Modification
+A Classification Based on Directed Acyclic Graphs
+Tyler J. VanderWeele* and James M. Robins†
+
+Abstract: It is possible to classify the types of causal relationships that can give rise to effect modiﬁcation on the risk difference scale by expressing the conditional causal risk-difference as a sum of products of stratum-speciﬁc risk differences and conditional probabilities. Directed acyclic graphs clarify the causal relationships necessary for a particular variable to serve as an effect modiﬁer for the causal risk difference involving 2 other variables. The directed acyclic graph causal framework thereby gives rise to a 4-fold classiﬁcation for effect modiﬁcation: direct effect modiﬁcation, indirect effect modiﬁcation, effect modiﬁcation by proxy and effect modiﬁcation by a common cause. We brieﬂy discuss the case of multiple effect modiﬁcation relationships and multiple effect modiﬁers as well as measures of effect other than that of the causal risk difference.
+(Epidemiology 2007;18: 561–568)
+Directed acyclic graphs have been used as causal diagrams in epidemiologic research for a variety of purposes. Directed acyclic graphs have been used to represent causal relations among variables1–3; they have been used extensively to determine the variables for which it is necessary to control for confounding to estimate causal effects1,2,4,5; more recently, they have been used by Herna´n et al6 to provide a classiﬁcation of the types of causal relationships that can give rise to selection bias. In this paper, we follow the work of Herna´n et al by using directed acyclic graphs to provide a classiﬁcation of the types of causal relationships that can give rise to effect modiﬁcation. Speciﬁcally, we consider the possible relationships between an effect modiﬁer variable, the variable constituting the cause, and the variable constituting the effect. Doing so yields a structural classiﬁcation of effect modiﬁcation; the classiﬁcation is structural in that it makes
+Submitted 24 July 2006; accepted 25 May 2007. From the *Department of Health Studies, University of Chicago, Chicago,
+Illinois; and †Departments of Epidemiology and Biostatistics, Harvard School of Public Health, Cambridge, Massachusetts. Tyler VanderWeele was supported by a predoctoral fellowship from the Howard Hughes Medical Institute. Editors’ note: A commentary on this article appears on page 569. Correspondence: Tyler J. VanderWeele Department of Health Studies, University of Chicago 5841 S. Maryland Ave., MC 2007. Chicago, IL 60637. E-mail: vanderweele@uchicago.edu. Copyright © 2007 by Lippincott Williams & Wilkins ISSN: 1044-3983/07/1805-0561 DOI: 10.1097/EDE.0b013e318127181b
+Epidemiology • Volume 18, Number 5, September 2007
+
+reference to the structure of the causal directed acyclic graph. We ﬁrst provide some discussion of the various measures of effect used to assess effect modiﬁcation. We will then focus on the causal risk difference as a measure of effect by which effect modiﬁcation is assessed (though much of the discussion applies also to other measures of effect as well) and we use directed acyclic graphs to provide a classiﬁcation of different types of effect modiﬁcation. Extensions to conditioning on multiple items and to scales other than the risk difference are discussed at the paper’s conclusion and in Appendix 1.
+EFFECT MODIFICATION Epidemiologists apply the term “effect modiﬁcation” to indicate that the effect of one variable on another varies across strata of a third. There are many different measures of effect and, thus many different measures by which a variable may be an effect modiﬁer for the relationship between a cause and an effect. There has been considerable discussion as to which measure of effect one might most naturally use in assessing effect modiﬁcation. The risk difference, the risk ratio and the odds ratio are all frequently used in assessing effect modiﬁcation. In general, different measures of effect will be useful in different contexts. For example, the risk difference which, within the context of effect modiﬁcation, measures departures from the additivity of effects, is arguably of greatest public health importance,7–9 whereas the odds ratio is the natural measure of choice for case-control studies. Here we will focus primarily on the causal risk difference as our measure of choice. By using the causal risk difference, the various relationships between an effect modiﬁer, the variable constituting the cause, and the variable constituting the effect are made particularly clear. Although we focus on the causal risk difference, much of the discussion applies also to other measures of effect. It should also be noted that effect modiﬁcation, whether on the causal risk difference scale or any other scale, falls under the broader idea of “interaction.” The relationship between effect modiﬁcation and different notions of interaction in a counterfactual framework has been developed elsewhere.3,10–12 These issues are outside the scope of this paper. Much of this literature concerns individual-level interaction. Directed acyclic graphs allow for the graphical representation of population-level causal relationships and thus the causal risk difference (or, alternatively, causal risk ratio or odds ratio) provides the most appropriate focus for our analysis.
+561
+
+VanderWeele and Robins
+
+Epidemiology • Volume 18, Number 5, September 2007
+
+Before proceeding, one further issue merits discussion. It is often commented that conditioning on intermediate variables between the exposure or intervention variable and the outcome variable will in general bias estimates of the causal effect.13–17 In considering which variables may act as effect modiﬁers, we will therefore restrict our attention to variables that are not a consequence of the exposure or intervention variable under consideration. A variable Q will thus be said to be an effect modiﬁer on the causal risk difference scale of the relationship between some exposure E and some outcome D if the following 2 conditions hold. One, Q must not be affected by E. Two, there must be 2 levels of E, e0 and e1, such that the difference between the expected value of D over the population, intervening to set the exposure to e1 as compared with intervening to set the exposure to e0, varies across strata of Q.
+More formally, let DEϭe denote the counterfactual variable D intervening to set the exposure variable E, possibly contrary to fact, to level e. Then, the causal effect of E on D comparing 2 levels of E, e0 and e1, is deﬁned simply as the causal risk difference ‫͓ޅ‬DEϭe1͔ Ϫ ‫͓ޅ‬DEϭe0͔. We thus say that a variable Q is an effect modiﬁer for the causal risk difference of E on D if Q is not affected by E and if there exist 2 levels of E, e0 and e1, such that ‫͓ޅ‬DEϭe1 | Q ϭ q͔ Ϫ ‫͓ޅ‬DEϭe0 | Q ϭ q͔ is not constant in q. With this deﬁnition in place, we may proceed to classify different types of effect modiﬁcation by using causal directed acyclic graphs.
+CAUSAL DIRECTED ACYCLIC GRAPHS A directed acyclic graph is composed of variables (nodes) and arrows between nodes (directed edges) such that it is not possible to start at any node, follow the directed edges in the arrowhead direction and end up back at the same node. A causal directed acyclic graph is one in which the arrows can be interpreted as causal relationships and in which all common causes of any pair of variables on the graph are also included on the graph. Thus, if a graph has nodes V1, . . . ,Vn and some variable U is a common cause of say V1 and V2, then U must be included on the graph for the graph to be a causal directed acyclic graph. If, on the other hand, U were only a cause of V1 or only a cause of V2 but not both, then U could be included on the graph or it could be left out. Its inclusion would not be necessary for the graph to be a causal directed acyclic graph. That the graph’s edges are directed ensures that causes precede effects; that the graph is acyclic ensures that no variable can be its own cause. If there is a directed edge from A to B then A is said to be a parent of B and B is said to be a child of A. If there are a series of one or more directed edges such that it is possible to begin at node A, follow the directed edges in the arrowhead direction, and end at another node B, then A is said to be an ancestor of B and B is said to be a descendent of A. If A is a parent of B, then A is a direct cause of B; if A is an ancestor but not a parent of B, then A is said to be an indirect cause of B (through the intermediate variables between A and B). Additional details can be found in the work of Greenland et al.2 Greater formalization is provided by Pearl.1
+562
+
+Statistical associations on causal directed acyclic graphs can arise in a number of ways. Two variables, A and B, may be statistically associated if A is either a direct or indirect cause of B, or if B is a direct or indirect cause of A. Even if neither is the cause of the other, the variables A and B may still be statistically associated if they have some common cause C. Finally, the variables A and B may be statistically associated if they have a common effect K and the association is computed within the strata of K; that is to say, A and B will in general be statistically associated given K, if K is a common effect of A and B. We will graphically represent conditioning by placing a box around the variable on the graph upon which we are conditioning.5
+More formally, the statistical association between variables can be determined by blocked and unblocked paths. A path is a sequence of nodes connected by edges regardless of arrowhead direction. A directed path is a path that follows the edges in the direction of the graph’s arrows. A collider is a particular node on a path such that both the preceding and subsequent nodes on the path have directed edges going into that node (ie, both the edge to and the edge from that node have arrowheads into the node). A path between A and B is said to be blocked given some set of variables Z if either there is a variable in Z on the path that is not a collider or if there is a collider on the path such that neither the collider itself nor any of its descendants are in Z. It has been shown that if all paths between A and B are blocked given Z, then A and B are conditionally independent given Z.18–20
+We need one further result in the development of the structural classiﬁcation of effect modiﬁcation below. The backdoor path adjustment theorem states that for intervention variable E and outcome D, if a set of variables Z in which no variable in Z is a descendent of E blocks all “back-door paths” from E to D (ie, all paths with directed edges into E), then conditioning on Z sufﬁces to control for confounding for the estimation of the causal effect of E on D; this causal effect
+is given by ‫͓ޅ‬DEϭe͔ ϭ ͚z‫͓ޅ‬D | E ϭ e, Z ϭ z͔P͑Z ϭ z͒.1
+Note that this is a graphical variant of Theorem 4 of Rosenbaum and Rubin21 and Robin’s g-formula.22–23
+A STRUCTURAL CLASSIFICATION OF EFFECT MODIFICATION
+In this section, we use causal directed acyclic graphs to consider the possible relationships between an effect modiﬁer variable, the variable constituting the cause, and the variable constituting the effect. This yields a classiﬁcation of the different types of effect modiﬁcation. Before presenting the theory for the classiﬁcation, we will illustrate the classiﬁcation with a simple hypothetical example. Suppose that in a randomized trial, some drug E for hypertension D has variable effect (on the causal risk difference scale) according to the presence of some genotype X. Because the trial is randomized, E and X have no common causes. Because both E and X have an effect on D, the causal relationships among these variables can be described in the causal directed acyclic graph in Figure 1. We could say that X is a direct effect modiﬁer for the causal effect of E on D because X is a direct cause of D. Suppose now that information is available on the
+© 2007 Lippincott Williams & Wilkins
+
+Epidemiology • Volume 18, Number 5, September 2007
+
+Effect Modification and DAGs
+
+FIGURE 1. Direct effect modification: E, drug exposure; D, hypertension outcome; X, genotype, a direct effect modifier.
+
+FIGURE 4. Effect modification by common cause: E, drug exposure; D, hypertension outcome; X, genotype; C, motherЈs genotype; M, mother’s hair color, an effect modifier by common cause.
+
+FIGURE 2. Indirect effect modification: E, drug exposure; D, hypertension outcome; X, genotype; C, mother’s genotype, an indirect effect modifier.
+genotype C of the mothers of the study participants. The mothers’ genotype affects the genotype of the study participants but does not affect hypertension of the study participants directly. The causal relationships among these variables is represented by the causal directed acyclic graph in Figure 2. We will show more formally below that in Figure 2, C will likely serve as an effect modiﬁer on the causal risk difference scale for the effect of E on D. This is essentially because C affects X, which serves as a direct effect modiﬁer for the causal effect of E on D. We could thus say that C is an indirect effect modiﬁer for the causal effect of E on D, since C affects D indirectly through X. Now suppose that genotype X also determined hair color R. The causal relationships among these variables could be represented by the causal directed acyclic graph in Figure 3. Here, R will also likely serve as an effect modiﬁer on the causal risk difference scale for the effect of E on D because conditioning on R gives information on X (which serves as a direct effect modiﬁer for the causal effect of E on D). However, because R is not a cause of D, we would say that R is an effect modiﬁer by proxy. Finally, suppose that information is available on the
+FIGURE 3. Effect modification by proxy: E, drug exposure; D, hypertension outcome; X, genotype; R, hair color, an effect modifier by proxy.
+© 2007 Lippincott Williams & Wilkins
+
+mothers’ hair color, which we will denote by M. The causal relationships among the variables could then be represented by the causal directed acyclic graph in Figure 4. It will be seen below that M also will likely serve as an effect modiﬁer of the causal risk difference of E on D because conditioning on M gives information on C, which affects X, which serves as a direct effect modiﬁer. Because C is a common cause of X (which is a direct cause of D) and M (the variable we are conditioning on), we might refer to M as an effect modiﬁer by common cause of the effect of E on D.
+We now generalize this simple example and show that all instances of effect modiﬁcation can be classiﬁed as falling into one of the 4 categories indicated above: direct effect modiﬁcation, indirect effect modiﬁcation, effect modiﬁcation by proxy and effect modiﬁcation by common cause. The classiﬁcation is carried out by expressing the conditional causal risk difference as a sum of products of stratum-speciﬁc risk differences and conditional probabilities as given in Theorem 1. In Theorem 1, we assume that there are no intermediate variables between E and D on the directed acyclic graph. In Appendix 1 the result is generalized and this assumption is dropped. Proofs of all theorems are given in Appendix 2.
+Theorem 1: Suppose that E is a parent of D and that there are no intermediate variables between E and D. Let X denote the parents of D other than E. Let Q be some set of nondescendents of E and D then
+‫͓ޅ‬DE ϭ e1 | Q ϭ q͔ Ϫ ‫͓ޅ‬DE ϭ e0 | Q ϭ q͔
+͚ ϭ x{‫͓ޅ‬D | X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D | X ϭ x, E ϭ e0͔}P͑X ϭ x | Q ϭ q͒.
+(1)
+Theorem 1 states that the causal risk difference for D comparing 2 levels of E, e1 and e0, within a particular stratum of Q, is given by the sum of the expected risk differences in D conditional on X and Q weighted by the probability of X given Q where X denotes the parents of D other than E. Equation 1 allows us to provide a structural classiﬁcation of effect modiﬁcation on the causal risk-difference scale. For Q to be an effect modiﬁer of the causal effect of E on D, it is
+563
+
+VanderWeele and Robins
+
+Epidemiology • Volume 18, Number 5, September 2007
+
+necessary that the function G͑q͒ ϭ ‫͓ޅ‬DEϭe1 | Q ϭ q͔ Ϫ
+‫͓ޅ‬DEϭe0|Q ϭ q͔ ϭ ͚x{‫͓ޅ‬D|X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D|X ϭ
+x, E ϭ e0͔}P͑X ϭ x|Q ϭ q͒ is not constant in q. In other words, it is necessary that the expected risk difference in D conditional on X and Q ϭ q weighted by the probability of X given Q ϭ q is not constant in q. This latter expression depends on Q only through P(X ϭ x |Q ϭ q) and so it is necessary that P(X ϭ x |Q ϭ q) is not constant in q. The requirement that P(X ϭ x |Q ϭ q) is not constant in Q is simply the requirement that X and Q are statistically associated. In the introductory material on directed acyclic graphs, we discussed the various structures that can give rise to association between 2 variables: cause and effect, common causes, and conditioning on a common effect. We will therefore now use directed acyclic graphs to consider various cases for which a potential effect modiﬁer Q will be associated with one or more of the variables in X. This will allow us to classify the type of effect modiﬁcation for any potential effect modiﬁer Q on the graph. Our analysis will follow the hypothetical example given above. First, the conditioning variable may be among the variables in X (ie, it may be a parent of D). This gives rise to what we will call direct effect modiﬁcation (Fig. 1, with Q ϭ X). Second, the conditioning variable may be an ancestor of one or more of the variables in X, which gives rise to what we will call indirect effect modiﬁcation (Fig. 2, with Q ϭ C). Third, Q may be a descendent of one or more of the variables in X, which gives rise to what we will call effect modiﬁcation by proxy (Fig. 3, with Q ϭ R). Finally, Q and one or more of the variables in X may have a common cause, which gives rise to what we will call effect modiﬁcation by a common cause (Fig. 4, with Q ϭ M). Theorem 1 allowed us to transform the condition for effect modiﬁcation on the causal risk difference scale into the necessary condition for effect modiﬁcation that Q and X are statistically associated. Our knowledge of association structures on causal directed acyclic graphs then allowed us to classify types of effect modiﬁcation.
+The 4 types of effect modiﬁcation can be distinguished in a number of ways. First, as is clear from Figures 3 and 4, an effect modiﬁer for the effect of some exposure on a particular outcome might not itself have a causal effect on that outcome. In the cases of direct and indirect effect modiﬁcation, the effect modiﬁer does have a causal effect on the outcome; in the cases of effect modiﬁcation by proxy and by common cause, the effect modiﬁer does not. This is because the unblocked path from Q to X (which gives rise to the required association between Q and X) will be a frontdoor path from Q to X in the cases of direct or indirect effect modiﬁcation, and a backdoor path from Q to X in the cases of effect modiﬁcation by proxy or by common cause. Second, direct effect modiﬁcation may be distinguished from the other 3 types in an important way. If one is conditioning on multiple variables that include all the direct effect modiﬁers X, then no other variable on the graph will continue to serve as an effect modiﬁer for the causal effect of E on D while conditioning on X. This is essentially because X blocks all paths from any other potential effect modiﬁer Q to D. In a sense, direct effect modiﬁers take precedence over all other types. The case of conditioning on multiple variables is considered further in the Discussion and in Appendix 1.
+
+One additional comment is necessary. For the function
+G͑q͒ ϭ ͚x{‫͓ޅ‬D | X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D | X ϭ x, E ϭ
+e0͔}P͑X ϭ x | Q ϭ q͒ not to be constant in q, it is also necessary that the function ‫͓ޅ‬D | X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D | X ϭ x, E ϭ e0͔ is not constant in x. That is to say it is necessary that X be an effect modiﬁer for the relationship between E and D. This will often, but not always, be the case. In the context of binary E and X, the expression ‫͓ޅ‬D | X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D | X ϭ x, E ϭ e0͔ will often not be constant in x if E and X exhibit synergism. Exceptions to the condition that ‫͓ޅ‬D | X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D | X ϭ x, E ϭ e0͔ is not constant in x will occur whenever all individual response types that Greenland and Poole classify as exhibiting “causal interdependence” are absent.10 Further discussion of some of these issues can be found elsewhere.11,12,24 Here it sufﬁces to note that if none of the variables in X serve as an effect modiﬁer for the causal effect of E on D, then no other variable on the graph will serve as an effect modiﬁer because ‫͓ޅ‬D|X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D|X ϭ x, E ϭ e0͔ is then constant in x. Theorem 1 thus allows us to classify instances of effect modiﬁcation but not to identify effect modiﬁcation. It is possible for P(Xϭx |Q ϭ q) not to be constant in q and for ‫͓ޅ‬D | X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D | X ϭ x, E ϭ e0͔ not to be constant in x,
+but still to have G͑q͒ ϭ ͚x{‫͓ޅ‬D|X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D|X ϭ
+x, E ϭ e0͔}P͑X ϭ x|Q ϭ q͒ constant in q (in which case q would not be an effect modiﬁer for the causal risk difference). This possibility arises because the differences {‫͓ޅ‬D|X ϭ x, ‫ ޅ‬ϭ e1͔ Ϫ E͓D|X ϭ x, E ϭ e0͔} may cancel each other out perfectly. These are exceptional cases, however; in general, whenever P(X ϭ x |Q ϭ q) is not constant in q, there will be effect modiﬁcation on the risk difference scale. Theorem 1 made reference to a set of variables X constituted by the parents of D other than E. If E is the only parent of D, then this set is empty. It easily follows that there can then be no effect modiﬁer on the graph for the causal effect of E on D. This is stated formally in Theorem 2.
+Theorem 2. Suppose a node D on a causal directed acyclic graph has only one parent, E; there then exists no variable on the directed acyclic graph that is an effect modiﬁer for the causal effect of E on D.
+Essentially, Theorem 2 states that if the exposure E is the only variable on the directed acyclic graph that is a direct cause of D, then there can be no variable on the directed acyclic graph that acts as an effect modiﬁer for the relationship between E and D. This is because any other variable that could have an effect on D must do so through E, but intervening on E will supersede any effect another variable might otherwise have had. Note that the theorem does not state the absence of any effect modiﬁer for the causal effect of E on D, but only the absence of an effect modiﬁer on the directed acyclic graph. A causal directed acyclic graph that included all the variables on the original graph plus others might have an effect modiﬁer if at least one of the additional variables were a direct cause of D. (Note that there may be causes of D that were not on the original causal directed acyclic graph if these variables are not also causes of another
+
+564
+
+© 2007 Lippincott Williams & Wilkins
+
+Epidemiology • Volume 18, Number 5, September 2007
+
+Effect Modification and DAGs
+
+variable on the graph and thus not common causes of 2 or more variables on the graph). We see then that for there to be an effect modiﬁer for the causal effect of E on D on a causal directed acyclic graph, the node D must have more than one parent.
+
+DISCUSSION
+
+Regarding possible limitations and extensions of these
+
+results, it should ﬁrst be acknowledged that, although effect
+
+modiﬁcation is an important phenomenon, it is sometimes of
+
+insufﬁcient magnitude to be of clinical or public health
+
+relevance. The theory developed in this paper does not allow
+
+for the representation of the magnitude of effect modiﬁcation
+
+and thus cannot distinguish between cases in which the
+
+magnitude is or is not of substantive importance. Directed
+
+acyclic graphs are a useful conceptual tool, but cannot take
+
+the place of empirical analysis and presentation of numerical
+
+results.
+
+Second, effect modiﬁcation relationships may be con-
+
+siderably more complicated than the examples given in Fig-
+
+ures 1 to 4. The causal diagram may, for example, involve a
+
+number of intermediate variables. Furthermore, a variable in
+
+Q may be associated with more than one variable in X, giving
+
+rise to multiple effect modiﬁcation relationships. Addition-
+
+ally, the set Q itself may contain more than one variable,
+
+thereby giving rise to multiple effect modiﬁers. These and
+
+other more complex causal structures and effect modiﬁcation
+
+relationships are discussed in Appendix 1.
+
+Third, although the analysis has been restricted to
+
+the use of the causal risk difference as a measure by which
+
+to assess effect modiﬁcation, most of the remarks hold
+
+true for other measures of effect. For example, the causal
+
+risk ratio for the causal effect of E on D comparing 2 levels
+
+of E, e0 and e1, in stratum Q ϭ q is given by
+{͚x‫͓ޅ‬D | X ϭ x, E ϭ e1͔P͑X ϭ x | Q ϭ q͒}
+. If X and Q are not indepen-
+{͚x‫͓ޅ‬D | X ϭ x, E ϭ e0͔P͑X ϭ x | Q ϭ q͒} {͚x‫͓ޅ‬D | X ϭ x, E ϭ e1͔P͑X ϭ x | Q ϭ q͒}
+
+dent then the expression
+
+will
+
+{͚x‫͓ޅ‬D | X ϭ x, E ϭ e0͔P͑X ϭ x | Q ϭ q͒}
+
+in most cases vary in Q although exceptions can occur (just as
+
+in the case of the causal risk difference above). Similarly, the
+
+causal odds ratio for the effect of E on D will generally vary
+
+in levels of Q if Q is not independent of X. The analysis,
+
+however, is most simple for the causal risk difference.
+
+Fourth, for an exposure E, an outcome D, and a poten-
+
+tial effect modiﬁer Q, several different causal directed acyclic
+
+graphs of varying complexity may represent the causal rela-
+
+tionships among these variables. One graph with E, D, and Q
+
+may have additional variables; another may have only E, D
+
+and Q. The one requirement that must be satisﬁed with regard
+
+to the presence or absence of other variables on the graph is
+
+that any common cause of 2 variables on the graph must also
+
+be on the graph. Thus, for example the variable X, in Figure
+
+2, could have been excluded from the graph with an arrow
+
+from C directly into D. Even though X is a cause of D, it is
+
+not a cause of any other variable on the graph, and its
+
+inclusion is therefore optional. In our system of classiﬁcation,
+
+excluding X would make C a direct modiﬁer of the causal
+
+© 2007 Lippincott Williams & Wilkins
+
+FIGURE 5. Multiple effect modifiers: E, exposure; D, outcome; X1, X2, X3, other direct causes of D; Q1, an indirect effect modifier; Q2, an effect modifier by common cause; Q3, an effect modifier by proxy; C, a common cause.
+effect of E on D. The classiﬁcation of effect modiﬁers will thus sometimes be relative to the particular variables included on the graph under consideration. However, Figure 5 illustrates that indirect effect modiﬁcation cannot always be reduced to direct effect modiﬁcation by excluding variables from the graph. In Figure 5, Q1 serves as an indirect effect modiﬁer for the causal effect of E on D. However, the variable X1 cannot be removed from the graph because it is a common cause of E and D. Similarly, in Figure 4, M was an effect modiﬁer by common cause which could have been reduced to an effect modiﬁer by proxy if X had been excluded from the graph with an arrow from C directly into D. However, in Figure 5, Q2 serves as an effect modiﬁer by common cause through X2, but cannot be reduced to an effect modiﬁer by proxy because X2 cannot be removed from the graph because it is a common cause of E and D. How an effect modiﬁer is classiﬁed can be, but is not always, relative to the particular variables represented on the graph under consideration.
+The results developed in this paper have allowed us to classify any given instance of effect modiﬁcation into one of 4 types: direct effect modiﬁcation, indirect effect modiﬁcation, effect modiﬁcation by proxy or effect modiﬁcation by common cause. The theory does not pertain to identifying effect modiﬁcation, or to graphically representing interactions or effect modiﬁcation; rather, merely to classifying instances of effect modiﬁcation according to the structure of a directed acyclic graph. Theory concerning the graphical representation of synergistic interactions for binary variables is developed in related work.25 The results in this paper classify and clarify the necessary causal relationships an effect modiﬁer variable must exhibit in relation to the variable constituting the cause, and the variable constituting the effect.
+REFERENCES
+1. Pearl J. Casual diagrams for empirical research. Biometrika. 1995;82: 669 – 688.
+2. Greenland S, Pearl J, Robins JM. Causal diagrams for epidemiologic research. Epidemiology. 1999;10:37– 48.
+3. Greenland S, Brumback B. An overview of relations among causal
+565
+
+VanderWeele and Robins
+
+Epidemiology • Volume 18, Number 5, September 2007
+
+modelling methods. Int J Epidemiol. 2002;31:1030 –1037. 4. Robins JM. Data, design, and background knowledge in etiologic infer-
+ence. Epidemiol. 2001;12:313–320. 5. Herna´n MA, Herna´ndez-Diaz S, Werler MM, Mitchell AA. Causal
+knowledge as a prerequisite for confounding evaluation: an application to birth defects epidemiology. Am J Epidemiol. 2002;155:176 –184. 6. Hernan MA, Hernandez-Diaz S, Robins JM. A structural approach to selection bias. Epidemiology. 2004;15:615– 625. 7. Blot WJ, Day NE. Synergism and interaction: are they equivalent? Am J Epidemiol. 1979;100:99 –100. 8. Rothman KJ, Greenland S, Walker AM. Concepts of interaction. Am J Epidemiol. 1980;112:467– 470. 9. Saracci R. Interaction and synergism. Am J Epidemiol. 1980;112:465– 466. 10. Greenland S, Poole C. Invariants and noninvariants in the concept of interdependent effects. Scand J Work Environ Health. 1988;14:125–129. 11. Rothman KJ, Greenland S. Modern Epidemiology. Philadelphia, PA: Lippincott-Raven; 1998. 12. VanderWeele TJ, Robins JM. The identiﬁcation of synergism in the sufﬁcient-component cause framework. Epidemiology. 2007;18:329 – 339. 13. Greenland S, Neutra RR. Control of confounding in the assessment of medical technology. Int J Epidemiol. 1980;9:361–367. 14. Rosenbaum PR. The consequences of adjustment for a concomitant variable that has been affected by the treatment. J Roy Stat Soc Ser A. 1984;147:656 – 666. 15. Robins JM, Morgenstern H. The foundations of confounding in epidemiology. Math Modeling. 1987;14:869 –916. 16. Robins JM. The control of confounding by intermediate variables. Stat Med. 1989;8:679 –701. 17. Weinberg CR. Toward a clearer deﬁnition of confounding. Am J Epidemiol. 1993;127:1– 8. 18. Verma T, Pearl J. Causal networks: Semantics and expressiveness. In: Shachter R, Levitt TS, Kanal LN. Proceedings of the 4th Workshop on Uncertainty in Artiﬁcial Intelligence, 352–359. Reprinted in Uncertainty in Artiﬁcial Intelligence. Amsterdam: Elsevier; 1988;4:69 –76. 19. Geiger D, Verma TS, Pearl J. Identifying independence in bayesian networks. Networks. 1990;20:507–534. 20. Lauritzen SL, Dawid AP, Larsen BN, Leimer HG. Independence properties of directed markov ﬁelds. Networks. 1990;20:491–505. 21. Rosenbaum PR, Rubin DB. The central role of the propensity score in observational studies for causal effects. Biometrika. 1983;70:41–55. 22. Robins JM. A new approach to causal inference in mortality studies with sustained exposure period - application to control of the healthy worker survivor effect. Mathematical Modelling. 1986;7:1393–1512. 23. Robins JM. Addendum to a new approach to causal inference in mortality studies with sustained exposure period - application to control of the healthy worker survivor effect. Computers Mathematics Applications. 1987;14:923–945. 24. Koopman JS. Causal models and sources of interaction. Am J Epidemiol. 1977;106:439 – 444. 25. VanderWeele TJ, Robins JM. Directed acyclic graphs, sufﬁcient causes and the properties of conditioning on a common effect. Am J Epidemiol. In press.
+APPENDICES
+Appendix 1: More Complex Effect Modification Structures
+As noted in the Discussion section, effect modiﬁcation relationships may be considerably more complicated than the examples given in Figures 1 to 4. Any number of variables might lie between Q and X in Figure 2 or between X and Q in Figure 3 or between C and X or C and Q in Figure 4; the set X may contain more than one variable; and, as discussed below, there may be intermediate variables between E and D. However, when one considers the relation between the potential effect modiﬁer Q and some particular member of the
+566
+
+FIGURE 6. Multiple effect modification relationships: E, exposure; D, outcome; X1, X2, X3, other direct causes of D; Q, an effect modifier; C, a common cause.
+set X with which it is associated, their association will arise from one of the 4 alternatives presented above. Note however that these 4 alternatives are not mutually exclusive. A variable in Q may be associated with more than one variable in X and may exhibit any one of these 4 relations to (or be independent of) each particular variable in X. An example in which multiple effect modiﬁcation relationships are present is given in Figure 6.
+In the rather complicated example given in this ﬁgure, Q is an effect modiﬁer for the causal effect of E on D indirectly through X1, by proxy through X2, and by common cause through X3. The four-way classiﬁcation above is sufﬁcient if attention is restricted to conditioning on a single item. But it is also possible that a researcher is interested in 2 variables considered jointly as an effect modiﬁer for the causal effect of E on D. One can then provide a classiﬁcation of the effect modiﬁcation structure for each variable in the set Q. An example of multiple variables serving as effect modiﬁers is given in Figure 5.
+In Figure 5, the set X (the parents of D other than E) consists of the variables X1, X2 and X3. The variable Q1 serves as an indirect effect modiﬁer through X1; the variable Q2 is an effect modiﬁer by common cause through X2; the variable Q3 is an effect modiﬁer by proxy through X3. The variables X1, X2, and X3, if they had been conditioned upon (instead of Q1, Q2, and Q3) would all have served as direct effect modiﬁers of the causal effect of E on D. Of course, more complicated arrangements are also possible in which each of the variables in the set Q exhibits multiple effect modiﬁcation relationships to the variables in X and in which additional intermediate variables are present.
+We have seen that X and Q may be associated either because of a cause and effect relationship (Q directly causes X, Q indirectly causes X, or X causes Q) or through a common cause of X and Q; this led to the fold-four classiﬁcation of effect modiﬁcation given above. However, as noted in the introductory material on directed acyclic graphs, X and Q may also be associated by conditioning on a common effect of these 2 groups of variables. This might occur in practice if,
+© 2007 Lippincott Williams & Wilkins
+
+Epidemiology • Volume 18, Number 5, September 2007
+
+Effect Modification and DAGs
+
+for example, one were interested in 2 variables considered jointly as an effect modiﬁer. Alternatively this might occur if one were interested in only one variable as an effect modiﬁer but, due to the sampling procedure, one intentionally or inadvertently conditioned on a particular subset of subjects which restricted the sample to a particular stratum of one of the causal directed acyclic graph’s variables. In such cases, the common effect being conditioned upon, say K, might open a previously blocked path between Q and some variable in X. We might then still apply the 4-fold classiﬁcation given above with K now taking on the role of Q for purposes of classiﬁcation. It turns out, however, that when Q is an effect modiﬁer for the causal effect of E on D because of conditioning on a common effect of X and Q, this will rule out the cases of direct and indirect effect modiﬁcation; effect modiﬁcation will always be either by proxy or by common cause. If the effect modiﬁcation were direct or indirect (rather than by proxy or common cause) then the unblocked path from K to X would be a frontdoor path and conditioning on K would then block the path from Q to X (unless Q were also associated with X in ways other than paths through K). Thus the relationship between K and X must either be that of proxy or of common cause. The relationship between Q and K may either be that Q is an ancestor of K or that Q and K share a common cause. In summary, when conditioning on K, we must thus have either effect modiﬁcation by proxy (conditioning on a common effect, with Q and K related by ancestry or by a common cause) or effect modiﬁcation by common cause (conditioning on a common effect, with Q and K related by ancestry or by a common cause). Examples of each of these 4 cases are given in the directed acyclic graphs presented in Figures 7 to 10.
+Conditioning on 2 or more items along with the effect modiﬁer may complicate matters yet further but the same principles apply. It may be that Q is associated with X only by conditioning on several other variables. Classiﬁcation may take place by considering the ﬁrst conditioning variable on a particular unblocked path between X and Q. Each consecutive pair of conditioning items or the ﬁnal conditioning item and
+
+FIGURE 8. Effect modification by proxy (conditioning on a common effect with Q and K related by a common cause): E, exposure; D, outcome; X, a direct cause of D; K, a conditioning variable; C, a common cause; Q, an effect modifier by proxy.
+FIGURE 9. Effect modification by common cause (conditioning on a common effect with Q and K related by ancestry): E, exposure; D, outcome; X, a direct cause of D; K, a conditioning variable; C, a common cause; Q, an effect modifier by common cause.
+
+FIGURE 7. Effect modification by proxy (conditioning on a common effect with Q and K related by ancestry): E, exposure; D, outcome; X, a direct cause of D; K, a conditioning variable; Q, an effect modifier by proxy.
+© 2007 Lippincott Williams & Wilkins
+
+Q may be related by ancestry or by common cause. As was the case in Figures 5 and 6, multiple effect modiﬁcation relationships or multiple effect modiﬁers might also be present.
+Our examples and the discussion thus far have assumed that there are no intermediate variables between E and D on the directed acyclic graph. The results and discussion, however, easily generalize to the setting in which there are intermediate variables between E and D on the directed acyclic graph. Theorem 3 restates Theorem 1 dropping the assumption of no intermediate variables between E and D on the directed acyclic graph. The conclusion of Theorem 2 is the same as that of Theorem 1 but the conditions under which this conclusion holds are slightly different.
+Theorem 3. Let D be some node on a causal directed acyclic graph with ancestor E and let X denote all nondescen-
+567
+
+VanderWeele and Robins
+
+Epidemiology • Volume 18, Number 5, September 2007
+
+FIGURE 11. An example illustrating conditioning on a descendent of the outcome: E, exposure; D, outcome; X, a direct cause of D; Q, a descendent of D.
+
+FIGURE 10. Effect modification by common cause (conditioning on a common effect with Q and K related by a common cause): E, exposure; D, outcome; X, a direct cause of D; K, a conditioning variable; C1, C2, common causes; Q, an effect modifier by common cause.
+dents of E which are either parents of D or parents of a node on a directed path between E and D. Let Q be some set of nondescendents of E and D then Equation 1 holds.
+In the presence of intermediate variables between E and D on the directed acyclic graph, effect modiﬁcation can be classiﬁed as before, according to their relationships with the set of variables X. However, in the context of intermediate variables between E and D on the directed acyclic graph, the set X is no longer simply the parents of D other than E but rather all nondescendents of E which are either parents of D or parents of a node on a directed path between E and D.
+A ﬁnal warning is necessary. Theorems 1 and 3 did not allow for Q to be a descendent of D. Consider the example given in Figure 11 in which Q is a descendent of E or D.
+When Q is a descendent of D, then the causal effect of E on D conditioning on Q is no longer given by Equation 1 because conditioning on Q provides information on D other than that which is available through X and E. In such cases Q does not serve as a genuine effect modiﬁer for the causal effect of E on D because it is a consequence of D.
+Appendix 2: Proofs
+Proof of Theorem 1 Theorem 1 is a consequence of Theorem 3 below.
+
+Proof of Theorem 2
+Let Q be some nondescendent of E and D then ‫͓ޅ‬DEϭe1 |Q ϭ q͔ Ϫ ‫͓ޅ‬DEϭe0 |Q ϭ q͔ ϭ ‫͓ޅ‬DEϭe1͔ Ϫ ‫͓ޅ‬DEϭe0͔ by Theorem 3 of Pearl1 since ͑D ê Q|E͒GE៮ where GE៮ denotes the graph obtained by deleting from the original directed acyclic graph all arrows pointing into E. Furthermore, ‫͓ޅ‬DEϭe1͔ Ϫ ‫͓ޅ‬DEϭe0͔ ϭ ‫͓ޅ‬D ϭ 1|E ϭ 1͔ Ϫ ‫͓ޅ‬D ϭ 1|E ϭ 0͔ by the back-door path adjustment theorem since there are no unblocked back-door paths from E to D as E is the only parent of D. Thus ‫͓ޅ‬DEϭe1|Q ϭ q͔ Ϫ ‫͓ޅ‬DEϭe0|Q ϭ q͔ ϭ ‫͓ޅ‬D ϭ 1|E ϭ 1͔ Ϫ ‫͓ޅ‬D ϭ 1|E ϭ 0͔ which is independent of q.
+Proof of Theorem 3
+By the law of iterated expectations we have
+͚ ‫͓ޅ‬DEϭe1 | Q ϭ q͔ Ϫ ‫͓ޅ‬DEϭe0 | Q ϭ q͔ ϭ x‫͓ޅ‬DEϭe1 | X ϭ x, Q ϭ q͔ P͑X ϭ x | Q ϭ q͒ Ϫ ͚x‫͓ޅ‬DEϭe0 | X ϭ x͔, Q ϭ q͔
+P͑X ϭ x |Q ϭ q͒. We will show that this latter expression
+is equal to ͚x‫͓ޅ‬DEϭe1 | X ϭ x͔P͑X ϭ x | Q ϭ q͒ Ϫ ͚x‫͓ޅ‬DEϭe0 | X ϭ x͔P͑X ϭ x | Q ϭ q͒. By Theorem
+3 of Pearl1 it sufﬁces to show that D ê Q | X, E)G E៮ where GE៮ denotes the graph obtained by deleting from the original directed acyclic graph all arrows pointing into E. Any front door path from D to Q in GE៮ will be blocked by a collider. Any backdoor path from D to Q in GE៮ will be blocked by X. We thus have that ‫͓ޅ‬DEϭe1 | Q ϭ q͔ Ϫ ‫͓ޅ‬DEϭe1 | Q ϭ q͔ ϭ
+͚ ͚ x‫͓ޅ‬DEϭe0 | X ϭ x͔P͑X ϭ x | Q ϭ q͒ Ϫ x‫͓ޅ‬DEϭe0 | X ϭ x͔
+P͑X ϭ x|Q ϭ q͒. Because X will block all backdoor paths from E to D we have by the backdoor path adjustment
+theorem ͚x‫͓ޅ‬D | X ϭ x, E ϭ e1͔P͑X ϭ x | Q ϭ q͒ Ϫ ͚x‫͓ޅ‬D | X ϭ x, E ϭ e0͔P͑X ϭ x | Q ϭ q͒ ϭ ͚x{‫͓ޅ‬D | X ϭ x, E ϭ e1͔ Ϫ ‫͓ޅ‬D | X ϭ x, E ϭ e0͔}
+P͑X ϭ x|Q ϭ q͒.
+
+568
+
+© 2007 Lippincott Williams & Wilkins
+

@@ -1,0 +1,332 @@
+Synchronization of sinoatrial node pacemaker cell clocks
+and its autonomic modulation impart complexity
+to heart beating intervals
+Yael Yaniv, PhD,*† Ismayil Ahmet, MD, PhD,* Jie Liu, MD, PhD,*‡ Alexey E. Lyashkov, PhD,§ Toni-Rose Guiriba,* Yosuke Okamoto, MD, PhD,* Bruce D. Ziman, MS,* Edward G. Lakatta, MD*
+From the *Laboratory of Cardiovascular Science, Biomedical Research Center, Intramural Research Program, National Institute on Aging, National Institutes of Health, Baltimore, Maryland, †Biomedical Engineering Faculty, Technion-IIT, Haifa, Israel, ‡Cardiovascular Physiology Laboratory, School of Medical Sciences, University of Sydney, Sydney, New South Wales, Australia, and §Department of Molecular and Comparative Pathobiology, Johns Hopkins University School of Medicine, Baltimore, Maryland.
+
+BACKGROUND A reduction of complexity of heart beating interval variability that is associated with an increased morbidity and mortality in cardiovascular disease states is thought to derive from the balance of sympathetic and parasympathetic neural impulses to the heart. However, rhythmic clocklike behavior intrinsic to pacemaker cells in the sinoatrial node (SAN) drives their beating, even in the absence of autonomic neural input.
+OBJECTIVE To test how this rhythmic clocklike behavior intrinsic to pacemaker cells interacts with autonomic impulses to the heart beating interval variability in vivo.
+METHODS We analyzed beating interval variability in time and frequency domains and by fractal and entropy analyses: (1) in vivo, when the brain input to the SAN is intact; (2) during autonomic denervation in vivo; (3) in isolated SAN tissue (ie, in which the autonomic neural input is completely absent); (4) in single pacemaker cells isolated from the SAN; and (5) after autonomic receptor stimulation of these cells.
+RESULTS Spontaneous beating intervals of pacemaker cells residing in the isolated SAN tissue exhibit fractal-like behavior and have lower approximate entropy compared with those in the intact heart. Isolation of pacemaker cells from SAN tissue, however, leads to a
+
+loss in the beating interval order and fractal-like behavior. β-Adrenergic receptor stimulation of isolated pacemaker cells increases intrinsic clock synchronization, decreases their action potential period, and increases system complexity.
+CONCLUSIONS Both the average beating interval in vivo and beating interval complexity are conferred by the combined effects of clock periodicity intrinsic to pacemaker cells and their response to autonomic neural input.
+KEYWORDS Autonomic neural impulse; chaotic processes; Fractallike behavior; Heart rate variability; sinoatrial node pacemaker cell
+ABBREVIATIONS AP ¼ action potential; ApEn ¼ approximate entropy; β-AR ¼ β-adrenergic receptor; BIV ¼ beating interval variability; CaMKII ¼ Ca2þ/calmodulin-dependent protein kinase II; CR ¼ cholinergic receptor; CV ¼ coefﬁcient of variation; DFA ¼ detrended ﬂuctuation analysis; ECG ¼ electrocardiogram; HF ¼ high frequency; LF ¼ low frequency; SAN ¼ sinoatrial node; SANC ¼ sinoatrial node cell; PKA ¼ protein kinase A; VLF ¼ very low frequency
+(Heart Rhythm 2014;11:1210–1219) Published by Elsevier Inc. on behalf of Heart Rhythm Society.
+
+Introduction
+The heart rate never achieves a steady state because it is controlled by complex dynamic chaotic processes, oscillating at different periods over different timescales that
+This work was supported partially by the Intramural Research Program of the National Institute on Aging, National Institutes of Health. Address reprint requests and correspondence: Dr Yael Yaniv, Biomedical Engineering Faculty, Technion-IIT, 32000 Haifa, Israel. and Dr Edward G. Lakatta, Laboratory of Cardiovascular Science, Biomedical Research Center, Intramural Research Program, National Institute on Aging, National Institutes of Health, Baltimore, MD 21224. E-mail address: yaely@bm. technion.ac.il; lakattae@grc.nia.nih.gov.
+
+continuously shift. Therefore, it is not surprising that the
+electrocardiogram (ECG) in mammals, even under resting
+conditions, reveals a complex beat-to-beat variation of heart beating intervals.1 Speciﬁcally, rhythmic regimes embedded in human heart beating intervals vary from 2 to more than 25
+beats. Moreover, the fact that the heart beating intervals obey a power law indicates that fractal-like (self-similar, scaleinvariant) behavior imparts complexity to the heart rhythm.2
+The loss of this complexity manifests as a reduction in beating interval variability (BIV), which accompanies
+advancing age and predicts increased morbidity and mortality in various forms of heart disease.3,4
+
+1547-5271/$-see front matter Published by Elsevier Inc. on behalf of Heart Rhythm Society.
+
+http://dx.doi.org/10.1016/j.hrthm.2014.03.049
+
+Yaniv et al Beating Rate Variability of Sinoatrial Node Cells
+
+1211
+
+Fractal-like behavior of heart beating intervals in vivo has mainly been attributed to the balance of sympathetic and parasympathetic neural impulses to the heart. Stimulation of autonomic receptors of pacemaker cells (ie, β-adrenergic receptors [β-AR] or cholinergic receptors [CRs]) in the sinoatrial node (SAN) couples them to G proteins and to adenylyl cyclases (likely type 5 or 6) or to guanylyl cyclases, leading to the activation or suppression of cyclic adenosine monophosphate or cyclic guanosine monophosphate and protein kinase activities that regulate the phosphorylation state of proteins that drive the intrinsic pacemaker cell clocks: the intracellular Ca2þ cycling clock and surface membrane ion channel proteins (membrane clock).5,6 Speciﬁcally, these clocks intrinsic to pacemaker cells are driven by constitutive Ca2þ-calmodulin activation of adenylyl cyclase–dependent protein kinase A (PKA) and Ca2þ/calmodulin-dependent protein kinase II (CaMKII), which effects the phosphorylation of proteins that couple the membrane and Ca2þ clocks.5 The phosphorylation states of coupledclock proteins are the major determinant of the rate and rhythm of spontaneous action potentials (APs) generated by pacemaker cells in the SAN. Because the kinetics of each of these phosphorylation-dependent mechanisms can vary over a wide range of timescales, we hypothesized that properties intrinsic to the pacemaker cells residing in SAN tissue may contribute to BIV in vivo and its fractal-like behavior detected by ECG analysis (review in Yaniv et al4 and Binah et al7). In other words, we hypothesized that fractal-like behavior of heart beating intervals in vivo is regulated by rhythmic clocklike mechanisms intrinsic to pacemaker cells and that these mechanisms are modulated by autonomic neural input.
+In order to deﬁne the relative contributions of autonomic neural input to the heart and the intrinsic properties of pacemaker cells to BIV and fractal-like behavior embedded in the beating rhythm, we analyzed beating interval dynamics: (1) in vivo, when the brain input to the SAN is intact; (2) during autonomic denervation in vivo; (3) in intact isolated SAN tissue (ie, in which the autonomic neural input is absent); (4) in single pacemaker cells isolated from the SAN; and (5) after autonomic receptor stimulation of these cells (for details, see Online Supplemental Methods). We demonstrate that the fractal-like complexity of BIV depends on rhythmic mechanisms intrinsic to the pacemaker cells embedded in the SAN.
+Methods Heart rate measurements in vivo
+All animal studies were performed in accordance with the Guide for the Care and Use of Laboratory Animals published by the National Institutes of Health (NIH Publication no. 85-23, revised 1996). The experimental protocols have been approved by the Animal Care and Use Committee of the National Institutes of Health (protocol #034LCS2013). The ECG was recorded in 9 male New Zealand White rabbits that were sedated with sodium phenobarbital (5 mg/kg intravenously via the ear vein),
+
+intubated, and ventilated at a rate of 0.66 Hz (this frequency was ﬁltered during frequency analyses with a notch ﬁlter). Light anesthesia was maintained with isoﬂurane (2% v/v) in oxygen. Rabbits were placed in the supine position, and the front of the neck was shaved. A 3-cm-long skin incision was made in the center of the neck along the trachea, muscle layers were divided carefully, and vagus nerves on both sides were isolated. ECG leads were placed in the limbs. A small skin incision was made on the right thigh, and the right femoral vein was isolated. A standard ECG lead II was recorded continuously by using a PowerLab system (ADInstruments, Bella Vista, NSW Australia) at a sampling rate of 1 kHz (Online Supplemental Figure 1). After a 5-minute baseline ECG recording, both vagus nerves were surgically cut and hexamethonium, a postganglionic blocker, was administered in a dose of 30 mg/kg in 0.3 cm3/kg saline via the femoral vein. The ECG was recorded for another 10 minutes after injection, and then rabbits were sacriﬁced for SAN tissue isolation.
+Beating rate measurements in the SAN The heart was quickly excised and placed into Tyrode’s solution (36 Ϯ 0.5ºC) of the following composition (in mM): 140 NaCl, 5.4 KCl, 1 MgCl2, 5 HEPES, 1.8 CaCl2, and 5.5 glucose, and titrated to pH 7.4 with NaOH. A strip of tissue containing the SAN region was identiﬁed by anatomic landmarks and was dissected. The SAN preparation was ﬁxed in a heated bath (36 Ϯ 0.51C) and superfused with Tyrode’s solution (see above) at a rate of 4 mL/min. An insulated Teﬂon-coated platinum electrode with a tip of 0.25 mm diameter was placed in the center of the SAN to record extracellular signals (Online Supplemental Figure 1) using a Neurolog system NL900D (Digitimer, Hertforsdire, UK).
+Beating rate measurements in single pacemaker cells Spontaneously beating sinoatrial node cells (SANCs) were isolated from New Zealand White rabbit hearts as described previously.8 The dissociated cells were stored at 4ºC and were used within 10 hours of isolation. Cells were imaged with a Motic AE31 microscope (Motic, Hong Kong) using a 40Â /0.9NA air objective lens. The cell suspension was placed in a chamber on an inverted microscope and was allowed to settle for 20 minutes in Tyrode’s solution (see above) at room temperature for better attachment to the chamber. Spontaneous beats (Online Supplemental Figure 1) at 35 Ϯ 0.51C were recorded in single pacemaker cells using a myocyte contractility recording system (IonOptix, Milton, MA). Only SANCs that beat rhythmically were chosen for the study. To quantify SANC beating, cell edges were detected along the long axis of the cell. Cell contraction measurements were recorded for 10 minutes under control conditions and 10 minutes after drug application. The beating rate was calculated as the time between the successive contraction periods, and the beating intervals were analyzed by using a custom-made program in MATLAB (MathWorks, Natick, MA). Note that the interval between successive APs is
+
+1212
+the same as the interval between successive contractions (Online Supplemental Figures 2A and 2B). Moreover, the excitationcontraction delay remains constant and independent of the beating interval (Online Supplemental Figure 2C) and the excitation-contraction delay is not correlated with the previous beating interval (Online Supplemental Figure 2D). See Online Supplement for the description of methods to analyze beating interval variability.
+Drugs Isoproterenol, carbachol, hexamethonium, and isoﬂurane were purchased from Sigma.
+Statistical analyses All data are presented as mean Ϯ SD. Because some measurements were repeated in the same rabbit at different functional levels (in vivo, autonomic denervation in vivo, intact SAN, and single pacemaker cells), a linear mixedeffects model was used to determine whether the 4 functional states differed from each other with respect to the measured variables. The Sidak multiple comparison method was used for post hoc comparisons to determine which of the 4 functional states differed from each other (Table 1). SAS v.2 (SAS Institute Inc, Cary, NC) was used to conduct the analyses. The same method was used to test whether drug effects on measurements in isolated pacemaker cells differed from their control value and to determine whether the drug responses differed from each other (Table 2). A χ2 test was used to determine whether drug treatments changed the
+
+Heart Rhythm, Vol 11, No 7, July 2014
+
+Table 2 Measures of beating interval dynamics of single isolated pacemaker cells in response to autonomic receptor stimulation
+
+Parameter
+
+Isoproterenol (n ¼ 9)
+
+Carbachol (n ¼ 6)
+
+Time domain parameters
+
+Beat interval (ms)
+
+356 Ϯ 10
+
+–20% Ϯ 2%*
+
+SDNN (ms)
+
+23 Ϯ 8
+
+À37% Ϯ 9%*
+
+RMSSD (ms)
+
+35 Ϯ 9 À34% Ϯ 7%*
+
+CV (%)
+
+6Ϯ2
+
+À32% Ϯ 6%*
+
+pNN50 (%)
+
+2Ϯ2
+
+À40% Ϯ 9%*
+
+ApEn
+
+0.6 Ϯ 0.1
+
+À10 Ϯ 4%*
+
+Frequency domain parameters
+
+VLF/Total (%)
+
+15 Ϯ 3
+
+À10% Ϯ 12%
+
+LF/Total (%)
+
+30 Ϯ 2
+
+5 Ϯ 5%
+
+HF/Total (%)
+
+55 Ϯ 8
+
+5% Ϯ 7%
+
+LF/HF (%)
+
+0.55 Ϯ 0.1
+
+14% Ϯ 14%
+
+499 Ϯ 18 24% Ϯ 10%
+62 Ϯ 19 100% Ϯ 35%
+83 Ϯ 24 79% Ϯ 35%
+23 Ϯ 6 97% Ϯ 32%
+10 Ϯ 8 89% Ϯ 20% 0.88 Ϯ 0.2 20% Ϯ 12%†
+25 Ϯ 3 10% Ϯ 18%
+25 Ϯ 3 À5% Ϯ 8%
+50 Ϯ 7 À5% Ϯ 5% 0.37 Ϯ 0.06
+10 Ϯ 2%†
+
+ApEn ¼ approximate entropy; CV ¼ coefﬁcient of variation; HF ¼ highfrequency power; LF ¼ low-frequency power; pNN50 ¼ percentage of adjoin beating intervals differing by more than 50 ms; RMSSD ¼ root mean square of the successive differences; SDNN ¼ standard deviation of the beats; Total ¼ total spectrum power; VLF ¼ very low frequency power. *P o .05 vs control. †P o .05 vs isoproterenol.
+
+Table 1 Measures of beating interval dynamics
+
+Parameter
+
+Heart in vivo (n ¼ 9)
+
+Heart in vivo, denervation (n ¼ 9)
+
+Intact isolated sinoatrial node tissue (n ¼ 8)
+
+Single isolated sinoatrial node cells (n ¼ 64)
+
+Time domain parameters
+
+Beat interval (ms)
+
+192 Ϯ 5
+
+SDNN (ms)
+
+10 Ϯ 3
+
+RMSSD (ms)
+
+14 Ϯ 4
+
+CV (%)
+
+5.5 Ϯ 1.5
+
+pNN50 (%)
+
+1 Ϯ 0.3
+
+ApEn
+
+0.17 Ϯ 0.07
+
+Frequency domain parameters
+
+VLF/Total (%)
+
+10 Ϯ 2
+
+LF/Total (%)
+
+32 Ϯ 6
+
+HF/Total (%)
+
+58 Ϯ 6
+
+LF/HF
+
+0.8 Ϯ 0.3
+
+Fractal analyses
+
+β
+
+À1 Ϯ 0.2
+
+α1
+
+0.7 Ϯ 0.2
+
+α2
+
+0.6 Ϯ 0.05
+
+202 Ϯ 4* 7Ϯ1 9Ϯ2
+3.7 Ϯ 0.5 0.3 Ϯ 0.1 0.12 Ϯ 0.07
+19 Ϯ 7 25 Ϯ 2 56 Ϯ 6 0.5 Ϯ 0.1
+À1.2 Ϯ 0.2 0.75 Ϯ 0.06
+0.7 Ϯ 0.05
+
+324 Ϯ 11*,† 7Ϯ1 8Ϯ2
+2.8 Ϯ 0.6* 0.3 Ϯ 0.1 0.06 Ϯ 0.03*
+34 Ϯ 9* 18 Ϯ 3* 48 Ϯ 6 0.3 Ϯ 0.1*
+À1.6 Ϯ 0.2* 1 Ϯ 0.14*,†
+0.85 Ϯ 0.15*
+
+390 Ϯ 9*,†,‡ 28 Ϯ 3*,†,‡ 45 Ϯ 4*,†,‡ 8.9 Ϯ 0.5*,†,‡ 4 Ϯ 2*,†,‡ 0.7 Ϯ 0.03*,†,‡
+20 Ϯ 1‡ 30 Ϯ 1‡ 50 Ϯ 1 0.5 Ϯ 0.1*
+NA NA NA
+
+NA indicates that fractal-like complexity is not present.
+α1 ¼ short-term scaling exponent; α2 ¼ long-term scaling exponent; β ¼ slope of the power-law relationship; ApEn ¼ approximate entropy; CV ¼ coefﬁcient of variation; HF ¼ high-frequency power; LF ¼ low-frequency power; pNN50 ¼ percentage of adjoin beating intervals differing by more than 50 ms; RMSSD ¼ root mean square of the successive differences; SAN ¼ sinoatrial node; SDNN ¼ standard deviation of the beats; Total ¼ total spectrum power; VLF ¼ very low
+frequency power. *P o.05 vs in vivo. †P o.05 vs in vivo denervation. ‡P o.05 vs intact SAN.
+
+Yaniv et al Beating Rate Variability of Sinoatrial Node Cells
+
+1213
+
+number of cells that exhibit fractal-like behavior compared with control.
+Results BIV transitions from the heart in vivo, when autonomic neural input is intact, to isolated pacemaker tissue, when neural input is absent
+Figure 1A illustrates representative examples of beating interval series in the adult rabbit in vivo, after autonomic denervation in vivo, and in SAN tissue in isolation. The average beating interval increases from 192 Ϯ 5 to 324 Ϯ 11 ms in transition from the heart in vivo to SAN tissue in isolation. Figure 1B illustrates representative examples of beating interval histograms recorded in vivo, after autonomic denervation in vivo, and in SAN tissue in isolation. Note that the variability of beating intervals also reduces in transition from the heart in vivo to SAN tissue in isolation. Table 1 lists BIV time domain parameters (standard deviation of the beats, root mean square of the successive differences, coefﬁcient of variation [CV], and percentage of adjoin beating intervals differing by more than 50 ms; see Online Supplement for deﬁnitions), which tend to reduce after autonomic denervation in vivo and in intact SAN tissue, in which autonomic input is completely absent. The reduction in BIV after autonomic denervation can easily be appreciated in Poincaré plots, in which each beating cycle length is plotted against its predecessor to quantify the correlation between consecutive heart beating intervals (Figure 2). Denervation in vivo, or isolation of the SAN, decreases the scattering
+
+pattern of the points in the Poincaré plot that did the in vivo state, and the Poincaré plots after denervation exhibit the typical cigarshaped scatter of points (Figure 2).9
+Measurements of system entropy deﬁne the degree of order among its beating intervals. An increase in system entropy reﬂects increasing disorder, and completely random systems exhibit maximal entropy. Approximate entropy (ApEn; Table 1) indicates that after autonomic denervation in vivo, there is a trend toward a decrease in system entropy (for each window size) and system entropy in isolated SAN tissue decreases signiﬁcantly compared with that in the heart in vivo.
+We used frequency domain analysis to further examine the complexity in the brain-pacemaker system signaling cascade. The data in Table 1 suggest that the denervation of the heart in vivo tends to increase the very low frequency (VLF)/total power and tends to decrease the low frequency (LF)/total power but does not alter the high frequency (HF)/total power. Thus, after denervation, the LF/HF power decreases. These trends observed during denervation in vivo become even more marked in the completely denervated, intact, isolated SAN tissue from the heart (Table 1). Online Supplemental Figure 3 demonstrates that typical LF and HF peaks disappear after denervation in vivo and in intact isolated SAN.
+We used power-law analyses and detrended ﬂuctuation analysis (DFA) to detect and quantify the fractal-like behavior of heart beating intervals. The slope of a linear function relating log frequency to log power spectrum density is the fractal scaling exponent β (Figure 3A). Fractal-like complexity
+
+Figure 1 Representative (A) beating intervals vs time and (B) distribution of beating intervals at different levels of integration from the heart in vivo to single isolated pacemaker cells (from the same preparation).
+
+1214
+
+Heart Rhythm, Vol 11, No 7, July 2014
+
+Figure 2 Poincaré plots of the beating interval at different levels of integration from the heart in vivo to single isolated pacemaker cells.
+
+among the heart beating intervals is present in vivo (Table 1); β increases after autonomic denervation in vivo and further increases in the intact isolated SAN tissue in which autonomic
+denervation is complete (Table 1). DFA characterizes the
+degree of correlation among timescales embedded in the heart beating intervals.10 The self-similarity of frequency regimes
+embedded in the beating intervals assessed from ECG beating
+interval analyses by DFA is assumed to be bifractal and is described by short- and long-term exponents α1 and α2, respectively.10 Bifractal components are not only embedded
+
+in the BIV of the heart in vivo (Figure 3B) but also present in the completely denervated SAN tissue, even though with altered scaling exponents (Table 1).
+BIV of single pacemaker cells after their disaggregation from SAN tissue When single pacemaker cells disaggregate from SAN tissue, their beating intervals remain rhythmic but the average beating interval and BIV increase markedly (Table 1) compared with
+
+Figure 3 A: Power-law behavior (log power spectrum density [PSD] vs log frequency) of beating intervals. B: Self-similarity of the beat rate time series by using detrended ﬂuctuation analysis at different levels of integration from the heart in vivo to isolated pacemaker tissue in the same animal. α1 ¼ short-term scaling exponent; α2 ¼ long-term scaling exponent; β ¼ slope of the power-law relationship.
+
+Yaniv et al Beating Rate Variability of Sinoatrial Node Cells
+
+1215
+
+Figure 4 Distribution of beating intervals in single sinoatrial node cells (A), distribution of the average beating intervals of different cells (B), and Poincaré plots of the beating interval variability (C) in single sinoatrial node cells under control (CON), β-adrenergic receptor stimulation (ISO), and cholinergic receptor stimulation (CCh).
+
+those of the SAN tissue or the heart in vivo (Figure 1B). Furthermore, when isolated from SAN tissue, single pacemaker cells exhibit a marked increase in ApEn (Table 1) and points in the Poincaré plot are scattered markedly (Figure 2) around the markedly elevated mean beating interval (Table 1). Finally, fractal-like behavior of heart beating intervals observed in the heart in vivo and in the intact SAN tissue and evidenced by the β scale factor or DFA (Table 1) does not generally extend to the single isolated pacemaker cells (only 9 of 65 cells exhibited fractal-like behavior of heart beating intervals). Because VLF/total power in single pacemaker cells is similar to that of the heart in vivo (Table 1), differences in the distribution of the dynamic patterns in the VLF regime in pacemaker cells in isolation than in the heart in vivo must be involved in the loss of fractal-like behavior in the majority of single pacemaker cells.
+Stimulation of autonomic receptors in single isolated pacemaker cells β-AR or CR stimulation modulates the signaling of the very same mechanisms intrinsic to pacemaker cells that control their intrinsic automaticity (Ca2þ-calmodulin activation of adenylyl cyclases/PKA and CaMKII). Figure 4A illustrates representative beating interval series of pacemaker cells in control and after CR or β-AR stimulation. CR stimulation (by 100 nM carbachol) markedly increased the average beating interval, the time domain variability indices, and entropy of single pacemaker cells (Table 2 and Figure 4). In contrast, β-AR stimulation (by 100 nM isoproterenol) markedly decreased the average beating interval, time domain variability indices, and entropy of single pacemaker cells (Table 2 and Figure 4). Furthermore, β-AR stimulation
+
+increased the percentage of pacemaker cells that exhibit fractal-like behavior (3 of 9 cells vs 9 of 65 cells; P o .05). The fractal-like behavior slope β of these cells averaged À1.2 Ϯ 0.2 (ie, it was between β in vivo and β of SAN tissue). Furthermore, the pacemaker cells that exhibit fractal-like behavior of beating intervals during β-AR stimulation have a higher VLF/total power (22 Ϯ 1 vs 9 Ϯ 1; P o .05) and lower entropy levels (0.7 Ϯ 0.1 vs 0.9 Ϯ 0.1; P o .05) before β-AR stimulation. Therefore, β-AR stimulation, per se, has the capacity to restore fractal-like behavior and order to some isolated pacemaker cells.
+The proﬁles of beating intervals and beating interval CV in vivo during autonomic denervation in vivo, in isolated SAN tissue, and in single isolated pacemaker cells with and without autonomic receptor stimulation are illustrated in Figure 5. The proﬁles of beating intervals, beating interval CV, and entropy are illustrated in Figure 6. Note in Figure 6 that (1) the average CV or ApEn decreases as average beating interval increases in transition from the heart in vivo to SAN tissue in isolation; (2) when single pacemaker cells are isolated from SAN tissue, the further increase in the average beating interval is accompanied by an increase in basal CV or ApEn; (3) a decrease or increase in the beating interval of isolated cells in response to β-AR or CR, respectively, is accompanied by a respective decrease or increase in CV and ApEn. Finally, note that, in this context, the pattern of ApEn essentially reports that of pattern of CV.
+Discussion
+The essence of the initiation of the heart beat is the generation of APs by pacemaker cells. The components in the signaling cascade initiated in the brain and transmitted
+
+1216
+
+Heart Rhythm, Vol 11, No 7, July 2014
+
+Figure 5 Distribution of (A) beating intervals and (B) coefﬁcients of variation at different levels of integration from the heart in vivo to single pacemaker cells in isolation in all experiments. CCh ¼ cholinergic receptor stimulation; ISO ¼ β-adrenergic receptor stimulation.
+
+to the pacemaker cells in the SAN comprise a complex nonlinear system in which signals become ampliﬁed. A reductionist approach to examine only speciﬁc parts of the system, therefore, cannot reveal this complexity embedded
+
+in the complete signaling cascade from the brain to the SAN. In an attempt to unravel this complexity embedded in the brain-pacemaker system signaling cascade, we segregated each component in order to discover its chaotic nature and
+
+Figure 6 The relationship between beating intervals and (A) coefﬁcients of variation, (B) approximate entropy (ApEn), and (C) slope of the power-law relationship (β) at different levels of integration from the heart in vivo to single pacemaker cells in isolation. CCh ¼ cholinergic receptor stimulation; ISO ¼ βadrenergic receptor stimulation; SAN ¼ sinoatrial node.
+
+Yaniv et al Beating Rate Variability of Sinoatrial Node Cells
+
+1217
+
+integrated the information obtained in individual components about their behavior back into the system.
+Single isolated sinoatrial pacemaker cells in isolation Figure 6 shows that the relationships between the average beating interval and CV or entropy are not monotonic, but conform to a U shape. The average range of basal beating intervals of single isolated pacemaker cells is well below their rate when they reside in SAN tissue. The variability of beating intervals of single isolated pacemaker cells is also higher than that of cells residing in SAN tissue (Figure 6); their entropy increases dramatically; and fractal-like behavior of beating intervals is absent (Table 1). A computercontrolled version of the “coupling clamp” technique predicts that low coupling between 2 cells increases BIV.11 Isolation of single pacemaker cells from the SAN precludes cell-to-cell interactions within the tissue (electrotonic and mechanical),12,13 and intrinsic clock periods of individual cells increase.14 The loss of this property when pacemaker cells are isolated from SAN tissue leads to the loss of fractal-like behavior of beating intervals and the increase in entropy. Beating intervals observed in human embryonic-induced pluripotent stem cell–derived15 and cultured cardiomyocytes16–18 do obey a power-law behavior. However, these results do not contradict the behavior of a single SAN cell in the present study because these cells are coupled in the tissuelike monolayer milieu and therefore they behave more as a tissue than as single cells, which are both electrotonically and mechanically disconnected.19
+In addition to a loss of cell-to-cell electrical and mechanical communications, autonomic receptor stimulation that is present in vivo affects the beating interval of pacemaker cells residing in the SAN. By isolating single pacemaker cells from SAN tissue, we could explore how autonomic receptor stimulation directly affects the pacemaker cell’s BIV, ApEn, and fractal-like behavior of beating intervals in the absence of cell-to-cell interactions. β-AR stimulation not only markedly decreases the average beating interval and time domain variability indices of single isolated pacemaker cells but also markedly decreases beating interval entropy (Table 2 and Figure 6). Furthermore, β-AR stimulation increases the likelihood that pacemaker cell beating intervals exhibit fractal-like behavior. Because the β-AR stimulation of isolated pacemaker cells decreases the intrinsic clock period via the Ca2þ-calmodulin activation of adenylyl cyclases/ PKA and the CaMKII-dependent phosphorylation of Ca2þ and membrane proteins,20 it is reasonable to conclude that this phosphorylation effect decreases entropy. Measurements of beating interval entropy deﬁne the degree of order among its beating intervals. Because completely random systems exhibit maximal entropy, the decrease in beating interval entropy by β-AR stimulation leads to beating interval complexity. Similar to these effects of autonomic receptor stimulation, mechanisms intrinsic to the pacemaker cell, for example, phosphodiesterase and cyclic adenosine
+
+monophosphate/PKA signaling can synchronize the coupled-clock period. One can assume therefore that these intrinsic mechanisms can also control the BIV complexity.
+CR stimulation, in contrast to β-AR stimulation, reduces the Ca2þ-calmodulin activation of adenylyl cyclases/PKA and CaMKII signaling and increases the intrinsic clock period.21 CR stimulation not only markedly increases the average beating interval and time domain variability indices of single isolated pacemaker cells but also markedly increases their entropy (Table 2 and Figure 6). In contrast, CR stimulation reduces the Ca2þ-calmodulin activation of adenylyl cyclases/PKA and CaMKII signaling and increases the intrinsic clock period.21 Thus, our analyses of the effects of autonomic receptor stimulation demonstrate that autonomic signals modulate not only the beating interval of pacemaker cells but also its complexity.
+Integrating isolated pacemaker cells into isolated intact SAN tissue The most striking difference between pacemaker cells residing in SAN tissue and in isolation, beyond a marked reduction in the average beating interval, is that even in the absence of autonomic neural input, beating intervals of SAN tissue exhibit a 20-fold decrease in entropy and a 3-fold increase in VLF/total power and exhibit fractal-like behavior compared with those of the isolated cells. That fractal-like behavior of beating intervals of pacemaker cells residing in intact isolated SAN exists indicates that properties intrinsic to pacemaker cells residing in SAN tissue contribute an order to the in vivo heart rate variability. Note, however, that the system complexity of SAN tissue in which neural input is absent is lower than that of the intact heart in vivo (Table 1 and Figure 6).
+The shortest beating intervals at which pacemaker cells embedded in SAN tissue can generate spontaneous APs are dictated by clock periodicity intrinsic to these cells. Pacemaker cells in intact SAN tissue that have the shortest clock periods entrain cells with more prolonged periods, reducing the BIV among cells in SAN tissue. “Neighborhoods” of cells in SAN tissue differ in their average coupled-clock period, and the neighborhood of cells having the shortest period is the primary pacemaker area in the SAN and has the ability to generate APs at shorter intervals than does other SAN neighborhoods. Thus, the impulses that emanate from the primary SAN area excite other neighborhoods in SAN tissue and this leads to the emanation of an impulse from the SAN that excites the rest of the heart.22
+Integrating pacemaker cells in isolated SAN into the heart in vivo In the intact heart in vivo, the average beating interval reduces compared with that in the isolated SAN, and this is accompanied by an increase in the system order (Table 1 and Figure 6) and decreased power-law slope. Thus, the presence of autonomic neural impulses is the major factor that underlies the increase in entropy and CV when isolated
+
+1218
+SAN tissue is integrated into the heart in vivo (Figure 6). Similar increases in time domain BIV parameters in vivo to those in denervated in vivo have been documented previously in dogs23 and in transplanted hearts in humans.1
+Numerous factors present in vivo also modulate intrinsic clock mechanisms of pacemaker cells in the SAN: hormonal factors (eg, epinephrine, atrial natriuretic peptide, and brain natriuretic peptide) and mechanical factors (eg, atrial stretch and arterial pressure). In addition, residual autonomic modulation due to incomplete denervation may be present during autonomic denervation in vivo. These factors may explain differences between the complexity of beating intervals during autonomic denervation in vivo and the intact isolated SAN tissue.
+In nature, a separate activation of β-AR or CR does not usually occur; rather, both are activated together to different degrees. The dominant β-AR activation of single isolated pacemaker cells not only decreases the average beating interval and time domain variability indices but also markedly decreases beating interval entropy. Under these conditions, in a single pacemaker cell, the probability that beating intervals exhibit fractal-like behavior is higher. The inhibition of parasympathetic impulses to pacemaker cells in SAN tissue in vivo also decreases the slope of the line describing the fractal-like behavior (review in Yaniv et al4). These results permit the conclusion that the activation of sympathetic to parasympathetic receptor stimulation shifts the fractal dynamic toward more order (ie, a Brownian noiselike component). In contrast, when CR:β-AR activation increases, not only the average beating interval and time domain variability indices of single isolated pacemaker cells increase but also beating interval entropy increases markedly. When the sympathetic impulses to pacemaker cells in SAN tissue are inhibited in vivo, the fractal-like behavior slope increases (review in Yaniv et al4). Thus, when parasympathetic to sympathetic receptor stimulation increases, the beating interval fractal-like dynamic shifts toward less order (white noise). In single pacemaker cells when the log frequency vs log power spectrum density curve is already ﬂat, that is, the fractal-like behavior does not exist (Online Supplemental Figure 4), increasing parasympathetic to sympathetic receptor activation by CR increases entropy. Therefore, our results indicate that the sympathetic to parasympathetic balance determines fractal-like behavior and one can assume that the balance of β-AR and CR activation will bring the BIV complexity to the same level of the basal state in single pacemaker cells.
+Study limitations Electrical activity was used to quantify the beating interval under in vivo conditions and in isolated pacemaker tissue. The beating interval in isolated pacemaker cells was quantiﬁed by using contraction and not electrical activity intervals. However, electrical activity was used to quantify the beating interval under in vivo conditions and in isolated pacemaker tissue. Because contraction is a slower phenomenon
+
+Heart Rhythm, Vol 11, No 7, July 2014
+compared to excitation, the analysis of the contraction patterns may possibly be prone to uncertainty in the detection of contraction times. It might be argued that there may be a higher level of noise in the time series derived from contraction recordings that can affect the BIV parameters. However, analyses of simultaneous recording of electrical activity and contraction at the same pacemaker cell provide evidence that the same interval between successive APs is the interval between successive contractions (Online Supplemental Figure 2).
+The in vivo experiments were conducted under general anesthesia. Because it is not clear how anesthesia affects the heart rate variability in vivo and under in vivo denervated conditions in rabbit, the anesthesia may affect the BIV parameters. Future experiments using the telemetry method are needed to clarify this point.
+It has been suggested previously that the oscillation period of the system always lies in the range of the intrinsic periods of the individual oscillator.24 However, the average beating interval of isolated pacemaker cells in the present study was longer than that of the cells residing in the SAN. Factors that can affect the disparity of spontaneous beating intervals in isolated cells and in the intact SAN are as follows: (1) pacemaker cells embedded in tissue contract against a load compared with unloaded isolated pacemaker cells, and therefore their beating interval decreases25; (2) the cell isolation procedure may alter the ion channel composition of the membrane and/or of the intracellular Ca2þ cycling mechanisms, leading to a prolongation of the intrinsic beating period. As a consequence, beating intervals in a fraction of isolated pacemaker cells may no longer exhibit power-law behavior. However, because isolated SANC monolayers exhibit power-law behavior, one can assume that the isolation per se does not necessarily cause the loss of the power-law behavior and the increase in the average beating interval observed in single pacemaker cells. Future experiments in which β-adrenergic receptor stimulation and cholinergic receptor stimulation are administered in different doses are required to stimulate the effect of different degrees of parasympathetic and sympathetic nervous inputs to the pacemaker cells on the beating interval and BIV.
+Conclusion
+By dissecting the brain-pacemaker cell signaling cascade, we demonstrate that fractal-like behavior of the heart in vivo is attributable to intrinsic clocklike signaling in pacemaker cells residing in SAN tissue and its modulation by autonomic neural input from the brain. Therefore, both the average beating interval in vivo and the full complexity embodied in its beating intervals are conferred by the combined effects of clock periodicity intrinsic to pacemaker cells residing in the SAN and autonomic neural input, which modulates pacemaker cells’ clock periods. When individual pacemaker cells reside in the SAN tissue environment, their clock periods become mutually entrained, even in the absence of autonomic input, via cell-to-cell communication, in part due to
+
+Yaniv et al Beating Rate Variability of Sinoatrial Node Cells
+
+1219
+
+electrotonic and mechanical interactions, and generate spontaneous beating intervals that exhibit fractal-like behavior. Autonomic receptor stimulation modulates the intrinsic pacemaker cell clock period, shifting the beating interval periodicity and its complexity.
+Acknowledgment
+We sincerely thank Loretta Lakatta, RN, BSN, for assistance in editing.
+Appendix Supplementary data
+Supplementary data associated with this article can be found in the online version at http://dx.doi.org/10.1016/j.hrthm. 2014.03.049.
+References
+1. Signorini MG, Cerutti S, Guzzetti S, Parola R. Non-linear dynamics of cardiovascular variability signals. Methods Inf Med 1994;33:81–84.
+2. Goldberger AL, Amaral LA, Hausdorff JM, Ivanov P, Peng CK, Stanley HE. Fractal dynamics in physiology: alterations with disease and aging. Proc Natl Acad Sci U S A 2002;99:2466–2472.
+3. Goldberger AL, Bhargava V, West BJ, Mandell AJ. On a mechanism of cardiac electrical stability: the fractal hypothesis. Biophy J 1985;48:525–528.
+4. Yaniv Y, Lyashkov AE, Lakatta EG. The fractal-like complexity of heart rate variability beyond neurotransmitters and autonomic receptors: signaling intrinsic to sinoatrial node pacemaker cells. Cardiovasc Pharmacol 2013;2:11–14.
+5. Lakatta EG, Maltsev VA, Vinogradova TM. A coupled SYSTEM of intracellular Ca2þ clocks and surface membrane voltage clocks controls the timekeeping mechanism of the heart’s pacemaker. Circ Res 2010;106:659–673.
+6. DiFrancesco D. Characterization of single pacemaker channels in cardiac sinoatrial node cells. Nature 1986;324:470–473.
+7. Binah O, Weissman A, Itskovitz-Eldor J, Rosen MR. Integrating beat rate variability: from single cells to hearts. Heart Rhythm 2013;10:928–932.
+8. Vinogradova TM, Sirenko S, Lyashkov AE, Younes A, Li Y, Zhu W, Yang D, Ruknudin AM, Spurgeon H, Lakatta EG. Constitutive phosphodiesterase activity restricts spontaneous beating rate of cardiac pacemaker cells by suppressing local Ca2þ releases. Circ Res 2008;102:761–769.
+9. Bergfeldt L, Haga Y. Power spectral and Poincare plot characteristics in sinus node dysfunction. J Appl Physiol (1985) 2003;94:2217–2224.
+10. Goldberger AL, Amaral LA, Glass L, Hausdorff JM, Ivanov PC, Mark RG, Mietus JE, Moody GB, Peng CK, Stanley HE. PhysioBank, PhysioToolkit, and
+
+PhysioNet: components of a new research resource for complex physiologic signals. Circulation 2000;101:E215–E220. 11. Verheijck EE, Wilders R, Joyner RW, Golod DA, Kumar R, Jongsma HJ, Bouman LN, van Ginneken AC. Pacemaker synchronization of electrically coupled rabbit sinoatrial node cells. J Gen Physiol 1998;111:95–112. 12. Watanabe EI, Honjo H, Anno T, Boyett MR, Kodama I, Toyama J. Modulation of pacemaker activity of sinoatrial node cells by electrical load imposed by an atrial cell model. Am J Physiol 1995;269:H1735–H1742. 13. Jalife J. Mutual entrainment and electrical coupling as mechanisms for synchronous ﬁring of rabbit sino-atrial pace-maker cells. J Physiol 1984;356: 221–243. 14. Sheikh F, Mezzano V, Wright A, Zanella F, Lyon RS, Gu Y, Dalton N, Peterson KL, Evans S, McCulloch A. A novel role for mechanical cell-cell junction proteins in sinus node function. J Mol Cell Cardiol 2013;65:S132. 15. Mandel Y, Weissman A, Schick R, Barad L, Novak A, Meiry G, Goldberg S, Lorber A, Rosen MR, Itskovitz-Eldor J, Binah O. Human embryonic and induced pluripotent stem cell-derived cardiomyocytes exhibit beat rate variability and power-law behavior. Circulation 2012;125:883–893. 16. Soen Y, Braun E. Scale-invariant ﬂuctuations at different levels of organization in developing heart cell networks. Phys Rev E Stat Phys Plasmas Fluids Relat Interdiscip Topics 2000;61:R2216–R2219. 17. Harada T, Yokogawa T, Miyaguchi T, Kori H. Singular behavior of slow dynamics of single excitable cells. Biophys J 2009;96:255–267. 18. Kucera JP, Heuschkel MO, Renaud P, Rohr S. Power-law behavior of beat-rate variability in monolayer cultures of neonatal rat ventricular myocytes. Circ Res 2000;86:1140–1145. 19. Joyner RW, van Capelle FJ. Propagation through electrically coupled cells. How a small SA node drives a large atrium. Biophys J 1986;50:1157–1164. 20. Vinogradova TM, Lyashkov AE, Zhu W, et al. High basal protein kinase A-dependent phosphorylation drives rhythmic internal Ca2þ store oscillations and spontaneous beating of cardiac pacemaker cells. Circ Res 2006;98:505–514. 21. Lyashkov AE, Vinogradova TM, Zahanich I, Li Y, Younes A, Nuss HB, Spurgeon HA, Maltsev VA, Lakatta EG. Cholinergic receptor signaling modulates spontaneous ﬁring of sinoatrial nodal cells via integrated effects on PKA-dependent Ca(2þ) cycling and I(KACh). Am J Physiol Heart Circ Physiol 2009;297:H949–H959. 22. Anumonwo JM, Delmar M, Vinet A, Michaels DC, Jalife J. Phase resetting and entrainment of pacemaker activity in single sinus nodal cells. Circ Res 1991;68: 1138–1153. 23. Chiou CW, Zipes DP. Selective vagal denervation of the atria eliminates heart rate variability and baroreﬂex sensitivity while preserving ventricular innervation. Circulation 1998;98:360–368. 24. Michaels DC, Matyas EP, Jalife J. Dynamic interactions and mutual synchronization of sinoatrial node pacemaker cells: a mathematical model. Circ Res 1986;58:706–720. 25. Cooper PJ, Lei M, Cheng LX, Kohl P. Selected contribution: axial stretch increases spontaneous pacemaker activity in rabbit isolated sinoatrial node cells. J Appl Physiol (1985) 2000;89:2099–2104.
+

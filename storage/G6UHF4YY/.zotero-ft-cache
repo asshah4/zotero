@@ -1,0 +1,1619 @@
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+Contents lists available at ScienceDirect
+Neuroscience and Biobehavioral Reviews
+journal homepage: www.elsevier.com/locate/neubiorev
+Review article
+Heart rate variability in the prediction of mortality: A systematic review and meta-analysis of healthy and patient populations
+Marc N. Jarczok a,*, Katja Weimer a, Christin Braun a, DeWayne P. Williams b, Julian F. Thayer b, Harald O. Gündel a, Elisabeth M. Balint a
+a Department of Psychosomatic Medicine and Psychotherapy, Ulm University Medical Center, Albert-Einstein-Allee 23, 89081 Ulm, Germany b Department of Psychological Science, University of California, 4201 Social & Behavioral Sciences Gateway, Irvine, CA 92697-7085, USA
+
+ARTICLE INFO
+Keywords: Mortality Survival Meta-analysis Meta-regression Vagal activity HRV General population Cardiac mortality All-cause mortality Individual participant data Autonomic nervous system
+
+ABSTRACT
+Measures of heart rate variability (HRV) as a predictor of risk of disease and mortality have been investigated from various perspectives for more than six decades. The aim of the present comprehensive meta-analysis is to examine eight different HRV parameters to determine their association with all-cause and cardiac mortality. A total of 32 studies and two individual participant datasets (IPD) with 37 samples and 38,008 participants were included. Lower HRV parameter values were significant predictors of higher mortality across different ages, sex, continents, populations and recording lengths. Most of the examined parameters showed comparable hazard ratios (HR). IPD sub-analysis for heart rate corrected HRV parameters confirmed the strong association between HRV and all-cause mortality. Meta-regressions revealed no effect modifier for HRs extracted from covariateadjusted studies. Sub-analyses of studies comparing the lowest quartile of 5-min root mean square of succes­ sive differences (RMSSD) vs. the other quartiles yielded a combined HR of 1.56 (95% CI: 1.32–1.85). The applicability of HRV measurement in preventive settings is discussed.
+
+1. Introduction
+Heart rate and its variability plays a role in disease diagnosis and prognosis since the ancient medicus Galen (Billman, 2011). The devel­ opment of the electrocardiogram (ECG) measurement in 1895 repre­ sents a milestone in medical history allowing an accurate measurement of heart rate. Only this allowed the precise calculation of the variability between heartbeats, i.e., heart rate variability (HRV).
+Early experiments showed that this variability originates from the autonomous nervous system (Akselrod et al., 1981), primarily from rapid vagal (dis)inhibition (Warner and Cox, 1962). At the same time, reduced HRV has been linked to worse prognosis in disciplines as diverse as cardiology (Malik and Camm, 1993) and gynaecology (Freemann R, Garite T, 1981). In the following decades, parameters of HRV were negatively associated to a multitude of somatic diseases and disorders including increased risk for cardiovascular disease (Jarczok et al., 2012; Kristal-Boneh et al., 1995; Mercedes R Carnethon et al., 2002; Schuster et al., 2016) and myocardial infarction (MI) (Thayer and Lane, 2007) as well as to a wide range of psychopathologies including depressive,
+
+bipolar and posttraumatic stress disorder (PTSD) (Faurholt-Jepsen et al., 2017; Heiss et al., 2021; Holzman and Bridgett, 2017; Jandackova et al., 2016; Schneider and Schwerdtfeger, 2020; Sigrist et al., 2021). Conse­ quently, an increased risk of mortality was repeatedly reported and summarized for populations with cardiovascular diseases (Fang et al., 2020) and cancer (Zhou et al., 2016), but interestingly there are also reports for general population samples (e.g., Dekker et al., 1997; Huikuri et al., 1998; Ma¨kikallio et al., 2001; Wulsin et al., 2015).
+HRV as a term meanwhile is a theoretical background, represented by many different parameters. There are a lot of different approaches to calculate variability: time-domain bound like the root mean square of successive differences (RMSSD) and the standard deviation of normalto-normal intervals (SDNN), frequency-domain bound like high fre­ quency power (HF), low frequency power (LF), simple ones like peak to valley and more complex ones like nonlinear dynamics with the theo­ retical background of chaos theories (Lombardi, 2000; Shaffer and Ginsberg, 2017). To date, it has not been demonstrated that specific parameters are superior to others across settings. This is understandable on the common background that all parameters are derived from the
+
+Abbreviations: HRV, Heart rate variability. * Corresponding author.
+E-mail address: marc.jarczok@gmail.com (M.N. Jarczok).
+https://doi.org/10.1016/j.neubiorev.2022.104907 Received 27 October 2021; Received in revised form 3 October 2022; Accepted 4 October 2022 Available online 13 October 2022 0149-7634/© 2022 Elsevier Ltd. All rights reserved.
+
+M.N. Jarczok et al.
+RR-intervals and therefore are highly correlated. Nevertheless, it also has been shown that some parameters represent different aspects better than others, like RMSSD and HF reflect vagal compounds (Shaffer and Ginsberg, 2017; Wulsin et al., 2018). It is unclear whether specific pa­ rameters such as the SDNN or RMSSD and/or settings (e.g., long-term measurements) have advantages over others and can provide better risk prediction.
+Next to these issues, there are many various possible measurement settings (posture such as supine, seated, and period such as during work, leisure time, sport or unstructured) and lengths of measurements (10 sec up to 48 h), as well as genetic aspects and the influence of existing diseases.
+Therefore, the purpose of this meta-analysis is to investigate the predictive power of HRV measures for mortality, i.e., investigating to what extend an observed HRV measure at a baseline can predict the time
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+to event (i.e., death) from either all-cause or cardiac mortality. We aim to compare different measures of HRV to investigate if mortality pre­ diction by HRV differs dependent on type of HRV parameter and settings of HRV measurement and investigated population. We chose all-cause mortality and cardiac mortality to compare if HRV is more powerful in prediction of the unspecific all-cause mortality than of specific mor­ talities, of which cardiac mortality has been researched most often.
+To generate valid results, we focused on HRV parameters that have been reported more often, as less common parameters with small number of participants will not add qualitative data to the metaanalysis. A pre-search showed that the most common parameters were those which are also recommended by the Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology (Camm et al., 1996): SDNN, SDANN, TP, VLF, LF and HF, while other parameters such as SD1, SD2, DFalpha were found only
+
+Fig. 1. PRISMA flow chart of study selection. AC mortality: all-cause mortality, CA mortality: cardiac mortality, IPD: individual participant data, HRV: heart rate variability.
+2
+
+M.N. Jarczok et al.
+in single studies, thus not fulfilling the criteria for meta-regression. We hypothesize to observe systematic shorter time-to-event episodes
+in individuals with lower measures of HRV at study inclusion. We further hypothesize that this principle is independent of various study settings including population type or observation time.
+2. Methods
+The study was conducted according to the preferred reporting items for systematic reviews and meta-analyses (PRISMA) statement (Moher et al., 2009).
+2.1. Search strategy
+Fig. 1 summarizes the results of the systematic literature search. The Medline database was screened for studies reporting time to event (i.e., mortality) information as outcome and frequency or time domain pa­ rameters of HRV as predictor. The terms mortality and cardiac electro­ physiology were entered as Medical Subject Heading (MeSH). The term heart rate variability or its variants were screened in title and abstract. Language restriction was set to German or English.
+Search terms for MEDLINE (via PubMed) ("mortality"[mesh]) AND ("HRV"[tiab] OR "Heart rate variability"[tiab] OR "Heart rate varia­ bilities"[tiab] OR "Heart period variability"[tiab] OR "Cardiac auto­ nomic activity"[tiab] OR "Cardiac autonomic control"[tiab] OR "Cardiac reactivity"[tiab] OR "Cardiac vagal control"[tiab] OR "Autonomic ner­ vous system activity"[tiab] OR "Parasympathetic nervous system acti­ vity"[tiab] OR "Vagal tone"[tiab] OR "Vagus nerve"[Mesh] OR "Vagal activity"[tiab] OR "Vagal reactivity"[tiab] OR "Vagus nerve"[tiab] OR "Parasympathetic nervous system"[tiab] OR "Cardiac electro­ physiology"[Mesh]) AND. "Humans"[Mesh] AND ("1997/01/01"[PDAT]: "3000/12/31"[PDAT]) AND. (English[lang] OR German[lang]). The initial search was conducted in June 2019 by the authors CB, EB, MNJ and KW and was updated in March 2021 by MNJ and EB. All empirical studies published between 01.01.1997 and 30.06.2019 were considered. The search was updated in March 2021. Initial database search revealed 231 initial records with two more records identified by snowballing and 21 more captured by updating.
+2.2. Study selection
+Studies were included into the systematic review and meta-analysis if the following a priori criteria were met:
+(1) study represents original research (2) published in English or German (3) as an original article or brief report in a journal (i.e., no com­
+ments, dissertations, conference abstracts, reviews) (4) reports adjusted or unadjusted results from Cox proportional
+hazard models (5) for either all-cause or cardiac mortality (6) reports a measure of HRV (see Section 2.4.1) (7) in human adults (age ≥18 years)
+Studies were included if at least one distinguishable subsample was reported that met the inclusion criteria. By applying the inclusion criteria to the information contained in the title and abstract, the pool of records was reduced to 115. After reviewing the full text, a total of 35 samples from 32 publications remained. In addition, two open access samples (MIDUS 2 & MIDUS Refresher, WHITEHALL II) were analyzed and added to this meta-analysis (see details below). Thus, K= 34 studies with S= 37 samples containing data from N = 38,008 individuals were available.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+Abstract screening and selection were carried out independently by the authors MNJ, CB and KW in July 2019. Disagreements were dis­ cussed by this triad and resolved on a consensual basis. An overall interrater agreement of 89.2% was assessed for the title/abstract screening in July 2019.
+Full texts were screened by MNJ, CB, KW and EB in September 2019 in dyads. As before, disagreements were solved by consensus. Interrater agreement was very high with 91.8% for the full text screening.
+At the update in March 2021, disagreements were discussed by MNJ and EB and solved by consensus. The agreement rate for the update was 90.5%.
+In case of any missing or inconclusive information in the full text, the corresponding author of the publication was searched for electronically and then repeatedly contacted by MNJ, KW or EMB via email with a friendly request to provide the missing or additional information. If no current address of the corresponding author could be found, the coauthors were approached. Altogether, 13 authors from 13 full-text publications were contacted, of which only two authors responded concerning two of the publications. At this point, we would like to thank all responding authors for their cooperation.
+Two publications were excluded to avoid inclusion of duplicate data (i.e., publications reporting data from the same dataset). First, Huikuri et al. (1998) report results from the same dataset as Ma¨kikallio et al. (2001) but the latter reported more relevant parameters to this sys­ tematic review such as unadjusted and adjusted associations. Therefore, we included results reported by Ma¨kikallio et al. (2001). Second, Cyg­ ankiewicz et al. (2015) report results from a subgroup analysis of the population published in Cygankiewicz et al.(2009). Therefore, we included results reported in 2009.
+2.3. Individual participant data (IPD)
+Two large population studies (MIDUS 2 and MIDUS Refresher: N = 1891 & Whitehall II wave 5: N = 7870) were available for analysis. The individual studies received local ethical approval at their respective institutions.
+MIDUS 2: Open access data from the biomarker project of the second wave (2004–2009) of the Midlife Development in the U.S. study (MIDUS 2, P4; N = 1255 ICPSR 29282 v9 from Mar 27, 2019 https://doi.org/ 10.3886/ICPSR29282.v9) and the MIDUS Refresher (MIDUS R, P4; N = 738; ICPSR 36901 v6 from Nov 18, 2019 https://doi.org/10.3886/ ICPSR36901.v6) were matched with survival information from the MIDUS core mortality dataset (MIDUS_Core_MortalityCauseData_ N2124_20220310.sav) until December 2020 (median follow-up = 13.6 years) and the MIDUS refresher mortality dataset (MID­ US_Refresher_MortalityCauseData_N167_20210305.sav) until March 2021 (Median follow-up = 6.3 years). The combined median follow-up is 11.8 years with 234 deaths from all-cause mortality recorded (11.1%). Ac­ cording to the study description, institutional review board approval was obtained prior to study start and informed consent was obtained from each participant prior to enrolment in the MIDUS study. Further study details and data are publicly available on the official website after free registration (https://midus.colectica.org). Two supine 5-minute ECGs were obtained during rest and HRV measures were derived per 5-minute interval and averaged for this analysis. In cases where only one 5-minute interval was valid or available, the single 5-minute interval was used. The present study included participants with data on all-cause mortality, HRV (RMSSD, SDNN, HF, LF), age (years), sex (male vs. fe­ male), and ethnicity (white vs. non-white) at baseline, as well as survival information.
+Whitehall II: Data from the fifth (1997–1999) phase of the UK Whitehall II longitudinal population-based cohort study was analyzed with a median follow-up of 17.2 years (N = 7870 participants in wave 5) and end of follow-up in June 2015. This ongoing cohort study of subjects initially targeted London-based British civil service office staff, aged 35–55 years (Marmot and Brunner, 2005). The ECG recordings were
+
+3
+
+M.N. Jarczok et al.
+collected at the fifth (1997–1999) wave. A 5-minute supine resting 12-lead ECG (KardiosisTM ECG acquisition module, Tepa, Inc., Turkey and Getemed ECG recorder, Getemed Teltow, Germany) was obtained after five minutes of rest and HRV measures were calculated. The Uni­ versity College London ethics committee approved the study and par­ ticipants gave informed consent. Whitehall II data, protocols and other meta-data are available to bona fide researchers for research purposes (data sharing policy is available at https://www.ucl.ac. uk/epidemiology-health-care/data-sharing-faq). The present study included participants with data on all-cause and cardiac mortality, HRV (RMSSD, SDNN, HF, LF, Total Power [TP]), age (years), sex (male vs. female), and ethnicity (white vs. non-white) at phase 5 (1997–1999), as well as survival information from phases 11 (2012–2013, last updated in June 2015).
+For both studies, analyses according to the Cox proportional hazard regression model were performed and HRs were extracted with their respective 95% confidence intervals (CI).
+2.4. Data extraction and summary statistics
+Data on study characteristics, methodological quality and outcomes were extracted independently by two author dyads (MNJ & KW and CB & EB) in accordance with the data extraction sheet. After an initial trial phase including three full texts per author, the items of the extraction sheet were discussed and carefully reviewed for inconclusive items and adjusted if necessary. During the process of study extraction, the sheet was continually adapted. If data were not extractable (i.e., only provided in graphs), authors were contacted and asked for additional information.
+The following data were extracted from all included studies:
+(1) names of all authors, (2) year of publication, (3) year and place of data collection, (4) sample size, (5) population characteristics such as type of sample (diagnostics),
+mean age, proportion of females, mean length of follow-up, (6) artifact handling, (7) excluded subjects, (8) total length of heart rate assessment, (9) position and paced breathing, (10) recorder type and software, (11) type of mortality, (12) covariates adjustment for in the statistical analysis, (13) the HRV parameter type and metric for predicting end points, (14) HRs with 95% CI.
+Populations were coded into ‘clinical’ (populations with existing disease like coronary artery disease, cirrhosis, dialysis) and ‘non-clin­ ical’ (populations characterized as healthy or as general population).
+Setting was categorized in ‘ambulatory’ (mostly 24 h measurement), ‘supine’ (short time measurement), ‘sitting’ (short time measurement, if explicitly mentioned) and ‘resting’ (short time measurement without information about posture).
+Mortality was categorized as ‘all-cause’ if it was reported as all-cause and as ‘cardiac’ if it was reported as cardiac death, arrhythmic death, cardiovascular death, and fatal coronary heart disease.
+If HRs were reported from several Cox regression models, priority was given to HRs from covariate unadjusted Cox regression as well as to HR from fully adjusted Cox regression models as reported by the authors of the respective study (see Section 2.4.2 Hazard ratios).
+If standard errors (SE) were reported instead of standard deviations (SD), the SD was estimated in accordance to an earlier meta-analysis, by using the following formula: SD = SE × sqrt(n) (Higgins et al., 2019).
+2.4.1. Measures of HRV All measures of HRV are rooted in the variability observed from
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+intervals between adjacent normal R waves (NN intervals). A detailed description about HRV parameters is summarized by Ginsberg and Shaffer (Shaffer and Ginsberg, 2017). In brief, three broad categories are distinguished: time domain measures enumerating the amount of vari­ ability in measurements such as the square root of the mean of the sum of the squares of differences between adjacent R-R intervals (RMSSD), percentage of successive RR intervals that differ by more than 50 ms (pNN50) or standard deviation of all normal-to-normal intervals (SDNN), and the SD of the average normal-to-normal intervals for each 5 min segment (SDANN) in 24 h recordings. Frequency-domain mea­ sures estimate the distribution of absolute or relative power commonly within four frequency bands: high frequency (HF), low frequency (LF), very low frequency (VLF), and ultra-low frequency (ULF) as well as total power (TP) to capture the power across all bands. Finally, there are nonlinear methods such as sample entropy (SampEn), which is a mea­ sure of time series regularity and complexity. The following most frequently reported HRV parameters, which are also recommended by the Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology (Camm et al., 1996), are selected for the present meta-analysis: SDNN, SDANN, TP, VLF and LF, all measures capturing variability from mixed sources such as sym­ pathetic, parasympathetic, thermoregulation and functional capacity, as well as RMSSD, HF or pNN50, for example, measures capturing pri­ marily vagal influence. Importantly, the calculation of VLF is not rec­ ommended from short segments (Nunan et al., 2010). Thus, VLF values were only included from studies that recorded for a sufficient amount of time (50 min minimum i.e., 10 cycles of lower frequency band border 0.0033 Hz) to resolve this frequency. The following studies report VLF calculated from 5- or 10-minute intervals (Bhogal et al., 2019; Hotta et al., 2005; Lanza et al., 2006; May and Arildsen, 2012; Quintana et al., 1997) or no information of VLF calculation (Badarau et al., 2015) and VLF parameters from these studies were therefore not included.
+In addition, SDNN is dependent on the recording length such that comparisons between 5-minute recordings vs. 24 h recordings are problematic. Therefore, studies with SDNN recorded for 24 h and analyzed as a single segment with 24 h were summarized separately (Ablonskyte˙ -Du¯doniene˙ et al., 2012; Lanza et al., 2006; Ma¨kikallio et al., 2001; Stein et al., 2008).
+Other parameters such as SD1, SD2, DFalpha were not considered as they were only found in single studies, thus not fulfilling the criteria for meta-regression.
+Both absolute and logarithmically transformed values of HRV have been included in the present meta-analysis. Normalized values have not been included to this meta-analysis due to the fact that these measures are calculated on the basis of parameters such as LF and TP (Burr, 2007). The aim of the present meta-analysis was to associate single parameters of HRV with mortality.
+2.4.2. Hazard ratios Nearly all full texts reported HRs with respective 95% CI. CIs of 99%
+were transformed to 95%. Similarly, the HR and its variance were log transformed as recommended previously (Parmar et al., 1998). This measure allows for censoring and accommodates variable length of follow-up for each of the included trials. The respective SE was calcu­ lated as sqrt((CI_upper–CI_lower/3.92)^2) for 95% CI and sqrt((CI_up­ per–CI_lower/5.15)^2) for 99% CI in case no SE was reported, but CI were available (Higgins et al., 2019).
+The direction of effects was carefully reviewed by MNJ and EBM and conclusively interpreted as a decrease in the HRV parameter per unit of interest. For example, some study authors report cut off values such as the SDNN < 20 ms vs. ≥ 20 ms and compared groups while others report an increase per millisecond (ms) in SDNN. The latter was inverted using the formula 1/HR to correspond to a decrease per ms. As a matter of fact, per unit change is different across studies (cut-offs vs. increment decreases) and is therefore a potential source of heterogeneity. Also, the default inverse variance weighting is replaced with weights per study by
+
+4
+
+M.N. Jarczok et al.
+their respective study size N (see below). Several studies presented HR from covariate unadjusted and covar­
+iate adjusted Cox regression models. If multiple covariates adjusted Cox regression models were reported, priority was given to the model including age and sex and a minimum of other covariates to enhance between study comparability. Age and sex are known as important de­ terminants of HRV. It would have been best if all models would have been available containing the covariate age and sex only. However, as selection of adjusted covariates widely differed between studies, we also extracted the HR from unadjusted Cox-regression. Meta-analytic regression tried to estimate the between study effect of different com­ positions regarding age, sex, population type, etc. (see Section 3.2.2. potential effect modifiers).
+2.4.3. Risk of bias assessment We assessed the risk of bias via the following criteria: We added a
+time window to HRV sampling, with ‘one’ referring to a well-defined time window (time and situation) and ‘zero’ referring to a too variable or unclear time window (e.g., between 18 and 24 h). As a number of studies report only significant and no secondary HRV parameters, HRV parameter selection represented the next criterion. Studies reporting all time-domain and frequency-domain parameters valid for the time win­ dow of measurement were assigned one point and those reporting only arbitrarily selected parameters were marked by 0. Quality of artifact control was rated with ‘one’ if artifact handling was reported and adequate. If too many artifacts (more than 10%) were included or if artifact handling was not reported at all, ‘0’ was assigned. If screening procedures were poorly described (e.g., no flow chart of included and excluded subjects) population bias was assumed and selection bias could not be assessed in the following.
+For all criteria, points were summed up. The results were rated on a zero (low quality, bias possible) to four (high quality, low probability of bias) range.
+2.5. Methodological quality assessment
+Leave-one-study-out sensitivity analysis was performed by sequen­ tial exclusion of each trial and comparing results graphically, for sub­ groups (type of mortality all-cause or cardiac, unadjusted- vs. covariate adjusted, HRV parameter) with at least three or more studies. A study was considered to be influential if the point estimates of the leave-oneout-pooled outcomes were not within the 95% CI of the original pooled outcomes.
+2.6. Statistical analysis
+STATA version 15.1 (Stata Corporation, College Station, TX, USA) with the package metan (Version 20210224) was used to perform the meta-analysis. Weighted generalized least squares meta regressions were calculated using SPSS Version 25 (SPSS© Statistics 25, IBM, USA) with the macro metareg. HRs and SEs were accordingly extracted from full texts or IPD-datasets and log-transformed. Study weights were set to actual study size, i.e., the reported N of the respective Cox regression model if reported. This method is replacing standard inverse probability weighting, because of the different metrics of reported parameters such as ms, log(ms), or quartiles. These different metrics can be a large source of varying SEs between studies and can bias inverse probability weighting. However, this led to a larger number of studies reporting smaller increments (i.e., per millisecond changes) while studies report­ ing larger increments (i.e., per quartile change, per SD change) were underrepresented.
+Statistical heterogeneity was assessed by using the I2 statistic. This method quantifies the amount of variation between studies that can be attributed to true variation in effect sizes rather than sampling error. Importantly, I2 does not depend on the number of studies included in the meta-analysis or the metric of the effect size (Higgins and Thompson,
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+2002). An I2 of 25%, 50% and 75% is considered as low, moderate and high heterogeneity, respectively. Heterogeneity was considered to be present if I2 exceeded 25% (Higgins and Thompson, 2002). If hetero­ geneity was present, random-effect models were interpreted, if no het­ erogeneity was present, fixed-effect models were interpreted. A p-value < 0.05 was considered to be statistically significant.
+2.7. IPD subgroup analysis heart rate correction
+To eliminate the potential effect of heart rate on HRV, a sub-analysis was performed for the parameters SDNN and RMSSD calculating the coefficient of variation (cvRMSSD and cvSDNN) as suggested by de Geus et al. (2019). For these Cox regression analyses, fixed effect inverse variance weighting was used, calculating HR for the lowest quartile vs. the rest of the respective HRV parameter.
+3. Results
+3.1. Search results and study selection
+A total of 32 studies and two datasets (K=34) summarizing data from 38,008 individuals were analyzed (see Fig. 1). From some studies, more than one population sample (S) was extracted because authors separated results by subgroups (Dekker et al., 1997; La Rovere et al., 2003; Liao et al., 2002).
+Four major groups were classified: Studies reporting results on allcause mortality and cardiac mortality each either derived from covari­ ate unadjusted or covariate adjusted Cox proportional hazard models. If authors from included studies reported both, unadjusted and adjusted HRs, both were extracted. We present studies reporting results on A) allcause mortality from covariate unadjusted Cox proportional hazard models (K=18; S=18; N = 17,990) (Ablonskyte˙ -Du¯doniene˙ et al., 2012; Bhogal et al., 2019; Gilliam et al., 2007; Hotta et al., 2005; Kiviniemi et al., 2007; Lanza et al., 2006; Macfarlane et al., 2007; M¨akikallio et al., 2001; Medenwald et al., 2017; Ryff et al., 2021, Whitehall year: 1998; Oikawa et al., 2009; Quintana et al., 1997; Shibasaki et al., 2014; Singh et al., 2009; Steeds et al., 2004; van Bemmel et al., 2006) and on B) all-cause mortality from covariate adjusted Cox proportional hazard regression models (K=17; S=19; N = 31,595) (Bhogal et al., 2019; Carney et al., 2005; Dekker et al., 1997; Gilliam et al., 2007; Kiviniemi et al., 2007; Kotecha et al., 2019; Lanza et al., 2006; Liao et al., 2002; Macfarlane et al., 2007; Ma¨kikallio et al., 2001; May and Arildsen, 2012; Medenwald et al., 2017; Ryff et al., 2021, Whitehall year: 1998; Oikawa et al., 2009; Shibasaki et al., 2014) as well as studies reporting results on C) cardiac mortality from unadjusted Cox regressions (K=16; S=17; N = 16,724) (Ablonskyte˙ -Du¯doniene˙ et al., 2012; Cygankiewicz et al., 2009; Hayano et al., 2001; Kida et al., 2017; Kiviniemi et al., 2007; Kop et al., 2010; La Rovere et al., 2003; Lanza et al., 2006; Macfarlane et al., 2007; M¨akikallio et al., 2001; Medenwald et al., 2017; Nishimura et al., 2010; Oikawa et al., 2009; Stein et al., 2008; van Bemmel et al., 2006; Whitehall year: 1998) and on D) cardiac mortality from covariate adjusted Cox regressions (K=15; S=18; N = 21,506) (Cygankiewicz et al., 2009; Dekker et al., 1997; Hayano et al., 2001; Kamphuis et al., 2007; Kida et al., 2017; Kiviniemi et al., 2007; La Rovere et al., 2003; Lakusic et al., 2013; Lanza et al., 2006; Liao et al., 2002; Ma¨kikallio et al., 2001; Medenwald et al., 2017; Nishimura et al., 2010; Oikawa et al., 2009; Whitehall year: 1998).
+The sample and study characteristics of the included studies are summarized in Table 1. Most of the included studies (K=13) recruited participants from general population samples (N = 29,716; 78% of total population), followed by populations suffering from cardiac diseases (K=14; N = 5935; 16% of total population) such as myocardial infarc­ tion and heart failure.
+ECG measurement varied by technique and duration as well as artifact correction and calculation of HRV parameters. The setting of ECG measurement was predominantly ambulatory (K=20; 59% of
+
+5
+
+M.N. Jarczok et al.
+Table 1 Characteristics of included studies.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Abbreviations: CABG, coronary artery bypass graft; CAD, coronary artery disease; CHF, chronic heart failure; CVD, cardiovascular disease; HF-power, High frequency power; IBI, Inter-beat interval; LDL, low-density lipoprotein; LF-power, Low frequency power; LVEF, left ventricular ejection fraction; MI, myocardial infarction; n/a, Not Available; NYHA class, New York Heart Association class of heart failure; pNN50, Percentage of successive normal to normal intervals that differ by more than 50 ms; RMSSD, Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals; SDANN, Standard deviation of the averages of normal to normal interva; SDNN, Standard deviation of normal to normal intervals; SDNN24, SDNN calculated from 24 h measurements; STEMI, STelevation myocardial infarction; VLF-power, Very low frequency power Ablonskyte˙ -Du¯doniene˙ et al. (2012), Badarau et al. (2015), Bhogal et al. (2019),Carney et al. (2005),Cygankiewicz et al. (2009),Dekker et al. (1997),Gilliam et al. (2007),Hayano et al. (2001),Kamphuis et al. (2007),Kida et al. (2017),Kiviniemi et al. (2007),Kop et al. (2010),Kotecha et al. (2019),La Rovere et al. (2003),Lakusic et al. (2013),Lanza et al. (2006),Liao et al. (2002),Liao et al. (2002),Macfarlane et al. (2007),Ma¨kikallio et al. (2001),May and Arildsen (2012),Medenwald et al. (2017),Nishimura et al. (2010),Oikawa et al. (2009),Quintana et al. (1997),Shibasaki et al. (2014),Singh et al. (2009),Steeds et al. (2004),Stein et al. (2008),van Bemmel et al. (2006), Wulsin et al. (2015)
+
+included studies), followed by supine (K=7; 21% of included studies), or at rest (K=6; 18% of included studies). The studies were conducted in Europe (K=19; 56%), North America (K=9; 26%) or Asia (K=6; 18%). The average female proportion was 39% across all studies (range 0–75%).
+The number of reported HRV parameters of interest varied between one and seven. Twenty-eight out of 37 samples reported SDNN, the most commonly reported parameter, but see discussion section for issues with
+
+this parameter. The results of the methodological quality assessment are listed in
+Table 2. The time window for HRV analysis was mostly well-defined. Artifact control was poorly described in about two thirds of the studies, while the remaining one third described their procedures in depth. About two thirds of the authors reported HRV parameters only in a selective way. Over two thirds of the studies showed no evidence for population bias. On a scale from 0 (low quality) to 4 (high quality), the
+
+6
+
+M.N. Jarczok et al.
+
+Table 2 Quality and risk of bias rating of included studies.
+
+First Author, Year
+
+Time Window defined
+
+Quality of Artifact Control
+
+HRV Parameter Selection
+
+Ablonskyte˙- 1
+
+1
+
+0
+
+Dū doniene˙
+
+2012
+
+Badarau 2015 1
+
+0
+
+0
+
+Bhogal 2019 1
+
+1
+
+0
+
+Carney 2005 0
+
+0
+
+0
+
+Cygankiewicz 1
+
+0
+
+1
+
+2009
+
+Dekker 1997 0
+
+1
+
+1
+
+Gilliam 2007 1
+
+0
+
+0
+
+Hayano 2001 1
+
+1
+
+1
+
+Hotta 2005 0
+
+0
+
+0
+
+Kamphuis 2007 0
+
+1
+
+1
+
+Kida 2017 1
+
+0
+
+0
+
+Kiviniemi 2007 0
+
+0
+
+1
+
+Kop 2010 0
+
+0
+
+1
+
+Kotecha 2019 1
+
+0
+
+0
+
+La Rovere 2003 1
+
+1
+
+0
+
+Lakusic 2013 1
+
+1
+
+0
+
+Lanza 2006 1
+
+0
+
+0
+
+Liao 2002 1
+
+1
+
+0
+
+Macfarlane 1
+
+0
+
+1
+
+2007
+
+M¨akikallio 1
+
+0
+
+0
+
+2001
+
+May 2012 1
+
+0
+
+0
+
+Medenwald 1
+
+1
+
+1
+
+2017
+
+MIDUS & 1
+
+1
+
+1
+
+Refresher
+
+Nishimura 1
+
+0
+
+0
+
+2010
+
+Oikawa 2009 1
+
+1
+
+0
+
+Quintana 1997 1
+
+0
+
+0
+
+Shibasaki 2014 1
+
+0
+
+0
+
+Singh 2009 1
+
+0
+
+0
+
+Steeds 2004 0
+
+0
+
+0
+
+Stein 2008 1
+
+0
+
+0
+
+Syed 2009 1
+
+0
+
+0
+
+van Bemmel 1
+
+1
+
+1
+
+2006
+
+Whitehall II 1
+
+0
+
+1
+
+Wulsin 2015 1
+
+0
+
+0
+
+0: high risk of bias present 1: no or low risk of bias present
+
+Population Bias
+
+Total
+
+1
+
+3
+
+0
+
+1
+
+1
+
+3
+
+1
+
+1
+
+1
+
+3
+
+1
+
+3
+
+0
+
+1
+
+1
+
+4
+
+1
+
+1
+
+1
+
+3
+
+0
+
+1
+
+0
+
+1
+
+1
+
+2
+
+1
+
+2
+
+1
+
+3
+
+0
+
+2
+
+1
+
+2
+
+1
+
+3
+
+0
+
+2
+
+1
+
+2
+
+1
+
+2
+
+1
+
+4
+
+1
+
+4
+
+1
+
+2
+
+1
+
+3
+
+1
+
+2
+
+0
+
+1
+
+1
+
+2
+
+0
+
+0
+
+0
+
+1
+
+1
+
+2
+
+1
+
+4
+
+1
+
+3
+
+0
+
+1
+
+average score was 2.2. Only four included studies met all four quality criteria (N = 4261; 11%).
+
+3.2. Data analysis
+3.2.1. Meta-analysis An overview of the summary results per HRV parameter of the meta-
+analysis is presented in Fig. 2. All details of the results per included study of the meta-analysis are shown in Table 3. Analysis of the pooled data revealed significantly higher all-cause mortality per unit decrease in SDNN and LF, regardless of the model (unadjusted or covariate adjusted) and for both all-cause and cardiac mortality. The effect size for RMSSD (HR 1.25 95%CI 1.04 – 1.51) and HF (1.56 95%CI 1.37 – 1.77) was highest in unadjusted models for all-cause mortality.
+Detailed forest plots are shown in Figs. 3–6 for all-cause and cardiac mortality presenting both, covariate unadjusted and covariate adjusted Cox proportional hazard models as extracted from the included studies. Due to the high heterogeneity between the studies for most HRV mea­ sures, meta-analysis results are reported from random-effect models if k ≥ 2. Forest plots displaying results from fixed-effects models are shown in Supplemental Figs. S1-S4.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+3.2.1.1. Correcting for heart rate. To explore the effect of correction for heart rate (i.e., coefficient of variation), individual participant dataset analysis was conducted (i.e. Whitehall and MIDUS). The overall effect did not change relevantly for models using cvSDNN (k = 2; N = 5251 from HRSDNN 1.23 [95%CI: 1.03 – 1.46] to HRcvSDNN 1.21 [95%CI: 1.01 – 1.44]) or cvRMSSD (k = 2; N = 5251 from HRRMSSD 1.17 [95%CI: 0.98 – 1.39] to HRcvRMSSD 1.13 [95%CI: 0.95 – 1.34]).
+3.2.2. Potential Effect modifiers Meta regressions on random effects were performed for HRV pa­
+rameters if k ≥ 9. Here, only statistically significant effects are reported. Full results are presented in Table 4.
+Meta regression of HRs from studies reporting covariate unadjusted models for all-cause mortality revealed the following: Recording length in minutes or as binary indicator (short term vs. rest) as well as mean follow-up time in month modified statistically significant the HRs of allcause mortality for the HRV parameter LF. Here, studies with shorter recording length (binary; b − 0.606, 95%CI − 1.134 to − 0.078) and shorter mean-follow-up time (b − 0.003, 95%CI − 0.006 to − 0.000) had a lower effect size in studies reporting HRs from covariate unadjusted models.
+SDNN effects on cardiac mortality were significantly modified by the type of population and mean follow up time. Here, studies reporting HRs from covariate unadjusted models from non-clinical populations re­ ported smaller effect sizes in SDNN (b − 0.814, 95%CI − 1.375 to − 0.253). Also, studies with shorter recording length (binary; b − 0.610, 95%CI − 1.186 to − 0.033) had a lower effect size in studies reporting HRs from covariate unadjusted models.
+Similar, the effect of LF on cardiac mortality were significantly modified by the type of population and mean follow up time. Here, studies reporting HRs from covariate unadjusted models from nonclinical populations reported smaller effect sizes in LF (b − 0.837, 95% CI − 1.278 to − 0.396). Also, studies with shorter mean-follow-up time (b − 0.005, 95%CI − 0.008 to − 0.003) had a lower effect size in studies reporting HRs from covariate unadjusted models.
+Meta regression of HRs from studies reporting covariate adjusted models did not reveal any significant effect modifier regarding age (years), female proportion (%), recording length (minutes), continent (Asia vs. rest), decade of study conduction (post 2000 vs. rest), quality of artifact control (good vs. rest), population (clinical/non-clinical), or length of follow-up (month) for all-cause nor for cardiac mortality (see Table 4).
+3.2.3. Sensitivity analysis The majority of pooled HR values were consistent with the full
+random effect meta-analysis after sequential exclusion of each study (leave one out) – stratified by covariate unadjusted vs. covariate adjusted studies, type of mortality and HRV-parameter. Two studies were considered to be influential. Studies reporting HRs from covariate unadjusted models, the Whitehall study significantly influenced HR to be lower for TP (K=4; HR 1.61 [1.14 – 2.27] vs. K=3; HR=2.30 [1.75 – 3.02]) and LF (K=11; HR 1.71 [1.51 – 1.93] vs. K=10; HR=1.97 [1.68 – 2.31]) predicting all-cause mortality. Leaving out the results by Gilliam et al. (2007) changed the effect of SDANN predicting all-cause mortality to a significantly smaller effect in covariate adjusted models (K=4; HR 4.83 [1.46 – 16.04] vs. K=3; HR=1.12 [0.94 – 1.33]).
+4. Discussion
+With the present comprehensive meta-analysis of 32 studies and two IPD-datasets, we aimed to quantify the association between parameters of HRV and all-cause and cardiac mortality measures. The first hy­ pothesis, to observe systematic shorter time to event episodes in in­ dividuals with lower measures of HRV at study inclusion, is supported. The second hypothesis, that systematic differences in cardiac and allcause mortality exist independently of study features such as age, sex,
+
+7
+
+M.N. Jarczok et al.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Fig. 2. Forest Plot for all-cause and cardiac mortality from unadjusted and covariate adjusted random effect Cox-regression models. Hazard Ratio > 1 indicates higher mortality risk with lower HRV (per increment decrease/lowest quartile vs. other quartiles, for details of cut-offs see Figs. 3–6). Dashes represent 1.000 participants. HRV parameters reported by less than two studies are not displayed. Abbreviations: HRV: heart rate variability, k: number of studies; n: number of participants; I2: heterogeneity; p(I2): P-value from heterogeneity test, CI: confidence interval, all-cause: all-cause mortality, cardiac: cardiac mortality, cov.-unadj: covariate unadjusted model, cov.-adj.: covariate adjusted model, SDNN: Standard deviation of normal to normal intervals, RMSSD: Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals, HF-power: High frequency power, LF-power: Low frequency power, VLF-power: Very low frequency power, SDNN24: SDNN calculated from 24 h measurements, SDANN: Standard deviation of the averages of normal to normal intervals, pNN50: Percentage of successive normal to normal intervals that differ by more than 50 ms, IBI: Inter-beat interval.
+
+recording length, continent, decade of study conduction, quality of artifact control, population (clinical/non-clinical), or length of followup, could also be confirmed. In other words, despite the existing het­ erogeneity across included populations, study features, and HRV pa­ rameters, there appears to be a substantial negative association between measures of HRV and mortality.
+4.1. Clinical application
+For clinical application, we present a composite HR of 1.56 (95% CI: 1.32–1.85) for a 5-min-RMSSD value within the lowest quartile. The magnitude of this HR is higher than that for shortened sleep defined as less than 7 h on average per night (relative risk [RR]=1.10, 95%CI 1.06–1.15) (Gallicchio and Kalesan, 2009) and exceeds the 34% higher
+
+mortality risk for adults sitting 10 h/day (Chau et al., 2013) as well as the risk of harmful drinkers (RR=1.37, 95%CI 1.35–1.49) (Holman et al., 1996) and the mortality risk of white coat hypertension (HR=1.33, 95%CI 1.07–1.67) (Cohen et al., 2019). This risk is slightly lower compared to the all-cause mortality risk in masked uncontrolled hypertension compared to controlled hypertension (HR=1.80, 95%CI 1.57–2.06) (Pierdomenico et al., 2018). However, fitness is an even stronger predictor of mortality with a two to three times increase of mortality risk (Barry et al., 2018).
+The pooled HR for 5-min-RMSSD from unadjusted models from studies that reported HRs comparing the lowest quartile with the other quartiles is shown in Fig. 7. The average follow-up time of these studies was 14.5 years. According to this, an individual with a 5-min-RMSSD of the lowest quartile of its reference population would have a 56% higher
+
+8
+
+M.N. Jarczok et al.
+
+Table 3 Results of Meta-Analysis.
+
+Fixed effect
+
+Random effect
+
+HRV
+
+k n
+
+Effect
+
+lower
+
+upper
+
+z
+
+p#
+
+Effect
+
+lower
+
+upper
+
+z
+
+p#
+
+Heterogeneity
+
+I2* *
+
+p§
+
+parameter
+
+size
+
+95%CI
+
+95%CI
+
+size
+
+95%CI
+
+95%CI
+
+statistic
+
+Tau2
+
+9
+
+All-cause mortality
+
+covariate unadjusted
+
+covariate adjusted
+
+Cardiac mortality
+
+covariate unadjusted
+
+covariate adjusted
+
+SDNN SDNN24 SDANN RMSSD pNN50 HF LF TP SDNN SDANN RMSSD HF LF VLF TP SDNN SDNN24 SDANN RMSSD pNN50 HF LF TP SDNN RMSSD HF LF TP
+
+11 15452 1.441
+
+3 1081 1.808
+
+6 3073 3.538
+
+7 8504 1.255
+
+3 1445 0.671
+
+11 9126 1.558
+
+11 9126 1.706
+
+4 3954 1.611
+
+13 28963 1.236
+
+4
+
+1466 4.834
+
+6 18705 1.075
+
+10 19857 1.232
+
+11 20790 1.338
+
+2
+
+1268 1.710
+
+4
+
+4343 1.186
+
+11 14020 1.519
+
+3 2066 1.241
+
+4 1229 2.068
+
+4 6318 1.088
+
+3 1465 1.013
+
+8 7943 1.274
+
+9 8145 1.816
+
+4 4897 1.719
+
+11 20094 1.515
+
+4 16675 1.167
+
+7 17898 0.934
+
+10 18885 1.503
+
+3
+
+3990 1.312
+
+1.294 1.192 1.896 1.047 0.303 1.375 1.506 1.344 1.130 1.518 0.935 1.092 1.194 1.258 1.005 1.340 1.015 1.275 0.836 0.809 1.021 1.480 1.278 1.086 0.770 0.636 1.074 0.914
+
+1.605 2.743 6.604 1.504 1.487 1.764 1.932 1.931 1.353 15.395 1.235 1.390 1.499 2.325 1.401 1.721 1.518 3.356 1.416 1.269 1.588 2.228 2.312 2.113 1.770 1.371 2.104 1.883
+
+6.632 2.786 3.97 2.46 -0.984 6.97 8.41 5.151 4.603 2.666 1.016 3.390 5.000 3.428 2.018 6.545 2.107 2.944 0.629 0.114 2.149 5.715 3.584 2.445 0.727 -0.348 2.375 1.474
+
+0.000 0.005 0.000 0.014 0.325 0.000 0.000 0.000 0.000 0.008 0.310 0.001 0.000 0.001 0.044 0.000 0.035 0.003 0.529 0.909 0.032 0.000 0.000 0.014 0.467 0.728 0.018 0.140
+
+1.441 1.808 3.538 1.255 0.671 1.558 1.706 1.611 1.236 4.834 1.075 1.232 1.338 1.710 1.186 1.519 1.241 2.068 1.088 1.013 1.274 1.816 1.719 1.515 1.167 0.934 1.503 1.312
+
+1.191 0.921 1.554 1.040 0.303 1.374 1.505 1.142 1.065 1.457 0.899 1.015 1.095 1.258 0.868 1.013 0.873 1.111 0.733 0.708 0.984 1.322 1.209 1.018 0.751 0.636 1.008 0.914
+
+1.744 3.552 8.058 1.514 1.487 1.765 1.934 2.272 1.435 16.042 1.285 1.496 1.634 2.325 1.622 2.278 1.766 3.850 1.616 1.451 1.649 2.492 2.444 2.253 1.814 1.371 2.243 1.883
+
+3.755 1.72 3.01 2.372 -0.984 6.939 8.351 2.717 2.792 2.575 0.793 2.107 2.851 3.428 1.071 2.022 1.202 2.293 0.419 0.072 1.836 3.688 3.019 2.049 0.687 -0.348 1.997 1.474
+
+< 0.001 0.085 0.003 0.018 0.325 < 0.001 < 0.001 0.007 0.005 0.010 0.428 0.035 0.004 0.001 0.284 0.043 0.229 0.022 0.675 0.943 0.066 < 0.001 0.003 0.040 0.492 0.728 0.046 0.140
+
+629.71 15.34
+190000 915.62 916.66
+20000000 29000000
+10.17 94.57 260000 11.38 13173.15 29.82
+1.39 12.02 72.73 6463.78 19836.30 25.29
+7.19 10.50 19.73
+6.08 23.38
+4.33 9.88 15.17 1.80
+
+98.4% 87.0% 100% 99.3% 99.8% 100% 100% 70.5% 86.3% 100% 56.0% 99.9% 66.5% 28.2% 75.0% 86.3% 100% 100% 88.1% 72.2% 33.3% 59.5% 50.7% 48.7% 30.7% 39.3% 40.7% 0.0%
+
+< 0.001 < 0.001 < 0.001 < 0.001 < 0.001 < 0.001 < 0.001 0.017 < 0.001 < 0.001 0.044 < 0.001 0.001 0.238 0.007 0.043 0.229 0.022 0.675 0.943 0.066 < 0.001 0.003 0.025 0.228 0.130 0.086 0.407
+
+0.029 0.192 0.366 0.002 0.000 0.000 0.000 0.030 0.018 0.061 0.009 0.019 0.024 0.000 0.030 0.1525 0.0507 0.1207 0.0601 0.0436 0.0187 0.0639 0.0182 0.040 0.012 0.000 0.035 0.000
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Legend: abbreviations: Tau2, between-study variance; CI, confidence interval; HF, High frequency power; HRV, heart rate variability; I2* *, variation in effect size attributable to heterogeneity; k, number of studies; LF, Low frequency power; p#, p-value of significance test of effect size= 1; p§, p-value of I2 statistic; pNN50, Percentage of successive normal to normal intervals that differ by more than 50 ms; RMSSD, Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals; SDANN, Standard deviation of the averages of normal to normal interva; SDNN, Standard deviation of normal to normal intervals; SDNN24, SDNN calculated from 24 h measurements; TP, Total power; VLF, Very low frequency power; z, z statistics
+
+M.N. Jarczok et al.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Fig. 3. Forest plot for all-cause mortality from covariate unadjusted analyses. Hazard Ratio > 1 indicates higher mortality risk with lower HRV (per increment decrease/lowest quartile vs. other quartiles, as indicated). Weights and between-subgroup heterogeneity tests are from random effect models and with user-defined weight. Dashes represent 1.000 participants. HRV parameters reported by less than two studies are not displayed. Abbreviations: HRV: heart rate variability, N: number of participants, CI: confidence interval, I2: heterogeneity; p(I2): P-value from heterogeneity test, all-cause: all-cause mortality, cardiac: cardiac population, CAD: coronary artery disease, GenPop: General population, SD: standard deviation, ms: millisecond, y: years, h: hours, min: minutes, SDNN: Standard deviation of normal to normal intervals, RMSSD: Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals, HF-power: High frequency power, LF-power: Low frequency power, VLF-power: Very low frequency power, SDNN24: SDNN calculated from 24 h measurements, SDANN: Standard deviation of the averages of normal to normal intervals, pNN50: Percentage of successive normal to normal intervals that differ by more than 50 ms, IBI: Interbeat interval.
+
+mortality risk over the next 15 years [95%CI: 32–85%]. In these studies, the weighted mean value for the lowest quartile was 12 ms (MIDUS: 9.25 ms; Steeds: 8.3 ms; Whitehall II: 13.3 ms).
+From a clinical perspective, a five minutes ECG measurement with
+
+calculation of SDNN or RMSSD and subsequent quartile classification would be sufficient to identify individuals at risk, without the necessity to assess additional parameters such as a full laboratory profile. For example, we showed in a recent study in 19 different occupational
+
+10
+
+M.N. Jarczok et al.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Fig. 4. Forest plot for all-cause mortality from covariate adjusted analyses. Hazard Ratio > 1 indicates higher mortality risk with lower HRV (per increment decrease/lowest quartile vs. other quartiles, as indicated). Weights and between-subgroup heterogeneity tests are from random effect models and with user-defined weight. Dashes represent 1.000 participants. HRV parameters reported by less than two studies are not displayed. Abbreviations: HRV: heart rate variability, N: number of participants, CI: confidence interval, I2: heterogeneity; p(I2): P-value from heterogeneity test, all-cause: all-cause mortality, cardiac: cardiac population, CAD: coronary artery disease, GenPop: General population, SD: standard deviation, ms: millisecond, y: years, h: hours, min: minutes, SDNN: Standard deviation of normal to normal intervals, RMSSD: Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals, HF-power: High frequency power, LF-power: Low frequency power, VLF-power: Very low frequency power, SDNN24: SDNN calculated from 24 h measurements, SDANN: Standard deviation of the averages of normal to normal intervals, pNN50: Percentage of successive normal to normal intervals that differ by more than 50 ms, IBI: Interbeat interval.
+11
+
+M.N. Jarczok et al.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Fig. 5. Forest plot for cardiac mortality from covariate unadjusted analyses. Hazard Ratio > 1 indicates higher mortality risk with lower HRV (per increment decrease/lowest quartile vs. other quartiles, as indicated). Weights and between-subgroup heterogeneity tests are from random effect models and with user-defined weight. Dashes represent 1.000 participants. HRV parameters reported by less than two studies are not displayed. Abbreviations: HRV: heart rate variability, N: number of participants, CI: confidence interval, I2: heterogeneity; p(I2): P-value from heterogeneity test, all-cause: all-cause mortality, cardiac: cardiac population, CAD: coronary artery disease, GenPop: General population, SD: standard deviation, ms: millisecond, y: years, h: hours, min: minutes, SDNN: Standard deviation of normal to normal intervals, RMSSD: Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals, HF-power: High frequency power, LF-power: Low frequency power, VLF-power: Very low frequency power, SDNN24: SDNN calculated from 24 h measurements, SDANN: Standard deviation of the averages of normal to normal intervals, pNN50: Percentage of successive normal to normal intervals that differ by more than 50 ms, IBI: Interbeat interval.
+
+settings with more than 9500 participating employees that RMSSD values below 25 ± 4 ms were associated with an elevated risk across a range of established cardiovascular risk factors (Jarczok et al., 2019b). Because parameters of HRV are a nonspecific correlate of disease risk, they are particularly suitable for a prevention setting. Despite the great scientific progress in interventional medicine over the past decades, chronic diseases such as MI and stroke continue to be common diseases causing great suffering and high costs. In 2019, the first nine leading causes for disability-adjusted life years were attributed to non-communicable diseases (Abbafati et al., 2020). This high number could be reduced through prevention. Although it is widely agreed that prevention is necessary, it is often not transferred into practice (Fine­ berg, 2013). One problem is communicating potential risk to apparently healthy individuals. This problem is addressed by risk assessments, but commonly they are developed to be disease specific e.g. for coronary
+
+heart disease like the Framingham risk score (Wilson et al., 1998) or for diabetes like the Findrisk score (Lindstro¨m and Tuomilehto, 2003). Despite the disease specific nature of these scores, they not only show high intercorrelations among each other, but also a medium to high adjusted rank correlation with vagally-mediated HRV (Schuster et al., 2016). The preventive advice from these risk scores overlap to a large extent, as behavioral advice commonly include what the authors would call the hattrick of lifestyle interventions: engage in physical and social activities, eat a healthy diet, and take care of relaxation such as sleep hygiene but also detachment from work (Avery et al., 2012; Dickinson et al., 2006; Galani and Schneider, 2007; O’Connor et al., 2021; Thayer and Lane, 2007). Therefore, HRV is an ideal risk parameter that can be used to measure individual risk for disease in general and, as an outlook, also to measure the effectiveness of lifestyle changes. Interestingly, several of these lifestyle interventions have been reported to improve
+
+12
+
+M.N. Jarczok et al.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Fig. 6. Forest plot for cardiac mortality from covariate adjusted analyses. Hazard Ratio > 1 indicates higher mortality risk with lower HRV (per increment decrease/ lowest quartile vs. other quartiles, as indicated). Weights and between-subgroup heterogeneity tests are from random effect models and with user-defined weight. Dashes represent 1.000 participants. HRV parameters reported by less than two studies are not displayed. Abbreviations: HRV: heart rate variability, N: number of participants, CI: confidence interval, I2: heterogeneity; p(I2): P-value from heterogeneity test, all-cause: all-cause mortality, cardiac: cardiac population, CAD: cor­ onary artery disease, GenPop: General population, SD: standard deviation, ms: millisecond, y: years, h: hours, min: minutes, SDNN: Standard deviation of normal to normal intervals, RMSSD: Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals, HF-power: High frequency power, LF-power: Low frequency power, VLF-power: Very low frequency power, SDNN24: SDNN calculated from 24 h measurements, SDANN: Standard deviation of the averages of normal to normal intervals, pNN50: Percentage of successive normal to normal intervals that differ by more than 50 ms, IBI: Inter-beat interval.
+
+measures of HRV such as physical activity (Tornberg et al., 2019), relaxation techniques (Lin et al., 2014), stress management (Balint et al., 2022a), healthy diet (Young and Benton, 2018) or slow-paced breathing (Laborde et al., 2022; Sevoz-Couche and Laborde, 2022).
+4.2. Effect modifiers
+Comparing the HRs of studies conducted with general populations to ill patients, the relation between HRV parameter and mortality remains comparable. There is no evidence for any restriction of its use to a special population, as it appears to be valid in health and disease. Furthermore, no differences in effect sizes were found across participants’ age. Thus, our results support its possible use as an age-independent risk marker for primary prevention.
+
+The length of the measurement is another parameter that can in­ fluence the quality of results. Meta-regression did not find any system­ atic differences in HRs resulting from measurements over 10 seconds compared to 24 h. From this perspective, a short-term segment seems to be sufficient to predict mortality. Furthermore, artifact handling is easier in shorter measurements, so results are more uniform and are less affected by ‘noise’ caused by artifacts. Shorter measurements were taken almost always at rest within a controlled setting, whereas 24-hour measurements obviously include daily activities which vary highly inter-individually. In conclusion, in the present context of mortality prediction, the length of the measurement can be selected dependent on other local and study requirements. Next to pure risk stratification, a 24 h-measurement of HRV can serve as a risk communication tool, including identification of individual resources and strains and
+
+13
+
+M.N. Jarczok et al.
+Table 4 Results of Meta-Regressions.
+
+All-cause mortality
+
+Covariate adjusted studies
+
+Covariate unadjusted studies
+
+HRV parameter HF
+LF
+SDNN
+HF
+LF
+
+Effect modifier
+Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shortterm-recording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shortterm-recording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shortterm-recording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shortterm-recording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%)
+
+k
+
+b
+
+SE
+
+95%CI
+
+lower
+
+bound
+
+10
+
+-0.001 0.027 -0.054
+
+10
+
+0.002 0.009 -0.015
+
+10
+
+0.000 0.000 -0.001
+
+2/8 0.214 0.646 -1.052
+
+6/4 0.001 0.013 -0.024
+
+4/6 -0.013 0.245 -0.493
+
+6/4 -0.141 0.298 -0.725
+
+4/6 -0.170 0.417 -0.988
+
+10
+
+-0.001 0.002 -0.005
+
+11
+
+0.001 0.024 -0.046
+
+11
+
+0.001 0.008 -0.015
+
+11
+
+0.000 0.000 0.000
+
+2/9 0.138 0.661 -1.157
+
+7/4 -0.006 0.013 -0.030
+
+6/5 0.010 0.231 -0.443
+
+7/4 -0.251 0.267 -0.775
+
+5/6 -0.398 0.360 -1.102
+
+11
+
+-0.002 0.002 -0.006
+
+13
+
+0.000 0.025 -0.050
+
+13
+
+-0.003 0.004 -0.011
+
+13
+
+0.000 0.000 -0.001
+
+1/
+
+0.574 0.871 -1.132
+
+12
+
+10/ -0.005 0.013 -0.030
+
+3
+
+5/8 -0.099 0.203 -0.497
+
+5/8 -0.144 0.357 -0.844
+
+3/
+
+-0.353 0.518 -1.369
+
+10
+
+13
+
+0.000 0.002 -0.004
+
+11
+
+-0.016 0.018 -0.051
+
+11
+
+0.009 0.008 -0.007
+
+11
+
+0.000 0.000 0.000
+
+3/8 -0.158 0.380 -0.903
+
+6/5 0.002 0.025 -0.046
+
+7/4 0.082 0.241 -0.390
+
+7/4 -0.181 0.272 -0.713
+
+5/6 -0.210 0.283 -0.764
+
+11
+
+-0.001 0.002 -0.004
+
+11
+
+-0.011 0.020 -0.049
+
+11
+
+-0.007 0.011 -0.028
+
+11
+
+0.000 0.000 0.000
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+95%CI upper bound 0.052 0.019 0.001 1.479 0.026 0.468 0.444 0.648 0.004 0.048 0.018 0.001 1.432 0.019 0.463 0.273 0.307 0.002 0.049 0.005 0.001 2.280 0.021 0.299 0.556 0.663 0.004 0.019 0.025 0.001 0.586 0.050 0.554 0.352 0.345 0.002 0.027 0.015 0.001
+
+z
+
+p
+
+B
+
+R2
+
+-0.023 0.209
+
+0.981 0.834
+
+-0.022 0.192
+
+0.001 0.037
+
+0.402 0.688 0.370 0.137
+
+0.331 0.741 0.304 0.093
+
+0.074 0.941 0.068 0.005
+
+-0.052 0.958 -0.048 0.002
+
+-0.471 0.638 -0.434 0.188
+
+-0.407 0.684 -0.374 0.140
+
+-0.243 0.808 -0.223 0.050
+
+0.028 0.169
+
+0.978 0.866
+
+0.018 0.110
+
+0.000 0.012
+
+1.099 0.272 0.721 0.519
+
+0.209 0.835 0.137 0.019
+
+-0.435 0.663 -0.285 0.081
+
+0.043 0.966 0.028 0.001
+
+-0.940 0.347 -0.616 0.380
+
+-1.106 0.269 -0.725 0.526
+
+-0.975 0.330 -0.639 0.408
+
+-0.016 -0.721
+
+0.987 0.471
+
+-0.013 -0.585
+
+0.000 0.342
+
+0.692 0.489 0.561 0.315
+
+0.659 0.510 0.535 0.286
+
+-0.361 0.718 -0.292 0.086
+
+-0.487 0.627 -0.395 0.156
+
+-0.404 0.686 -0.328 0.107
+
+-0.682 0.496 -0.553 0.305
+
+0.010 0.992 0.008 0.000
+
+-0.912 1.110
+
+0.362 0.267
+
+-0.352 0.392
+
+0.124 0.153
+
+0.722 0.470 0.290 0.084
+
+-0.416 0.677 -0.170 0.029
+
+0.077 0.938 0.031 0.001
+
+0.340 0.734 0.135 0.018
+
+-0.665 0.506 -0.267 0.072
+
+-0.740 0.459 -0.297 0.088
+
+-0.718 0.473 -0.278 0.077
+
+-0.564 -0.614
+
+0.573 0.539
+
+-0.183 -0.207
+
+0.033 0.043
+
+2.242
+
+0.025 0.626 0.392 (continued on next page)
+
+14
+
+M.N. Jarczok et al. Table 4 (continued )
+
+Cardiac mortality
+
+Covariate adjusted studies
+
+Covariate unadjusted studies
+
+HRV parameter SDNN
+LF
+SDNN
+LF
+
+Effect modifier
+Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shorttermrecording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shortterm-recording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shortterm-recording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000) Quality of artifactcontrol (no / yes) Population (clinical vs. non-clinical) Shortterm-recording (no/yes) mean follow-up time (months) Mean age (Years) Proportion female (%) Recording length (minutes) Continent (Asia vs. rest) Startdecade (pre- vs. post 2000)
+
+k
+
+b
+
+SE
+
+95%CI
+
+lower
+
+bound
+
+3/8 -0.284 0.399 -1.066
+
+6/5 -0.012 0.029 -0.069
+
+7/4 0.025 0.277 -0.518
+
+7/4 -0.418 0.264 -0.935
+
+5/6 -0.606 0.269 -1.134
+
+11 -0.003 0.001 -0.006
+
+11
+
+-0.004 0.016 -0.036
+
+11
+
+0.008 0.005 -0.001
+
+11
+
+0.000 0.000 0.000
+
+2/9 -0.204 0.092 -0.383
+
+6/5 0.274 0.492 -0.690
+
+6/5 0.017 0.012 -0.007
+
+5/6 0.200 0.221 -0.233
+
+3/8 -0.388 0.318 -1.011
+
+11
+
+0.001 0.002 -0.002
+
+10
+
+0.002 0.030 -0.057
+
+10
+
+-0.001 0.008 -0.016
+
+10
+
+0.000 0.000 0.000
+
+2/8 0.045 0.556 -1.044
+
+9/1 -0.008 0.015 -0.038
+
+3/7 0.108 0.235 -0.352
+
+7/3 -0.471 0.258 -0.976
+
+3/7 -0.477 0.368 -1.199
+
+10
+
+-0.004 0.002 -0.007
+
+12
+
+-0.002 0.020 -0.040
+
+12
+
+-0.002 0.006 -0.013
+
+12
+
+0.001 0.000 0.000
+
+2/
+
+0.297 0.654 -0.986
+
+10
+
+8/4 0.001 0.013 -0.024
+
+4/8 -0.035 0.242 -0.509
+
+6/6 -0.328 0.285 -0.887
+
+5/7 -0.690 0.371 -1.417
+
+12
+
+-0.002 0.002 -0.006
+
+9
+
+-0.005 0.034 -0.071
+
+9
+
+-0.019 0.013 -0.044
+
+9
+
+0.000 0.000 0.000
+
+2/7 -0.264 0.504 -1.252
+
+8/1 0.008 0.031 -0.052
+
+15
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+95%CI
+
+z
+
+p
+
+B
+
+R2
+
+upper
+
+bound
+
+0.499 0.045 0.568 0.099 -0.078 0.000 0.028 0.017 0.001 -0.024 1.238 0.040 0.632 0.236 0.004 0.060 0.014 0.001 1.134 0.023 0.569 0.034 0.244 0.000 0.036 0.009 0.001 1.579 0.026 0.439 0.231 0.036 0.002 0.061 0.006 0.001 0.724 0.068
+
+-0.711 0.477 -0.230 0.053
+
+-0.418 0.676 -0.138 0.019
+
+0.089 0.929 0.029 0.001
+
+-1.587 0.113 -0.455 0.207
+
+-2.251 0.024 -0.629 0.395
+
+-2.024 0.043 -0.532 0.283
+
+-0.250 1.761
+
+0.802 0.078
+
+-0.099 0.643
+
+0.010 0.414
+
+1.223 0.221 0.451 0.204
+
+-2.223 0.026 -0.812 0.659
+
+0.557 0.578 0.213 0.046
+
+1.362 0.173 0.497 0.247
+
+0.905 0.365 0.331 0.109
+
+-1.220 0.223 -0.451 0.203
+
+0.926 0.354 0.338 0.114
+
+0.056 -0.120
+
+0.956 0.905
+
+0.023 -0.050
+
+0.001 0.003
+
+1.291 0.197 0.534 0.286
+
+0.081 0.935 0.034 0.001
+
+-0.494 0.621 -0.205 0.042
+
+0.461 0.645 0.191 0.036
+
+-1.827 0.068 -0.756 0.572
+
+-1.297 0.195 -0.537 0.289
+
+-1.924 0.054 -0.797 0.635
+
+-0.101 -0.342
+
+0.920 0.732
+
+-0.042 -0.140
+
+0.002 0.020
+
+1.856 0.063 0.762 0.580
+
+0.453 0.650 0.186 0.035
+
+0.079 0.937 0.032 0.001
+
+-0.146 0.884 -0.060 0.004
+
+-1.151 0.250 -0.472 0.223
+
+-1.863 0.063 -0.764 0.584
+
+-0.907 0.364 -0.372 0.139
+
+-0.155 -1.502
+
+0.877 0.133
+
+-0.055 -0.489
+
+0.003 0.239
+
+1.727 0.084 0.497 0.247
+
+-0.524 0.600 -0.186 0.035
+
+0.273 0.785 0.097 0.009
+
+(continued on next page)
+
+M.N. Jarczok et al.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+
+Table 4 (continued )
+
+HRV parameter
+
+Effect modifier
+
+k
+
+b
+
+SE
+
+95%CI
+
+95%CI
+
+z
+
+p
+
+B
+
+R2
+
+lower
+
+upper
+
+bound
+
+bound
+
+SDNN
+
+Quality of artifact-
+
+4/5 -0.137 0.371 -0.866
+
+control (no / yes)
+
+Population (clinical 6/3 -0.837 0.225 -1.278
+
+vs. non-clinical)
+
+Shortterm-recording 4/5 -0.519 0.302 -1.110
+
+(no/yes)
+
+mean follow-up
+
+9
+
+-0.005 0.001 -0.008
+
+time (months)
+
+Mean age (Years)
+
+11
+
+-0.012 0.019 -0.050
+
+Proportion female
+
+11
+
+0.005 0.006 -0.006
+
+(%)
+
+Recording length
+
+11
+
+0.000 0.000 0.000
+
+(minutes)
+
+Continent (Asia vs.
+
+2/9 0.649 0.593 -0.512
+
+rest)
+
+Startdecade (pre- vs. 8/3 0.023 0.016 -0.008
+
+post 2000)
+
+Quality of artifact-
+
+6/5 0.105 0.318 -0.518
+
+control (no / yes)
+
+Population (clinical 6/5 -0.923 0.309 -1.528
+
+vs. non-clinical)
+
+Shortterm-
+
+5/6 -0.610 0.294 -1.186
+
+recording (no/yes)
+
+mean follow-up time 11
+
+-0.001 0.002 -0.005
+
+(months)
+
+0.591 -0.396 0.072 -0.003 0.026 0.016 0.001 1.811 0.054 0.727 -0.319 -0.033 0.004
+
+-0.370 0.711 -0.131 0.017
+
+-3.722 0.000 -0.800 0.639
+
+-1.722 0.085 -0.496 0.246
+
+-3.816 0.000 -0.820 0.672
+
+-0.613 0.856
+
+0.540 0.392
+
+-0.208 0.246
+
+0.043 0.060
+
+2.088 0.037 0.587 0.344
+
+1.096 0.273 0.341 0.116
+
+1.450 0.147 0.397 0.157
+
+0.330 0.742 0.107 0.011
+
+-2.992 0.003 -0.804 0.646
+
+-2.074 0.038 -0.584 0.341
+
+-0.221 0.825 -0.074 0.005
+
+Legend: k: number of studies; b: beta coefficient; SE: standard error; CI: confidence interval; z: z statistics; p: p-value of significance; B: standardized beta coefficient; HRV: heart rate variability; HF: high frequency power; LF: low frequency power: SDNN: Standard deviation of normal to normal intervals Significant p-values (p < 0.05) are marked in bold.
+
+improving the knowledge about interactions between body, mind and environment (Jarczok et al., 2021). Based on the data presented in this manuscript, the advantages of a 24 h-measurement lie in additional information, not in better risk stratification. This additional information includes insights into circadian rhythms (Jarczok et al., 2019a) that can be disturbed in shift work, but also in ongoing psychosocial stress as well as in diseases like depression (Jarczok et al., 2018). Further, the 24 h measurements allow to answer specific work-related questions, e.g., if breaks are taken early enough to prevent exhaustion or if breaks are recreational. This information can’t be obtained from a five minutes measurement.
+Whether HRV should be measured during ‘standard’ rest or during paced breathing, to standardize the influence of the breathing rate on HRV parameters, is also an important question in this context. In the studies we found, only Medenwald used paced breathing (Medenwald et al., 2017). Interestingly, the HRs reported were not significant. If HRV is a mortality predictor, then the value measured should be quite stable, like a trait. Considering this, the parameter of interest would represent a ‘typical’ HRV of the investigated person. In slow paced breathing, HRV is maximized with immediate beneficial effects (Lehrer and Gevirtz, 2014). Though the maximum potential of an individuals’ HRV is of in­ terest as it tests the limits of his ANS, an HRV measured during their
+
+natural breathing pace probably represents the ANS activity that is prevalent most of the time, therefore being more useful in mortality prediction. In addition, some HRV indices (e.g., RMSSD) and some recording procedures (i.e., detrending and normal distribution, see Lewis et al., 2012) are less susceptible to respiratory influences and thus appropriate HRV estimation can enhance the utility for prediction and prevention.
+In assessing the significance of HRV in predicting mortality, it has been stated that it would be necessary to correct for heart rate or for lifestyle variables like physical activity, especially when this activity occurred during the measurement in 24 h-measurements (de Geus et al., 2019). Of course, heart rate and HRV are correlated (Sacha, 2014), as well as physical activity and HRV (Blom et al., 2009; Camillo et al., 2011; May et al., 2017). On the brain’s level, the ANS modulates both, heart rate and HRV, in rest and during physical activities (Thayer et al., 2012). On the other hand, physical activity changes settings of brain circuits, not only those of the ANS, but also emotion regulation e.g. in depression (Martinsen, 2009). Coming back to mortality, both heart rate (Lau et al., 2021; Zhang et al., 2016) and physical activity are strongly related to mortality (Leroux et al., 2021). If HRV is also a predictor of mortality, there has to be a correlation between heart rate, HRV and physical activity. Correcting HRV for heart rate and physical activity
+
+Fig. 7. Forest plot of hazard ratios for all-cause mortality from unadjusted analyses (fixed effect models): only studies using lowest quartile of RMSSD. Hazard ratio > 1 indicates higher mortality risk for lowest RMSSD quartile. Weights and between-subgroup heterogeneity tests are from fixed effect models and with user-defined weight. Abbreviations: RMSSD: squares of differences between adjacent R-R intervals, N: number of participants, CI: confidence interval, GenPop: General popu­ lation, cardiac: cardiac population, y: years, I2: heterogeneity; p: P-value from heterogeneity test.
+16
+
+M.N. Jarczok et al.
+might remove a part of its predictive power. Yet, sub-analysis of IPD revealed only minor differences in effect size (HR) when comparing unadjusted Cox fixed effect regression models comparing lowest quartile vs. the other quartiles of the HRV parameters RMSSD or SDNN with models using heart rate corrected HRV parameters cvRMSSD or cvSDNN. Thus, correction for heart rate seems not to be mandatory for the prediction of mortality.
+The last issue to discuss is the handling of the quality of measurement and artifacts. As discussed above, this tends to be a minor problem in short term measurements where artifacts are easily detected and an artifact-free window for HRV calculation can often be found. In 24-hour measurements, artifacts due to movement as well as extra beats cannot be avoided and therefore have to be addressed. In the studies compared, artifact handling processes were described very differently. Some described it in detail, others did not publish anything about it.
+The mean follow-up time showed only a small effect on LF in un­ adjusted analysis models of cardiac mortality. Thus, HRV is a valid predictor of mortality over medium to long time periods. Note that short periods, order of magnitude of days, were not covered by the included studies as the minimum follow-up period was three months. Although effect sizes were not significantly different between short and long follow-up periods, it is evident from the graphs that studies with long follow up periods around 10 years had smaller CIs than studies covering only months.
+Regarding the different HRV parameters, our results show similar HR magnitude across most extracted HRV parameters. This is not surprising, since they originate from the same source file of R-R intervals (Wittling and Wittling, 2012). However, the extent to which single parameters represent the ANS activity or vagal activity differs. For example, SDNN captures a wide range of physiological signals from different systems. Especially if HRV measures such as SDNN, but also SDANN, TP or VLF are drawn from 24 h periods, they reflect measures of functional ca­ pacity rather than autonomic activity (Roach et al., 2004, 1998; Soares-Miranda et al., 2014). The latter is more accurately reflected in vagally-mediated parameters such as RMSSD, HF or LF (Camm et al., 1996; Shaffer and Ginsberg, 2017).
+In addition, SDNN results from short term measures can vary largely due to nonstationarity, i.e. depending on the applied detrending method, while results of RMSSD appeared more stable (Tarvainen et al., 2002). This may result in biased estimates, but detrending methods are seldomly reported in the published manuscripts. In sum, for risk pre­ diction, a 5-minute RMSSD measure represents best ANS function and is most robust to be calculated.
+4.3. Potential neurobiological underpinnings
+HRV represents the peripheral output of the central autonomic network (CAN) (Thayer et al., 2012). The CAN modulates on a moment-to-moment basis not only somatic responses to adapt to inter­ nal or external challenges, ultimately to maintain homeostasis (Benar­ roch, 2014; Bernard, 1867; Thayer and Lane, 2000; Wulsin et al., 2018) but also shapes emotional appraisal (i.e., emotional regulation) and behavioral adaption (Brosschot et al., 2017; Thayer et al., 2021; Thayer and Lane, 2000). Thus, the function of the CAN is complex and defining an index can be described as measuring the capacity of the body to adapt to environmental challenges (Thayer et al., 2012) and its improper functioning has been suggested to accelerate aging processes and thus increase morbidity and mortality (Thayer et al., 2021). Here, measures of HRV may represent an index of vertical integration and adaption processes that shape brainstem activity and autonomic responses in the body. Therefore it is hardly surprising that HRV is considered to be an indicator for the state of the body and mind like in the case of a higher inflammatory state (Aeschbacher et al., 2017; Jarczok et al., 2014) or work stress (Jarczok et al., 2020, 2013), but also for the risk of disease and accelerated aging (Thayer et al., 2021). The idea that HRV expresses capacity to adapt is also supported by the findings that higher HRV
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+predicts better symptom improvement after psychotherapy for common mental disorders (Balint et al., 2022b).
+The present results of the meta-analysis can be interpreted based on the concept of the Neurovisceral Integration Model, particularly on the central-autonomic moment-to-moment adaption of somatic responses and emotional appraisal to ultimately balance maintenance of homeo­ stasis and immediate adaption to environmental stimuli (Benarroch, 2014; Thayer et al., 2021; Thayer and Lane, 2000; Wulsin et al., 2018). It has been suggested that healthy aging is associated with significant organ changes of the brain and the heart. Particularly, the regular aging associated functional change on the brain’s level (i.e. shift in the relative balance between prefrontal cortical thickness and amygdala volume) might be accelerated by continued exposure to stress (Thayer et al., 2021). In brief, ventromedial prefrontal cortex areas (vmPFC) tonically inhibit sub-cortical threat circuits. This path can reduce stress responses and fear behavior in a manner that depends on integrating the external context (e.g. environmental threat) with the internal one (e.g. percep­ tions of control over the threat) on a moment-to-moment basis. Under conditions of uncertainty or threat, these critical areas of the vmPFC rapidly become hypoactive and the so-called fight-or-flight response can unfold (Thayer et al., 2012). It has been suggested that this fight-or-flight response is actively inhibited by default due to perception of safety (Brosschot et al., 2017; O’Connor et al., 2021), unless it be­ comes disinhibited due to the perception of danger (Thayer et al., 2021). Measures of HRV are suggested to index the extent of this vmPFC inhibitory function. With the present meta-analysis, we demonstrate lower values of HRV at baseline to be robustly associated to higher risk of all-cause mortality thus providing indirect support for this neurobi­ ological foundation. These neurobiological and neurophysiological un­ derpinnings of the core association between HRV as a measure of adaptive function and mortality is summarized in the neurovisceral integration model (Thayer et al., 2021; Thayer and Lane, 2009, 2000). Its neurological components have been summarized in a meta-analysis by Thayer et al. (2012).
+4.4. Limitations
+For clinical use, there is a need for a few and practical numbers like a cut-off for risk/no risk of RMSSD or an HR that applies for a 35-year-old man with a 5-minutes RMSSD of 25 ms. Our aim was to calculate this from all studies gathered. Due to the enormous heterogeneity especially regarding the cut offs, this was not possible. We chose to calculate a composite HR at least for the studies reporting HRs for the lowest quartile. It is a limitation that this omits the information included in the other studies. A further limitation is that we selected the unadjusted models for this purpose. Since age and sex are already accounted for in this approach as described above in the discussion section, this seemed reasonable. Of course, part of the information included in HR relies on other variables besides age, and sex, such as preexistent disease, blood pressure and blood parameters like lipids. In a first attempt to guide clinicians, we want to offer here a method that does not need so much additional information. The next step would be to build a complex model like a risk calculator that incorporates more variables. Then, the HR from the covariate adjusted models should be used.
+A limitation for the present interpretation of the results is the fact that most studies only report selective HRV parameters. In some cases, nonsignificant parameters were at least described to be not significantly enough to be associated with mortality. This limits the possibility to compare the different parameters across different studies, as many re­ sults are obviously not published. To support further reviews and metaanalyses, for the future, we strongly encourage authors to report all calculated HRV parameters in general, even those without significant effects. This can be done easily in supplementary tables. We strongly recommend reporting a minimum set of HRV parameters such as SDNN, RMSSD, HF, LF, TP for 5-minute recordings and additionally VLF and SDANN for 24 h recordings. For example, whereas almost N = 29,000
+
+17
+
+M.N. Jarczok et al.
+individuals were included from k = 14 studies in covariate adjusted SDNN, only 28% of these studies (k = 4; N = 4343) reported TP, thus representing a massive underreporting of some HRV parameters.
+5. Conclusion
+HRV represents a nonspecific predictor of mortality with a lower value corresponding to a higher risk of mortality. This association appeared independently of cardiac or all-cause mortality, clinical or non-clinical population, statistical adjustment for covariates, and HRV parameters used continuously or with cut-points. The effect size is comparable to that of masked uncontrolled hypertension. A possible clinical setting could be primary prevention. For future studies, we strongly recommend reporting a minimum set of HRV parameters such as SDNN, RMSSD, HF, LF, TP for 5-minute recordings and additionally VLF for 24 h recordings.
+Data Availability
+Data will be made available on request.
+Acknowledgements
+We thank all the participants of the included studies, researchers and support staff who made the studies possible. The UK Medical Research Council (MR/K013351/1; G0902037), British Heart Foundation (RG/ 13/2/30098), and the US National Institutes of Health (R01HL36310, R01AG013196) have supported collection of data in the Whitehall II Study. The United States Department of Health and Human Services, National Institutes of Health, and National Institute on Aging (5-PO1AG20166-04) have supported collection of data in the MIDUS II study.
+Supplementary Material
+Supplement S1-S4: Detailed forest plots with fixed effect models
+S1: Forest plot for all-cause mortality from covariate unadjusted analyses (fixed effect models).
+S2: Forest plot for all-cause mortality from covariate adjusted ana­ lyses (fixed effect models).
+S3: Forest plot for cardiac mortality from covariate unadjusted an­ alyses (fixed effect models).
+S4: Forest plot for cardiac mortality from covariate adjusted analyses (fixed effect models).
+Legend S1-S4: Hazard Ratio > 1 indicates higher mortality risk with lower HRV (per increment decrease/lowest quartile vs. other quartiles as indicated). Weights and between-subgroup heterogeneity tests are from fixed effect models and with user-defined weight. HRV parameters reported by less than two studies are not displayed. Abbreviations: HRV: heart rate variability; N: number of partici­ pants; CI: confidence interval; I2: heterogeneity; p(I2): P-value from heterogeneity test; SD: standard deviation; GenPop: General population; SDNN: Standard deviation of normal to normal intervals; RMSSD: Square root of the mean of the sum of the squares of differences between adjacent normal to normal intervals; HF-power: High frequency power; LF-power: Low frequency power; VLF-power: Very low frequency power; SDNN24: SDNN calculated from 24 h measurements; SDANN: Standard deviation of the averages of normal to normal intervals; pNN50: Percentage of successive normal to normal intervals that differ by more than 50 ms; IBI: Inter-beat interval.
+Appendix A. Supporting information
+Supplementary data associated with this article can be found in the
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+online version at doi:10.1016/j.neubiorev.2022.104907.
+References
+Abbafati, C., Abbas, K.M., Abbasi-Kangevari, M., Abd-Allah, F., Abdelalim, A., Abdollahi, M., Abdollahpour, I., Abegaz, K.H., Abolhassani, H., Aboyans, V., Abreu, L.G., Abrigo, M.R.M., Abualhasan, A., Abu-Raddad, L.J., Abushouk, A.I., Adabi, M., Adekanmbi, V., Adeoye, A.M., Adetokunboh, O.O., Adham, D., Advani, S. M., Afshin, A., Agarwal, G., Aghamir, S.M.K., Agrawal, A., Ahmad, T., Ahmadi, K., Ahmadi, M., Ahmadieh, H., Ahmed, M.B., Akalu, T.Y., Akinyemi, R.O., Akinyemiju, T., Akombi, B., Akunna, C.J., Alahdab, F., Al-Aly, Z., Alam, K., Alam, S., Alam, T., Alanezi, F.M., Alanzi, T.M., Alemu, B.W., Alhabib, K.F., Ali, M., Ali, S., Alicandro, G., Alinia, C., Alipour, V., Alizade, H., Aljunid, S.M., Alla, F., Allebeck, P., Almasi-Hashiani, A., Al-Mekhlafi, H.M., Alonso, J., Altirkawi, K.A., AminiRarani, M., Amiri, F., Amugsi, D.A., Ancuceanu, R., Anderlini, D., Anderson, J.A., Andrei, C.L., Andrei, T., Angus, C., Anjomshoa, M., Ansari, F., AnsariMoghaddam, A., Antonazzo, I.C., Antonio, C.A.T., Antony, C.M., Antriyandarti, E., Anvari, D., Anwer, R., Appiah, S.C.Y., Arabloo, J., Arab-Zozani, M., Aravkin, A.Y., Ariani, F., Armoon, B., A¨rnlo¨v, J., Arzani, A., Asadi-Aliabadi, M., Asadi-Pooya, A.A., Ashbaugh, C., Assmus, M., Atafar, Z., Atnafu, D.D., Atout, M.M. d W., Ausloos, F., Ausloos, M., Ayala Quintanilla, B.P., Ayano, G., Ayanore, M.A., Azari, S., Azarian, G., Azene, Z.N., Badawi, A., Badiye, A.D., Bahrami, M.A., Bakhshaei, M.H., Bakhtiari, A., Bakkannavar, S.M., Baldasseroni, A., Ball, K., Ballew, S.H., Balzi, D., Banach, M., Banerjee, S.K., Bante, A.B., Baraki, A.G., Barker-Collo, S.L., Ba¨rnighausen, T.W., Barrero, L.H., Barthelemy, C.M., Barua, L., Basu, S., Baune, B.T., Bayati, M., Becker, J.S., Bedi, N., Beghi, E., B´ejot, Y., Bell, M.L., Bennitt, F.B., Bensenor, I.M., Berhe, K., Berman, A.E., Bhagavathula, A.S., Bhageerathy, R., Bhala, N., Bhandari, D., Bhattacharyya, K., Bhutta, Z.A., Bijani, A., Bikbov, B., Bin Sayeed, M. S., Biondi, A., Birihane, B.M., Bisignano, C., Biswas, R.K., Bitew, H., Bohlouli, S., Bohluli, M., Boon-Dooley, A.S., Borges, G., Borzì, A.M., Borzouei, S., Bosetti, C., Boufous, S., Braithwaite, D., Brauer, M., Breitborde, N.J.K., Breitner, S., Brenner, H., Briant, P.S., Briko, A.N., Briko, N.I., Britton, G.B., Bryazka, D., Bumgarner, B.R., Burkart, K., Burnett, R.T., Burugina Nagaraja, S., Butt, Z.A., Caetano Dos Santos, F.L., Cahill, L.E., C´amera, L.A., Campos-Nonato, I.R., Ca´rdenas, R., Carreras, G., Carrero, J.J., Carvalho, F., Castaldelli-Maia, J.M., Castan˜eda-Orjuela, C.A., Castelpietra, G., Castro, F., Causey, K., Cederroth, C.R., Cercy, K.M., Cerin, E., Chandan, J.S., Chang, K.L., Charlson, F.J., Chattu, V.K., Chaturvedi, S., Cherbuin, N., Chimed-Ochir, O., Cho, D.Y., Choi, J.Y.J., Christensen, H., Chu, D.T., Chung, M.T., Chung, S.C., Cicuttini, F.M., Ciobanu, L.G., Cirillo, M., Classen, T.K.D., Cohen, A.J., Compton, K., Cooper, O.R., Costa, V.M., Cousin, E., Cowden, R.G., Cross, D.H., Cruz, J.A., Dahlawi, S.M.A., Damasceno, A.A.M., Damiani, G., Dandona, L., Dandona, R., Dangel, W.J., Danielsson, A.K., Dargan, P.I., Darwesh, A.M., Daryani, A., Das, J.K., Das Gupta, Rajat, das Neves, J., D´avila-Cervantes, C.A., Davitoiu, D.V., De Leo, D., Degenhardt, L., DeLang, M., Dellavalle, R.P., Demeke, F. M., Demoz, G.T., Demsie, D.G., Denova-Guti´errez, E., Dervenis, N., Dhungana, G.P., Dianatinasab, M., Dias da Silva, D., Diaz, D., Dibaji Forooshani, Z.S., Djalalinia, S., Do, H.T., Dokova, K., Dorostkar, F., Doshmangir, L., Driscoll, T.R., Duncan, B.B., Duraes, A.R., Eagan, A.W., Edvardsson, D., El Nahas, N., El Sayed, I., El Tantawi, M., Elbarazi, I., Elgendy, I.Y., El-Jaafary, S.I., Elyazar, I.R.F., Emmons-Bell, S., Erskine, H.E., Eskandarieh, S., Esmaeilnejad, S., Esteghamati, A., Estep, K., Etemadi, A., Etisso, A.E., Fanzo, J., Farahmand, M., Fareed, M., Faridnia, R., Farioli, A., Faro, A., Faruque, M., Farzadfar, F., Fattahi, N., Fazlzadeh, M., Feigin, V. L., Feldman, R., Fereshtehnejad, S.M., Fernandes, E., Ferrara, G., Ferrari, A.J., Ferreira, M.L., Filip, I., Fischer, F., Fisher, J.L., Flor, L.S., Foigt, N.A., Folayan, M.O., Fomenkov, A.A., Force, L.M., Foroutan, M., Franklin, R.C., Freitas, M., Fu, W., Fukumoto, T., Furtado, J.M., Gad, M.M., Gakidou, E., Gallus, S., Garcia-Basteiro, A. L., Gardner, W.M., Geberemariyam, B.S., Ayalew Gebreslassie, A.A.A., Geremew, A., Gershberg Hayoon, A., Gething, P.W., Ghadimi, M., Ghadiri, K., Ghaffarifar, F., Ghafourifard, M., Ghamari, F., Ghashghaee, A., Ghiasvand, H., Ghith, N., Gholamian, A., Ghosh, R., Gill, P.S., Ginindza, T.G., Giussani, G., Gnedovskaya, E.V., Goharinezhad, S., Gopalani, S.V., Gorini, G., Goudarzi, H., Goulart, A.C., Greaves, F., Grivna, M., Grosso, G., Gubari, M.I.M., Gugnani, H.C., Guimar˜aes, R.A., Guled, R.A., Guo, G., Guo, Y., Gupta, Rajeev, Gupta, T., Haddock, B., Hafezi-Nejad, N., Hafiz, A., Haj-Mirzaian, Arvin, Haj-Mirzaian, Arya, Hall, B.J., Halvaei, I., Hamadeh, R.R., Hamidi, S., Hammer, M.S., Hankey, G.J., Haririan, H., Haro, J.M., Hasaballah, A.I., Hasan, M.M., Hasanpoor, E., Hashi, A., Hassanipour, S., Hassankhani, H., Havmoeller, R.J., Hay, S.I., Hayat, K., Heidari, G., Heidari-Soureshjani, R., Henrikson, H.J., Herbert, M.E., Herteliu, C., Heydarpour, F., Hird, T.R., Hoek, H.W., Holla, R., Hoogar, P., Hosgood, H.D., Hossain, N., Hosseini, M., Hosseinzadeh, M., Hostiuc, M., Hostiuc, S., Househ, M., Hsairi, M., Hsieh, V.C.R., Hu, G., Hu, K., Huda, T.M., Humayun, A., Huynh, C.K., Hwang, B.F., Iannucci, V.C., Ibitoye, S.E., Ikeda, N., Ikuta, K.S., Ilesanmi, O.S., Ilic, I.M., Ilic, M.D., Inbaraj, L.R., Ippolito, H., Iqbal, U., Irvani, S.S.N., Irvine, C.M.S., Islam, M.M., Islam, S.M.S., Iso, H., Ivers, R.Q., Iwu, C.C.D., Iwu, C.J., Iyamu, I.O., Jaafari, J., Jacobsen, K.H., Jafari, H., Jafarinia, M., Jahani, M.A., Jakovljevic, M., Jalilian, F., James, S.L., Janjani, H., Javaheri, T., Javidnia, J., Jeemon, P., Jenabi, E., Jha, R.P., Jha, V., Ji, J.S., Johansson, L., John, O., John-Akinola, Y.O., Johnson, C.O., Jonas, J.B., Joukar, F., Jozwiak, J.J., Jürisson, M., Kabir, A., Kabir, Z., Kalani, H., Kalani, R., Kalankesh, L. R., Kalhor, R., Kanchan, T., Kapoor, N., Matin, B.K., Karch, A., Karim, M.A., Kassa, G. M., Katikireddi, S.V., Kayode, G.A., Kazemi Karyani, A., Keiyoro, P.N., Keller, C., Kemmer, L., Kendrick, P.J., Khalid, N., Khammarnia, M., Khan, E.A., Khan, M., Khatab, K., Khater, M.M., Khatib, M.N., Khayamzadeh, M., Khazaei, S., Kieling, C., Kim, Y.J., Kimokoti, R.W., Kisa, A., Kisa, S., Kivim¨aki, M., Knibbs, L.D., Knudsen, A. K.S., Kocarnik, J.M., Kochhar, S., Kopec, J.A., Korshunov, V.A., Koul, P.A., Koyanagi, A., Kraemer, M.U.G., Krishan, K., Krohn, K.J., Kromhout, H., Kuate
+
+18
+
+M.N. Jarczok et al.
+Defo, B., Kumar, G.A., Kumar, V., Kurmi, O.P., Kusuma, D., La Vecchia, C., Lacey, B., Lal, D.K., Lalloo, R., Lallukka, T., Lami, F.H., Landires, I., Lang, J.J., Langan, S.M., Larsson, A.O., Lasrado, S., Lauriola, P., Lazarus, J.V., Lee, P.H., Lee, S.W.H., Legrand, K.E., Leigh, J., Leonardi, M., Lescinsky, H., Leung, J., Levi, M., Li, S., Lim, L. L., Linn, S., Liu, Shiwei, Liu, Simin, Liu, Y., Lo, J., Lopez, A.D., Lopez, J.C.F., Lopukhov, P.D., Lorkowski, S., Lotufo, P.A., Lu, A., Lugo, A., Maddison, E.R., Mahasha, P.W., Mahdavi, M.M., Mahmoudi, M., Majeed, A., Maleki, A., Maleki, S., Malekzadeh, R., Malta, D.C., Mamun, A.A., Manda, A.L., Manguerra, H., MansourGhanaei, F., Mansouri, B., Mansournia, M.A., Mantilla Herrera, A.M., Maravilla, J.C., Marks, A., Martin, R.V., Martini, S., Martins-Melo, F.R., Masaka, A., Masoumi, S.Z., Mathur, M.R., Matsushita, K., Maulik, P.K., McAlinden, C., McGrath, J.J., McKee, M., Mehndiratta, M.M., Mehri, F., Mehta, K.M., Memish, Z.A., Mendoza, W., Menezes, R. G., Mengesha, E.W., Mereke, A., Mereta, S.T., Meretoja, A., Meretoja, T.J., Mestrovic, T., Miazgowski, B., Miazgowski, T., Michalek, I.M., Miller, T.R., Mills, E. J., Mini, G.K., Miri, M., Mirica, A., Mirrakhimov, E.M., Mirzaei, H., Mirzaei, M., Mirzaei, R., Mirzaei-Alavijeh, M., Misganaw, A.T., Mithra, P., Moazen, B., Mohammad, D.K., Mohammad, Y., Mohammad Gholi Mezerji, N., MohammadianHafshejani, A., Mohammadifard, N., Mohammadpourhodki, R., Mohammed, A.S., Mohammed, H., Mohammed, J.A., Mohammed, S., Mokdad, A.H., Molokhia, M., Monasta, L., Mooney, M.D., Moradi, G., Moradi, M., Moradi-Lakeh, M., Moradzadeh, R., Moraga, P., Morawska, L., Morgado-Da-Costa, J., Morrison, S.D., Mosapour, A., Mosser, J.F., Mouodi, S., Mousavi, S.M., Khaneghah, A.M., Mueller, U. O., Mukhopadhyay, S., Mullany, E.C., Musa, K.I., Muthupandian, S., Nabhan, A.F., Naderi, M., Nagarajan, A.J., Nagel, G., Naghavi, M., Naghshtabrizi, B., Naimzada, M. D., Najafi, F., Nangia, V., Nansseu, J.R., Naserbakht, M., Nayak, V.C., Negoi, I., Ngunjiri, J.W., Nguyen, C.T., Nguyen, H.L.T., Nguyen, M., Nigatu, Y.T., Nikbakhsh, R., Nixon, M.R., Nnaji, C.A., Nomura, S., Norrving, B., Noubiap, J.J., Nowak, C., Nunez-Samudio, V., Oancea, B., Odell, C.M., Ogbo, F.A., Oh, I.H., Okunga, E.W., Oladnabi, M., Olagunju, A.T., Olusanya, B.O., Olusanya, J.O., Omer, M.O., Ong, K.L., Onwujekwe, O.E., Orpana, H.M., Ortiz, A., Osarenotor, O., Osei, F.B., Ostroff, S.M., Otoiu, A., Otstavnov, N., Otstavnov, S.S., Øverland, S., Owolabi, M.O., Mahesh, P.A., Padubidri, J.R., Palladino, R., Panda-Jonas, S., Pandey, A., Parry, C.D.H., Pasovic, M., Pasupula, D.K., Patel, S.K., Pathak, M., Patten, S.B., Patton, G.C., Toroudi, H.P., Peden, A.E., Pennini, A., Pepito, V.C.F., Peprah, E.K., Pereira, D.M., Pesudovs, K., Pham, H.Q., Phillips, M.R., Piccinelli, C., Pilz, T.M., Piradov, M.A., Pirsaheb, M., Plass, D., Polinder, S., Polkinghorne, K.R., Pond, C.D., Postma, M.J., Pourjafar, H., Pourmalek, F., Poznan˜ska, A., Prada, S.I., Prakash, V., Pribadi, D.R.A., Pupillo, E., Syed, Z.Q., Rabiee, M., Rabiee, N., Radfar, A., Rafiee, A., Raggi, A., Rahman, M.A., Rajabpour-Sanati, A., Rajati, F., Rakovac, I., Ram, P., Ramezanzadeh, K., Ranabhat, C.L., Rao, P.C., Rao, S.J., Rashedi, V., Rathi, P., Rawaf, D.L., Rawaf, S., Rawal, L., Rawassizadeh, R., Rawat, R., Razo, C., Redford, S.B., Reiner, R.C., Reitsma, M.B., Remuzzi, G., Renjith, V., Renzaho, A.M.N., Resnikoff, S., Rezaei, Negar, Rezaei, Nima, Rezapour, A., Rhinehart, P.A., Riahi, S.M., Ribeiro, D.C., Ribeiro, D., Rickard, J., Rivera, J.A., Roberts, N.L.S., Rodríguez-Ramírez, S., Roever, L., Ronfani, L., Room, R., Roshandel, G., Roth, G.A., Rothenbacher, D., Rubagotti, E., Rwegerera, G.M., Sabour, S., Sachdev, P.S., Saddik, B., Sadeghi, E., Sadeghi, M., Saeedi, R., Saeedi Moghaddam, S., Safari, Y., Safi, S., Safiri, S., Sagar, R., Sahebkar, A., Sajadi, S.M., Salam, N., Salamati, P., Salem, H., Salem, M.R., Salimzadeh, H., Salman, O.M., Salomon, J.A., Samad, Z., Samadi Kafil, H., Sambala, E.Z., Samy, A.M., Sanabria, J., S´anchez-Pimienta, T.G., Santomauro, D.F., Santos, I.S., Santos, J.V., SantricMilicevic, M.M., Saraswathy, S.Y.I., Sarmiento-Su´arez, R., Sarrafzadegan, N., Sartorius, B., Sarveazad, A., Sathian, B., Sathish, T., Sattin, D., Saxena, S., Schaeffer, L.E., Schiavolin, S., Schlaich, M.P., Schmidt, M.I., Schutte, A.E., Schwebel, D.C., Schwendicke, F., Senbeta, A.M., Senthilkumaran, S., Sepanlou, S.G., Serdar, B., Serre, M.L., Shadid, J., Shafaat, O., Shahabi, S., Shaheen, A.A., Shaikh, M. A., Shalash, A.S., Shams-Beyranvand, M., Shamsizadeh, M., Sharafi, K., Sheikh, A., Sheikhtaheri, A., Shibuya, K., Shield, K.D., Shigematsu, M., Shin, J.Il, Shin, M.J., Shiri, R., Shirkoohi, R., Shuval, K., Siabani, S., Sierpinski, R., Sigfusdottir, I.D., Sigurvinsdottir, R., Silva, J.P., Simpson, K.E., Singh, J.A., Singh, P., Skiadaresi, E., Skou, S.T., Skryabin, V.Y., Smith, E.U.R., Soheili, A., Soltani, S., Soofi, M., Sorensen, R.J.D., Soriano, J.B., Sorrie, M.B., Soshnikov, S., Soyiri, I.N., Spencer, C.N., Spotin, A., Sreeramareddy, C.T., Srinivasan, V., Stanaway, J.D., Stein, C., Stein, D.J., Steiner, C., Stockfelt, L., Stokes, M.A., Straif, K., Stubbs, J.L., Sufiyan, M.B., Suleria, H.A.R., Suliankatchi Abdulkader, R., Sulo, G., Sultan, I., Tabar´esSeisdedos, R., Tabb, K.M., Tabuchi, T., Taherkhani, A., Tajdini, M., Takahashi, K., Takala, J.S., Tamiru, A.T., Taveira, N., Tehrani-Banihashemi, A., Temsah, M.H., Tesema, G.A., Tessema, Z.T., Thurston, G.D., Titova, M.V., Tohidinik, H.R., Tonelli, M., Topor-Madry, R., Topouzis, F., Torre, A.E., Touvier, M., TovaniPalone, M.R., Tran, B.X., Travillian, R., Tsatsakis, A., Tudor Car, L.T., Tyrovolas, S., Uddin, R., Umeokonkwo, C.D., Unnikrishnan, B., Upadhyay, E., Vacante, M., Valdez, P.R., van Donkelaar, A., Vasankari, T.J., Vasseghian, Y., Veisani, Y., Venketasubramanian, N., Violante, F.S., Vlassov, V., Vollset, S.E., Vos, T., Vukovic, R., Waheed, Y., Wallin, M.T., Wang, Y., Wang, Y.P., Watson, A., Wei, J., Wei, M.Y.W., Weintraub, R.G., Weiss, J., Werdecker, A., West, J.J., Westerman, R., Whisnant, J.L., Whiteford, H.A., Wiens, K.E., Wolfe, C.D.A., Wozniak, S.S., Wu, A.M., Wu, J., Wulf Hanson, S., Xu, G., Xu, R., Yadgir, S., Yahyazadeh Jabbari, S.H., Yamagishi, K., Yaminfirooz, M., Yano, Y., Yaya, S., Yazdi-Feyzabadi, V., Yeheyis, T. Y., Yilgwan, C.S., Yilma, M.T., Yip, P., Yonemoto, N., Younis, M.Z., Younker, T.P., Yousefi, B., Yousefi, Z., Yousefinezhadi, T., Yousuf, A.Y., Yu, C., Yusefzadeh, H., Moghadam, T.Z., Zamani, M., Zamanian, M., Zandian, H., Zastrozhin, M.S., Zhang, Y., Zhang, Z.J., Zhao, J.T., Zhao, X.J.G., Zhao, Y., Zheng, P., Zhou, M., Davletov, K., Karimi, S.E., Mondello, S., Murray, C.J.L., 2020. Global burden of 369 diseases and injuries in 204 countries and territories, 1990–2019: a systematic analysis for the Global Burden of Disease Study 2019. Lancet 396, 1204–1222. https://doi.org/10.1016/S0140-6736(20)30925-9.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+Ablonskyte˙ -Du¯doniene˙ , R., Bakˇsyte˙ , G., Cˇeponiene˙ , I., Kriˇsˇciukaitis, A., Dre˙ gu¯nas, K., Ereminiene˙ , E., 2012. Impedance cardiography and heart rate variability for longterm cardiovascular outcome prediction after myocardial infarction. Medicina 48, 350–358. https://doi.org/10.3390/medicina48070052.
+Aeschbacher, S., Schoen, T., Do¨rig, L., Kreuzmann, R., Neuhauser, C., SchmidtTrucks¨ass, A., Probst-Hensch, N.M., Risch, M., Risch, L., Conen, D., 2017. Heart rate, heart rate variability and inflammatory biomarkers among young and healthy adults. Ann. Med. 49, 32–41. https://doi.org/10.1080/07853890.2016.1226512.
+Akselrod, S., Gordon, D., Ubel, F.A., Shannon, D.C., Berger, A.C., Cohen, R.J., 1981. Power spectrum analysis of heart rate fluctuation: a quantitative probe of beat-tobeat cardiovascular control. Science 213, 220–222. https://doi.org/10.1126/ science.6166045.
+Avery, L., Flynn, D., Van Wersch, A., Sniehotta, F.F., Trenell, M.I., 2012. Changing physical activity behavior in type 2 diabetes: a systematic review and meta-analysis of behavioral interventions. Diabetes Care. https://doi.org/10.2337/dc11-2452.
+Badarau, S., Siriopol, D., Drugus, D., Dumea, R., Hogas, S., Blaj, M., Voroneanu, L., Gramaticu, A., Petris, A., Burlacu, A., Covic, A., 2015. Electrocardiogram abnormalities and heart rate variability in predicting mortality and cardiovascular events among hemodialyzed patients. Int. Urol. Nephrol. 47, 1703–1708. https:// doi.org/10.1007/s11255-015-1063-4.
+Balint, E.M., Angerer, P., Guendel, H., Marten-Mittag, B., Jarczok, M.N., 2022a. Stress management intervention for leaders increases nighttime SDANN: results from a randomized controlled trial. Int. J. Environ. Res. Public Health 19. https://doi.org/ 10.3390/ijerph19073841.
+Balint, E.M., Daniele, V., Langgartner, D., Reber, S.O., Rothermund, E., Gündel, H., Von Wietersheim, J., Buckley, T., Jarczok, M.N., 2022b. Heart rate variability predicts outcome of short-term psychotherapy at the workplace. Psychophysiology, e14150. https://doi.org/10.1111/psyp.14150.
+Barry, V.W., Caputo, J.L., Kang, M., 2018. The joint association of fitness and fatness on cardiovascular disease mortality: a meta-analysis. Prog. Cardiovasc. Dis. 61, 136–141. https://doi.org/10.1016/J.PCAD.2018.07.004.
+van Bemmel, T., Vinkers, D.J., Macfarlane, P.W., Gussekloo, J., Westendorp, R.G.J., 2006. Markers of autonomic tone on a standard ECG are predictive of mortality in old age. Int. J. Cardiol. 107, 36–41. https://doi.org/10.1016/j.ijcard.2005.02.031.
+Benarroch, E.E., 2014. Central autonomic network. In: Benarroch, E.E. (Ed.), Autonomic Neurology. Oxford University Press, pp. 3–14. https://doi.org/10.1093/med/ 9780199920198.003.0001.
+Bernard, C., 1867 (Tr. by). In: Morel., J.S. (Ed.), Lecture on the Physiology of the Heart and Its Connections with the Brain, Delivered at the Sorbonne, the 27th March, 1865, first ed. Purse & Son., Savannah.
+Bhogal, A.S., De Rui, M., Pavanello, D., El-Azizi, I., Rowshan, S., Amodio, P., Montagnese, S., Mani, A.R., 2019. Which heart rate variability index is an independent predictor of mortality in cirrhosis? Dig. Liver Dis. 51, 695–702. https:// doi.org/10.1016/j.dld.2018.09.011.
+Billman, G.E., 2011. Heart rate variability - a historical perspective. Front. Physiol. 2 NOV https://doi.org/10.3389/fphys.2011.00086.
+Blom, E.H., Olsson, E.M.G., Serlachius, E., Ericson, M., Ingvar, M., 2009. Heart rate variability is related to self-reported physical activity in a healthy adolescent population, 2009 1066 Eur. J. Appl. Physiol. 106, 877–883. https://doi.org/ 10.1007/S00421-009-1089-3.
+Brosschot, J.F., Verkuil, B., Thayer, J.F., 2017. Exposed to events that never happen: generalized unsafety, the default stress response, and prolonged autonomic activity. Neurosci. Biobehav. Rev. 74, 287–296. https://doi.org/10.1016/j. neubiorev.2016.07.019.
+Burr, R.L., 2007. Interpretation of normalized spectral heart rate variability indices in sleep research: a critical review. Sleep 30, 913–919.
+Camillo, C.A., Laburu, V.D.M., Gonalves, N.S., Cavalheri, V., Tomasi, F.P., Hernandes, N. A., Ramos, D., Marquez Vanderlei, L.C., Cipulo Ramos, E.M., Probst, V.S., Pitta, F., 2011. Improvement of heart rate variability after exercise training and its predictors in COPD. Respir. Med. 105, 1054–1062. https://doi.org/10.1016/J. RMED.2011.01.014.
+Camm, A., Malik, M., Bigger, J., Breithardt, G., Cerutti, S., Cohen, R., Coumel, P., Fallen, E., Kennedy, H., Kleiger, R., 1996. Heart rate variability. Standards of measurement, physiological interpretation, and clinical use. Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology. Eur. Heart J. 17, 354–381. https://doi.org/10.1161/01. CIR.93.5.1043.
+Carney, R.M., Blumenthal, J.A., Freedland, K.E., Stein, P.K., Howells, W.B., Berkman, L. F., Watkins, L.L., Czajkowski, S.M., Hayano, J., Domitrovich, P.P., Jaffe, A.S., 2005. Low heart rate variability and the effect of depression on post-myocardial infarction mortality. Arch. Intern. Med. 165, 1486–1491. https://doi.org/10.1001/ archinte.165.13.1486.
+Chau, J.Y., Grunseit, A.C., Chey, T., Stamatakis, E., Brown, W.J., Matthews, C.E., Bauman, A.E., Ploeg, H.P. van der, 2013. Daily sitting time and all-cause mortality: a meta-analysis. PLoS One 8, e80000. https://doi.org/10.1371/JOURNAL. PONE.0080000.
+Cohen, J.B., Lotito, M.J., Trivedi, U.K., Denker, M.G., Cohen, D.L., Townsend, R.R., 2019. Cardiovascular events and mortality in white coat hypertension a systematic review and meta-analysis. Ann. Intern. Med. 170, 853–862. https://doi.org/10.7326/M190223.
+Cygankiewicz, I., Corino, V., Vazquez, R., Bayes-Genis, A., Mainardi, L., Zareba, W., de Luna, A.B., Platonov, P.G., MUSIC Trial Investigators, 2015. Reduced irregularity of ventricular response during atrial fibrillation and long-term outcome in patients with heart failure. Am. J. Cardiol. 116, 1071–1075. https://doi.org/10.1016/j. amjcard.2015.06.043.
+
+19
+
+M.N. Jarczok et al.
+Cygankiewicz, I., Zareba, W., Vazquez, R., Bayes-Genis, A., Pascual, D., Macaya, C., Almendral, J., Fiol, M., Bardaji, A., Gonzalez-Juanatey, J.R., Nieto, V., Valdes, M., Cinca, J., de Luna, A.B., MUSIC Investigators, 2009. Risk stratification of mortality in patients with heart failure and left ventricular ejection fraction >35%. Am. J. Cardiol. 103, 1003–1010. https://doi.org/10.1016/j.amjcard.2008.11.061.
+Dekker, J.M., Schouten, E.G., Klootwijk, P., Pool, J., Swenne, C.A., Kromhout, D., 1997. Heart rate variability from short electrocardiographic recordings predicts mortality from all causes in middle-aged and elderly men. The Zutphen Study. Am. J. Epidemiol. 145, 899–908. https://doi.org/10.1093/oxfordjournals.aje.a009049.
+Dickinson, H.O., Mason, J.M., Nicolson, D.J., Campbell, F., Beyer, F.R., Cook, J.V., Williams, B., Ford, G.A., 2006. Lifestyle interventions to reduce raised blood pressure: a systematic review of randomized controlled trials. J. Hypertens. https:// doi.org/10.1097/01.hjh.0000199800.72563.26.
+Fang, S.-C., Wu, Y.-L., Tsai, P.-S., 2020. Heart rate variability and risk of all-cause death and cardiovascular events in patients with cardiovascular disease: a meta-analysis of cohort studies. Biol. Res. Nurs. 22, 45–56. https://doi.org/10.1177/ 1099800419877442.
+Faurholt-Jepsen, M., Kessing, L.V., Munkholm, K., 2017. Heart rate variability in bipolar disorder: a systematic review and meta-analysis. Neurosci. Biobehav. Rev. 73, 68–80. https://doi.org/10.1016/j.neubiorev.2016.12.007.
+Fineberg, H.V., 2013. The paradox of disease prevention celebrated in principle, resisted in practice. JAMA J. Am. Med. Assoc. https://doi.org/10.1001/jama.2013.7518.
+Freemann, R., Garite, T, N.M., 1981. Fetal Heart Rate Monitoring. Williams&Wilkins, Baltimore.
+Galani, C., Schneider, H., 2007. Prevention and treatment of obesity with lifestyle interventions: review and meta-analysis. Int. J. Public Health. https://doi.org/ 10.1007/s00038-007-7015-8.
+Gallicchio, L., Kalesan, B., 2009. Sleep duration and mortality: a systematic review and meta-analysis. J. Sleep. Res. 18, 148–158. https://doi.org/10.1111/j.13652869.2008.00732.x.
+de Geus, E.J.C., Gianaros, P.J., Brindle, R.C., Jennings, J.R., Berntson, G.G., 2019. Should heart rate variability be “corrected” for heart rate? Biological, quantitative, and interpretive considerations. Psychophysiology 56, 1–26. https://doi.org/10.1111/ psyp.13287.
+Gilliam, F.R., Singh, J.P., Mullin, C.M., McGuire, M., Chase, K.J., 2007. Prognostic value of heart rate variability footprint and standard deviation of average 5-minute intrinsic R-R intervals for mortality in cardiac resynchronization therapy patients. J. Electrocardiol. 40, 336–342. https://doi.org/10.1016/j.jelectrocard.2006.11.012.
+Hayano, J., Mukai, S., Fukuta, H., Sakata, S., Ohte, N., Kimura, G., 2001. Postural response of low-frequency component of heart rate variability is an increased risk for mortality in patients with coronary artery disease. Chest 120, 1942–1952. https:// doi.org/10.1378/chest.120.6.1942.
+Heiss, S., Vaschillo, B., Vaschillo, E.G., Timko, C.A., Hormes, J.M., 2021. Heart rate variability as a biobehavioral marker of diverse psychopathologies: a review and argument for an “ideal range”. Neurosci. Biobehav. Rev. 121, 144–155. https://doi. org/10.1016/j.neubiorev.2020.12.004.
+Higgins, J.P., Li, T., Deeks, J.J., 2019. Chapter 6: Choosing effect measures and computing estimates of effect, in: Higgins JPT, Li T, D.J. (Ed.), Cochrane Handbook for Systematic Reviews of Interventions Version 6.0 (Updated July 2019).
+Higgins, J.P.T., Thompson, S.G., 2002. Quantifying heterogeneity in a meta-analysis. Stat. Med. 21, 1539–1558. https://doi.org/10.1002/sim.1186.
+Holman, C.D.J., English, D.R., Milne, E., Winter, M.G., 1996. Meta-analysis of alcohol and all-cause mortality: a validation of NHMRC recommendations. Med. J. Aust. 164, 141–145. https://doi.org/10.5694/J.1326-5377.1996.TB122011.X.
+Holzman, J.B., Bridgett, D.J., 2017. Heart rate variability indices as bio-markers of topdown self-regulatory mechanisms: a meta-analytic review. Neurosci. Biobehav. Rev. 74, 233–255. https://doi.org/10.1016/j.neubiorev.2016.12.032.
+Hotta, N., Otsuka, K., Murakami, S., Yamanaka, G., Kubo, Y., Matsuoka, O., Yamanaka, T., Shinagawa, M., Nunoda, S., Nishimura, Y., Shibata, K., Saitoh, H., Nishinaga, M., Ishine, M., Wada, T., Okumiya, K., Matsubayashi, K., Yano, S., Ichihara, K., Corn´elissen, G., Halberg, F., 2005. Fractal analysis of heart rate variability and mortality in elderly community-dwelling people – Longitudinal Investigation for the Longevity and Aging in Hokkaido County (LILAC) study. Biomed. Pharmacother. 59 (Suppl 1), S45–S58. https://doi.org/10.1016/s07533322(05)80009-5.
+Huikuri, H.V., M¨akikallio, T.H., Airaksinen, K.E.J., Sepp¨anen, T., Puukka, P., Ra¨iha¨, I.J., Sourander, L.B., 1998. Power-law relationship of heart rate variability as a predictor of mortality in the elderly. Circulation 97, 2031–2036. https://doi.org/10.1161/01. CIR.97.20.2031.
+Jandackova, V.K., Britton, A., Malik, M., Steptoe, A., 2016. Heart rate variability and depressive symptoms: a cross-lagged analysis over a 10-year period in the Whitehall II study. Psychol. Med. 1–11. https://doi.org/10.1017/S003329171600060X.
+Jarczok, M.N., Jarczok, M., Thayer, J.F., 2020. Work stress and autonomic nervous system activity. In: Theorell, T.o¨res (Ed.), Handbook of Socioeconomic Determinants of Occupational Health - From Macro-Level to Micro-Level Evidence. Springer International Publishing, Basel, p. 690. https://doi.org/10.1007/978-3-030-314385_27.
+Jarczok, M.N., Guendel, H., McGrath, J.J., Balint, E.M., 2019a. Circadian rhythms of the autonomic nervous system: scientific implication and practical implementation. In: Svorc, Pavol (Ed.), Chronobiology - The Science of Biological Time Structure. IntechOpen, London. https://doi.org/10.5772/intechopen.86822.
+Jarczok, M.N., Li, J., Mauss, D., Fischer, J.E., Thayer, J.F., 2012. Heart rate variability is associated with glycemic status after controlling for components of the metabolic syndrome., in: Psychosomatic Medicine. Athen, Greek, p. A-42. 〈https://doi.org/1 0.1016/j.ijcard.2012.02.002〉.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+Jarczok, M.N., Koenig, J., Mauss, D., Fischer, J.E., Thayer, J.F., 2014. Lower heart rate variability predicts increased level of C-reactive protein 4 years later in healthy, nonsmoking adults. J. Intern. Med. 276, 667–671. https://doi.org/10.1111/ joim.12295.
+Jarczok, M.N., Koenig, J., Wittling, A., Fischer, J.E., Thayer, J.F., 2019b. First evaluation of an index of low vagally-mediated heart rate variability as a marker of health risks in human adults: proof of concept. J. Clin. Med. 8, 1940. https://doi.org/10.3390/ jcm8111940.
+Jarczok, M.N., Jarczok, M., Mauss, D., Koenig, J., Li, J., Herr, R.M., Thayer, J.F., 2013. Autonomic nervous system activity and workplace stressors–a systematic review. Neurosci. Biobehav. Rev. 37, 1810–1823. https://doi.org/10.1016/j. neubiorev.2013.07.004.
+Jarczok, M.N., Buckley, T., Guendel, H.O., Boeckelmann, I., Mauss, D., Thayer, J.F., Balint, E.M., 2021. 24h-heart rate variability as a communication tool for a personalized psychosomatic consultation in occupational health. Front. Neurosci. 15 https://doi.org/10.3389/fnins.2021.600865.
+Jarczok, M.N., Aguilar-Raab, C., Koenig, J., Kaess, M., Borniger, J.C., Nelson, R.J., Hall, M., Ditzen, B., Thayer, J.F., Fischer, J.E., 2018. The Heart´s rhythm “n” blues: sex differences in circadian variation patterns of vagal activity vary by depressive symptoms in predominantly healthy employees. Chronobiol. Int. 35, 896–909. https://doi.org/10.1080/07420528.2018.1439499.
+Kamphuis, M.H., Geerlings, M.I., Dekker, J.M., Giampaoli, S., Nissinen, A., Grobbee, D. E., Kromhout, D., 2007. Autonomic dysfunction: a link between depression and cardiovascular mortality? The FINE study. Eur. J. Cardiovasc. Prev. Rehabil. 14, 796–802. https://doi.org/10.1097/HJR.0b013e32829c7d0c.
+Kida, N., Tsubakihara, Y., Kida, H., Ageta, S., Arai, M., Hamada, Y., Matsuura, N., 2017. Usefulness of measurement of heart rate variability by holter ECG in hemodialysis patients. BMC Nephrol. 18, 8. https://doi.org/10.1186/s12882-016-0423-3.
+Kiviniemi, A.M., Tulppo, M.P., Wichterle, D., Hautala, A.J., Tiinanen, S., Seppa¨nen, T., M¨akikallio, T.H., Huikuri, H.V., 2007. Novel spectral indexes of heart rate variability as predictors of sudden and non-sudden cardiac death after an acute myocardial infarction. Ann. Med. 39, 54–62. https://doi.org/10.1080/07853890600990375.
+Kop, W.J., Stein, P.K., Tracy, R.P., Barzilay, J.I., Schulz, R., Gottdiener, J.S., 2010. Autonomic nervous system dysfunction and inflammation contribute to the increased cardiovascular mortality risk associated with depression. Psychosom. Med. 72, 626–635. https://doi.org/10.1097/PSY.0b013e3181eadd2b.
+Kotecha, D., Flather, M.D., Atar, D., Collins, P., Pepper, J., Jenkins, E., Reid, C.M., Eccleston, D., 2019. B-type natriuretic peptide trumps other prognostic markers in patients assessed for coronary disease. BMC Med. 17, 1–11. https://doi.org/ 10.1186/s12916-019-1306-9.
+Kristal-Boneh, E., Raifel, M., Froom, P., Ribak, J., 1995. Heart rate variability in health and disease. Scand. J. Work. Environ. Health 21, 85–95. https://doi.org/10.5271/ sjweh.15.
+La Rovere, M.T., Pinna, G.D., Maestri, R., Mortara, A., Capomolla, S., Febo, O., Ferrari, R., Franchini, M., Gnemmi, M., Opasich, C., Riccardi, P.G., Traversi, E., Cobelli, F., 2003. Short-term heart rate variability strongly predicts sudden cardiac death in chronic heart failure patients. Circulation 107, 565–570. https://doi.org/ 10.1161/01.cir.0000047275.25795.17.
+Laborde, S., Allen, M.S., Borges, U., Dosseville, F., Hosang, T.J., Iskra, M., Mosley, E., Salvotti, C., Spolverato, L., Zammit, N., Javelle, F., 2022. Effects of voluntary slow breathing on heart rate and heart rate variability: a systematic review and a metaanalysis. Neurosci. Biobehav. Rev. 138, 104711 https://doi.org/10.1016/j. neubiorev.2022.104711.
+Lakusic, N., Mahovic, D., Sonicki, Z., Slivnjak, V., Baborski, F., 2013. Outcome of patients with normal and decreased heart rate variability after coronary artery bypass grafting surgery. Int. J. Cardiol. 166, 516–518. https://doi.org/10.1016/j. ijcard.2012.04.040.
+Lanza, G.A., Cianflone, D., Rebuzzi, A.G., Angeloni, G., Sestito, A., Ciriello, G., La Torre, G., Crea, F., Maseri, A., Stratificazione Prognostica dell’Angina Instabile Study Investigators, 2006. Prognostic value of ventricular arrhythmias and heart rate variability in patients with unstable angina. Heart 92, 1055–1063. https://doi.org/ 10.1136/hrt.2005.070714.
+Lau, K., Malik, A., Foroutan, F., Buchan, T.A., Daza, J.F., Sekercioglu, N., OrchanianCheff, A., Alba, A.C., 2021. Resting heart rate as an important predictor of mortality and morbidity in ambulatory patients with heart failure: a systematic review and meta-analysis. J. Card. Fail. 27, 349–363. https://doi.org/10.1016/J. CARDFAIL.2020.11.003.
+Lehrer, P.M., Gevirtz, R., 2014. Heart rate variability biofeedback: how and why does it work? Front. Psychol. 5, 1–9. https://doi.org/10.3389/fpsyg.2014.00756.
+Leroux, A., Xu, S., Kundu, P., Muschelli, J., Smirnova, E., Chatterjee, N., Crainiceanu, C., 2021. Quantifying the predictive performance of objectively measured physical activity on mortality in the UK biobank. J. Gerontol. Ser. A 76, 1486–1494. https:// doi.org/10.1093/GERONA/GLAA250.
+Liao, D., Carnethon, M., Evans, G.W., Cascio, W.E., Heiss, G., 2002. Lower heart rate variability is associated with the development of coronary heart disease in individuals with diabetes: the atherosclerosis risk in communities (ARIC) study. Diabetes 51, 3524–3531.
+Lin, I.M., Tai, L.Y., Fan, S.Y., 2014. Breathing at a rate of 5.5breaths per minute with equal inhalation-to-exhalation ratio increases heart rate variability. Int. J. Psychophysiol. 91, 206–211. https://doi.org/10.1016/j.ijpsycho.2013.12.006.
+Lindstro¨m, J., Tuomilehto, J., 2003. The diabetes risk score: a practical tool to predict type 2 diabetes risk. Diabetes Care 26, 725–731. https://doi.org/10.2337/ diacare.26.3.725.
+Lombardi, F., 2000. Chaos theory, heart rate variability, and arrhythmic mortality. Circulation 101, 8–10. https://doi.org/10.1161/01.cir.101.1.8.
+
+20
+
+M.N. Jarczok et al.
+Macfarlane, P.W., Norrie, J., WOSCOPS Executive Committee, 2007. The value of the electrocardiogram in risk assessment in primary prevention: experience from the West of Scotland Coronary Prevention Study. J. Electrocardiol. 40, 101–109. https:// doi.org/10.1016/j.jelectrocard.2006.05.003.
+M¨akikallio, T.H., Huikuri, H.V., Ma¨kikallio, A., Sourander, L.B., Mitrani, R.D., Castellanos, A., Myerburg, R.J., 2001. Prediction of sudden cardiac death by fractal analysis of heart rate variability in elderly subjects. J. Am. Coll. Cardiol. 37, 1395–1402. https://doi.org/10.1016/s0735-1097(01)01171-8.
+Malik, M., Camm, A.J., 1993. Heart rate variability: from facts to fancies. J. Am. Coll. Cardiol. https://doi.org/10.1016/0735-1097(93)90065-9.
+Marmot, M., Brunner, E., 2005. Cohort profile: the Whitehall II study. Int. J. Epidemiol. 34, 251–256. https://doi.org/10.1093/ije/dyh372.
+Martinsen, E.W., 2009. Physical activity in the prevention and treatment of anxiety and depression. http://dx.doi.org/10.1080/08039480802315640 62, 25–29. 〈https:// doi.org/10.1080/08039480802315640〉.
+May, O., Arildsen, H., 2012. Simple function tests for autonomic neuropathy have a higher predictive value on all-cause mortality in diabetes compared to 24-h heart rate variability. J. Diabetes Complicat. 26, 246–250. https://doi.org/10.1016/j. jdiacomp.2012.03.004.
+May, R., McBerty, V., Zaky, A., Gianotti, M., 2017. Vigorous physical activity predicts higher heart rate variability among younger adults. J. Physiol. Anthropol. 36, 1–5. https://doi.org/10.1186/S40101-017-0140-Z.
+Medenwald, D., Swenne, C.A., Loppnow, H., Kors, J.A., Pietzner, D., Tiller, D., Thiery, J., Nuding, S., Greiser, K.H., Haerting, J., Werdan, K., Kluttig, A., 2017. Prognostic relevance of the interaction between short-term, metronome-paced heart rate variability, and inflammation: results from the population-based CARLA cohort study. Europace 19, 110–118. https://doi.org/10.1093/europace/euv333.
+Mercedes R Carnethon, Liao, Duanping, Evans, Gregory W., Cascio, Wayne E., Chambless, Lloyd E., Rosamond, Wayne D., Heiss, Gerardo, 2002. Does the cardiac autonomic response to postural change predict incident coronary heart disease and mortality? The atherosclerosis risk in communities study. Am. J. Epidemiol. 155, 48–56.
+Moher, D., Liberati, A., Tetzlaff, J., Altman, D.G., PRISMA Group, 2009. Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement. PLoS Med. 6, e1000097 https://doi.org/10.1371/journal.pmed.1000097.
+Nishimura, M., Tokoro, T., Nishida, M., Hashimoto, T., Kobayashi, H., Yamazaki, S., Imai, R., Okino, K., Iwamoto, N., Takahashi, H., Ono, T., 2010. Sympathetic overactivity and sudden cardiac death among hemodialysis patients with left ventricular hypertrophy. Int. J. Cardiol. 142, 80–86. https://doi.org/10.1016/j. ijcard.2008.12.104.
+Nunan, D., Sandercock, G.R.H., Brodie, D. a, 2010. A quantitative systematic review of normal values for short-term heart rate variability in healthy adults. PACE - Pacing Clin. Electrophysiol. 33, 1407–1417. https://doi.org/10.1111/j.15408159.2010.02841.x.
+O’Connor, D.B., Thayer, J.F., Vedhara, K., 2021. Stress and health: a review of psychobiological processes. Annu. Rev. Psychol. 72 https://doi.org/10.1146/ annurev-psych-062520-122331.
+Oikawa, K., Ishihara, R., Maeda, T., Yamaguchi, K., Koike, A., Kawaguchi, H., Tabata, Y., Murotani, N., Itoh, H., 2009. Prognostic value of heart rate variability in patients with renal failure on hemodialysis. Int. J. Cardiol. 131, 370–377. https://doi.org/ 10.1016/j.ijcard.2007.10.033.
+Parmar, M.K.B., Torri, V., Stewart, L., 1998. Extracting summary statistics to perform meta-analyses of the published literature for survival endpoints. Stat. Med. Stat. Med. 2815–2834. https://doi.org/10.1002/(SICI)1097-0258(19981230)17: 24<2815::AID-SIM110>3.0.CO;2-8.
+Pierdomenico, S.D., Pierdomenico, A.M., Coccina, F., Clement, D.L., Buyzere, M.L., De, Bacquer, D.A., De, Ben-Dov, I.Z., Vongpatanasin, W., Banegas, J.R., Ruilope, L.M., Thijs, L., Staessen, J.A., 2018. Prognostic value of masked uncontrolled. Hypertension 72, 862–869. https://doi.org/10.1161/ HYPERTENSIONAHA.118.11499.
+Quintana, M., Lindvall, K., Brolund, F., Storck, N., Lindblad, L.E., Ryd´en, L., 1997. Markers of risk after acute myocardial infarction. A comparison of clinical variables, ambulatory and exercise electrocardiography, echocardiography, and stress echocardiography. Coron. Artery Dis. 8, 327–334. https://doi.org/10.1097/ 00019501-199706000-00001.
+Roach, D., Sheldon, A., Wilson, W., Sheldon, R., 1998. Temporally localized contributions to measures of large-scale heart rate variability. Am. J. Physiol. - Hear. Circ. Physiol. 274, 1465–1471. https://doi.org/10.1152/ajpheart.1998.274.5. h1465.
+Roach, D., Wilson, W., Ritchie, D., Sheldon, R., 2004. Dissection of long-range heart rate variability: controlled induction of prognostic measures by activity in the laboratory. J. Am. Coll. Cardiol. 43, 2271–2277. https://doi.org/10.1016/j.jacc.2004.01.050.
+Ryff, Carol D., Almeida, David M., Ayanian, John Z., Carr, Deborah S., Cleary, Paul D., Coe, Christopher, … Williams, David R, 2021. Midlife in the United States (MIDUS 2), 2004-2006. Inter-university Consortium for Political and Social Research [distributor], 2021-09-15. https://doi.org/10.3886/ICPSR04652.v8.
+Sacha, J., 2014. Interaction between heart rate and heart rate variability. Ann. Noninvasive Electrocardiol. 19, 207–216. https://doi.org/10.1111/anec.12148.
+Schneider, M., Schwerdtfeger, A., 2020. Autonomic dysfunction in posttraumatic stress disorder indexed by heart rate variability: a meta-analysis. Psychol. Med. 50, 1937–1948. https://doi.org/10.1017/S003329172000207X.
+
+Neuroscience and Biobehavioral Reviews 143 (2022) 104907
+Schuster, A.K., Fischer, J.E., Thayer, J.F., Mauss, D., Jarczok, M.N., 2016. Decreased heart rate variability correlates to increased cardiovascular risk. Int. J. Cardiol. 203, 728–730. https://doi.org/10.1016/j.ijcard.2015.11.027.
+Sevoz-Couche, C., Laborde, S., 2022. Heart rate variability and slow-paced breathing: when coherence meets resonance. Neurosci. Biobehav. Rev. 135 https://doi.org/ 10.1016/j.neubiorev.2022.104576.
+Shaffer, F., Ginsberg, J.P., 2017. An overview of heart rate variability metrics and norms. Front. Public Heal. 5, 258. https://doi.org/10.3389/fpubh.2017.00258.
+Shibasaki, K., Ogawa, S., Yamada, S., Iijima, K., Eto, M., Kozaki, K., Toba, K., Akishita, M., Ouchi, Y., 2014. Association of decreased sympathetic nervous activity with mortality of older adults in long-term care. Geriatr. Gerontol. Int. 14, 159–166. https://doi.org/10.1111/ggi.12074.
+Sigrist, C., Mürner-Lavanchy, I., Peschel, S.K.V., Schmidt, S.J., Kaess, M., Koenig, J., 2021. Early life maltreatment and resting-state heart rate variability: a systematic review and meta-analysis. Neurosci. Biobehav. Rev. 120, 307–334. https://doi.org/ 10.1016/j.neubiorev.2020.10.026.
+Singh, J.P., Rosenthal, L.S., Hranitzky, P.M., Berg, K.C., Mullin, C.M., Thackeray, L., Kaplan, A., 2009. Device diagnostics and long-term clinical outcome in patients receiving cardiac resynchronization therapy. Europace 11, 1647–1653. https://doi. org/10.1093/europace/eup250.
+Soares-Miranda, L., Sattelmair, J., Chaves, P., Duncan, G.E., Siscovick, D.S., Stein, P.K., Mozaffarian, D., 2014. Physical activity and heart rate variability in older adults: the cardiovascular health study. Circulation 129, 2100–2110. https://doi.org/10.1161/ CIRCULATIONAHA.113.005361.
+Steeds, R., Fletcher, J., Smith, M., West, J., Channer, K., Townend, J., 2004. Prognostic significance of early short-term measurements of heart rate variability following acute myocardial infarction. Am. J. Cardiol. 94, 1275–1278. https://doi.org/ 10.1016/j.amjcard.2004.07.111.
+Stein, P.K., Barzilay, J.I., Chaves, P.H.M., Mistretta, S.Q., Domitrovich, P.P., Gottdiener, J.S., Rich, M.W., Kleiger, R.E., 2008. Novel measures of heart rate variability predict cardiovascular mortality in older adults independent of traditional cardiovascular risk factors: the Cardiovascular Health Study (CHS). J. Cardiovasc. Electro 19, 1169–1174. https://doi.org/10.1111/j.15408167.2008.01232.x.
+Tarvainen, M.P., Ranta-aho, P.O., Karjalainen, P.A., 2002. An advanced detrending method with application to HRV analysis. IEEE Trans. Biomed. Eng. 49, 172–175. https://doi.org/10.1109/10.979357.
+Thayer, J.F., Lane, R.D., 2000. A model of neurovisceral integration in emotion regulation and dysregulation. J. Affect. Disord. 61, 201–216.
+Thayer, J.F., Lane, R.D., 2007. The role of vagal function in the risk for cardiovascular disease and mortality. Biol. Psychol. 74, 224–242. https://doi.org/10.1016/j. biopsycho.2005.11.013.
+Thayer, J.F., Lane, R.D., 2009. Claude Bernard and the heart-brain connection: further elaboration of a model of neurovisceral integration. Neurosci. Biobehav. Rev. 33, 81–88. https://doi.org/10.1016/j.neubiorev.2008.08.004.
+Thayer, J.F., Mather, M., Koenig, J., 2021. Stress and aging: a neurovisceral integration perspective. Psychophysiology 58, 1–15. https://doi.org/10.1111/psyp.13804.
+Thayer, J.F., Ahs, F., Fredrikson, M., Sollers, J.J., Wager, T.D., 2012. A meta-analysis of heart rate variability and neuroimaging studies: implications for heart rate variability as a marker of stress and health. Neurosci. Biobehav. Rev. 36, 747–756. https://doi.org/10.1016/j.neubiorev.2011.11.009.
+Tornberg, J., Ika¨heimo, T.M., Kiviniemi, A., Pyky, R., Hautala, A., Ma¨ntysaari, M., J¨amsa¨, T., Korpelainen, R., 2019. Physical activity is associated with cardiac autonomic function in adolescent men. PLoS One 14, 1–10. https://doi.org/ 10.1371/journal.pone.0222121.
+Warner, H.R., Cox, A., 1962. A mathematical model of heart rate control by sympathetic and vagus efferent information. J. Appl. Physiol. 17, 349–355.
+Whitehall II | Institute of Epidemiology & Health Care - UCL – University College London [data set], 1998.
+Wilson, P.W.F., D’Agostino, R.B., Levy, D., Belanger, A.M., Silbershatz, H., Kannel, W.B., 1998. Prediction of coronary heart disease using risk factor categories. Circulation 97, 1837–1847. https://doi.org/10.1161/01.CIR.97.18.1837.
+Wittling, W., Wittling, R.A., 2012. In: Auflage (Ed.), Herzschlagvariabilit¨at: Frühwarnsystem, Stress- und Fitnessindikator, first ed. Eichsfeld, Heilbad Heiligenstadt.
+Wulsin, L., Herman, J., Thayer, J.F., 2018. Stress, autonomic imbalance, and the prediction of metabolic risk: a model and a proposal for research. Neurosci. Biobehav. Rev. 86, 12–20. https://doi.org/10.1016/j.neubiorev.2017.12.010.
+Wulsin, L.R., Horn, P.S., Perry, J.L., Massaro, J.M., D’Agostino, R.B., 2015. Autonomic imbalance as a predictor of metabolic risks, cardiovascular disease, diabetes, and mortality. J. Clin. Endocrinol. Metab. 100, 2443–2448. https://doi.org/10.1210/ jc.2015-1748.
+Young, H.A., Benton, D., 2018. Heart-rate variability: a biomarker to study the influence of nutrition on physiological and psychological health? Behav. Pharm. 29, 140–151. https://doi.org/10.1097/FBP.0000000000000383.
+Zhang, D., Shen, X., Qi, X., 2016. Resting heart rate and all-cause and cardiovascular mortality in the general population: a meta-analysis. CMAJ Can. Med. Assoc. J. 188, E53 https://doi.org/10.1503/CMAJ.150535.
+Zhou, X., Ma, Z., Zhang, L., Zhou, S., Wang, J., Wang, B., Fu, W., 2016. Heart rate variability in the prediction of survival in patients with cancer: A systematic review and meta-analysis. J. Psychosom. Res. 89 https://doi.org/10.1016/j. jpsychores.2016.08.004, 20–5.
+
+21
+

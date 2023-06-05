@@ -1,0 +1,959 @@
+1972]
+
+187
+
+Regression Models and Life-Tables
+
+By D. R. Cox
+Imperial College, London
+[Read before the ROYAL STATISTICAL SOCIETY, at a meeting organized by the Research Section, on Wednesday, March 8th, 1972, Mr M. J. R. HEALY in the Chair]
+
+SUMMARY
+The analysis of censored failure times is considered. It is assumed that on each individual are available values of one or more explanatory variables. The hazard function (age-specific failure rate) is taken to be a function of the explanatory variables and unknown regression coefficients multiplied by an arbitrary and unknown function of time. A conditional likelihood is obtained, leading to inferences about the unknown regression coefficients. Some generalizations are outlined.
+
+Keywords: LIFE TABLE; HAZARD FUNCTION; AGE-SPECIFIC FAILURE RATE; PRODUCT
+LIMIT ESTIMATE; REGRESSION; CONDITIONAL INFERENCE; ASYMPTOTIC THEORY; CENSORED DATA; TWO-SAMPLE RANK TESTS; MEDICAL APPLICATIONS; RELIABILITY THEORY; ACCELERATED LIFE TESTS.
+
+1. INTRODUCTION
+LIFE tables are one of the oldest statistical techniques and are extensively used by medical statisticians and by actuaries. Yet relatively little has been written about their more formal statistical theory. Kaplan and Meier (1958) gave a comprehensive review of earlier work and many new results. Chiang in a series of papers has, in particular, explored the connection with birth-death processes; see, for example, Chiang (1968). The present paper is largely concerned with the extension of the results of Kaplan and Meier to the comparison of life tables and more generally to the incorporation of regression-like arguments into life-table analysis. The arguments are asymptotic but are relevant to situations where the sampling fluctuations are large enough to be of practical importance. In other words, the applications are more likely to be in industrial reliability studies and in medical statistics than in actuarial science. The procedures proposed are, especially for the two-sample problem, closely related to procedures for combining contingency tables; see Mantel and Haenzel (1959), Mantel (1963) and, especially for the application to life tables, Mantel (1966). There is also a strong connection with a paper read recently to the Society by R. and J. Peto (1972).
+We consider a population of individuals; for each individual we observe either the time to "failure" or the time to "loss" or censoring. That is, for the censored individuals we know only that the time to failure is greater than the censoring time.
+Denote by T a random variable representing failure time; it may be discrete or continuous. Let ;;;(t) be the survivor function,
+
+;;;(t) = pr (T~ t)
+
+and let ..\(t) be the hazard or age-specific failure rate. That is,
+
+..\(t) = lim pr(t~ T < t+6.11t ~ T).
+
+(1)
+
+LlHO+
+
+6.t
+
+188
+
+Cox - Regression Models and Life Tables
+
+[No.2,
+
+Note that if T is discrete, then
+
+A(t) = ~ AUj 8(t - uj ) ,
+
+(2)
+
+where 8(t) denotes the Dirac delta function and At = pr(T = tl T~ t). By the product
+
+law of probability §l'(t) is given by the product integral
+
+1-0
+
+r-1
+
+§l'(t) = &{I-A(U)du} = lim II {I-A(Tk)(-Tk+1-Tk)}'
+
+(3)
+
+u=O
+
+k=O
+
+the limit being taken as all Tk+1-Tk tend to zero with 0 = TO < T1 < ... < Tr- 1 < Tr = t.
+If A(t) is integrable this is
+
+exp{ - IA(U)dU} ,
+
+(4)
+
+whereas if A(t) is given by (2), the product integral is
+
+II (I - Au)·
+
+(5)
+
+Uj<1
+
+If the distribution has both discrete and continuous components the product integral is a product of factors (4) and (5).
+
+2. THE PRODUCT-LIMIT METHOD
+Suppose observations are available on no independent individuals and, to begin with, that the failure times are identically distributed in the form specified in Section 1. Let n individuals be observed to failure and the rest be censored. The rather strong assumption will be made throughout that the only information available about the failure time of a censored individual is that it exceeds the censoring time. This assumption is testable only if suitable supplementary information is available. Denote the distinct failure times by
+
+t(1) < t(2) < ... < t(k)'
+
+(6)
+
+Further let m(i) be the number of failure times equal to t(i), the multiplicity of t(i);
+of course ~ m(i) = n, and in the continuous case k = n, m(i) = 1.
+The set of individuals at risk at time t-O is called the risk set at time t and denoted
+8i(t); this consists of those individuals whose failure or censoring time is at least t.
+Let r(i) be the number of such individuals for t = t(i). The product-limit estimate of
+the underlying distribution is obtained by taking estimated conditional probabilities that agree exactly with the observed conditional frequencies. That is,
+
+f s«: :\(t) = m(i)
+
+t(i)).
+
+(7)
+
+i=1 r(i)
+
+Correspondingly,
+
+!J;(t) = I~{l- :\(u)du} = II {l- m(i)}.
+
+(8)
+
+u=O
+
+tw<1
+
+r(i)
+
+For uncensored data this is the usual sample survivor function; some of the asymptotic properties of (8) are given by Kaplan and Meier (1958) and by Efron (1967) and can be used to adapt to the censored case tests based on sample cumulative distribution function.
+The functions (7) and (8) are maximum-likelihood estimates in the family of all possible distributions (Kaplan and Meier, 1958). However, as in the uncensored case,
+
+1972]
+
+Cox - Regression Models and Life Tables
+
+189
+
+this property is of limited importance and the best justification is essentially (7). The estimates probably also have a Bayesian interpretation involving a very "irregular" prior.
+If the class of distributions is restricted, either parametrically or by some such condition as requiring A(t) to be monotonic or smooth, the maximum-likelihood estimates will be changed. For the monotone hazard case with uncensored data, see Grenander (1956). The smoothing of estimated hazard functions has been considered by Watson and Leadbetter (1964a, b) for the uncensored case.
+
+3. REGRESSION MODELS
+Suppose now that on each individual one or more further measurements are available, say on variables Z1' .•. , zp' We deal first with the notationally simpler case when the failure-times are continuously distributed and the possibility of ties can be ignored. For the jth individual let the values of Z be Zj = (Z1j' ••. , Zpj)' The z's may be functions of time. The main problem considered in this paper is that of assessing the relation between the distribution of failure time and z. This will be done in terms of a model in which the hazard is
+
+A(t; z) = exp (z~) Ao(t),
+
+(9)
+
+where ~ is a p x 1 vector of unknown parameters and Ao(t) is an unknown function
+giving the hazard function for the standard set of conditions z = O. In fact (z~) can
+be replaced by any known function h(z, ~), but this extra generality is not needed at
+this stage. The following examples illustrate just a few possibilities.
+Example 1. Two-sample problem. Suppose that there is just one Z variable, p = 1,
+and that this takes values 0 and 1, being an indicator variable for the two samples.
+Then according to (9) the hazards in samples 0 and 1 are respectively Ao(t) and tjJAo(t),
+where tjJ = efJ• In the continuous case the survivor functions are related (Lehmann,
+1953) by ~(t) = {~(t)}1fr. There is an obvious extension for the k sample problem.
+Example 2. The two-sample problem; extended treatment. We can deal with more
+complicated relationships between the two samples than are contemplated in Example
+1 by introducing additional time-dependent components into z. Thus if Z2 = tz1,
+where Z1 is the binary variable of Example 1, the hazard in the second sample is
+
+tjJefJ•t Ao(t).
+
+(10)
+
+Of course in defining Z2' t could be replaced by any known function of t; further, several new variables could be introduced involving different functions of t. This provides one way of examining consistency with a simple model of proportional hazards. In fitting the model and often also in interpretation it is convenient to reparametrize (10) in the form
+
+p exp{f]2(t- t*)},
+
+(11)
+
+where t* is any convenient constant time somewhere near the overall mean. This will avoid the more extreme non-orthogonalities of fitting. All the points connected with this example extend to the comparison of several samples.
+Example 3. Two-sample problem with covariate. By introducing into the models of Examples 1 and 2 one or more further Z variables representing concomitant variables, it is possible to examine the relation between two samples adjusting for the presence of concomitant variables.
+
+190
+
+Cox - Regression Models and Life Tables
+
+[No.2,
+
+Example 4. Regression. The connection between failure-time and regressor variables can be explored in an obvious way. Note especially that by introducing functions of t, effects other than constant multiplication of the hazard can be included.
+4. ANALYSIS OF REGRESSION MODELS
+There are several approaches to the analysis of the above models. The simplest is to assume Ao(t) constant, i.e. to assume an underlying exponential distribution; see, for example, Chernoff (1962) for some models of this type in the context of accelerated life tests. The next simplest is to take a two-parameter family of hazard functions, such as the power law associated with the Weibull distribution or the exponential of a linear function of t. Then standard methods such as maximum likelihood can be used; to be rigorous extension of the usual conditions for maximumlikelihood formulae and theory would be involved to cover censoring, but there is little doubt that some such justification could be given. This is in many ways the most natural approach but will not be explored further in the present paper. In this approach a computationally desirable feature is that both probability density and survivor function are fairly easily found. A simple form for the hazard is not by itself particularly advantageous, and models other than (9) may be more natural. For a normal theory maximum-likelihood analysis of factorial experiments with censored observations, see Sampford and Taylor (1959), and for the parametric analysis of response times in bioassay, see, Sampford (1954).
+Alternatively we may restrict "o(t) qualitatively, for example by assuming it to be monotonic or to be a step function (a suggestion of Professor J. W. Tukey). The latter possibility is related to a simple spline approximation to the log survivor function.
+In the present paper we shall, however, concentrate on exploring the consequence of allowing Ao(t) to be arbitrary, main interest being in the regression parameters. That is, we require our method of analysis to have sensible properties whatever the form of the nuisance function Ao(t). Now this is a severe requirement and unnecessary in the sense that an assumption of some smoothness in the distribution ~(t) would be reasonable. The situation is parallel to that arising in simpler problems when a nuisance parameter is regarded as completely unknown. It seems plausible in the present case that the loss of information about ~ arising from leaving "o(t) arbitrary is usually slight; if this is indeed so the procedure discussed here is justifiable as a reasonably cautious approach to the study of~. A major outstanding problem is the analysis of the relative efficiency of inferences about ~ under various assumptions about Ao(t).
+The general attitude taken is that parametrization of the dependence on z is required so that our conclusions about that dependence are expressed concisely; of course any form taken is provisional and needs examination in the light of the data. So far as the secondary features of the system are concerned, however, it is sensible to make a minimum of assumptions leading to a convenient analysis, provided that no major loss of efficiency is involved.
+5. A CONDITIONAL LIKELIHOOD
+Suppose then that Ao{t) is arbitrary. No information can be contributed about ~ by time intervals in which no failures occur because the component "o(t) might conceivably be identically zero in such intervals. We therefore argue conditionally on the set {t<il} of instants at which failures occur; in discrete time we shall condition
+
+1972]
+
+Cox - Regression Models and Life Tables
+
+191
+
+also on the observed multiplicities {m(i)}. Once we require a method of analysis holding for all ,\(t), consideration of this conditional distribution, seems inevitable.
+For the particular failure at time t(i), conditionally on the risk set :?£(t(i), the probability that the failure is on the individual as observed is
+
+exp {Z(il (3}/ Z; exp {z(l) (3}.
+
+(12)
+
+leSl<tw)
+
+Each failure contributes a factor of this nature and hence the required conditional log likelihood is
+
+L«(3) = f z(i) (3 - flog [ Z; exp {Z(l) (3}].
+
+(13)
+
+i=l
+
+i=l
+
+leS'l(tw)
+
+e. Direct calculation from (13) gives for YJ = 1, ... ,p
+
+U;«(3) =
+
+oL«(3) of3g =
+
+ik~/Z(gil- A(gil«(3)},
+
+(14)
+
+where
+
+(15)
+
+the sum being over I E:?£(t(i)' That is, A(gil«(3) is the average of Zg over the finite population :?£(t(i), using an "exponentially weighted" form of sampling. Similarly
+
+(16)
+
+where
+
+C(g'1il«(3) = {Z; zglz'11exp (zl(3)/Z; exp (ZI (3)}- A (gi)«(3) A ('1d(3)
+
+(17)
+
+is the covariance of Zg and z'1 in this form of weighted sampling. To calculate the expected value of (16) it would be necessary to know the times at
+which individuals who failed would have been censored had they not failed. This information would often not be available and in any case might well be thought irrelevant; this point is connected with difficulties of conditionality at the basis of a sampling theory approach to statistics (Pratt, 1962). Here we shall use asymptotic arguments in which (16) can be used directly for the estimation of variances, (3 being replaced by a suitable estimate. For a rigorous justification, assumptions about the censoring times generalizing those of Breslow (1970) would be required. It would not be satisfactory to assume that the censoring times are random variables distributed independently of the z's. For instance in the two-sample problem censoring might be much more severe in one sample than in the other.
+Maximum-likelihood estimates of (3 can be obtained by iterative use of (14) and (16) in the usual way. Significance tests about subsets of parameters can be derived in various ways, for example by comparison of the maximum log likelihoods achieved. Relatively simple results can, however, be obtained for testing the global null hypo-
+thesis, (3 = O. For this we treat U(O) as asymptotically normal with zero mean vector
+and with covariance matrix f(O). That is, the statistic
+
+{U(O)}T {f(O)}-l{U(O)}
+
+(18)
+
+192
+
+Cox - Regression Models and Life Tables
+
+[No.2,
+
+has, under the null hypothesis, an asymptotic chi-squared distribution with p degrees of freedom.
+We have from (14) and (15) that
+
+(19)
+
+where A(5il = A C5i l O) is the mean of Z5 over &l(t(i»). Further, from (16),
+
+k
+
+.1i'l(0) = ~ C(5'1il>
+
+(20)
+
+t=l
+
+where C(5'1i) = C(5'1i)(0) is the covariance of Z5 and z'I in the finite population &l(t(i»).
+The form of weighted sampling associated with general (3 has reduced to random
+sampling without replacement.
+
+6. ANALYSIS IN DISCRETE TIME
+Unfortunately it is quite likely in applications that the data will be recorded in a form involving ties. If these are small in number a relatively ad hoc modification of the above procedures will be satisfactory. To cover the possibility of an appreciable number of ties, we generalize (9) formally to discrete time by
+
+.\(t; z) dt
+
+"1Io(t) dt
+
+1- .\(t; z) dt = exp (z(3) 1- -'oCt) dt'
+
+(21)
+
+In the continuous case this reduces to (9); in discrete time .\(t; z) dt is a non-zero probability and (21) is a logistic model.
+The typical contribution (12) to the likelihood now becomes
+
+exp {S(i) (3}/ ~ exp {sm(3},
+
+(22)
+
+leSf(tw;mll)
+
+where s(i) is the sum of z over the individuals failing at t(i) and the notation in the denominator means that the sum is taken over all distinct sets of m(i) individuals drawn from &l(t(i»).
+Thus the full conditional log likelihood is
+
+f s(i) (3 - flog [ ~ exp{Sm(3}].
+
+i=l
+
+i=l
+
+le.!lf(tw;mw)
+
+The derivatives can be calculated as before. In particular,
+
+k
+
+UlO) = ~{sC5i)-m(i)A(5i)}'
+
+(23)
+
+i=l
+
+.A (0) = f m(i){r(i)-m(i)} c, c5'1 i=l {r(i)-I} 5'1
+
+(24)
+
+Note that (24) gives the exact covariance matrix when the observations z(5i) and
+the totalss(5i) are drawn randomly without replacement from thejixedfinite populations &l(tll»), ... ,8f(tCk »)' In fact, however, the population at one time is influenced by the outcomes of the "trials" at previous times.
+
+1972]
+
+Cox - Regression Models and Life Tables
+
+193
+
+7. THE TWO-SAMPLE PROBLEM
+As an illustration, consider the two-sample problem with the proportional hazard
+model of Section 3, Example I. Here p = 1 and we omit the first suffix on the indicator
+variable. Then
+
+k
+
+U(O) =nl -
+
+~ m(i) A(i), i=l
+
+(25)
+
+f J(O) = m(i{~li) -17li)} Ali){1- A (i)},
+
+(26)
+
+i=l li)-
+
+where Ali) is the proportion of the risk population fJi(tli» that have z = 1, i.e. belong
+to sample 1, and n1 is the total number of failures in sample 1. An asymptotic twosample test is thus obtained by treating
+
+U(O)NJ(O)
+
+(27)
+
+as having a standard normal distribution under the null hypothesis. This is different from the procedure of Gehan who adapted the Wilcoxon test to censored data (Gehan, 1965; Efron, 1967; Breslow, 1970). The test has been considered in some detail by Peto and Peto (1972).
+The test (27) is formally identical with that obtained by setting up at each failure point a 2 x 2 contingency table (sample 1, sample 2) (failed, survived). To test for the presence of a difference between the two samples the information from the separate tables can then be combined (Cochran, 1954; Mantel and Haenzel, 1959; Mantel, 1963). The application of this to life tables is discussed especially by Mantel (1966). Note, however, that whereas the test in the contingency table situation is, at least in principle, exact, the test here is only asymptotic, because of the difficulties associated with specification of the stopping rule. Formally the same test was given by Cox (1959) for a different life-table problem where there is a single sample with two types of failure and the hypothesis under test concerns the proportionality of the hazard function for the two types.
+When there is a non-zero value of (3, the "weighted" average of a single observation from the risk population fJi(tli» is
+
+A li)I\Rt') -_
+
+1-
+
+eP Ali)
+Ali> +ePAli)
+
+(28)
+
+and the maximum-likelihood equation U($) = 0 gives, when all failure times are
+distinct,
+
+~
+
+ePA(il.
+
+i"=-' ll- Ali) +eP Ali) = nl •
+
+(29)
+
+S If is thought to be close to some known constant, it may be useful to linearize (29). S In particular, if is small, we have as an approximation to the maximum-likelihood
+
+estimate
+
+So = (nl - ~ Ali»/~ Ali){1- A (i)}.
+
+The procedures of this section involve only the ranked data, i.e. are unaffected by an arbitrary monotonic transformation of the time scale. Indeed the same is true for any of the results in Section 4 provided that the z's are not functions of time. While
+
+8
+
+194
+
+Cox - Regression Models and Life Tables
+
+[No.2,
+
+the connection with the theory of rank tests will not be explored in detail, it is worth
+examining the form of the test (27) for uncensored data with all failure times distinct.
+For this, let the failure times in sample 1 have ranks C1 < C2 < '.' < cn , in the ranking of the full data. At the ith largest observed failure time, individuals with ranks n, n-l, ,." i are at risk, so that
+
+1 n,
+
+A(i) = , 1 "2:.H(CI-i),
+
+(30)
+
+n - l + 1=1
+
+where H(x) is the unit Heaviside function,
+
+1 (x~O),
+
+H(x) = ( 0 (x-c O).
+
+(31)
+
+Thus, by (25),
+
+n
+= n1 - "2:. en cl, 1=1
+
+(32)
+
+where e's are the expected values of the order statistics in a random sample of size n from a unit exponential distribution. The test based on (32) is asymptotically fully efficient for the comparison of two exponential distributions (Savage, 1956; Cox, 1964). Further, by (26),
+
+(33)
+
+where
+
+Cj
+
+1
+
+vn CI
+
+=
+
+"2:. ( ,
+i=1 n-l+
+
+1)2
+
+(34)
+
+is the variance of an exponential order statistic.
+Here the test statistic is, under the null hypothesis, a constant minus the total of a
+random sample of size n1 drawn without replacement from the finite population {en1, ... , enn}' The exact distribution can in principle be obtained and in particular it can be shown that
+
+E{U(O)} = 0, var{U(O)} = n1(n-n1)(n-en n ) .
+
+(35)
+
+n(n-l)
+
+There is not much point in this case in using the more complicated asymptotic formula (33), especiallyas fairly simple more refined approximations to the distribution of the test statistic are available (Cox, 1964). It can easily be verified that
+
+E{.Jf(O)} '" var{ U(O)}.
+
+(36)
+
+8. ESTIMATION OF DISTRIBUTION OF FAILURE-TIME
+Once we have obtained the maximum-likelihood estimate of fl, we can consider
+the estimation of the distribution associated with the hazard (10) either for z = 0, or
+for some other given value of z. Thus to estimate >.o(t) we need to generalize (7).
+
+1972]
+
+Cox - Regression Models and Life Tables
+
+195
+
+To do this we take "o(t) to be identically zero, except at the points where failures have occurred, and carry out a separate maximum-likelihood estimation at each such failure point. For the latter it is convenient to write the contribution to \(t) at t(i) in the form
+
+7T(i) exp ( - ~z(i»
+
+"(
+
+)
+
+1- 7T(i) + 7T(i) exp ( - .r...l..z- (i)) 0 t - tli) ,
+
+where z(i) is an arbitrary constant to be chosen; it is useful to take z(i) as approximately the mean in the relevant risk set. The maximum-likelihood estimate of 7T(i) can then be shown to satisfy
+
+.... _
+7T(i) -
+
+m(i) r(i) -
+
+?T(i)(1-?T(i»
+r(i)
+
+jER~W) 1-?T(eix)p+{?~T((zi)je-xzpli{)~)(}Zj-1- Zli))}'
+
+(37)
+
+which can be solved by iteration. The suggested choice of z(i) is designed to make the second term in (37) small. Note that in the single-sample case, the second term is identically zero. Once (37) is solved for all i, we have by the product integral formula
+
+~(t) = n {I
+
+..?T(i) e:p ( - ~Z(i»~ _ }.
+
+(38)
+
+tw<t 1-7T(i) +7T(i) exp (- ~Z(i»
+
+For an estimate at a given non-zero z, replace exp (- ~Z(i» by exp{~(z-Z(i»}. Alternative simpler procedures would be worth having (Mantel, 1966).
+
+9. BIVARIATE LIFE TABLES
+
+We now consider briefly the extension oflife-table arguments to multivariate data. Suppose for simplicity that there are two types of failure time for each individual represented by random variables T1 and T2• For instance, these might be the failuretimes of two different but associated components; observations may be censored on neither, one or both components. For analogous problems in bioassay, see Sampford (1952).
+The joint distribution can be described in terms of hazard functions
+(t \ AlO(t), A20(t), A21 u), A12(t \u), where
+
+I\\po(t) = ~1ti·-m>o+pr(t~Tp<t+~tuAltt~T1,t~T2) (P = 1"2) 1\\21(tIu) = 1r·m pr(t~T2<t+~~t\t~T2,T1=U) (u < t),
+
+)
+
+(39)
+
+M-.O+
+
+t
+
+with a similar definition for A12(t Iu). It is easily shown that the bivariate probability
+density function j'(r., t2) is given by
+
+Jo Jt [ p.--{) f(t1' t2) = exp -
+
+(t,-o]
+{AlO(U)+A20(U)}du- +O A21(U! t1)du A10(t1)A21(t2\ t1), (40)
+
+1
+
+for t2~ t1, with again an analogous expression for t2~ t1. It is fairly easy to show formally that a necessary and sufficient condition for the independence of T1 and T2 is
+
+(41)
+
+196
+
+Cox - Regression Models and Life Tables
+
+[No.2,
+
+as is obvious on general grounds. Note also that if ff(tl' t2) is the joint survivor function
+
+,\ (t) = _ _I_[8ff(t, U)]
+
+,\ (tl u) = _ 82ff(t, U)j8ff(t, u).
+
+(42)
+
+10
+
+ff(t, t) 8t U=t' 12
+
+8t 8u
+
+8u
+
+Dependence on further variables z can be indicated in the same way as for (11). The simplest model would have the same function ofz multiplying all four hazard functions, although this restriction is not essential.
+Estimation and testing would in principle proceed as before, although grouping of the conditioning u variable seems necessary in the parts of the analysis concerning
+the function '\12(tl u) and '\21(tl u). Further generalizations which will not, however, be explored here are to problems
+in multidimensional time and to problems connected with point processes (Cox and Lewis, 1972; Cox, 1972).
+
+10. AN EXAMPLE
+To illustrate some of the above results, it is convenient to take data of Freireich et al. used by Gehan (1965) and several subsequent authors. Table 1 gives the ordered times for two samples of individuals; censored values are denoted with asterisks. Table 2 outlines the calculation of the simple test statistic U(O) and its asymptotic variance. The failure instants and their multiplicities mli) are listed; Ali) is the proportion of the relevant risk population in sample 1.
+
+TABLE 1
+Times of remission (weeks) of leukemia patients (Gehan, 1965, from Freireich et al.)
+
+Sample 0 (drug 6-MP) 6*,6,6,6,7,9*, 10*, 10, 11*, 13, 16, 17*, 19*,20*,22,23,25*, 32*, 32*, 34*, 35*
+
+Sample 1 (control)
+
+1, 1, 2, 2, 3, 4, 4, 5, 5, 8, 8, 8, 8, 11, 11, 12, 12, 15, 17, 22, 23
+
+* Censored.
+
+The value of U(O) = n1 - ~ mw A(i) is 10·25 with an asymptotic standard error
+~..F(O) of 2·50. The critical ratio of just over 4 compares with about 3·6 for the generalized Wilcoxon test of Gehan (1965). The overwhelming significance of the
+P difference is in line with one's qualitative impression of the data. The technique used to find was direct computation of the log likelihood as a function of {3 and of a further parameter y to be described in a moment. This, while not the best way of getting maximum-likelihood estimates on their own, is useful in enabling various approximate tests and confidence regions to be found in a unified manner.
+To examine possible departures from the simple model of proportional hazards, the procedure of Example 2 of Section 3 was followed, taking as in (11) the hazard in sample 1 to be a time-dependent multiple of that in sample 0 of the form
+
+exp {(3 +y(t-IO)},\o(t);
+
+(43)
+
+1972]
+
+Cox - Regression Models and Life Tables
+
+197
+
+the arbitrary constant lOis inserted to achieve approximate orthogonality of estimation
+of the two parameters, being chosen as a convenient value in the centre of the range.
+A test of the global null hypothesis (3 = y = 0 could be done via the test statistic
+(20) but is not very relevant here. Instead the log likelihood (15) was computed
+
+TABLE 2 Main quantities for the test of the null hypothesis for the data of Table 1
+
+"Failure" time Sample 0 Sample 1
+
+Risk population
+
+Multiplicity
+
+No. in
+
+No. in
+
+r(il
+
+A(i)
+
+m(il
+
+sample 0 sample 1
+
+23 22 16 13
+10 7 6,6,6
+
+23 22 17
+15
+12, 12 11,11
+8,8,8,8
+5, 5 4,4 3 2,2 1, 1
+
+6
+
+1
+
+7 0·1429
+
+2
+
+7
+
+2
+
+9 0·2222
+
+2
+
+10
+
+3
+
+13 0·2308
+
+1
+
+11
+
+3
+
+14 0·2143
+
+1
+
+11
+
+4
+
+15 0·2667
+
+1
+
+12
+
+4
+
+16 0·2500
+
+1
+
+12
+
+6
+
+18 0·3333
+
+2
+
+13
+
+8
+
+21 0·3810
+
+2
+
+15
+
+8
+
+23 0·3478
+
+1
+
+16
+
+12
+
+28 0·4286
+
+4
+
+17
+
+12
+
+29 0·4138
+
+1
+
+21
+
+12
+
+33 0·3636
+
+3
+
+21
+
+14
+
+35 0·4000
+
+2
+
+21
+
+16
+
+37 0·4324
+
+2
+
+21
+
+17
+
+38 0·4474
+
+1
+
+21
+
+19
+
+40
+
+0·4750
+
+2
+
+21
+
+21
+
+42
+
+0·5000
+
+2
+
+U(O) = n 1 - ~ m(i) Ali) = 10·25;
+
+f(O)
+
+=
+
+~
+
+m(i)
+
+{r(il ~m(iJ
+r(i)-
+
+A
+
+li
+
+l{l
+
+-
+
+AliI}
+
+=
+
+6.2570.
+
+directly for a grid of points in the ({3,y) plane. Note that in (15) the first term is 21{3-28y; for instance, the coefficient - 28 is the sum of the values (t-lO) over the individuals in sample 1. The logarithmic second term is simple for those time points
+at which there is a single completed time, mw = 1; for example corresponding to the
+time 7 there is a term in the log likelihood
+-log (17 + 12eP-3y) ,
+the risk set at this time consisting of 17 individuals from sample 0 and 12 from sample 1. For points of higher multiplicity, the situation is more complicated, because all possible samples of size mw from the risk population have to be considered; fortunately all the samples have the same totals of the two relevant variables. For example, for the point 6, of multiplicity 3, we have to consider the total of all samples of size 3 drawn from the relevant risk population and this leads to a term
+
+198
+
+Cox - Regression Models and Life Tables
+
+[No.2,
+
+To avoid unduly large numbers, it might often be convenient to divide each term in the logarithm by a suitable constant, but this was not done in the present case.
+S The maximum-likelihood estimate of (3 when y = 0 is = 1·65. Thus the ratio
+of the hazards is estimated as eP = 5·21; if the distributions were exponential, this would be the ratio of means. Confidence limits for (3, subject to y = 0, can be obtained
+either by computing the second derivative ./(S) or directly from the log likelihood. With the latter method, approximate 95 per cent confidence limits for (3 of (0'78,2'60)
+are obtained from those values for which the log likelihood is within t x 1.962 = 1·92
+of its maximum value. An alternative test of the null hypothesis (3 = 0 is obtained
+by comparing the log likelihood at (3 = 0 and (3 = S; the difference o£1·43 corresponds
+to chi-squared of 14·9 and hence to a standardized deviate of 3'86, in reasonable agreement with test based on U(O).
+The inclusion of the extra parameter y provides a test of the adequacy of the assumption of simply related hazards. In fact the additional log likelihood achieved by the extra parameter, about 0,01, is small, even suspiciously small. Confidence limits for yare, at the 95 per cent level, approximately - 0·12 and 0·14. Thus any marked departure from the proportional hazard model is not likely to be a smooth monotonic change with t. Further details of the likelihood function will not be given here. It is, however, quadratic to a close approximation and the particular parametrization chosen achieved almost exact orthogonality.
+Finally, we consider graphical techniques, which are likely to be particularly useful for data more extensive than the present set. A first step is to obtain unconditional estimates of the separate survivor functions by (8). For sample 1 this gives the ordinary sample survivor function, there being no censoring. For sample 0, we get the product limit estimate. Now consider estimation of the survivor functions under the model of proportional hazards; the constrained maximum-likelihood estimates of the survivor functions in the two samples are given by (37) and (38).
+Iterative solution of the 17 equations of the form (37) took in all t sec. on the
+CDC 6600; Z was chosen separately for each risk set so that efrz equalled the mean of
+ePz over the risk set in question.
+Fig. 1 shows the four estimated functions. Discrepancy with the model of proportional hazards would be shown by clear departures of the conditional from the unconstrained survivor curves. More elaborate versions of this analysis are certainly possible, in which, for instance, plots are made on a non-linear scale, or in which residuals from the constrained fit are formed, or in which the analysis is presented in tabulated rather than graphical form. The graphical analysis confirms the consistency of the data with a model of proportional hazards.
+Only a very brief note will be added here about alternative approaches to the analysis. If exponential distributions are assumed the relevant statistics are the total periods at risk, namely 359 weeks and 182 weeks, and the total numbers of failures 9 and 22 respectively. Approximate 95 per cent confidence limits for the log ratio of means can be obtained via the F distribution with (18,44) degrees of freedom. They are 0·83 and 2,43, as compared with 0·78 and 2·60 from the earlier analysis.
+An analysis with a step function for t\(.) is barely feasible with the limited amount of data available. The procedure is to divide the time scale into cells, for instance 0-10 weeks and 11-20 weeks. Numbers of failures and periods at risk are calculated for each cell and hence ratios of rates derived. Provided they are consistent for the
+
+1972]
+
+Cox - Regression Models and Life Tables
+
+199
+
+different cells the ratios can then be combined into a single summary statistic with confidence limits. In the present example this approach does not lead to essentially different conclusions.
+
+1'0
+1
+survivor
+function
+
+0'8
+x
+
+x
+
+x
+X
+
+0'4
+
+x
+
+x
+X
+
+o
+8_
+
+X
+x
+
+X X X
+
+x
+
+X
+
+10
+
+20
+
+30
+
+remission time (weeksl_
+
+FIG. 1. Empirical survivor functions for data of Table 1. Product limit estimate, ------, sample 0 (6-MP); - - , sample 1 (control). Estimate constrained by proportionality: 0, sample 0; x , sample 1. For clarity, the constrained estimates are indicated by the left ends of the defining horizontal lines.
+
+200
+
+Cox - Regression Models and Life Tables
+
+[No.2,
+
+A third possibility is the use of the Weibull distribution. If we assume a common index in the two samples we may fit by maximum-likelihood distribution functions in the form
+I-exp{ -(pX/K)v}, I-exp{ -(KPX)V),
+v The maximum-likelihood estimate of the index is = 1·3 and the maximized log-
+likelihoods show that this is just significantly different from v = 1·0 at the 5 per cent
+level. The explanation of the departure probably lies largely in the deficiency of small failure times in sample O. Fitting of different indexes for the two samples has not been attempted. Approximate 95 per cent confidence limits for the log ratio of means can be derived in the usual way from the maximized log likelihoods and are 0·71 and 2·10; the maximum-likelihood estimate is log(~2) = 1·31.
+The data have been analysed in some detail to illustrate a number of relevant points. Many applications are likely to be more complicated partly because of larger sample sizes and partly because of the presence of a number of explanatory variables.
+
+II. PHYSICAL INTERPRETATION OF MODEL
+The model (9), which is the basis of this paper, is intended as a representation of the behaviour of failure-time that is convenient, flexible and yet entirely empirical. One of the referees has, however, suggested adding some discussion of the physical meaning of the model and in particular of its possible relevance to accelerated life testing. Suppose in fact that there is a variable s, called "stress", and that life tests are carried out at various levels of s. For simplicity we suppose that s is one-dimensional and that each individual is tested at a fixed level of s. The usual idea is that
+we are really interested in some standard stress, say s = 1, and which to use other
+values of s to get quick laboratory results as a substitute for a predictor of the expensive results of user trials.
+Now in order that the distribution of failure-time at one level of stress should be related to that at some other level, the relationship being stable under a wide range of conditions, it seems necessary that the basic physical process of failure should be common at the different stress levels; and this is likely to happen only when there is a single predominant mode of failure. One difficulty of the problem is that of knowing enough about the physical process to be able to define a stress variable, i.e. a set of test conditions, with the right properties.
+One of the simplest models proposed for the effect of stress on the distribution of failure-time is to assume that the mechanism of failure is identical at the various levels of s but takes place on a time-scale that depends on s. Thus if .fF(t; s) denotes the survivor function at stress s, this model implies that
+
+.fF(t; s) = .fF{g(s)t; I},
+
+(45)
+
+where g(s) is some function of s with g(l) = I. Thus the hazard function at stress
+sis
+
+g(s) -\{g(s) t},
+
+(46)
+
+where -\(.) is the hazard at s = I. In particular if g(s) = sfJ and if z = logs this gives
+
+efJz \,(efJzt).
+
+(47)
+
+1972]
+
+Cox - Regression Models and Life Tables
+
+201
+
+This is similar to but different from the model (9) of this paper. A special set of conditions where (47) applies is where the individual is subject to a stream of shocks of randomly varying magnitudes until the cumulative shock exceeds some timeindependent tolerance. If, for instance, all aspects of the process except the rate of incidence of shocks are independent of s, then (45) will apply.
+If, however, the shocks are non-cumulative and failure occurs when a rather high threshold is first exceeded, failures occur in a Poisson process with a rate depending on s. A special model of this kind often used for thermal stress is to suppose that failure corresponds to the excedence of the activation energy of some process; then
+by the theory of rate processes (47) can be used with -\(.) = 1 and z equal to the
+reciprocal of absolute temperature. As a quite different model suppose that some process of ageing goes on indepen-
+dently of stress. Suppose further that the conditional probability of failure at any time is the product of an instantaneous time-dependent term arising from the ageing process and a stress-dependent term; the model is non-cumulative. Then the hazard
+is
+
+h(s) -\(t),
+
+(48)
+
+where h(s) is some function of stress. Again if h(s) = sP, the model becomes
+
+ePz -\(t)
+
+(49)
+
+exactly that of (9), where again -\(t) is the hazard function at s = 1, z = O. One
+special example of this model is rather similar to that suggested for (46), except that the critical tolerance varies in a fixed way with time and the shocks are non-cumulative, the rate of incidence of shocks depending on s. For another possibility, see Shooman (1968).
+If hazard or survivor functions are available at various levels of s we might attempt an empirical discrimination between (46) and (48). Note, however, that if we have a
+Weibull distribution at s = 1, "-0(.) is a power function and (46) and (48) are identical.
+Then the models cannot be discriminated from failure-time distributions alone. That is, if we did want to make such a discrimination we must look for situations in which the distributions are far from the Weibull form. Of course the models outlined here can be made much more specific by introducing explicit stochastic processes or physical models. The wide variety of possibilities serves to emphasize the difficulty of inferring an underlying mechanism indirectly from failure times alone rather than from direct study of the controlling physical processes.
+As a basis for rather empirical data reduction (9), possibly with time-dependent exponent, seems flexible and satisfactory.
+
+ACKNOWLEDGEMENTS
+I am grateful to the referees for helpful comments and to Professor P. Armitage, Mr P. Fisk, Dr N. Mantel, Professors J. W. Tukey and M. Zelen for references and constructive suggestions.
+
+REFERENCES
+BRESLOW, N. (1970). A generalized Kruskal-Wallis test for comparing samples subject to unequal patterns of censoring. Biometrika, 57, 579-594.
+CHERNOFF, H. (1962). Optimal accelerated life designs for estimation. Technometrics, 4,381-408. CHIANG, C. L. (1968). Introduction to Stochastic Processes in Biostatistics. New York: Wiley.
+
+202
+
+Discussion on Professor Cox's Paper
+
+[No.2,
+
+COCHRAN, W. G. (1954). Some methods for strengthening the common X2 tests. Biometrics, 10, 417-451.
+Cox, D. R. (1959). The analysis of exponentially distributed life-times with two types of failure. J. R. Statist. Soc. B, 21, 411-421.
+- - (1964). Some applications of exponential ordered scores. J. R. Statist. Soc. B, 26, 103-110. - - (1972). The statistical analysis of dependencies in point processes. In Symposium on Point
+Processes (P. A. W. Lewis, ed.), New York: Wiley (to appear). Cox, D. R. and LEWIS, P. A. W. (1972). Multivariate point processes. Proc. 6th Berkeley Symp,
+(to appear). EFRON, B. (1967). The two sample problem with censored data. Proc. 5th Berkeley Symp., 4,
+831-853. GEHAN, E. A. (1965). A generalized Wilcoxon test for comparing arbitrarily single-censored
+samples. Biometrika, 52, 203-224. GRENANDER, U. (1956). On the theory of mortality measurement, I and II. Skand. Akt., 39,
+90--96, 125-153. KAPLAN, E. L. and MEIER, P. (1958). Nonparametric estimation from incomplete observations.
+J. Am. Statist. Assoc., 53, 457-481. LEHMANN, E. L. (1953). The power of rank tests. Ann. Math. Statist., 24, 23-43. MANTEL, N. (1963). Chi-square tests with one degree of freedom: extensions of the Mantel-
+Haenzel procedure. J. Am. Statist. Assoc., 58, 690--700. - - (1966). Evaluation of survival data and two new rank order statistics arising in its con-
+sideration. Cancer Chemotherapy Reports, 50, 163-170. MANTEL, N. and HAENZEL, W. (1959). Statistical aspects of the analysis of data from retro-
+spective studies of disease. J. Nat. Cancer Inst., 22, 719-748. PETO, R. and PETO, J. (1972). Asymptotically efficient rank invariant test procedures. J. R.
+Statist. Soc. A 135, 185-206. PRATT, J. W. (1962). Contribution to discussion of paper by A. Birnbaum. J. Am. Statist. Assoc.,
+57, 314-316. SAMPFORD, M. R. (1952). The estimation of response-time distributions, II: Multi-stimulus
+distributions. Biometrics, 8, 307-369. - - (1954). The estimation of response-time distribution, III: Truncation and survival.
+Biometrics, 10, 531-561. SAMPFORD, M. R. and TAYLOR, J. (1959). Censored observations in randomized block experi-
+ments. J. R. Statist. Soc. B, 21, 214-237. SAVAGE, I. R. (1956). Contributions to the theory of rank order statistics-the two-sample case.
+Ann. Math. Statist., 27, 590--615. SHOOMAN, M. L. (1968). Reliability physics models. IEEE Trans. on Reliability, 17, 14-20. WATSON, G. S. and LEADBETTER, M. R. (1964a). Hazard analysis, I. Biometrika, 51,175-184. WATSON, G. S. and LEADBETTER, M. R. (1964b). Hazard analysis, II. Sankhyii, A, 26, 101-116.
+
+DISCUSSION ON PROFESSOR Cox'S PAPER
+Professor F. DOWNTON (University of Birmingham): Professor Cox has given us a paper which is characteristically both elegant and useful. One can only regret that it is probably true that, as he says, "the applications are more likely to be in industrial reliability studies and in medical statistics than in actuarial science". Benjamin (1972) gave one reason for this when he said that to insurance companies the estimation of future mortality was the least of their problems; the major parameter in life insurance has become the interest rate on invested money. It would appear that insurance companies are, in general, extremely reluctant to take on special short-term risks, where the methods of this paper could be applied. One would have thought, however, that these methods could be used in non-life insurance. Would it be too outrageous to suggest that the recent failures in motor insurance would not have occurred if the companies concerned had read, applied and drawn the correct conclusions from this paper?
+However, I do not wish to discuss practical applications, but to suggest that by giving his paper a somewhat restrictive title Professor Cox has been too modest. He has said that he does not wish to explore the connection of this paper with the theory of rank tests, so I hope he will forgive me if I do. Basically the approach adopted here is a mixture
+

@@ -1,0 +1,3 @@
+<!--
+function MMCinit(){return;}
+//-->

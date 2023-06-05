@@ -1,0 +1,165 @@
+
+/* ::::: null ::::: */
+
+table.content_box_outer_table { padding: 0px 0px 5px 10px; }
+table.content_box_outer_table_in_sidebar_frame { padding: 10px 10px 0px; }
+table.content_box_inner_table { background-color: rgb(240, 240, 240); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 65%; padding: 0px 0px 5px; }
+table.content_box_pdfinframes { padding: 0px 0px 4px; }
+td.content_box_title_highlight { font-family: "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-style: italic; color: rgb(255, 255, 255); background-color: rgb(255, 180, 0); font-size: 120%; font-weight: bold; text-align: center; padding: 1px; vertical-align: middle; }
+td.content_box_title { font-family: "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-style: italic; color: rgb(255, 255, 255); background-color: rgb(130, 130, 130); font-size: 120%; font-weight: bold; padding: 1px; text-align: center; vertical-align: middle; }
+td.content_box_space_between_sections { padding-top: 2px; }
+td.content_box_arrow { text-align: right; padding: 0px 0px 3px 5px; }
+td.content_box_item { text-align: left; vertical-align: top; padding: 0px 5px 3px 3px; }
+td.content_box_pdfinframes_citation_cell { background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0); padding: 3px; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 65%; text-align: left; }
+font.openaccess { font-weight: bold; padding-left: 3px; padding-right: 3px; background-color: rgb(255, 255, 255); }
+font.openaccess_open { color: rgb(0, 0, 0); }
+font.openaccess_access { color: rgb(204, 0, 0); }
+font.openaccess_oa {  }
+.content_box_openaccess_title { text-align: center; white-space: nowrap; background-color: rgb(186, 186, 186); }
+div.referrer-based-search-line { font-family: arial,sans-serif; font-size: 0.75em; background-color: rgb(0, 153, 24); padding: 3px 25px; margin: 0px 4px 5px 0px; }
+div.referrer-based-search-line .search-terms { font-weight: bold; }
+div.referrer-based-search-line .collection-name { font-style: italic; }
+@media screen, print, handheld {
+  .notonscreen { display: none; }
+}
+
+/* ::::: null ::::: */
+
+@media screen, print, handheld {
+  .notonscreen { display: none; }
+}
+
+/* ::::: http://stroke.ahajournals.org.proxy.library.emory.edu/css/styles.css ::::: */
+
+body { margin: 0pt; }
+.aha_container { padding: 5px 10px; }
+.aha_journals a { color: rgb(2, 102, 200); text-decoration: none; }
+.aha_journals a:hover { text-decoration: underline; }
+.aha_journals .advertisement { font-size: 10px; text-align: center; }
+.aha_journals { margin: 0px 0pt; text-align: left; font-family: arial,serif; }
+.aha_journals ul.browseTopics { margin: 0pt; }
+.aha_journals ul.browseTopics li { background: none repeat scroll 0% 0% rgb(240, 244, 247); padding: 3px 3px 3px 8px; margin-bottom: 1px; list-style: none outside none; margin-left: -40px; border-left: 5px solid rgb(195, 212, 222); }
+.aha_journals .browseTopics a { font-size: 11px; text-decoration: none; color: rgb(0, 107, 225); }
+.aha_journals .browseTopics a:hover { text-decoration: underline; }
+.aha_journals .centerColumn { padding: 10px; border-bottom: 2px solid rgb(183, 187, 196); }
+.aha_journals .content { padding: 3px 10px 0px; }
+.aha_journals .contentPadding { padding: 9px; }
+.aha_journals .spotlight_box { padding: 0px 5px 5px 0pt; background: none repeat scroll 0% 0% rgb(223, 223, 223); margin-bottom: 10px; font-size: 12px; }
+.aha_journals .featureBox { padding: 5px; background: none repeat scroll 0% 0% rgb(236, 236, 236); margin-bottom: 40px; }
+.aha_journals .footer { font-size: 11px; text-align: left; padding: 10px; }
+.aha_journals h1 { background: none repeat scroll 0% 0% rgb(223, 223, 223); padding: 3px; font-family: "times new roman"; font-size: 24px; }
+.aha_journals h1 img { margin-left: 30px; }
+.aha_journals h1.article { background: none repeat scroll 0% 0% transparent; padding: 0pt; }
+.aha_journals h2 { background: none repeat scroll 0% 0% rgb(223, 223, 223); padding: 3px; font-family: "times new roman"; font-size: 20px; margin-bottom: 5px; }
+.aha_journals h2 img { vertical-align: middle; margin-left: 10px; }
+.aha_journals .spotlight_box h2 { font-size: 23px; }
+.aha_journals h2.article { background: none repeat scroll 0% 0% transparent; padding: 0pt; }
+.aha_journals h2 .home { float: right; border-left: 2px solid rgb(255, 255, 255); width: 50px; font-size: 12px; padding: 8px 0pt 8px 5px; font-weight: normal; margin-top: -4px; }
+.aha_journals .spotlight_box h2 .home { border-left: 0pt none; }
+.aha_journals h2.featured { background: none repeat scroll 0% 0% rgb(223, 223, 223); padding: 3px 3px 3px 10px; font-size: 13px; color: rgb(77, 88, 110); font-family: arial; }
+.aha_journals h3 { margin: 0pt; font-size: 14px; }
+.aha_journals h3.article { margin-bottom: 5px; }
+.aha_journals h3.date { color: rgb(125, 125, 125); font-weight: bold; }
+.aha_journals h3.spotlight { background: none repeat scroll 0% 0% rgb(218, 228, 240); border: 1px solid rgb(171, 183, 195); padding: 8px; color: rgb(79, 90, 108); font-size: 11px; text-transform: uppercase; text-align: left; margin: 0pt; }
+.aha_journals h3.ttl_left { text-transform: uppercase; padding-left: 3px; color: rgb(71, 87, 100); font-size: 11px; margin: 10px 0pt 0pt 5px; }
+.aha_journals h3.browse { background: none repeat scroll 0% 0% rgb(184, 54, 92); padding: 3px; color: rgb(232, 228, 229); text-transform: uppercase; font-size: 11px; margin: 0pt 0pt 0pt 5px; }
+.aha_journals h4 { margin: 0pt; font-size: 12px; }
+.aha_journals h4.article { font-size: 11px; color: rgb(78, 83, 112); font-weight: normal; }
+.aha_journals img { vertical-align: middle; }
+.aha_journals .intro { color: rgb(78, 83, 112); margin-top: 20px; }
+.aha_journals .leftColumn { background: none repeat scroll 0% 0% rgb(195, 212, 222); padding: 3px 0pt 3px 0px; width: 165px; border-bottom: 2px solid rgb(183, 187, 196); }
+.aha_journals ul.leftNav { margin: 0pt 0pt 10px; list-style: none outside none; }
+.aha_journals ul.leftNav li { margin-bottom: 1px; margin-left: -40px; background: none repeat scroll 0% 0% rgb(218, 228, 240); padding: 2px 0px 2px 6px; color: rgb(81, 92, 110); font-weight: bold; }
+.aha_journals ul.leftNav a { text-decoration: none; font-size: 11px; font-weight: normal; }
+.aha_journals ul.leftNav a:hover { text-decoration: underline; }
+.aha_journals ul.leftNav img { vertical-align: middle; }
+.aha_journals ul.toc_strokeaha { list-style: none outside none; margin: 4px 0pt 0pt -30px; font-size: 11px; }
+.aha_journals ul.toc_strokeaha li { margin-bottom: 3px; background: url('btn_strokeaha.gif@22') no-repeat scroll left center transparent; padding-left: 10px; }
+.aha_journals ul.toc_hypertensionaha { list-style: none outside none; margin: 4px 0pt 0pt -30px; font-size: 11px; }
+.aha_journals ul.toc_hypertensionaha li { margin-bottom: 3px; background: url('btn_hypertensionaha.gif@22') no-repeat scroll left center transparent; padding-left: 10px; }
+.aha_journals ul.toc_circresaha { list-style: none outside none; margin: 4px 0pt 0pt -30px; font-size: 11px; }
+.aha_journals ul.toc_circresaha li { margin-bottom: 3px; background: url('btn_circresaha.gif@22') no-repeat scroll left center transparent; padding-left: 10px; }
+.aha_journals ul.toc_circulationaha { list-style: none outside none; margin: 4px 0pt 0pt -30px; font-size: 11px; }
+.aha_journals ul.toc_circulationaha li { margin-bottom: 3px; background: url('btn_circulationaha.gif@22') no-repeat scroll left center transparent; padding-left: 10px; }
+.aha_journals ul.toc_atvbaha { list-style: none outside none; margin: 4px 0pt 0pt -30px; font-size: 11px; }
+.aha_journals ul.toc_atvbaha li { margin-bottom: 3px; background: url('btn_atvbaha.gif@22') no-repeat scroll left center transparent; padding-left: 10px; }
+.aha_journals .mainTable {  }
+.aha_journals .mainTable td { vertical-align: top; }
+.aha_journals .moreBox { padding: 3px; position: absolute; bottom: 0pt; left: -1px; }
+.aha_journals .navBlock { background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 2px 8px; margin-right: 2px; margin-bottom: 2px; text-align: center; font-size: 11px; float: left; }
+.aha_journals .pic { float: left; margin-right: 5px; }
+.aha_journals .profile span { margin-left: 5px; margin-right: 5px; }
+.aha_journals .right { float: right; margin-left: 2px; }
+.aha_journals .rightColumn { background: none repeat scroll 0% 0% rgb(226, 226, 226); width: 222px; border-left: 2px solid rgb(183, 187, 196); border-bottom: 2px solid rgb(183, 187, 196); padding: 3px; text-align: center; }
+.aha_journals .search { border-left: 1px solid rgb(182, 187, 191); padding-left: 10px; }
+.aha_journals .searchBox { background: none repeat scroll 0% 0% rgb(236, 236, 236); padding: 8px 3px 2px; vertical-align: middle; }
+.aha_journals .searchBox input { vertical-align: middle; }
+.aha_journals .sponsor { font-size: 10px; }
+.aha_journals .sponsor .border { border-left: 1px solid rgb(0, 0, 0); }
+.aha_journals .spotlightContainer { background: none repeat scroll 0% 0% rgb(242, 242, 242); border-left: 1px solid rgb(176, 188, 202); border-right: 1px solid rgb(176, 188, 202); border-bottom: 1px solid rgb(176, 188, 202); margin: 0pt 0pt 20px; text-align: center; padding: 10px 0pt; }
+.aha_journals .sub_nav { background: none repeat scroll 0% 0% rgb(240, 240, 240); padding: 8px 3px 8px 0pt; border-bottom: 1px solid rgb(182, 187, 191); font-weight: bold; font-size: 12px; }
+.aha_journals .sub_nav ul { margin: 0pt 0pt 0pt -40px; list-style: none outside none; }
+.aha_journals .sub_nav ul li { float: left; }
+.aha_journals .sub_nav a { text-decoration: none; padding: 8px 13px; }
+.aha_journals .sub_nav .selected { background: none repeat scroll 0% 0% rgb(218, 228, 237); color: rgb(0, 0, 0); }
+.aha_journals .sub_nav a:hover { background: none repeat scroll 0% 0% rgb(218, 228, 237); text-decoration: none; }
+.aha_journals .sub_nav img { vertical-align: middle; }
+.aha_journals .tn { border: 1px solid rgb(0, 0, 0); }
+.aha_journals table { font-size: 11px; }
+.aha_journals table.centerTable td { padding-bottom: 10px; }
+.aha_journals table.centerTable td.thumbnail { width: 59px; padding: 0pt; }
+.aha_journals .ttl_Journal { background: none repeat scroll 0% 0% rgb(218, 228, 240); border-top: 1px solid rgb(182, 187, 191); border-bottom: 1px solid rgb(182, 187, 191); text-align: right; }
+.aha_journals .ttl_Journal img, .aha_journals .ttl_Journal input { vertical-align: middle; }
+.aha_journals .ttl_journal span { margin-left: 15px; margin-right: 10px; }
+.logoHolder { position: relative; }
+.logoHolder .ttl_ahaJournals { position: absolute; z-index: 50; left: 0px; top: 0px; }
+.logoHolder .ttl_ahaJournals_ad { position: absolute; z-index: 50; left: 0px; top: 0px; }
+.logoHolder .profile { background: none repeat scroll 0% 0% rgb(231, 239, 241); position: absolute; z-index: 50; left: 0px; top: 55px; }
+.aha_journals ul.umbrellaaha li { border-left: 5px solid rgb(195, 212, 222); }
+.aha_journals ul.umbrellaaha a {  }
+.aha_journals ul.circulationaha a, .aha_journals ul.umbrellaaha a, .aha_journals ul.atvbaha a, .aha_journals ul.circresaha a, .aha_journals ul.hypertensionaha a { padding-left: 10px; }
+.aha_journals h2.circulationaha { border-bottom: 1px solid rgb(204, 0, 1); }
+.aha_journals .circulationaha_intro { background: none repeat scroll 0% 0% rgb(240, 240, 240); color: rgb(185, 12, 66); padding: 10px; border: 1px solid rgb(185, 12, 66); font-size: 11px; margin-bottom: 10px; margin-right: 240px; }
+.aha_journals h4.circulationaha_sub { border: 1px solid rgb(186, 9, 63); padding: 3px; }
+.aha_journals h4.circulationaha_sub a, .aha_journals h4.circulationaha_header { color: rgb(186, 9, 63); }
+.aha_journals ul.circulationaha li { border-left: 5px solid rgb(181, 0, 51); }
+.aha_journals ul.circulationaha a {  }
+.aha_journals .circulationaha_box { border-left: 1px solid rgb(180, 10, 59); border-top: 1px solid rgb(180, 10, 59); padding-bottom: 10px; position: relative; }
+.aha_journals .circulationaha_block { border: 1px solid rgb(180, 10, 59); }
+.aha_journals h2.atvbaha { border-bottom: 1px solid rgb(124, 124, 124); }
+.aha_journals .atvbaha_intro { background: none repeat scroll 0% 0% rgb(240, 240, 240); color: rgb(125, 124, 122); padding: 10px; border: 1px solid rgb(125, 124, 122); font-size: 11px; margin-bottom: 10px; margin-right: 240px; }
+.aha_journals ul.atvbaha li { border-left: 5px solid rgb(125, 124, 122); }
+.aha_journals ul.atvbaha a {  }
+.aha_journals .atvbaha_box { border-left: 1px solid rgb(125, 124, 122); border-top: 1px solid rgb(125, 124, 122); padding-bottom: 10px; position: relative; }
+.aha_journals h4.atvbaha_sub { border: 1px solid rgb(125, 124, 122); padding: 3px; }
+.aha_journals h4.atvbaha_sub a, .aha_journals h4.atvbaha_header { color: rgb(125, 124, 122); }
+.aha_journals .atvbaha_block { border: 1px solid rgb(125, 124, 122); }
+.aha_journals h2.circresaha { border-bottom: 1px solid rgb(0, 78, 153); }
+.aha_journals .circresaha_intro { background: none repeat scroll 0% 0% rgb(240, 240, 240); color: rgb(0, 78, 153); padding: 10px; border: 1px solid rgb(0, 78, 153); font-size: 11px; margin-bottom: 10px; margin-right: 240px; }
+.aha_journals ul.circresaha li { border-left: 5px solid rgb(0, 78, 153); }
+.aha_journals ul.circresaha a {  }
+.aha_journals .circresaha_box { border-left: 1px solid rgb(0, 78, 153); border-top: 1px solid rgb(0, 78, 153); padding-bottom: 10px; position: relative; }
+.aha_journals h4.circresaha_sub { border: 1px solid rgb(0, 78, 153); padding: 3px; }
+.aha_journals .circresaha_block { border: 1px solid rgb(0, 78, 153); }
+.aha_journals h4.circresaha_sub a, .aha_journals h4.circresaha_header { color: rgb(0, 78, 153); }
+.aha_journals h2.hypertensionaha { border-bottom: 1px solid rgb(27, 129, 108); }
+.aha_journals .hypertensionaha_intro { background: none repeat scroll 0% 0% rgb(240, 240, 240); color: rgb(27, 129, 108); padding: 10px; border: 1px solid rgb(27, 129, 108); font-size: 11px; margin-bottom: 10px; margin-right: 240px; }
+.aha_journals ul.hypertensionaha li { border-left: 5px solid rgb(27, 129, 108); }
+.aha_journals ul.hypertensionaha a {  }
+.aha_journals .hypertensionaha_box { border-left: 1px solid rgb(27, 129, 108); border-top: 1px solid rgb(27, 129, 108); padding-bottom: 10px; position: relative; }
+.aha_journals h4.hypertensionaha_sub { border: 1px solid rgb(27, 129, 108); padding: 3px; }
+.aha_journals .hypertensionaha_block { border: 1px solid rgb(27, 129, 108); }
+.aha_journals h4.hypertensionaha_sub a, .aha_journals h4.hypertensionaha_header { color: rgb(27, 129, 108); }
+.aha_journals h2.strokeaha { border-bottom: 1px solid rgb(255, 229, 8); }
+.aha_journals .strokeaha_intro { background: none repeat scroll 0% 0% rgb(240, 240, 240); color: rgb(0, 0, 0); padding: 10px; border: 1px solid rgb(0, 0, 0); font-size: 11px; margin-bottom: 10px; margin-right: 240px; }
+.aha_journals ul.strokeaha li { border-left: 5px solid rgb(255, 229, 8); }
+.aha_journals ul.strokeaha a { padding-left: 10px; }
+.aha_journals .strokeaha_box { border-left: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); padding-bottom: 10px; position: relative; }
+.aha_journals .strokeaha_block { border: 1px solid rgb(0, 0, 0); }
+.aha_journals h4.strokeaha_sub { border: 1px solid rgb(0, 0, 0); padding: 3px; }
+.aha_journals h4.strokeaha_sub a, .aha_journals h4.strokeaha_header { color: rgb(0, 0, 0); }
+.aha_journals h3.atvbaha_date, .aha_journals h3.atvbaha_article { color: rgb(125, 125, 125); }
+.aha_journals h3.circulationaha_date, .aha_journals h3.circulationaha_article { color: rgb(185, 12, 66); }
+.aha_journals h3.circresaha_date, .aha_journals h3.circresaha_article { color: rgb(0, 78, 153); }
+.aha_journals h3.hypertensionaha_date, .aha_journals h3.hypertensionaha_article { color: rgb(27, 129, 108); }
+.aha_journals h3.strokeaha_date, .aha_journals h3.strokeaha_article { color: rgb(0, 0, 0); }

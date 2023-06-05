@@ -1,0 +1,1 @@
+document.write('<a target="_blank" href="http://ad.uk.doubleclick.net/click;h=v8/3a8d/0/0/%2a/s;223893294;0-0;0;42410314;23-160/160;37874963/37892781/1;;~sscs=%3fhttp://olabout.wiley.com/WileyCDA/Section/id-406194.html"><img src="http://s0.2mdn.net/viewad/2508014/wol_advertising_house_ad_160x160.gif" border=0 alt="Advertising Opportunities with Wiley Online Library"></a>');

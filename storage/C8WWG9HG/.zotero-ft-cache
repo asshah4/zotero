@@ -1,0 +1,307 @@
+Proceedings of the 29th Annual International Conference of the IEEE EMBS Cité Internationale, Lyon, France August 23-26, 2007.
+
+SaP1C4.5
+
+Ultra Short Term Analysis of Heart Rate Variability for Monitoring Mental Stress in Mobile Settings
+Lizawati Salahuddin, Jaegeol Cho, Myeong Gi Jeong, and Desok Kim
+
+Abstract—Heart rate variability (HRV) analysis is commonly used as a quantitative marker depicting the activity of autonomous nervous system (ANS) that may be related to mental stress. For mobile applications, short term ECG measurement may be used for HRV analysis since the conventional five minute long recordings might be inadequately long. Short term analysis of HRV features has been investigated mostly in ECG data from normal and cardiac patients. Thus, short term HRV features may not have any relevance on the assessment of acute mental stress. In this study, we obtained ultra short term HRV features from 24 subjects during baseline stage and Stroop color word test. We validated these HRV features by showing significant differences in HRV features existed between the two stages. Our results indicated that ultra short term analysis of heart rate and RR intervals within 10 s, RMSSD and PNN50 within 30 s, HF within 40 s, LF/HF, normalized LF, and normalized HF within 50 s could be reliably performed for monitoring mental stress in mobile settings.
+I. INTRODUCTION
+HEART Rate Variability (HRV) has been traditionally calculated from five minute or 24 hour ECG recordings for the analysis of cardiac diseases [1]. Several investigations were reported to estimate the reliability of HRV analysis from less than five minute ECG recordings for the clinical purposes. Previous studies reported that features that effectively high pass filter the RR interval series were more reliable and could be more accurately estimated from very short segments [2, 3]. HRV features sensitive to low frequency components of HRV had poor repeatability and cannot be estimated accurately from ECG segments shorter than 10 min [4]. The mean heart rate was more reproducible and could be more accurately estimated from very short segments (less than 1 min) than any of other HRV features [3]. In our previous study, ultra short term HRV features obtained from a mobile ECG sensor were
+Manuscript received April 2, 2007. This work was supported the grant from Samsung Electronics, Inc., Suwon, Korea.
+Lizawati Salahuddin is with the School of Engineering, Information and Communications University, Korea (email: lizawati@icu.ac.kr).
+Jaegeol Cho is with Samsung Electronics, Suwon, Korea (email: jgirlcho@samsung.com).
+Myeong Gi Jeong is with the School of Engineering, Information and Communications University, Korea (email: mgjeong@icu.ac.kr).
+Desok Kim is with the School of Engineering, Information and Communications University, 103-6, Moon Ji Dong, Yuseong Gu, Daejeon, Korea (corresponding author, phone: 82-42-866-6156; fax: 82-42-866-6110; email: kimdesok@icu.ac.kr).
+
+validated to estimate five minute measurement reliably. Ultra short term HRV features also showed significant differences in the normal and abnormal cardiac ECG data [5]. Although short term HRV analysis has been investigated by several authors, it was mostly for applications in clinical settings. These studies do not provide a direct guideline how short ECG recordings can be reliably used for mental stress monitoring.
+In response to stress, the brain activates the secretion of numerous hormones, including corticosterone/cortisol, catecholamine, prolactin, oxytocin, and renin, as a part of the survival mechanism [6]. The concept of allostasis has been introduced to explain how adaptive processes maintain stability or homeostasis through the production of mediators such as stress hormone, neurotransmitter, and cytokines [7]. The sympathetic and parasympathetic branches of the autonomic nervous system (ANS) are components associated with mental stress. Sympathetic nervous system (SNS) is a flight or fight branch of ANS that is essential during emergency situations. Mental stress increased sympathetic activity (low frequency HRV) and blood pressure [8] but decreased parasympathetic activity (high frequency HRV) [9, 10]. The Stroop test has been widely used to study human psychophysiology responses to mental stress. During the Stroop test, subjects have to identify the color in which the word is displayed, rather than the color that the word names. However, the subjects strongly tend to identify the color that the word names instead of identifying the color of the word [11]. Stroop test activated the anterior cingulated cortex (ACC) [11-13] and elicited autonomic responses in sympathetic as well as in parasympathetic nervous system which are related to psychophysiological measures such as changes in HRV [14, 15]. Stroop test exhibited significantly predominant sympathetic activity over parasympathetic activity (increased in the LF/HF ratio) [9]. Thus, the Stroop test has been utilized as a psychological or cognitive stressor that induced emotional responses, heightened autonomic reactivity [16], and increased heart rate and natural killer cell numbers [17]. In addition, it was also widely used in various neurological studies [11-15, 25].
+The availability of mobile ECG sensors offers a great opportunity for innovative personal health care applications. Wireless and portable ECG sensors provide personalized
+
+1-4244-0788-5/07/$20.00 ©2007 IEEE
+
+4656
+
+heart monitoring system for high risk cardiac patients [18-20]. However, it is relatively not well known about how to reliably and accurately analyze HRV for mental stress monitoring, especially in mobile situations. We have reported that a prototype mobile ECG sensor may be used for monitoring mental stress based on HRV analysis [21]. In the present study, we first re-evaluated ultra short term criteria for HRV analysis from mobile ECG records of normal subjects. Then, we evaluated ultra short term criteria for monitoring mental stress caused by our computer version of Stroop test [21]. HRV features measured during baseline stage were compared to those measured during Stroop test to find the shortest duration that produced significantly different HRV features between the two stages.
+II. ANALYSIS OF ULTRA SHORT TERM HRV MEASUREMENT USING MOBILE ECG SENSOR
+A patch type ECG sensor was used to obtain ECG data in mobile settings. Seven long term ECG records ranged from 22 hours to 24 hours were obtained from six healthy subjects, aged from 22 to 31. ECG signals were recorded in a memory card for every 30 min interval. During the long term ECG recording, the subjects were free to do the daily routines such as moving, working, studying, and sleeping.
+To perform a short term analysis, each 30 min record was divided into three adjacent 10 min segments. Detection of R peaks was performed in each 10 min segment to generate RR interval records using our previously developed algorithm [21]. Then, sets of shorter RR segments were sampled randomly from each RR interval record, whose time lengths ranged from 10 s to 150 s in steps of 10 s increment [5].
+In each segment, the following HRV features were calculated: mean heart rate (Mean HR), mean RR intervals (Mean RR), standard deviation of NN interval (SDNN), coefficient of variance (CV), root mean square of standard deviation (RMSSD), % NN intervals with difference in successive NN intervals greater than 50 ms (PNN50) as time domain features; HRV index (HRV Index, bin width of 8.0 ms), triangular interpolation of NN interval histogram (TINN), and Stress Index (SI) [22] as geometrical analysis features; very low frequency (VLF), low frequency (LF), high frequency (HF), the ratio of LF to HF (LF/HF), normalized LF (LFnu), and normalized HF (HFnu) as frequency domain features [1]. Frequency domain features were calculated by Welch’s averaging method [23]. All segments used the same Welch’s window that consisted of 40 RR intervals with 50% overlap.
+The reliability of short term HRV analysis to estimate 150 s HRV measurements was evaluated using Kruskal-Wallis test. We assumed that short term analysis was not significantly different to the 150 s analysis if the p-value was greater than 0.05.
+
+III. ANALYSIS OF ULTRA SHORT TERM HRV MEASUREMENT FOR MONITORING STRESS
+A. Data Acquisition
+In the previous report, we reported that a prototype mobile sensor combined with our HRV analysis software could detect HRV changes during acute stress caused by Stroop test [21]. In the present study, we obtained 24 sets of RR interval records during baseline and Stroop test stage. Ten female and 14 male undergraduate and graduate students from Information and Communications University, who were between 19 and 36 years of age (26 ± 4.6) volunteered in the experiment. Participation forms were filled up before the experiment. No one had any known cardiovascular disease or problems in recognizing color. No one consumed alcohol or caffeine containing beverages or engaged in vigorous exercise at least 12 hours prior to the experiment. After signing the consent form, subjects completed a patient health questionnaire (PHQ-9) to assess depression severity [24]. Subjects were then seated in the comfortable chair for 10 minute during baseline stage (control state) without any mental activity. Five minute long heartbeats were recorded using a chest belt type sensor (HeartSense, Alive System Llc, Kemerovo, Russia) during the baseline stage. The computer version of Stroop test was then performed [21]. During the Stroop test, subjects were instructed to identify the color in which the stimuli were displayed as quickly and as accurately as possible using the response keyboard. The test was lasted between 2.5 to 5 minutes.
+B. Data Processing and Feature Calculation
+Each RR record obtained during baseline and Stroop test stage was sampled randomly into shorter segments, whose time lengths ranged from 10 s to 150 s in steps of 10 s increment. We assumed that ultra short term HRV features were not useful if the shortest duration turned out to be longer than 150 s. Random selection for shorter segments was repeated for 30 times. RR interval records longer than 150 s were discarded from the analysis because the minimum duration of RR interval record during the Stroop test was 150 s. We also considered durations more than 150 s are inadequately long for mobile application. In each segment, HRV features were calculated as described in the previous section.
+The short term criteria obtained from the section II provided minimum durations for the analysis. The reliability of short term HRV features during Stroop test was also examined using Kruskal-Wallis test to estimate 150 s HRV measurements. This analysis would provide reference short term criteria for the further analysis between two sets of data. Then, HRV features during baseline and Stroop test were compared by Wilcoxon sign-ranked test to find the shortest duration that distinguished the two states. We assumed that the short term analysis was significantly different between the
+
+4657
+
+two stages if the p-value was less than 0.05.
+IV. RESULTS
+PHQ-9 scores showed the subjects were mildly depressed (6.4 ± 4.2). Seventeen subjects (70.8%) were minimally or mildly depressed (PHQ scores ≤ 9), six (25.0%) were moderately depressed (PHQ scores between 10 and 14), and one (4.2%) was severely depressed (PHQ score = 17). Table I summarizes HRV features and their shortest durations in mobile ECG data and pairwise comparison data of baseline versus Stroop test. The results showed that mean HR, mean RR, and RMSSD of mobile ECG required 10 s to estimate 150 s long measurement. PNN50, HF, LF/HF, LFnu, and HFnu required 20 s, LF and VLF required 30 s and 50 s long measurement, respectively, to estimate 150 s measurement. SDNN and CV required 60 s, HRV Index and TINN required 90 s, and SI required 100 s to estimate 150 s long measurement (p > 0.05). Our results also showed mean HR and mean RR from 10 s whereas RMSSD and PNN50 from 30 s long measurements were significantly different in baseline and Stroop test (p < 0.001). HF calculated from 40 s whereas LF/HF, LFnu, and HFnu from 50 s long measurements were significantly different in the two stages (p < 0.001). SDNN, CV, HRV Index, TINN, SI, VLF, and LF required longer than 60 s to show the differences in the two stages as shown in Table I.
+Figure 1 illustrates the changes of HRV features to the duration during baseline and Stroop test for the HRV features whose minimum durations were less than 60 s. Each square box represents the median; the top of the upper bar indicates 75 percentile; the bottom of the bar indicates 25 percentile.
+
+TABLE I HRV FEATURES AND THEIR SHORTEST DURATIONS IN MOBILE ECG AND
+COMPARING PAIR-WISE DATA OF BASELINE VS. STROOP TEST
+
+Mobile ECG
+
+HRV Features
+
+Median
+
+Min* (s)
+
+Mean HR
+
+73.00 10
+
+Mean RR
+
+0.827 10
+
+SDNN
+
+0.046 60
+
+CV
+
+5.851 60
+
+RMSSD
+
+0.028 10
+
+PNN50
+
+6.897 20
+
+HRV Index
+
+11.02 90
+
+TINN
+
+0.170 90
+
+SI
+
+29.08 100
+
+VLF
+
+102.2 50
+
+LF
+
+438.6 30
+
+HF
+
+638.1 20
+
+LF/HF
+
+0.787 20
+
+LFnu
+
+43.98 20
+
+HFnu
+
+55.66 20
+
+*Shortest duration
+
+Baseline vs. Stroop test
+
+Median (Base line)
+71
+0.839 0.041 4.859 0.034 13.51 11.27 0.176 29.83 83.84
+530 991.3 0.552 35.48 64.18
+
+Median (Stroop Test)
+75
+0.797 0.044 5.475 0.029 7.692 11.53 0.199 27.29 79.38 492.4 673.1 0.805 44.31 55.09
+
+Min* (s)
+10 10 100 110 30 30 120 110 140 70 130 40 50 50 50
+
+(a)
+90 80
+
+Baseline Stroop Test
+
+Mean HR (bpm)
+
+70
+
+60
+
+50 10
+
+30
+
+50
+
+70 90
+
+110 130 150
+
+0
+
+20 40 60 80 100 120 140 160
+
+Segment Duration (s)
+
+(b)
+
+0.9
+
+Mean RR (s)
+
+0.8
+
+0.7
+
+0.6 0 10 20 30 40 50 60 70 80 90 100110 120 130140150 160 Segment Duration (s)
+
+(c)
+0.06
+
+RMSSD (s)
+
+0.04
+
+0.02
+
+0
+
+10 30
+
+50 70 90 110 130 150
+
+0
+
+20 40 60 80 100 120 140 160
+
+Segment Duration (s)
+
+(d)
+
+40
+
+PNN50 (%)
+
+30
+
+20
+
+10
+
+0
+
+10 30
+
+50 70 90 110 130 150
+
+0
+
+20 40 60 80 100 120 140 160
+
+Segment Duration (s)
+
+HF (ms 2)
+
+(e)
+3,000
+2,000
+1,000
+0 0 10 20 30 40 50 60 70 80 90 100 110120 130140 150160 Segment Duration (s)
+
+(f)
+
+1.5
+
+LF/HF
+
+1
+
+0.5
+
+0
+
+10
+
+30 50 70
+
+90 110 130 150
+
+0
+
+20 40 60 80 100 120 140 160
+
+Segment Duration (s)
+
+(g)
+
+60
+
+LFnu (n.u.)
+
+40
+
+20
+
+0 0 10 20 30 40 50 60 70 80 90 100110 120130 140150 160 Segment Duration (s)
+
+(h)
+100
+
+HFnu (n.u.)
+
+50
+
+0 0 10 20 30 40 50 60 70 80 90 100 110 120130 140 150 160 Segment Duration (s)
+Fig. 1. HRV features during baseline and Stroop test. The square box represents the median; the top of the upper bar indicates 75 percentile; the bottom of the bar indicates 25 percentile. (a) Mean HR (b) Mean RR (c) RMSSD (d) PNN50, (e) HF, (f) LF/HF (g) LFnu (h) HFnu
+
+4658
+
+V. CONCLUSIONS AND DISCUSSION
+The aim of the present study was to validate ultra short term HRV analysis for the monitoring of mental stress. The ultra-short term criteria obtained from normal subjects using mobile ECG recordings were re-evaluated to compare with the previous reports. These criteria were unique in a sense that short term HRV features had been obtained from normal subjects in mobile settings and provided reference data for mental stress applications. Ultra short term analysis of time domain and frequency domain features such as mean HR, mean RR, RMSSD, PNN50, HF, LF/HF, LFnu and HFnu were found to be possible within 50 s for monitoring acute mental stress using mobile sensors. These short term criteria for monitoring acute stress resulted in longer measurement than normal situations in the majority of the HRV features mentioned above. To our knowledge, the present study is the first attempt to use data from Stroop test to validate ultra short term HRV features.
+More reliable algorithm for frequency domain analysis has involved sophisticated procedures [5]. Thus, the algorithmic standardization will become important among independently developed future applications. Further investigation is required to assess the accuracy of our frequency domain feature analysis using the synthetic data.
+ACKNOWLEDGMENT
+We would like to thank Dr. Chul-Ho Cho and Dr. Suntae Jung at Samsung Electronics, Inc., Suwon, Korea for their valuable comments.
+REFERENCES
+[1] Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology, “Heart Rate Variability: Standards of Measurement, Physiological Interpretation, and Clinical Use,” European Heart Journal, March 1996, vol. 17, pp. 1043-1065.
+[2] T. Thong, K. Li, J. McNames, M. Aboy, and B. Goldstein, “Accuracy of Ultra-Short Heart Rate Variability Measures,” Engineering in Medicine and Biology Society, 2003, vol. 3, pp. 17-21.
+[3] J. McNames and M. Aboy, “Reliability and Accuracy of Heart Rate Variability Metrics versus ECG Segment Duration,” Med Biol Eng Comput, September 2000, vol. 44, no. 9, pp.747-756.
+[4] G.R. Sandercock, P.D. Bromley, and D.A. Brodie, “The Reliability of Short-term Measurements of Heart Rate Variability,” International Journal of Cardiology, September 1, 2005, vol. 103, no. 3, pp. 238-247.
+[5] L. Salahuddin, M.G. Jeong, and D. Kim, “Validation of Ultra Short Term Heart Rate Variability Analysis using Normal Sinus Rhythm and Atrial Fibrillation ECG Data,” Healthcom 2007, Taipei, Taiwan, June 19-22, 2007.
+[6] L.D. Van der Kar and M.L. Blair, “Forebrain Pathways Mediating Stress Induced Hormone Secretion,” Frontiers in Neuroendocrinology, 1999, vol. 20, pp. 41–48.
+[7] B. S. McEwen, “Stressed or Stressed Out: What is the Difference?,” Journal of Psychiatry Neuroscience, September 2005, vol. 30, no. 5, pp. 315-318.
+[8] R.M. Holly, H.N. Alison, E.N. Carlo, U.N. Egbert, K.H. Carl, A.N. Barbara, A.H. Michele, C.F. Gregg, H. Antoine, and D.M. Jaime, “Impact of Acute Mental Stress on Sympathetic Nerve Activity and Regional Blood Flow in Advanced Heart Failure,” Circulation, 1997, vol. 96, pp. 1835-1842.
+
+[9] E. Šiška, “The Stroop Colour-Word Test in Psychology and Biomedicine”, Acta Univ. Palacki. Olomuc., Gymn., 2002, vol. 32, no. 1, pp. 45–50.
+[10] N. Hjortskov, D. Rissen D, A.K. Blangsted, N. Fallentin, U. Lundberg, and K. Sogaard, “The Effect of Mental Stress on Heart Rate Variability and Blood Pressure during Computer Work,” European Journal of Applied Physiology, June 2004, vol. 92, pp. 84-89.
+[11] S.F. Taylor, K.S. Kornblum, J.L. Erick, M. Satoshi, and A.P. Robert, “Isolation of Specific Interference Processing in the Stroop Task: PET Activation Studies,” NeuroImage, 1997, vol. 6, pp. 81–92.
+[12] C.S. Carter, S.B. Todd, M.B. Deanna, M.B. Matthew, N. Douglas, and D.C. Jonathan, “Anterior Cingulate Cortex, Error Detection, and the Online Monitoring of Performance,” Science, May 1, 1998, vol. 280, pp. 747–749.
+[13] J.V. Pardo, P.J. Pardo, K.W. Janer, and M.E. Raichle, “The Anterior Cingulate Cortex Mediates Processing Selection in the Stroop Attentional Conflict Paradigm,” Proc. Natl. Acad. Sci. USA, Neurobiology, January 1990, vol. 87, pp. 256–259.
+[14] S.C. Matthews, M.P. Paulus, A.N. Simmons, R.A. Nelesen, and J.E. Dimsdale, “Functional Subdivision within Anterior Cingulate Cortex and their Relationship to Autonomic Nervous System Function,” Neuroimage, 2004, vol. 22, pp. 1151- 1156.
+[15] H.D. Critchley, C.J. Mathias, O. Josephs, J. O’doherty, S. Zanini, B.K. Dewar, L. Cipolotti, T. Shallice, and R.J. Dolan, “Human Cingulate Cortex And Autonomic Control: Converging Neuroimaging and Clinical Evidence,” Brain, June 2003, vol. 126, pp. 2139-2152.
+[16] P. Renaud and J.P. Blondin, “The Stress of Stroop Performance: Physiological and Emotional Responses to Color-Word Interference, Task Pacing, and Pacing Speed,” International Journal of Psychophysiology, September 1997, vol. 27, no. 2, pp. 87-97.
+[17] R.J. Benschop, R. Geenen, P.J. Mills, B.D. Naliboff, J.K. Kiecolt-Glaser, T.B. Herbert, G. Van Der Pompe, G.E. Miller, K.A. Mathews, G.L. Godaert, S.L. Gilmore, R. Glaser, C.J. Heijnen, J.M. Dopp, J.W. Bijlsma, G.F. Solomon, and J.T. Cacioppo, “Cardiovascular and Immune Responses to Acute Psychological Stress in Young and Old Women: A Meta-analysis,” Psychosomatic Medicine, 1998, vol. 60, pp. 290–296.
+[18] R. Fensli, E. Gunnarson, and T. Gundersen, “A Wearable ECG-recording System for Continuous Arrhythmia Monitoring in a Wireless Tele-Home-Care Situation,” in Computer-Based Medical Systems 2005 Proceedings, 18th IEEE Symposium on June 23-24, 2005, pp. 407-412.
+[19] J. Proulx, R. Clifford, S. Sorensen, D. Lee, and J. Archibald, “Development and Evaluation of a Bluetooth EKG Monitoring Sensor,” in Computer-Based Medical Systems, CBMS 2006, 19th IEEE International Symposium on June 22-23, 2006, pp. 507-511.
+[20] P. Leijdekkers and V. Gay, “Personal Heart Monitoring and Rehabilitation System Using Smart Phones,” Mobile Business, ICMB '06, pp. 29-29, 2006.
+[21] L. Salahuddin and D. Kim, “Detection of Acute Stress by Heart Rate Variability Using a Prototype Mobile ECG Sensor,” International Conference on Hybrid Information Technology, 2006, ICHIT'06, IEEE CS, 2006, vol. 2, pp. 453-459.
+[22] R.M. Bayevsky, G.G. Ivanov, L.V. Chireykin, A.P. Gavrilushkin, P.Ya. Dovgalevsky, U.A. Kukushkin, T.F. Mironova, D.A. Priluzkiy, U.N. Semenov, V.F. Fedorov, A.N. Fleishmann, and M.M. Medvede, “HRV Analysis under the usage of different electrocardiography systems (Methodical recommendations),” April 11, 2002.
+[23] P.D. Welch, “The Use of Fast Fourier Transform for the Estimation of Power Spectra: A Method Based on Time Averaging Over Short, Modified Periodograms,” IEEE Transactions on Audio and Electroacoustics, June 1967, vol. 15, no. 2, pp. 70-73.
+[24] K. Kroenke, R.L. Spitzer, and J.B. Williams, “The PHQ-9: Validity of a Brief Depression Severity Measure,” Journal of General Internal Medicine, September 2001, vol. 16, no. 9, pp. 606-613.
+[25] P. Bob, M. Šusta, A. Procházková-Večeřová, M. Kukleta, J. Pavlát, F. Jagla, and J. Raboch, “Limbic Irritability and Chaotic Neural Response During Conflicting Stroop Task in the Patients with Unipolar Depression,” Physiological Research, 2006, vol. 55, pp. 107-112.
+
+4659
+

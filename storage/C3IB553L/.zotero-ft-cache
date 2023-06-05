@@ -1,0 +1,674 @@
+Research
+
+JAMA Cardiology | Original Investigation
+Mortality Among Patients With Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+Zachary T. Yoneda, MD, MSCI; Katherine C. Anderson, ScM, CGC; Fei Ye, PhD; Joseph A. Quintana, MD; Matthew J. O’Neill, BS; Richard A. Sims, MD; Lili Sun, PhD; Andrew M. Glazer, PhD; Giovanni Davogustto, MD; Majd El-Harasis, MBBS; James L. Laws, MD; Brittany N. Saldivar, MD; Diane M. Crawford, RN; Thomas Stricker, MD, PhD; Quinn Wells, MD, PharmD, MSCI; Dawood Darbar, MBChB, MD; Gregory F. Michaud, MD; Lynne W. Stevenson, MD; Steven A. Lubitz, MD, MPH; Patrick T. Ellinor, MD, PhD; Dan M. Roden, MD; M. Benjamin Shoemaker, MD, MSCI
+
+IMPORTANCE Patients with early-onset atrial fibrillation (AF) are enriched for rare variants in cardiomyopathy and arrhythmia genes. The clinical significance of these rare variants in patients with early-onset AF is unknown.
+OBJECTIVE To assess the association between rare variants in cardiomyopathy and arrhythmia genes detected in patients with early-onset AF and time to death.
+DESIGN, SETTING, AND PARTICIPANTS This prospective cohort study included participants with AF diagnosed before 66 years of age who underwent whole-genome sequencing through the National Heart, Lung and Blood Institute’s Trans-Omics for Precision Medicine program. Participants were enrolled from November 23, 1999, to June 2, 2015. Data were analyzed from February 26 to September 19, 2021.
+EXPOSURES Rare variants identified in a panel of 145 genes that are included in cardiomyopathy and arrhythmia panels used by commercial clinical genetic testing laboratories.
+MAIN OUTCOMES AND MEASURES The primary study outcome was time to death and was adjudicated from medical records and the National Death Index. Multivariable Cox proportional hazards regression was used to evaluate the association of disease-associated variants with risk of death after adjustment for age at AF diagnosis, sex, race, body mass index, left ventricular ejection fraction, and an interaction term of age at AF diagnosis and disease-associated variant status.
+RESULTS Among 1293 participants (934 [72%] male; median age at enrollment, 56.0 years; IQR, 48.0-61.0 years), disease-associated (pathogenic or likely pathogenic) rare variants were found in 131 (10%). During a median follow-up of 9.9 years (IQR, 6.9-13.2 years), 219 participants (17%) died. In univariable analysis, disease-associated variants were associated with an increased risk of mortality (hazard ratio, [HR], 1.5; 95% CI, 1.0-2.1; P = .05); the association remained significant in multivariable modeling when adjusted for age at AF diagnosis, sex, race, body mass index, left ventricular ejection fraction, and an interaction term between disease-associated variant status and age at AF diagnosis. The interaction demonstrated that disease-associated variants were associated with a significantly higher risk of mortality compared with no disease-associated variant when AF was diagnosed at a younger age (P = .008 for interaction). Higher body mass index (per IQR: HR, 1.4; 95% CI, 1.2-1.6; P < .001) and lower left ventricular ejection fraction (per IQR: HR, 0.8; 95% CI, 0.7-0.8; P < .001) were associated with higher mortality risk. There were 73 cardiomyopathy-related deaths, 40 sudden deaths, and 10 stroke-related deaths. Mortality among patients with the most prevalent genes with disease-associated variants was 26% (10 of 38 patients) for TTN, 33% (6 of 18) for MYH7, 22% (2 of 9) for LMNA, 0% (0 of 10) for MYH6, and 0% (0 of 8) for KCNQ1.
+CONCLUSIONS AND RELEVANCE The findings suggest that rare variants in cardiomyopathy and arrhythmia genes may be associated with increased risk of mortality among patients with early-onset AF, especially those diagnosed at a younger age. Genetic testing may provide important prognostic information for patients with early-onset AF.
+JAMA Cardiol. doi:10.1001/jamacardio.2022.0810 Published online May 11, 2022.
+
+Editorial Multimedia Related article Supplemental content
+Author Affiliations: Author affiliations are listed at the end of this article. Corresponding Author: M. Benjamin Shoemaker, MD, MSCI, Department of Medicine, Division of Cardiovascular Medicine, Vanderbilt University Medical Center, 2525 W End Ave, Nashville, TN 37232 (moore.b.shoemaker@vumc.org).
+
+(Reprinted) E1
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Research Original Investigation
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+T he independent association between atrial fibrillation (AF) and increased risk of mortality is well established in older populations.1-4 Less well-studied are younger patients who are diagnosed with AF despite clinical risk factors. Patients with idiopathic or lone AF were first reported5 to have a higher risk of mortality almost 40 years ago, but the pathophysiology was unknown.6 The recognition that patients with early-onset AF are enriched for rare genetic variants associated with inherited cardiomyopathy (CM) and arrhythmia syndromes suggests that in some patients, AF may be the first sign of a more serious underlying genetic disease.7-10 A study11 recently reported that sequencing of a 145-gene CM and arrhythmia panel identified pathogenic or likely pathogenic variants in 10.1% of patients diagnosed with AF before 66 years of age and 16.8% of those diagnosed before 30 years of age.
+The effect of rare genetic variants on clinical outcomes and long-term prognosis in patients with early-onset AF remains undefined. Among patients with hypertrophic CM (HCM), dilated CM (DCM), Brugada syndrome, and long QT syndrome, genotype-positive patients have been consistently shown to have worse clinical outcomes, such as a higher risk for malignant ventricular arrhythmias, progression to end-stage heart failure, and mortality.12-19 Accordingly, we hypothesized that disease-associated rare variants in patients with early-onset AF would be associated with a higher risk of mortality and that there would be an interaction between genotype-positive status and younger age at AF diagnosis in terms of mortality risk. We assessed a cohort of 1293 patients with early-onset AF who underwent whole-genome sequencing11 and searched the Centers for Disease Control and Prevention National Death Index (NDI) to identify participants who died during follow-up.
+Methods
+Study Population This cohort study included participants enrolled in the Vanderbilt Atrial Fibrillation Registry or Vanderbilt AF Ablation Registry from November 23, 1999, to June 2, 2015 (eAppendix 1 in the Supplement). Eligible participants were diagnosed with AF before 66 years of age and underwent wholegenome sequencing through the National Heart, Lung and Blood Institute’s Trans-Omics for Precision Medicine Program as previously described.7,11 All participants provided written informed consent, and ethical approval for the study was obtained from the Vanderbilt University Medical Center institutional review board. Baseline demographic and clinical characteristics were recorded at the time of enrollment (eAppendix 2 in the Supplement). This study followed the Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) reporting guideline.
+Whole-Genome Sequencing and Annotation The sequencing methods and quality control steps for the Trans-Omics for Precision Medicine Program AF Project have been previously described.7 The methods for annotation and variant classification for this analysis have also been previ-
+
+Key Points
+Question In patients with early-onset atrial fibrillation (AF), are rare variants in cardiomyopathy and arrhythmia genes associated with increased all-cause mortality?
+Findings In this cohort study of 1293 participants diagnosed with AF before 66 years of age, time to death was significantly associated with a disease-associated variant, age at AF diagnosis, and the interaction between age at AF diagnosis and variant status.
+Meaning The findings suggest that among patients with early-onset AF, the presence of a disease-associated rare variant for an inherited cardiomyopathy or arrhythmia syndrome may be associated with an increased risk of mortality.
+ously described.11 In brief, 145 CM and arrhythmia genes that were included in commercial genetic testing panels were selected (eTable 1 in the Supplement). An automated artificial intelligence-based process (Franklin by Genoox20) and subsequent manual adjudication were used to classify variants according to American College of Medical Genetics and Genomics (ACMG) criteria as benign, likely benign, variant of undetermined significant, likely pathogenic, or pathogenic.21 Participants with a pathogenic or likely pathogenic variant for an autosomal dominant or X-linked dominant syndrome were defined as having a disease-associated rare variant.
+Mortality and Cause of Death Assessment A complete description of the methods for mortality and cause of death assessment are given in eAppendix 3 in the Supplement. In brief, a combination of manual review of the participants’ records and query of the NDI was performed to determine vital status, which was censored up to January 1, 2020. The NDI is the most complete source of death information in the US and includes all death certificates since 1979, with International Statistical Classification of Diseases and Related Health Problems, Tenth Revision (ICD-10) codes listed for causes of death. Deaths were considered CM-related, sudden deaths, or stroke-related based on inclusion of a corresponding ICD-10 code (eTable 2 in the Supplement) as the primary or any of the contributing causes of death.
+Statistical Analysis Data were analyzed from February 26 to September 19, 2021. A complete description of the statistical methods is given in eAppendix 4 in the Supplement. In brief, the primary outcome was time to from AF diagnosis to death or censor date, measured in days. The primary exposure was the presence or absence of a disease-associated variant. A univariable analysis used a Cox proportional hazards regression model to test the association between disease-associated variant status and the primary outcome. The primary analysis used a multivariable Cox proportional hazards regression model and tested the hypothesis that a disease-associated variant would be associated with increased risk of death after adjustment for age at AF diagnosis, sex, race, body mas index (BMI; calculated as weight in kilograms divided by height in meters squared), left
+
+E2
+
+JAMA Cardiology Published online May 11, 2022 (Reprinted)
+
+jamacardiology.com
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+Original Investigation Research
+
+ventricular ejection fraction (LVEF), and an interaction term of age at AF diagnosis and disease-associated variant status. A significant interaction term indicated that the association of disease-associated variants with risk of mortality differed for patients diagnosed at different ages. Partial-effects plots were then created to describe the interaction effect on risk of mortality, and the interaction P value is reported. Prespecified secondary analyses grouped disease-associated variants according to genes associated with specific inherited CM and arrhythmia syndromes and individual genes. A second prespecified subgroup analysis tested the association between disease-associated variants and specific causes of death (CMrelated or sudden death). A sensitivity analysis tested whether presence of disease-associated variants restricted to a smaller gene panel composed of only strong or definitive evidence genes (eTable 3 in the Supplement) was associated with allcause mortality using the same multivariable Cox proportional hazards regression model as in the primary analysis.
+Results
+Description of the Study Population There were 1293 participants (934 [72%] male; median age at enrollment, 56.0 years; IQR, 48.0-61.0 years) with earlyonset AF enrolled from 1999 to 2015 who underwent wholegenome sequencing. Of those, 219 died during follow-up (16.9%) (Figure 1). The median duration of follow-up was 9.9 years (IQR, 6.9-13.2 years) from the time of enrollment and 15.0 years (IQR, 10.3-20.0) from the time of AF diagnosis. Demographics and clinical characteristics at enrollment are stratified by vital status in the Table.
+Results of ACMG Variant Classification Full results of the ACMG variant classification have been previously published.11 Overall, a disease-associated rare variant was detected in 131 participants (10%). Of these, 93 participants carried a disease-associated variant in a DCM gene, 43 in an HCM gene, and 37 in an arrhythmogenic CM or arrhythmogenic right ventricular CM gene. There was considerable overlap between genes associated with DCM, HCM, and arrhythmogenic CM or arrhythmogenic right ventricular CM genes as shown in eTable 3 in the Supplement. For the channelopathies, 2 participants carried a disease-associated variant in a Brugada syndrome gene, 11 in a long QT syndrome gene, and 1 in a catecholaminergic polymorphic ventricular tachycardia gene. Overall, 8-times more participants carried CM variants (96 participants) than channelopathy variants (12 participants). Eight participants had 2 pathogenic or likely pathogenic variants, and 1 participant had 3 pathogenic or likely pathogenic variants.
+
+Figure 1. Breakdown of Participants According to Genotype Status and Death During Follow-up
+1293 Participants with early-onset atrial fibrillation
+
+131 Disease-associated CM or arrhythmia variant
+
+1162 No disease-associated CM or arrhythmia variant
+
+31 Death during follow-up CM indicates cardiomyopathy.
+
+188 Death during follow-up
+
+95% CI, 1.0-2.1; P = .05). In multivariable analysis, the presence of a disease-associated variant was associated with a significantly higher risk of all-cause mortality, as shown in the adjusted survival curve (χ2 = 9.39; P = .009 likelihood ratio test) (Figure 2A). The primary multivariable analysis demonstrated a statistically significant interaction between diseaseassociated variant status and age at AF diagnosis (P= .008 for interaction). Owing to this interaction, the estimates and 95% CIs for disease-associated variants are not presented separately, but instead using partial effects plots (Figure 2B). In the multivariable model, male sex (HR, 1.0; 95% CI, 0.7-1.4; P = .98), White race (HR, 1.1; 95% CI, 0.6-2.1; P = .74), increased BMI (HR, 1.4; IQR, 1.2-1.6; P = .001), and lower LVEF (HR, 0.8; 95% CI, 0.7-0.8; P < .001) were associated with increased mortality risk. In the analysis of the association of age with mortality, older age was associated with a higher risk of death for both genotype-positive and genotype-negative male and female participants. However, as shown in Figure 2B, the relative risk of death (distance between the 2 curves) was significantly higher for genotype-positive participants compared with genotype-negative participants among those diagnosed with AF at a younger age. This association diminished as age at diagnosis approached 60 years, where the curves crossed, and the relative risk of death became higher for genotype-negative participants.
+Association With Disease-Associated Variants Restricted to Strong or Definitive Evidence Genes Results from the sensitivity analysis that restricted diseaseassociated variants to only those from strong or definitive evidence genes also demonstrated significant associations with mortality for disease-associated variants, age at AF diagnosis, BMI, and the interaction between disease-associated variants and age at AF diagnosis. Findings for race and ethnicity and sex remained nonsignificant. eFigure 1 in the Supplement shows the adjusted survival curve for this analysis.
+
+Association of Rare Variants With Mortality Among participants with a disease-associated variant, 31 (24%) died during follow-up compared with 188 participants (16%) without a disease-associated variant (Figure 1). In univariable analysis, presence of disease-associated variants was associated with an increased risk of all-cause mortality (HR, 1.5;
+
+Association of Rare Variants With Causes of Death Of 219 deaths, 73 were CM-related (33%), 40 were sudden deaths (18%), and 10 were stroke-related (5%). The adjusted cumulative incidence plots of CM-related death and sudden death by variant status are presented in Figure 3. A multivariable Cox proportional hazards regression model was used to
+
+jamacardiology.com
+
+(Reprinted) JAMA Cardiology Published online May 11, 2022
+
+E3
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Research Original Investigation
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+Table. Demographics, Genetics, and Clinical Characteristics of Patients According to Mortality
+
+Characteristic Age at enrollment, y
+Median (IQR) <30 30-39 40-49 50-59 60-64 ≥65 Age at AF diagnosis, y Median (IQR) <30 30-39 40-49 50-59 60-65 Sex Female Male Self-reported race White Black Otherb Self-reported ethnicity Not Hispanic/Latinx Hispanic/Latinx Height, cm Body mass indexc Median (IQR) <30 30-39 ≥40 Hypertension Valve disease Myocardial infarction Left ventricular ejection fraction, % Median (IQR) <40 40-49 ≥50 Disease-associated rare variant VUS, No. 0 1 2 3 4 >4 Duration of follow-up or survival, median (IQR), y
+
+Patientsa Total (N = 1293)
+56.0 (48.0-61.0) 52 (4) 96 (7) 225 (17) 521 (40) 267 (21) 132 (10)
+
+Deceased (n = 219) Alive (n = 1074)
+
+59.0 (54.0-64.0) 0 7 (3) 23 (11) 83 (38) 64 (29) 42 (19)
+
+54.0 (47.0-60.0) 52 (5) 89 (8) 202 (19) 438 (41) 203 (19) 90 (8)
+
+50.0 (41.0-56.0) 119 (9) 146 (11) 366 (28) 553 (43) 109 (8)
+
+54.0 (47.5-57.0) 10 (5) 17 (8) 40 (18) 133 (61) 19 (9)
+
+49.0 (40.0-55.0) 109 (10) 129 (12) 326 (30) 420 (39) 90 (8)
+
+359 (28) 934 (72)
+
+57 (26) 162 (74)
+
+302 (28) 772 (72)
+
+1238 (96) 48 (4) 7 (1)
+
+208 (95) 11 (5) 0
+
+1030 (96) 37 (3) 7 (1)
+
+1286 (99.5) 7 (1) 177.8 (170.2-185.4)
+
+218 (100) 1 (0) 177.8 (169.9-182.9)
+
+1068 (99) 6 (1) 178.0 (170.2-185.4)
+
+30.3 (26.6-35.3) 602 (48) 512 (41) 134 (11) 750 (58) 77 (6.0) 118 (9.1)
+
+31.4 (26.6-37.7) 88 (42) 83 (39) 41 (19) 166 (76) 39 (17.8) 58 (26.5)
+
+30.1 (26.6-34.6) 514 (50) 429 (41) 93 (9) 584 (54) 38 (3.5) 60 (5.6)
+
+55.0 (53.0-60.0) 107 (9) 82 (7) 1062 (85) 131 (10)
+
+55.0 (42.9-55.0) 45 (21) 23 (11) 144 (68) 31 (14)
+
+55 (55.0-60.0) 62 (6) 59 (6) 918 (88) 100 (9)
+
+254 (20) 240 (19) 265 (20) 230 (18) 161 (12) 143 (11) 9.9 (6.9-13.2)
+
+49 (22) 28 (13) 48 (22) 46 (21) 24 (11) 24 (11) 6.5 (3.0-10.4)
+
+205 (19) 212 (20) 217 (20) 184 (17) 137 (13) 119 (11) 10.6 (7.7-13.8)
+
+Abbreviations: AF, atrial fibrillation; VUS, variant of undetermined significance.
+a Data are presented as number (percentage) of patients unless otherwise indicated.
+b Other included American Indian/Alaska Native and Asian/Pacific Islander individuals.
+c Calculated as weight in kilograms divided by height in meters squared.
+
+analyze CM-related deaths and sudden deaths. The risk of CM-related death was associated with disease-associated variant status, age at AF diagnosis, and the interaction between
+
+disease-associated variant status and age at AF diagnosis (P = .03 for interaction). This model was also adjusted for BMI (HR, 1.2; 95% CI, 1.0-1.5; P = .07), male sex (HR, 1.1; 95% CI,
+
+E4
+
+JAMA Cardiology Published online May 11, 2022 (Reprinted)
+
+jamacardiology.com
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+Original Investigation Research
+
+Figure 2. Adjusted Survival Curve of All-Cause Mortality Among Patients With Early-Onset Atrial Fibrillation (AF) With and Without Disease-Associated Rare Variants in Cardiomyopathy and Arrhythmia Genes and Interaction Between Age at AF Diagnosis and Disease-Associated Variants
+
+A Adjusted survival curve 100
+90
+
+No disease-associated variant
+
+Survival probability, %
+
+80
+
+70
+
+60
+
+P =.009
+
+50
+
+0
+
+3
+
+No. at risk
+
+No disease-associated variant 1162
+
+Disease-associated variant
+
+131
+
+1113 125
+
+Disease-associated variant
+
+6
+
+9
+
+12
+
+15
+
+Time since enrollment, y
+
+959
+
+675
+
+386
+
+154
+
+102
+
+76
+
+45
+
+20
+
+B Partial-effects plots
+
+Women
+
+1.0
+
+1.0
+
+18
+10 0
+Men
+
+0.8 Disease-associated variant
+0.6
+
+0.8 Disease-associated variant
+0.6
+
+Mortality risk Mortality risk
+
+0.4
+
+0.4
+
+0.2
+0 20
+
+No disease-associated variant
+
+30
+
+40
+
+50
+
+60
+
+Age at AF diagnosis, y
+
+0.2 No disease-associated variant
+
+0
+
+70
+
+20
+
+30
+
+40
+
+50
+
+60
+
+Age at AF diagnosis, y
+
+70 Shading indicates 95% CIs.
+
+0.7-1.6; P = .66), and White race (HR, 0.7; 95% CI, 0.3-1.4; P = .28). For sudden deaths, disease-associated variants (HR, 2.4; 95% CI, 1.1-5.2; P = .03) and age at AF diagnosis (HR, 2.4; 95% CI, 1.4-4.2; P = .002) were associated with a increased risk of mortality. The analysis of sudden death was not powered to test for an interaction. The data set was not powered to determine an association of variant status with time to strokerelated death.
+Genetic variants were seen in all groups defined by baseline ejection fraction at enrollment. LVEF was associated with risk of mortality among participants with reduced LVEF (<50%) and preserved LVEF (≥50%) (Figure 4A and B). Most participants with a history of depressed left ventricular function at or before enrollment did not possess a disease-associated variant. The proportion with a disease-associated variant was 14% (15 of 107) in the group with LVEF of 39% or less, 12% (10 of 82) in the group with LVEF of 40% to 49%, and 9% (100 of 1062) in the group with LVEF of 50% of greater (eFigure 2 in the Supplement). Among participants with a disease-associated variant, the all-cause mortality was 47% (7 of 15) in the group with LVEF of 39% or less, 50% (5 of 10) in the group with LVEF
+
+of 40% to 49%, and 18% (18 of 100) in the group with LVEF of 50% or greater.
+All-Cause Mortality According to Genes Associated With CM and Channelopathy Syndromes and Individual Genes Among the 92 participants with a disease-associated variant in any CM-related gene (DCM, HCM, or arrhythmogenic CM or arrhythmogenic right ventricular CM), there were 24 deaths (26%) compared with 1 death (10%) among the 10 participants with a disease-associated variant in a channelopathyrelated gene (long QT syndrome, Brugada syndrome, or catecholaminergic polymorphic ventricular tachycardia) (Figure 4C). The deceased participant with a channelopathy variant had a heterozygous CASQ2 variant. There were 2 participants with both a disease-associated CM variant and a channelopathy variant.
+The most prevalent genes with disease-associated variants were TTN (OMIM 188840), MYH7 (OMIM 160760), MYH6 (OMIM 160710), LMNA (OMIM 150330), and KCNQ1 (OMIM 607542). The number of deaths observed was
+
+jamacardiology.com
+
+(Reprinted) JAMA Cardiology Published online May 11, 2022
+
+E5
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Research Original Investigation
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+Figure 3. Adjusted Cumulative Incidence of Cardiomyopathy (CM)–Related Death and Adjusted Cumulative Incidence of Sudden Death According to Disease-Associated Rare Variant Status
+
+A CM-related death 35
+
+30
+
+Cumulative incidence, %
+
+25
+
+20
+
+15 P =.03
+10
+
+5
+
+0
+
+0
+
+3
+
+No. at risk No disease-associated variant Disease-associated variant
+No. of cumulative events Disease-associated variant
+
+1162 131
+0
+
+1113 125
+3
+
+Disease-associated variant
+
+No disease-associated variant
+
+6
+
+9
+
+12
+
+15
+
+18
+
+Time since enrollment, y
+
+959
+
+675
+
+386
+
+154
+
+10
+
+102
+
+76
+
+45
+
+20
+
+0
+
+5
+
+7
+
+8
+
+10
+
+11
+
+B Sudden death
+
+8 Disease-associated variant
+6
+
+Cumulative incidence, %
+
+4
+P =.048 2
+
+No disease-associated variant
+
+0
+
+0
+
+3
+
+6
+
+9
+
+12
+
+15
+
+18
+
+Time since enrollment, y
+
+No. at risk
+
+No disease-associated variant 1162 1113 959
+
+675
+
+386
+
+154
+
+10
+
+Disease-associated variant
+
+131
+
+125 102
+
+76
+
+45
+
+20
+
+0
+
+No. of cumulative events
+
+Disease-associated variant
+
+0
+
+1
+
+4
+
+5
+
+8
+
+8
+
+8
+
+A, Adjustment was made for age at atrial fibrillation diagnosis, sex, race, body mass index, and the interaction between disease-associated variant status and age at atrial fibrillation diagnosis (P = .009 likelihood ratio test). B, Adjustment was made for age at atrial fibrillation diagnosis.
+
+10 of 38 (26%) for TTN, 6 of 18 (33%) for MYH7, and 2 of 9 (22%) for LMNA compared with 0 of 8 for KCNQ1 and 0 of 10 for MYH6 (Figure 4D and eFigures 3-7 in the Supplement).
+Discussion
+The association between AF and higher risk of mortality in younger patients with minimal clinical risk factors was previously unexplained.5,6 Our results demonstrated that among patients with early-onset AF, presence of disease-associated rare variants in CM and arrhythmia genes was associated with an approximately 1.5-fold higher risk of mortality over 10 years. Furthermore, there was a significant interaction such that the relative risk of mortality was greater when AF was diagnosed at a younger age among patients with a disease-associated rare variant. Among participants who died, the cause of death was more often CM-related (33%) than sudden death (18%) or
+
+stroke-related (5%), and the risks of CM-related and sudden death were significantly higher among patients with diseaseassociated variants. Most disease-associated variants in patients with early-onset AF were in CM genes. However, most of the participants who had reduced LVEF at the time of enrollment did not have a rare disease-associated variant. These data suggest that genetic testing may identify patients with a subtype of early-onset AF who are at higher risk of mortality, relative risk associated with a disease-associated variant may be higher when AF is diagnosed at a younger age, and relative risk may be associated predominantly with variants in CMrelated genes.
+Age at AF Diagnosis and Risk of Mortality Our results showed that age at AF diagnosis was significantly associated with a higher risk of mortality for both genotypepositive and genotype-negative participants. However, in genotype-positive participants, younger age at AF diagnosis was associated with significantly higher relative risk of mortality.
+
+E6
+
+JAMA Cardiology Published online May 11, 2022 (Reprinted)
+
+jamacardiology.com
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+Original Investigation Research
+
+Figure 4. Disease-Associated Variants and Mortality Risk Among Participants
+
+A Left ventricular ejection fraction ≥50% 1.0
+0.8
+
+B Left ventricular ejection fraction <50% 1.0
+Disease-associated variant 0.8
+
+Mortality risk
+
+Mortality risk
+
+Disease-associated variant
+
+0.6
+
+0.6
+
+0.4
+
+0.4
+
+No disease-associated variant
+
+No disease-associated variant
+
+0.2
+
+0.2
+
+Disease-associated variants, No.
+
+0
+
+50
+
+60
+
+70
+
+80
+
+Left ventricular ejection fraction at enrollment, %
+
+C All-cause mortality 100
+
+80
+
+60
+
+40
+
+20
+
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+Left ventricular ejection fraction at enrollment, %
+
+D Disease-associated variant 40
+30
+
+Died during follow-up Alive at last follow-up
+
+20
+
+10
+
+All-cause mortality, %
+
+0 Cardiomyopathy
+
+Channelopathy Disease-associated variant
+
+None
+
+A and B, Shading indicates 95% CIs.
+
+0 TTN
+
+MYH7
+
+LMNA Gene variant
+
+MHY6
+
+KCNQ1
+
+This finding is consistent with the observation found across a variety of disorders that more deleterious genetic variation occurs in patients with younger age at disease onset. However, our data also demonstrated that as age at AF diagnosis approached 60 years, the mortality curves crossed such that genotype-negative participants started to have a higher risk of mortality. We suspect this finding was attributable to the clinical risk factors for AF found in the genotype-negative group (eg, high BMI and its related comorbidities) that were associated with higher risk of mortality at older age at AF diagnosis. However, the genetic variants associated with older age at AF diagnosis in the genotype-positive group may have been those that are less deleterious and have reduced penetrance.
+Mortality According to Specific Inherited CM and Arrhythmia Syndromes and Individual Genes The gene panel used in this study was large and included genes associated with a variety of different syndromes with variable risks of mortality due to heart failure, sudden death, and stroke. To describe the effects of individual genes, we presented the mortality rate among patient with the most prevalent genes with disease-associated variants. Among the 38 participants with a disease-associated TTN variant, 10 (26%)
+
+died during follow-up. TTN encodes the sarcomeric protein titin and is the most prevalent genetic contributor to both earlyonset AF7,8 and DCM.22-24 Among the 18 participants with a disease-associated MYH7 variant, 6 (33%) died during followup. MYH7 encodes the beta myosin heavy chain subunit and is expressed in the atria and ventricles. Disease-associated variants in MYH7 are among the most prevalent genetic contributors to HCM25 and are associated with higher risk for AF than variants in MYBPC3 and thin filament genes.26,27 Among the 9 participants with a disease-associated LMNA variant, 2 (22%) died during follow-up. LMNA encodes lamin A and C, which are structural proteins that comprise the inner nuclear membrane. Patients with LMNA variants can present with any combination of DCM, atrioventricular block, atrial or ventricular arrhythmias, or Emery-Dreifuss muscular dystrophy.28-31
+In contrast to participants with variants in TTN, MYH7, and LMNA, none of the 10 participants with a disease-associated MYH6 variant died during follow-up. MYH6 encodes the alpha myosin heavy chain subunit and is predominantly expressed in the human atria.32,33 These results suggest that patients with early-onset AF associated with an MYH6 variant may have more isolated atrial involvement compared with those with an MYH7 variant and may have a genetic subtype
+
+jamacardiology.com
+
+(Reprinted) JAMA Cardiology Published online May 11, 2022
+
+E7
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Research Original Investigation
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+of early-onset AF associated with lower risk of mortality. Similarly, none of the 8 participants with a diseaseassociated variant in KCNQ1, the gene associated with LQT type 1, died during follow-up. Larger studies are needed to validate and potentially explain the lower rate of mortality observed in MYH6 and KCNQ1 variant carriers compared with carriers of other genes.
+Deaths Related to Cardiomyopathy, Sudden Death, and Stroke According to the primary or contributing causes of death as listed on death certificates, CM-related deaths (n = 73) were more common than sudden deaths (n = 40) and strokerelated deaths (n = 10). Furthermore, carrying a diseaseassociated rare variant was associated with a significantly higher risk of CM-related death and sudden death. Our results suggest that therapies to prevent sudden death and the progression of CM should be prioritized for further investigation to address the excess mortality observed among genotypepositive patients with early-onset AF.
+Limitations This study has limitations. Although the primary analysis was sufficiently powered to demonstrate an association between disease-associated rare variants and mortality, subgroup analyses were underpowered and larger studies will be needed to define the risk according to variants for individual syndromes, individual genes, and in racial and ethnic minority groups.9 Specifically, most of the disease-associated variants in channelopathy genes were in KCNQ1; thus, it is unknown whether these results are generalizable to other channelopathy genes, such as KCNH2, SCN5A, and RYR2. Furthermore,
+
+although this study defined the association between rare variants and mortality among patients with early-onset AF by querying the NDI, future studies using deep phenotyping methods will be needed to better define clinical characteristics, such as CM subtypes. The reliability of cause of death information as listed on death certificates is a potential limitation, and thus the specific mechanism of death remains uncertain. Future studies will be needed to replicate these results, and prospective trials will be needed to investigate whether genetic testing in patients with early-onset AF improves clinical outcomes.
+Conclusions
+In this study, patients with early-onset AF who carried a disease-associated CM or arrhythmia variant had a higher risk of all-cause mortality and a higher risk for CM-related death and sudden death. Compared with genotype-negative patients, those with a disease-associated variant had a higher relative risk of death when AF was diagnosed at a younger age. Most patients with a history of reduced LVEF at enrollment did not have a disease-associated variant, but among those who did, the mortality rate was 48% during a median 9.9 years of followup. Furthermore, the mortality rate among participants with preserved left ventricular function and a disease-associated variant was 18% during follow-up. These data suggest that there is prognostic value for genetic testing in patients with earlyonset AF regardless of ejection fraction at the time of presentation. Future studies are needed to prospectively define whether genetic testing improves clinical outcomes in patients with early-onset AF.
+
+ARTICLE INFORMATION
+Accepted for Publication: February 24, 2022.
+Published Online: May 11, 2022. doi:10.1001/jamacardio.2022.0810
+Open Access: This is an open access article distributed under the terms of the CC-BY License. © 2022 Yoneda ZT et al. JAMA Cardiology.
+Author Affiliations: Department of Medicine, Division of Cardiovascular Medicine, Vanderbilt University Medical Center, Nashville, Tennessee (Yoneda, Anderson, Quintana, Sims, Davogustto, El-Harasis, Laws, Saldivar, Crawford, Wells, Michaud, Stevenson, Roden, Shoemaker); Department of Biostatistics, Vanderbilt University Medical Center, Nashville, Tennessee (Ye, Sun); Vanderbilt University School of Medicine, Nashville, Tennessee (O’Neill); Department of Medicine, Division of Clinical Pharmacology, Vanderbilt University Medical Center, Nashville, Tennessee (Glazer, Wells, Roden); Department of Pathology, Microbiology and Immunology, Vanderbilt University Medical Center, Nashville, Tennessee (Stricker); Department of Pharmacology, Vanderbilt University Medical Center, Nashville, Tennessee (Wells, Roden); Department of Biomedical Informatics, Vanderbilt University Medical Center, Nashville, Tennessee (Wells, Roden); Department of Medicine, Division of Cardiology, University of Illinois at Chicago (Darbar); Cardiovascular Disease
+
+Initiative, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts (Lubitz, Ellinor); Cardiovascular Research Center & Demoulas Center for Cardiac Arrhythmias, Massachusetts General Hospital, Boston (Lubitz, Ellinor).
+Author Contributions: Drs Yoneda and Shoemaker had full access to all of the data in the study and take responsibility for the integrity of the data and the accuracy of the data analysis. Concept and design: Yoneda, Quintana, Darbar, Roden, Shoemaker. Acquisition, analysis, or interpretation of data: Yoneda, Anderson, Ye, Quintana, O'Neill, Sims, Sun, Glazer, Davogustto, El-Harasis, Laws, Saldivar, Crawford, Stricker, Wells, Michaud, Stevenson, Lubitz, Ellinor, Shoemaker. Drafting of the manuscript: Yoneda, Quintana, El-Harasis, Crawford, Stevenson, Shoemaker. Critical revision of the manuscript for important intellectual content: Yoneda, Anderson, Ye, Quintana, O'Neill, Sims, Sun, Glazer, Davogustto, El-Harasis, Laws, Saldivar, Stricker, Wells, Darbar, Michaud, Stevenson, Lubitz, Ellinor, Roden, Shoemaker. Statistical analysis: Yoneda, Ye, Quintana, Sun, Glazer, Crawford, Shoemaker. Obtained funding: Darbar, Lubitz, Ellinor, Roden, Shoemaker. Administrative, technical, or material support: Anderson, Quintana, Sims, Davogustto, Saldivar,
+
+Lubitz, Ellinor, Shoemaker. Supervision: Ye, Darbar, Stevenson, Shoemaker.
+Conflict of Interest Disclosures: Dr Yoneda reported receiving grants from the American Heart Association (AHA) and the National Institutes of Health (NIH) Clinical Translational Science Award during the conduct of the study. Dr Darbar reported receiving grants from the National Heart, Lung and Blood Institute, NIH during the conduct of the study. Dr Stevenson reported being Chair of the Data, Safety, and Monitoring Board for LivaNova outside the submitted work. Dr Michaud reported receiving consulting fees and honoraria from Boston Scientific, Medtronic, and St Jude Medical and research funding from Boston Scientific and Biosense Webster. Dr Lubitz reported receiving grants from the NIH, the AHA, Invite, BMS/Pfizer, Boehringer Ingelheim, IBM, and Fitbit and receiving personal fees from Blackstone Life Sciences and BMS/Pfizer during the conduct of the study. Dr Ellinor reported receiving grants from Bayer AG and IBM Research and receiving personal fees from Bayer AG, MyKardia, and Novartis during the conduct of the study. Dr Shoemaker reported receiving grants from the AHA during the conduct of the study and receiving grants from the NIH outside the submitted work. No other disclosures were reported.
+Funding/Support: This study was supported by Atrial Fibrillation Strategically Focused Research
+
+E8
+
+JAMA Cardiology Published online May 11, 2022 (Reprinted)
+
+jamacardiology.com
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+
+Mortality in Early-Onset Atrial Fibrillation and Rare Variants in Cardiomyopathy and Arrhythmia Genes
+
+Original Investigation Research
+
+Network awards 18SFRN34110369 and 18SFRN34110082 and Atrial Fibrillation Collaborative Grant award 20SCG35540037 from the AHA. Other resources used in this project (REDCap) were funded by Clinical Translational Science Award UL1TR002243 to Vanderbilt from the National Center for Advancing Translational Sciences, NIH.
+Role of the Funder/Sponsor: The funders had no role in the design and conduct of the study; collection, management, analysis, and interpretation of the data; preparation, review, or approval of the manuscript; and decision to submit the manuscript for publication.
+REFERENCES
+1. Benjamin EJ, Wolf PA, D’Agostino RB, Silbershatz H, Kannel WB, Levy D. Impact of atrial fibrillation on the risk of death: the Framingham Heart Study. Circulation. 1998;98(10):946-952. doi:10.1161/01.CIR.98.10.946
+2. Krahn AD, Manfreda J, Tate RB, Mathewson FA, Cuddy TE. The natural history of atrial fibrillation: incidence, risk factors, and prognosis in the Manitoba Follow-Up Study. Am J Med. 1995;98(5): 476-484. doi:10.1016/S0002-9343(99)80348-9
+3. Lake FR, Cullen KJ, de Klerk NH, McCall MG, Rosman DL. Atrial fibrillation and mortality in an elderly population. Aust N Z J Med. 1989;19(4): 321-326. doi:10.1111/j.1445-5994.1989.tb00271.x
+4. Kannel WB, Abbott RD, Savage DD, McNamara PM. Epidemiologic features of chronic atrial fibrillation: the Framingham study. N Engl J Med. 1982;306(17):1018-1022. doi:10.1056/ NEJM198204293061703
+5. Gajewski J, Singer RB. Mortality in an insured population with atrial fibrillation. JAMA. 1981;245 (15):1540-1544. doi:10.1001/jama.1981. 03310400022019
+6. Jouven X, Desnos M, Guerot C, Ducimetiere P. Idiopathic atrial fibrillation as a risk factor for mortality. The Paris Prospective Study I. Eur Heart J. 1999;20(12):896-899. doi:10.1053/euhj.1998.1397
+7. Choi SH, Weng LC, Roselli C, et al; DiscovEHR study and the NHLBI Trans-Omics for Precision Medicine (TOPMed) Consortium. Association between titin loss-of-function variants and early-onset atrial fibrillation. JAMA. 2018;320(22): 2354-2364. doi:10.1001/jama.2018.18179
+8. Goodyer WR, Dunn K, Caleshu C, et al. Broad genetic testing in a clinical setting uncovers a high prevalence of titin loss-of-function variants in very early onset atrial fibrillation. Circ Genom Precis Med. 2019;12(11):e002713. doi:10.1161/CIRCGEN.119.002713
+9. Chalazan B, Mol D, Darbar FA, et al. Association of rare genetic variants and early-onset atrial fibrillation in ethnic minority individuals. JAMA Cardiol. 2021;6(7):811-819. doi:10.1001/jamacardio. 2021.0994
+10. Yoneda ZT, Anderson KC, Estrada JC, et al. Genetic testing for early onset atrial arrhythmias
+
+changes clinical management: 2 cases of cardiac emerinopathy. JACC Clin Electrophysiol. 2021;7(3): 410-412. doi:10.1016/j.jacep.2020.11.006
+11. Yoneda ZT, Anderson KC, Quintana JA, et al. Early-onset atrial fibrillation and the prevalence of rare variants in cardiomyopathy and arrhythmia genes. JAMA Cardiol. 2021;6(12):1371-1379. doi:10. 1001/jamacardio.2021.3370
+12. Fujita T, Fujino N, Anan R, et al. Sarcomere gene mutations are associated with increased cardiovascular events in left ventricular hypertrophy: results from multicenter registration in Japan. JACC Heart Fail. 2013;1(6):459-466. doi:10.1016/j.jchf.2013.08.007
+13. Olivotto I, Girolami F, Ackerman MJ, et al. Myofilament protein gene mutation screening and outcome of patients with hypertrophic cardiomyopathy. Mayo Clin Proc. 2008;83(6): 630-638. doi:10.1016/S0025-6196(11)60890-2
+14. Pasotti M, Klersy C, Pilotto A, et al. Long-term outcome and risk stratification in dilated cardiolaminopathies. J Am Coll Cardiol. 2008;52 (15):1250-1260. doi:10.1016/j.jacc.2008.06.044
+15. Ho CY. Genetics and clinical destiny: improving care in hypertrophic cardiomyopathy. Circulation. 2010;122(23):2430-2440. doi:10.1161/ CIRCULATIONAHA.110.978924
+16. Meregalli PG, Tan HL, Probst V, et al. Type of SCN5A mutation determines clinical severity and degree of conduction slowing in loss-of-function sodium channelopathies. Heart Rhythm. 2009;6 (3):341-348. doi:10.1016/j.hrthm.2008.11.009
+17. Sacher F, Probst V, Iesaka Y, et al. Outcome after implantation of a cardioverter-defibrillator in patients with Brugada syndrome: a multicenter study. Circulation. 2006;114(22):2317-2324. doi:10. 1161/CIRCULATIONAHA.106.628537
+18. Priori SG, Schwartz PJ, Napolitano C, et al. Risk stratification in the long-QT syndrome. N Engl J Med. 2003;348(19):1866-1874. doi:10.1056/ NEJMoa022147
+19. McNally EM, Golbus JR, Puckelwartz MJ. Genetic mutations and mechanisms in dilated cardiomyopathy. J Clin Invest. 2013;123(1):19-26. doi:10.1172/JCI62862
+20. Franklin by Genoox. Homepage. Accessed February 6, 2021. https://franklin.genoox.com/ clinical-db/home
+21. Richards S, Aziz N, Bale S, et al; ACMG Laboratory Quality Assurance Committee. Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology. Genet Med. 2015;17(5):405-424. doi:10.1038/gim.2015.30
+22. Akinrinade O, Ollila L, Vattulainen S, et al. Genetics and genotype-phenotype correlations in
+
+Finnish patients with dilated cardiomyopathy. Eur Heart J. 2015;36(34):2327-2337. doi:10.1093/ eurheartj/ehv253
+23. Herman DS, Lam L, Taylor MR, et al. Truncations of titin causing dilated cardiomyopathy. N Engl J Med. 2012;366(7):619-628. doi:10.1056/ NEJMoa1110186
+24. Haas J, Frese KS, Peil B, et al. Atlas of the clinical genetics of human dilated cardiomyopathy. Eur Heart J. 2015;36(18):1123-35a. doi:10.1093/ eurheartj/ehu301
+25. Maron BJ, Maron MS, Semsarian C. Genetics of hypertrophic cardiomyopathy after 20 years: clinical perspectives. J Am Coll Cardiol. 2012;60(8): 705-715. doi:10.1016/j.jacc.2012.02.068
+26. Lee SP, Ashley EA, Homburger J, et al; SHaRe Investigators. Incident atrial fibrillation is associated with MYH7 sarcomeric gene variation in hypertrophic cardiomyopathy. Circ Heart Fail. 2018; 11(9):e005191. doi:10.1161/CIRCHEARTFAILURE.118. 005191
+27. Butters A, Isbister JC, Medi C, et al. Epidemiology and clinical characteristics of atrial fibrillation in patients with inherited heart diseases. J Cardiovasc Electrophysiol. 2020;31(2):465-473. doi:10.1111/jce.14346
+28. Fatkin D, MacRae C, Sasaki T, et al. Missense mutations in the rod domain of the lamin A/C gene as causes of dilated cardiomyopathy and conduction-system disease. N Engl J Med. 1999;341 (23):1715-1724. doi:10.1056/NEJM199912023412302
+29. Arbustini E, Pilotto A, Repetto A, et al. Autosomal dominant dilated cardiomyopathy with atrioventricular block: a lamin A/C defect-related disease. J Am Coll Cardiol. 2002;39(6):981-990. doi:10.1016/S0735-1097(02)01724-2
+30. van Tintelen JP, Hofstra RM, Katerberg H, et al; Working Group on Inherited Cardiac Disorders, line 27/50, Interuniversity Cardiology Institute of The Netherlands. High yield of LMNA mutations in patients with dilated cardiomyopathy and/or conduction disease referred to cardiogenetics outpatient clinics. Am Heart J. 2007;154(6):1130-1139. doi:10.1016/j.ahj.2007.07.038
+31. Worman HJ, Bonne G. “Laminopathies”: a wide spectrum of human diseases. Exp Cell Res. 2007; 313(10):2121-2133. doi:10.1016/j.yexcr.2007.03.028
+32. Epp TA, Dixon IM, Wang HY, Sole MJ, Liew CC. Structural organization of the human cardiac alpha-myosin heavy chain gene (MYH6). Genomics. 1993;18(3):505-509. doi:10.1016/S0888-7543(11) 80006-6
+33. Franco D, Lamers WH, Moorman AF. Patterns of expression in the developing myocardium: towards a morphologically integrated transcriptional model. Cardiovasc Res. 1998;38(1):25-53. doi:10.1016/ S0008-6363(97)00321-0
+
+jamacardiology.com
+
+(Reprinted) JAMA Cardiology Published online May 11, 2022
+
+E9
+
+Downloaded From: https://jamanetwork.com/ by a University of Illinois - Chicago User on 05/23/2022
+

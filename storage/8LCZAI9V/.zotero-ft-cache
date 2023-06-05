@@ -1,0 +1,1413 @@
+Europace (2015) 17, 1341–1353 doi:10.1093/europace/euv015
+
+EHRA POSITION PAPER
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+Advances in heart rate variability signal analysis:
+joint position statement by the e-Cardiology ESC
+Working Group and the European Heart Rhythm
+Association co-endorsed by the Asia Paciﬁc Heart
+Rhythm Society
+Roberto Sassi1, Sergio Cerutti2, Federico Lombardi3, Marek Malik (Chair of the writing committee)4*, Heikki V. Huikuri5, Chung-Kang Peng6,7, Georg Schmidt8,9, and Yoshiharu Yamamoto10
+Document Reviewers: Bulent Gorenek (Chair of the review committee, Turkey), Gregory Y.H. Lip (UK), Guido Grassi (Italy), Gulmira Kudaiberdieva (Turkey), James P. Fisher (UK), Markus Zabel (Germany), and Robert Macfadyen (UK)
+1Dipartimento di Informatica, Universita` degli Studi di Milano, Italy; 2Dipartimento di Elettronica, Informazione e Bioingegneria, Politecnico di Milano, Italy; 3UOC Malattie Cardiovascolari, Fondazione I.R.C.C.S. Ospedale Maggiore Policlinico, Dipartimento di Scienze Cliniche e di Comunita`, Universita` degli Studi di Milano, Italy; 4St. Paul’s Cardiac Electrophysiology, University of London, and Imperial College, Dovehouse Street, London SW3 6LY, UK; 5Medical Research Center, Oulu University Hospital and University of Oulu, Finland; 6College of Health Sciences and Technology, National Central University, Chungli, Taiwan; 7Beth Israel Deaconess Medical Center, Harvard Medical School, Boston, MA, USA; 8Medizinische Klinik der Technischen Universita¨t Mu¨nchen, Munich, Germany; 9DZHK (German Center for Cardiovascular Research), partner site Munich Heart Alliance, Munich, Germany; and 10Graduate School of Education, The University of Tokyo, Japan
+Received 26 June 2014; revised 4 September 2014; accepted 13 January 2015; online publish-ahead-of-print 15 July 2015
+
+Following the publication of the Task Force document on heart rate variability (HRV) in 1996, a number of articles have been published to describe new
+
+HRV methodologies and their application in different physiological and clinical studies. This document presents a critical review of the new methods. A
+
+particular attention has been paid to methodologies that have not been reported in the 1996 standardization document but have been more recently
+
+tested in sufﬁciently sized populations. The following methods were considered: Long-range correlation and fractal analysis; Short-term complexity;
+
+Entropy and regularity; and Nonlinear dynamical systems and chaotic behaviour. For each of these methods, technical aspects, clinical achievements,
+
+and suggestions for clinical application were reviewed. While the novel approaches have contributed in the technical understanding of the signal char-
+
+acter of HRV, their success in developing new clinical tools, such as those for the identiﬁcation of high-risk patients, has been rather limited. Available
+
+results obtained in selected populations of patients by specialized laboratories are nevertheless of interest but new prospective studies are needed. The
+
+investigation of new parameters, descriptive of the complex regulation mechanisms of heart rate, has to be encouraged because not all information
+
+in the HRV signal is captured by traditional methods. The new technologies thus could provide after proper validation, additional physiological, and
+
+clinical meaning. Multidisciplinary dialogue and specialized courses in the combination of clinical cardiology and complex signal processing methods
+
+seem warranted for further advances in studies of cardiac oscillations and in the understanding normal and abnormal cardiac control processes.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Keywords
+
+Heart rate variability † Signal analysis † Autonomic nervous system † Risk stratiﬁcation † Nonlinear dynamics †
+
+Entropy † Fractal signals
+
+Introduction
+Heart rate variability (HRV) analysis is widely used to characterize the functions of the autonomic nervous system (ANS). Both physiological cardiovascular models and the development of new clinical characteristics beneﬁt from HRV analyses.
+
+In 1996, the Task Force set-up by the European Society of Cardiology and the North American Society of Pacing and Electrophysiology suggested HRV standards. This standardization document1 became widely referenced with more than 5000 citations (Scopus). The 1996 ‘standards of measurement, physiological interpretation, and clinical use’ were related to time- and frequency-domain HRV
+
+* Corresponding author. Tel: +44 (0)20 8660 2112; Fax: +44 (0)20 8660 6031. E-mail address: marek.malik@btinternet.com Published on behalf of the European Society of Cardiology. All rights reserved. & The Author 2015. For permissions please email: journals.permissions@oup.com.
+
+1342
+
+R. Sassi et al.
+
+analysis for short- and long-term recordings (Table 1). Since the publication of the Task Force standards, thousands HRV-related articles appeared. Broadly speaking, they belong to two different categories. Technically oriented articles report new HRV analysis technologies, while medically oriented publications deal with HRV assessment in different physiological and clinical conditions. Unfortunately, there is presently noticeable disconnect between these two categories. Biomedical engineering literature includes many methods that have never been prospectively applied to clinical data. Practical value of advanced novel HRV technologies might thus be difﬁcult to judge.
+For this reason, the e-Cardiology Working Group of the European Society of Cardiology and the European Heart Rhythm Association have jointly charged the authors of this text with researching and summarizing the value of those HRV methods that have not been addressed in the original standards1 while leading to medically relevant results in recent literature. This document has also been co-endorsed by the Asia Paciﬁc Heart Rhythm Society.
+
+Methodology of the study
+Increasing numbers of HRV-related publications (Figure 1) are likely facilitated by the ease of collecting RR intervals series and by the availability of different methodologies. This document is based on the position that every new HRV analysis parameter should address some unmet clinical or research need which is not solved by more traditional approaches, and preferably also validated on a solid database of annotated cardiovascular signals. Based on this premise, we identiﬁed a number of new methodologies reported in more than 800 publications during the last two decades, and selected those dealing with clinical studies fulﬁlling all of the following criteria: (i) published in a selected group of clinically relevant high-ranking journals after the 1996 Task Force document; (ii) enrolled at least 200 subjects; and (iii) contained the words ‘heart rate’ and ‘variability’ in the title or abstract. (The journals considered were, in alphabetical order: American Heart Journal, American Journal of Cardiology, American Journal of Physiology: Heart and Circulatory Physiology,
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+Table 1 Standard time- and frequency-domain parameters, as deﬁned by the 1996 Task Force document on heart rate variability. Adapted from Ref. 1
+
+Variable
+
+Units
+
+Description
+
+...............................................................................................................................................................................
+
+Time domain, statistical measures
+
+SDNN
+
+ms
+
+Standard deviation of all NN intervals
+
+SDANN
+
+ms
+
+Standard deviation of the averages of NN intervals in all 5-min segments of the entire recording
+
+RMSSD
+
+ms
+
+The square root of the mean of the sum of the squares of differences between adjacent NN intervals
+
+SDNN index
+
+ms
+
+Mean of the standard deviations of all NN intervals for all 5-min segments of the entire recording
+
+SDSD
+
+ms
+
+Standard deviation of differences between adjacent NN intervals
+
+NN50 count
+
+Number of pairs of adjacent NN intervals differing by more than 50 ms in the entire recording
+
+pNN50
+
+%
+
+NN50 count divided by the total number of all NN intervals
+
+Time domain, geometric measures
+
+HRV triangular index
+
+Total number of all NN intervals divided by the height of the histogram of all NN intervals measured on a discrete scale with bins of 1/128 s
+
+TINN
+
+ms
+
+Baseline width of the minimum square difference triangular interpolation of the highest peak of the
+
+histogram of all NN intervals
+
+Differential index Logarithmic index
+
+ms ms – 1
+
+Difference between the widths of the histogram of differences between adjacent NN intervals measured at selected heights
+Coefﬁcient f of the exponential curve ke−ft, which is the best approximation of the histogram of absolute differences between adjacent NN intervals
+
+Frequency domain, short-term recordings (5 min)
+
+Total power
+
+ms2
+
+VLF
+
+ms2
+
+LF
+
+ms2
+
+Variance of all NN intervals (≈≤0.4 Hz) Power in VLF range (f ≤ 0.04 Hz) Power in LF range (0.04 ≤ f ≤ 0.15 Hz)
+
+LF norm HF
+
+LF power in normalized units: LF/(Total power 2 VLF) × 100
+
+ms2
+
+Power in HF range (0.15 ≤ f ≤ 0.4 Hz)
+
+HF norm
+
+HF power in normalized units: HF/(Total power 2 VLF) × 100
+
+LF/HF
+
+Ratio LF/HF
+
+Frequency domain, long-term recordings (24 h)
+
+Total power
+
+ms2
+
+ULF
+
+ms2
+
+VLF
+
+ms2
+
+LF
+
+ms2
+
+HF
+
+ms2
+
+Variance of all NN intervals (≈≤0.4 Hz) Power in the ULF range (f ≤ 0.003 Hz) Power in the VLF range (0.003 ≤ f ≤ 0.04 Hz) Power in the LF range (0.04 ≤ f ≤ 0.15 Hz) Power in the HF range (0.15 ≤ f ≤ 0.4 Hz)
+
+a
+
+Slope of the linear interpolation of the spectrum in a log–log scale (f ≤ 0.01 Hz)
+
+Advances in HRV signal analysis
+
+1343
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+Papers referring to HRV 1980 1982 1984 1986 1988 1990 1992 1994 1996 1998 2000 2002 2004 2006 2008 2010 2012
+
+1200
+1000
+800
+600
+400
+200
+0
+Year
+Figure 1 Number of citations returned by PubMed when searching for ‘heart rate variability’ in the title or abstract, for each year between 1980 and 2013. The total of the citations exceeds 10 000.
+Cardiovascular Research, Circulation, Circulation: Arrhythmia and Electrophysiology, Circulation Research, Europace, European Heart Journal, Heart, Heart Rhythm, International Journal of Cardiology, Journal of the American College of Cardiology, Nature, Science, The Lancet, and The New England Journal of Medicine.)
+As of December 2013, some 130 articles fulﬁlled these criteria. Most of them employed solely the ‘standard methods’ as previously summarized by the Task Force.1 Only 21 studies used ‘non-standard methods’, commonly referred to as ‘nonlinear’. Some of these publications described similar HRV characteristics (Table 2). Heart rate turbulence (HRT), included in 7 of the 21 studies,2 –10 was not considered because of the recent independent consensus document.11
+The following text describes technical aspects of these methods, their clinical achievements, and suggestions for clinical application. Standards of implementation of the methods are proposed in Appendix together with more detailed technical information. This document aims at facilitating the understanding of the advances offered by the new methods in physiological and clinical studies.
+Methods description
+The following methods satisﬁed the described criteria: (i) Long-range correlation and fractal analysis; (ii) Short-term complexity; (iii) Entropy and regularity; and (iv) Nonlinear dynamical systems and chaotic behaviour. For each method, we provide the ‘background concepts’ and the ‘contributions to HRV understanding’. All these methods deal with the time series of normal-to-normal RR interval (NN intervals).
+Long-range correlation and fractal scaling
+Many methods have been proposed to estimate the fractal-like behaviour of HRV.24 The most representative methods are the 1/f a power-law exponent a of the spectrum and the detrended ﬂuctuation analysis (DFA) long-term exponent a2.
+Background concepts The term fractal is most often associated with geometrical objects. It describes an entity too irregular for traditional geometrical shapes ( fractional dimensionality) which shows some degree of self-similarity.
+
+That is, it resembles a common pattern when seen on different scales. Analogously, a temporal stochastic process is said to be self-similar, when its ﬂuctuations on small time scales are statistically equivalent to those on large time scales. Mathematically, this is formalized by requiring that time series x(t) and y(t) = shx(t/s) have identical statistical properties for a certain range of scales s. The real number h is called the scaling exponent and characterizes the self-similarity of series x(t).
+Fractal properties of NN series have been extensively researched.24,18,25 – 29 Fluctuations on multiple scales make fractal time series seemingly irregular. In fractal analysis, NN series are considered generated by a random stochastic process (such as tossing of a coin) rather than by a deterministic system (such as implementing a precise mathematical equation).
+Self-similar signals display a power-law spectral density30 in the very low-frequency range. The exponent a of the 1/f pattern measures the self-similarity scaling (Figure 2). The generalized correlation function of fractal NN signals decays very slowly, implying that the contemporary value of the series is signiﬁcantly affected by its past. The self-similar (fractal) processes are also often referred to as ‘longmemory’ or ‘long-range dependence’ processes. Non-stationary selfsimilar processes display a variance increasing with the length of the series. The so-called DFA allows quantifying the process by measuring how the variance is affected by the length of the NN series.
+More recent studies dealt with a higher order approach, called multifractal analysis in which a fractal is composed by a set of fractals.31,32 Different sub-parts of the signal are characterized by local regularities with different fractal dimensions. While the theoretical framework is rather complex, multifractal signals are in practice characterized by more than one scaling coefﬁcient h.
+Contribution to heart rate variability understanding Self-similar (fractal) measures provide quantitative description of irregularities present in physiologic signals. Contrary to spectral techniques, fractal analysis studies the irregularity of the NN series assuming that it is not characterized by any ﬁxed time scale.
+Similar to other system studies, the main limitation of fractal analysis is the lack of direct correspondence to physiology. Changes of scaling exponent observed in different clinical conditions are not speciﬁc for underlying physiologic and/or pathologic mechanisms.
+Short-term complexity
+Background concepts While fractal analysis quantiﬁes long-term irregularity, these techniques quantify irregularities on shorter scales (at most 10 NN intervals). The short-term analysis reﬂects both the continuous adaptations of several regulatory processes operating at different time scales, and the different capacity for cardiovascular adaptation over different short scales.25,33 There are several methods in this category differing in their value for HRV analysis.
+Contribution to heart rate variability understanding Detrended ﬂuctuation analysis short-term exponent Detrended ﬂuctuation analysis is derived from fractal analysis and is suitable for processing of scale-invariant signals (i.e. signals showing the same statistical properties on a broad time-scale range). Already seminal applications showed that HRV has different properties on short or long scales.
+
+1344
+
+R. Sassi et al.
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+Table 2 Overview of the non-standard metrics in publications fulﬁlling the selection criteria
+
+References
+...............
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+Patients
+...........
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+a ...
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+DFA
+.......
+
+.a. 2. .
+
+.
+
+.
+
+.
+
+DFA
+.......
+
+.a.1. .
+
+.
+
+.
+
+.
+
+Poincare´ plot
+..................
+
+.
+
+.
+
+.
+
+.
+
+ApEn
+........
+
+.
+
+.
+
+.
+
+DC/AC
+..........
+
+.
+
+.
+
+.
+
+.
+
+HRT
+.......
+
+.
+
+.
+
+.
+
+Others
+..........
+
+Perkio¨ ma¨ki et al. 20113
+
+292 AMI
+
+3
+
+3
+
+Europace
+
+CARISMA
+
+,0.77
+
+...............................................................................................................................................................................
+
+Gang et al. 20114
+
+292 AMI
+
+3*
+
+3
+
+3
+
+Europace
+
+CARISMA
+
+.1.5
+
+,0.9
+
+...............................................................................................................................................................................
+
+Cygankiewicz et al. 200910
+
+294 CHF
+
+3
+
+Am J Cardiol
+
+MUSIC
+
+...............................................................................................................................................................................
+
+Rashba et al. 200912
+
+300 AMI
+
+3
+
+Circulation
+
+AET-EP
+
+...............................................................................................................................................................................
+
+Mozaffarian et al. 200813
+
+1152 H ≥ 65 years
+
+3
+
+3
+
+Circulation
+...............................................................................................................................................................................
+
+Cygankiewicz et al. 20069
+
+487 CHF
+
+3
+
+Am J Cardiol
+
+MUSIC
+
+...............................................................................................................................................................................
+
+Beckers et al. 200614
+
+276 H
+
+3
+
+3
+
+3
+
+3
+
+3 (1)
+
+Am J Physiol Heart Circ Physiol
+...............................................................................................................................................................................
+
+Bauer et al. 200615
+
+2711 AMI
+
+3
+
+Lancet
+...............................................................................................................................................................................
+
+Bauer et al. 20068
+
+608 AMI
+
+3
+
+Int J Cardiol
+
+EMIAT
+
+...............................................................................................................................................................................
+
+Guzzetti et al. 200516
+
+330 CHF
+
+3
+
+Eur Heart J
+
+.1.33
+
+...............................................................................................................................................................................
+
+Hallstrom et al. 20057
+
+744 AMI
+
+3
+
+Int J Cardiol
+
+CAST
+
+...............................................................................................................................................................................
+
+Wichterle et al. 20042
+
+2027 AMI
+
+3
+
+3 (2)
+
+Circulation
+
+EMIAT + ATRAMI
+
+≥0.1
+
+...............................................................................................................................................................................
+
+Osman et al. 20046
+
+799 BHyT
+
+3
+
+Am J Cardiol
+...............................................................................................................................................................................
+
+Jokinen et al. 20035
+
+600 AMI
+
+3*
+
+3
+
+3
+
+Am J Cardiol
+
+MRFAT
+
+.1.55
+
+,0.65
+
+...............................................................................................................................................................................
+
+Sosnowski et al. 200317
+
+594 AMI
+
+3 (3)
+
+Int J Cardiol
+
+,35%
+
+...............................................................................................................................................................................
+
+Tapanainen et al. 200218
+
+697 AMI
+
+3
+
+3
+
+3*
+
+Am J Cardiol
+
+.1.55 ,1.05 ,0.65
+
+...............................................................................................................................................................................
+
+Ma¨kikallio et al. 200119
+
+325 H ≥ 65 ys
+
+3
+
+3*
+
+J Am Coll Cardiol
+
+Turku, Finland
+
+.1.5
+
+,1.0
+
+...............................................................................................................................................................................
+
+Ma¨kikallio et al. 200120
+
+499 CHF
+
+3
+
+Am J Cardiol
+
+DIAMOND CHF
+
+,0.9
+
+...............................................................................................................................................................................
+
+Pikkuja¨msa¨ et al. 200121
+
+389 H
+
+3
+
+3
+
+Am J Physiol Heart Circ Physiol
+
+≈1
+
+≈1
+
+...............................................................................................................................................................................
+
+Huikuri et al. 200022
+
+446 AMI
+
+3
+
+3
+
+3*
+
+3
+
+Circulation
+
+DIAMOND MI
+
+.1.5 ,0.85 ,0.75 SD2,55
+
+...............................................................................................................................................................................
+
+Continued
+
+Advances in HRV signal analysis
+
+1345
+
+Table 2 Continued
+
+References
+...............
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+Patients
+...........
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+a ...
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+DFA
+.......
+
+.a. 2. .
+
+.
+
+.
+
+.
+
+DFA
+.......
+
+.a.1. .
+
+.
+
+.
+
+.
+
+Poincare´
+............
+
+plot
+......
+
+.
+
+.
+
+.
+
+.
+
+ApEn
+........
+
+.
+
+.
+
+.
+
+DC/AC
+...........
+
+.
+
+.
+
+.
+
+HRT
+.......
+
+.
+
+.
+
+.
+
+Others
+..........
+
+Huikuri et al. 199823
+
+325 H ≥ 65 ys
+
+3
+
+Circulation
+
+Turku, Finland
+
+.1.5
+
+Dichotomization thresholds are reported when applicable. An asterisk marks the technique which was comparably better than others. The ‘Patients’ column reports the number and clinical class of patients investigated: H, healthy; AMI, acute myocardial infarction survivors; CHF, congestive heart failure; BHyT, biochemical hyperthyroidism. Where available, the trial name is included. Column ‘Others’ refers to: (1) Fractal dimension, correlation dimension D2, and largest Lyapunov exponent. (2) Prevalent low-frequency oscillation. The technique, locates the frequency of the predominant peak in the LF band (with similarities to methods which locate the frequency of the predominant pole of an autoregressive model). (3) Heart rate variability fraction, a measure of concentration of the bi-dimensional histogram of consecutive RR intervals (closely related to the Poincare´ plot) around a most common pattern.
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+A
+
+HRV
+
+1000
+
+800
+
+Normal subject
+B
+105
+
+PSD [ms2/Hz]
+
+600
+
+400 500 1000 1500 2000 2500 3000 3500 4000 4500 5000 1000
+
+800
+
+600
+
+400
+
+500
+
+1000
+
+1500
+
+2000
+
+104
+
+103
+
+2500
+
+102 10–3
+D
+105
+
+10–2
+
+10–1
+
+Frequency [Hz]
+
+1000 800 600 400
+
+100 200 300 400 500 600 700 800 900 1000
+
+DAF
+
+104
+
+103
+
+102
+
+101
+
+101
+
+102
+
+103
+
+104
+
+Scales
+
+DFA
+
+PSD [ms2/Hz]
+
+Post MI patient
+C
+
+105
+
+104
+
+103
+
+102 10–3
+E
+105
+
+10–2
+
+10–1
+
+Frequency [Hz]
+
+104
+
+103
+
+102
+
+101
+
+101
+
+102
+
+103
+
+104
+
+Scales
+
+Figure 2 Self-similar tachograms resemble a common pattern when inspected on different scales (A). Self-similarity manifests itself into a powerlaw power spectral density (PSD) in the very low frequency (B and C) and DFA for long scales (D and E). The scaling does not continue indeﬁnitely as frequency increases (or scale decreases) and breaks down when the other typical HRV spectral components become dominant (e.g. the peak in the PSD at about 0.3 Hz). Self-similarity is affected by many pathological conditions like myocardial infarction. The healthy subject in (B) and (D) has a ¼ 1.07 and DFA long-term exponent a2 ¼ 1.04 while the post-MI patient in (C) and (E) has a ¼ 1.44 and a2 = 1.18. The linear scaling of the short-term DFA exponent a1 is also included in (D) and (E) for scales ≤11 (a1 = 1.54 and 1.08, respectively).
+
+The DFA short-term exponent a1 estimates the self-similarity properties of HRV on short scales (Figure 2) and is highly effective in clinical applications (Table 2). However, it does not describe the overall self-similarity characteristics of HRV. Nevertheless, it seems suitable to quantify short-term changes caused by NN interval oscillations that may be affected by autonomic activation34,35 and are often wrongly related solely to respiration.
+Poincare´ plot analysis A Poincare´ plot (or recurrence map) is obtained by simplistically plotting the values NNn+1 against the values of NNn. The name stems from dynamical systems theory (a Poincare´ map is a reduction of a N-dimensional continuous system to a (N – 1)-dimensional
+
+map,36 see also ‘Nonlinear dynamical systems and chaotic behaviour’ section).
+In HRV applications, the mainstream usage of Poincare´ plots has been limited to a ‘tool for graphically representing summary statistics’37 with little connections to nonlinear dynamical systems theory (Figure 3). Typical parameters derived from Poincare´ plots, such as SD1, SD2, or SD12 (see ‘Poincare´ plot analysis’ section in Appendix) are directly related to standard temporal indices SDNN and SDSD37 and provide the same information. The sole beneﬁt of visual analysis of Poincare´ plot is in conﬁrming the adequate editing of the NN interval series, e.g. separating ectopic beats from random oscillations of sinus beats without compensatory pauses (Figure 3B).
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+1346
+
+R. Sassi et al.
+
+Heart rate variability fraction17 has been proposed as a measure of concentration of the bi-dimensional histogram of RR intervals (a discretized Poincare´ plot).
+Deceleration and acceleration capacity The underlying hypothesis of these analyses is that heart rate changes due to a particular trigger event are repetitive. Phase rectiﬁed signal averaging (PRSA) selects instances of particular events, aligns them in phase, and performs signal averaging of the time series to extract the information of interest.33,38 Phase rectiﬁed signal averaging thus allows detecting and quantifying oscillations masked by the non-stationary nature of the analysed signal. The simplest events in the NN series are when heart rate decelerates or accelerates.15 By using these two triggers, the PRSA allows to quantify deceleration-related (deceleration capacity—DC) and acceleration-related (acceleration capacity—AC) modulations of NN series separately. The same averaging method may be used to study interactions of different signals (e.g. blood pressure, respiration) with NN series.39
+Entropy and regularity
+Background concepts In physics, entropy describes, loosely speaking, the amount of ‘disorder’ of particles in a system. In information theory,40 entropy relates to the probability density function of a variable. When applied to a sequence (e.g. using a histogram), it is often termed ‘Shannon’ entropy and quantiﬁes its complexity by means of an average information content. The entropy rate measures the increase of entropy of a sequence when an extra sample is added. Clearly, if the entropy rate drops when the sequence grows, the process is very regular and predictable. Conversely, a constant
+
+entropy rate suggests that each new sample is not completely predictable (Figure 4). In HRV analysis, the entropy rate is often simplistically referred to as ‘entropy’.
+Metrics such as approximate entropy (ApEn) and sample entropy (SampEn) were proposed to quantify the entropy rate of short- to mid-length NN series. The conditional corrected entropy (CCE) provides similar information after NN intervals of similar length are represented with a common label (the so-called ‘symbolic representation’, ‘Symbolic dynamics’ section in Appendix).
+Contribution to heart rate variability understanding The ANS adapts the heart rate to the current needs which might change continuously. Thus, the NN series is irregular with high entropy. However, when the system becomes less responsive to environmental stimuli, entropy decreases and the NN signal becomes more ‘ordered’. Highly ordered (low entropy) signals are more predictable than low ordered (high entropy) signals. Entropy measurements are particularly sensitive to transient irregularity and changes in HRV, especially in short-term recordings.39,19
+Approximate entropy, SampEn, and CCE were shown to progressively decrease during sympathetic activation induced by gradual head-up tilt test,41 thus offering an alternative measurement of sympathovagal balance.
+Nonlinear dynamical systems and chaotic behaviour
+Over short time scales, autoregressive models of NN series are generally suitable for statistical prediction and studies of the underlying evolution of physiological systems42 if no abrupt changes alter the physiologic regulation. In long series, however, abrupt changes may occur frequently. Then, a ‘dynamical’ system analysis might be used,
+
+RRi + 1[ms] RRi + 1[ms]
+
+A 1500
+1400 1300 1200 1100 1000
+900 SD1 800 700 600 500 400
+400 600
+
+SD2
+
+800 1000 RRi [ms]
+
+1200
+
+1400
+
+B 2200
+2000 1800 1600 1400 1200 1000
+800 600 400
+400 600 800 1000 1200 1400 1600 1800 2000 2200 RRi [ms]
+
+Figure 3 Traditional parameters obtained from a Poincare´ plot (A). SD1 and SD1 are mathematically equivalent to linear HRV indices (‘Poincare´ plot analysis’ section in Appendix). Poincare´ plots are effective in detecting errors in the labelling procedure, ectopic beats, or other rhythm abnormalities as shown in (B).
+
+Advances in HRV signal analysis
+
+A ABDADCBCDBDBADBCCBBD B ABDADCBCDBDBADBCCBBD
+
+Probability
+
+0.4 0.2
+0 ABCD IA = – log pA
+E1 = – pA lA – pB lB – pC lC – pD lD
+C
+
+pAD
+
+=
+
+2 19
+
+IAD = – log pAD
+
+E2 = – Si,j = {A,B.C.D}pijlij
+
+1347
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+Figure 4 Schema of entropy in the HRV context. The quantity of information carried by an event is computed as the logarithm of its inverse probability: rare events (low probability) carry large informative contents. (A) A tachogram in which NN intervals was classiﬁed into four possible classes, labelled A – D. To compute the information carried by class A, the probability of the class is ﬁrst estimated by an histogram. Then the (Shannon) entropy of the NN series is obtained as the average of the information provided by each NN class. The same can be done for any number m of consecutive NN interval classes (B for m = 2). Entropy rate measures how much entropy changes from m to m + 1, i.e. Em+1 − Em. Approximate entropy and SampEn estimate the entropy rate of the NN series (C). Instead of building an histogram of NN durations, the number of intervals which do not differ more than r from a given NN interval (arrow) are counted (highlighted area in C ).
+
+where the position-in-time (or ‘trajectory’) of a point within a geometrical (or ‘state’) space, is determined by a ﬁxed mathematical law specifying the immediate future. The coordinates of the point are called ‘state variables’ and their number deﬁnes the dimension of the system (the ‘degrees of freedom’). Unless the dynamical rule is a linear combination of state variables, the system is called a nonlinear dynamical system. Many biophysical phenomena can be modelled as dynamical systems.
+Theories of nonlinear dynamical systems and of chaotic behaviour may be used to study the HRV predictability and complexity. In such studies, NN series represents the output of a ‘nonlinear’ dynamical system (Figure 5).
+Background concepts Nonlinear dynamical systems might show sensitive dependence on initial conditions (Figure 5). That is, limited error in the knowledge of the initial state leads to an ‘unlimited’ error in the orbits. Such systems are called chaotic.36 They are characterized by a positive Lyapunov exponent, which is a mathematical measure of the rate of divergence of neighbouring trajectories. Another usual characteristic of nonlinear dynamical systems is that trajectories at equilibrium are often limited by a ‘strange’ attractor (a geometrically fractal entity).
+Since the initial proposal of chaotic nature of human HRV,43 many attempts have been made to ﬁnd the evidence of chaos. After reconstructing the trajectories of the hypothetical system, investigations looked for (i) a positive Lyapunov exponent, (ii) a non-integer correlation dimension D244 or fractal box-counting dimension of the
+
+attractor, and (iii) a decrease in nonlinear predictability, and other characteristics.
+Contribution to heart rate variability understanding The results collected so far are very limited. Glass recently clearly summarized:45 ‘Although there have been some spectacular advances in understanding the nonlinear dynamics of complex arrhythmias, the application of these insights into clinically useful procedures and devices has been more difﬁcult than I imagined’.
+Possible explanations for these inconclusive ﬁndings include the sensitivity of investigated measures (i.e. Lyapunov exponent and D2) to the limited length and noise of NN series.46 Also, long-range correlated random processes (stochastic, hence non-chaotic) which also possess fractal properties (‘Long-range correlation and fractal scaling’ section), easily produce false positive test-results for deterministic chaos. Thus, in our opinion, it is impossible to draw the conclusion that human HRV arises from a chaotic behaviour of the cardiovascular system.45 However, techniques (or their variants) developed in the context of nonlinear dynamical system were successfully employed to characterize HRV irregularity and in risk stratiﬁcation.47,48
+Clinical achievements
+The novel approaches characterizing complex systems require sophisticated theoretical and computational background. This restricts successful application of the new methods to centres with
+
+1348
+
+R. Sassi et al.
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+A
+
+B
+
+750
+
+z [ms]
+
+700
+
+d (t) ~ el1td (0)
+
+650
+
+600
+
+550
+
+550
+
+600 650 x [ms]
+
+700
+
+750
+
+750
+
+700
+
+650
+
+600 550
+
+y [ms]
+
+d (0)
+
+Figure 5 (A) Approximately 4 min. of NN series of a healthy subject embedded in a space of M dimension (M ¼ 3). Each point is constructed by taking delayed samples of the HRV series, XM(i) = [NNi, NNi+1, NNi+2]. Under the hypothesis that HRV is dictated by a low-order nonlinear system, the reconstructed trajectory is used to infer properties of the unknown system. In a chaotic nonlinear system, distance between nearby trajectories grows exponentially with time (B). The growth rate is modulated by the largest Lyapunov exponent l1 and this property is often expressed as ‘large sensitivity to initial conditions’. Even if trajectories are forced to diverge they are also bounded to a subspace: the attractor. To stay bounded they need to ‘fold back’. Since they cannot cross each-other, they often wander over a fractal geometrical entity.
+
+advanced knowledge in both medical and engineering/computer science ﬁelds. So far, this prevented widespread clinical utilization of these methods.
+Although it is possible to hypothesize theoretically that some of the new metrics quantify HRV characteristics, such as self-similarity and complexity, which cannot be explored by traditional methods, clinical advances of the new methods are not entirely supported by the presently available data.
+Myocardial infarction
+Bigger et al.49 were the ﬁrst to report the clinical relevance of a (‘Long-range correlation and fractal scaling’ section) after acute myocardial infarction (AMI). In a survival analysis, a . 1.372 was linked to increased mortality during follow-up.
+Subsequently, Huikuri et al.22 reported that in AMI survivors with left ventricular ejection fraction (LVEF) ≤ 35%, a . 1.5 (and also DFA a2 , 0.85) was superseded by DFA a1 , 0.75 as the most powerful predictor of all-cause mortality, after adjusting for other factors including age, LVEF, NYHA class, and medications.
+These ﬁndings were conﬁrmed by Tapanainen et al.18 who also showed that DFA a1 , 0.65 was the most powerful predictor of mortality among AMI survivors. In a subsequent study by the same group,5 multivariate analysis showed that, after adjustment of clinical variables, DFA a1 , 0.65 and a . 1.55 (as well as HRT slope and onset) predicted subsequent cardiac death. The predictive value of both parameters was retained when measured at the convalescent or late phase after AMI.
+No signiﬁcant differences at 1 year were also found in DFA a1 changes between patients randomized after AMI to receive percutaneous coronary intervention and stenting or optimal medical therapy alone.12
+
+CARISMA substudy4 noticed that 1/f power-law exponent a . 1.5 was the most effective HRV-related risk predictor of developing high-degree atrioventricular block after AMI. Subsequently, in another CARISMA substudy,3 DFA a1 , 0.77 adjusted for relevant clinical variables, was a signiﬁcant predictor of ventricular tachyarrhythmias.
+Available evidence thus suggests that DFA short-term exponent might be an effective predictor of cardiac death whilst self-similarity properties of the NN series over long period of time (e.g. 1/f powerlaw exponent a) might be a more general predictor of all-cause mortality. This is consistent with the fact that the properties of longterm recordings reﬂect a combination of different control mechanisms and are thus affected by both cardiac and extra-cardiac factors. On the contrary, analysis of short-term recording reveals the failure to adapt to cardiac stimuli, such as transient myocardial ischaemia, with implications for cardiac prognosis.
+In respect of the predictive values of Poincare´ plots, SD2 , 55 was a signiﬁcant predictor of all-cause and non-arrhythmic cardiac mortality in AMI survivors,22 after adjustment for traditional risk factors (age, LVEF, NYHA class, and medication). The same study showed that traditional HRV parameters, including VLF and LF power, displayed similar or higher predictive values. The additional clinical value of Poincare´ plot analysis is thus limited.
+Deceleration capacity was evaluated in a large multicentre study15 of post-AMI patients and proved to be a better predictor of mortality than LVEF and SDNN. In addition, when dichotomized at 2.5 ms, DC was the highest relative predictive risk parameter in a multivariate Cox regression analysis. Deceleration capacity was also shown of increased clinical value when combined with HRT.50
+Finally, Voss et al.51 reported that the high-risk prediction after AMI by traditional time- and frequency-domain HRV parameters was further improved by the addition of symbolic dynamics.
+
+Advances in HRV signal analysis
+
+1349
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+Congestive heart failure
+In the DIAMOND study patients, Ma¨kikallio et al.20 reported that DFA a1, together with conventional HRV parameters, predicted mortality univariately. After age, functional class, medication, and LVEF adjustment, DFA a1 , 0.9 remained an independent mortality predictor, also in patients with most severe functional impairment.
+In a large congestive heart failure (CHF) population, Guzzetti et al.16 reported that the power-law exponent a ≥ 1.33 was signiﬁcantly univariately related to the extent of ventricular dysfunction in whereas traditional spectral parameters (VLF components in particular) had greater prognostic value. In multivariable analyses, a was no longer a signiﬁcant risk predictor.
+In a study comparing the predictive value of several HRV nonlinear parameters in CHF patients, Maestri et al.48 showed that only symbolic dynamics added prognostic information to traditional clinical parameters. More recently, DFA a1 has been conﬁrmed affective in predicting cardiovascular death in GISSI-HF population,52 also when taking into account traditional clinical variables and HRV parameters.
+Thus, in CHF, where HRV is known to decrease and to reﬂect disease progression, novel short-term measures provide quantitative description of the residual variability but their advantages in clinical studies of risk prediction are at best modest.
+Subjects without evidence of heart disease
+Huikuri et al.23 reported that a value of a . 1.5 was the best predictor of all-cause mortality in a large population of subjects over 65 years of age, even after adjustment for several clinical parameters. Subsequently, Ma¨kikallio et al.19 showed that DFA a1 , 1.0 was an independent predictor of sudden cardiac death among HRV-related indexes whereas the power-law exponent a . 1.5 was the strongest predictor of all-cause mortality. Mozaffarian et al.13 conﬁrmed the association of DFA a1 with cardiac death risk (after adjusting for age, gender, race, education, smoking, diabetes, treated hypertension, and body mass index) and also showed, that ﬁsh consumption (v3 fatty acids) was signiﬁcantly correlated with DFA a1. Finally, in a large community-dwelling adult population (age 65– 93 years), the combination of low DFA a1 with abnormal HRT was a strong risk factor for cardiovascular death even after adjustment for conventional cardiovascular risk parameters.53
+Beckers et al.14 studied age effects in a population of healthy subjects with ages between 18 and 71. Both a and DFA a2 increased with age, whereas gender differences were less pronounced.
+In subjects with no evidence of heart disease and history of paroxysmal atrial ﬁbrillation, ApEn was found to decrease before the onset of arrhythmic events.54 Sample entropy also predicted sepsis in prematurely born infants.55
+Suggestions for clinical use
+The following suggestions aim at placing the utility of the novel HRV technologies in the appropriate context.
+Notwithstanding the new methods described in this text, traditional time and frequency-domain HRV analysis remain the methods of choice for the assessment of ANS physiology and pathophysiological modelling. In fact, the long experience and validation of traditional techniques make them the most reliable tools. Therefore,
+
+we suggest using the new techniques in conjunction with more traditional ones, to enrich our physiological and clinical understanding of the mechanisms underlying HRV. Available data indicate that these novel methods have provided more information on the complexity and mathematical or physical characteristics of the variability signal than on sympathetic or parasympathetic neural control mechanism, even if they were originally developed to clarify the physiological correlates of HRV.
+As with traditional HRV techniques, the recording conditions (duration, body position, free or controlled breathing, etc.) can substantially affect short-term metrics, thus making comparison of different studies challenging. There is also limited information on the reproducibility of new methods. Studies performed on small subjects population hint that the intra-subject repeatability for short-term metrics is comparable with that of traditional HRV indexes, but further evidence is necessary.
+Available studies of post-AMI risk suggest that short-term fractal scaling (DFA a1) may successfully predict cardiac mortality while other novel methods appear to predict all-cause mortality. Nevertheless, available comparisons of the traditional and novel HRV analyses do not show consistent superiority of the new methods in clinical risk stratiﬁcation studies. Systematic statistical evaluation of the additive prognostic value of the new methods is presently lacking. Comprehensive comparisons of the traditional and novel methods are needed based on new prospective clinical studies and/ or meta-analyses of large existing databases. Without such comparisons, widespread use of the novel methods in clinical risk studies cannot be recommended.
+Although in CHF patients, short-term DFA measures appear effective in identifying high-risk patients, there are many categories of clinically well-deﬁned populations in which the use of novel HRV techniques has not been attempted.
+Similar to the conventional HRV methods, the results of the new methods are affected by age. The extent and the character of this age dependency are less known compared with that of the conventional HRV methods. In physiologic and clinical studies, age dependency should therefore be carefully considered, e.g. by including age-matched control groups.
+Conclusions
+The novel approaches to HRV analysis summarized in this text contributed in the technical understanding of the signal character of NN sequences. On the other hand, their success in developing new clinical tools, such as those for the identiﬁcation of high-risk patients, has been so far rather limited. Some of the novel parameters correlate with more traditional measurements, demonstrating a consistency that, nevertheless, does not allow substituting the latter with the former. In many instances, however, the new parameters seem to provide different information about the complexity of the physiological underlying mechanisms which constitutes an important step for the future. The physiological and clinical impact of the observed physical signal processing properties seems to still suffer from the conceptual disconnect between clinical cardiologists on the one side and mathematicians and engineers involved in signal processing theories on the other side. At the same time, available results obtained in selected populations of patients researched by specialized
+
+1350
+
+R. Sassi et al.
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+laboratories are of interest and potential promise. Multidisciplinary dialogue and specialized courses in the combination of clinical cardiology and complex signal processing methods seem warranted for further advances in cardiac physiology and in the understanding normal and abnormal cardiac control processes. Additional clinical validation of existing novel methods is needed in multicentre studies with large cohorts of patients to deﬁne their clinical predictive value as well as their robustness in relation to reproducibility, clinical widespread use, and possibly, implementation in commercial devices. Before such validations are available and before the clinical use of existing novel techniques becomes more widespread, it is difﬁcult to encourage the development of new variants of the novel methods or of completely new methods based on highly sophisticated signal processing techniques. Signal processing HRV techniques that do not reﬂect unmet clinical needs are of little value irrespective of the depth of their mathematical apparatus.
+Appendix
+Implementation standards
+Long-range correlation and fractal scaling
+1/f power-law exponent a Two main computational strategies for the 1/f power-law exponent a were proposed. The earlier one22,19,23 was used by Bigger et al.49,56 It requires resampling the NN series to obtain a regularly spaced time series. Subsequently, the power spectrum (FFT-based) is integrated (‘logarithmic smoothing’) over frequency with an equal number of bins per decade (60 bins/decade). A robust regression is applied in the log(power) vs. log(frequency) axis, in the range of 10–4 , f , 10–2 Hz. The slope of this line is the scaling exponent a. The other method is described in the 1996 Task Force document1 and is analogous to the ﬁrst one except that the NN series is not resampled and the logarithmic smoothing is not performed. Both methods are technically equivalent. The logarithmic smoothing (sometimes called ‘boxed’ or ‘modiﬁed’ periodogram method) was introduced to compensate the unevenly distribution of points in the log(frequency) axis and the possible bias due to the larger number of points at the higher frequencies.30,57 However, technical studies validating the long-term scaling exponent estimators on synthetic series of known properties have shown that compared with the simple periodogram method, estimates obtained with logarithmic smoothing lead to slightly larger variance57 or bias.58,59 The ﬁtting range 10–4 , f , 10–2 is a de facto standard, and f , 10−2 is in principle preferable to f , 0.04.1
+Detrended ﬂuctuation analysis long-term exponent The DFA algorithm was described in Peng et al.,25 with small additions in Peng et al.,60 and a practical implementation becomes soon available.61 As a result, the computation has been fairly consistent in the literature. Only one detail needs discussing. The range of scales n . 11 employed to compute DFA a2 in Huikuri et al.22 and Beckers et al.14 is smaller than that n . 16 proposed in the introduction of DFA.25,26 The upper scale limit is implicitly imposed by the DFA software to one-fourth the length of the input series, and it is seldom reported.24,26 Detrended ﬂuctuation analysis was introduced to reduce the bias possibly produced by spurious
+
+non-stationarity when estimating the scaling exponent in stationary self-similar time series. However, in comparative analysis, it performed similarly to the simple periodogram method described in the previous section.57,59
+Remarks The two metrics a and DFA a2 are meant to quantify long-range dependence in a given series. However, they operate differently. Detrended ﬂuctuation analysis a2 is directly related to the selfsimilarity scaling exponent h which it estimates (h = DFA a2, for 0 , DFA a2 , 1, while h = DFA a2 − 1 for 1 , DFA a2 , 2). A scaling relation must be used to obtain a corresponding estimate of the slope of the spectrum for frequencies close to zero, aˆ = 2DFA a2 − 1.24,59 Similarly, an equivalent scaling exponent hˆ can be obtained from a (hˆ = (a + 1)/2 for −1 , a , 1, while hˆ = (a − 1)/2 for 1 , a , 3).
+The fractal dimension D is related to a by the algebraic relation a = 5 − 2D.
+Both the periodogram method and DFA provide estimates linearly related to a in the range of physiological interest (typically between 1 and 2). It may thus serve as the reference benchmark techniques.
+Finally, fractal analysis is preferable for NN time series from longterm recording (e.g. 24 h and longer).
+Short-term complexity
+Detrended ﬂuctuation analysis short-term exponent The short-term DFA scaling exponent a1 is obtained using the same computational steps employed for the long-term DFA exponent a2. However, the range of scales is different, typically between 4 and
+11.14,21 The lower bound n = 4 is the smaller scale allowed by the standard code.61 Although short time scales might contain broadband noise induced by electrocardiogram (ECG) sampling,31 the results reported in Table 2 suggest that it is not too important.
+Poincare´ plot analysis Quantitative analysis of Poincare´ plot is typically performed62 ﬁtting an ellipse to the plot. In practice, a new axis is aligned with the line-of-identity. The standard deviation of the cloud of points in the direction traverse to the line-of-identity is usually called SD1, and it is a measure of short-term (‘instantaneous’) HRV. On the contrary, the standard deviation of the cloud of points in the direction of the line-of-identity is termed SD2 and it is a measure of long-term (‘continuous’) HRV. The ratio SD1/SD2 is then termed SD12.
+As Brennan et al.37 pointed out, ‘these popular techniques that characterize the geometry of a Poincare´ plot are related to linear indexes of HRV’. It is easy to prove mathematically that
+SD12 = 1 SDSD2, 2
+SD22 = 2SDNN2 − 1 SDSD2, 2
+where both SDNN and SDSD are computed on the same NN series used to construct the Poincare´ plot. Other indexes describing Poincare´ plot have been developed.63,64 Nevertheless, SD1, SD2, and SD12 are commonly used, due to their computational simplicity.
+
+Advances in HRV signal analysis
+
+1351
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+The SD12 ratio was empirically found to be highly correlated with DFA a1 (r = −0.92) in a large study of subjects aged 65 years and above.13
+Deceleration and acceleration capacity Deceleration capacity and AC computation depends on three parameters: T acts on the selection of the anchor points (the trigger events located on the ECG), L is the width of the averaging window, and s is the number of acceleration/deceleration cardiac cycles. Usually but not always s ¼ T (e.g. T ¼ 1 and s ¼ 2 in Bauer et al.15). In ﬁrst approximation (the superposition principle does not hold with a nonlinear metric), the values of s and T implicitly enhance HRV oscillations of certain frequency bands, the larger their values the smaller frequencies emphasized. It is sufﬁcient that L . max(T, s).
+Remarks Short-term measures of complexity, such as the DFA short-term scaling exponent and ApEn, were found to show relatively little interindividual variation in sufﬁciently large populations and proved more normally distributed that SDNN and spectral measures.27 They also showed an intra-subject repeatability, comparable with that of the mean NN interval65 although their absolute values decrease with advancing age.14 Gender-related differences were reported for these indices14 but without substantial relation to gender-related differences in cardiovascular risk factors in healthy subjects.27
+Entropy and regularity
+Approximate and sample entropies Approximate entropy66,67 was originally devised as a practical implementation of the Kolmogorov– Sinai entropy of a nonlinear dynamical system. It can also be seen as an approximation of the differential entropy rate68 of a process. More recently, SampEn69 was introduced to improve over ApEn. Sample entropy converges more rapidly (when computed on shorter series) at the expenses of a larger variance of the estimates.
+Approximate entropy and SampEn measure the likelihood that runs of templates that are close for m points remain close (less than a certain tolerance level r) for m + 1 points in a given sequence of length N. Small values of ApEn or SampEn identify more regular, predictable, processes. There is no fail-proof rule for the selection of the parameters r and m. Values of r between 10 and 25% (usually 20%) of the standard deviation of HRV are typically employed. For template length, m = 2 is often used; m = 1 is used with very short time series.
+Symbolic dynamics Symbolic dynamics try to recognize a general tendency of the NN series by reducing its complexity.70 – 72 The idea is to associate symbols to states of the ANS, and then quantify the complexity of their evolution in time (i.e. their entropy). In practice, the range of possible NN values is subdivided into a certain number of levels j and each NN sample is mapped with a symbol representing the corresponding level. L consecutive symbols are grouped together to create a word. The complexity of the signal is assessed computing either the Shannon entropy of the sequence of words or the CCE (an entropy rate).71 There is no deﬁnite rule for the selection of the number of levels j or length of words L. Typically, j = 4 or
+
+L = 3 and L = 3 are used (which corresponds in ﬁrst approximation to computing ApEn with m = 2 and r = 0.5). Combination of words is also possible.71
+Nonlinear dynamical systems and chaotic behaviour
+The analysis starts with the reconstruction of the system trajectories in a phase space from a single HRV record. The common strategy is to construct an M-dimensional trajectory vector XM(t) by taking delayed samples of the HRV time series x(t), such that XM(t) = [x(t), x(t + L), . . . , x(t + ML − L)], where L is a selected ﬁxed lag.73
+The largest Lyapunov exponent, the average exponential growth rate of the initial distance between two neighbouring points in XM(t) as time evolves, is often practically estimated.74 A positive Lyapunov exponent is the hallmark of a chaotic system. First, it quantiﬁes the rate at which a system creates information by increasing the degree of uncertainty about the initial conditions with increasing time steps, or the so-called Kolmogorov–Sinai entropy, of which various real-world estimates have been used to characterize HRV complexity. Secondly, it relates to fractal geometry of phase space trajectories and to non-integer dimensional estimates, such as correlation dimension D2. Finally, it also relates directly to abrupt drops in nonlinear predictability, due to the exponential growth of the variance of the error between observed and predicted values. Short-term prediction is possible in chaotic systems due to their deterministic nature. The term complexity, different from ‘irregularity’ of stochastic systems, is often used to describe a dynamic change in the predictability. A widespread measure of fractal dimension of the manifold enclosing the trajectories of nonlinear dynamical system is the correlation dimension D2.44,75
+References
+1. Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology. Heart rate variability standards of measurement, physiological interpretation, and clinical use. Circulation 1996;93:1043 –65.
+2. Wichterle D, Simek J, La Rovere MT, Schwartz PJ, Camm AJ, Malik M. Prevalent low-frequency oscillation of heart rate novel predictor of mortality after myocardial infarction. Circulation 2004;110:1183 – 90.
+3. Perkio¨ ma¨ki JS, Thomsen P-EB, Kiviniemi AM, Messier MD, Huikuri HV. Risk factors of self-terminating and perpetuating ventricular tachyarrhythmias in post-infarction patients with moderately depressed left ventricular function, a CARISMA subanalysis. Europace 2011;13:1604 –11.
+4. Gang UJO, Jøns C, Jørgensen RM, Abildstrøm SZ, Messier MD, Haarbo J et al. Risk markers of late high-degree atrioventricular block in patients with left ventricular dysfunction after an acute myocardial infarction: a CARISMA substudy. Europace 2011;13:1471 – 7.
+5. Jokinen V, Tapanainen JM, Seppa¨nen T, Huikuri HV. Temporal changes and prognostic signiﬁcance of measures of heart rate dynamics after acute myocardial infarction in the beta-blocking era. Am J Cardiol 2003;92:907 –12.
+6. Osman F, Franklyn JA, Daykin J, Chowdhary S, Holder RL, Sheppard MC et al. Heart rate variability and turbulence in hyperthyroidism before, during, and after treatment. Am J Cardiol 2004;94:465 –9.
+7. Hallstrom AP, Stein PK, Schneider R, Hodges M, Schmidt G, Ulm K. Characteristics of heart beat intervals and prediction of death. Int J Cardiol 2005;100:37 –45.
+8. Bauer A, Malik M, Barthel P, Schneider R, Watanabe MA, Camm AJ et al. Turbulence dynamics: An independent predictor of late mortality after acute myocardial infarction. Int J Cardiol 2006;107:42 –7.
+9. Cygankiewicz I, Zareba W, Vazquez R, Vallverdu M, Cino J, Cinca J et al. Relation of heart rate turbulence to severity of heart failure. Am J Cardiol 2006;98:1635 –40.
+10. Cygankiewicz I, Zareba W, Vazquez R, Bayes-Genis A, Pascual D, Macaya C et al. Risk stratiﬁcation of mortality in patients with heart failure and left ventricular ejection fraction .35%. Am J Cardiol 2009;103:1003 – 10.
+
+1352
+
+R. Sassi et al.
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+11. Bauer A, Malik M, Schmidt G, Barthel P, Bonnemeier H, Cygankiewicz I et al. Heart rate turbulence: standards of measurement, physiological interpretation, and clinical use: international society for holter and noninvasive electrophysiology consensus. J Am Coll Cardiol 2008;52:1353 – 65.
+12. Rashba EJ, Lamas GA, Couderc J-P, Hollist SM, Dzavik V, Ruzyllo W et al. Electrophysiological effects of late percutaneous coronary intervention for infarct-related coronary artery occlusion: The occluded artery trial-electrophysiological mechanisms (OAT-EP). Circulation 2009;119:779 – 87.
+13. Mozaffarian D, Stein PK, Prineas RJ, Siscovick DS. Dietary ﬁsh and v-3 fatty acid consumption and heart rate variability in US adults. Circulation 2008;117:1130 –7.
+14. Beckers F, Verheyden B, Aubert AE. Aging and nonlinear heart rate control in a healthy population. Am J Physiol Heart Circ Physiol 2006;290:H2560 –70.
+15. Bauer A, Kantelhardt JW, Barthel P, Schneider R, Ma¨kikallio T, Ulm K et al. Deceleration capacity of heart rate as a predictor of mortality after myocardial infarction: cohort study. Lancet 2006;367:1674 –81.
+16. Guzzetti S, La Rovere MT, Pinna GD, Maestri R, Borroni E, Porta A et al. Different spectral components of 24 h heart rate variability are related to different modes of death in chronic heart failure. Eur Heart J 2005;26:357 – 62.
+17. Sosnowski M, MacFarlane PW, Czyz˙ Z, Skrzypek-Wan´ha J, Boczkowska-Gaik E, Tendera M. Age-adjustment of HRV measures and its prognostic value for risk assessment in patients late after myocardial infarction. Int J Cardiol 2002;86:249 –58.
+18. Tapanainen JM, Thomsen PEB, Køber L, Torp-Pedersen C, Ma¨kikallio TH, Still A-M et al. Fractal analysis of heart rate variability and mortality after an acute myocardial infarction. Am J Cardiol 2002;90:347–52.
+19. Ma¨kikallio TH, Huikuri HV, Ma¨kikallio A, Sourander LB, Mitrani RD, Castellanos A et al. Prediction of sudden cardiac death by fractal analysis of heart rate variability in elderly subjects. J Am Coll Cardiol 2001;37:1395 – 402.
+20. Ma¨kikallio TH, Huikuri HV, Hintze U, Videbæk J, Mitrani RD, Castellanos A et al. Fractal analysis and time- and frequency-domain measures of heart rate variability as predictors of mortality in patients with heart failure. Am J Cardiol 2001;87:178 – 82.
+21. Pikkuja¨msa¨ SM, Ma¨kikallio TH, Airaksinen KEJ, Huikuri HV. Determinants and interindividual variation of R-R interval dynamics in healthy middle-aged subjects. Am J Physiol Heart Circ Physiol 2001;280:H1400 –06.
+22. Huikuri HV, Ma¨kikallio TH, Peng C-K, Goldberger AL, Hintze U, Møller M. Fractal correlation properties of R-R interval dynamics and mortality in patients with depressed left ventricular function after an acute myocardial infarction. Circulation 2000;101:47 –53.
+23. Huikuri HV, Ma¨kikallio TH, Airaksinen KEJ, Seppa¨nen T, Puukka P, Ra¨iha¨ IJ et al. Power–law relationship of heart rate variability as a predictor of mortality in the elderly. Circulation 1998;97:2031 –6.
+24. Cerutti S, Esposti F, Ferrario M, Sassi R, Signorini MG. Long-term invariant parameters obtained from 24-h Holter recordings: a comparison between different analysis techniques. Chaos 2007;17:015108 –015108-9.
+25. Peng C-K, Havlin S, Stanley HE, Goldberger AL. Quantiﬁcation of scaling exponents and crossover phenomena in nonstationary heartbeat time series. Chaos 1995;5: 82 – 7.
+26. Ho KKL, Moody GB, Peng C-K, Mietus JE, Larson MG, Levy D et al. Predicting survival in heart failure case and control subjects by use of fully automated methods for deriving nonlinear and conventional indices of heart rate dynamics. Circulation 1997;96: 842 –8.
+27. Pikkuja¨msa¨ SM, Ma¨kikallio TH, Sourander LB, Ra¨iha¨ IJ, Puukka P, Skytta¨ J et al. Cardiac interbeat interval dynamics from childhood to senescence comparison of conventional and new measures based on fractals and chaos theory. Circulation 1999;100: 393 –9.
+28. Stein PK, Domitrovich PP, Huikuri HV, Kleiger RE, Investigators C. Traditional and nonlinear heart rate variability are each independently associated with mortality after myocardial infarction. J Cardiovasc Electrophysiol 2005;16:13 –20.
+29. Lombardi F, Sandrone G, Mortara A, Torzillo D, La Rovere MT, Signorini MG et al. Linear and nonlinear dynamics of heart rate variability after acute myocardial infarction with normal and reduced left ventricular ejection fraction. Am J Cardiol 1996;77: 1283 –8.
+30. Beran J. Statistics for Long-Memory Processes. New York: Chapman & Hall; 1994. 31. Ivanov PC, Amaral LAN, Goldberger AL, Havlin S, Rosenblum MG, Struzik ZR et al.
+Multifractality in human heartbeat dynamics. Nature 1999;399:461 – 5. 32. Sassi R, Signorini MG, Cerutti S. Multifractality and heart rate variability. Chaos 2009;
+19:028507– 028507-5. 33. Bauer A, Kantelhardt JW, Bunde A, Barthel P, Schneider R, Malik M et al.
+Phase-rectiﬁed signal averaging detects quasi-periodicities in non-stationary data. Physica A 2006;364:423 – 34. 34. Tulppo MP, Kiviniemi AM, Hautala AJ, Kallio M, Seppa¨nen T, Ma¨kikallio TH et al. Physiological background of the loss of fractal heart rate dynamics. Circulation 2005;112:314 –9. 35. Baumert M, Lambert GW, Dawood T, Lambert EA, Esler MD, McGrane M et al. Short-term heart rate variability and cardiac norepinephrine spillover in patients with depression and panic disorder. Am J Physiol Heart Circ Physiol 2009;297:H674 –9.
+
+36. Ott E. Chaos in Dynamical Systems. Cambridge, New York: Cambridge University Press; 2002.
+37. Brennan M, Palaniswami M, Kamen P. Do existing measures of Poincare´ plot geometry reﬂect nonlinear features of heart rate variability? IEEE Trans Biomed Eng 2001; 48:1342 –7.
+38. Kantelhardt JW, Bauer A, Schumann AY, Barthel P, Schneider R, Malik M et al. Phase-rectiﬁed signal averaging for the detection of quasi-periodicities and the prediction of cardiovascular risk. Chaos 2007;17:015112 –015112-9.
+39. Barthel P, Bauer A, Mu¨ller A, Huster KM, Kanters JK, Paruchuri V et al. Spontaneous baroreﬂex sensitivity: prospective validation trial of a novel technique in survivors of acute myocardial infarction. Heart Rhythm 2012;9:1288 –94.
+40. Cover TM, Thomas JA. Elements of Information Theory. Hoboken, NJ: WileyInterscience; 2006.
+41. Porta A, Gnecchi-Ruscone T, Tobaldini E, Guzzetti S, Furlan R, Montano N. Progressive decrease of heart period variability entropy-based complexity during graded head-up tilt. J Appl Physiol 2007;103:1143 –9.
+42. Cerutti S, Baselli G, Bianchi AM, Mainardi LT, Signorini MG, Malliani A. Cardiovascular variability signals: from signal processing to modeling complex physiological interactions. Automedica 1994;16:45 –69.
+43. Goldberger AL. Is the normal heartbeat chaotic or homeostatic?. Physiology 1991;6: 87 –91.
+44. Grassberger P, Procaccia I. Measuring the strangeness of strange attractors. Physica D 1983;9:189 –208.
+45. Glass L. Introduction to controversial topics in nonlinear science: Is the normal heart rate chaotic? Chaos 2009;19:028501 –028501-4.
+46. Yamamoto Y. Detection of chaos and fractals from experimental time series. In: Windhorst PDU, Johansson PDH, eds. Modern Techniques in Neuroscience Research. Berlin, Heidelberg: Springer; 1999. p. 669 –87.
+47. Sassi R, Cerutti S, Hnatkova K, Malik M, Signorini MG. HRV scaling exponent identiﬁes postinfarction patients who might beneﬁt from prophylactic treatment with amiodarone. IEEE Trans Biomed Eng 2006;53:103 –10.
+48. Maestri R, Pinna GD, Accardo A, Allegrini P, Balocchi R, D’Addio G et al. Nonlinear indices of heart rate variability in chronic heart failure patients: redundancy and comparative clinical value. J Cardiovasc Electrophysiol 2007;18:425 – 33.
+49. Bigger JT, Steinman RC, Rolnitzky LM, Fleiss JL, Albrecht P, Cohen RJ. Power law behavior of RR-interval variability in healthy middle-aged persons, patients with recent acute myocardial infarction, and patients with heart transplants. Circulation 1996;93: 2142 –51.
+50. Bauer A, Barthel P, Mu¨ller A, Ulm K, Huikuri H, Malik M et al. Risk prediction by heart rate turbulence and deceleration capacity in postinfarction patients with preserved left ventricular function retrospective analysis of 4 independent trials. J Electrocardiol 2009;42:597 –601.
+51. Voss A, Kurths J, Kleiner HJ, Witt A, Wessel N, Saparin P et al. The application of methods of non-linear dynamics for the improved and predictive recognition of patients threatened by sudden cardiac death. Cardiovasc Res 1996;31:419–33.
+52. La Rovere MT, Pinna GD, Maestri R, Barlera S, Bernardinangeli M, Veniani M et al. for the GISSI-HF Investigators. Autonomic markers and cardiovascular and arrhythmic events in heart failure patients: still a place in prognostication? Data from the GISSI-HF trial. Eur J Heart Fail 2012;14:1410 –9.
+53. Stein PK, Barzilay JI, Chaves PH, Mistretta SQ, Domitrovich PP, Gottdiener JS et al. Novel measures of heart rate variability predict cardiovascular mortality in older adults independent of traditional cardiovascular risk factors: the cardiovascular health study (CHS). J Cardiovasc Electrophysiol 2008;19:1169 –74.
+54. Vikman S, Ma¨kikallio TH, Yli-Ma¨yry S, Pikkuja¨msa¨ S, Koivisto A-M, Reinikainen P et al. Altered complexity and correlation properties of R-R interval dynamics before the spontaneous onset of paroxysmal atrial ﬁbrillation. Circulation 1999;100:2079 – 84.
+55. Lake DE, Richman JS, Grifﬁn MP, Moorman JR. Sample entropy analysis of neonatal heart rate variability. Am J Physiol Regul Integr Comp Physiol 2002;283:R789 –97.
+56. Saul JP, Albrecht P, Berger RD, Cohen RJ. Analysis of long term heart rate variability: methods, 1/f scaling and implications. Comput Cardiol 1988;14:419 –22.
+57. Taqqu MS, Teverovsky V, Willinger W. Estimators for long-range dependence: an empirical study. Fractals 1995;03:785 –98.
+58. Schepers HE, Van Beek JHGM, Bassingthwaighte JB. Four methods to estimate the fractal dimension from self-afﬁne signals. IEEE Eng Med Biol Mag 1992;11:57–64.
+59. Pilgram B, Kaplan DT. A comparison of estimators for 1/f noise. Physica D 1998;114: 108 –22.
+60. Peng C-K, Buldyrev SV, Havlin S, Simons M, Stanley HE, Goldberger AL. Mosaic organization of DNA nucleotides. Phys Rev E 1994;49:1685 –9.
+61. Detrended Fluctuation Analysis (DFA). [Internet]. Available from: http://www. physionet.org/physiotools/dfa/.
+62. Tulppo MP, Ma¨kikallio TH, Takala TE, Seppa¨nen T, Huikuri HV. Quantitative beat-to-beat analysis of heart rate dynamics during exercise. Am J Physiol 1996; 271:H244 –252.
+63. Hnatkova K, Copie X, Staunton A, Malik M. Numeric processing of Lorenz plots of R-R intervals from long-term ECGs: comparison with time-domain measures
+
+Advances in HRV signal analysis
+
+1353
+
+of heart rate variability for risk stratiﬁcation after myocardial infarction. J Electrocardiol 1995;28(Suppl. 1):74 –80. 64. D’Addio G, Acanfora D, Pinna G, Maestri R, Furgi C, Picone C et al. Reproducibility of short- and long-term Poincare´ plot parameters compared with frequency-domain HRV indexes in congestive heart failure. Comput Cardiol 1998;25:381 –4. 65. Maestri R, Pinna GD, Porta A, Balocchi R, Sassi R, Signorini MG et al. Assessing nonlinear properties of heart rate variability from short-term recordings: are these measurements reliable? Physiol Meas 2007;28:1067. 66. Pincus SM. Approximate entropy as a measure of system complexity. PNAS 1991;88: 2297– 301. 67. Pincus SM, Goldberger AL. Physiological time-series analysis: what does regularity quantify? Am J Physiol Heart Circ Physiol 1994;266:H1643 –56. 68. Pincus SM, Huang W-M. Approximate entropy: statistical properties and applications. Commun Stat Theory Methods 1992;21:3061 –77. 69. Richman JS, Moorman JR. Physiological time-series analysis using approximate entropy and sample entropy. Am J Physiol Heart Circ Physiol 2000;278:H2039 –49.
+
+70. Voss A, Wessel N, Baier V, Osterziel KJ, Kurhts J, Dietz R et al. Symbolic dynamics – a powerful tool in non-invasive biomedical signal processing. In: Osterhues H-H, Hombach V, Moss AJ, eds. Advances in Non-Invasive Electrocardiographic Monitoring Techniques. Dordrecht, The Netherlands: Kluwer Academic; 2000. p. 429 –37.
+71. Porta A, Guzzetti S, Montano N, Furlan R, Pagani M, Malliani A et al. Entropy, entropy rate, and pattern classiﬁcation as tools to typify complexity in short heart period variability series. IEEE Trans Biomed Eng 2001;48:1282 – 91.
+72. Kurths J, Voss A, Saparin P, Witt A, Kleiner HJ, Wessel N. Quantitative analysis of heart rate variability. Chaos 1995;5:88 –94.
+73. Takens F. Detecting strange attractors in turbulence. In: Rand D, Young L-S, eds. Dynamical Systems and Turbulence, Warwick 1980. Berlin, Heidelberg: Springer; 1981. p. 366– 81.
+74. Rosenstein MT, Collins JJ, De Luca CJ. A practical method for calculating largest Lyapunov exponents from small data sets. Physica D 1993;65:117 – 34.
+75. Kantz H. Nonlinear time series analysis. Cambridge, New York: Cambridge University Press; 2004.
+
+Downloaded from https://academic.oup.com/europace/article/17/9/1341/627516 by guest on 31 May 2022
+
+EP CASE EXPRESS
+
+doi:10.1093/europace/euv090 Online publish-ahead-of-print 16 April 2015
+
+.............................................................................................................................................................................
+
+Waking up a sleeping volcano: activation of an accessory pathway after aortic valve surgery
+
+Erwin Stro¨ ker*, Pedro Brugada, and Carlo de Asmundis
+Heart Rhythm Management Centre, UZ Brussel-VUB, Free University of Brussels, Laarbeeklaan 101, Brussels 1090, Belgium * Corresponding author. Tel: +32 477 60 09; fax: +32 477 68 51. E-mail address: strokerwin@gmail.com
+
+A 79-year-old woman was referred for aortic valve
+
+replacement. Baseline electrocardiogram showed
+
+sinus rhythm with normal intervals. After implant-
+
+I
+
+aVR
+
+V1
+
+V4
+
+ation of an aortic bioprosthesis, she presented an in-
+
+cessant and poorly tolerated wide-complex
+
+II
+
+aVL
+
+V2
+
+V5
+
+tachycardia. Brugada criteria for ventricular tachy-
+
+cardia were not met and the response to adenosine
+
+III
+
+aVF
+
+V3
+
+V6
+
+was an abrupt but transient termination of the arrhythmia, with noted PR prolongation and a left bundle branch block during sinus rhythm, similar as during tachycardia (ﬁxed aberrancy). The diagnosis of an orthodromic atrioventricular re-entry tachycardia (AVRT) with left lateral accessory pathway (AP) was made during electrophysiological study, leading to a successful ablation of the AP.
+This case shows us a concealed bypass tract
+
+140835 I II III AVR AVL AVF V1
+
+RA
+
+LA
+
+AVN AP
+
+which stayed clinically silent for almost 80 years. V2
+
+The induction of an orthodromic AVRT can be V3
+
+explained by the postoperative development of V4
+
+RBB
+
+LBB
+
+delay in the normal conduction system, sufﬁcient V5
+
+to outlast the retrograde effective refractory period of the AP for that given cycle length
+
+V6 10 mm/mV 25mm/s
+
+RV
+
+LV
+
+(Figure). We believe that any aetiology of
+
+conduction delay, together with a properly timed premature impulse, can initiate re-entry by activation of a previously asymptomatic
+
+AP. Orthodromic AVRT may be poorly tolerated if induced in an acute setting (postoperative state, myocardial infarction), requiring
+
+ablation therapy of the AP.
+
+The full-length version of this report can be viewed at: http://www.escardio.org/communities/EHRA/publications/ep-case-reports/ Documents/waking-up-a-sleeping.pdf.
+
+Published on behalf of the European Society of Cardiology. All rights reserved. & The Author 2015. For permissions please email: journals.permissions@oup.com.
+

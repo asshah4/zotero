@@ -1,0 +1,494 @@
+Psychophysiology, 50 (2013), 477–487. Wiley Periodicals, Inc. Printed in the USA. Copyright © 2013 Society for Psychophysiological Research DOI: 10.1111/psyp.12027
+REVIEW
+The utility of low frequency heart rate variability as an index of sympathetic cardiac tone: A review with emphasis on a reanalysis of previous studies
+
+GUSTAVO A. REYES DEL PASO,a WOLF LANGEWITZ,b LAMBERTUS J. M. MULDER,c ARIE VAN ROON,c and STEFAN DUSCHEKd
+aDepartment of Psychology, University of Jaén, Jaén, Spain bDepartment of Psychosomatic Medicine/Internal Medicine, University Hospital Basel, Basel, Switzerland cInstitute of Experimental Psychology, University of Groningen, Groningen, Netherlands dInstitute of Applied Psychology, UMIT–University for Health Sciences, Medical Informatics and Technology, Hall in Tirol, Austria
+
+Abstract
+This article evaluates the suitability of low frequency (LF) heart rate variability (HRV) as an index of sympathetic cardiac control and the LF/high frequency (HF) ratio as an index of autonomic balance. It includes a comprehensive literature review and a reanalysis of some previous studies on autonomic cardiovascular regulation. The following sources of evidence are addressed: effects of manipulations affecting sympathetic and vagal activity on HRV, predictions of group differences in cardiac autonomic regulation from HRV, relationships between HRV and other cardiac parameters, and the theoretical and mathematical bases of the concept of autonomic balance. Available data challenge the interpretation of the LF and LF/HF ratio as indices of sympathetic cardiac control and autonomic balance, respectively, and suggest that the HRV power spectrum, including its LF component, is mainly determined by the parasympathetic system.
+Descriptors: Heart rate variability, Low frequency, High frequency, Sympathetic cardiac control, Autonomic balance, Baroreﬂex
+
+Analysis of heart rate variability (HRV) in the frequency domain is a widely used tool in the investigation of autonomic cardiovascular control. Three oscillatory components are usually differentiated in the spectral proﬁle (Berntson et al., 1997; Task Force, 1996): (a) the high frequency (HF) band (0.15 to 0.40 Hz), which reﬂects effects of respiration on heart rate (HR), also referred to as respiratory sinus arrhythmia (RSA); (b) the low frequency (LF) band (0.04 to 0.15 Hz), which represents oscillations related to regulation of blood pressure and vasomotor tone including the so-called 0.1 Hz ﬂuctuation; and (c) the very low frequency (VLF) band (< 0.04 Hz), which is thought to relate, among other factors, to thermoregulation and kidney functioning.
+The compilation of this review was supported by a grant from the Spanish Ministry of Science and Innovation co-ﬁnanced by FEDER funds (Proyect-n°: PSI2012-33509). Data for the pharmacological blockade study were collected at the Department of Internal Medicine at the University of Bonn (Germany) in collaboration with the University of Groningen (Netherlands). This research was supported by a grant from the Commission of the European Communities Medical and Health Research Program (Concerted Action: Quantiﬁcation of Parameters for the Study of Breakdown in Human Adaptation).
+Address correspondence to: Gustavo A. Reyes del Paso, Departamento de Psicología, Universidad de Jaén, 23071 Jaén, Spain. E-mail: greyes@ ujaen.es.
+
+Massimo Pagani’s group (e.g., Malliani, Pagani, Lombardi, & Ceruttti, 1991; Montano et al., 2009; Pagani et al., 1986) presented a model in which HRV analysis is applied to evaluate the balance between the two branches of the autonomic nervous system (ANS), that is, autonomic balance. The model comprises three core statements: (1) Power of the HF component can be taken as an index of cardiac parasympathetic tone; (2) the LF component is a marker of cardiac sympathetic outﬂow; and (3) sympathovagal balance may be assessed as the LF/HF ratio, which is usually interpreted as reﬂecting the relative sympathetic contribution to the control of HR.
+Broad evidence supports vagal origin of the HF component (cf. Berntson et al., 1997). In contrast, the interpretation of the LF band is controversial (Eckberg, 1997; Goldstein, Bentho, Park, & Sharabi, 2011; Malpas, 2002). Most of the evidence linking LF oscillations to sympathetic outﬂow stems from studies investigating effects of orthostatic tilt. Passive tilt is accompanied by an increase in LF and a decrease in HF oscillations, implying an increase in the LF/HF ratio. Moreover, the magnitude of tilt incline correlates with LF and HF power (Montano et al., 1994). Nonetheless, assumptions of the Pagani group have frequently been challenged, and many have suggested that the LF component represents both sympathetic and vagal inﬂuences (e.g., Berntson et al., 1997; Japundzic, Grichois, Zitoun, Laude, & Elghozi, 1990; Randall, Brown, Raisch, Yingling, & Randall, 1991; Task Force, 1996).
+
+477
+
+bs_bs_banner
+
+478
+
+G.A. Reyes del Paso et al.
+
+To quantify HRV as a reliable marker of autonomic cardiac control, Pagani and colleagues recommended the use of normalized units (Malliani et al., 1991; Malliani, Pagani, & Lombardi, 1994; Montano et al., 2009). Conditions associated with sympathetic activation produce a decrease in total HRV power (including the LF component), whereas during vagal activation the opposite occurs. These authors claimed that when spectral components are expressed in absolute units (ms2), changes in total spectral power lead to distortion of the estimation of LF and HF power. This may be avoided by using the LF/HF ratio or normalized units, especially when addressing sympathetic cardiac tone. Normalized units (nu) are obtained by dividing the power of a given component (LF or HF) by the total power minus the VLF power.
+Application of indices derived from HRV has become very popular, as it opens a wide range of possibilities for the easy and noninvasive investigation of autonomic function in humans. Alterations in HRV are associated with various cardiovascular diseases and have proved to be a useful diagnostic and prognostic tool (e.g., Thayer & Lane, 2007). However, use of the LF band and the LF/HF ratio as sympathetic indices is debatable regardless of adjustment for total power (Eckberg, 1997; Goldstein et al., 2011; Kleiger, Stein, & Bigger, 2005; Malliani, Pagani, Montano, & Mela, 1998; Malpas, 2002; Parati, Mancia, Di Rienzo, & Castiglioni, 2006; Taylor & Studinger, 2006). Surprisingly, despite evidence to the contrary, these measures are still extensively used to index sympathetic tone. It is particularly striking that often quoted authors (e.g., Staud, 2008) as well as experts from biomedicine (e.g., Acharya, Joseph, Kannathal, Lim, & Suri, 2006) and software designers (e.g., Niskanen, Tarvainen, Ranta-aho, & Karjalainen, 2004) continue to propagate its use without taking contrary ﬁndings into account.
+Interpretation of the LF and VLF bands as sympathetic indicators may partly be based on deﬁnitions of the HRV components given in early publications (e.g., Akselrod et al., 1981, 1985; Mulder, 1985), which differ from current deﬁnitions (Berntson et al., 1997; Task Force, 1996). In the early works, HRV components were deﬁned in “high” (around respiration rate), “mid” (around 0.10 Hz) and “low” (around 0.04 Hz) frequency ranges, and the authors postulated that sympathetic outﬂow contributes to the low frequency, whereas the high and mid frequency components were supposedly under parasympathetic control. However, what earlier authors labeled the “low” frequency component is now referred to as VLF range, and the LF band as it is currently deﬁned was not regarded as a sympathetic index at all.
+The objective of this article is to critically review the state of research regarding the use of the LF band and the LF/HF ratio as indices of cardiac sympathetic activity. We review the available literature including evidence for and against this interpretation, together with a reanalysis of some of our own studies related to this topic. We concentrate on the application of HRV in the ﬁeld of psychophysiology rather than physiology and biomedicine, for which comprehensive reviews are already available (Eckberg, 1997; Goldstein et al., 2011; Kleiger et al., 2005; Malpas, 2002). The report is organized into six parts: (a) effects of sympathetic and vagal blockade on HRV, (b) effects of manipulations raising sympathetic outﬂow, (c) effects of pharmacological manipulations of cardiovascular regulation, (d) predictions of group differences in cardiac autonomic regulation from HRV, (e) relationships between HRV indices and other cardiac parameters, and (f) theoretical background and mathematical bases of the normalization procedure and the LF/HF ratio.
+
+Effects of Sympathetic-Vagal Cardiac Blockade on HRV
+If HR ﬂuctuations in the LF range are speciﬁcally mediated by sympathetic outﬂow, pharmacological (b-adrenergic) blockade should decrease LF power while the HF band remains unchanged. In contrast, vagal blockade should selectively reduce the magnitude of the HF component. Yet, available evidence does not support these assumptions. In their pioneering study on dogs, Akselrod et al. (1981) found that the parasympatholytic agent glycopyrrolate eliminated HRV above 0.06 Hz and markedly reduced spectral power below this value. Sympathetic blockade with propranolol tended to inconsistently diminish HRV around 0.04 Hz, whereas selective blockade of the renin-angiotensin system increased variability in this range. Summarizing animal research, Akselrod et al. (1985) concluded that lower frequency ﬂuctuations (below 0.10 Hz) are mediated by both sympathetic and vagal inﬂuences, whereas higher frequency ﬂuctuations are controlled solely by the parasympathetic system. In humans, Pomeranz et al. (1985) observed that atropine administration in a supine position during metronome breathing reduced LF power by 84%. The authors concluded that, at least in a supine position and under the condition of controlled respiration, LF power is almost completely determined by the parasympathetic system (cf. also Malliani et al., 1991). Taylor, Carr, Myers, and Eckberg (1998) found that b-adrenergic blockade had no signiﬁcant effect on VLF and LF oscillations, but increased HF power. Blockade of the renninangiotensin system slightly increased VLF power. In addition, atropine administration almost completely eliminated HRV and reduced VLF power by 92%. The authors concluded that although the VLF band is to some degree inﬂuenced by the renninangiotensin system, all HRV rhythms relate to parasympathetic outﬂow. In contrast, Cogliati et al. (2004) showed that b-adrenergic blockade with atenolol reduced the LF band and increased the HF band. Here, however, HRV was expressed in normalized units.
+Further evidence challenging the assumptions of the Pagani group is pharmacological studies suggesting that the LF component is mainly mediated by cholinergic—not adrenergic— mechanisms (Houle & Billman, 1999; Jokkel, Bonyhay, & Kollai, 1995; Koh, Brown, Beightol, Ha, & Eckberg, 1994; Langewitz et al., 1991; Zhong, Jan, Ju, & Chon, 2006).
+The following results were obtained by reanalysis of a study of our own on HRV effects of pharmacological vagal and sympathetic blockade. Six healthy participants were assessed twice in a seated position. They received atropine (0.03 mg/kg i.v.) on Day 1 and the b1-selective b-blocking agent metroprolol (10–15 mg i.v.) on Day 2 or vice versa. Before and after drug application, cardiovascular parameters were obtained at rest and during a memory search and counting task. HRV was analyzed by means of fast Fourier transformations (FFT) using the software Kubios HRV (version 2; Niskanen et al., 2004). Drug effects on the three frequency bands are shown in Table 1, and Figures 1 and 2 display corresponding spectral proﬁles. Atropine administration was followed by HRV decrease in all three frequency bands (all ps < .05). This held true for the baseline (reductions of 94.7%, 98.7%, and 99.8% for VLF, LF, and HF oscillations, respectively) and task periods (reductions of 93.5%, 98.7%, and 99.4%, for VLF, LF, and HF oscillations, respectively). As can be seen in Figures 1 and 2, HRV in the entire spectrum almost disappeared. The administration of the b1-blocker showed only slight effects on HRV. During task execution HRV increased somewhat. This is consistent with former observations that b-blockers may raise vagal activity and overall HRV (Reyes del Paso, Langewitz, Robles, & Pérez, 1996; Taylor et al., 1998)
+
+LF HRV and sympathetic cardiac tone
+
+479
+
+Table 1. Means and Standard Deviations (in Parentheses) of HRV Parameters Before and After Pharmacological Blockade
+
+IBI Atropine b-blocker
+VLF Atropine b-blocker
+LF Atropine b-blocker
+HF Atropine b-blocker
+
+BL (pre drug)
+938 (126) 876 (136)
+266 (273) 332 (579)
+555 (421) 642 (1052)
+547 (531) 578 (789)
+
+Task (pre drug)
+871 (122) 845 (134)
+77 (44) 102 (105)
+152 (122) 305 (283)
+175 (71) 206 (82)
+
+BL (post drug)
+563 (29) 1129 (155)
+14 (23) 266 (156)
+7 (7) 509 (293)
+1 (1) 502 (322)
+
+Task (post drug)
+550 (38) 1109 (156)
+5 (2) 123 (75)
+2 (1) 366 (279)
+1 (1) 443 (364)
+
+h2 (LB), h2 (Task)
+.906, .870 .980, .992
+.494, .752 .018, .062
+.675, .643 .031, .254
+.559, .876 .011, .342
+
+Note. BL = baseline, IBI = interbeat interval, VLF = very low frequency, LF = low frequency, HF = high frequency. Effect sizes for the comparison pre–post drug (h2 BL, h2 Task) are also shown.
+
+including LF HRV (Cook et al., 1991; Jokkel et al., 1995). The latter effect was actually interpreted as indicating that LF constitutes a marker of vagal activity (Cook et al., 1991). Montano et al. (1994) stated that for the assessment of sympatholytic action of
+Figure 1. Spectral proﬁles during baseline periods.
+Figure 2. Spectral proﬁles during task (memory search and counting) periods. Note: Because of reduced HRV during mental stress, the scale range of this ﬁgure is smaller than that of Figure 1.
+
+b-adrenergic blocking agents, HRV has to be expressed in normalized units or in terms of the LF/HF ratio. In our study, however, metoprolol did not signiﬁcantly alter LFnu (from 47 Ϯ 10 to 52 Ϯ 20 during baseline and from 52 Ϯ 20 to 47 Ϯ 11 during cognitive load), HFnu (from 53 Ϯ 10 to 48 Ϯ 19 during baseline and from 48 Ϯ 20 to 53 Ϯ 11 during cognitive load) and the LF/HF ratio (from 0.95 Ϯ 0.36 to 1.14 Ϯ 0.39 during baseline and from 1.75 Ϯ 2.04 to 0.93 Ϯ 0.38 during cognitive load).
+Studies using nonpharmacological blockade procedures also raise doubts about the sympathetic origin of the HF band. Hopf, Skyschally, Heusch, and Peters (1995) and Introna et al. (1995) investigated the effects of preganglionic cardiac sympathetic blockade by segmental thoracic epidural anesthesia in humans. Both in a supine position and during tilt, LF and HF spectral power remained unchanged. Similarly, partial cardiac sympathetic denervation by means of bilateral thoracic sympathectomy affected neither LF power nor the LF/HF ratio (Noppen et al., 1996; Tedoriya, Sakagami, Ueyama, Thompson, & Hetzer, 1999).
+In sum, existing studies do not yield evidence of speciﬁc effects of sympathetic blockade on HRV in the LF band, thus contradicting the assumption of a sympathetic origin of this component. On the contrary, data support the notion that all HRV components are predominantly under vagal control.
+Effects of Manipulations Raising Sympathetic Outﬂow
+Assuming that the LF component of the HRV spectrum reﬂects sympathetic cardiac tone, one may expect interventions that increase sympathetic activity to also increase LF power. Physical exercise is a powerful intervention for this purpose. Rimoldi et al. (1992) reported a series of studies performed on dogs and humans in which moderate levels of exercise (e.g., treadmill run) were applied. When expressed in absolute units, exercise produced a marked decrease in both LF and HF power, but when expressed in normalized units, exercise led to an increase in LF and decrease in HF power. However, most other studies indicated that exercise does not enhance HRV in the LF band but tends to reduce it (Arai et al., 1989; Perini, Orizio, Baselli, Cerutti, & Veicsteinas, 1990). This holds true for absolute as well as normalized values (Warren, Jaffe, Wraa, & Stebbins, 1997). Myocardial ischemia is another efﬁcient manipulation for stimulating sympathetic activity. Rimoldi et al. (1990) reported an increase in normalized LF power during transient coronary artery occlusion in conscious dogs. To evoke ventricular arrhythmias in dogs, Houle and Billman (1999) induced a
+
+480
+
+G.A. Reyes del Paso et al.
+
+2-min coronary occlusion after physical exercise. They observed a marked increase in HR mediated by sympathetic activation. Nonetheless, LF power decreased. Further studies also showed that experimentally induced heart failure is associated with decreased LF power (Watson, Hood, Ramchandra, McAllen, & May, 2007).
+Passive orthostatic tilt is a common procedure to increase cardiac sympathetic activity. Montano et al. (1994) reported that tilt incline was accompanied by an increase in LF and a decrease in HF oscillations (although no means or statistical results were provided), and they claimed that various studies documented rises in normalized LF power and the LF/HF ratio during this procedure. Mukai and Hayano (1995) found that LF power increased progressively with tilt angle, but peaked at 30°. However, during high-level tilt (30–90°) both the interbeat interval (IBI) and HF power decreased progressively with tilt angle. Furlan et al. (2000) found that tilt incline was accompanied by a decrease in absolute and normalized HF HRV, whereas LF HRV increased only when expressed in normalized units. Critical reviews of the orthostatic tilt literature (Eckberg, 1997; Goldstein et al., 2011) led to the conclusion that this maneuver is not associated clearly with increased LF power, at least when expressed in absolute units (cf. also Hopf et al., 1995; Peles et al., 1995; Piccirillo, Fimognari, Viola, & Marigliano, 1995; Vicek, Radikova, Penesova, Kvetnansky, & Imrich, 2008; Wallin et al., 1992).
+Psychophysiological studies commonly use psychological challenges such as mental arithmetic, attention and memory tasks, shock avoidance, or video games to induce sympathetic activation. In the Malliani et al. (1991) review, a study is reported in which stress induced by mental arithmetic increased the LF and reduced the HF bands. However, like the aforementioned manipulations, most available studies on the effects of mental stress showed reductions of both HF and LF oscillations (e.g., Bernardi et al., 2000; Duschek, Muckenthaler, Werner, & Reyes del Paso, 2009; Mulder, 1985, 1988; Sloan et al., 1996; van Roon, 1998). Given the consistency of this effect, some authors proposed that the reduction in HR oscillations around 0.1 Hz can be taken as an index of mental effort/load (Mulder, 1988; van Roon, Mulder, Althaus, & Mulder, 2004).
+Duschek, Muckenthaler, et al. (2009) assessed various parameters of cardiovascular autonomic control in 60 healthy young subjects while they accomplished a letter cancellation test. This task elicited a signiﬁcant increase in sympathetic drive as indexed by reduction of pulse transit time (PTT). All three HRV components were signiﬁcantly diminished during task execution (from 170 Ϯ 158 to 49 Ϯ 40 ms2, h2 = .407, for VLF, from 467 Ϯ 436 to 180 Ϯ 132 ms2, h2 = .323, for LF, and from 519 Ϯ 813 to 103 Ϯ 101 ms2, h2 = .238, for HF, all ps < .0001). In another study the effect of a 3-min serial arithmetic subtraction task on autonomic cardiovascular control was evaluated in 50 individuals with chronically low blood pressure (Duschek, Heiss, Schandry, & Reyes del Paso, 2009a). Again, during cognitive load HRV decreased in all three frequency bands (from 187 Ϯ 193 to 34 Ϯ 36 ms2, h2 = .393, for VLF, from 431 Ϯ 475 to 189 Ϯ 153 ms2, h2 = .246, for LF, and from 416 Ϯ 555 to 85 Ϯ 115 m2, h2 = .305 for HF, all ps < .0001).
+In a study conducted to evaluate baroreﬂex activity as a function of physical ﬁtness 20 regular physical exercisers and 20 sedentary young participants accomplished a computerized mental calculation task (Martín-Vazquez & Reyes del Paso, 2010). Table 2 displays HRV for a 5-min baseline and an 8-min task period. All three HRV components decreased markedly during task execution (all ps < .001 and h2s > .3). One may conclude that, taken together,
+
+Table 2. Means and Standard Deviations (in Parentheses) of HRV Parameters of Physically Active (A) and Sedentary (S) Participants in the Martín-Vázquez and Reyes del Paso (2010) Study during Baseline and a Mental Arithmetic Task
+
+Baseline
+
+Task
+
+F(1,39)
+
+p
+
+h2
+
+IBI
+
+A
+
+820 (93)
+
+753 (76)
+
+5.86
+
+.020 .283
+
+S
+
+733 (126)
+
+690 (100)
+
+VLF
+
+A
+
+279 (218)
+
+172 (114)
+
+3.75
+
+.060 .183
+
+S
+
+191 (133)
+
+93 (58)
+
+LF
+
+A
+
+1035 (774)
+
+632 (406)
+
+8.50
+
+.006 .238
+
+S
+
+580 (388)
+
+330 (214)
+
+HF
+
+A
+
+1016 (1295)
+
+598 (740)
+
+4.61
+
+.039 .128
+
+S
+
+295 (218)
+
+193 (149)
+
+Note. HRV was analyzed by means of adaptive autoregressive models
+following algorithms by Bianchi, Mainardi, Melonni, Chierchiu, and Cerutti (1997). IBI = interbeat interval, VLF = very low frequency, LF = low frequency, HF = high frequency; F, p, and h2 values of the ANOVA for group comparisons.
+
+situations associated with sympathetic stimulation decrease LF HRV instead of increasing it and that this effect is widely independent of the type of manipulation applied.
+Effects of Pharmacological Manipulations of Cardiovascular Regulation
+From the hypothesis that LF HRV is a marker of cardiac sympathetic activity, it can be deduced that pharmacological manipulations inducing reﬂex increase in sympathetic outﬂow enhance the LF component and that manipulations reducing sympathetic drive diminish LF power. Pagani et al. (1997) found that during nitroprusside-induced hypotension the LF component increased, whereas phenylephrine-induced hypertension led to a relative reduction in LF and a relative increase in HF power. Rimoldi et al. (1990) reported in conscious dogs that sympathetic stimulation by nitroglycerin-induced hypotension was accompanied by an increase in LF when expressed in normalized units. However, these results have not been conﬁrmed in other studies. Ahmed, Kadish, Parker, and Goldberger (1994) observed that cardiac b-adrenergic stimulation by means of isoprenaline infusion decreased LF power instead of increasing it. In a study by Saul et al. (1991), the reﬂex decrease in cardiac sympathetic activity induced by the pressor a-adrenergic effect of phenylephrine was not accompanied by any changes in the LF band.
+Our research on pharmacological treatment of chronically low blood pressure yielded information about effects of drugs that affect cardiovascular regulation of HRV (Duschek, Heiss, et al., 2009a; Duschek, Heiss, Schandry, & Reyes del Paso, 2009b). The a-adrenergic agonist midodrine, which is frequently used in antihypotensive treatment, causes vasoconstriction and thus increases of total peripheral resistance and blood pressure. As observed in our studies, application of this drug is followed by marked enhancement of baroreceptor reﬂex sensitivity (BRS) and HR deceleration, suggesting that midodrine induces a counterregulatory autonomic response to blood pressure elevation consisting of increased vagal and decreased sympathetic activity. By this means, blood pressure is returned to an initial value or an individual
+
+LF HRV and sympathetic cardiac tone
+
+481
+
+set point. Taking into account the classic assumptions outlined above, one may hypothesize that midodrine should enhance HF HRV and reduce LF HRV. Midodrine administration (0.4 mg/kg body weight) in 25 individuals with chronic hypotension induced an overall increase in HRV for the three components. The changes in the VLF and HF bands, but not that in the LF band, reached signiﬁcance (from 147 Ϯ 80 to 395 Ϯ 583 ms2, p = .047, h2 = 0.155, for VLF, from 365 Ϯ 279 to 574 Ϯ 645 ms2, p = .114, h2 = 0.101, for LF, and from 303 Ϯ 226 to 645 Ϯ 805 ms2, p = .044, h2 = 0.159 for HF).
+To conclude, results of studies in which reﬂex modiﬁcations in sympathetic drive are induced do not support the assumption that LF oscillations are modulated by sympathetic outﬂow.
+Predictions of Group Differences in Cardiac Autonomic Regulation on the Basis of HRV
+Considering the hypothesized sympathetic origin of LF HRV, known group differences in sympathetic outﬂow should be reﬂected in different magnitudes of this component. Patients suffering from congestive heart failure show increased cardiac sympathetic tone. Nonetheless, several studies have demonstrated reduced LF power in this population (Adamopoulos et al., 1992; Vesalainen et al., 1999). Van de Borne, Montano, Pagani, Ron, and Somers (1997) found lower LF HRV in patients with congestive heart failure than in controls. Cooley et al. (1998) reported attenuated or even absent LF oscillations related to this disease. Moak et al. (2007) studied HRV in patients with chronic autonomic failure, comparing patients with and without sympathetic denervation (indicated by 6-[18F] ﬂuorodopamine-derived radioactivity or norepinephrine spillover). They found no group differences in LF power and no relationship between LF power and any sympathetic index. Nevertheless, Guzzetti et al. (1988) reported higher LF and lower HF power in patients with hypertension compared to matched normotensive controls, but only when expressed in normalized units.
+Regular physical exercise enhances resting cardiac vagal activity, reduces sympathetic drive (Forcier et al., 2006), and increases sensitivity of the cardiac baroreﬂex (Martín-Vazquez & Reyes del Paso, 2010). We reanalyzed our data on the relationship between baroreﬂex function and physical ﬁtness by examining differences in HRV between a group of 20 sedentary subjects and 20 regular exercisers. Classical assumptions would predict lower LF power and higher HF power in the exercisers. Table 2 displays the HRV parameters for both groups. The exercisers showed greater power in all three bands. Moreover, the difference most pronounced was for the LF band.
+Chronic low blood pressure is most likely associated with increased vagal tone and decreased cardiac sympathetic inﬂuences (Duschek, Dietel, Schandry, & Reyes del Paso, 2008; Duschek, Heiss, et al., 2009a, 2009b). Considering the LF band as a sympathetic index, one would expect reduced LF and increased HF power in this condition. We reanalyzed the Duschek et al. (2008) data examining HRV parameters in 35 hypotensive and 32 normotensive individuals. During resting conditions, hypotensives, in comparison with normotensives, displayed both increased IBI (862 Ϯ 94 vs. 790 Ϯ 111 ms, p = .006, h2 = .110) and increased overall HRV, although the increase in the HF component did not reach signiﬁcance (1556 Ϯ 1047 vs. 1083 Ϯ 681 ms2, p = .032, h2 = .068 for VLF, 1230 Ϯ 1005 vs. 803 Ϯ 479 ms2, p = .030, h2 = .069 for LF, and 1202 Ϯ 1818 vs. 815 Ϯ 782 ms2, p = .26, h2 = .024 for HF).
+
+As in the aforementioned studies, these data suggest that the magnitude of LF oscillations does not predict group differences in sympathetic cardiac control.
+Relationships between HRV Indices and Other Cardiac Parameters
+A critical issue concerning the suitability of the LF band as a sympathetic index regards its associations with other valid measures of cardiac sympathetic control. Plasma levels of epinephrine and norepinephrine are recognized indicators of general sympathetic activity. Sloan et al. (1996) analyzed the relationship of HRV with these parameters during rest and mental stress. None of the HRV components was related to catecholamine level. Similarly, Saul et al. (1991) found no association between plasma norepinephrine and LF HRV (in absolute or normalized units) at rest. Cardiac norepinephrine spillover (rate of entry of norepinephrine into the cardiac venous drainage) is believed to be one of the best indicators of b-adrenergic outﬂow. Studies investigating the association of this index with LF power and the LF/HF ratio did not reveal positive results (Alvarenga, Richards, Lambert, & Esler, 2006; Baumert et al., 2009; Kingwell et al., 1994; Moak et al., 2007).
+Further research addressed the relationship between HRV and muscle sympathetic nerve trafﬁc. Saul et al. (1991) found no association between these parameters when they were assessed at rest. However, after nitroprusside infusion (which leads to reﬂexinduced increases in sympathetic activity and decreases in vagal activity) a signiﬁcant correlation between sympathetic nerve activity (in bursts/min) and LF nu power arose in 4 out of 10 subjects. After phenylephrine infusion (which leads to reﬂex-induced decreases in sympathetic activity and increases in vagal activity) no association was found for any of the HRV indices. Pagani et al. (1997) were unable to demonstrate associations between muscle sympathetic nerve trafﬁc in bursts/minutes and LF power both in absolute and normalized units. When sympathetic activity was expressed by burst amplitude, a signiﬁcant correlation with LF power (but only in normalized units) and HF power (in absolute and normalized units) arose.
+Studies performed with patients suffering from conditions associated with increased sympathetic activity (e.g., congestive heart failure and pulmonary hypertension) revealed no or even negative correlations between LF oscillations and muscle sympathetic nerve trafﬁc (Adamopoulos et al., 1992; Kingwell et al., 1994; McGowan et al., 2009; Notarius et al., 1999). Neuroimaging techniques such as positron emission tomography and single photon emission computed tomography provide for quantitative assessment of innervation of the left ventricular myocardium. These methods were applied in a number of studies investigating the linkage of LF and the LF/HF ratio with sympathetic innervation. None of them, however, revealed positive results (Haensch, Lerch, Jorg, & Isenmann, 2009; Moak et al., 2007; cf. Goldstein et al., 2011, for a review).
+It also seemed worthwhile to examine associations of LF oscillations with IBI and other cardiodynamic indices that are thought to be inﬂuenced by the sympathetic system. Tables 3 and 4 display the results of reanalyses of studies that provide evidence on this issue. Table 3 also includes data taken from a very recent study in which 54 young participants performed a 15-min simple time reaction task after a 5-min baseline period (Duschek, Wörsching, & Reyes del Paso, 2013). Exclusively positive correlations between IBI and HRV in the three frequency bands arose. The positive linear
+
+482
+
+G.A. Reyes del Paso et al.
+
+association between LF power and IBI is deﬁnitely incongruent with the assumption of a sympathetic origin of the LF band. No systematic linkage between HRV and PTT—an index of b1-adrenergic inﬂuences on myocardial contractibility—was found (Table 3). The only signiﬁcant association contradicted the expectations in the sense that LF power correlated positively with PTT assessed during letter cancellation as well as time reaction tasks. In the physical exercise study (Martín-Vázquez & Reyes del Paso, 2010), we used impedance cardiography in order to assess preejection period (PEP), one of the most reliable and valid noninvasive indicator of b1-cardiac adrenergic inﬂuences (McCubbin, Richardson, Langer, Kizer, & Obrist, 1983; Sherwood et al., 1990). No associations were found between HRV and PEP (Table 4). In another study we compared patients suffering from ﬁbromyalgia with matched healthy controls in parameters of autonomic cardiovascular control (Reyes del Paso, Garrido, Pulgar, Martín-Vázquez, & Duschek, 2010). Again, the reanalysis of these data revealed no associations between PEP and HRV (Table 4).
+It has been argued that left ventricular ejection time (LVET) constitutes a speciﬁc indicator of chronotropic sympathetic tone (Uijtdehaage & Thayer, 2000). Given its inverse relationship with sympathetic tone, one may predict negative correlations between LVET and LF power. In the physical exercise study (Martín-Vázquez & Reyes del Paso, 2010) correlations between LVET and the three HRV components were .57, .46, and .40 for baseline and .50, .46, and .48 for cognitive load, respectively, for VLF, LF, and HF (all ps < .05). In the chronic pain study (Reyes del Paso, Garrido, et al., 2010), correlations were .15, .48, and .47 for baseline and .20, .24, and .51 for cognitive load, respectively, for VLF, LF, and HF (ps < .05 for HF during baseline and cognitive load and for LF during baseline). In the framework of the Uijtdehaage and Thayer hypothesis, the positive associations of LF oscillations with LVET clearly contradict the assumption of its sympathetic origin.
+Some authors have suggested that the LF component constitutes a speciﬁc index of baroreceptor gain in mediating oscillations in
+
+Table 3. Correlations of HRV Parameters Obtained by Fast Fourier Transformations with Interbeat Interval (IBI), Pulse Transit Time (PTT), and Baroreﬂex Sensitivity (BRS) Recorded during Baseline (BL) and Cognitive Load (Task) in the Duschek, Muckenthaler, et al. (2009; Panel A, n = 60) and Duschek et al. (2013; Panel B, n = 54) Studies
+
+Panel A IBI-BL IBI-Task PTT-BL PTT-Task BRS-BL BRS-Task Panel B IBI-BL IBI-Task PTT-BL PTT-Task BRS-BL BRS-Task
+
+IBI
+.149 .224 .723* .749*
+.440* .562* .738* .808*
+
+VLF
+.543* .005 .154 .161 .583* .141
+.360* -.054
+.129 -.104
+.438* -.025
+
+LF
+.268+ .212 .009 .370* .234 .202
+.179 .368* .170 .310+ .223 .425*
+
+HF
+.291+ .541* .051 .173 .587* .696*
+.531* .540* .020 .149 .814* .707*
+
+Note. VLF = very low frequency, LF = low frequency, HF = high
+frequency. +p < .05. *p < .01.
+
+Table 4. Correlations of HRV Parameters Obtained by the Autoregression Technique with Interbeat Interval (IBI), PreEjection Period (PEP), and Baroreﬂex Sensitivity (BRS) in the Physical Exercise Study (cf. Table 2) by Martín-Vázquez and Reyes del Paso (2010; Panel A, n = 40) and in the Chronic Pain Study by Reyes del Paso, Garrido, et al. (2010; Panel B, n = 64)
+
+Panel A IBI-BL IBI-Task PEP-BL PEP-Task BRS-BL BRS-Task Panel B IBI-BL IBI-Task PEP-BL PEP-Task BRS-BL BRS-Task
+
+IBI
+.081 .120 .688* .724*
+.198 .180 .688* .506*
+
+VLF
+.672* .729* .133 -.076 .484* .617*
+.252+ .244 .098 .059 .370* .311+
+
+LF
+.563* .664* -.061 -.106 .738* .461*
+.527* .282+ .077 .028 .738* .521*
+
+HF
+.563* .688* -.097 -.110 .768* .762*
+.584* .339* .049 .065 .768* .455*
+
+Note. BL = baseline, Task = mental arithmetic, VLF = very low frequency,
+LF = low frequency, HF = high frequency. +p < .05. *p < .01.
+
+blood pressure and vasomotor activity (Goldstein et al., 2011; Moak et al., 2007). We assessed BRS in our studies using sequence analysis in the time domain (Reyes del Paso, González, & Hernández, 2010). Tables 3 and 4 show associations between BRS and the three frequency bands revealed by our reanalyses. Signiﬁcant correlations between BRS and the three components were obtained, which contradicts the assumption of a speciﬁc relationship between the LF band and baroreﬂex function. In all above mentioned studies we found associations in the same direction between the three HRV components and other parameters of cardiovascular control. It is therefore very unlikely that any of the components represent speciﬁc inﬂuences of different branches of the ANS on heart activity.
+Theoretical Background and Mathematical Bases of the Normalization Procedure and the LF/HF Ratio
+The concept of autonomic balance and its mathematical expression is based on the traditional doctrine of autonomic reciprocity. According to this doctrine, the sympathetic and parasympathetic branches of the ANS are subjected to reciprocal central nervous control in the sense that increased activation of one system is accompanied by inhibition of the other. This implies that autonomic control can be regarded as a continuum extending from parasympathetic to sympathetic dominance. This view, however, seems rather simplistic. The two branches of the ANS are not algebraically additive. Instead they interact in a dynamic fashion and either reciprocity or coactivation of both branches may occur (Berntson, Cacioppo, & Quigley, 1993). In this manner, variability of cardiovascular signals reﬂects the complex interplay between perturbations of cardiovascular function and the dynamic responses of multiple regulatory systems. Complex interactions between the sympathetic and vagal determinants of HR were shown in the framework of the concept of accentuated antagonism (Levy & Zieske, 1969; Uijtdehaage & Thayer, 2000), which emphasizes
+
+LF HRV and sympathetic cardiac tone
+
+483
+
+vagal predominance of HR control. In fact, effects of sympathetic activation are suppressed when strong vagal activity simultaneously occurs, whereas vagal deceleration effects are augmented during high sympathetic background levels.
+In the concept of autonomic space (Berntson et al., 1993; Berntson, Cacioppo, Quigley, & Fabro, 1994), functional states of the ANS are described in a two-dimensional space bound by sympathetic and parasympathetic axes. In this space, multiple modes of autonomic control can be characterized. These comprise (a) a coupled reciprocal mode, in which activities of the two branches are inversely related; (2) a coupled nonreciprocal mode, in which activities of both branches are positively correlated (coactivation); and (3) an uncoupled mode, in which activity changes of the two divisions occur independently of one another. The assumptions of the Pagani group may only hold under the assumption that the ANS is working in a reciprocal mode most of the time, which is unlikely to be the case (see Berntson, Cacioppo, & Quigley, 1991, for a review).
+Pagani and colleagues chose normalized LF and HF power and the LF/HF ratio as mathematical expression of HRV. As summarized above, in most studies supporting their theory these transformations were applied (cf. Montano et al., 2009). Their model is supported mainly by the effects of orthostatic tilt (head-up tilt increases sympathetic and inhibits vagal activity). In the Montano et al. (1994) study, absolute LF power was widely unrelated to the magnitude of tilt (r = .17), whereas HF power correlated signiﬁcantly with tilt incline (r = -.41). In contrast, tilt highly correlated with LF and HF power expressed in normalized units (r = .78 and -.72, respectively, for LFnu and HFnu) and with the LF/HF ratio (r = .68). Normalization procedures thus lead to a nearly linear relation between LFnu and tilt angle. However, as can be seen in their ﬁgures, the close associations for LFnu and the LF/HF ratio resulted from the inclusion of HF in the equation applied to compute LFnu and the LF/HF ratio. The effects of tilt on the transformed measures are therefore mainly due to the reduction in HF as tilt angle increases.
+Regarding the transformation of LF and HF into normalized units, one should take into account that VLF, LF, and HF power accounted for almost the complete spectral power density (SPD). Therefore, computing normalized LF and HF is widely restricted to building a ratio between both parameters. The formula LFnu = LF/ SPD - VLF, for example, is roughly equivalent to LFnu = LF/LF + HF. This holds completely true when the area of interest in SPD is deﬁned in the range between 0.0 and 0.40 Hz. The reciprocal relationship between LF and HF power when they are normalized or expressed as a ratio makes them dubious indices. We view these mathematical transformations in a hypothetical example. Table 5 displays hypothetical data of LF, HF, VLF, SPD, LFnu, HFnu, and the LF/HF ratio for 10 cases. A hypothetical dependent variable ranging from 1 to 10 is also included. In this example, correlations of the absolute HRV components with the dependent variable are r = -.078 and r = .996 for LF and HF, respectively. Correlations with the dependent variable for normalized units are r = -.601 (LFnu) and r = .601 (HFnu). The correlation between the LF/HF ratio and the dependent variable is r = -.561. The normalized components are inversely related to one another, and they show equal correlations (but of opposite directions) with a third variable. Knowing the power value of one component (LFnu or HFnu), one can perfectly deduce the value of the other. Given the inherent reciprocity of HRV expressed in normalized units or as the LF/HF ratio and the fact that the example shows no association between LF (in absolute units) and the dependent variable, the transforma-
+
+Table 5. Hypothetical Database Displaying HRV Indices Together with a Dependent Variable (DV) for 10 Subjects
+
+Subject SPD VLF LF HF LF/HF LFnu HFnu DV
+
+1
+
+21
+
+5
+
+10 6
+
+1.67 63
+
+38
+
+1
+
+2
+
+20
+
+4.50 9 6.50 1.38 58
+
+42
+
+2
+
+3
+
+25
+
+6
+
+12 7
+
+1.71 63
+
+37
+
+3
+
+4
+
+19.20 3
+
+9 7.20 1.25 56
+
+44
+
+4
+
+5
+
+25.50 5
+
+13 7.50 1.73 63
+
+37
+
+5
+
+6
+
+19
+
+3
+
+88
+
+1
+
+50
+
+50
+
+6
+
+7
+
+29.50 6
+
+15 8.50 1.76 64
+
+36
+
+7
+
+8
+
+21
+
+5
+
+79
+
+0.78 44
+
+56
+
+8
+
+9
+
+29.50 6
+
+14 9.50 1.47 60
+
+40
+
+9
+
+10
+
+21
+
+5
+
+6 10
+
+0.60 38 63 10
+
+Note. SPD = spectral power density in the range 0 to 0.40 Hz, that is, total power; VLF = very low frequency; LF = low frequency; HF = high frequency. Normalized units were multiplied by 100.
+
+tions produce artiﬁcially high correlations. This may lead to the wrong conclusion that a variable is related to sympathetic cardiac tone such as in the case of tilt angle in the Montano et al. (1994) study. In our pharmacological blockade study, atropine administration increased LFnu (from 49 Ϯ 15 to 87 Ϯ 12 for baseline and from 44 Ϯ 12 to 75 Ϯ 23 for mental load), decreased HFnu (from 50 Ϯ 14 to 13 Ϯ 12 for baseline and from 56 Ϯ 12 to 25 Ϯ 23 for mental load), and produced a very strong increase in the LF/HF ratio (from 1.15 Ϯ 0.71 to 11.89 Ϯ 6.52 for baseline and from 0.87 Ϯ 0.42 to 7.47 Ϯ 8.35 for mental load). In this context of small residual HRV (i.e., nearly constant HR) the suggested transformations can lead to substantial distortion of the data and thus wrong conclusions.
+Conclusions
+Evidence presented in this article challenges the suitability of the LF component of HRV as an index of cardiac sympathetic control and the LF/HF ratio as an index of sympathovagal balance. Critical points may be summarized as follows: (a) Vagal blockade reduces LF power by more than 90%, whereas sympathetic blockade does not produce signiﬁcant effects; (b) physiological and psychological manipulations that markedly raise sympathetic outﬂow do not increase LF power, but often reduce it; (c) pharmacological manipulations inducing reﬂex changes in sympathetic cardiac tone do not affect the LF component in the predicted form; (d) group differences in sympathetic autonomic control cannot be predicted from LF oscillations; (e) there are no associations between LF power and valid indicators of sympathetic cardiac control; and (f) normalization of the power components and computation of the autonomic balance as the LF/HF ratio are based on the physiological assumption of autonomic reciprocity, which is not supported by the current state of research. Furthermore, these mathematical transformations can lead to distortion of the data, making the applied indices dubious.
+In contrast to the thesis of the Pagani group, the expression of the LF component of HRV is most likely to be determined mainly by the parasympathetic nervous system. Baroreﬂex control of HR may play an important role in this (Saul et al., 1991). The baroreﬂex continuously adjusts HR to blood pressure ﬂuctuations through changes in vagal efferent activity (Reyes del Paso et al., 1996; Wesseling & Settles, 1985). On the basis of the observation of a strong resemblance of variations in HR and blood pressure at
+
+484
+
+G.A. Reyes del Paso et al.
+
+0.1 Hz, some authors have postulated that oscillations in this range reﬂect the vagal component of the baroreﬂex (Mulder, 1985). Wesseling and Settels argued that 0.01 Hz HRV relates to the “eigenfrequency” of the baroreﬂex in the sense that this component represents its preferred frequency or a resonance phenomenon within the baroreﬂex loop. Several studies documented positive correlations between BRS and LF power (Goldstein et al., 2011; Moak et al., 2007; Rahman, Pechnik, Gross, Sewell, & Goldstein, 2011). However, this association is far from being speciﬁc in the sense that BRS also correlates with other components of the frequency spectrum, in particular the HF band (Reyes del Paso et al., 1996; Reyes del Paso, Hernández, & González, 2004). This ﬁts with the assumption that the overall density of the HRV spectrum can be regarded an index of baroreceptor gain (Sleight et al., 1995).
+Oscillations in the vasomotor system (around 0.1 Hz) and its expression on HR through a resonance phenomenon have been suggested to be the origin of the LF component (de Boer, Karemaker, & Strackee, 1985; Mulder, 1988; van Roon et al., 2004). Another relevant mechanism in determining LF HRV power may be the existence of direct rhythmic central inﬂuences (Cooley et al., 1998; Hayano, Yasuma, Okada, Mukai, & Fujinami, 1996). As shown by Cooley et al., the presence of dominant LF oscillations in HR independent of any blood pressure variability suggests that the LF band is a fundamental property of central autonomic outﬂow.
+The conclusion that the HRV spectrum including its LF component is predominantly determined by vagal activity underlines the vast importance of the parasympathetic system in cardiac regulation. At rest, during low to moderate levels of stress, and even in the ﬁrst steps of physical exercise, HR is mainly subject to parasympathetic control (Levy & Zieske, 1969; Robinson, Epstein,
+
+Beiser, & Braunwald, 1966). In psychophysiological research, HR recording for subsequent analysis of HRV commonly takes place under these conditions. On this account and considering the conclusions of this revision, the suitability of HRV analysis is restricted to the estimation of parasympathetic inﬂuences on HR, whereas further interpretations of spectral components as extravagal have to be regarded as misleading. Finally, it is necessary to take into account the fact that although HRV is mainly modulated by vagal inﬂuences, it does not follow directly that HRV can be taken as an index of vagal tone. This is another debatable question that is beyond the objective of this article (for reviews, see Eckberg, 1997; Grossman, Karemaker, & Wieling, 1991; Ritz, 2009).
+Finally, the fact that all HRV components predominantly relate to vagal control does not imply that they provide the same information about autonomic regulation. As described in our review, the three HRV components do not present the same correlations with other variables. One should distinguish between the physiological mechanisms involved in generating each HRV component and the ﬁnal autonomic pathway by which these mechanisms are expressed at the sinus node. Although the ﬁnal pathway is predominantly vagal, each HRV component provides information about different physiological control mechanisms. HF oscillations relate to respiratory inﬂuences, LF oscillations provide information about blood pressure control mechanisms such as the modulation of vasomotor tone, and VLF power is related to kidney functioning and thermoregulation (Berntson et al., 1997; Task Force, 1996; Taylor et al., 1998; van Roon et al., 2004). By this means, HRV also gives information about sympathetic mechanisms (e.g., vasomotor tone ﬂuctuations, rennin-angiotensin system) that manifest themselves in resonant phenomena through cholinergic oscillations in the sinus node.
+
+References
+
+Acharya, R. U., Joseph, P. K., Kannathal, N., Lim, C. M., & Suri, J. S. (2006). Heart rate variability: A review. Medical & Biolology Engeenering & Computing, 44, 1031–1051. doi:10.1007/s11517-006-0119-0
+Adamopoulos, S., Piepoli, M., McCance, A., Bernardi, L., Rocadaelli, A., Ormerod, O., . . . Coats, A. J. (1992). Comparison of different methods for assessing sympathovagal balance in chronic congestive heart failure secondary to coronary artery disease. American Journal of Cardiology, 70, 1576–1582. doi:10.1016/0002-9149(92)90460-G
+Ahmed, M. W., Kadish, A. H., Parker, M. A., & Goldberger, J. J. (1994). Effect of physiologic and pharmacologic adrenergic stimulation on heart rate variability. Journal of the American College of Cardiology, 24, 1082–1090. doi:10.1113/expphysiol.2010.056259
+Akselrod, S., Gordon, D., Madwed, J. B., Snidman, N. C., Shannon, D. C., & Cohen, R. J. (1985). Hemodynamic regulation: Investigation by spectral analysis. American Journal of Physiology, 249, H867–H875.
+Akselrod, S., Gordon, D., Ubel, F. A., Shannon, D. C., Barger, A. C., & Cohen, R. J. (1981). Power spectrum analysis of heart rate ﬂuctuations: A quantitative probe of beat-to-beat cardiovascular control. Science, 213, 220–223.
+Alvarenga, M. E., Richards, J. C., Lambert, G., & Esler, M. D. (2006). Psychophysiological mechanisms in panic disorder: A correlative analysis of noradrenaline spillover, neuronal noradrenaline reuptake, power spectral analysis of heart rate variability, and psychological variables. Psychosomatic Medicine, 68, 8–16. doi:10.1097/01.psy. 0000195872.00987.db
+Arai, Y., Saul, J. P., Albrecht, P., Hartley, L. H., Lilly, L. S., Cohen, R. J., & Colucci, W. S. (1989). Modulation of cardiac autonomic activity during and immediately after exercise. American Journal of Physiology, 256, H132–H141.
+Baumert, M., Lambert, G. W., Dawood, T., Lambert, E. A., Esler, M. D., McGrane, M., . . . Nalivaiko, E. (2009). Short-term heart rate variability and cardiac norepinephrine spillover in patients with depression and
+
+panic disorder. American Journal of Physiology Heart and Circulatory Physiology, 297, H674–H679. doi:10.1152/ajpheart.00236.2009 Bernardi, L., Wdowczyk-Szulc, J., Valenti, C., Castoldi, S., Passino, C., Spadacini, G., & Sleight, P. (2000). Effects of controlled breathing, mental activity and mental stress with or without verbalization on heart rate variability. Journal of the American Colleague of Cardiology, 35, 1462–1469. Berntson, G. B., Bigger, J., Eckberg, D., Grossman, P., Kaufmann, P., Malik, M., . . . van der Molen, M. (1997). Heart rate variability: Origins, methods, and interpretive caveats. Psychophysiology, 34, 623–648. Berntson, G. G., Cacioppo, J. T., & Quigley, K. S. (1991). Autonomic determinism: The modes of autonomic control, the doctrine of autonomic space, and the laws of autonomic constraint. Psychological Review, 98, 459–487. Berntson, G. G., Cacioppo, J. T., & Quigley, K. S. (1993). Cardiac psychophysiology and autonomic space in humans: Empirical perspectives and conceptual implications. Psychological Bulletin, 114, 296–322. Berntson, G. G., Cacioppo, J. T., Quigley, K. S., & Fabro, V. T. (1994). Autonomic space and psychophysiological response. Psychophysiology, 31, 44–61. Bianchi, A., Mainardi, L., Melonni, C., Chierchiu, S., & Cerutti, S. (1997). Continuous monitoring of the sympatho-vagal balance through spectral analysis. IEEE Engineering in Medicine and Biology Magazine, 16, 64–73. Cogliati, C., Colombo, S., Ruscone, T. G., Gruosso, D., Porta, A., Montano, N., . . . Furlan, R. (2004). Acute b-blockade increases muscle sympathetic activity and modiﬁes its frequency distribution. Circulation, 110, 2786–2791. doi:10.1161/01.CIR.0000146335.69413.F9 Cook, J. R., Bigger, J. T., Kleiger, R. E., Fleiss, J. L., Steinman, R. C., & Rolnitzky, L. M. (1991). Effect of atenolol and diltiazem on heart rate variability in normal persons. Journal of the American Colleague of Cardiology, 17, 480–484.
+
+LF HRV and sympathetic cardiac tone
+
+485
+
+Cooley, R. L., Montano, N., Cogliati, C., van de Borne, P., Richenbacher, W., Oren, R., & Somers, V. K. (1998). Evidence for a central origin of the low-frequency oscillation in RR-interval variability. Circulation, 98, 556–561. doi:10.1161/01.CIR.98.6.556
+De Boer, R. W., Karemaker, J. M., & Strackee, J. (1985). Relationships between short-term blood-pressure ﬂuctuations and heart-rate variability in resting subjects II: A simple model. Medical and Biological Engineering and Computing, 23, 359–364. doi:10.1007/ BF02441590
+Duschek, S., Dietel, A., Schandry, R., & Reyes del Paso, G. A. (2008). Increased baroreﬂex sensitivity and reduced cardiovascular reactivity in individuals with chronic low blood pressure. Hypertesion Research, 31, 1881–1886. doi:10.1291/hypres.31.1873
+Duschek, S., Heiss, H., Schandry, R., & Reyes del Paso, G. A. (2009a). Hemodynamic determinants of chronic hypotension and their modiﬁcation through vasopressor application. Journal of Physiological Sciences, 59, 105–112. doi:10.1007/s12576-008-0015-5
+Duschek, S., Heiss, H., Schandry, R., & Reyes del Paso, G. A. (2009b). Modulations of autonomic cardiovascular control following acute alpha-adrenergic treatment in chronic hypotension. Hypertesion Research, 32, 938–943. doi:10.1038/hr.2009.115
+Duschek, S., Muckenthaler, M., Werner, N., & Reyes del Paso, G. A. (2009). Relationships between features of autonomic cardiovascular control and cognitive performance. Biological Psychology, 81, 110– 117. doi:10.1016/j.biopsycho.2009.03.003
+Duschek, S., Wörsching, J., & Reyes del Paso, G. A. (2013). Interactions between autonomic cardiovascular regulation and cortical activity: A CNV study. Psycholphysiology. Advance online publication. doi:10.1111/psyp.12026
+Eckberg, D. L. (1997). Sympathovagal balance: A critical appraisal. Circulation, 96, 3224–3232. doi:10.1161/01.CIR.96.9.3224
+Forcier, K., Stroud, L. R., Papandonatos, G. D., Hitsman, B., Reiches, M., Krishnamoorthy, J., & Niaura, R. (2006). Links between physical ﬁtness and cardiovascular reactivity and recovery to psychological stressors: A meta-analysis. Health Psychology, 25, 723–739. doi:10.1037/0278-6133.25.6.723
+Furlan, R., Porta, A., Costa, F., Tank, J., Baker, L., Schiavi, R., . . . Mosqueda-Garcia, R. (2000). Oscillatory patterns in sympathetic neural discharge and cardiovascular variables during orthostatic stimulus. Circulation, 101, 886–892. doi:10.1161/01.CIR.101.8.886
+Goldstein, D. S., Bentho, O., Park, M. I., & Sharabi, Y. (2011). Lowfrequency power of heart rate variability is not a measure of cardiac sympathetic tone but may be a measure of modulation of cardiac autonomic outﬂows by baroreﬂexes. Experimental Physiology, 96, 1255– 1261. doi:10.1113/expphysiol.2010.056259
+Grossman, P., Karemaker, J., & Wieling, W. (1991) Prediction of tonic parasympathetic cardiac control using respiratory sinus arrhythmia: The need for respiratory control. Psychophysiology, 28, 201–216.
+Guzzetti, S., Piccaluga, E., Casati, R., Cerutti, S., Lombardi, F., Pagani, M., & Malliani, A. (1988). Sympathetic predominance in essential hypertension: A study employing spectral analysis of heart rate variability. Journal of Hypertension, 6, 711–717.
+Haensch, C. A., Lerch, H., Jorg, J., & Isenmann, S. (2009). Cardiac denervation occurs independent of orthostatic hypotension and impaired heart rate variability in Parkinson’s disease. Parkinsonism & Related Disorders, 15, 134–137. doi:10.1016/j.parkreldis.2008.04.031
+Hayano, J., Yasuma, F., Okada, A., Mukai, S., & Fujinami, T. (1996). Respiratory sinus arrhythmia. A phenomenon improving pulmonary gas exchange and circulatory efﬁciency. Circulation, 94, 842–847. doi:10.1161/01.CIR.94.4.842
+Hopf, H. B., Skyschally, A., Heusch, G., & Peters, J. (1995). Low-frequency spectral power of heart rate variability is not a speciﬁc marker of cardiac sympathetic modulation. Anesthesiology, 82, 609– 619.
+Houle, M. S., & Billman, G. E. (1999). The low frequency component of the heart rate variability spectrum: A poor marker of sympathetic activity. American Journal of Physiology Heart & Circulatory Physiology, 276, H215–H233.
+Introna, R., Yodlowski, E., Pruett, J., Montano, N., Porta, A., & Crumrine, R. (1995). Sympathovagal effects of spinal anesthesia assessed by heart rate variability analysis. Anesthesia & Analgesia, 80, 315–321.
+Japundzic, N., Grichois, M. L., Zitoun, P., Laude, D. & Elghozi, J. L. (1990). Spectral analysis of blood pressure and heart rate in conscious rats: Effects of autonomic blockers. Journal of the Autonomic Nervous System, 30, 91–100.
+
+Jokkel, G., Bonyhay, I., & Kollai, M. (1995). Heart rate variability after complete autonomic blockade in man. Journal of the Autonomic Nervous System 51, 85–89. doi:10.1016/0165-1838(95)80010-8
+Kingwell, B. A., Thompson, J. M., Kaye, D. M., McPherson, G. A., Jennings, G. L., & Esler, M. D. (1994). Heart rate spectral analysis, cardiac norepinephrine spillover, and muscle sympathetic nerve activity during human sympathetic nervous activation and failure. Circulation, 90, 234–240. doi:10.1161/01.CIR.90.1.234
+Kleiger, R. E., Stein, P. K., & Bigger, J. T. (2005). Heart rate variability: Measurement and clinical utility. Annals of Noninvasive Electrocardiology, 10, 88–101. doi:10.1111/j.1542-474X.2005.10101.x
+Koh, J., Brown, T. E., Beightol, L. A., Ha, C. Y., & Eckberg, D. L. (1994). Human autonomic rhythms: Vagal cardiac mechanisms in tetraplegic subjects. Journal of Physiology, 474, 483–495.
+Langewitz, W., Rüddel, H., Schächinger, H., Lepper, W., Mulder, L., Veldman, J., & van Roon, A. (1991). Changes in sympathetic and parasympathetic cardiac activation during mental load: An assessment by spectral analysis of heart rate variability. Homeostasis in Health and Disease, 33, 23–33.
+Levy, M. N., & Zieske, H. (1969). Autonomic control of cardiac pacemarker activity and atrioventricular transmission. Journal of Applied Physiology, 27, 465–470.
+Malliani, A., Pagani, M., & Lombardi, F. (1994). Importance of appropriate spectral methodology to assess heart rate variability in the frequency domain. Hypertension, 24, 140–142. doi:10.1161/01.HYP.24.1.140
+Malliani, A., Pagani, M., Lombardi, F., & Cerutti, S. (1991). Cardiovascular neural regulation explored in the frequency domain. Circulation, 84, 482–492. doi:10.1161/01.CIR.84.2.482
+Malliani, A., Pagani, M., Montano, N., & Mela, G. S. (1998). Sympathovagal balance: A reappraisal. Circulation, 98, 2640–2644. doi:10.1161/ 01.CIR.98.23.2640.a
+Malpas, S. C. (2002). Neural inﬂuences on cardiovascular variability: Possibilities and pitfalls. American Journal of Physiology Heart & Circulatory Physiology, 282, H6–H20.
+Martín-Vázquez, M., & Reyes del Paso, G. A. (2010). Physical training and the dynamics of the cardiac baroreﬂex: A comparison when blood pressure rises and falls. International Journal of Psychophysiology, 76, 142–147. doi:10.1016/j.ijpsycho.2010.03.004
+McCubbin, J. A., Richardson, J. E., Langer, A. W., Kizer, J. S., & Obrist, P. A. (1983). Sympathetic neuronal function and left ventricular performance during behavioral stress in humans: The relationship between plasma catecholamines and systolic time intervals. Psychophysiology, 20, 102–110.
+McGowan, C. L., Swiston, J. S., Notarius, C. F., Mak, S., Morris, B. L., Picton, P. E., . . . & Floras, J. S. (2009). Discordance between microneurographic and heart-rate spectral indices of sympathetic activity in pulmonary arterial hypertension. Heart, 95, 754–758. doi:10.1136/ hrt.2008.157115
+Moak, J. P., Goldstein, D. S., Eldadah, B. A., Saleem, A., Holmes, C., Pechnik, S., & Sharabi, Y. (2007). Supine low-frequency power of heart rate variability reﬂects baroreﬂex function, not cardiac sympathetic innervation. Heart Rhythm, 4, 1523–1529. doi:10.3949/ccjm.76.s2.11
+Montano, N., Porta, A., Cogliati, C., Costantineo, G., Tobaldini, E., Casali, K. R., & Iellamo, F. (2009). Heart rate variability explored in the frequency domain: A tool to investigate the link between heart and behavior. Neuroscience and Biobehavioral Reviews, 33, 71–80. doi:10.1016/j.neubiorev.2008.07.006
+Montano, N., Ruscone, T. G., Porta, A., Lombardi, F., Pagani, M., & Malliani, A. (1994). Power spectrum analysis of heart rate variability to assess the changes in sympathovagal balance during graded orthostatic tilt. Circulation, 90, 1826–1831. doi:10.1161/01.CIR.90.4.1826
+Mukai, S., & Hayano, J. (1995). Heart rate and blood pressure variabilities during graded head-up tilt. Journal of Applied Physiology, 78, 212–216.
+Mulder, L. J. M. (1985). Model-based measures of cardiovascular variability in the time and frequency domain. In J. F. Orlebeke, G. Mulder, & L. P. J. van Doornen (Eds.), The psychophysiology of cardiovascular control (pp. 333–352). New York: Plenum.
+Mulder, L. J. M. (1988). Assessment of cardiovascular reactivity by means of spectral analysis. Ph.D. Thesis. Groningen, The Netherlands: University of Groningen.
+Niskanen, J. P., Tarvainen, M. P., Ranta-aho, P. O., & Karjalainen, P. A. (2004). Software for advanced HRV analysis. Computer Methods and Programs in Biomedicine, 76, 73–81. doi:10.1016/j.cmpb.2004.03.004
+Noppen, M., Dendale, P., Hagers, Y., Herregodts, P., Vincken, W., & D’Haens, J. (1996). Changes in cardiocirculatory autonomic function
+
+486
+
+G.A. Reyes del Paso et al.
+
+after thoracoscopic upper dorsal sympathicolysis for essential hyperhidrosis. Journal of the Autonomic Nervous System, 60, 115–120. doi:10.1016/0165-1838(96)00034-3 Notarius, C. F., Butler, G. C., Ando, S., Pollard, M. J., Senn, B. L., & Floras, J. S. (1999). Dissociation between microneurographic and heart rate variability estimates of sympathetic tone in normal subjects and patients with heart failure. Clinical Science, 96, 557–565. Pagani, M., Lombardi, F., Guzzetti, S., Rimoldi, O., Furlan, R., Pizzinelli, P., . . . Malliani, A. (1986). Power spectral analysis of heart rate and arterial pressure variabilities as a marker of sympatho-vagal interaction in man and conscious dog. Circulation Research, 59, 178–193. Pagani, M., Montano, N., Porta, A., Malliani, A., Abboud, F. M., Birkett, C., & Somers, V. K. (1997). Relationship between spectral components of cardiovascular variabilities and direct measures of muscle sympathetic nerve activity in humans. Circulation, 95, 1441–1448. doi:10.1161/01.CIR.95.6.1441 Parati, G., Mancia, G., Di Rienzo, M., & Castiglioni, P. (2006). Point: Cardiovascular variability is an index of autonomic control of circulation. Journal of Applied Physiology, 101, 676–678. doi:10.1152/ japplphysiol.00446.2006 Peles, E., Goldstein, D. S., Akselrod, S., Nitzan, H., Azaria, M., Almog, S., . . . Modan, M. (1995). Interrelationships among measures of autonomic activity and cardiovascular risk factors during orthostasis and the oral glucose tolerance test. Clinical Autonomic Research, 5, 271–278. doi:10.1007/BF01818892 Perini, R., Orizio, C., Baselli, G., Cerutti, S., & Veicsteinas, A. (1990). The inﬂuence of exercise intensity on the power spectrum of heart rate variability. European Journal of Applied Physiology, 61, 143–148. doi:10.1007/BF00236709 Piccirillo, G., Fimognari, F. L., Viola, E., & Marigliano, V. (1995). Ageadjusted normal conﬁdence intervals for heart rate variability in healthy subjects during head-up tilt. International Journal of Cardiology, 50, 117–124. doi:10.1016/0167-5273(95)93680-Q Pomeranz, B., Macaulay, R. J. B., Caudill, M. A., Kutz, I., Adam, D., Gordon, D., . . . Benson, H. (1985). Assessment of autonomic function in humans by heart rate spectral analysis. American Journal of Physiology Heart and Circulatory Physiology, 248, H151–H153. Rahman, F., Pechnik, S., Gross, D., Sewell, L., & Goldstein, D. S. (2011). Low frequency power of heart rate variability reﬂects baroreﬂex function, not cardiac sympathetic innervation. Clinical Autonomic Research, 21, 133–141. doi:10.1007/s10286-010-0098-y Randall, D. C., Brown, D. R., Raisch, R. M., Yingling, J. D., & Randall, W. C. (1991). SA nodal parasympathectomy delineates autonomic control of heart rate power spectrum. American Journal of Physiology Heart and Circulatory Physiology, 260, H985–H988. Reyes del Paso, G. A., Garrido, S., Pulgar, A., Martín-Vázquez, M., & Duschek, S. (2010). Aberrances in autonomic cardiovascular regulation in ﬁbromyalgia syndrome and their relevance for clinical pain reports. Psychosomatic Medicine, 72, 462–470. doi:10.1097/PSY. 0b013e3181da91f1 Reyes del Paso, G. A., González, M. I., & Hernández, J. A. (2010). Comparison of baroreceptor cardiac reﬂex sensitivity estimates from intersystolic and ECG R-R intervals. Psychophysiology, 47, 1102–1108. doi:10.1111/j.1469-8986.2010.01018.x Reyes del Paso, G. A., Hernández, J. A., & González, M. I. (2004). Differential analysis in the time domain of the baroreceptor cardiac reﬂex sensitivity as a function of sequence length. Psychophysiology, 41, 483–488. doi:10.1111/j.1469-8986.2004.00178.x Reyes del Paso, G. A., Langewitz, W., Robles, H., & Pérez, N. (1996). A between-subjects comparison of respiratory sinus arhythmia and baroreceptor cardiac reﬂex sensitivity as non-invasive measures of tonic parasympathetic cardiac control. International Journal of Psychophysiology, 22, 163–171. doi:10.1016/0167-8760(96)00020-7 Rimoldi, 0., Furlan, R., Pagani, M. R., Piazza, S., Guazzi, M., Pagani, M., & Malliani, A. (1992). Analysis of neural mechanisms accompanying different intensities of dynamic exercise. Chest, 101, 226S–230S. Rimoldi, 0., Pierini, S., Ferrari, A., Cerutti, S., Pagani, M., & Malliani, A. (1990). Analysis of short-term oscillations of R-R and arterial pressure in conscious dogs. American Journal of Physiology, 258, H967–H976. Ritz, T. (2009). Studying noninvasive indices of vagal control: The need for respiratory control and the problem of target speciﬁcity. Biological Psychology, 80, 158–168. doi:10.1016/j.biopsycho.2008.08.003 Robinson, B. F., Epstein, S. E., Beiser, G. D., & Braunwald, E. (1966). Control of heart rate by the autonomic nervous system: Studies in man
+
+on the interrelation between baroreceptor mechanisms and exercise. Circulation Research, 19, 400–411. doi:10.1161/01.RES.19.2.400 Saul, J. P., Berger, R. D., Albrecht, P., Stein, S. P., Chen, M. H., & Cohen, R. J. (1991). Transfer function analysis of the circulation: Unique insights into cardiovascular regulation. American Journal of Physiology Heart and Circulatory Physiology, 261, H1231–H1245. Sherwood, A., Allen, M. T., Fahrenberg, J., Kelsey, R. M., Lovallo, W. R., & van Doornen, L. J. P. (1990). Methodological guidelines for impedance cardiography. Psychophysiology, 27, 1–23. Sleight, P., La Rovere, M. T., Mortara, A., Pinna, G., Maestri, R., Leuzzi, S., . . . Bernardi, L. (1995). Physiology and pathophysiology of heart rate and blood pressure variability in humans: Is power spectral analysis largely an index of baroreﬂex gain? Clinical Science, 88, 103– 109. Sloan, R. P., Shapiro, P. A., Bagiella, E., Bicger, J. T., Lo, E. S., & Gorman, J. M. (1996). Relationships between circulating catecholamines and low frequency heart period variability as indices of cardiac sympathetic activity during mental stress. Psychosomatic Medicine, 58, 25–31. Staud, R. (2008). Heart rate variability as a biomarker of ﬁbromyalgia syndrome. Future Rheumatology, 3, 475–483. doi:10.2217/ 17460816.3.5.475 Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology. (1996). Heart rate variability standards of measurement, physiological interpretation, and clinical use. European Heart Journal, 17, 354–381. doi:10.1161/01.CIR.93. 5.1043 Taylor, J. A., Carr, D. L., Myers, C. W., & Eckberg, D. L. (1998). Mechanisms underlying very-low-frequency RR-interval oscillations in humans. Circulation, 98, 547–555. doi:10.1161/01.CIR.98.6.547 Taylor, J. A., & Studinger, P. (2006). Counterpoint: Cardiovascular variability is not an index of autonomic control of circulation. Journal of Applied Physiology, 101, 678–682. doi:10.1152/japplphysiol. 00446.2006 Tedoriya, T., Sakagami, S., Ueyama, T., Thompson, L., & Hetzer, R. (1999). Inﬂuences of bilateral endoscopic transthoracic sympathicotomy on cardiac autonomic nervous activity. European Journal of Cardiothoracic Surgery, 15, 194–198. doi:10.1016/S10107940(98)00309-1 Thayer, J. F., & Lane, R. D. (2007). The role of vagal function in the risk for cardiovascular disease and mortality. Biological Psychology, 74, 224– 242. doi:10.1016/j.biopsycho.2005.11.013 Uijtdehaage, S. H. J., & Thayer, J. F. (2000). Accentuated antagonism in the control of human heart rate. Clinical Autonomic Research, 10, 107–110. doi:10.1007/BF02278013 Van de Borne, P., Montano, N., Pagani, M., Oren, R., & Somers, V. K. (1997). Absence of low-frequency variability of sympathetic nerve activity in severe heart failure. Circulation, 95, 1449–1454. doi:10.1161/01.CIR.95.6.1449 Van Roon, A. M. (1998). Short-term cardiovascular effects of mental tasks. Ph.D. Thesis. Groningen, The Netherlands: University of Groningen. Van Roon, A. M., Mulder, L. J. M., Althaus, M., & Mulder, G. (2004). Introducing a baroreﬂex model for studying cardiovascular effects of mental workload. Psychophysiology, 41, 961–981. doi:10.1111/j.14698986.2004.00251.x Vesalainen, R. K., Pietilä, M., Tahvanainen, K. U., Jartti, T., Teräs, M., Nagren, K., . . . Voipio-Pulkki, L. M. (1999). Cardiac positron emission tomography imaging with [11C]hydroxyephedrine, a speciﬁc tracer for sympathetic nerve endings, and its functional correlates in congestive heart failure. American Journal of Cardiology, 84, 568–574. doi:10.1016/S0002-9149(99)00379-3 Vicek, M., Radikova, Z., Penesova, A., Kvetnansky, R., Imrich, R. (2008). Heart rate variability and catecholamines during hypoglycemia and orthostasis. Autonomic Neuroscience, 143, 53–57. doi:10.1016/ j.autneu.2008.08.001 Wallin, B. G., Esler, M., Dorward, P., Eisenhofer, G., Ferrier, C., Westerman, R., & Jennings, G. (1992). Simultaneous measurements of cardiac noradrenaline spillover and sympathetic outﬂow to skeletal muscle in humans. Journal of Physiology, 453, 45–58. Warren, J. H., Jaffe, R. S., Wraa, C. E., & Stebbins, C. L. (1997). Effect of autonomic blockade on power spectrum of heart rate variability during exercise. American Journal of Physiology Regulatory, Integrative & Comparative Physiology, 273, R495–R502. Watson, A. M., Hood, S. G., Ramchandra, R., McAllen, R. M., & May, C. N. (2007). Increased cardiac sympathetic nerve activity in heart failure
+
+LF HRV and sympathetic cardiac tone
+
+487
+
+is not due to desensitization of the arterial baroreﬂex. American Journal of Physiology Heart & Circulatory Physiology, 293, H798–H804. doi:10.1152/ajpheart.00147.2007 Wesseling, K. H., & Settels, J. J. (1985). Baromodulation explains shortterm blood pressure variability. In J. F. Orlebeke, G. Mulder, & L. P. J. van Doornen (Eds.), The psychophysiology of cardiovascular control (pp. 69–97). New York: Plenum.
+
+Zhong, Y., Jan, K. M., Ju, K. H., & Chon, K. H. (2006). Analysis of heart rate variability nervous activities using principal dynamic modes. American Journal of Physiology Heart & Circulatory Physiology, 291, H1475–H1483. doi:10.1152/ajpheart.00005.2006
+(Received June 27, 2012; Accepted December 12, 2012)
+

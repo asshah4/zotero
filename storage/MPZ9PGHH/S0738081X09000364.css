@@ -1,0 +1,75 @@
+
+/* ::::: http://linkinghub.elsevier.com/retrieve/static/css/articleLocatorNew.css ::::: */
+
+.body { width: 650px; margin-left: 75px; margin-right: 75px; border: medium solid rgb(232, 237, 243); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 80%; }
+.ihubBody { border: medium solid rgb(232, 237, 243); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 80%; text-align: left; margin: 5px; }
+.textBody { margin: 5px; clear: left; }
+#centertext { margin-left: 75px; }
+a { color: rgb(5, 96, 166); text-decoration: none; }
+a:hover { color: rgb(5, 96, 166); text-decoration: underline; }
+textarea, input { font-family: Arial,Helvetica,sans-serif; }
+h1 { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 125%; font-weight: normal; margin-top: 0px; padding-top: 10px; vertical-align: top; }
+.headerRow { width: 100%; vertical-align: top; }
+.headerColor { margin-left: 2px; margin-right: 5px; padding: 0.4em 0.7em; height: 80px; margin-bottom: 25px; }
+.headerRow #right { float: right; text-align: left; width: 550px; }
+.headerRowHelp #rightHelp { float: right; text-align: left; vertical-align: top; margin-right: 5px; }
+#headerRow #rightE { float: right; text-align: left; vertical-align: top; width: 550px; padding: 5px; margin-right: 5px; background-color: rgb(255, 206, 206); border: thin solid rgb(204, 0, 0); }
+#rightImage { float: left; vertical-align: bottom; padding-top: 10px; }
+#rightText { float: right; text-align: left; vertical-align: top; width: 500px; }
+#headerRow #left { float: left; width: 75px; padding-bottom: 10px; }
+.clear { clear: both; }
+#globalheader { margin-left: 0px; margin-right: 0px; margin-top: 0px; vertical-align: top; }
+#logo { padding: 3px; margin: 0px; border: 0px none; text-decoration: none; }
+#orangeRow { background-color: rgb(255, 154, 52); height: 7px; width: 99%; margin: 2px; border-top: medium solid rgb(255, 255, 255); }
+.toptext { margin: 10px 3px 3px 100px; float: left; text-align: left; width: 500px; }
+#title { font-size: 125%; font-weight: bold; margin: 5px 50px 5px 0px; }
+.remember_me { width: auto; text-align: left; clear: both; background-color: rgb(232, 237, 243); padding: 3px; margin: 5px; }
+div.ae_form { margin: 10px 0px 0px; }
+.ae_form .field { padding: 0.5em 0em; clear: both; }
+.ae_form .field .labels { color: rgb(0, 0, 0); font-weight: bold; float: left; text-align: right; width: 25%; margin-left: 25px; padding-right: 7px; }
+.ae_form .field .inputs { float: left; text-align: left; width: 67%; }
+.url_text { float: right; text-align: left; width: 72%; }
+.url_label { color: rgb(0, 0, 0); font-weight: bold; float: left; text-align: right; width: 25%; margin-left: 10px; padding-right: 7px; }
+.ae_form .error { color: rgb(255, 0, 0); font-weight: bold; }
+.ae_form .field .content_block { margin-left: 25px; margin-right: 25px; }
+.buttonCol { padding: 0.5em 0em; clear: both; vertical-align: top; margin-bottom: 10px; }
+.colLeft { float: left; margin-left: 5px; margin-bottom: 2px; vertical-align: top; clear: left; }
+.colLeftHeading { float: left; margin-left: 5px; margin-bottom: 2px; vertical-align: top; clear: left; text-align: center; padding: 5px; }
+.colRight { float: right; text-align: left; vertical-align: top; padding: 3px; width: 300px; margin-top: 0px; margin-right: 5px; }
+.colRightHeading { float: right; vertical-align: top; width: 300px; margin-top: 0px; margin-right: 5px; text-align: center; padding: 5px; }
+.asterisk { vertical-align: top; }
+.topRow { clear: both; border-bottom: thin solid rgb(232, 237, 243); margin: 5px; }
+.heading { text-align: center; padding: 10px; }
+.li { list-style-image: url('bullet_al.gif'); vertical-align: top; }
+.liupdate { list-style-image: url('bullet_al.gif'); vertical-align: top; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 80%; }
+.pageText { color: rgb(53, 53, 53); font-family: Verdana,Arial,Helvetica,sans-serif; vertical-align: top; font-size: 100%; }
+.AEText { color: rgb(53, 53, 53); font-family: Verdana,Arial,Helvetica,sans-serif; vertical-align: top; font-size: 90%; }
+.inputBox { background-color: rgb(255, 255, 255); border: 1px solid rgb(102, 102, 102); margin-left: 0px; font-size: 12px; }
+.preferredRow { background-color: rgb(232, 237, 243); width: auto; text-align: left; border-bottom-color: rgb(255, 255, 255); border-bottom-width: medium; clear: both; padding: 3px; margin: 3px; }
+.preferredRow2 { background-color: rgb(232, 237, 243); width: auto; vertical-align: middle; text-align: left; border-bottom-color: rgb(255, 255, 255); border-bottom-width: medium; clear: both; padding: 5px; margin: 5px; line-height: 20px; }
+.footerTable { background-color: rgb(232, 237, 243); width: auto; text-align: left; border-bottom: medium solid rgb(255, 255, 255); clear: both; padding: 5px; margin-top: 3px; }
+.testButton { float: left; padding: 3px; width: 330px; margin-top: 0px; margin-right: 2px; list-style-image: url('btn_cell2.gif'); vertical-align: top; }
+.space { height: 100px; }
+form { margin: 0px; }
+#rightHelpAlignment { float: right; margin-top: 0px; margin-right: 5px; margin-left: 0px; }
+#centerAlignment { margin-left: 10px; width: 450px; float: left; margin-top: 20px; }
+#leftAlignment { float: left; width: 75px; margin-top: 0px; }
+
+/* ::::: http://linkinghub.elsevier.com/retrieve/static/css/updateForm.css ::::: */
+
+#headerRow { width: 100%; vertical-align: top; }
+#headerColor { margin-left: 2px; margin-right: 5px; padding: 0.4em 0.7em; }
+#headerRow #right { float: right; text-align: left; width: 550px; margin-left: 10px; }
+#headerRow #rightHelp { float: right; text-align: left; margin-right: 10px; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 80%; }
+#rightImage { float: left; vertical-align: bottom; }
+#rightText { float: right; text-align: left; vertical-align: top; width: 500px; }
+#formInfo { float: left; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 80%; margin-left: 5px; vertical-align: top; clear: left; }
+div.preferredForm { padding: 5px; border: 3px solid rgb(232, 237, 243); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 80%; }
+.preferredForm .updateRow { background-color: rgb(232, 237, 243); width: auto; vertical-align: middle; text-align: left; border-bottom-color: rgb(255, 255, 255); border-bottom-width: medium; clear: both; padding: 3px; }
+.topRow { clear: both; border-bottom: thin solid rgb(232, 237, 243); margin: 5px; }
+#heading { text-align: center; padding: 5px; }
+
+/* ::::: null ::::: */
+
+.style1 { font-size: small; font-weight: bold; }
+.style2 { font-size: 12%; }

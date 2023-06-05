@@ -1,0 +1,554 @@
+Research
+
+JAMA Cardiology | Original Investigation
+An Electrocardiogram-Based Risk Equation for Incident Cardiovascular Disease From the National Health and Nutrition Examination Survey
+
+Amit J. Shah, MD, MSCR; Viola Vaccarino, MD, PhD; A. Cecile J. W. Janssens, PhD; W. Dana Flanders, PhD; Suman Kundu, MSc; Emir Veledar, PhD; Peter W. F. Wilson, MD; Elsayed Z. Soliman, MD, MS, MSc
+
+IMPORTANCE Electrocardiography (ECG) may detect subclinical cardiovascular disease (CVD) in asymptomatic individuals, but its role in assessing adverse events beyond traditional risk factors is not clear. Interval and vector data that are commonly available on modern ECGs may offer independent prognostic information that improves risk classification.
+OBJECTIVES To derive and validate a CVD risk equation based on ECG metrics and to determine its incremental benefit in addition to the Framingham risk score (FRS).
+DESIGN, SETTING, AND PARTICIPANTS This study included 3640 randomly selected community-based adults aged 40 to 74 years without known CVD from the First National Health and Nutrition Examination Survey (NHANES I) cohort (1971-1975) and 6329 from the NHANES III cohort (1988-1994). Participants were sampled from across the United States. A risk score to assess incident nonfatal and fatal CVD events was derived based on computer-generated ECG data, including frontal P, R, and T axes; heart rate; and PR, QRS, and QT intervals from NHANES I. The most prognostic variables, along with age and sex, were incorporated into the NHANES ECG risk equation. The equation was evaluated in the NHANES III cohort for an independent validation. Follow-up in the NHANES III cohort was completed on December 31, 2006. Data for this study were analyzed from August 11, 2015, to May 20, 2016.
+MAIN OUTCOMES AND MEASURES The primary end point was CVD death. Secondary outcomes included 10-year ischemic heart disease and all-cause death.
+RESULTS The final study sample included 9969 participants (4714 men [47.3%]; 5255 women [52.7%]; mean [SD] age, 55.3 [10.1] years) from both cohorts. Frontal T axis, heart rate, and heart rate–corrected QT interval were the most significant ECG factors in the NHANES I cohort. In the validation cohort (NHANES III), the equation provided for prognostic information for fatal CVD with a hazard ratio (HR) of 3.23 (95% CI, 2.82-3.72); the C statistic was 0.79 (95% CI, 0.76-0.81). When added to the FRS in Cox proportional hazards regression models, the categorical (1%, 5%, and 10% cutoffs) net reclassification improvement was 24%. When the FRS and ECG scores were combined in a single model, the C statistic improved by 0.04 (95% CI, 0.02-0.06) to 0.80 (95% CI, 0.77-0.82). Similar improvements were noted when the ECG score was added to the pooled cohort equation. When the equation for prognostic information about ischemic heart disease and all-cause death was evaluated, the results were similar.
+CONCLUSIONS AND RELEVANCE An ECG risk score based on age, sex, heart rate, frontal T axis, and QT interval assesses the risk for CVD and compares favorably with the FRS alone in an independent cohort of asymptomatic individuals. Although the ECG risk equation is low cost, further research is needed to ascertain whether this additional step in risk stratification may improve prevention efforts and reduce CVD events.
+JAMA Cardiol. 2016;1(7):779-786. doi:10.1001/jamacardio.2016.2173 Published online August 3, 2016.
+
+Supplemental content at jamacardiology.com
+Author Affiliations: Author affiliations are listed at the end of this article. Corresponding Author: Amit J. Shah, MD, MSCR, Department of Epidemiology, Rollins School of Public Health, Emory University, 1518 Clifton Rd NE, Room 3053, Atlanta, GA 30322 (ajshah3@emory.edu).
+
+Copyright 2016 American Medical Association. All rights reserved. Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+(Reprinted) 779
+
+Research Original Investigation
+
+Accuracy of the Framingham Risk Score With ECG Data
+
+A t least one-third of deaths from cardiovascular disease (CVD) occur suddenly in those without known atherosclerotic disease1; CVD screening tests may help to identify asymptomatic individuals who are at increased risk for CVD death. Increasing evidence has supported the use of electrocardiography (ECG) to assess CVD risk independently of established risk factors.2-4 Despite the demonstration of the value of ECG markers such as QT interval in risk classification improvement,5 the ECG is not considered an important aspect of routine CVD risk assessment or screening owing to a lack of supporting evidence.6
+We propose the creation and validation of an ECG-based risk equation based on a nationally representative cohort of CVD-free community-based individuals in the First and Third National Health and Nutrition Examination Surveys (NHANES I and III). We derive the equation from using vector and interval ECG data; heart rate; frontal P, QRS, and T axes; frontal QRS-T angle; and PR, QRS, and QT intervals and durations.7-9 Of these candidate data, we narrowed the list to the variables most associated with CVD events in NHANES I (baseline collection, 1971-1975) and developed the NHANES ECG risk equation. We then tested its performance in a NHANES III cohort (baseline collection, 1988-1994). We hypothesize that this equation effectively assesses CVD risk comparably to the traditional Framingham risk score (FRS)10 and pooled cohort equation.11 We also hypothesize that when combined in a single model, the FRS and the ECG risk equation significantly improved risk classification compared with traditional risk scores alone. Finally, we evaluated the ECG risk equation’s performance next to other known ECG prognostic information, including left ventricular hypertrophy,12 the Cardiac Infarction Injury Score,13 minor and major ECG abnormalities,14 and the ECG simple score.15
+Methods
+
+Key Points
+Question What is the performance of an electrocardiography (ECG)-based risk equation (based on age, sex, QT interval, heart rate, and T axis) for assessment of possible cardiovascular disease (CVD) mortality?
+Findings An ECG risk equation based on the First National Health and Nutrition Examination Survey (NHANES) cohort (n = 3640) was able to correctly assess the risk for CVD death in the Third NHANES cohort (n = 6329). When added to the Framingham risk score, the categorical net reclassification improvement was 25% (events, 12%; nonevents, 13%).
+Meaning An ECG risk equation can assess the possibility of CVD death with a performance comparable to the Framingham risk score and provides significant improvement in risk classification.
+(Digicorders; Beckman). Additional details on traditional risk factor assessment and ECG feature extraction can be found in the eMethods in the Supplement.
+These individuals were followed up during the NHANES I Epidemiologic Follow-up Study, which collected hospitalization and mortality data from 4 serial follow-up surveys (19821984, 1986, 1987, and 1992) that included interviews with participants and proxies and source documents such as hospital records.16 Trained medical coders reviewed source documents and classified the primary diagnoses based on the International Classification of Diseases, Ninth Revision (ICD-9) codes. Acute ischemic heart disease (IHD) events (ICD-9 codes 410-414) and cerebrovascular events (ICD-9 codes 430-438) were included as incident nonfatal CVD outcomes. Deaths were classified by ICD-9 codes based on death certificate and hospitalization data. Fatal CVD outcomes included ICD-9 codes 390 to 459, and fatal IHD events included the subgroup with ICD-9 codes 410 to 414. We defined major adverse cardiovascular events (MACE) as incident nonfatal or fatal CVD outcomes.
+
+Description of Cohorts The NHANES is a periodic survey of a representative sample of the civilian noninstitutionalized US population aimed to determine estimates of disease prevalence and the health status of the US population. Data from NHANES I and III were collected during an in-home interview and subsequent visit to a mobile examination center. The baseline examinations for NHANES I occurred from 1971 to 1975; for NHANES III, from 1988 to 1994. The institutional review board of the National Center for Health Statistics, Centers for Disease Control and Prevention, approved the protocols for NHANES I and III and waived the need for informed consent for deidentified data.
+Derivation Cohort The derivation cohort included individuals aged 40 to 74 years with automated ECG data from the NHANES I.16 A detailed description of the design and operation of NHANES I has been published elsewhere.17 Twelve-lead ECGs were collected using recorders that acquired data at a rate of 500 samples per second (resolution, 2 milliseconds)
+
+Validation Cohort Participants in the NHANES III cohort were used to validate the NHANES ECG risk equation. This cohort included participants aged 40 to 74 years who had good-quality ECGs; no selfreported history of myocardial infarction, stroke, or heart failure; and complete data on mortality, medical history, medication use, and anthropometric measurements. We measured the ECGs in the mobile examination centers using machines that acquired data at a rate of 250 samples per second (resolution, 4 milliseconds) (MAC 12; Marquette/GE). We processed the ECGs using the same NOVACODE ECG program as with NHANES I.18 Baseline data were collected through medical history, physical examination, and laboratory analysis as described elsewhere.19 Participants in the NHANES III were followed up for mortality through December 31, 2006, allowing for complete 10-year follow-up. Mortality status was evaluated using probabilistic matching that links the NHANES III participants with the National Death Index. Death certificate data were used to classify cause of death using codes from the International Statistical Classification of Diseases and Related Health Problems, Tenth Revision (ICD-10).20 Deaths due to CVD
+
+780 JAMA Cardiology October 2016 Volume 1, Number 7 (Reprinted) Copyright 2016 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+jamacardiology.com
+
+Accuracy of the Framingham Risk Score With ECG Data
+
+Original Investigation Research
+
+were identified by ICD-10 codes I00 to I99; deaths due to ischemic heart disease, by ICD-10 codes I20 to I25.
+Statistical Analysis Development of the NHANES ECG Risk Equation The NHANES I cohort was used to derive the NHANES ECG risk equation because it contained fatal and nonfatal events and therefore was better powered to derive the ECG equation than NHANES III data, which collected only fatal events. Candidate ECG variables included P, R, and T axes; PR, R-R, and QT interval; and QRS duration, which are automatically quantified on many modern ECGs. The QRS duration and QT interval were corrected for heart rate based on linear regression techniques as previously reported.21 The frontal QRS-T angle was calculated as the difference between the R and T axes. We used Cox proportional hazards models, including age, sex, and race, if significant. We evaluated the interaction of age and sex because of the delayed onset of CVD in women. All ECG measures were first assessed as continuous measures in a qualitative manner via cubic splines to assess for nonlinearity.22 For variables in which the fit was nonlinear, additional transformations were performed. The model was reduced to only the essential variables using stepwise Cox proportional hazards regression models with α value of .05. The interaction of each ECG variable with age and sex was also tested. The equation was derived by summation of the β coefficient times the value of corresponding risk factor. The proportional hazards assumptions were tested for each equation using time-varying covariates and Schoenfeld residuals.23 Calibration was tested using an extended version of the Hosmer-Lemeshow goodnessof-fit test for survival data.24
+Evaluation of ECG Risk Equation in Validation Cohort To assess the external validity of the NHANES ECG risk equation, we evaluated its association with 10-year fatal CVD in the NHANES III cohort using Cox proportional hazards models. As a comparison with the current clinical standard, the FRS and pooled cohort score by the American College of Cardiology and American Heart Association (ACC-AHA)10,25 were also evaluated. We chose these equations because they reflect current practice patterns and provide the most real-world context to the clinical validity of the NHANES ECG risk equation. Finally, a custom model with the individual FRS components was also tested as the reference model.
+Regarding outcomes, we evaluated 10-year IHD and allcause death in addition to CVD death as secondary end points. To measure discrimination, we calculated the Harrell C statistic of survival models and performed bootstrapping with 1000 replications.26 We also evaluated clinical reclassification of the ECG markers over and above the FRS, as described by Pencina et al,27 using survival models. We calculated the net reclassification improvement (NRI) with cut points of 1%, 5%, and 10% risk per 10 years, as recommended by the European Society of Cardiology for lipid management.28 Goodness of fit was tested using an extended Hosmer-Lemeshow statistical test for survival models.24
+As secondary metrics, we also reported the continuous NRI and the absolute and/or relative integrated discrimination im-
+
+provement indexes because established cut points do not exist for all-cause death.27 Although such continuous metrics may overstate performance improvement from additional variables, they may be useful when comparing novel biomarkers among each other.29 Use of these metrics also allowed for a more balanced perspective, given that C statistics may underestimate risk improvement. We also assessed the incremental prognostic value of the new risk score compared with previously published assessments of ECGs, including probable and possible left ventricular hypertrophy30 based on the Minnesota code.14 This variable was chosen over left ventricular hypertrophy based on Cornell criteria because of the former’s prognostic value in this cohort. We also evaluated and defined major and minor ECG abnormalities based on Minnesota codes as outlined in the eMethods of the Supplement, and the Cardiac Infarction Injury Score and ECG simple score, which have strong prognostic capacity.13,15 We used SAS software (version 9.4; SAS Institute) for all analyses, and P < .05 was considered significant.
+Results
+Baseline Characteristics The final study sample included 9969 participants (4714 men [47.3%]; 5255 women [52.7%]; mean [SD] age, 55.3 [10.1] years) from both cohorts. The NHANES ECG risk equation was derived from the NHANES I cohort, in which 4677 individuals aged 40 to 74 years received a complete physical examination. After those with previous self-reported CVD were excluded, the number reduced to 4192. Of these individuals, 3640 had complete ECG data. The validation cohort from NHANES III included 6927 individuals aged 40 to 74 years who were selected for a physical examination; 6418 remained after excluding previous self-reported CVD, and 6329 remained after excluding those with missing ECG data. Table 1 shows baseline characteristics of the derivation and validation cohorts in whom complete ECG and examination data were available. Although age and sex were similar, we found several statistically significant differences between cohorts.
+Derivation of ECG Risk Score In the derivation cohort, MACE occurred in 1030 individuals, and fatal CVD occurred in 574 individuals during a median of 18.8 (interquartile range, 12.4-20.1) years. Examination of nonlinearity between ECG risk factors and MACE showed a nonlinear, U-shaped relationship with the P axis, R axis, frontal QRS-T angle, and T axis (eFigure 1 in the Supplement) that was reformulated in the model with positive and negative differences from the nadir. The most significant ECG variables, their β coefficients, and χ2 values for MACE are listed in Table 2. Because the interaction of age by sex was significant, it was also included in the model. Of all the candidate ECG variables, frontal T axis, QT interval (corrected for heart rate), and heart rate were the only variables found to be independently associated with MACE; models also included age, sex, and the age × sex interaction term.
+
+jamacardiology.com
+
+(Reprinted) JAMA Cardiology October 2016 Volume 1, Number 7 781 Copyright 2016 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+Research Original Investigation
+
+Accuracy of the Framingham Risk Score With ECG Data
+
+Table 1. Baseline Characteristics for Derivation and Validation Cohorts
+
+Enrollment dates Age range, y Baseline characteristics
+Age, mean (SD), y Male sex, No. (%) Black race, No. (%) Tobacco use, No. (%) Diabetes, No. (%) Systolic BP, mean (SD), mm Hg Diastolic BP, mean (SD), mm Hg Antihypertensive use, No. (%) Total cholesterol level, mean (SD), mg/dL ECG profiles, mean (SD) Heart rate, beats/min PR interval, ms QRS (corrected), degrees JT interval, ms (corrected) QT interval, ms (corrected) P axis, degrees R axis, degrees T axis, degrees
+
+Derivation Cohort (n = 3640) 1971-1975
+40-74
+55.3 (9.4) 1693 (46.5)
+402 (11.0) 1250 (34.3)
+178 (4.9) 138.5 (21.9)
+84.9 (11.6) 272 (7.5) 232.3 (45.8)
+70.5 (11.8) 166.7 (22.3) 102.4 (12.4) 327.7 (22.4) 430.4 (21.0)
+60.8 (22.1) 38.7 (37.6) 49.7 (27.3)
+
+Validation Cohort (n = 6329) 1988-1994
+40-74
+55.4 (10.5) 3021 (47.7) 1681 (26.6) 1612 (25.5) 1049 (16.6)
+128.4 (20.1) 77.0 (9.9)
+1288 (20.4) 217.4 (43.3)
+68.7 (11.4) 161.9 (25.5)
+98.9 (12.9) 324.2 (21.3) 423.4 (20.5)
+58.8 (21.7) 36.1 (36.2) 49.1 (28.5)
+
+P Value
+
+.76 .46 <.001 <.001 <.001 <.001 <.001 <.001 <.001
+<.001 <.001 <.001 <.001 <.01
+.02 .43 <.001
+
+Abbreviations: BP, blood pressure; ECG, electrocardiographic.
+SI conversion factor: To convert total cholesterol to millimoles per liter, multiply by 0.0259.
+
+Table 2. Summary of Variables Best Associated With Major Adverse CVD Events in NHANES I
+
+Variable Age, y
+
+β Coefficient 0.078
+
+Male sex
+
+1.92
+
+Age × male sex interaction T axis (positive deflection >45°)a T axis (negative deflection <45°)b
+
+−0.023 0.0084 0.0075
+
+Heart rate, beats/min
+
+0.0153
+
+Corrected QT interval
+
+0.0074
+
+Abbreviations: CVD, cardiovascular disease; NHANES I, First National Health and Nutrition Examination Survey.
+a Positive deflection of T axis is calculated as the T axis minus 45° when the T axis is greater than 45°; otherwise it is equal to 0 when the T axis is less than 45°.
+
+χ2 Value 225
+
+P Value <.001
+
+21
+
+<.001
+
+11
+
+<.001
+
+31
+
+<.001
+
+18
+
+<.001
+
+38
+
+<.001
+
+24
+
+<.001
+
+b Negative deflection of the T axis is calculated as 45° minus the T axis when the T axis is less than 45°; otherwise it is equal to 0 when the T axis is greater than 45°.
+
+ECG Risk Equation Performance in the Derivation Cohort (NHANES I) The NHANES ECG risk equation resulted in scores that had a normal distribution with a mean (SD) of 9.02 (0.79) units. Each 1-SD increase in the ECG score resulted in a hazard ratio (HR) of 2.20 (95% CI, 2.06-2.36) for MACE and 2.96 (95% CI, 2.703.24) for CVD death. The C statistic was 0.70 (95% CI, 0.690.72) for MACE and 0.77 (95% CI, 0.75-0.79) for CVD death. Calibration was adequate, with P = .14 for MACE (Figure) and P = .08 for CVD death. When additionally adjusted for traditional risk factors (tobacco abuse, systolic blood pressure, diabetes, and total cholesterol), the ECG risk factors remained significantly associated with MACE and CVD death (eTable 1 in the Supplement).
+
+Validation of NHANES ECG Risk Equation in NHANES III In the NHANES III validation cohort, 282 participants died of CVD during 10 years of follow-up. The mean (SD) ECG risk score was 8.96 (0.86), and each 1-SD increase in score resulted in a HR of 3.23 (95% CI, 2.82-3.72) for CVD death. Table 3 summarizes the comparison of C statistics and χ2 tests among the NHANES ECG risk equation, FRS, and pooled cohort equation. For CVD death as the primary outcome and IHD and allcause deaths as the secondary outcomes, the C statistic for the ECG risk equation was slightly higher than those for the other scores. For CVD death, the C statistic was 0.79 (95% CI, 0.760.81) for the ECG equation, 0.76 (95% CI, 0.73-0.78) for the FRS, and 0.77 (95% CI, 0.75-0.80) for the pooled cohort equation. The χ2 statistics were also highest with the ECG risk equation,
+
+782 JAMA Cardiology October 2016 Volume 1, Number 7 (Reprinted) Copyright 2016 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+jamacardiology.com
+
+Accuracy of the Framingham Risk Score With ECG Data
+
+Original Investigation Research
+
+Figure. Calibration Plot of the National Health and Nutrition Examination Survey (NHANES) Electrocardiographic Risk Score in the Derivation and Validation Cohorts
+
+Observed Risk, % Observed Risk, %
+
+A 10-y Major adverse cardiovascular event risk
+
+B 10-y Cardiovascular disease deaths
+
+40
+
+20
+
+35
+
+18 y = 1.0019x + 0.0074
+
+R2 = 0.9716
+
+16
+
+30
+
+14
+
+25
+
+12
+
+20
+
+10
+
+15
+
+8
+
+6 10
+4
+
+5
+
+2
+
+0
+
+0
+
+0
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+0
+
+Expected Risk, %
+
+y = 0.9364x + 0.0006 R2 = 0.9902
+
+5
+
+10
+
+15
+
+20
+
+Expected Risk, %
+
+The risk for major adverse cardiovascular events is given in the derivation cohort (NHANES I); the risk for cardiovascular disease deaths, in the validation cohort (NHANES III). Data points indicate expected vs observed risk by deciles of predicted risk.
+
+Table 3. NHANES ECG Risk Equation Performance Compared With Models With Traditional Risk Factor Models in the Validation Cohort
+
+Model NHANES ECG risk score
+χ2 Value C statistic (95% CI) Current clinical standard Framingham risk score
+χ2 Value C statistic (95% CI) Pooled cohort (ACC-AHA) χ2 Value C statistic (95% CI)
+
+IHD Death
+185 0.80 (0.77-0.83)
+
+CVD Death
+281 0.79 (0.76-0.81)
+
+Death
+600 0.75 (0.73-0.77)
+
+175 0.79 (0.76-0.82)
+
+237 0.76 (0.73-0.78)
+
+458 0.71 (0.69-0.73)
+
+152 0.80 (0.77-0.83)
+
+222 0.77 (0.75-0.80)
+
+447 0.73 (0.71-0.75)
+
+Abbreviations: ACC-AHA, American College of Cardiology and American Heart Association; CVD, cardiovascular disease; ECG, electrocardiographic; IHD, ischemic heart disease; NHANES, National Health and Nutrition Examination Survey.
+
+as shown in Table 3. Calibration statistics for CVD death were adequate with P = .22 (Figure). No significant sex differences were found in the C statistics of the ECG equation, with values of 0.79 (95% CI, 0.76-0.83) in men and 0.78 (95% CI, 0.740.81) in women.
+The NHANES ECG risk equation was associated with fatal CVD when added to the FRS, with an HR of 2.56 (95% CI, 1.983.31) for each 1-SD increase in ECG score. When the ECG risk equation and FRS were used together in a single model, the C statistic for fatal CVD improved from 0.76 (95% CI, 0.73-0.78) to 0.80 (95% CI, 0.77-0.82). The continuous NRI was 56% and categorical NRI was 25% (event NRI, 12%; nonevent NRI, 13%). The discrimination slope for FRS alone was 4.5%; the absolute and relative integrated discrimination improvement indexes were 1.6% and 35%, respectively, when adding the ECG risk equation to the model. When adding the ECG equation to models containing the ACC-AHA pooled cohort equation, the C statistic increased from 0.76 (95% CI, 0.73-0.78) to 0.80 (95% CI, 0.77-0.82), and the categorical NRI was 25% (95% CI, 11%14%). Similar findings were noted for IHD and all-cause deaths. When the base model consisted of the individual Framing-
+
+ham variables (Table 4), the improvement in risk classification was lower for all outcomes. For CVD death, the C statistic improved from 0.81 (95% CI, 0.79-0.84) to 0.82 (95% CI, 0.800.85), and the categorical NRI was 11% (95% CI, 7%-4%) for CVD death. When we added previously discovered prognostic ECG metrics to the baseline model, the results were grossly similar (eTable 2 in the Supplement).
+Discussion
+This study derives and validates a novel risk score based solely on demographics and automated vector and interval ECG data for cardiovascular events. The risk score performs comparably to the FRS and the pooled cohort equation, and when added to either score, it significantly improves clinical risk classification. Although these data required specialized processing to generate for the NHANES cohorts from several years ago, they are now commonly available from modern ECG machines. The output from such machines can be entered into an algorithm (eTable 3 in the Supplement) for clinical translation. Other
+
+jamacardiology.com
+
+(Reprinted) JAMA Cardiology October 2016 Volume 1, Number 7 783 Copyright 2016 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+Research Original Investigation
+
+Accuracy of the Framingham Risk Score With ECG Data
+
+Table 4. Summary of Performance Improvement of the NHANES ECG Risk Equation Compared With Current Models
+
+Base Model by Outcome
+
+No. of Events
+
+C Statistic (95% CI) Base Model
+
+Base Model + ECG Risk Equation
+
+FRS
+
+Fatal IHD
+
+166
+
+0.79 (0.76-0.82) 0.82 (0.79-0.85)
+
+Fatal CVD
+
+282
+
+0.76 (0.73-0.78) 0.80 (0.77-0.82)
+
+All-cause death 810
+
+0.71 (0.69-0.73) 0.75 (0.74-0.77)
+
+ACC-AHA pooled cohort equation
+
+Fatal IHD
+
+166
+
+0.80 (0.77-0.83) 0.82 (0.79-0.84)
+
+Fatal CVD
+
+282
+
+0.76 (0.73-0.78) 0.80 (0.78-0.83)
+
+All-cause death 810
+
+0.73 (0.71-0.75) 0.76 (0.74-0.77)
+
+Framingham variablesa
+Fatal IHD
+
+166
+
+0.83 (0.81-0.85) 0.84 (0.82-0.87)
+
+Fatal CVD
+
+282
+
+0.81 (0.79-0.84) 0.82 (0.80-0.85)
+
+All-cause death 810
+
+0.78 (0.76-0.80) 0.79 (0.77-0.82)
+
+Abbreviations: ACC-AHA, American College of Cardiology and American Heart Association; CVD, cardiovascular disease; ECG, electrocardiography; FRS, Framingham risk score; IDI, integrated discrimination improvement; IHD, ischemic heart disease; NHANES, National Health and Nutrition Examination Survey; NRI, net reclassification index.
+
+Difference
+
+NRI, Total No. (No. Events/Nonevents), %
+
+Categorical
+
+Continuous
+
+IDI, % Absolute
+
+Relative
+
+0.03 (0.01-0.05) 24 (17/7)
+
+57 (22/35)
+
+1.0
+
+25
+
+0.04 (0.02-0.06) 25 (12/13)
+
+56 (21/35)
+
+1.6
+
+35
+
+0.04 (0.03-0.05) 30 (11/19)
+
+53 (20/33)
+
+2.6
+
+38
+
+0.02 (0.01-0.03) 14 (9/5)
+
+41 (17/24)
+
+0.7
+
+19
+
+0.04 (0.03-0.06) 25 (11/14)
+
+54 (20/34)
+
+2.0
+
+47
+
+0.03 (0.02-0.03) 19 (7/12)
+
+35 (18/17)
+
+1.9
+
+25
+
+0.01 (0.01-0.02)
+
+4 (3/1)
+
+37 (9/28)
+
+0.2
+
+7
+
+0.01 (0.01-0.02) 11 (7/4)
+
+35 (7/28)
+
+0.8
+
+13
+
+0.01 (0.01-0.02) 10 (6/4)
+
+33 (8/25)
+
+2.0
+
+8
+
+a Includes age, sex, systolic and diastolic blood pressure, diabetes, tobacco use, total and high-density lipoprotein cholesterol levels, and use of antihypertensives.
+
+established ECG risk markers, such as left ventricular hypertrophy, do not provide additional risk stratification data.
+Other studies have used clinical ECG interpretations and showed improved risk stratification when used together with traditional risk factors, but focused on more narrowly defined cohorts and had more modest results. Auer et al31 found that in a group of individuals aged 70 to 79 years who were followed up for 8 years for heart disease events, addition of ECG variables (including minor and major abnormalities) resulted in a 7.4% net reclassification improvement when adding them to traditional risk factors. Another study by Jørgensen et al5 also found that ECG abnormalities improve clinical risk classification by 7.1% in a cohort 65 years or older. Our study also included individuals aged 40 to 64 years, in whom the early intervention may lead to more effective improvements. Tan et al15 derived an ECG simple score that counted the number of abnormalities; the data were compelling, but no comparison with FRS was made. The 25% NRI and 0.04 improvement in C statistic found for the ECG score in our study is similar to that of the coronary calcium score; however, one important difference is that the ECG is a potentially modifiable risk marker that may improve over time. On the other hand, the calcium score can only get worse over time.
+The sample includes a racially diverse sample, which further improves its generalizability. As opposed to the study by Auer et al,31 which found improvement by downward classification of survivors, the NHANES ECG risk equation additionally improves risk prognostication by upward classification of those who eventually had CVD as well. In real-world settings, this reclassification may increase the number of at-risk patients who may receive primary prevention statins and undergo aggressive lifestyle modification, for example, and reduce the need for statins in survivors. eFigure 2 in the Supplement outlines a possible scheme in which the NHANES
+
+risk equation may be used in clinical practice, although additional clinical validations studies are needed.
+The biological significance of the findings are subject to further research, but may be, in part, based on the known associations of the autonomic nervous system with heart rate, QT interval,32 and T wave.33 Abnormalities in repolarization may also be owing to a history of silent myocardial infarctions34 or undiagnosed heart failure and/or cardiomyopathy.35,36 Another possibility is that repolarization abnormalities indicated by QT prolongation and abnormal T axis reflect an increased risk for sudden cardiac death independent of cardiac structure or autonomic function, perhaps via genetic or other pathways. Interventions that improve autonomic function, such as exercise or stress management, may particularly benefit those with high-risk ECG scores.37 Cardiac ischemia or structural abnormalities such as cardiomyopathies may be amenable to pharmacologic interventions, including β-blockers and angiotensin-converting enzyme inhibitors.38 Acute emotional stress may change T-wave variables 39 and may reflect chronic stress states such as depression.40
+These findings are subject to limitations. First, the causes of death in NHANES III were based on death certificate data, which may have resulted in misclassification. To assess this limitation, we examined all-cause death as a secondary outcome and found similar results. We were not able to evaluate for an association with nonfatal CVD in the validation cohort because such outcomes were not available; despite this limitation, we believe that fatal outcomes were more important than nonfatal outcomes because for many individuals, death is the first manifestation of CVD. The derivation cohort was enrolled in the 1970s, and CVD management has evolved since then; nonetheless, the ECG equation also demonstrated excellent performance in the more contemporary (1988-1994) validation cohort. The contemporary cohort also had a lower
+
+784 JAMA Cardiology October 2016 Volume 1, Number 7 (Reprinted) Copyright 2016 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+jamacardiology.com
+
+Accuracy of the Framingham Risk Score With ECG Data
+
+Original Investigation Research
+
+fatal CVD rate than the derivation cohort, which suggests fundamental differences between both groups; nonetheless, the fact that the score still performed well in the validation cohort despite this difference strengthens the score’s external validity. Vector and interval data were derived from sophisticated techniques more than 20 years ago; more studies should be performed on contemporary machines to ensure the same results are still valid. Medical history and smoking history may have been subject to recall bias, as with most studies of this type. Despite this, the assessment of diabetes, hypertension,41 and cholesterol42 has been well-established.43 Finally, clinical use of the ECG score is limited to settings in which com-
+
+puterized ECG machines are available; with a trained ECG reader, however, manual measures of these data may be derived as well.44
+Conclusions
+We have developed and validated a simple ECG risk equation based on vector and interval measures associated with CVD independently of the FRS. Further testing is needed to evaluate how clinical outcomes and costs may be affected by incorporating this equation into primary prevention efforts.
+
+ARTICLE INFORMATION
+Accepted for Publication: May 26, 2016.
+Published Online: August 3, 2016. doi:10.1001/jamacardio.2016.2173.
+Author Affiliations: Department of Epidemiology, Rollins School of Public Health, Emory University, Atlanta, Georgia (Shah, Vaccarino, Janssens, Flanders, Kundu, Veledar); Department of Medicine, Emory University, Atlanta, Georgia (Shah, Vaccarino, Veledar, Wilson); Division of Cardiology, Department of Medicine, Atlanta Veterans Affairs Medical Center, Atlanta, Georgia (Shah, Wilson); Department of Clinical Genetics/EMGO Institute for Health and Care Research, VU University Medical Center, Amsterdam, the Netherlands (Janssens); Department of Biostatistics, Florida International University, Miami, Florida (Veledar); Department of Epidemiology, Wake Forest School of Medicine, Winston-Salem, North Carolina (Soliman); Department of Medicine, Section of Cardiology, Wake Forest School of Medicine, Winston-Salem, North Carolina (Soliman).
+Author Contributions: Dr Shah had full access to all the data in the study and takes responsibility for the integrity of the data and the accuracy of the data analysis. Study concept and design: Shah, Soliman. Acquisition, analysis, or interpretation of data: All authors. Drafting of the manuscript: Shah, Soliman. Critical revision of the manuscript for important intellectual content: All authors. Statistical analysis: Shah, Janssens, Kundu, Veledar. Obtained funding: Shah. Administrative, technical, or material support: Shah, Vaccarino, Soliman. Study supervision: Shah, Vaccarino, Soliman.
+Conflict of Interest Disclosures: All authors have completed and submitted the ICMJE Form for Disclosure of Potential Conflicts of Interest and none were reported.
+Funding/Support: This study was supported by grant UL1TR000454 from the National Center for Advancing Translational Sciences of the National Institutes of Health, grant KL2TR000455 as part of the KL2 scholarship from Atlanta Clinical and Translational Science Institute, Emory University, and in part by grant 15SDG25310017 from the American Heart Association.
+Role of the Funder/Sponsor: The funding sources had no role in the design and conduct of the study; collection, management, analysis, and interpretation of the data; preparation, review,
+
+or approval of the manuscript; and decision to submit the manuscript for publication.
+Additional Contributions: The Atlanta Clinical and Translational Science Institute provided intellectual support of this effort.
+REFERENCES
+1. Myerburg RJ, Junttila MJ. Sudden cardiac death caused by coronary heart disease. Circulation. 2012; 125(8):1043-1052.
+2. Aro AL, Huikuri HV, Tikkanen JT, et al. QRS-T angle as a predictor of sudden cardiac death in a middle-aged general population. Europace. 2012;14 (6):872-876.
+3. Algra A, Tijssen JG, Roelandt JR, Pool J, Lubsen J. QT interval variables from 24 hour electrocardiography and the two year risk of sudden death. Br Heart J. 1993;70(1):43-48.
+4. Rautaharju PM, Zhang ZM, Warren J, et al. Electrocardiographic predictors of coronary heart disease and sudden cardiac deaths in men and women free from cardiovascular disease in the Atherosclerosis Risk in Communities Study. J Am Heart Assoc. 2013;2(3):e000061.
+5. Jørgensen PG, Jensen JS, Marott JL, Jensen GB, Appleyard M, Mogelvang R. Electrocardiographic changes improve risk prediction in asymptomatic persons age 65 years or above without cardiovascular disease. J Am Coll Cardiol. 2014;64 (9):898-906.
+6. Moyer VA; US Preventive Services Task Force. Screening for coronary heart disease with electrocardiography: US Preventive Services Task Force recommendation statement. Ann Intern Med. 2012;157(7):512-518.
+7. Li Y, Shah AJ, Soliman EZ. Effect of electrocardiographic P-wave axis on mortality. Am J Cardiol. 2014;113(2):372-376.
+8. Kors JA, de Bruyne MC, Hoes AW, et al. T axis as an indicator of risk of cardiac events in elderly people. Lancet. 1998;352(9128):601-605.
+9. Rautaharju PM, Kooperberg C, Larson JC, LaCroix A. Electrocardiographic abnormalities that predict coronary heart disease events and mortality in postmenopausal women: the Women’s Health Initiative. Circulation. 2006;113(4):473-480.
+10. D’Agostino RB Sr, Vasan RS, Pencina MJ, et al. General cardiovascular risk profile for use in primary care: the Framingham Heart Study. Circulation. 2008;117(6):743-753.
+11. Muntner P, Colantonio LD, Cushman M, et al. Validation of the atherosclerotic cardiovascular
+
+disease pooled cohort risk equations. JAMA. 2014; 311(14):1406-1415.
+12. Jain A, Tandri H, Dalal D, et al. Diagnostic and prognostic utility of electrocardiography for left ventricular hypertrophy defined by magnetic resonance imaging in relationship to ethnicity: the Multi-Ethnic Study of Atherosclerosis (MESA). Am Heart J. 2010;159(4):652-658.
+13. Rautaharju PM, Warren JW, Jain U, Wolf HK, Nielsen CL. Cardiac infarction injury score: an electrocardiographic coding scheme for ischemic heart disease. Circulation. 1981;64(2):249-256.
+14. Prineas RJ, Crow RS, Zhang Z-M. The Minnesota Code Manual of Electrocardiographic Findings. London, England: Springer Science & Business Media; 2009.
+15. Tan SY, Sungar GW, Myers J, Sandri M, Froelicher V. A simplified clinical electrocardiogram score for the prediction of cardiovascular mortality. Clin Cardiol. 2009;32(2):82-86.
+16. Cox CS, Mussolino ME, Rothwell ST, et al. Plan and operation of the NHANES I Epidemiologic Followup Study, 1992. Vital Health Stat 1. 1997;(35): 1-231.
+17. Plan and Operation of the Health and Nutrition Examination Survey, United States, 1971-1973. Vital Health Stat. 1973;1(10b):1-77.
+18. Rautaharju PM, MacInnis PJ, Warren JW, Wolf HK, Rykers PM, Calhoun HP. Methodology of ECG interpretation in the Dalhousie program: NOVACODE ECG classification procedures for clinical trials and population health surveys. Methods Inf Med. 1990;29(4):362-374.
+19. Plan and operation of the Third National Health and Nutrition Examination Survey, 1988-94: series 1: programs and collection procedures. Vital Health Stat 1. 1994;(32):1-407.
+20. National Center for Health Statistics, Office of Analysis and Epidemiology. The Third National Health and Nutrition Examination Survey (NHANES III) linked mortality file: mortality follow-up through 2006: matching methodology. http://www.cdc .gov/nchs/data/datalinkage/matching _methodology_nhanes3_final.pdf. Published May 2009. Accessed June 29, 2016.
+21. Soliman EZ, Shah AJ, Boerkircher A, Li Y, Rautaharju PM. Inter-relationship between electrocardiographic left ventricular hypertrophy and QT prolongation as predictors of increased risk of mortality in the general population. Circ Arrhythm Electrophysiol. 2014;7(3):400-406.
+
+jamacardiology.com
+
+(Reprinted) JAMA Cardiology October 2016 Volume 1, Number 7 785 Copyright 2016 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+Research Original Investigation
+
+Accuracy of the Framingham Risk Score With ECG Data
+
+22. Desquilbet L, Mariotti F. Dose-response analyses using restricted cubic spline functions in public health research. Stat Med. 2010;29(9): 1037-1057.
+23. Schoenfeld D. Partial residuals for the proportional hazards regression model. Biometrika. 1982;69(1):239-241.
+24. Demler OV, Paynter NP, Cook NR. Tests of calibration and goodness-of-fit in the survival setting. Stat Med. 2015;34(10):1659-1680.
+25. Goff DC Jr, Lloyd-Jones DM, Bennett G, et al; American College of Cardiology/American Heart Association Task Force on Practice Guidelines. 2013 ACC/AHA guideline on the assessment of cardiovascular risk: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines. J Am Coll Cardiol. 2014;63(25, pt B):2935-2959.
+26. Harrell FE. Regression Modeling Strategies: With Applications to Linear Models, Logistic Regression, and Survival Analysis. New York, NY: Springer; 2001.
+27. Pencina MJ, D’Agostino RB Sr, Steyerberg EW. Extensions of net reclassification improvement calculations to measure usefulness of new biomarkers. Stat Med. 2011;30(1):11-21.
+28. Perk J, De Backer G, Gohlke H, et al; European Association for Cardiovascular Prevention & Rehabilitation (EACPR); ESC Committee for Practice Guidelines (CPG). European Guidelines on cardiovascular disease prevention in clinical practice (version 2012). The Fifth Joint Task Force of the European Society of Cardiology and Other Societies on Cardiovascular Disease Prevention in Clinical Practice (constituted by representatives of nine societies and by invited experts). Eur Heart J. 2012;33(13):1635-1701.
+29. Leening MJ, Vedder MM, Witteman JC, Pencina MJ, Steyerberg EW. Net reclassification
+
+improvement: computation, interpretation, and controversies: a literature review and clinician’s guide. Ann Intern Med. 2014;160(2):122-131.
+30. Sundström J, Lind L, Arnlöv J, Zethelius B, Andrén B, Lithell HO. Echocardiographic and electrocardiographic diagnoses of left ventricular hypertrophy predict mortality independently of each other in a population of elderly men. Circulation. 2001;103(19):2346-2351.
+31. Auer R, Bauer DC, Marques-Vidal P, et al; Health ABC Study. Association of major and minor ECG abnormalities with coronary heart disease events. JAMA. 2012;307(14):1497-1505.
+32. Schwartz PJ, Priori SG, Cerrone M, et al. Left cardiac sympathetic denervation in the management of high-risk patients affected by the long-QT syndrome. Circulation. 2004;109(15): 1826-1833.
+33. van Lien R, Neijts M, Willemsen G, de Geus EJ. Ambulatory measurement of the ECG T-wave amplitude. Psychophysiology. 2015;52(2):225-237.
+34. Kannel WB, Anderson K, McGee DL, Degatano LS, Stampfer MJ. Nonspecific electrocardiographic abnormality as a predictor of coronary heart disease: the Framingham study. Am Heart J. 1987; 113(2, pt 1):370-376.
+35. Okin PM, Devereux RB, Nieminen MS, et al. Relationship of the electrocardiographic strain pattern to left ventricular structure and function in hypertensive patients: the LIFE study: Losartan Intervention For End Point. J Am Coll Cardiol. 2001; 38(2):514-520.
+36. Okada M, Yotsukura M, Shimada T, Ishikawa K. Clinical implications of isolated T wave inversion in adults: electrocardiographic differentiation of the underlying causes of this phenomenon. J Am Coll Cardiol. 1994;24(3):739-745.
+37. Iellamo F, Legramante JM, Massaro M, Raimondi G, Galante A. Effects of a residential
+
+exercise training on baroreflex sensitivity and heart rate variability in patients with coronary artery disease: a randomized, controlled study. Circulation. 2000;102(21):2588-2592.
+38. Mathew J, Sleight P, Lonn E, et al; Heart Outcomes Prevention Evaluation (HOPE) Investigators. Reduction of cardiovascular risk by regression of electrocardiographic markers of left ventricular hypertrophy by the angiotensinconverting enzyme inhibitor ramipril. Circulation. 2001;104(14):1615-1621.
+39. Critchley HD, Taggart P, Sutton PM, et al. Mental stress and sudden cardiac death: asymmetric midbrain activity as a linking mechanism. Brain. 2005;128(pt 1):75-85.
+40. Whang W, Peacock J, Soliman EZ, et al. Relations between depressive symptoms, anxiety, and T wave abnormalities in subjects without clinically-apparent cardiovascular disease (from the Multi-Ethnic Study of Atherosclerosis [MESA]). Am J Cardiol. 2014;114(12):1917-1922.
+41. Elliott WJ, Young PE, DeVivo L, Feldstein J, Black HR. A comparison of two sphygmomanometers that may replace the traditional mercury column in the healthcare workplace. Blood Press Monit. 2007;12(1):23-28.
+42. Fahey PJ, Lott JA, Peet GM, Crowley LE. Accuracy and precision of HDL cholesterol measurements using an office chemistry analyzer. J Fam Pract. 1991;32(4):382-386.
+43. Goldman N, Lin IF, Weinstein M, Lin YH. Evaluating the quality of self-reports of hypertension and diabetes. J Clin Epidemiol. 2003; 56(2):148-154.
+44. Jaroszyński AJ, Jaroszyńska A, Szcześniak A, et al. Agreement between manual and automated measurements of simple QRS/T angle. Cent Eur J Med. 2014;9(6):737-740.
+
+786 JAMA Cardiology October 2016 Volume 1, Number 7 (Reprinted) Copyright 2016 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 04/17/2020
+
+jamacardiology.com
+

@@ -1,0 +1,12 @@
+
+var SDPA={init:function(){$(window).load(SDPA.sendPage());$(window).load(SDPA.sendResources());},sendPage:function(){var e=window.performance;var t="";t+="cpc=SD";t+="&key="+encodeURIComponent(SDM.pageTransKey);t+="&pagetype="+SDM.pageType;t+="&sds="+SDM.sds;t+="&tid="+SDM.tid;if(SDM.tm.ahm!==undefined){t+="&ahm="+SDM.tm.ahm}
+if(SDM.tm.chm!==undefined){t+="&chm="+SDM.tm.chm}
+if(document.location.href){t+="&href="+encodeURIComponent(document.location.href)}
+if(document.documentElement.clientWidth&&document.documentElement.clientHeight){t+="&winHeight="+document.documentElement.clientHeight;t+="&winWidth="+document.documentElement.clientWidth}
+t+="&domCount="+document.getElementsByTagName("*").length;if(window.optimizely!=undefined){var n=window.optimizely.data.state.activeExperiments;var r=n.length;var i="&oexp=";for(var s=0;s<r;s++){if(s+1<r){i+=n[s]+"|"}else{i+=n[s]}}
+t+=i}
+t+="&ud="+SDM.ud;if(window.performance!=undefined){if(e.timing){var o=e.timing;if(o.loadEventEnd>0){for(var u in o){t+="&"+u+"="+o[u]}
+if(typeof chrome!="undefined"&&chrome.loadTimes()){t+="&msFirstPaint="+SDPA.toInt(chrome.loadTimes().firstPaintTime*1e3)}
+var a=SDM.pru+"/pageReport?"+t;$("#sdpa").append('<img style="display:none" src="'+a+'">')}else{setTimeout(SDPA.sendPage,100)}}}else{var a=SDM.pru+"/pageReport?"+t;$("#sdpa").append('<img style="display:none" src="'+a+'">')}},toInt:function(e){return Math.round(Number(e)).toString()},sendResources:function(){if(window.performance!=undefined){var e=window.performance;if(e.timing){var t=e.timing}
+if(typeof e.getEntries!="undefined"){if(e&&t.loadEventEnd>0){if(t.loadEventEnd+600<Date.now()){var n=e.getEntries().length;var r=t.navigationStart;var i=t.responseStart-r;var s=t.domInteractive-r;var o=t.loadEventEnd-r;var u=window.performance.getEntries();var a=[];a.push({ent:n,sds:SDM.sds,tid:SDM.tid,ns:r,ttfb:i,pgi:s,pgl:o});for(var f=0;f<n;f++){a.push({tm:SDPA.toInt(u[f].startTime)+"|"+SDPA.toInt(u[f].responseStart)+"|"+SDPA.toInt(u[f].duration),t:u[f].initiatorType})}
+var l=encodeURI(JSON.stringify(a));var c=SDM.pru+"/resource?"+l;$("#sdpa").append('<img style="display:none" src="'+c+'">')}else{setTimeout(SDPA.sendResources,200)}}else{setTimeout(SDPA.sendResources,200)}}}}}

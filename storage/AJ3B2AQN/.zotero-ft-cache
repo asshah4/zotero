@@ -1,0 +1,280 @@
+International Journal of Epidemiology, 2015, 324–333 doi: 10.1093/ije/dyu222
+Advance Access Publication Date: 9 December 2014 Original article
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+Education Corner
+Modelling recurrent events: a tutorial for analysis in epidemiology
+Leila DAF Amorim1* and Jianwen Cai2
+1Department of Statistics, Institute of Mathematics, Federal University of Bahia, Brazil and 2Department of Biostatistics, School of Public Health, University of North Carolina at Chapel Hill, Chapel Hill, NC, USA
+*Corresponding author. Departmento de Estat´ıstica, Instituto de Matema´ tica, Universidade Federal da Bahia, Av.Adhemar de Barros s/n, Campus de Ondina, Salvador-Bahia, Brazil CEP 40170-115. E-mail: leiladen@ufba.br
+Accepted 27 October 2014
+Abstract
+In many biomedical studies, the event of interest can occur more than once in a participant. These events are termed recurrent events. However, the majority of analyses focus only on time to the ﬁrst event, ignoring the subsequent events. Several statistical models have been proposed for analysing multiple events. In this paper we explore and illustrate several modelling techniques for analysis of recurrent time-to-event data, including conditional models for multivariate survival data (AG, PWP-TT and PWP-GT), marginal means/ rates models, frailty and multi-state models. We also provide a tutorial for analysing such type of data, with three widely used statistical software programmes. Different approaches and software are illustrated using data from a bladder cancer project and from a study on lower respiratory tract infection in children in Brazil. Finally, we make recommendations for modelling strategy selection for analysis of recurrent event data.
+Key words: Recurrent events; time-to-event data; survival modelling
+
+Key Messages
+• Several approaches have been proposed in the literature to account for intra-subject correlation that arises from recurrent events in survival analysis.
+• The ﬁve reviewed models for analysis of recurrent time-to-event data differ in assumptions and in interpretation of the results.
+• Choice of the appropriate approach for analysis of recurrent event data is determined by many factors, including number of events, relationship between consecutive events, effects that may or may not vary across recurrences, biological process, dependence structure and research question.
+• Many statistical challenges arise when analysing recurrent time-to-event data and the researcher should be careful to address them adequately.
+
+VC The Author 2014; all rights reserved. Published by Oxford University Press on behalf of the International Epidemiological Association
+
+324
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+325
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+Introduction
+Many diseases and clinical outcomes may recur in the same patient. Examples of recurrent events include admissions to hospitals, falls in elderly patients, migraines, cancer recurrences, upper respiratory and ear infections. A common characteristic among these events is the intrinsic correlation between those occurring in the same subject. If the correlated nature of the data is ignored, the confidence intervals (CI) for the estimated rates could be artificially narrow and the null hypothesis is rejected more often than it should be. Hence, adjustments for within-individual correlation must be done.
+There has been a considerable amount of discussion on methods of analysis for recurrent or repeated events in biostatistics, epidemiological and medical literature.1,3–13 Nevertheless, inefficient or inappropriate statistical approaches are still used to analyse such type of data. The most well-known approach for analysis of survival data is the Cox proportional hazards model.2 Due to the independence assumption, the original Cox model is only appropriate for modelling the time to the first event,2 which is an inefficient use of data because data from the later events are discarded. Another approach is to model the number of events for each patient and fit Poisson or negative binomial models, which more recently were integrated into generalized estimating equations (GEE) and random effects models for taking into account the correlation of events. However, this is also inefficient use of data because information as to the timing of events is not used. Extensions of the original Cox model have been proposed for analyses of recurrent event data such as Andersen-Gill (AG),3 Prentice, Williams and Peterson (PWP) (total and gap times),4 Wei, Lin and Weissfeld (WLW)5 and frailty models.6 Another analysis strategy is through modelling the mean number of events or their occurrence rate.7,8,13 More recently, multi-state models (MSM) have been extended for recurrent events,14,15 but their application for analysis of epidemiological data is still limited.
+Although there are several well-developed statistical methods for analysing recurrent event data, no comprehensive tutorial is available for epidemiologists and researchers in related areas. Therefore, the main aim of this paper is to summarize different approaches to modelling recurrent time to event, providing some general guidelines for choosing the appropriate approach and its impact on the interpretation of results. This paper is intended for epidemiologists and researchers with some statistical knowledge. We demonstrate the analysis with three commonly used statistical software programs for analysing epidemiological data—SAS, Stata and R. The models are illustrated using two applications: (i) a study on tumour recurrences
+
+in patients with bladder cancer;5,16 and (ii) a randomized trial evaluating the effect of high doses of vitamin A on occurrence of acute lower respiratory-infections (ALRI) in children.17 These two applications differ on sample size, censoring percentage, number of recurrences and data structure.
+Methods Review of the general theory
+Two important features of recurrent event data are that the events are ordered and that the subject can only be at risk for one such event at a time. Figure 1 displays an illustrative scheme of recurrent events for five subjects. Among those subjects, three had at least two events (represented by black dots). Two of the subjects were censored (represented by unfilled circle at the end of individual’s line segment) at the end of the study, at 60 months; the others dropped out of the study earlier for reasons not related to the events of interest. Patient 1 had the largest number of events, 6, at times 4, 6, 9, 12, 15 and 28 months, wheras patient 3 had only two events at times 12 and 47 months.
+We discuss five different modelling approaches. We assume that, conditional on the covariates, the event and censoring times are independent (independent censoring assumption). These models differ in assumptions and the data layout for analysis (Appendix 1, available as Supplementary data at IJE online). Another major difference among them is the way the repeated events are modelled. Many models assume that future events depend only on the immediate past (AG, PWP, MSM), also known as
+Figure 1. Schematic plot for recurrent time-to-event data for ﬁve hypothetical subjects.
+
+326
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+Markov process, whereas others assume dependency upon shared random effects (frailty models). The marginal means/rates model, on the other hand, characterizes the means/rates of the counting process and it allows arbitrary dependence structures among recurrent events. Hence, each model provides answers for a slightly different research question.
+Models
+The Andersen and Gill model The counting process model of Andersen-Gill (AG) generalizes the Cox model, which is formulated in terms of increments in the number of events along the time line.3 The outcome of interest is time since randomization for a treatment (or other exposure) until an event occurs, i.e. time since study entry, also known as total time scale. It uses a common baseline hazard function for all events and estimates a global parameter for the factors of interest. The Andersen and Gill (AG) model assumes that the correlation between event times for a person can be explained by past events, which implies that the time increments between events are conditionally uncorrelated, given the covariates. It is a suitable model when correlations among events for each individual are induced by measured covariates.11 Thus, dependence is captured by appropriate specification of time-dependent covariates, such as number of previous events or some function thereof. However, if this assumption does not hold, a remedy is to use a robust sandwich covariance matrix for the resulting regression coefficient estimators,2 which uses a jacknife estimate to anticipate correlations among the observations and provides robust standard errors. The AG model is usually indicated for analysing data when all dependence between subsequent events is mediated through time-varying covariates and the interest is in the overall effect on the intensity of the occurrence of a recurrent event. This approach has been used to evaluate repeated occurrence of basal cell carcinoma2 and hospitalizations due to all causes and to cardiovascular diseases in the elderly,9 for instance.
+Prentice, Williams and Peterson models The Prentice, Williams and Peterson (PWP) model analyses ordered multiple events by stratification, based on the prior number of events during the follow-up period.4 All participants are at risk for the first stratum, but only those with an event in the previous stratum are at risk for the successive one.1 The model can incorporate both overall and event-specific effects for each covariate. In practice the data may need to be limited to a specific number of recurrent events if the risk set becomes very small for later strata
+
+and event-specific estimates become too unreliable.12 Besides using the same outcome (total time: TT) as in the AG model, the PWP model can also be usually defined in terms of gap time (GT), which is the time since the previous event. When using a gap or waiting-time scale, the time index is reset to zero after each recurrence of the event, with assumption of a renewal process. Gaps between events are often useful with infrequent events, when a renewal occurs after an event or when the interest lies on prediction of a next event. Hence, two stratified PWP models can be fitted: PWP-TT, which evaluates the effect of a covariate for the kth event since the entry time in the study; and the PWP-GT, which evaluates the effect of a covariate for the kth event since the time from the previous event. Unlike the AG model, the effect of covariates may vary from event to event in the stratified PWP models. Therefore, the PWP models might be preferable to the AG model when the effects of covariates are different in subsequent events, which is likely to be the case for diseases such as viral infections because of the development of immunity, or pulmonary exacerbations in patients with cystic fibrosis.
+The marginal means/rates model An alternative model is the marginal means/rates model,8,13,18–20 which can be interpreted in terms of the mean number of events when there are no time-dependent covariates. This approach does not specify dependence structures among recurrent event times within a subject. However, since the marginal means/rates model considers all recurrent events of the same subject as a single counting process and does not require time-varying covariates to reflect the past history of the process, this model is more flexible and parsimonious than AG model.8 If no timedependent covariates are included in the AG model to account for all the influence of the prior events on future recurrences, point estimates from the means/rates model and the AG model are the same. Nevertheless, the covariance matrix estimate for the regression coefficients for the marginal means/rates model uses score residuals in the middle of the sandwich estimate, which corrects for the dependency structure. This approach can be of interest in many medical applications when the dependence structure is complex and unknown, especially when it cannot be characterized by including time-varying covariates, as in the AG model. The marginal model is appropriate when the dependence structure is not of interest. Moreover, the inclusion of prior event history may attenuate estimates of covariate effects compared with the marginal effects. Examples of applications for this approach include analysis of accumulated cost of medical care, and multiple infections in patients with chronic granulomatous disease.
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+327
+
+The frailty model The random effects approach, also called the frailty model, introduces a random covariate into the model that induces dependence among the recurrent event times.12 The idea is that the random effect describes excess risk or frailty for distinct individuals, taking into account unmeasured heterogeneity that cannot be explained by observed covariates alone. The most commonly used frailty model is a shared frailty model with random effects assumed to follow a gamma distribution with mean equal to one and unknown variance.6 The model assumes that the recurrent event times are independent conditional on the covariates and random effects. When there is heterogeneous susceptibility to the risk of recurrent events, the frailty model can be applied. For instance, when evaluating recurrent infections at the point of catheter insertion in dialysis patients, the study population can be considered as a mixture of individuals with different hazards, but the characteristics for differences between individuals are not captured by the measured covariates. In such applications, frailty models can be a possible choice.
+Multi-state models The simplest multi-state model (MSM) is defined for two states: alive (a transient state) and dead (an absorbing state).21 A special case of MSM occurs when an individual moves from one state to another through time, and intermediate states are identified. Such states may be considered to be of the same type of recurrent events (Figure 2). A change of state is called a transition (or an event) and is central in this framework, which is fully characterized through estimation of transition probabilities between states and transition intensities that are defined as instantaneous hazards of progression to one state, conditional on occupying another state.22 Both of them depend on the process over time, the history up to time t. Graphically, MSM are illustrated using diagrams with boxes (the states) and arrows between the states (the transitions).15 In Figure 2 we represent an MSM for k recurrent events. The transition intensities (alk) can be modelled using a Cox model for univariate time-to-event data,21 and an AG or PWP for recurrent events.14 The most common application of the multi-state approach is the illness-death model, which could be applied, for instance, for a combination of data from hospitalizations and death of heart failure patients because it allows incorporation of the multiple
+
+hospitalizations and distinction between two clinical events: death and hospitalization. Another example of application with recurrent event data is in the evaluation of factors on the risk of catheter loss in patients with chronic renal failure, when the event is reversible and the interest in on the estimation of transition probabilities.
+Existing software
+We provide syntax for fitting each model using SAS, Stata and R software,23–25 highlighting major differences, particularly on required data structure and available results (Appendix 1, 2 and 3, available as Supplementary data at IJE online). The models for analysis of multivariate timeto-event data are fitted using the PHREG procedure in SAS/STAT software (1999–2001). The frailty model for clustered data can be implemented using PROC NLMIXED.26 A SAS macro, called PTRANSIT, is used to fit MSM for recurrent events.14
+In Stata the survival analysis commands include STSET and STCOX. STSET is used to input information on the survival times, censoring time and identification variables. STCOX is used to fit the Cox model and its extensions.12,27 Currently, there are no specific options to fit MSM for recurrent event data in Stata.
+The library survival is part of R statistical packages and is used to fit the methods described here,6 except for the MSM model. Different options on the coxph function are considered to specify the approaches. MSM for recurrent events is not currently available in R.
+Application 1: Bladder cancer We consider data from a study with 85 bladder cancer patients designed to evaluate the effect of two treatment arms (thiotepa or placebo) on tumour recurrence.5,6,16 All patients entered the study after removal of superficial bladder tumours. The event of interest is recurrences of tumours. The tumours detected during the study visits were removed. Patients were censored at the time of loss to follow-up or at the end of the study. Subjects were followed for up to 64 months. Covariates include treatment group, number of initial tumours (found at baseline) and size of the largest initial tumour (in centimeters); 55% of the patients had at least one recurrence, resulting in 130 recurrences. Mean number of recurrences is 1.5, varying from 0 to 9. Among those with at least one recurrence, 81% had
+
+Figure 2. Schematic for full multi-state model for recurrent events.
+
+328
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+Table 1. Results of ﬁve analytical approaches for recurrent events: hazard and rate ratios of tumour recurrences in bladder cancer patients
+
+Effects
+
+AG HR (95% CI)
+
+Means model RR (95% CI)
+
+PWP-TT HR (95% CI)
+
+PWP-GT HR (95% CI)
+
+Frailty model HR (95% CI)
+
+Treatment (Ref: placebo)
+Number of tumours
+Size of largest tumour
+
+0.63 (0.40, 0.99) 1.19 (1.05, 1.35) 0.96 (0.83,1.11)
+
+0.63 (0.38, 1.04) 1.19 (1.05, 1.34) 0.96 (0.83, 1.11)
+
+0.72 (0.48, 1.05) 1.12 (1.02, 1.24) 0.99 (0.88, 1.12)
+
+0.76 (0.51, 1.15) 1.17 (1.06, 1.29) 1.01 (0.89, 1.14)
+
+0.54 (0.28, 1.03) 1.26 (1.05, 1.51) 0.97 (0.78, 1.22)
+
+HR, hazard ratio; RR, rate ratio; CI, conﬁdence interval; AG, Andersen-Gill model; PWP-TT, Prentice-Williams-Peterson Total-Time model; PWP-GT, Prentice-Williams-Peterson Gap-Time model.
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+at most 4 recurrences (mean number is 2.8). We truncated the dataset after the fourth event due to the small number of events in later strata.
+Application 2: Acute lower respiratory tract infections Data from a double-blinded randomized clinical trial with 1207 children followed for 1 year to evaluate the impact of high doses of vitamin A on diarrhoea and acute lower respiratory tract infections (ALRI) was used.17 Daily information on respiratory rates was available and measured twice for those children who reported cough. An episode of ALRI was defined as cough plus a respiratory rate of 50 breaths per min or higher for children under 12 months of age, and 40 breaths per min or higher for older children.17 Censoring occurred when children were lost to follow-up or the study reached the end.
+Only 16% of the children had at least one ALRI episode during their follow-up period, resulting in 321 episodes. Episodes of ALRI beyond the third occurrence were not used because of the small number of times this occurred and including them would make the model unstable. Besides treatment group (vitamin A vs placebo), other covariates are child’s gender and age at the beginning of the study, and an indicator for the presence of a toilet in the child’s house (a proxy for hygienic habits). Age was categorized into two groups (0 if child’s age >12 months, and 1 if age 12 months).
+Results
+Bladder cancer
+There were 47 first bladder cancer recurrences, and 83 subsequent recurrences. If one decides to fit the Cox model to the time to the first event, it would exclude 63.8% of the observed events.
+Considering the first four events, we analysed 112 recurrences. The results were similar to those obtained when using all recurrences when possible (data not shown).
+
+We present the results for PWP-TT and PWP-GT models with common effects.
+We present the hazard ratios (HR) or rate ratios (RR) and corresponding 95% confidence intervals for the risk factors for bladder cancer recurrences (Table 1). Both AG and marginal means models provide same point estimates because we did not include time-dependent variables related to the event history in the AG model. Even though they have the same numerical values, they model different ratios, i.e. the AG models intensity function whereas the marginal means model models rate of events. In these analyses we did not incorporate time-varying covariates in the AG model to deal with dependence in order to make comparison with other models. One noticeable difference between AG and marginal means models, however, is in their confidence intervals, due to their distinct corresponding procedures for estimating variability of the estimates. The frailty model, which includes a random effect to account for within subject correlation, is also fitted to this data.
+Results from the AG model point out that patients in the thiotepa group have a reduction of 37% on the risk of recurrence, even though of only borderline significance when adjusting for number and size of initial tumours (HR ¼ 0.63; 95% CI: 0.40, 0.99). Furthermore, the number of initial tumours (HR ¼ 1.19; 95% CI: 1.05, 1.35) is revealed to be an important prognostic factor for recurrence. Size of largest initial tumour was not significantly associated to the recurrences after adjusting for the number of initial tumours and treatment by any of the five models. Conditional on the unmeasured heterogeneity and covariates, the frailty model indicates that each additional tumour at baseline is associated with a 26% increase in the recurrence risk (HR ¼ 1.26; 95% CI: 1.05, 1.51).
+Estimates from both PWP models are computed based on restricted risk sets; specifically, the risk set only involves those with the same number of previous events.
+For MSM we considered only one type of transition, which means that the individual returns to the initial
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+329
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+Figure 3. Predicted transition probabilities for four patients using the AG multi-state model ﬁtted to bladder study.
+
+condition just after the occurrence of the event, that is, the event is immediately reversible.13 In this case, we are interested in the transition from healthy to disease status, assuming the probability of recovery is 1. Figure 3 shows the predicted transition probabilities between bladder tumour recurrences considering the AG model for four types of patients. Subjects 1 and 2 were in the placebo group, whereas subjects 3 and 4 were in the thiotepa group. Subjects 1 and 3 had both only 1 tumour at baseline of size 1 cm. Subjects 2 and 4 had 7 tumours at baseline and 4 cm was the size of their largest initial tumour. Subject 3 is the one with smallest probabilities of going from healthy to disease status (tumour recurrences) during the follow-up period. The worst prognostic, i.e. highest probability of going from healthy to disease status, is for subject 2.
+Since each of the models has distinct assumptions, their results should not be directly compared. The choice among them depends on the scientific question under investigation.
+ALRI
+The maximum number of ALRI episodes for a child is seven, with 98% of the children having at most three episodes. According to all models, younger children (12 months) are more likely to have recurrent episodes of ALRI than older children (e.g. HR ¼ 3.62; 95% CI: 2.76, 4.74, PWP-TT model) (Table 2). Another important factor is the presence of a toilet at home, which reduces by about
+
+40% the risk of ALRI (e.g. HR ¼ 0.60; 95% CI: 0.46, 0.77, PWP-TT model).
+The variance of the random effect from the frailty model is estimated to be 2.51 (P <0.001), corresponding to a within-individual correlation of 55.7%, given by the Kendall’s tau statistic. It is important to emphasize that the frailty model estimates the relative risk within children.
+The predicted transition probabilities through MSM are presented in Figure 4 and were estimated using the AG model. Subjects 1 and 2 were both girls and in the vitamin A group. They differ regarding the age group and presence of a toilet at home. Subject 1 is younger (12 months) and lives in a house without toilet facilities, whereas subject 2 is older (>12 months) and has a toilet at her house. Note that the predicted probabilities for transition from healthy to ALRI state are much larger for subject 1 compared with subject 2. Assuming that there is unequal risk for the different transitions, the analysis can be stratified by transition (event) using PWP-TT model (data not shown).
+Since we have the duration of ALRI episodes, we considered more than one transition, which is applicable when the recovery is not immediate and the individual remains sick for a period of time. We are interested in both transitions: healthy to disease, and disease to healthy. Thus, we estimated the probability of recovery. Note that there is no difference on the effects for treatment and gender on the two transitions (Table 3). Results for transition healthyALRI are similar as shown previously by the AG model. However, the MSM allows us to additionally quantify the
+
+330
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+Table 2. Results of ﬁve analytical approaches for recurrent events: hazard and rate ratios of respiratory infections in small children in Brazil
+
+Effects
+
+AG HR (95% CI)
+
+Means model RR (95% CI)
+
+PWP-TT HR (95% CI)
+
+PWP-GT HR (95% CI)
+
+Frailty model HR (95% CI)
+
+Treatment (Ref: placebo)
+Gender (Ref: girls)
+Age (Ref: >12 mo)
+Toilet at home (Ref: no)
+
+0.94 (0.73, 1.20) 1.10 (0.86, 1.41) 5.17 (4.00, 6.67) 0.54 (0.42, 0.70)
+
+0.94 (0.70, 1.26) 1.10 (0.82, 1.48) 5.17 (3.82, 7.00) 0.54 (0.40, 0.74)
+
+0.93 (0.73, 1.19) 1.10 (0.86, 1.41) 3.62 (2.76, 4.74) 0.60 (0.47, 0.77)
+
+0.91 (0.72, 1.16) 1.09 (0.86, 1.38) 3.76 (2.90, 4.88) 0.60 (0.47, 0.76)
+
+0.95 (0.69, 1.31) 1.13 (0.82, 1.57) 6.50 (4.57, 9.23) 0.52 (0.37, 0.73)
+
+HR, hazard ratio; RR, rate ratio; CI, conﬁdence interval; AG, Andersen-Gill model; PWP-TT, Prentice-Williams-Peterson Total-Time model; PWP-GT, Prentice-Williams-Peterson Gap-Time model; mo, months.
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+Figure 4. Predicted transition probabilities for two girls using the AG multi-state model ﬁtted to ALRI study.
+
+magnitude of the effect of the covariates on the transition ALRI-healthy. Younger children present a reduced rate of recovering compared with older children (HR ¼ 0.38; 95% CI: 0.28, 0.51), whereas children with a toilet facility at home have a higher rate (HR ¼ 2.26; 95% CI: 1.67, 3.06). Note that, due to potential selection bias, caution must be exercised to interpret these estimates. Estimates for the second transition (ALRI ! healthy) were for diseased children, not for the overall population.
+Discussion
+Given the relative lack of agreement regarding appropriate methods for analysing recurrences using survival analysis,
+
+we described the relevant methodological issues and illustrated how to fit and interpret results for different approaches. Analysis based only on the first event time cannot be used to examine the effect of the risk factors on the number of recurrences over time.1,28 Many researchers continue to use logistic regression for such analysis, despite known limitations and the increasing availability of analytical approaches that handle recurrent events.10,29 In cohort studies, there is little justification for fitting logistic regression once there are other available approaches for estimating risk.10 The count data models, such as Poisson and negative binomial, are the simplest ways to analyse repeated events. However, they consider the total number of events per a fixed period of time, ignoring the time
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+331
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+Table 3. Estimated effects for two types of transition in multistate models for recurrent respiratory infections in small children in Brazil
+
+Effects
+
+Transition healthy! ALRI HR (95% CI)
+
+Transition ALRI ! healthy HR (95% CI)
+
+Treatment (Ref: placebo)
+Gender (Ref: girls)
+Age (Ref: > 12 mo)
+Toilet at home (Ref: no)
+
+0.94 (0.74, 1.19) 1.10 (0.87, 1.39) 5.17 (4.08, 6.56) 0.54 (0.43, 0.69)
+
+0.96 (0.71, 1.29) 1.00 (0.75, 1.34) 0.38 (0.28, 0.51) 2.26 (1.67, 3.06)
+
+HR, hazard ratio; CI, conﬁdence interval; mo, months.
+
+between repeated occurrences. In addition, it is not possible to identify whether the effect of exposures changes the rate of occurrence across the time period.1 Thus, survival analysis is preferred when follow-up times are variable among participants, or when there are time-varying covariates or time-varying effects.10
+Even though we focus on methods for analysis of ordered failure times, many studies present sources of correlated unordered failure times. For example, times to an event of interest collected on family members are unordered and correlated because they share genetic and environmental factors; similarly, times to the same event type in two organs are pairwise correlated. The methods described here are also useful for analysis of such data, considering some adjustments.
+Several approaches have been proposed to account for intra-subject correlation that rises from multiple events settings in survival analysis. The biological process of the disease is fundamental when choosing the model for the time to recurrent events. For instance, it is possible that after experiencing the first infection, the risk of the next infection may increase. If it is reasonable to assume that the risk of recurrent events remained constant regardless of the number of previous events, then the AG model is recommended.6 The AG model assumes that the time increments between events are conditionally uncorrelated given the covariates. However, omission of an important covariate could induce dependence. In such case, the standard errors would be underestimated, causing inflation of type I error. A possible remedy would be to fit an AG model with a time-dependent covariate for the number of events. Advantages of an AG model include the ability to accommodate time-varying covariates and discontinuous intervals of risk.15
+
+If it is reasonable to assume that the occurrence of the first event increases the likelihood of a recurrence, then PWP is recommended. The PWP models (TT or GT) are also indicated when there is interest in estimating effects for each event separately. The PWP models assume that the subjects can only be at risk for a given event after he/she experienced the previous event. A limitation for the use of PWP models is that the risk sets for the later events get quite small, making the estimates unstable. Therefore, we usually have to truncate the data. On the other hand, when the investigators are interested in modelling the expected number of events or the rate of event occurrence, conditional on covariates, the means/rates marginal model should be used. These models are also useful in many applications where there are multiple types of events and it is of interest to simultaneously describe marginal aspects of them. Incorporation of time-varying covariates can also lead to different interpretations depending on the adopted approach.
+The frailty models are indicated when a subject-specific random effect can explain the unmeasured heterogeneity that cannot be explained by covariates alone, which leads to a person-specific interpretation of the estimates in a similar way as that for mixed models for analysis of longitudinal data. A debate about using frailty models is regarding the amount of information, such as number of events, number of subjects and the distribution of events/subjects, required to produce stable estimates. When random effects are large, a smaller number of events seems to be adequate, otherwise a larger number of events would be necessary.6 When using multi-state models (MSM), the interest lies in the estimation of progression rates, assessing the effects of individual risk factors.22 Different MSM (Markov or SemiMarkov, for instance) can be fitted depending on the assumptions about the dependence of the transition rates. Due to lack of software developments for fitting MSM, this approach has been rarely applied to analysis of recurrent event data to date.14,15
+We discussed known approaches under independent censoring assumption for analysis of recurrent event data. Methods dealing with dependent censoring have been proposed,30,31 but they have not been incorporated into major software.
+We attempted to illustrate methodological issues through analyses of recurrence events in a cancer study and in a study related to an infectious disease, describing interpretation of results obtained from different approaches. All models allow estimation of overall effects and most of them are easily approached using standard statistical software. Fit of frailty models and MSM, however, is less accessible. Even though main conclusions did not change in our analyses, it is
+
+332
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+important to highlight the distinct interpretations for parameter estimates resulting from the models, particularly if these effects are estimated marginally or conditional on covariates and/or random effects. In this paper we fitted all models for both applications in order to illustrate their use, software implementation and interpretation of estimates in scenarios with different data structures. We truncated our datasets to have the same number of events for all approaches to illustrate the methods and to allow a more direct comparison between the models. Nevertheless, we were also able to use full data for analysis using the AG model, marginal rates model and frailty model. We did both analyses (with full and truncated data) using the aforementioned approaches. The results from the analysis with full data were not included in the manuscript for simplicity.
+In summary, the choice of the approach for analysis of recurrent event data will be determined by many factors, including: number of the events; relationship between subsequent events; effects varying or not across recurrences; biological process; and dependence structure. Usually the stratified models, as PWP (total or gap times) or multi-state models, are used when there are few recurrent events per subject and the risk of recurrence varies between recurrences. On the other hand, models that account for correlation between recurrent events using robust covariance matrix, time-varying covariates or frailties (marginal means/rates, AG and frailties models) are indicated for frequent events with constant hazard between recurrences. Many statistical challenges arise when performing analyses of repeated time-to-event data and the researcher should be careful to address them adequately.
+We recommend the following basic steps for analysing recurrent time-to-event data: (i) select the appropriate statistical model for the data based on the aforementioned factors and the scientific question of interest; (ii) organize the data structure suitable for the selected model; (iii) use the proper commands and options in the chosen statistical software to fit the model. In this paper, we briefly described the main characteristics of models for analysing recurrent time-to-event data and presented information on how to prepare the data (Appendix 1, available as Supplementary data at IJE online) and to specify the commands in three statistical software (Appendix 2, available as Supplementary data at IJE online).
+A recurrent events model can help to gain insights into the disease process. Hence, it is very important to consider the use of as much data as possible and to conduct analysis that can enhance a comprehensive understanding of the role of the risk factors in the disease process.
+
+Supplementary Data
+Supplementary data are available at IJE online.
+Funding
+This work was supported in part by the Coordenac¸a˜ o de Aperfeic¸oamento de Pessoal de N´ıvel Superior (CAPES)/Ministry of Education-Brazil (grant 0617/11-3 to L.D.A.); the National Council for Scientific and Technological Development (CNPq) (grant 478556/2010-1 to L.D.A.); and the National Institutes of Health (NIH) (grants P01 CA 142538 and ULIRR025747 to J.C.).
+Acknowledgements
+We are grateful to Professor Mauricio Barreto and to Dr Ana Marlucia Assis for the use of the ALRI data, and to Dr Antonio Carlos Pedroso de Lima for his SAS macro.
+Conﬂict of interest: None declared.
+References
+1. Pandeya N, Purdie DM, le Green A, Williams G. Repeated occurrence of basal cell carcinoma of the skin and multifailure survival analysis: follow-up data from the Nambour Skin Cancer Prevention Trial. Am J Epidemiol 2005;161:748–54.
+2. Cox DR. Regression models and life-tables (with Discussion). J Royal Stat Soc B 1972;34:182–220.
+3. Andersen PK, Gill RD. Cox’s regression model for counting processes: a large sample study. Ann Stat 1982;10:1100–20.
+4. Prentice RL, Williams BJ, Peterson AV. On the regression analysis of multivariate failure time data. Biometrika 1981;68: 373–79.
+5. Wei LJ, Lin DY, Weissfeld L. Regression analysis of multivariate incomplete failure time data by modelling marginal distributions. J Am Stat Assoc 1989;84:1065–73.
+6. Therneau TM, Grambsch PM. Modelling Survival Data: Extending The Cox Model. 2nd edn. New York, NY: Springer, 2000.
+7. Pepe MS, Cai J. Some graphical displays and marginal regression analysis for recurrent failure times and time dependent covariates. J Am Stat Assoc 1993;88:811–20.
+8. Lin DY, Wei LJ, Yang I, Ying Z. Semiparametric regression for the mean and rate functions of recurrent events. J R Stat Soc B 2000;62:711–30.
+9. Kennedy BS, Kasl SV, Vaccarino V. Repeated hospitalizations and self-rated health among the elderly: a multivariate failure time analysis. Am J Epidemiol 2001;153: 232–41.
+10. Gill DP, Zou GY, Jones GR, Speechley M. Comparison of regression models for the analysis of fall risk factors in older veterans. Ann Epidemiol 2009;19:523–30.
+11. Moulton LH, Dibley MJ. Multivariate time-to-event models for studies of recurrent childhood diseases. Int J Epidemiol 1997;26: 1334–39.
+12. Kelly PJ, Lim L L-Y. Survival analysis for recurrent event data: an application to childhood infectious diseases. Stat Med 2000;19:13–33.
+13. Cook RJ, Lawless JF. The Statistical Analysis of Recurrent Events. 2nd edn. New York, NY: Springer, 2010.
+
+International Journal of Epidemiology, 2015, Vol. 44, No. 1
+
+333
+
+Downloaded from https://academic.oup.com/ije/article-abstract/44/1/324/654595 by guest on 21 December 2019
+
+14. Paes AT, de Lima ACP. A SAS macro for estimating transition probabilities in semiparametric models for recurrent events. Computer Methods Programmes Biomed 2004;75:59–65.
+15. Castan˜ eda J, Gerritse B. Appraisal of several methods to model time to multiple events per subject: modelling time to hospitalizations and death. Rev Colomb Estad´ıstica 2010;33:43–61.
+16. Zeng D, Lin DY. Efﬁcient estimation of semiparametric transformation models for counting processes. Biometrika 2006;93: 627–40.
+17. Barreto ML, Santos LMP, Assis AMO et al. Effect of vitamin A supplementation on diarrhoea and acute lower-respiratorytract infections in young children in Brazil. Lancet 1994;344: 228–31.
+18. Lawless JF. The analysis of recurrent events for multiple subjects. J R Stat Soc C 1995;44:487–98.
+19. Cai J, Schaubel D. Analysis of recurrent event data. In: Balakrishnan N, Rao CR (eds). Handbook of Statistics: Advances in Survival Analysis. Vol. 23. Amsterdam: Elsevier, 2004.
+20. Amorim LD, Cai J, Zeng D, Barreto M. Regression splines in the time-dependent coefﬁcient rates model for recurrent event data. Stat Med 2008;27:5890–906.
+21. Andersen PK, Keiding N. Multi-state models for event history analysis. Stat Methods Med Res 2002;11:91–115.
+22. Meira-Machado L, Un˜ a-Alvarez J, Cadarso-Sua´ rez C, Andersen PK. Multi-state models for the analysis of time-to-event data. Stat Methods Med Res 2009;18:195–222.
+
+23. SAS Institute. SAS/STAT Software. Cary, NC: SAS Institute, 1999–2001.
+24. STATACorp. Stata Statistical Software: Release 11.0. College Station, TX: STATACorp, 2010.
+25. R Development Core Team. R: A Language and Environment for Statistical Computing. Vienna: R Foundation for Statistical Computing, 2012.
+26. Gharibvand L, Liu L. Analysis of survival data with clustered events. Paper 237. SAS Global Forum 2009, 22–25 March. Washington, DC, 2009.
+27. Cleves M. Analysis of multiple failure-time data with Stata. Stata Tech Bull 1999;49:30–39.
+28. Dacourt V, Quantin C, Abrahamowicz M, Blinquet C, Alioum A, Faivre J. Modelling recurrence in colorectal cancer. J Clin Epidemiol 2004;57:243–51.
+29. Purroy F, Caballero PEJ, Gorospe A et al. Recurrent transient ischaemic attack and early risk of stroke: data from the PROMAPA Study. J Neurol Neurosurg Psychiatry 2013;84: 596–603.
+30. Miloslavsky M, Keles S, van der Laan MJ, Butler S. Recurrent events analysis in the presence of time-dependent covariates and dependent censoring. J R Stat Soc B 2004;66:239–57.
+31. Amorim LD, Cai J, Zeng D. Proportional rate models for recurrent time event data under dependent censoring: a comparative study. In: Bhattacharjee M, Dhar SK, Subramanian S (eds). Recent Advances in Biostatistics: False Discovery Rates, Survival Analysis and Related Topics. Hackensack, NJ: World Scientiﬁc, 2011.
+

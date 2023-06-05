@@ -1,0 +1,249 @@
+
+/* ::::: http://www.ochsnerjournal.org/templates/jsp/style.css ::::: */
+
+.xslDebugTemplate { color: rgb(153, 153, 153); font-size: 10px; font-family: sans-serif; padding-left: 2px; }
+.xslDebugNodePath { color: rgb(255, 0, 0); font-size: 10px; font-family: sans-serif; padding-left: 2px; }
+.xslDebugImport { color: rgb(0, 127, 0); font-size: 10px; font-family: sans-serif; padding-left: 2px; }
+.wbr { font-family: "Lucida Sans Unicode","Arial Unicode MS",sans-serif; font-size: 2pt; color: rgb(255, 255, 255); white-space: normal; letter-spacing: 0px; word-spacing: 0px; word-wrap: break-word; }
+.noWrap, .nobrWithWbr { white-space: nowrap; }
+.ff2 .nobrWithWbr { white-space: normal; }
+.tocHeading .subj-group { display: block; font-size: 90%; }
+div.boxed-text-, div.boxed-text-anchor, div.boxed-text-float { margin-left: 3em; }
+div.boxed-text-margin {  }
+.refnumber { text-align: left; vertical-align: top; }
+.references .note p { padding: 0em; margin: 0em; }
+.articleEntry { margin-bottom: 1em; }
+.NLM_table-wrap td, .NLM_table-wrap td, .NLM_table-wrap th, .NLM_table-wrap th { border-right: 1px solid black; border-bottom: 1px solid black; }
+.NLM_table-wrap-foot p { margin: 0px; }
+.NLM_table-wrap table { border: 1px solid black; border-spacing: 0px; border-collapse: collapse; width: 95%; }
+.NLM_table-wrap table.frame_none { border: medium none; }
+.NLM_table-wrap table.frame_left { border-width: medium medium medium 1px; border-style: none none none solid; border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color black; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.NLM_table-wrap table.frame_right { border-width: medium 1px medium medium; border-style: none solid none none; border-color: -moz-use-text-color black -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.NLM_table-wrap table.frame_top { border-right: medium none; border-width: 1px medium medium; border-style: solid none none; border-color: black -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.NLM_table-wrap table.frame_bottom { border-width: medium medium 1px; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color black; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.NLM_table-wrap table.frame_sides { border-width: medium 1px; border-style: none solid; border-color: -moz-use-text-color black; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.NLM_table-wrap table.frame_topbot { border-right: medium none; border-left: medium none; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-width: 1px medium; border-style: solid none; border-color: black -moz-use-text-color; }
+table.rowsep0 td, table.rowsep0 th { border-bottom: medium none; }
+table.rowsep1 td, table.rowsep1 th { border-bottom: 1px solid black; }
+table.rowsep2 td, table.rowsep2 th { border-bottom: 3px double black; }
+col.rowsep0, tr.rowsep0 td, tr.rowsep0 th { border-bottom: medium none; }
+col.rowsep1, tr.rowsep1 td, tr.rowsep1 th { border-bottom: 1px solid black; }
+col.rowsep2, tr.rowsep2 td, tr.rowsep2 th { border-bottom: 3px double black; }
+tr th.rowsep0, tr td.rowsep0 { border-bottom: medium none; }
+tr th.rowsep1, tr td.rowsep1 { border-bottom: 1px solid black; }
+tr th.rowsep2, tr td.rowsep2 { border-bottom: 3px double black; }
+table.colsep0 td, table.colsep0 th { border-right: medium none; }
+table.colsep1 td, table.colsep1 th { border-right: 1px solid black; }
+table.colsep2 td, table.colsep2 th { border-right: 3px double black; }
+col.colsep0, tr.colsep0 td, tr.colsep0 th { border-right: medium none; }
+col.colsep1, tr.colsep1 td, tr.colsep1 th { border-right: 1px solid black; }
+col.colsep2, tr.colsep2 td, tr.colsep2 th { border-right: 3px double black; }
+tr th.colsep0, tr td.colsep0 { border-right: medium none; }
+tr th.colsep1, tr td.colsep1 { border-right: 1px solid black; }
+tr th.colsep2, tr td.colsep2 { border-right: 3px double black; }
+.NLM_table-wrap table tr.last td { border-bottom: medium none; }
+.NLM_table-wrap table tr td.last, .NLM_table-wrap table tr th.last { border-right: medium none; }
+.NLM_table-wrap .align_right { text-align: right; }
+.NLM_table-wrap .align_left { text-align: left; }
+.NLM_def-list { margin: 1em 0px; }
+.NLM_def-list .NLM_title, .NLM_def-list .NLM_term-head, .NLM_def-list .NLM_def-head, .NLM_def-list .NLM_term { font-weight: bold; vertical-align: top; }
+.NLM_def-list .NLM_def { vertical-align: top; }
+.NLM_table-wrap table tr td table.listgroup, .NLM_table-wrap table tr td table.listgroup td { border: medium none; width: auto; text-align: left; }
+.title1, .title2, .title3, .title4, .title5, .inlinehead1, .inlinehead2, .inlinehead3, .inlinehead4, .inlinehead5 { font-weight: bold; }
+.searchNone0, .searchNone1, .searchNone2, .searchNone3, .searchNone4, .searchNone5, .searchNone6, .searchNone7, .searchNone8, .searchNone9 { color: inherit; background-color: inherit; font-weight: inherit; }
+.searchTerm0, .searchTerm1, .searchTerm2, .searchTerm3, .searchTerm4, .searchTerm5, .searchTerm6, .searchTerm7, .searchTerm8, .searchTerm8 { font-weight: bold; }
+.searchTerm0, .searchTerm1, .searchTerm2, .searchTerm3, .searchTerm4 { color: black; }
+.searchTerm5, .searchTerm6, .searchTerm7, .searchTerm8, .searchTerm8 { color: white; }
+.searchTerm0 { background-color: rgb(255, 255, 102); }
+.searchTerm1 { background-color: rgb(160, 255, 255); }
+.searchTerm2 { background-color: rgb(153, 255, 153); }
+.searchTerm3 { background-color: rgb(255, 153, 153); }
+.searchTerm4 { background-color: rgb(255, 102, 255); }
+.searchTerm5 { background-color: rgb(136, 0, 0); }
+.searchTerm6 { background-color: rgb(0, 170, 0); }
+.searchTerm7 { background-color: rgb(136, 104, 0); }
+.searchTerm8 { background-color: rgb(0, 70, 153); }
+.searchTerm9 { background-color: rgb(153, 0, 153); }
+.citation_source-book, .citation_source-journal { font-style: italic; }
+.dash { font-size: 13px; }
+.quote { margin: 1em 0em 1em 5em; display: block; }
+.entityA, .entityB, .entityC, .entityD { border: 0px none; }
+.entityB { vertical-align: baseline; }
+.entityC { vertical-align: bottom; }
+.entityD { vertical-align: text-bottom; }
+.fromGoogle { border-style: solid; border-color: red; border-width: 2px 0pt; margin: 12px 0pt; padding: 2px 0pt; line-height: 20px; font-size: 12px; }
+ol.simple { list-style: none outside none; }
+ol.alphaLower { list-style: lower-alpha outside none; }
+ol.alphaUpper { list-style: upper-alpha outside none; }
+ol.romanLower { list-style: lower-roman outside none; }
+ol.romanUpper { list-style: upper-roman outside none; }
+.smallcaps { font-variant: small-caps; }
+.strike { text-decoration: line-through; }
+.NLM_disp-formula { display: block; }
+a.roDisabled { color: graytext; }
+.articleEntry .firstCell { text-align: right; vertical-align: top; width: 18px; padding-top: 0px; }
+.sectionHeading { background-color: rgb(225, 225, 225); }
+.sectionHeading th { font-size: larger; }
+.artAuthors .NLM_bio { font-weight: normal; }
+.multiIssueToc .issueTitle { font-weight: bold; }
+.monospace { font-family: monospace; }
+table.formula { margin: 1em 0px; clear: both; }
+.NLM_list-list_type-simple { list-style: none outside none; display: block; }
+.IN_LIST-freeText, .IN_LIST-label, .IN_LIST-title { list-style: none outside none; display: inline; margin: 0px; padding: 0px; }
+.fullSideBullet { width: 15px; vertical-align: top; }
+.accessIcon { border: medium none; }
+.quickLinks_head, .quickSearch_head, .quickSearch_content, .quickLinks_content { border: 1px solid black; }
+.quickSearch_content, .quickLinks_content { border-top: medium none; }
+.fontSize1 { font-size: xx-small; }
+.fontSize2 { font-size: small; }
+.fontSize3 { font-size: medium; }
+.fontSize4 { font-size: large; }
+.fontSize5 { font-size: x-large; }
+.fontSize6 { font-size: xx-large; }
+.fontSize7 { font-size: xx-large; }
+.panelHeading, .panelFooter { position: relative; padding: 3px 10px; }
+.panelHeading .left, .panelHeading .right, .panelFooter .left, .panelFooter .right { position: absolute; width: 6px; height: 6px; background-repeat: no-repeat; }
+.panelHeading .left, .panelHeading .right { top: 0px; }
+.panelFooter .left, .panelFooter .right { bottom: 0px; }
+.panelHeading .left, .panelFooter .left { left: 0px; }
+.panelHeading .right, .panelFooter .right { right: 0px; }
+.panelHeading .left { background-image: url('curve_left_top.png'); }
+.panelHeading .right { background-image: url('curve_right_top.png'); }
+.panelFooter .left { background-image: url('curve_left_top.png'); }
+.panelFooter .right { background-image: url('curve_right_bottom.png'); }
+.panelHeading .content h3 { margin: 0px; font-size: 1em; }
+.panelBody { width: auto; padding: 0.5em; }
+.panelBody .spacer { clear: both; height: 1px; width: 100%; }
+#mobileDevicePairingCode .char { padding: 0.5em; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); margin-right: 0.5em; }
+.reprAndPerms { margin: 10px; }
+.reprAndPerms .coverImage { float: left; min-height: 115px; margin-right: 20px; }
+.reprAndPerms .article_meta div { margin-bottom: 5px; }
+.reprAndPerms .article_meta label { color: rgb(0, 102, 255); font-weight: bold; width: 20%; }
+.reprAndPerms .topContent { margin-bottom: 20px; }
+.reprintsForm label { float: left; width: 20%; }
+.reprintsForm .labelGroup { margin: 10px 5px; height: 20px; }
+.reprintsForm .labelGroup input { float: right; width: 20%; }
+.reprintsForm .dropDownHeader { color: rgb(0, 102, 255); font-size: 10pt; font-weight: bold; margin-bottom: 5px; }
+.reprintsForm .subText { margin-bottom: 10px; }
+.reprintsForm label { font-weight: bold; }
+.regForm .error {  }
+.regForm .heading { font-weight: bold; }
+.expired { color: red; font-weight: bold; }
+.hold { color: red; }
+.alert_subtle { font-size: 9pt; }
+.grace { color: orange; }
+.downloadTSV { display: none; }
+.debugInfo { background: url('page.png') no-repeat scroll 0px 0px transparent; padding: 1px; display: block; }
+.debugInfo, .debugAttr { display: none; }
+.debugPath:hover { color: red; }
+.debugInfo { padding-left: 20px; z-index: 99999; }
+.debugBox { border: 1px dotted red; }
+.debugTable { background-color: white; border: 1px solid; font-size: 11px; }
+.debugFCK, .debugFCV { background-color: rgb(238, 238, 238); }
+.debugAttr { z-index: 9999; }
+.debugNoF { border: 1px dotted rgb(74, 107, 130); }
+.debugError { border: 1px solid red; padding: 1px; }
+.debugPE { display: block; width: 100%; text-align: center; color: white; background-color: red; padding-bottom: 2px; }
+.debugST { display: none; width: 100%; }
+.shadow { box-shadow: 3px 3px 5px 6px rgb(204, 204, 204); }
+#SaveSearchForm #saveSearchHeader { text-align: center; font-weight: bolder; font-size: 10pt; }
+.modifySearchSubmit { background: none repeat scroll 0% 0% transparent; border: medium none; cursor: pointer; padding: 0px; margin: 0px; font-size: 8pt; }
+.saveSearchSubmit { width: 45px; border: medium none; cursor: pointer; }
+.addressLink { cursor: pointer; text-decoration: underline; color: rgb(0, 0, 255); }
+.addThisPlaceHolderTableData { display: table-cell; vertical-align: middle; }
+.addThisButtonTableData { display: table-cell; vertical-align: middle; }
+.addThisButtonTableData div { display: table-cell; vertical-align: middle; }
+.addThisTable { display: table; }
+.addThisTableRow { display: table-row; }
+ul.usageDataYearOptions div.usageReportsMonthRange { padding-left: 25px; }
+ul.usageDataYearOptions div.usageReportsMonthRange label { display: inline-block; width: 35px; }
+ul.usageDataYearOptions div.usageReportsMonthRange div.startRange { padding: 3px 0px 10px; }
+ul.usageDataYearOptions div.usageReportYearOnly label { padding-right: 3px; }
+ul.usageDataYearOptions li { list-style: none outside none; }
+
+/* ::::: http://www.ochsnerjournal.org/templates/jsp/_style2/style.css ::::: */
+
+body, .bodyLayout { margin: 0px; padding: 0px; border: 0px none; border-spacing: 0px; }
+.leftRegion, .centerRegion, .rightRegion { margin: 0px; padding: 0px; border: 0px none; }
+.listgroup .lilabel, .listgroup p { padding: 0px; margin: 0px; }
+.welcome_user_text { font-size: x-small; font-weight: bold; padding: 1em; border-bottom: 1px solid rgb(68, 68, 68); color: rgb(68, 68, 68); }
+.smallMarginLeft { margin-left: 1em; }
+.pointer { cursor: pointer; }
+.pub_search_box { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: bold; padding: 1em; margin-bottom: 1em; border-bottom: 1px solid rgb(68, 68, 68); color: rgb(68, 68, 68); }
+.pub_search_link { font-size: 10pt; font-weight: bold; margin-bottom: 5px; margin-top: 5px; }
+.menuXsubMenuDivider { text-align: center; }
+#hide { display: none; }
+.art_title, .arttitle, .searchResultTitle { font-weight: bold; }
+.art_author { color: gray; }
+.art_meta { color: gray; }
+.error { color: red; }
+.citedByEntry { margin-bottom: 0.5em; }
+.citedBySection { margin-bottom: 2em; }
+.bullet { vertical-align: top; }
+.tocHeading .subj-group { display: block; font-size: 90%; }
+a img { border-width: 0px; }
+.currencySymbol { font-weight: bold; }
+#showMailPage label { font-weight: bold; }
+#showMailPage label.checkBox { font-weight: normal; }
+div.p { margin: 1em 0px; }
+#CreditCardDialog .required { color: rgb(255, 0, 0); }
+#CreditCardDialog label { margin: 1em 0px; text-align: left; }
+.formHeading { font-weight: bold; }
+div.federation { margin-top: 15px; font-size: 1.1em; font-weight: bold; }
+.logoImg { width: 165px; height: 108px; border: 0px none; }
+table.offersOption { width: 100%; padding: 0px 2em; }
+.offersOption td { padding-bottom: 1em; }
+.offersOption li { list-style: none outside none; }
+.offersOption tr.buttons { text-align: right; }
+.deliveryFormat li { list-style: none outside none; display: inline; }
+.ecommOffers { font-weight: bold; }
+.addressLink { cursor: pointer; color: blue; }
+.ecommRecommendArticles p { margin-left: 10px; }
+.ecommConf ul { list-style: none outside none; }
+.whatis-rss { font-size: smaller; white-space: nowrap; }
+.AfterFilter, .BeforeFilter { display: inline; }
+.agreement .buttons a { margin-left: 1.5em; }
+.refineSearch td { background-color: rgb(199, 199, 199); }
+li#discussionsLink { background-image: url('icon_track.gif'); }
+div.commentQuestion { padding-top: 10px; }
+#noHLines { border-bottom: medium none; }
+.alertSection > div { margin-top: 6px; }
+.alertSection input[type="checkbox"] { margin-left: 0px; }
+
+/* ::::: http://www.ochsnerjournal.org/templates/jsp/_style2/_AP/style.css ::::: */
+
+.named-content_genus-species { font-style: italic; }
+#navBar .highRes { white-space: nowrap; }
+div.articleLinks { text-align: center; }
+.alert { background-color: rgb(255, 255, 204); color: rgb(0, 0, 0); font-family: Arial,Helvetica,sans-serif; font-weight: bold; }
+#navBar .highRes { white-space: nowrap; }
+.resizeNote { width: 700px; margin-top: 0.5em; float: left; text-align: center; font-style: italic; }
+#journalList .divider { width: 90%; }
+.captionLabel { font-weight: bold; display: block; }
+.abstractSection { margin: 1.5em 0px; }
+input#gosearch { background-image: url('go.gif'); height: 16px; width: 18px; }
+#articleMeta { padding: 1em; }
+.pagingVerb { font-weight: bold; }
+.resultsPager { padding-top: 0.5em; margin-bottom: 2em; padding-bottom: 1em; }
+.paginationStatus { float: left; }
+.paginationSortControl { float: right; }
+ul.titleListing { list-style: none outside none; }
+.titleListing_col1 { display: inline; padding: 4px 10px 0px; text-align: center; width: 16px; }
+.titleListing_col2 { display: inline; text-align: left; margin: 0px 4px; width: 570px; }
+.showPublications .subjectListing .expanded { background-image: none; }
+.NLM_book .NLM_abstract { margin-top: 10px; }
+#mobileDevicePairing_login form { width: 47%; float: left; margin: 1em 0px; }
+#mobileDevicePairing_login .personLogin { margin-right: 5%; }
+#mobileDevicePairing_login label { float: left; width: 12em; }
+#mobileDevicePairing_login .field { clear: left; margin: 0.25em 0px; }
+.headerAd a { top: 1px; position: absolute; background: none repeat scroll 0% 0% rgb(203, 204, 205); padding: 0.4em 2em; color: white; font-weight: bold; left: 45%; }
+
+/* ::::: http://www.ochsnerjournal.org/templates/jsp/_style2/_AP/_pinnacle/style.css ::::: */
+
+.refnumber { vertical-align: top; display: block; margin-right: 0.5ex; }
+.articleMeta .coverDate { display: none; }
+#searchCategoryId { width: 100%; }
+.sightedHidden { display: none; }
+.BeforeFilter { margin-left: 3px; }
+.headerAdvancedSearch { text-align: right; width: 225px; }
+.headerBreadcrumbs { width: 100%; border: 0px none; }

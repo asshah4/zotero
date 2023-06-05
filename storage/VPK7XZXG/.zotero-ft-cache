@@ -1,0 +1,949 @@
+Chronobiology International
+The Journal of Biological and Medical Rhythm Research
+ISSN: 0742-0528 (Print) 1525-6073 (Online) Journal homepage: https://www.tandfonline.com/loi/icbi20
+Comparison of Parameters from Rhythmometric Models with Multiple Components on Hybrid Data
+José R. Fernández, Artemio Mojón & Ramón C. Hermida
+To cite this article: José R. Fernández, Artemio Mojón & Ramón C. Hermida (2004) Comparison of Parameters from Rhythmometric Models with Multiple Components on Hybrid Data, Chronobiology International, 21:3, 469-484, DOI: 10.1081/CBI-120038630 To link to this article: https://doi.org/10.1081/CBI-120038630
+Published online: 07 Jul 2009. Submit your article to this journal Article views: 71 View related articles Citing articles: 41 View citing articles
+Full Terms & Conditions of access and use can be found at https://www.tandfonline.com/action/journalInformation?journalCode=icbi20
+
+CHRONOBIOLOGY INTERNATIONAL Vol. 21, No. 3, pp. 469–484, 2004
+
+Comparison of Parameters from Rhythmometric Models with Multiple
+Components on Hybrid Data
+Jose´ R. Ferna´ ndez,* Artemio Mojo´ n, and Ramo´ n C. Hermida
+Bioengineering and Chronobiology Labs., E.T.S.I. Telecomunicacio´ n, University of Vigo, Campus Universitario, Vigo, Spain
+
+ABSTRACT
+Population multiple components is a statistical tool useful for the analysis of time-dependent hybrid data. With a small number of parameters, it is possible to model and to predict the periodic behavior of a population. In this article, we propose two methods to compare among populations rhythmometric parameters obtained by multiple component analysis. The first is a parametric method based in the usual statistical techniques for comparison of mean vectors in multivariate normal populations. The method, through MANOVA analysis, allows comparison of the MESOR and amplitude-acrophase pair of each component among two or more populations. The second is a nonparametric method, based in bootstrap techniques, to compare parameters from two populations. This test allows one to compare the MESOR, the amplitude, and the acrophase of each fitted component, as well as the global amplitude, orthophase, and bathyphase estimated when all fitted components are harmonics of a fundamental period. The idea is to calculate a confidence interval for the difference of the parameters of interest. If this interval does not contain zero, it can be concluded that the parameters from the two models are different with high probability. An estimation
+
+*Correspondence: Prof. Jose´ Ramo´ n Ferna´ ndez, Bioengineering and Chronobiology Labs., E.T.S.I. Telecomunicacio´ n, Campus Universitario, Vigo (Pontevedra) 36200, Spain; Fax: þ34-986-812116; E-mail: jramon@tsc.uvigo.es.
+
+469
+
+DOI: 10.1081/CBI-120038630 Copyright & 2004 by Marcel Dekker, Inc.
+
+0742-0528 (Print); 1525-6073 (Online) www.dekker.com
+
+ORDER
+
+REPRINTS
+
+470
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+of p-value for the corresponding test can also be calculated. Both methods are illustrated with an example, based on clinical data. The nonparametric test can also be applied to paired data, a special situation of great interest in practice. By the use of similar bootstrap techniques, we illustrate how to construct confidence intervals for any rhythmometric parameter estimated from population multiple components models, including the orthophase, bathyphase, and global amplitude. These tests for comparison of parameters among populations are a needed tool when modeling the nonsinusoidal rhythmic behavior of hybrid data by population multiple component analysis.
+
+Key Words: Population multiple components analysis; Parameter testing; Periodic regression; Hybrid time series; Biological rhythms.
+
+INTRODUCTION
+Chronobiologists usually work with time-dependent data. In practice, there are two kinds of data (Nelson et al., 1983): longitudinal data (time series of values sampled from an individual) and hybrid data (a set of time series each from one member of a homogeneous group, that is, a set of longitudinal data). The first are associated with individual samples, while the second are associated with population samples. Commonly, biological time series are sparse and noisy. Rhythmometric procedures have been developed for detection of periods and modeling variability of biological time series. The single cosinor method (Halberg, 1969) is appropriate for modeling longitudinal data when only one frequency is present. If more than one period can be shown to be statistically significant or when the waveform is not sinusoidal in shape, the use of multiple-components analysis is recommended (Bingham et al., 1982; Ferna´ ndez and Hermida, 1998). Other names for the same procedure are periodic regression (Batschelet, 1981), sinusoidal regression (Quinn, 1989), harmonic regression (Gaffney et al., 1993), cosine analysis of harmonic and overlapping rhythms (Mattes et al., 1991), and partial Fourier series (De Prins and Hecquet, 1992). These methods are, in the longitudinal case, extensions of the Fourier harmonic analysis (Bloomfield, 1976). Fourier analysis is performed in the frequency domain, while rhythmometric procedures are performed in the time domain. Moreover, Fourier analysis was designed for the balanced case (Bingham et al., 1982), a limited situation in which data are equidistant and the time series length is a multiple of the fundamental period. The single cosinor method is just a particular case of the multiple-components method when only one single component is fitted to the longitudinal data.
+The single cosinor and multiple-components analyses have been extended for analysis of hybrid data. These methods are the population-mean cosinor (Nelson et al., 1979), when only one period is fitted, and the population multiple-components analysis (Ferna´ ndez and Hermida, 1998), that allows the fit of several significant periodicities to the data. Therefore, the population-mean cosinor method is, again, just a particular case of the population multiple-components analysis. When the shape of the rhythm is best approximated by a complex model composed of two or more cosine curves that are harmonics of the fundamental period, the obtained
+
+ORDER
+
+REPRINTS
+
+Comparison of Parameters from Models with Hybrid Data
+
+471
+
+model is periodic and the method of multiple components provides three additional summary parameters: the overall amplitude (one-half the difference between the maximum and the minimum values of the best-fitted curve) and the orthophase and bathyphase (peak and trough times, respectively, expressed as a lag from a designated reference time). The main advantage of these rhythmometric procedures is that it is possible, with a relatively small number of parameters, to represent and explain the temporal variation of the data. These models have been also used to establish time-dependent tolerance bands (Ferna´ ndez and Hermida, 2000).
+The process of estimation of parameters is clearly different between the longitudinal and the hybrid case. In longitudinal data, the procedure amounts to fitting to the data by least squares a cosine function, or a sum of cosines functions, of fixed anticipated periods. The estimation of parameters and their confidence intervals (CIs), as well as the validation or diagnosis of the model, are based on linear regression theory. The rhythm characteristics obtained by longitudinal multiple-components analysis are considered as imputations or first-order statistics for the hybrid procedures. The population multiple-components method constitutes a second-order statistic, applied to the whole population. The population parameter estimates are based on the means of the individual estimated parameters.
+The estimated parameters often have a biological or clinical meaning. Thus, there is one parameter to represent the mean level of the signal (MESOR), another to explain the total variation in a whole cycle (global amplitude), and two parameters to mark the times of the maximum (orthophase) and minimum (bathyphase) of the signal. Appreciable changes in one or more of these parameters can be a measure, for instance, of the effect of any given treatment. When only one period is fitted to the data, the problem of comparing parameters among individuals (single cosinor) or among populations (population mean cosinor) was previously described and solved many years ago (Bingham et al., 1982). When more than one period is fitted to the data, a solution to the problem of comparing parameters has been recently proposed for the longitudinal case (Ferna´ ndez et al., 2003) but not yet for the hybrid case. Accordingly, we here propose the application of two well-known statistical techniques, one parametric and another nonparametric, to compare parameters from rhythmometric models with multiple-components fitted to hybrid time series.
+
+THE MODEL
+
+The linear analysis of multiple components for longitudinal time series amounts to fitting to the data, by least squares, a function with several sinusoidal components of fixed and known periods:
+
+XC
+
+yn ¼ M þ Ac cos ð!ctn þ cÞ þ en n ¼ 1, . . . , N
+
+ð1Þ
+
+c¼1
+
+where yn is the observed value at time tn of the studied variable; C is the number of sinusoidal components; !c are the angular frequencies, that is, !c ¼ 2/Tc, where Tc are the fitted periods; and N is the number of observed values (sample size).
+
+ORDER
+
+REPRINTS
+
+472
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+The remaining unknown quantities are obtained by the estimation process, and they are the MESOR (M in the equation), amplitude, and acrophase of each fitted component (Ac and c, respectively) plus the error at time tn (en). If all the components are harmonically related, the model is periodic and the overall amplitude, orthophase, and bathyphase, as previously defined, can be calculated (Tong et al., 1977; Ferna´ ndez and Hermida, 1998). If Ac and c are replaced by their Cartesian projections c ¼ Ac cos c and c ¼ ÀAc sin c, expression (1) becomes
+
+XC
+
+yn ¼ M þ ½c cos ð!ctnÞ þ c sin ð!ctnÞ þ en n ¼ 1, . . . , N
+
+ð2Þ
+
+c¼1
+
+where the variable under investigation is expressed as a linear combination of several
+
+unknown parameters. In order to estimate the parameters by least squares, the
+
+minimization of the residual sum of squares (RSS) is used as the criterion. The
+
+solution of this minimization is the parameter vector estimation:
+
+
+
+
+
+h^ ¼ M^ , ^1, ^1, . . . , ^C, ^C
+
+ð3Þ
+
+The assumed hypotheses during the regression process must be tested to validate the estimations and the posterior inference (Bingham et al., 1982), like the null amplitude test or CIs for the longitudinal parameters.
+In order to realize the population analysis, the same model is adjusted to the I individuals pertaining to the population, so I vectors of the parameters are obtained, one from each individual:
+
+h^1, . . . , h^I
+
+ð4Þ
+
+The method of population multiple components assumes that the vectors of individual parameters are a random sample from a multivariate normal population. The mean and the covariance matrix of this random variable thus can be estimated using the individual parameters (Ferna´ ndez and Hermida, 1998).
+The average of all of them gives us the estimated population parameters:
+
+h^ pop
+
+¼
+
+
+
+
+
+M^ pop, ^1pop , ^1pop , . . . , ^Cpop , ^Cpop
+
+¼
+
+PI
+i¼1
+I
+
+h^ i
+
+ð5Þ
+
+That is, the estimation of population MESOR is the average of all the individual MESORs and so on with the remaining parameters. The assumed normality enables us to perform tests like the null population amplitude one, and to compute CIs for all the parameters, except the special parameters of global amplitude, orthophase, and bathyphase.
+In order to simplify the notation, we will omit the subscript ‘‘pop,’’ denoting the population parameters with the same letters as the individual parameters; thus, the population model is:
+
+XC
+
+Y ðtÞ ¼ M þ Ac cos ð!ctn þ cÞ
+
+ð6Þ
+
+c¼1
+
+ORDER
+
+REPRINTS
+
+Comparison of Parameters from Models with Hybrid Data
+
+473
+
+THE PROBLEM
+Given J sets of hybrid data, each formed by I1, I2, . . . , I J individuals, respectively, the same model can be fitted to each one. The J populations can be represented, according to Eq. (6), by different vectors of parameters:
+ðM1, A11, 11, . . . , A1C, 1CÞ ... ðM J , A1J , 1J , . . . , ACJ , CJ Þ
+In each model there are 2C þ 1 parameters, C being the number of frequencies used. The problem is to know if there is any difference among the parameters (or set
+of parameters) from the different populations. The next Null Hypotheses (NHs) are of interest:
+H1: M1 ¼ . . . ¼ M J ðequality of MESORsÞ H2:1: ðA11, 11Þ ¼ . . . ¼ ðA1J , 1J Þ ðequality of pairs ðA, Þ from frequency 1Þ ÁÁÁ H2:C: ðA1C, 1CÞ ¼ . . . ¼ ðACJ , CJ Þ ðequality of pairs ðA, Þ from frequency CÞ H3: All H2 ðequality of the rhythmic componentsÞ H4: H1 and H3 ðequality of modelsÞ
+A special situation is when one wishes to compare only two populations. There is the possibility of how to handle paired data, that is, the longitudinal time series derived from the same individuals on two different occasions, for instance when a group of individuals are sampled before and after treatment. The mathematical analysis of this situation will be different. In both cases (paired or unpaired data) it is of interest to compare parameters one to one. Then next set of NHs must be considered:
+H5:1: A11 ¼ A21 ðequality of amplitudes from frequency 1 between two populations) ÁÁÁ H5:C: A1C ¼ A2C ðequality of amplitudes from frequency C between two populations) H6:1: 11 ¼ 21 ðequality of acrophases from frequency 1 between two populations) ÁÁÁ H6:C: 1C ¼ 2C ðequality of acrophases from frequency C between two populations) H7: Global amplitude (population 1)=Global amplitude (population 2) H8: Orthophase (population 1)=Orthophase (population 2) H9: Bathyphase (population 1)=Bathyphase (population 2)
+The general alternative hypothesis is
+HA: No restriction on any parameter
+
+ORDER
+
+REPRINTS
+
+474
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+PARAMETRIC SOLUTION
+
+We dispose of J populations with I model is adjusted for each individual so
+
+j individuals each we obtain 2C þ 1
+
+one: j ¼ 1, . parameters
+
+.., for
+
+Je.acThheofsaPmIej
+
+individuals. The longitudinal estimations then are:
+
+
+
+
+
+M^ ij, ^1ji, ^1ji, . . . , ^Cj i, ^Cj i
+
+i ¼ 1, . . . , I j; j ¼ 1, . . . , J:
+
+ð7Þ
+
+These vectors can be thought of as observations of J independent variables, each
+
+with distribution multivariate normal with dimension (2C þ 1) each one. Their mean
+
+vectors are:
+
+À M
+
+j,
+
+1j ,
+
+1j, .
+
+..
+
+,
+
+Cj ,
+
+Cj Á
+
+j ¼ 1, . . . , J:
+
+ð8Þ
+
+Comparison of the population parameters is the same as comparing the mean vectors (or subvectors) of the different multivariate normal populations (MANOVA) (Johnson and Wichern, 1982). For each population, the variance— covariance matrix can be estimated by (Ferna´ ndez and Hermida, 1998):
+
+0 ^M2 j
+
+...
+
+1
+
+X^ j ¼ BBBBBBBBBBBBBB@
+
+...
+
+^21j
+
+^1j 1j
+
+^1j 1j
+
+^21j
+
+...
+
+^2Cj
+
+^Cj Cj
+
+CCCCCCCCCCCCCCA
+
+¼
+
+0 ^M2 BBBBB@ ...
+
+P^ j
+1
+
+... ...
+
+1 CCCCCA P^ j
+C
+
+^Cj Cj
+
+^2Cj
+
+ð9Þ
+
+Assuming that the population covariances of parameter estimates are identical,
+
+the covariance matrix within populations can be estimated by:
+
+W ¼ ðI1 À 1ÞX^ 1 þ Á Á Á þ ðI J À 1ÞX^ J
+
+ð10Þ
+
+In order to compute T, the covariance matrix among populations, the following values must be first calculated:
+
+XJ
+
+k ¼ I j ð ¼ total number of individuals)
+
+ð11Þ
+
+j¼1
+
+M"^ ¼ 1 XJ I jM^ j k j¼1
+
+¼
+
+1 k
+
+XJ
+
+X I j
+
+M^ ij
+
+ð¼
+
+unweighted
+
+mean
+
+of
+
+all
+
+individual
+
+MESORs)
+
+ð12Þ
+
+j¼1 i¼1
+
+ORDER
+
+REPRINTS
+
+Comparison of Parameters from Models with Hybrid Data
+
+475
+
+"^1
+
+¼
+
+1 k
+
+XJ
+j¼1
+
+I
+
+j^1j ;
+
+"^ 1
+
+¼
+
+1 k
+
+XJ
+j¼1
+
+I
+
+j ^1j ;
+
+.
+
+.
+
+.
+
+;
+
+"^C
+
+¼
+
+1 k
+
+XJ
+j¼1
+
+I
+
+j^Cj ;
+
+"^ C
+
+¼
+
+1 k
+
+XJ
+j¼1
+
+I
+
+j^Cj ;
+
+ð13Þ
+
+The elements of the matrix T can be calculated:
+
+^M2
+
+¼
+
+XJ
+
+I
+
+ j M^ j
+
+À
+
+M"^ 2
+
+j¼1
+
+...
+
+^C C
+
+¼
+
+XJ I
+
+ j ^Cj
+
+À
+
+"^C
+
+ ^Cj
+
+À
+
+ "^ C
+
+ð14Þ
+
+j¼1
+
+Then, the desired matrix is
+
+0 ^M2
+
+...
+
+1
+
+T
+
+¼
+
+À ^ij
+
+Á
+
+¼
+
+BBBBBBBBBBBB@
+
+...
+
+^21 ^11
+^11 ^21 ...
+
+^2C
+
+^C C
+
+CCCCCCCCCCCCA¼
+
+0 BBBBB@
+
+^M2 ...
+
+T1
+
+... ...
+
+1 CCCCCA TC
+
+^CC ^2C
+
+ð15Þ
+
+The statistic used for doing the comparison of the mean vectors or subvectors is the Wilks’ lambda (Johnson and Wichern, 1982), defined by:
+
+jWj
+
+Ã¼
+
+ð16Þ
+
+jT þ Wj
+
+The exact distribution of Ã can be derived only in special cases, depending on the number of parameters and the number of populations used in the comparison. One may use this statistic to test hypotheses H1 and H2.x. Hypotheses H3 and H4 involves a larger number of parameters. In these cases, the distribution of Ã can be approximated by Bartlett’s approximation (Johnson and Wichern, 1982), assuming the sample size is large.
+The hypothesis H1 (equality of MESORs) will be rejected if:
+
+ðk À JÞ^M2 ðJ À 1Þw2M
+
+!
+
+Fð1ÀÞðJ
+
+À
+
+1, k
+
+À
+
+J
+
+Þ;
+
+where w2M
+
+is the element ð1, 1Þ of
+
+W:
+
+ð17Þ
+
+Hypothesis H2.1 is equivalent to:
+
+
+
+
+
+H2:1 :
+
+11 11
+
+¼ ÁÁÁ ¼
+
+1J 1J
+
+ORDER
+
+REPRINTS
+
+476
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+For this test, only the submatrices of T and W corresponding to the first rhythmic component are used:
+
+Ã ¼ jS1j
+
+ð18Þ
+
+jT1 þ S1j
+
+S1 being the submatrix of W corresponding to the first rhythmic component.
+
+To obtain the distribution of Ã one uses:
+
+
+
+ pﬃﬃﬃﬃ
+
+kÀJÀ1 J À1
+
+1 ÀpﬃﬃﬃﬃÃ Ã
+
+$ F2ðJÀ1Þ, 2ðkÀJÀ1Þ
+
+ð19Þ
+
+The NH will be rejected if the value of this statistic is too large. Other hypotheses of the kind H2.x can be tested in a similar way, adapting Eqs. (18) and (19) to the corresponding rhythmic component.
+
+NONPARAMETRIC SOLUTION
+
+If one desires to compare only two populations, a nonparametric comparison can be done using bootstrap techniques (Efron and Tibshirani, 1993) for testing hypotheses H1, H5.x, H6.x, H7, H8, and H9. The process involves computing the CI for the difference of the parameters of interest; equality of the parameters is assumed if zero is a possible value in the CI.
+The bootstrap technique was introduced in 1979 as a computer-based method for estimating the standard error of an estimator (Efron and Tibshirani, 1993). The natural example used as estimator was the sample mean, the estimator of the population mean. The population parameters of the rhythmometric model are mean values of a Gaussian multivariate random variable. Thus, their estimators are based on the averages of individual parameters.
+For one concrete population we have I individual vectors of parameters as given in Eq. (4). The procedure starts selecting a random resample (with replacement) of the individual parameters with the same size as the original sample. This replication is denoted by:
+
+h^ Ã1, . . . , h^ ÃI
+
+ð20Þ
+
+Using this replication and Eq. (5), it is possible to estimate the bootstrap
+
+population vector of parameters:
+
+
+
+
+
+h^ Ã ¼ M^ Ã, A^Ã1, ^Ã1, . . . , A^ÃC, ^ÃC
+
+ð21Þ
+
+This procedure of selecting one resample and estimating the vector of parameters can be repeated as many times as may be necessary. Therefore, it is possible to obtain a great many estimations of the parameters (this set of estimations can be considered as an approximation of the distribution of the estimator of the parameters).
+The difference in parameters between two populations is of special interest. One can take replications for each population independently and calculate the
+
+ORDER
+
+REPRINTS
+
+Comparison of Parameters from Models with Hybrid Data
+
+477
+
+corresponding bootstrap estimation of parameters h^1Ã (from the first population)
+
+and h^2Ã (from the second) so the differences between parameters can be computed:
+
+
+
+
+
+h^ 1Ã À h^ 2Ã ¼ M^ 1Ã À M^ 2Ã, A^11Ã À A^21Ã, ^11Ã À ^21Ã, . . . , A^1CÃ À A^2CÃ, ^1CÃ À ^2CÃ
+
+ð22Þ
+
+By repeating the process many-fold, a large number of estimations of the difference of parameters (one more time, an approximation of the distribution of the estimator of difference) is derived. For each parameter, taking the /2 and 1 À /2 percentiles of this set of values, one obtains a (1 À ) CI for the difference of the parameters (Efron and Tibshirani, 1993). If this interval contains zero, it cannot be assumed, with (1 À ) confidence, that the parameters of the two populations are statistically different. Moreover, an approximation for the p-value of the test can be obtained by computing the relative position of zero in the sorted estimations of differences (Davison and Hinkley, 1998).
+In this method, the phases (acrophase, orthophase, or bathyphase) represent a special case. These parameters have a circular range, usually (0, 2) if radians are used as units. To avoid problems sorting circular variables, we use the criterion of expressing, for each circular parameter, the estimated differences in an interval centered around the original difference of phases. The asymptotic properties of the bootstrap estimations (Efron and Tibshirani, 1993) guarantee that most of the replications give an estimation close to the original estimation (based on the original sample).
+The procedure to test differences can be easily adapted to parameters, like global amplitudes, orthophases, and bathyphases, which are not directly estimated in the model. If one applies the bootstrap resampling to only one population, a CI for any of the parameters (present in the model or derived from it) can be obtained.
+The procedure must be modified if one is trying to compare paired populations. In this case, one disposes of a set of I individuals sampled in two different occasions. The bootstrap procedures try to imitate the process of sampling; so, the selection of the bootstrap resamples must be done in the same way. For each replicate, if one selects I individuals for the first population, the same I individuals must be selected for the second population. Thus, the process involves paired bootstrap resamples. The rest of the procedure will continue in the same way as the unpaired case described before.
+In many occasions, rhythmometric procedures are applied to populations of small sample size. However, the total number of possible replications is related to the sample size. If small samples are resampled it is likely, with high probability, that the same replications will be obtained too many times. In this situation, the method will not work properly. Two solutions to avoid this problem are suggested for the unpaired data case. One possibility is to symmetrize the individual parameters with their opposites in respect to the population parameters, so that the number of possible candidates for selecting the replication is duplicated. Another solution (not excluding the aforementioned one) is to compute, in both populations, the standardized individual parameters, that is, subtracting from each individual parameter the corresponding population parameter and dividing the result by the standard deviation of the population parameter. Both sets of standardized individual parameters are now interchangeable, because both have a zero mean and standard deviation of one. Thus, it is possible to resample in the set of I1 þ I2 standardized individual parameters. Once
+
+ORDER
+
+REPRINTS
+
+478
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+I1 values are selected for the first population, these must be multiplied by the standard deviation corresponding to the first population and added to the corresponding population parameter before reconstructing the bootstrap resample. The same kind of resampling can be done with the second population.
+
+EXAMPLE
+To illustrate the use of the methods here proposed, we analyzed two sets of hybrid data. Systolic blood pressure (SBP) was ambulatorily monitored in nine young normotensive women on two different occasions. Each longitudinal series was sampled at 1 h intervals for approximately 2 days. The first nine series, the first population, were obtained as a control group, while the second nine series, the second population, were obtained from the same women after a 1-week course of antihypertensive treatment. The time interval between consecutive series was exactly 7 days; so, each woman was sampled on the same days of the week.
+All the series were modeled by multiple-components analysis with periods of 24 and 12 h (Hermida et al., 2002). Times were expressed in hours from bedtime for each subject. Figure 1 shows the best-fitted model for the data obtained before and after treatment. The arrows descending from the upper horizontal axis point to the time of the maximum expected value, the orthophase, in the two populations. Numeric values of parameters (including CIs for all parameters) are shown in Table 1. The position of the bathyphase is similar (around 4 h after bedtime) in both populations, but the orthophases are graphically different. A visual comparison of MESORs indicates that there is a reduction of more than 2 mm Hg after treatment. In order to evaluate the statistical significance of these differences we performed a parametric test comparing the two curves. Results of this comparison are shown in Table 2. For all tests, the NH is accepted, implying the observed difference in MESOR is not statistically significant. We also compared all parameters, one to one, using the nonparametric test described above. Results for the unpaired data case are shown in Table 3. With this method we found statistically significant differences in the orthophase as well as the acrophase of the 24 and 12 h components, but not in MESOR. However, we know that our data are paired, as the same nine women were monitored both before and after treatment. We repeated the nonparametric test using the paired data routine. The results are shown in Table 4. In this case, we found statistically significant differences in the MESOR and also in the acrophase of the 12 h component. The other significant differences derived by the unpaired test (orthophase and acrophase of the 24 h component) are now borderline or not statistically significant.
+The numeric differences obtained in the comparison of orthophases are high (7.20 h). However, the difference is not statistically significant. This can be explained by the form of the model obtained for the first population (women before treatment). In this signal, there are two maximums (Fig. 1) of similar magnitude; so, the orthophase can vary from one to the other for each bootstrap replication. The length and asymmetry of the CI reflect this situation. The obtained CIs for the differences provide information about the magnitude of the differences with a length greater than 8 h. These CIs are then a useful statistical tool.
+
+ORDER
+
+REPRINTS
+
+Comparison of Parameters from Models with Hybrid Data
+
+479
+
+U
+
+U BEFORE TREATMENT. Mean and s.e. at 2h intervals
+
+T
+
+T AFTER TREATMENT. Mean and s.e. at 2h intervals
+
+-0˚ 125
+
+PHASE (360˚ = 24 h)
+
+-60˚
+
+-120˚
+
+-180˚
+
+-240˚
+
+-300˚
+
+-0˚
+
+U
+
+U
+
+119
+
+U
+
+U
+
+U
+
+U
+
+T
+
+T
+
+U
+
+T
+
+T
+
+T
+
+113
+
+MESOR=111.4
+
+T
+
+T
+
+T
+
+U
+
+MESOR=109.1
+
+107
+
+Systolic Blood Pressure (mm Hg)
+
+T
+
+U
+
+101
+
+U
+
+U
+
+T
+
+T
+
+95
+
+U
+
+T
+
+0
+
+0.0
+
+4.0
+
+8.0
+
+12.0
+
+16.0
+
+20.0
+
+0.0
+
+Time (hours from bedtime)
+
+Figure 1. Example of circadian variation of systolic blood pressure (SBP) modeled by population multiple components rhythmometry, with two adjusted components: 24 and 12 h. The figure shows the 2 h means and standard errors of data collected before (continuous line) and after (dashed line) antihypertensive treatment. The nonsinusoidal shaped curves correspond to the best-fitted waveform model determined by population-multiple-component analysis. The arrows descending from the upper horizontal axis point to the peak time (orthophase) of the circadian rhythm of SBP determined by the waveform approximation. Hours of nocturnal rest (average across all patients) are indicated by the dark bar on the lower horizontal axis of the figure.
+
+ORDER
+
+REPRINTS
+
+480
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+Table 1. Parameters obtained from population multiple-components analysis of two populations of systolic blood pressure (SBP), each formed by the same nine women, before and after an antihypertensive treatment. Fitted components: 24 and 12 h. Units: mmHg for MESOR and amplitudes, and hours from bedtime for phases. Confidence level of the confidence intervals (CIs) is 95% (Amp ¼ amplitude; Acr ¼ acrophase; Ort ¼ orthophase; and Bat ¼ bathyphase).
+
+Example of circadian variation of SBP Reference time: Bedtime
+
+Population/
+
+period
+
+pa
+
+MESOR CI
+
+Amp
+
+CI
+
+Acr
+
+CI
+
+Untreated (population 1)
+
+24.000
+
+<0.001
+
+12.3 (9.4, 15.3)
+
+16.4
+
+(15.7,17.1)
+
+12.000
+
+0.010
+
+4.7 (2.2, 7.3)
+
+9.8
+
+(8.9,10.4)
+
+Overall
+
+0.003 111.4 (106.5,116.3)
+
+13.6 (11.1, 16.7) Ort ¼ 19.5 (11.8,20.2)
+
+Bat ¼ 4.1 (3.7, 4.5)
+
+Treated (population 2)
+
+24.000
+
+<0.001
+
+9.9 (7.7, 12.0)
+
+15.8
+
+(15.4,16.1)
+
+12.000
+
+0.048
+
+5.6 (1.7, 9.4)
+
+10.7
+
+(9.9,11.8)
+
+Overall
+
+0.002 109.1 (105.2,113.1)
+
+12.5 (9.6, 16.5) Ort ¼ 12.3 (11.6,13.1)
+
+Bat ¼ 4.5 (4.0, 4.9)
+
+aFrom null amplitude test.
+
+Table 2. Comparison, using the parametric test, of parameters from population multiplecomponents analysis of two populations of systolic blood pressure (SBP), each formed by the same nine women, before and after an antihypertensive treatment. Fitted components: 24 and 12 h.
+
+Parametric test for population parameter comparison
+
+H0: Equality of . . .
+
+df
+
+f
+
+MESOR Component 24 h Component 12 h
+
+(1, 16) (2, 30) (2, 30)
+
+0.697 2.232 2.098
+
+p
+0.416 0.125 0.140
+
+DISCUSSION
+The periodic behavior of biological variables can be characterized in a simple way by rhythmometric models. Using a small number of parameters, these models provide valuable information about the variable of interest. These parameters usually have a clear biological meaning; while the MESOR represents the mean level of the variable, the global amplitude is half the entire expected variation in the whole cycle as estimated by the approximating model. When these models are fitted to
+
+ORDER
+
+REPRINTS
+
+Comparison of Parameters from Models with Hybrid Data
+
+481
+
+Table 3. Comparison, using the nonparametric test, of parameters from population multiplecomponents analysis of two populations of systolic blood pressure (SBP), each formed by the same nine women, before and after an antihypertensive treatment. Fitted components: 24 and 12 h. Data treated as unpaired. Units of differences and confidence intervals (CIs): mmHg for MESOR and amplitudes; hours from bedtime for phases. Confidence level of the CIs is 95%.
+
+Unpaired nonparametric test for population parameter comparison
+
+H0: Equality of . . .
+
+Difference
+
+CI dif.
+
+MESOR Amplitude 24 h Acrophase 24 h Amplitude 12 h Acrophase 12 h Global amplitude Bathyphase Orthophase
+
+2.27 2.47 0.61 À0.81 À0.95 1.08 À0.40 7.20
+
+(À2.81, 7.31) (À0.46, 5.24) ( 0.04, 1.22) (À4.23, 2.91) (À2.02, À0.08) (À3.28, 5.33) (À1.00, 0.27) ( 0.33, 8.13)
+
+p
+0.358 0.112 0.038 0.706 0.032 0.568 0.220 0.036
+
+Table 4. Comparison, using the nonparametric test, of parameters from population multiplecomponents analysis of two populations of systolic blood pressure (SBP), each formed by the same nine women, before and after an antihypertensive treatment. Fitted components: 24 and 12 h. Data treated as paired. Units of differences and confidence intervals (CIs): mmHg for MESOR and amplitudes; hours from bedtime for phases. Confidence level of the CIs is 95%.
+
+Paired nonparametric test for population parameter comparison
+
+H0: Equality of . . .
+
+Difference
+
+CI dif.
+
+MESOR Amplitude 24 h Acrophase 24 h Amplitude 12 h Acrophase 12 h Global amplitude Bathyphase Orthophase
+
+2.27 2.47 0.61 À0.81 À0.95 1.08 À0.40 7.20
+
+(0.28, 4.56) (À0.02, 5.03) (À0.04, 1.07) (À4.63, 1.90) (À2.12, À0.07) (À2.56, 5.10) (À1.13, 0.20) (À0.47, 8.13)
+
+p
+0.020 0.052 0.064 0.690 0.040 0.580 0.232 0.100
+
+hybrid data, this relevant information can be extrapolated to a homogeneous group of individuals. Moreover, it can be inferred that one future individual from the same population will exhibit similar time-dependent behavior. Sometimes these models can include polynomial trends (Ferna´ ndez and Hermida, 1998), as in the case of blood pressure and heart rate during pregnancy (Hermida et al., 2001). Although in these cases the resulting model is not periodic (and one cannot obtain the additional parameters of global amplitude, orthophase, and bathyphase due to the lack of a fundamental period), the methods here presented for comparing parameters can be easily generalized.
+
+ORDER
+
+REPRINTS
+
+482
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+In this work we introduce two methods, one parametric and another nonparametric, to conduct comparisons of parameters among two or more populations. Both methods are not incompatible; indeed, they are usually complementary, although one needs to be aware that it is not always possible to use both methods simultaneously. The nonparametric method is applicable only to the comparison of two populations, while the parametric test is applicable to the comparison of two or more populations. The situation of comparing two populations is very common in practice, for instance, when one is trying to evaluate the effect of treatment, as in the explored example. This is often the case in cross-over study designs when the same individuals are sampled during two different occasions. The nonparametric method here introduced is able to consider, from a mathematical point of view, this possibility of analyzing paired data. It can be seen from the presented example that the omission of this consideration can lead to incorrect findings and conclusions.
+Both methods assume that the population model, and therefore the assumed hypotheses during the estimation process, is valid. However, the parametric method additionally needs to assume equality of population covariances; this hypothesis is not necessary for the application of the nonparametric case. Under the multinormality assumption, a method has been previously described to test the equality of covariance matrices (Timm, 2002).
+The established NHs are not equivalent in both methods. The nonparametric method presents as NHs the equality of parameters one by one, that is, there are as many NHs as parameters of interest, including the special parameters of global amplitude, orthophase, and bathyphase. On the other hand, the parametric method presents multidimensional NHs (for instance, equality of pairs [A, ]) and only the NH of equality of MESOR is common to both tests. In this sense, it is assumed that the two methods are complementary. Our experience using these tools indicates that usually both tools produce compatible results. In cases in which this does not occur, the assumed hypotheses, which are necessary for the applicability of the methods, must be carefully revised.
+The new nonparametric method presented here, based on bootstrap techniques, can also be applied with nimble modifications to compute the CIs for the additional parameters of global amplitude, orthophase, and bathyphase—parameters not obtained directly from the regression equations. Since this cannot be done with existing methodology, the methods introduced here represent an advance in the statistical procedures for the analysis of biological hybrid time series.
+The new statistical tools introduced in this article to solve the problem of how to compare population parameters represent a new step in the development of statistical procedures in chronobiology. The population multiple-components analysis, along with the herein described new tests, represents a powerful statistical tool that can be applied in multiple practical situations.
+
+ACKNOWLEDGMENTS
+This research was supported in part by grants from Xunta de Galicia (PGIDIT03-PXIB-32201PR) and Vicerrectorado de Investigacio´ n, University of Vigo.
+
+ORDER
+
+REPRINTS
+
+Comparison of Parameters from Models with Hybrid Data
+
+483
+
+REFERENCES
+
+Batschelet, E. (1981). Circular Statistics in Biology. London: Academic Press, 371. Bingham, C., Arbogast, B., Corne´ lissen, G., Lee, J. K., Halberg, F. (1982).
+Inferential statistical methods for estimating and comparing cosinor parameters. Chronobiologia 9:397–439. Bloomfield, P. (1976). Fourier Analysis of Time Series: An Introduction. New York: John Wiley & Sons, 258. Davison, A. C., Hinkley, D. V. (1998). Bootstrap Methods and their Application. Cambridge: Cambridge University Press, 582. De Prins, J., Hecquet, B. (1992). Data processing in chronobiologic studies. In: Touitou, I., Haus, E., eds. Biological Rhythms in Clinical and Laboratory Medicine. Berlin: Springer-Verlag, 90–113. Efron, B., Tibshirani, R. J. (1993). An Introduction to Bootstrap. New York: Chapman and Hall, 436. Ferna´ ndez, J. R., Hermida, R. C. (1998). Inferential statistical method for analysis of nonsinusoidal hybrid time series with unequidistant observations. Chronobiol. Int. 15:191–204. Ferna´ ndez, J. R., Hermida, R. C. (2000). Computation of model-dependent bands for ambulatorily monitored blood pressure. Chronobiol. Int. 17:567–582. Ferna´ ndez, J. R., Mojo´ n, A., Hermida, R. C., Alonso, I. (2003). Methods for comparison of parameters from longitudinal rhythmometric models with multiple components. Chronobiol. Int. 20:495–513. Gaffney, M., Taylor, C., Cusenza, E. (1993). Harmonic regression analysis of the effect of drug treatment on the diurnal rhythm of blood pressure and angina. Statistics in Medicine 112:129–142. Halberg, F. (1969). Chronobiology. Ann. Rev. Physiol. 31:675–725. Hermida, R. C., Ayala, D. E., Iglesias, M. (2001). Predictable blood pressure variability in healthy and complicated pregnancies. Hypertension 38:736–741. Hermida, R. C., Ayala, D. E., Ferna´ ndez, J. R., Mojo´ n, A., Alonso, I., Calvo, C. (2002). Modeling the circadian variability of ambulatorily monitored blood pressure by multiple components analysis. Chronobiol. Int. 19:461–481. Johnson, R. A., Wichern, D. W. (1982). Applied Multivariate Statistical Analysis. New York: Prentice-Hall, 594. Mattes, A., Witte, K., Hohmann, W., Lemmer, B. (1991). PHARMFIT—a nonlinear fitting program for pharmacology. Chronobiol. Int. 8:460–476. Nelson, W., Tong, Y. L., Lee, J. K., Halberg, F. (1979). Methods for cosinor rhythmometry. Chronobiologia 6:305–323. Nelson, W., Cornelissen, G., Hinkley, D., Bingham, C., Halberg, F. (1983). Construction of rhythm-specified reference intervals and regions, with emphasis on ‘‘hybrid’’ data, illustrated for plasma cortisol. Chronobiologia 10:179–193. Quinn, B. G. (1989). Estimating the number of terms in a sinusoidal regression. Journal of Time Series Analysis 10:71–75. Timm, N. H. (2002). Applied Multivariate Analysis. New York: Spinger-Verlag, 693.
+
+ORDER
+
+REPRINTS
+
+484
+
+Ferna´ ndez, Mojo´ n, and Hermida
+
+Tong, Y. L., Nelson, W., Sothern, R. B., Halberg, F. (1977). Estimation of the orthophase (timing of high values) on a non-sinusoidal rhythm, illustrated by the best timing for experimental cancer chronotherapy. In: Proc. XII Int. Conf. Int. Soc. Chronobiol. Il Ponte: Milan, Italy, 765–769.
+
+Received December 17, 2003 Returned for revision February 8, 2004 Accepted February 24, 2004
+
+Request Permission or Order Reprints Instantly!
+Interested in copying and sharing this article? In most cases, U.S. Copyright Law requires that you get permission from the article’s rightsholder before using copyrighted content.
+All information and materials found in this article, including but not limited to text, trademarks, patents, logos, graphics and images (the "Materials"), are the copyrighted works and other forms of intellectual property of Marcel Dekker, Inc., or its licensors. All rights not expressly granted are reserved.
+Get permission to lawfully reproduce and distribute the Materials or order reprints quickly and painlessly. Simply click on the "Request Permission/ Order Reprints" link below and follow the instructions. Visit the U.S. Copyright Office for information on Fair Use limitations of U.S. copyright law. Please refer to The Association of American Publishers’ (AAP) website for guidelines on Fair Use in the Classroom.
+The Materials are for your personal use only and cannot be reformatted, reposted, resold or distributed by electronic means or otherwise without permission from Marcel Dekker, Inc. Marcel Dekker, Inc. grants you the limited right to display the Materials only on your personal computer or personal wireless device, and to copy and download single copies of such Materials provided that any copyright, trademark or other notice appearing on such Materials is also retained by, displayed, copied or downloaded as part of the Materials and is not removed or obscured, and provided you do not edit, modify, alter or enhance the Materials. Please refer to our Website User Agreement for more details.
+Request Permission/Order Reprints
+Reprints of this article can also be ordered at http://www.dekker.com/servlet/product/DOI/101081CBI120038630
+

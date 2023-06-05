@@ -1,0 +1,146 @@
+
+Screen reader users, click here to load entire article This page uses JavaScript to progressively load the article content as a user scrolls. Screen reader users, click the load entire article button to bypass dynamically loaded article content.
+ 
+
+    Register
+    Login Login
+
+OpenAthens login
+Login via your institution
+Other institution login
+Remote access activation
+Click here to activate
+Login using your ScienceDirect credentials
+Username:
+Password:
+Remember me
+| Not Registered?
+Forgotten username or password?
+
+    Home
+    Publications
+    Search
+    My settings
+    My alerts
+    Shopping cart
+
+    Help
+
+    Download PDF
+    Export citation
+    More options...
+            eReader format   What's this?
+              ePub
+              Mobipocket
+        Email article
+        Signed up for  [ remove ]
+        Alert me about new volumes of this
+        Failure
+        Your selection(s) could not be saved due to an internal error. Please try again.
+        Show thumbnail images
+
+Search
+    All fields 		    Author 					Advanced search
+    Journal/Book title 		    Volume 		  Issue 		  Page 			Search tips
+Article outline is loading...
+Alert message
+JavaScript is disabled on your browser.
+Please enable JavaScript to use all the features on this page.
+JavaScript is disabled on your browser. Please enable JavaScript to use all the features on this page.
+
+Genomics
+
+Volume 92, Issue 5 , November 2008, Pages 255–264
+Cover image Cover image
+Review
+Applications of next-generation sequencing technologies in functional genomics
+
+    Olena Morozova ,
+    Marco A. Marra Corresponding author contact information Corresponding author contact information , E-mail the corresponding author E-mail the corresponding author
+
+    BC Cancer Agency Genome Sciences Centre, Suite 100, 570 West 7th Avenue, Vancouver, BC V5Z 4S6, Canada
+
+    Received 3 April 2008
+    Revised 4 July 2008
+    Accepted 9 July 2008
+    Available online 24 August 2008
+
+  Open Access
+Abstract
+
+A new generation of sequencing technologies, from Illumina/Solexa, ABI/SOLiD, 454/Roche, and Helicos, has provided unprecedented opportunities for high-throughput functional genomic research. To date, these technologies have been applied in a variety of contexts, including whole-genome sequencing, targeted resequencing, discovery of transcription factor binding sites, and noncoding RNA expression profiling. This review discusses applications of next-generation sequencing technologies in functional genomics research and highlights the transforming potential these technologies offer.
+Keywords
+
+    Illumina/Solexa ;
+    ABI/SOLiD ;
+    454/Roche ;
+    Functional genomics ;
+    Next-generation sequencing technology ;
+    Transcriptome ;
+    Epigenome ;
+    Deep sequencing ;
+    Sequencing by synthesis ;
+    Sequencing by ligation
+
+Since first introduced to the market in 2005, next-generation sequencing technologies have had a tremendous impact on genomic research. The next-generation technologies have been used for standard sequencing applications, such as genome sequencing and resequencing, and for novel applications previously unexplored by Sanger sequencing. In this review we first describe the three commercially available next-generation sequencing technologies in comparison to a state-of-the-art Sanger sequencer, and follow this with a discussion of the novel kind of data produced by next-generation sequencers and the issues associated with it. We then turn our attention to the application of next-generation sequencing technologies to functional genomics research, particularly focusing on transcriptomics and epigenomics. We end with a discussion of future prospects that next-generation technologies hold for functional genomics research. This review does not address genome sequencing and resequencing applications of next-generation sequencers [1] or the huge impact these technologies have had in metagenomics (reviewed in [2] ).
+Advances in DNA sequencing technologies
+
+The landmark publications of the late 1970 s by Sanger's and Gilbert's groups [3]  and  [4] and notably the development of the chain termination method by Sanger and colleagues [5] established the groundwork for decades of sequence-driven research that followed. The chain-termination method published in 1977 [5] , also commonly referred to as Sanger or dideoxy sequencing, has remained the most commonly used DNA sequencing technique to date and was used to complete human genome sequencing initiatives led by the International Human Genome Sequencing Consortium and Celera Genomics [6] , [7]  and  [8] . Very recently, the Sanger method has been partially supplanted by several “next-generation” sequencing technologies that offer dramatic increases in cost-effective sequence throughput, albeit at the expense of read lengths. The next-generation technologies commercially available today include the 454 GS20 pyrosequencing-based instrument (Roche Applied Science), the Solexa 1G analyzer (Illumina, Inc.), the SOLiD instrument from Applied Biosystems, and the Heliscope from Helicos, Inc. As of this writing, information on the performance of the Heliscope in functional genomics applications is lacking, and so we have restricted our comments to the 454, SOLiD, and 1G sequencing platforms. These new technologies as well as the current state-of the-art Sanger sequencing platform are summarized in Table 1 and discussed in some detail below. For a review of the history of DNA sequencing the reader is referred to [9] ; for a more comprehensive review of emerging sequencing technologies see [10] .
+
+    Table 1. Advances in DNA sequencing technologies
+    Technology 	Approach 	Read length 	Bp per run 	Company name and Web site
+    Automated Sanger sequencer ABI3730xl 	Synthesis in the presence of dye terminators 	Up to 900 bp 	96 kb 	Applied Biosystems www.appliedbyosystems.com
+    454/Roche FLX system 	Pyrosequencing on solid support 	200–300 bp 	80–120 Mb 	Roche Applied Science www.roche-applied-science.com
+    Illumina/Solexa 	Sequencing by synthesis with reversible terminators 	30–40 bp 	1 Gb 	Illumina, Inc. http://www.illumina.com/
+    ABI/SOLiD 	Massively parallel sequencing by ligation 	35 bp 	1–3 Gb 	Applied Biosystems www.appliedbyosystems.com
+    Full-size table 
+    Table options
+
+        View in workspace
+        Download as CSV
+
+Sanger sequencing
+
+Since its initial report in 1977, the Sanger sequencing method has remained conceptually unchanged. The method is based on the DNA polymerase-dependent synthesis of a complementary DNA strand in the presence of natural 2′-deoxynucleotides (dNTPs) and 2′,3′-dideoxynucleotides (ddNTPs) that serve as nonreversible synthesis terminators [5] . The DNA synthesis reaction is randomly terminated whenever a ddNTP is added to the growing oligonucleotide chain, resulting in truncated products of varying lengths with an appropriate ddNTP at their 3′ terminus. The products are separated by size using polyacrylamide gel electrophoresis and the terminal ddNTPs are used to reveal the DNA sequence of the template strand.
+
+Originally, four different reactions were required per template, each reaction containing a different ddNTP terminator, ddATP, ddCTP, ddTTP, or ddGTP. However, advances in fluorescence detection have allowed for combining the four terminators into one reaction by having them labeled with fluorescent dyes of different colors [11]  and  [12] . Subsequent advances have replaced the original slab gel electrophoresis with capillary gel electrophoresis, thereby enabling much higher electric fields to be applied to the separation matrix. One effect of this advance was to enhance the rate at which fragments could be separated [13] . The overall throughput of capillary electrophoresis was further increased by the advent of capillary arrays whereby many samples could be analyzed in parallel [14] . In addition, breakthroughs in polymer biochemistry, including the development of linear polyacrylamide [15] and polydimethylacrylamide [16] have allowed the reuse of capillaries in multiple electrophoretic runs, thus further increasing sequencing efficiency. For further reading on improvements in Sanger sequencing research the reader is referred to [10] and [17] .
+Elsevier homepage (opens in a new window)
+
+    About ScienceDirect
+
+    About Elsevier
+
+    Contact and support
+
+    Information for advertisers
+
+    Terms and conditions
+
+    Privacy policy
+
+Copyright © 2013 Elsevier B.V. All rights reserved. ScienceDirect® is a registered trademark of Elsevier B.V.
+Cookies are used by this site. To decline or learn more, visit our Cookies page
+
+    http://dx.doi.org/10.1016/j.ygeno.2008.07.001 
+    Elsevier user license 
+
+Bibliographic information
+Citing and recommended articles
+Recommended articles
+
+    No articles found.
+
+Cited by ( )
+
+    This article has not been cited.
+
+Related reference work articles
+
+    No articles found.
+
+Applications and tools
+
+Workspace
+
+No content has been selected.
+

@@ -1,0 +1,635 @@
+RESEARCH ARTICLE
+Determinants of early afterdepolarization properties in ventricular myocyte models
+
+Xiaodong Huang1, Zhen SongID2, Zhilin QuID2,3*
+1 Department of Physics, South China University of Technology, Guangzhou, China, 2 Department of Medicine, David Geffen School of Medicine, University of California, Los Angeles, California, United States of America, 3 Department of Biomathematics, David Geffen School of Medicine, University of California, Los Angeles, California, United States of America
+
+a1111111111 a1111111111 a1111111111 a1111111111 a1111111111
+OPEN ACCESS
+Citation: Huang X, Song Z, Qu Z (2018) Determinants of early afterdepolarization properties in ventricular myocyte models. PLoS Comput Biol 14(11): e1006382. https://doi.org/10.1371/journal. pcbi.1006382
+Editor: Andrew D. McCulloch, University of California San Diego, UNITED STATES
+Received: July 18, 2018
+Accepted: September 17, 2018
+Published: November 26, 2018
+Copyright: © 2018 Huang et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+Data Availability Statement: All relevant data are within the manuscript and its Supporting Information files.
+Funding: This work is supported by National Institute of Health grant R01 HL110791, R01 HL134709, and the Fundamental Research Funds for the Central Universities, Grant No. 2017MS112 (to XH). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
+Competing interests: The authors have declared that no competing interests exist.
+
+* zqu@mednet.ucla.edu
+Abstract
+Early afterdepolarizations (EADs) are spontaneous depolarizations during the repolarization phase of an action potential in cardiac myocytes. It is widely known that EADs are promoted by increasing inward currents and/or decreasing outward currents, a condition called reduced repolarization reserve. Recent studies based on bifurcation theories show that EADs are caused by a dual Hopf-homoclinic bifurcation, bringing in further mechanistic insights into the genesis and dynamics of EADs. In this study, we investigated the EAD properties, such as the EAD amplitude, the inter-EAD interval, and the latency of the first EAD, and their major determinants. We first made predictions based on the bifurcation theory and then validated them in physiologically more detailed action potential models. These properties were investigated by varying one parameter at a time or using parameter sets randomly drawn from assigned intervals. The theoretical and simulation results were compared with experimental data from the literature. Our major findings are that the EAD amplitude and takeoff potential exhibit a negative linear correlation; the inter-EAD interval is insensitive to the maximum ionic current conductance but mainly determined by the kinetics of ICa,L and the dual Hopf-homoclinic bifurcation; and both inter-EAD interval and latency vary largely from model to model. Most of the model results generally agree with experimental observations in isolated ventricular myocytes. However, a major discrepancy between modeling results and experimental observations is that the inter-EAD intervals observed in experiments are mainly between 200 and 500 ms, irrespective of species, while those of the mathematical models exhibit a much wider range with some models exhibiting inter-EAD intervals less than 100 ms. Our simulations show that the cause of this discrepancy is likely due to the difference in ICa,L recovery properties in different mathematical models, which needs to be addressed in future action potential model development.
+Author summary
+Early afterdepolarizations (EADs) are abnormal depolarizations during the plateau phase of action potential in cardiac myocytes, arising from a dual Hopf-homoclinic bifurcation.
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+1 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+The same bifurcations are also responsible for certain types of bursting behaviors in other cell types, such as beta cells and neuronal cells. EADs are known to play important role in the genesis of lethal arrhythmias and have been widely studied in both experiments and computer models. However, a detailed comparison between the properties of EADs observed in experiments and those from mathematical models have not been carried out. In this study, we performed theoretical analyses and computer simulations of different ventricular action potential models as well as different species to investigate the properties of EADs and compared these properties to those observed in experiments. While the EAD properties in the action potential models capture many of the EAD properties seen in experiments, the inter-EAD intervals in the computer models differ a lot from model to model, and some of them show very large discrepancy with those observed in experiments. This discrepancy needs to be addressed in future cardiac action potential model development.
+
+Introduction
+Under diseased conditions or influence of drugs, cardiac myocytes can exhibit early afterdepolarizations (EADs) [1–3]. EADs are depolarization events during the repolarizing phase of an action potential (AP), which are known to be arrhythmogenic [4–7]. Many experimental and computational studies have been carried out, which have greatly improved our understanding of the causes and mechanisms of the genesis of EADs. It is well known that EADs can occur in an AP when inward currents are increased and/or outward currents are reduced, a condition called reduced repolarization reserve [8]. Under this condition, L-type calcium (Ca2+) current (ICa,L) can be reactivated to cause depolarizations in the repolarization phase of the AP to manifest as EADs. The importance of ICa,L reactivation for EAD genesis has been widely demonstrated in experiments [1,9] and computer simulations [10, 11]. Recent studies [12–15] using bifurcation theories have brought in additional mechanistic insights into the genesis of EADs, which show that EADs are oscillations originating via a supercritical or subcritical Hopf bifurcation and terminating via a homoclinic bifurcation, or via an unstable manifold of a saddle focus fixed point in the full AP dynamics [14]. In other words, irrespective to the specific ionic causes, EADs are oscillations caused by a Hopf bifurcation [16, 17] after which the quasi-equilibrium state becomes unstable and the system oscillates around the unstable equilibrium. As the slow outward currents grow gradually, the oscillation amplitude increases until a new bifurcation point—the homoclinic bifurcation at which the oscillation stops. A detailed discussion on the links between the ionic causes and nonlinear dynamics for the genesis of EADs was presented in our previous review article [18].
+Despite the wide experimental and computational studies on the ionic causes and dynamical mechanisms of EAD genesis, less attention has been paid on EAD properties, such as the EAD latency (the time from the upstroke of the AP to the upstroke of the first EAD), the interEAD interval, and the EAD amplitude. Although it is well-known that reactivation of ICa,L is required for EAD genesis, since EADs are a collective behavior arising from the interactions of many ionic currents, it is unclear how these ionic currents affect the EAD properties and what are the major determinants. For example, since ICa,L plays a critical role in the genesis of EADs, one would intuitively expect that increasing the maximum conduction of ICa,L might increase the amplitude of EADs, but as we show in this study that this is not the case. On the other hand, understanding the EAD properties and their determinants is important for understanding the mechanisms of EAD-related arrhythmogenesis. For example, in an early
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+2 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+experimental study [19], Damiano and Rosen showed that phase-2 EADs cannot propagate as premature ventricular complexes (PVCs) while phase-3 EADs can propagate as PVCs. This was also shown in our simulation studies [20–22]. Therefore, understanding what determine the EAD amplitude and takeoff potential may provide insights into EAD propagation to produce PVCs. If a PVC is a direct consequence of EAD propagation, then the EAD latency may provide information for the coupling interval between a sinus beat and the following PVC. EADs are also thought to be responsible for focal arrhythmias in the heart, and if this is true, then the oscillation frequency of EADs should be the same as the excitation frequency of ventricular arrhythmias. Furthermore, understanding the EAD properties and their determinants can also be important for the development of robust mathematical AP models. For example, we observed a discrepancy in inter-EAD interval between those from some widely used AP models and the experimental data. Experimental measurements in ventricular myocytes isolated from animal and human hearts almost exclusively show that the inter-EAD intervals are greater than 200 ms with few exceptions (Table 1). However, many ventricular myocyte AP models show inter-EAD intervals much shorter than 200 ms [11, 20, 23–27], raising a question on what ionic current properties have been missed in these models.
+The previous computational studies mainly focused on the ionic causes and dynamical mechanisms of the genesis of EADs, and to our knowledge, no studies have been carried out to investigate the EAD properties and their determinants. Furthermore, a close comparison of the EAD properties from mathematical models with those from experimental recordings has not been done. The objective of this study is to use bifurcation theories and computer simulations to systematically investigate the EAD properties and their major determinants. We first made theoretical predictions of the EAD properties using the 1991 Luo and Rudy (LR1) model [28] based on our previous bifurcation theory of EADs [12]. We then carried out computer simulations using physiologically more detailed ventricular AP models [20, 22, 26, 29–31] to verify the theoretical predictions. In computer simulations, we also used parameter sets randomly drawn from assigned intervals so that large parameter ranges are explored to ensure generality of the simulation results. Theoretical and simulation results were compared with experimental results, and potential caveats of the current AP models were discussed.
+
+Methods
+
+Action potential models
+
+Computer simulations were carried out in single ventricular myocytes. The governing equation of the transmembrane voltage (V) for the single cell is
+
+dV
+
+Cm dt ¼ À Iion þ Isti
+
+ð1Þ
+
+where Iion is the total ionic current density and Isti the stimulus current density. Cm is the membrane capacitance which was set as Cm = 1 μF/cm2. We simulated six ventricular AP models: the 1991 Luo and Rudy (LR1) guinea pig model [28]; the 1994 Luo and Rudy (LRd)
+guinea pig model in a modified version [29]; the UCLA (HUCLA) rabbit model with modifications by Huang et al [22]; the 2004 ten Tusscher et al (TP04) human model [30]; the Grandi
+et al (GB) human model [26]; and the O’Hara et al (ORd) human model [31].
+
+Simulation methods
+The differential equations were numerically solved using a first-order Euler method and the Rush and Larson method [32] for the gating variables with a fixed time step Δt = 0.01 ms.
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+3 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+Table 1. Experimental EAD properties in isolated ventricular myocytes�.
+
+Reference (Figure) [33] (Fig 2C) $ [34] (Fig 10) [35] (Figs 1A and 2A) [36] (Fig 2(b)) [37] (Fig 6) & [38] (Fig 1A) & [38] (Fig 2A) & [39] (Fig 3A–3C) [40] (Figs 1B, 4A and 5A) [41] (Fig 3) [42] (Fig 6A) [43] (Figs 1B and 2A) [44] (Figs 1 and 3C–3E) [45] (Figs 1C and 6B) [46] (Fig 1) [47] (Fig 4B–4C) [48] (Figs 2–4, 6 and 8) # [49] (Figs 2A and 3B) # [50] (Fig 5A) [51] (Fig 6A) [52] (Fig 6) [53] (Fig 4A), type I [53] (Fig 4B), type II
+
+Species Human Human Human Human Canine Canine Canine Canine Canine Rabbit Rabbit Rabbit Rabbit Rabbit Rabbit Guinea pig Guinea pig Guinea pig Rat Mouse Mouse Mouse Mouse
+
+Lowest Vtakeoff (mV) -20 -20 -25 -15 -35 -30 -35 -25 -25
+-30 -40 -20
+-10
+-40 -40 -40 -45 -40 -40 -55
+
+Maximum AEAD (mV) 30 25 15 25 35 25 40 25 30 40 30 70 20 50 10 25 70 55 50 50 50 45 40
+
+TEAD (ms) ~ 250 300–500
+~700 ~ 270 ~ 270 130–200 ~ 300 ~ 250 ~ 300 ~ 300 ~ 400 250–500 300–400 ~ 500 ~ 200 ~ 500 ~ 200 200–500 ~ 300 ~170 50–90 40–90
+
+LEAD (ms) ~ 300 600–1000 400–600 ~1500 ~ 250 ~ 270 ~ 160 ~ 300 ~ 300 ~ 300 ~ 200 400–500 650–800 150–200 ~ 450 ~ 200 400–600 200–1200 200–250 ~ 3000 ~100 ~ 30 ~ 30
+
+�We estimated the following EAD properties: lowest takeoff potential, maximum EAD amplitude, inter-EAD interval, and EAD latency, using the AP traces shown in
+the figures as indicated in the parenthesis for each reference. We used the coordinates or the scale bars in the original plots to estimate these quantities. Therefore, the number shown in this table are not accurate measurements but just estimations. Action potentials were recorded under 35 oC to 37 oC except for Ref. [38] in which the
+action potentials were recorded under hyperthermia. $The time scale bar in Fig 2C in Ref. [33] is 300 ms instead of 150 ms per personal communication with Dr. G.-R. Li. &The recordings in these studies [37, 38] were not from truly isolated ventricular myocytes but from isolated small strips of M-cells. #EADs were induced by constant inward current injection in these studies.
+
+https://doi.org/10.1371/journal.pcbi.1006382.t001
+
+Control parameters and parameter variations
+For each model, a set of control parameters was used. The control parameter set is not the parameter set of the original model but a set we used for the AP to exhibit EADs. The major changes of parameters from the original models are either by increasing the maximum conductance of both ICa,L (was called slow inward current in the LR1 model, denoted as Isi) and the slow component of the delayed rectifier potassium current (IKs) or by increasing the maximum conductance of ICa,L but decreasing IKs or IKr (the rapid component of the delayed rectifier potassium current). The former corresponds to a normal myocyte (the original model) under isoproterenol while the later corresponds to the condition of long QT syndrome with isoproterenol. The specific changes of each model are detailed in S1 Text and the control APs exhibiting EADs are shown in Fig A in S1 Text.
+To explore the effects of ionic current conductance on EAD properties in a wide parameter range, we varied the parameters in two ways: 1) We varied one parameter incrementally at a time but kept other parameters in their control values. The fold change of a specific parameter
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+4 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+p is then defined as
+
+a ¼ p=pc
+
+ð2Þ
+
+where pc is the control value of p; and 2) We randomly selected parameter sets, with each parameter drawn randomly from a uniform distribution in the interval (0.4pc, 1.6pc). The rationale for choosing such a parameter interval is that this interval can cover the range from no EAD to many EADs in an AP for most of the parameters in the models simulated in this study (see the figures in S1 Text).
+
+Defining the EAD properties
+We investigated three EAD properties in the AP models—amplitude, inter-EAD interval, and latency. As illustrated in Fig 1A, the EAD amplitude (AEAD) is defined as the difference between the takeoff voltage (Vtakeoff) and the peak voltage (Vpeak) of an EAD. The inter-EAD interval (TEAD) is defined as the time interval between the peaks of two consecutive EADs. The latency (LEAD) is defined as the time interval between the AP upstroke and the time when the 1st EAD takes off.
+
+Results
+Experimentally observed EAD properties
+Table 1 summarizes the EAD properties observed experimentally in isolated ventricular myocytes from literature survey [33–53], which includes Vtakeoff, AEAD, TEAD, and LEAD. Based on this literature survey, we found that the Vtakeoff is always above -50 mV except some of the mouse [53] and guinea pig [48, 49] experiments. However, the EADs in the guinea pig experiments [48, 49] were induced by injection of a constant inward current, which may behave differently from the ones occurring intrinsically. Therefore, the observed EADs in isolated ventricular myocytes are mainly phase-2 EADs. The maximum amplitude of the phase-2
+
+Fig 1. EAD properties. A. Definitions of AEAD, TEAD, LEAD, Vpeak, and Vtakeoff. B. Vpeak versus Vtakeoff from a short segment of sheep Purkinje fiber [1], a short segment of canine Purkinje fiber [1], and a human-induced pluripotent stem cell-derived cardiomyocyte [2]. The dashed straight lines were added as references for the slopes of the negative linear correlations of the data.
+https://doi.org/10.1371/journal.pcbi.1006382.g001
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+5 / 24
+
+Early afterdepolarizations in ventricular myocytes
+EADs can be as large as 70 mV. It has also been observed in experiments that Vpeak (thus AEAD) exhibits a negative linear correlation with Vtakeoff (Fig 1B). As shown in Table 1, TEAD ranges from 200 ms to 500 ms except some of the mouse experiments [53]. LEAD varies in a wide range, from 30 ms to 3 seconds.
+Determinants of EAD amplitude and takeoff potentials
+EAD amplitude in the LR1 model: Theoretical predictions and simulation results. We first investigated theoretically the relationship between AEAD and Vtakeoff based on bifurcation theories of EADs. In a previous theoretical study [12], we showed that phase-2 EADs are caused by a supercritical Hopf bifurcation and terminate at a homoclinic bifurcation in the fast subsystem of the model as the slow variable grows. Namely, in the LR1 model, the Na+ current and Ca2+ current activate and inactivate much faster than the time-dependent K+ current, forming the fast subsystem with voltage. The slow variable is the X-gating variable of the timedependent K+ current. The equilibrium states (black lines in Fig 2A) of the fast subsystem were obtained by treating X as a parameter, and stability analysis revealed a Hopf bifurcation (the upper black line, labeled as “Q”, changes from solid to dashed) leading to oscillations. As X increases, the oscillation amplitude increases, bounded by a bell-shaped envelope plotted as
+
+Fig 2. Bifurcation and EAD amplitude in the LR1 model. A. Bifurcations in the fast subsystem when treating the slow subsystem (X) as a parameter. Q, S, and R are the three equilibria in the fast subsystem. The green bell-shaped envelope is the steady state oscillation amplitude (from Vtakeoff to Vpeak) from the Hopf bifurcation point to the homoclinic bifurcation point. The lowest possible takeoff potential is at the homoclinic bifurcation point, which is around -41.5 mV. The red trace (arrows indicate the time course) is an AP from the whole system where X is a variable. Open red circle is the resting state. Note: the bifurcations and simulations shown in this panel and panel B were done without the presence of INa. B. The steady-state oscillation period from the Hopf bifurcation point to the homoclinic bifurcation point. C. AEAD versus Vtakeoff. The parameters were randomly drawn from the assigned intervals as described in Methods. For each parameter set, the amplitudes of all EADs in the AP were included. The inset shows representative AEAD versus Vtakeoff from individual APs distinguished by colors. D. Same as C but for shifted Isi kinetics (d1 and f1). The green data points are for d1 and f1 shifted 8 mV toward more negative voltages and the blue ones are for d1 and f1 shifted 8 mV toward more positive voltages. The inset shows the corresponding shifts. Panels A and B were replots from Tran et al [12]. The dashed straight lines in C and D are references for slopes.
+https://doi.org/10.1371/journal.pcbi.1006382.g002
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+6 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+the thick green line in Fig 2A. The oscillation period also increases as X increases (Fig 2B). When X increases to a certain value, the takeoff potential of the oscillation meets the unstable equilibrium (labeled as “S”) and the oscillation period becomes infinite. When X is greater than this value, no oscillation exists. For the whole system in which X is a variable (note: in the bifurcation analysis, X was treated as a parameter not a variable), as X grows slowly, the system (the red line with arrows indicating time progression) passes slowly through the Hopf bifurcation toward the homoclinic bifurcation with a couple of oscillations before repolarizes to the resting potential. These oscillations are embraced by the bell-shaped envelope. Defining the EAD amplitude as
+
+AEAD ¼ Vpeak À Vtakeoff
+
+ð3Þ
+
+one can approximate Vpeak by the upper bound of the bell and Vtakeoff by the lower bound of the bell. If the oscillation is symmetric with respect to the equilibrium point (we call it the quasi-equilibrium state since it is an equilibrium state in the fast subsystem but not in the whole system), then Vpeak − VQES = VQES − Vtakeoff with VQES being the voltage of the quasiequilibrium state. In general, the oscillation is not symmetric. We assume an asymmetry factor β and rewrite the Vpeak and Vtakeoff relationship as Vpeak − VQES � (1 + β)(VQES − Vtakeoff). Substituting Vpeak in Eq 3, we obtain:
+
+AEAD � À ð2 þ bÞðVtakeoff À VQESÞ
+
+ð4Þ
+
+For a symmetric oscillation (β = 0), Eq 4 predicts a linear relationship between AEAD and Vtakeoff with a slope -2. If one plots Vpeak against Vtakeoff as done in the plots of experimental data shown in Fig 1B, then Eq 4 is rewritten as
+
+Vpeak � À ð1 þ bÞVtakeoff þ ð2 þ bÞVQES
+
+ð5Þ
+
+which predicts a slope -1 for an oscillation symmetric with respect to the equilibrium point. The experimental results shown in Fig 1B correspond to β = 0.3, 1, and 1.3, respectively. A non-zero β indicates that the oscilaltions manifesting as EADs in the experiments are not symmetric to the quasi-equilibrium point. Note that Eq 5 is not obtained from a rigorous derivation but just an empirical observation based on the property of the dual Hopf-homoclinic bifurcation. The Hopf bifurcation shown in Fig 2A is a supercritical Hopf bifurcation, but previous studies [14, 15] showed that a subcritical Hopf bifurcation could also be responsible for EAD genesis. In the latter case, Eqs 4 and 5 still hold based on the same reasoning.
+We then carried out numerical simulations to investigate the relationship between AEAD and Vtakeoff in the LR1 model. For EADs from the same AP (the points with the same color in the inset of Fig 2C are from the same AP), their amplitudes and takeoff potentials approximately exhibit a linear relationship with slope around -4 (the slope is around -3 if we plot Vpeak against Vtakeoff as in Fig 1B). We then plotted AEAD against Vtakeoff for all the EADs from the randomly drawn parameter sets. The data points are much more scattered, in particular when AEAD is small. The lowest Vtakeoff is around -34 mV with AEAD ~ 55 mV. Based on the bifurcation analysis (Fig 2A), the lowest possible Vtakeoff in the LR1 model is around -41.5 mV, and the numerical simulation results agree with the prediction of the bifurcation analysis. Since the EADs are caused by reactivation of ICa,L during the plateau phase, shifting the steady-state activation curve (d1) and steady-state inactivation curve (f1) simultaneously toward more negative or positive voltages results in almost the same shift of the AEAD and Vtakeoff relationship (Fig 2D). The maximum EAD amplitude becomes larger when the steady-state curves are shifted toward more negative voltages.
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+7 / 24
+
+Early afterdepolarizations in ventricular myocytes
+To investigate how AEAD is affected by the maximum conductance and kinetics of different ionic currents, we varied one parameter at a time while maintaining other parameters at their control values. Fig 3A shows AEAD versus the fold of the control Gsi (α as defined in Eq 2) for EADs in the AP (note: ICa,L is denoted as Isi in the LR1 model and Gsi is the maximum conductance). When α is smaller than 0.658, no EAD occurs. When α is between 0.658 and 0.74, one EAD appears in the AP. As Gsi increases, more EADs appear in the AP. When α is greater than 1.2, there are 10 EADs in the AP. Since Isi is an inward current, one may also anticipate that increasing Isi would progressively increase the EAD amplitude and APD. However, this is not the case. For example, increasing α from 0.66 to 0.74, the EAD amplitude decreases quickly from around 35 mV to around 10 mV and the APD also becomes shorter (see the APs in Fig 3B). As α is slightly above 0.74, a second EAD with a large amplitude (>30 mV) suddenly appears in the AP and also abruptly increases the APD (see the APs in Fig 3C). Note that the parameters for the blue and magenta traces differ slightly (a 0.3% difference), and the two traces are almost identical until at the very end of phase-2 where one repolarizes (exits the basin of attraction of the limit cycle) and the other depolarizes (retains in the basin of the limit cycle) to result in an EAD, a typical all-or-none behavior. The amplitude of this EAD decreases quickly and the APD also decreases as Gsi increases (see the APs in Fig 3D) until another new EAD appears in the AP. This process repeats as Gsi increases. Therefore, as shown in Fig 3A,
+
+Fig 3. Dependence of EAD amplitude on ionic currents in the LR1 model. A. AEAD versus fold of control Gsi [labeled as α(Gsi)]. The colored arrows mark the α(Gsi) values for the traces shown in B-D: red, α = 0.658; green, α = 0.7; blue, α = 0.74; magenta, α = 0.7425; and black, α = 0.8. The numbers mark the EAD order in an AP as indicated in B-D. For example, in B, there is only one EAD in both APs, then the EAD is labeled as the 1st EAD. In C, a new EAD appears in the magenta AP, and this EAD is labelled the 2nd EAD while the old one is labeled as the 1st EAD. The number increases as more EADs appear in the AP. B. APs with one EAD as α indicated by the red and green arrows in A. C. APs in the transition from one EAD to two EADs as α indicated by the blue and magenta arrows in A. D. APs with two EADs as α indicated by the magenta and black arrows in A. E. AEAD versus fold of control GK. F. AEAD versus fold of control τd and τf. In these simulations, τd and τf are multiplied by the same α. G. AEAD versus DI. α(Gsi) = 0.95 and other parameters are their control values.
+https://doi.org/10.1371/journal.pcbi.1006382.g003
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+8 / 24
+
+Early afterdepolarizations in ventricular myocytes
+the number of EADs in an AP increases progressively with Gsi, but the amplitude of a specific EAD decreases with Gsi until a new EAD (all-or-none) suddenly appears in the AP with a maximum amplitude. In other words, the maximum EAD amplitude always occurs when a new EAD appears in the AP. Before a new EAD occurs, the amplitudes of all EADs in an AP are relatively small (such as the EADs in the black AP in Fig 3D). The overall maximum EAD amplitude does not exhibit an apparent change against Gsi (remained at around 35 mV for α changed from 0.65 to 1.2).
+Increasing the conductance of the time-dependent outward K+ current (IK) decreases the number of EADs in the AP, but increases the EAD amplitude (Fig 3E), which is the opposite to the effects of increasing Isi. As GK increases, the amplitude of the last EAD reaches maximum immediately before its disappearance from the AP. Slowing the activation and inactivation time constants of Isi reduces the number of EADs in an AP but increases the maximum EAD amplitude (Fig 3F). The dependence of EAD amplitude on diastolic interval (DI) is similar to changing a conductance (Fig 3G), i.e., decreasing DI is equivalent to increasing GK.
+To more closely link the dual Hopf-homoclinic bifurcation to the behaviors of EAD amplitude shown in Fig 3, we compared the bifurcations of the fast subsystem and the EADs of the whole system in the same way as in Fig 2A. Since changing the maximum conductance of ionic currents not only changes the EAD behavior but also changes the bifurcation of the fast subsystem, to only change the EAD properties but not the bifurcations of the fast subsystem, we changed the time constant of the X-gating variable, τX. This is because the bifurcation diagram is obtained by treating X as a parameter and thus the bifurcation will remain the same for any τX. Fig 4A plots AEAD versus the fold change of τX, showing that increasing τX increases the number of EADs in the AP and gives rise to the same AEAD behavior as changing the maximum conductance shown in Fig 3. Fig 4B shows three APs with α indicated by the colored arrows in Fig 4A. At the red arrow (the red AP trace in Fig 4B), there are four EADs in the AP. Increasing τX slightly (the blue arrow in Fig 4A and the blue AP trace in Fig 4B), a new EAD (the 5th EAD) with a much larger amplitude appears in the AP. As shown in Fig 4C, the new EAD in the blue race takes off right before the homoclinic bifurcation while the red trace just passes the homoclinic bifurcation point during its 4th EAD. The reason is that X grows slightly slower due to a slightly larger τX for the blue trace so that the 4th EAD ends just right before the homoclinic bifurcation, allowing a new EAD to take off. Increasing τX further quickly reduces the EAD amplitude of the 5th EAD because its takeoff point moves away from the homoclinic bifurcation point (open arrows in Fig 4D) due to a slower X growth caused by a larger τX.
+EAD amplitude in physiologically more detailed models
+To further assess the theoretical predictions and simulation results from the LR1 model, we carried out simulations using physiologically more detailed AP models. Fig 5 shows AEAD versus Vtakeoff for the five physiologically detailed models we simulated. The negative linear correlation holds roughly for all AP models while the slopes vary from -2 to -5 (corresponding to slopes ranging from -1 to -4 in plots of Vpeak versus Vtakeoff). Shifting the steady-state activation and inactivation curves of ICa,L results in roughly the same shift in the AEAD and Vtakeoff relationship, indicating that the ICa,L reactivation is responsible for EADs in all the models. The maximum EAD amplitude and the lowest detectable takeoff potential also vary largely from model to model. The maximum EAD amplitude (without the shifts in ICa,L kinetics) of the TP04 model is the smallest (<35 mV) while that of the ORd model is the largest (~ 90 mV) among the five models. The lowest Vtakeoff of the TP04 model is the highest (~ -20 mV) while that of the HUCLA model is the lowest (~-45 mV) among the five models. Although the EAD amplitude properties vary largely from model to model, they generally agree with the experimental data shown in Fig 1B and Table 1.
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+9 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+Fig 4. Linking the dual Hopf-homoclinic bifurcation to the EAD amplitude behavior. A. AEAD versus fold change (α) of τX. B. APs correspond to the parameters indicated by the arrows with the same colors. Red: α = 8.24; Blue: α = 8.29; Magenta: α = 8.78. C. Bifurcation in the fast subsystem, the same as in Fig 2A except that INa was present. The blue and red traces are V versus X for the corresponding blue and red APs in B. Inset is the blowup of the EAD window. D. Same as C but for the blue and magenta APs in B. Open arrows in the inset mark the takeoff location of the 5th EAD with respect to the homoclinic bifurcation point. Note that both APs exhibit 5 EADs but the ones in the magenta AP take off at smaller X values.
+https://doi.org/10.1371/journal.pcbi.1006382.g004
+We investigated the effects of the maximum conductance of the major ionic currents on AEAD for all five models, including ICa,L (Fig B in S1 Text), IKs (Fig C in S1 Text), IKr (Fig D in S1 Text), IK1 (Fig E in S1 Text), INCX (Fig F in S1 Text), INaK (Fig G in S1 Text), INaL (Fig H in S1 Text), and Ito (Fig I in S1 Text). The effects of the inactivation time constant of ICa,L were also shown (Fig J in S1 Text). The general observations are the same as those from the LR1 model, i.e., increasing an inward current increases the number of EADs in the AP, decreases AEAD until a new EAD suddenly appears in the AP at which AEAD becomes maximum. Increasing an outward current decreases the number of EADs in the AP, and increases AEAD and AEAD of the last EAD in the AP reaches maximum before it suddenly disappears from the AP. However, there are some exceptions. For example, increasing the maximum conductance of Ito can either promote or suppress EADs (Fig I in S1 Text). In both the LRd model and the ORd model, increasing Ito promotes EADs (more number of EADs in the AP), but suppresses EADs in the TP04 model and GB model. For the HUCLA model, increasing Ito,s promotes EADs, while increasing Ito,f first promotes EADs but then suppresses EADs. Since Ito is an outward current, it is generally known that it suppresses EADs [54]. However, recent studies have demonstrated that Ito can also promote EADs [45, 55]. Whether Ito promotes or suppresses EADs depends on its magnitude, speed of inactivation, and its pedestal component. Slow inactivation or large pedestal current tends to suppress EADs [55]. Another exception is INCX. Increasing INCX promotes EADs in all the models except in the TP04 model in which EADs may also be suppressed by increasing INCX (see Fig F in S1 Text).
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+10 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+Fig 5. AEAD versus Vtakeoff in the physiologically more detailed models. A. LRd. B. HUCLA. C. TP04. D. ORd. E. GB. Parameters were randomly drawn from assigned intervals (as described in Methods). AEAD was measured for all EADs in an AP. Black dots are AEAD for control steady-state activation and inactivation curves of ICa,L; blue dots are for both curves being shifted toward negative voltage; and green dots are for both curves being shifted toward more positive voltages. The voltage shifts are indicated by the open arrows in each panel in the same way as in Fig 2D. Dashed lines are reference lines for the slopes.
+https://doi.org/10.1371/journal.pcbi.1006382.g005
+
+Determinants of inter-EAD interval
+As shown in Table 1, TEAD in isolated ventricular myocytes is typically from 200 ms to 500 ms. In this section, we investigate TEAD and its determinants in the AP models. We first used the LR1 model for theoretical treatments and then used the physiologically more detailed models to verify the theory.
+Inter-EAD interval in the LR1 model: Theoretical predictions and simulation results. Based on Tran et al [12], EADs arises from a Hopf bifurcation in the fast subsystem of the LR1 model. Here we first calculate the period of oscillation at the Hopf bifurcation point analytically and then compare the period of oscillation to the inter-EAD interval. The eigenvalue λ of the Jacobian (Eq 2 in Tran et al [12]) satisfies the following equation:
+
+�
+
+��
+
+��
+
+�
+
+l3 þ
+
+11 þÀ
+
+a
+
+l2 þ
+
+1 À
+
+aÀ
+
+a À sdb þ sf c l À
+
+a þ sdb À sf c ¼ 0
+
+ð6Þ
+
+td tf
+
+tdtf td tf td tf
+
+tdtf
+
+where τd and τf are the time constant of the d-gate and the f-gate of Isi, respectively; sd and sf are
+
+the slopes of the steady-state activation and inactivation curves, respectively. a
+
+¼
+
+@F ;
+@V
+
+b
+
+¼
+
+@F, and
+@d
+
+c
+
+¼
+
+@F @f
+
+with
+
+F
+
+being
+
+the
+
+total
+
+ionic
+
+current
+
+as
+
+a
+
+function
+
+of
+
+voltage
+
+(V),
+
+gating
+
+variable
+
+d,
+
+and
+
+gat-
+
+ing variable f (see Tran et al [12] for more details). These quantities are their values at the steady
+
+state. At the Hopf bifurcation point, λ1,2 = ±iω, satisfying (λ − iω)(λ + iω)(λ − λ3) = 0, i.e.,
+
+l3 À l3l2 þ o2l À o2l3 ¼ 0
+
+ð7Þ
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+11 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+Comparing the coefficients of the Eqs (6) and (7), one obtains:
+
+o2 ¼ 1 À a À a À sdb þ sf c
+
+ð8Þ
+
+tdtf td tf td tf
+
+To calculate ω, one needs to define the Hopf bifurcation point. In the LR1 model, the slow subsystem is the X-gate which is treated as a parameter for the stability analysis of the fast subsystem. For a given X value, one can easily obtain the steady-state voltage VQES and thus the
+
+steady-state values of all other gating variables. From Eqs (6) and (7), one also has: l3 ¼
+
+�
+
+�
+
+�
+
+�
+
+aÀ
+
+1À
+td
+
+1 tf
+
+and o2l3 ¼
+
+aþsdbÀ sf c . This leads to: td tf
+
+�
+
+��
+
+��
+
+�
+
+a þ sdb À sf c ¼
+
+1 À
+
+aÀ
+
+aÀ
+
+sdb þ sf c
+
+11 aÀ À
+
+ð9Þ
+
+tdtf
+
+tdtf td tf td tf
+
+td tf
+
+Defining
+
+�
+
+��
+
+��
+
+�
+
+h ¼ a þ sdb À sf c À
+
+1 À a À a À sdb þ sf c
+
+11 aÀ À
+
+ð10Þ
+
+tdtf
+
+tdtf td tf td tf
+
+td tf
+
+then at the Hopf bifurcation point, h = 0. Moreover, at the vicinity of the Hopf bifurcation
+
+point, λ1,2 = ε ± iω, satisfying (λ − ε − iω)(λ − ε + iω)(λ − λ3) = 0. Following the same analysis above, one obtains:
+
+�
+
+1
+
+h þ 2ε
+
+À
+
+aÀ
+
+aÀ
+
+�� sdb þ sf c þ 2ε a À
+
+1 À
+
+1
+
+�2
+
+À 2ε ¼ 0
+
+ð11Þ
+
+tdtf td tf td tf
+
+td tf
+
+Since ε<0 before the Hopf bifurcation and ε>0 after the Hopf bifurcation, thus h>0 before the Hopf bifurcation and h<0 after the bifurcation. Therefore, by calculating h using Eq 10 and scanning X from 0 to 1, one can determine the Hopf bifurcation point. After the Hopf bifurcation point is determined, one can then calculate the oscillation period of the limit cycle of the fast subsystem at the Hopf bifurcation using Eq 8. Fig 6 shows the oscillation period versus different parameters using the theoretical approach (open red symbols). The oscillation period decreases slowly with increasing Gsi (Fig 6A), has almost no change with GK (Fig 6C) and GK1 (Fig 6D), but increases quickly with slowing the inactivation time constant of Isi (a 2-fold change in τf resulted in roughly a 2-fold change in the oscillation period, Fig 6E).
+For comparison, we carried out simulations of the LR1 model using the same parameters. We plotted all TEAD in an AP as we did for AEAD with the ordering of TEAD in an AP shown in Fig 6B. Similar to AEAD, when a new EAD suddenly appears in or disappears from the AP, the appearing or disappearing TEAD is the longest. As shown in Fig 6A, as Gsi increases, an EAD suddenly appears in the AP (green arrow in Fig 6A and green AP in Fig 6B) which results in a long TEAD. As Gsi increases further, this TEAD decreases quickly toward the oscillation period of the limit cycle in the fast subsystem predicted from the theory, and becomes insensitive to Gsi. This TEAD behavior repeats when a new EAD occurs in the AP as Gsi increases. The fast decaying phase is a result of the homoclinic bifurcation, in which the oscillation period of the limit cycle decreases quickly as the system is away from the homoclinic bifurcation point (see Fig 2B). In other words, when a new EAD first appears in an AP, it is always the one closest to the homoclinic bifurcation, and thus the AEAD is the largest and TEAD the longest (see Fig 4). As the takeoff of this EAD is further away from the homoclinic point, the corresponding TEAD (e.g., from the blue AP to the magenta AP in Fig 4B) quickly approaches to those of the EADs prior to it, roughly the oscillation period of the limit cycle of the fast subsystem at the Hopf bifurcation. Therefore, changing Gsi has only a small effect on TEAD except when an EAD
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+12 / 24
+
+Early afterdepolarizations in ventricular myocytes
+Fig 6. Theoretical predictions and simulation results of TEAD using the LR1 model. A. TEAD versus Gsi. The numbers mark the order of TEAD as defined in B. B. AP traces for Gsi indicated by the two arrows in A with two EADs and one TEAD in the green AP (α = 0.741) while four EADs and three TEAD in the blue AP (α = 0.9). C. TEAD versus GK. D. TEAD versus GK1. E. TEAD versus τf. F. Histogram of TEAD obtained from a large number of simulations using randomly selected parameter sets and all TEAD in an AP. Control τf (α = 1) was used. The total number of TEAD is 13317 in the histogram. https://doi.org/10.1371/journal.pcbi.1006382.g006
+appears in or disappears from the AP. Changing the maximum conductance of an outward current exhibits the same behavior (Fig 6C and 6D). However, TEAD increases with the time constant τf of the Isi inactivation gate more sensitively than with the maximum conductance of the ionic currents (Fig 6E), which also agrees with the theoretical prediction. This indicates that besides the dual Hopf-homoclinic bifurcation, Isi inactivation and recovery (although τf is the inactivation time constant, it also determines the recovery of the channel in the LR1 model) is a major parameter determining TEAD.
+
+Fig 7. Dependence of TEAD on maximum conductance and kinetics of ionic currents in different models. A. LRd. B. HUCLA. C. TP04. D. ORd. E. GB. Only the first TEAD (the interval between the first and the second EAD) are plotted. One parameter (indicated by color) was changed while the others were set at their control values.
+https://doi.org/10.1371/journal.pcbi.1006382.g007
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+13 / 24
+
+Early afterdepolarizations in ventricular myocytes
+To more systematically explore the dependence of TEAD on ion channel conductance, we carried out simulations by randomly drawn the maximum conductance of different ionic currents and measured all TEAD. The data is presented as a histogram in Fig 6F. The distribution shows that TEAD is mainly between 250 ms and 500 ms (peak ~280 ms), which is the same range seen in Fig 6A–6D (the range is narrower comparing to Fig 6E since the control τf was used for all the random parameter sets).
+Therefore, based on the theoretical predictions and simulation results of the LR1 model, we conclude that TEAD is mainly determined by the time constant of ICa,L (Isi in the LR1 model), which is the oscillation period at the Hopf bifurcation. The change in an ionic current conductance exhibits small effects on TEAD until it causes an EAD to disappear or appear at which TEAD is mainly influenced by the homoclinic bifurcation.
+Inter-EAD interval in physiologically more detailed models
+The simulation results from the physiologically more detailed models show similar characteristics of TEAD dependence on different parameters (Fig 7). Increasing an inward current decreases TEAD while increasing an outward current (except Ito) increases TEAD. In the LRd and HUCLA models, increasing Ito conductance decreases TEAD. This is because Ito promotes EADs in these models. Similar to the LR1 model, the change in TEAD is not very sensitive to a change in the maximum conductance of an ionic current until it is close to the transition from two EADs to one EAD (or from one EAD to two EADs) in the AP at which TEAD changes rapidly. The predominant TEAD for the 5 models are roughly: LRd—90 ms; HUCLA—85 ms; TP04–270 ms; ORd—275 ms; and GB—125 ms. As shown in Fig 7, TEAD in the LRd, HUCLA, and GB models are shorter than 200 ms (between 50 ms to 200 ms), while those in the TP04 and ORd models range from 250 ms to 500 ms. In all the models, τf exhibits a stronger effect on TEAD than the other parameters we explored.
+In Fig 7, we only show the first inter-EAD interval versus a specific parameter. To explore wider ranges of TEAD in these models, we used random parameter sets (see Methods) and measured all TEAD in an AP. Fig 8 shows the TEAD distributions for the AP models. The TEAD ranges are: LRd—from 75 ms to 125 ms (peak ~90 ms); HUCLA—from 50 ms to 150 ms (peak ~85 ms); TP04—from 225 ms to 350 ms (peak ~250 ms); ORd—from 200ms to 500 ms (peak ~250 ms); and GB—from 100 ms to 200 ms (peak ~125 ms). Therefore, the TEAD of the TP04 and ORd model is in the experimentally observed range, while those of the GB, LRd, and HUCLA models are too short comparing to the experimental recordings. Note that the TEAD range using the random parameter sets is similar to the range seen in Fig 7 for each model, indicating that the TEAD range of an AP model is not sensitive to ionic current conductance but mainly determined by the period variation in the dual Hopf-homoclinic bifurcation.
+Based on the theoretical predictions that τf is the main determinant of the inter-EAD interval, we changed τf functions in the LRd and HUCLA models from upward bell-shaped functions to downward bell-shaped functions (see Fig 8C) to lengthen τf in the plateau phase, we can effectively shift the TEAD distributions toward the longer periods (red histograms in Fig 8A and 8B). The inactivation time constants of ICa,L in the plateau voltage for the TP04 model and the ORd model are much longer, and thus inter-EAD intervals of these two models are also much longer. The GB model has a much shorter inactivation time constant of ICa,L in the plateau, similar to those of LRd and HUCLA, and thus the inter-EAD interval is also short.
+Determinants of EAD latency
+As shown in Table 1, LEAD varied in a large range, from less than 100 ms to a couple of seconds. Based on the bifurcation theory of EADs [12, 18], for EADs to occur, besides the
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+14 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+Fig 8. Distributions of TEAD in different models. A. LRd. B. HUCLA. D. TP04. E. ORd. F. GB. In these distributions, the ionic conductance (see SI for the specific ones for each model) were randomly drawn from the assigned intervals. C. τf versus V in the original LRd (black) and the modified one (red). The same τf was used in the HUCLA model as in the LRd model.
+https://doi.org/10.1371/journal.pcbi.1006382.g008
+instability leading to oscillations, the voltage needs to decay into the window voltage range of ICa,L activation and the LCCs need to be recovered by a certain amount so that there are enough LCCs available for re-opening.
+To reveal how LEAD is determined by the ion channel properties, we started with simulations of the LR1 model (Fig 9A). We varied four parameters: Gsi, GK, GK1, and τf. Increasing Gsi first decreases LEAD quickly and then increases LEAD slowly (red curve in Fig 9A). The longest LEAD occurs when the first EAD appears in the AP (green arrow in Fig 9A). When a new EAD first appears in an AP, its takeoff potential is the lowest which is close to the potential of
+
+Fig 9. Dependence of EAD latency on ionic current conductance in different AP models. A. LR1. B. LRd. C. HUCLA. D. TP04. E. ORd. F. GB. One parameter (indicated by color) was changed while the others were set as their control values.
+https://doi.org/10.1371/journal.pcbi.1006382.g009
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+15 / 24
+
+Early afterdepolarizations in ventricular myocytes
+
+Fig 10. Distributions of TEAD in different models. A. LR1. B. LRd. C. HUCLA. D. TP04. E. ORd. F. GB. In these distributions, the ionic conductance (see SI for the specific ones for each model) were randomly drawn from the assigned intervals.
+https://doi.org/10.1371/journal.pcbi.1006382.g010
+the homoclinic bifurcation point (see Fig 2A), and it takes a longer time for the EAD depolarization to occur (the same reason that the TEAD is the longest and AEAD is the largest when a new EAD appears). As Gsi increases, the takeoff potential is higher and thus LEAD shortens. However, increasing Gsi also slows the decay of voltage into the window range of LCC reactivation, and thus lengthens LEAD. Increasing GK does the opposite (blue curve in Fig 9A) for the same reasons mentioned for Gsi. Changing GK1 has no effect since IK1 is almost negligible in early phase-2 of the AP. τf has a big effect on LEAD, which can vary LEAD in a much wider range than the conductance. τf affects LEAD by two ways: 1) slowing τf causes a slower inactivation of Isi which delays the voltage decay to the window range; 2) slowing τf delays recovery of LCCs, which then delays the depolarization of the first EAD.
+Similar behaviors occur in all other models (Fig 9B–9F): changing a conductance usually has a small effect on LEAD until it causes the only EAD in the AP to disappear, at which LEAD changes steeply; and the inactivation time constant of ICa,L is the most sensitive parameter for LEAD. The LEAD varies largely from model to model. In Fig 10, we show LEAD distributions from random parameter sets for all models, and the LEAD ranges are: LR1—from 600 ms to 1000 ms (peak ~750 ms); LRd—from 240 ms to 550 ms (peak ~300 ms); HUCLA—from 135 ms to 180 ms (peak ~150 ms); TP04—from 640 ms to 720 ms (peak~650 ms); ORd—from 360 ms to 600 ms (peak ~400 ms); GB—from 240 ms to 500 ms (peak~280 ms).
+Discussion
+In this study, we used theoretical analyses and computer simulations to investigate EAD properties and their major determinants in AP models of ventricular myocytes. Our major observations and conclusions are summarized and discussed below.
+EAD takeoff potential and amplitude
+In all the models we simulated, the EAD takeoff potentials are usually above -40 mV (see the 0 mV shift cases in Fig 5), which is in agreement with experimental data from isolated
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+16 / 24
+
+Early afterdepolarizations in ventricular myocytes
+ventricular myocytes (Table 1). A negative linear correlation between EAD amplitude and takeoff potential, which has been shown in experimental recordings [1, 2, 9], can be implied from the dual Hopf-homoclinic bifurcation and is shown in simulations of all models. The slopes of the negative linear correlations, the lowest takeoff potentials, and the maximum EAD amplitudes vary substantially from model to model. The ORd model exhibits the largest maximum EAD amplitude and the steepest slope of the linear correlation between EAD amplitude and takeoff potential.
+Although EADs are promoted by increasing inward currents or decreasing outward currents, once EADs occur in an AP, increasing the maximum conductance of an inward current or decreasing that of an outward current does not increase the amplitudes of the EADs. Increasing the maximum conductance of an inward current causes more EADs in the AP, and the maximum EAD amplitude occurs when a new EAD appears in the AP. The amplitude of this new EAD then decreases as the conductance increases. Increasing the maximum conductance of an outward current decreases the number of EADs in the AP but increases the EAD amplitude. The maximum EAD amplitude occurs before an EAD disappears from the AP. Based on the bifurcation analysis [12–15], the EAD amplitude grows as the system evolves from the Hopf bifurcation point to the homoclinic bifurcation point (Fig 2A and Fig 4). This behavior should hold for both supercritical [12, 15] and subcritical [14, 15] Hopf bifurcation. At the homoclinic bifurcation point, the takeoff potential is the lowest and the EAD amplitude becomes the maximum. Therefore, the amplitude of the last EAD in an AP depends on how far away the takeoff potential is from the homoclinic bifurcation point. Born of a new EAD or death of an existing EAD always occurs when the EAD takes off near the homoclinic bifurcation point.
+Note that in our simulations of assessing EAD amplitude and takeoff potential, we used random parameter sets to explore a wide range of parameters for each model. In these simulations, only phase-2 EADs in the ventricular myocyte models were observed. A recent simulation study [15] using the ORd model and the Kurata et al model [56] also showed that only phase-2 EADs could be observed. This indicates that varying maximum ionic current conductance may not produce phase-3 EADs. This agrees with the experimental data that EADs observed in isolated ventricular myocytes are mainly phase-2 EADs (Table 1), while phase-3 EADs are rarely observed in isolated cells, except under Ca2+ overload [57] or by external current injection [49]. On the other hand, phase-3 EADs are observed in Purkinje fibers [19] and cardiac tissue [58–60]. Previous computer simulations showed that phase-3 EADs could occur in single cells with a strong InsCa under elevated intracellular Ca2+ concentration [20, 21, 61] or in tissue with repolarization heterogeneity induced dynamical instabilities [22, 58]. Therefore, phase-3 EADs can be caused either by strong Ca2+ overload in isolated myocytes or by repolarization heterogeneities in tissue with reduced repolarization reserve, while phase-2 EADs are mainly due to reduced repolarization reserve and reactivation of ICa,L [9, 10, 18, 62, 63].
+Since phase-2 EADs cannot propagate into PVCs in tissue [19–22], this raises question on how are EADs linked to arrhythmias under LQTS and many other diseased conditions where Ca2+ may not be overloaded. In recent studies [22, 64], we demonstrated how phase-2 EADs and tissue-scale dynamical instabilities interact to result in PVCs and arrhythmias under LQTS, linking mechanistically phase-2 EADs to arrhythmogenesis.
+Inter-EAD interval
+Based on the bifurcation analysis, the inter-EAD interval is governed by the period of the limit cycle oscillation between the Hopf bifurcation and the homoclinic bifurcation. Similar to AEAD, the inter-EAD interval increases as the system evolves from the Hopf bifurcation point to the homoclinic bifurcation point. This behavior has been demonstrated in experimental
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+17 / 24
+
+Early afterdepolarizations in ventricular myocytes
+recordings previously [65]. Our theoretical analysis and simulation of the AP models showed that the inter-EAD intervals (except the last one in an AP), which are mainly determined by the period of the limit cycle oscillation at the Hopf bifurcation, is insensitive to the change of maximum ionic current conductance but more sensitive to the recovery of LCCs (Figs 7 and 8, and Eq 7). The TEAD range of an AP model is determined by the oscillation period between the Hopf bifurcation and the homoclinic bifurcation. However, the inter-EAD interval from different models exhibits different ranges, differing several folds. On the other hand, the inter-EAD intervals observed in isolated ventricular myocyte experiments mostly are in the range from 200 ms to 500 ms, irrespective of species (Table 1). In the AP models simulated in this study, the inter-EAD intervals of LR1, TP04, and ORd are in the same range as observed experimentally, but other models exhibit much faster inter-EAD intervals, indicating that caveats may exist in these models. Our simulation indicates that the major caveat may lie in the formulation of ICa,L, in particular the recovery time of ICa,L during the plateau phase (see more detailed discussion below).
+EAD latency
+EAD latency is determined by many factors. In term of biophysics, since EADs are caused by reactivation of LCCs, the voltage needs to decay into the window range for reactivation of LCCs, which depends on the speed of activation of the outward currents (namely, IKs, IKr, and Ito) and inactivation of the inward currents (namely ICa,L). Then there are enough LCCs recovered for re-opening, which depends on how fast the LCCs recovers. In more general term of nonlinear dynamics as indicated by the bifurcation theory, the voltage and other variables need to enter the basin or the vicinity of the basin of attraction of the limit cycle. This requires not only the voltage but also the other state variables to reach their proper values. For example, in the LR1 model, the X-gating variable needs to grow to a certain value to engage the Hopf bifurcation as shown in Fig 2A. If X grows too slowly, the system may stay at the quasi-equilibrium state for a long time with no oscillations until reaching the Hopf bifurcation point, such as the cases shown in Song et al [51]. Note that transient oscillations around a stable focus can occur before the Hopf bifurcation, and thus EADs can occur before the Hopf bifurcation (see Fig 2A, Fig 4C and 4D in this study, and Figs 2 and 4 in the study by Ku¨gler [14]). Therefore, the EAD latency can be very variable, explaining the experimental observation that EAD latency varies in a wide range, from less than 100 ms to several seconds (Table 1).
+Implications to mathematical modeling of cardiac APs
+It is obvious that understanding the EAD properties and nonlinear dynamics is of great importance for understanding arrhythmogenesis in cardiac diseases [66], but it also provides important information for cardiac AP modeling. Previous AP modeling has mainly considered AP morphology, APD, as well as APD restitution, but not the EAD properties. For example, the inter-EAD intervals of the guinea pig ventricular myocyte models [11, 23, 24] are much shorter than what have been observed in isolated guinea pig ventricular myocytes (Table 1). This is also true for the rabbit ventricular myocyte models. As shown in Fig 8A and 8B, we can effectively increase the inter-EAD interval by increasing the inactivation time constant τf of ICa,L. However, for both the guinea pig model [67] and the rabbit model [68], the original inactivation time constants were based on experimental measurements. Since in the Hodgkin-Huxley formulation of ICa,L, the f-gate is a voltage-dependent inactivation gate, but it also governs the recovery of ICa,L. Therefore, one would conclude that experimentally-based τf might be a correct constant but the recovery properties of ICa,L in these models are incorrect, which gives rise to the discrepancy in inter-EAD intervals between mathematical models and experimental measurements. On the other hand, τf is large in the LR1, TP04, and ORd models, which gives
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+18 / 24
+
+Early afterdepolarizations in ventricular myocytes
+rise to the right recovery times to result in inter-EAD intervals in the ranges as observed in experiments. That also does not mean that ICa,L models are completely correct in these AP models since we know that the one for the LR1 model gives rise to a too slow inactivation of ICa,L. Therefore, the EAD properties provide additional important information for AP modeling, which need to be considered in future AP model development.
+Limitations
+A major limitation is reliable experimental data curation. First, most of the values in Table 1 were estimated from the published figures, which is difficult to be accurate and unbiased. Second, experimental data of EADs recorded from isolated ventricular is not abundant. Moreover, to calculate TEAD, we have to select APs with two or more EADs, which further limited our data sources. Third, most of the experimental plots do not have coordinates but indicated by scale bars. Sometimes, these scale bars may not be correctly labeled due to different reasons. For example, we confirmed with Dr. Li that the time scale bar in Fig 2C of Ref. [33] is 300 ms instead of 150 ms. In computer simulations, we only explored the maximum conductance of the ion currents and the voltage-dependent inactivation time constant of ICa,L, but it is obvious any parameter that affects repolarization will have an effect on EAD genesis and EAD properties. For example, the time constants of ion channel activation and inactivation, the Ca2 +-dependent inaction of ICa,L [69], the intracellular Ca2+ transient, mitochondrial metabolism and Ca2+ cycling [61, 70], as well as spatial distribution of the ion channels will impact the EAD behaviors, which need to be investigated in future studies. Another limitation of the simulations is that our conclusions may depend on the setting of control parameter and the assigned intervals for random parameters. However, as we show in this study, despite certain distinct difference between models, such as the inter-EAD interval, the general conclusions are not model dependent, and thus, not likely to be affected by the choice of control parameter sets and the assigned intervals. We only investigated the effects of voltage-dependent inactivation of ICa,L on EAD properties. It is shown that Ca2+-dependent inactivation also play important roles in EAD genesis [69], one would anticipate that the Ca2+-dependent inactivation might have a large effect on EAD properties. However, the Ca2+-dependent inactivation is modeled very differently in different models, we do not have a unique way to alter a parameter to study the effects in the models. For example, in most models, Ca2+-dependent inactivation was modeled by an instantaneous function of Ca2+, and thus it is not clear how to change the time constant of Ca2+-dependent inactivation in these models. One major caveat of the current study is that in the models we simulated, the EADs are caused by reactivation of ICa,L, however, experimental studies showed EADs can also be caused by spontaneous Ca2+ release [57, 71, 72]. In a recent modeling study by Wilson et al [73], the authors showed that spontaneous Ca2 + oscillation can lead to EADs. We performed the same analyses of this model as we did for other models and showed the results in Fig K in S1 Text. The EAD behaviors and their dependence on the ionic conductances are similar to other models, but the model indeed exhibits some differences from the other models. For example, TEAD exhibits a much wider range (from 100 ms to 1200 ms) than those of other models and the TEAD histogram shows characteristic distributions indicating that there are two mechanisms of EADs involved. However, further investigation is needed to pinpoint the underlying mechanisms of EADs in this model and compare model results with experimental data in future studies.
+Supporting information
+S1 Text. The online supporting information includes: 1) The control parameters of each AP model and their changes from the original model to promote EADs; 2) The formualation of
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+19 / 24
+
+Early afterdepolarizations in ventricular myocytes
+INaL; and 3) The supplemental results shown as supplemental figures, from Fig A to Fig K. (PDF)
+Author Contributions
+Conceptualization: Zhilin Qu.
+Data curation: Zhen Song, Zhilin Qu.
+Formal analysis: Xiaodong Huang, Zhilin Qu.
+Funding acquisition: Xiaodong Huang, Zhilin Qu.
+Investigation: Xiaodong Huang, Zhilin Qu.
+Methodology: Xiaodong Huang.
+Software: Xiaodong Huang.
+Supervision: Zhilin Qu.
+Writing – original draft: Xiaodong Huang, Zhilin Qu.
+Writing – review & editing: Xiaodong Huang, Zhen Song, Zhilin Qu.
+References
+1. January CT, Riddle JM, Salata JJ. A model for early afterdepolarizations: induction with the Ca2+ channel agonist Bay K 8644. Circ Res. 1988; 62(3):563–71. PMID: 2449297.
+2. Ma J, Guo L, Fiene SJ, Anson BD, Thomson JA, Kamp TJ, et al. High purity human-induced pluripotent stem cell-derived cardiomyocytes: electrophysiological properties of action potentials and ionic currents. American Journal of Physiology—Heart and Circulatory Physiology. 2011; 301(5):H2006–H17. https://doi.org/10.1152/ajpheart.00694.2011 PMID: 21890694
+3. January CT, Moscucci A. Cellular mechanisms of early afterdepolarizations. Ann N Y Acad Sci. 1992; 644:23–32. PMID: 1562117.
+4. Cranefield PF, Aronson RS. Torsade de Pointes and Other Pause-Induced Ventricular Tachycardias: The Short-Long-Short Sequence and Early Afterdepolarizations. Pacing Clin Electrophysiol. 1988; 11 (6):670–8. https://doi.org/10.1111/j.1540-8159.1988.tb06016.x
+5. Rosen MR, Moak JP, Damiano B. The clinical relevance of afterdepolarizations. Ann N Y Acad Sci. 1984; 427:84–93. PMID: 6378020.
+6. Qu Z, Weiss JN. Mechanisms of Ventricular Arrhythmias: From Molecular Fluctuations to Electrical Turbulence. Annu Rev Physiol. 2015; 77(1):29–55. https://doi.org/10.1146/annurev-physiol-021014071622 PMID: 25340965; PubMed Central PMCID: PMCPMC4342983.
+7. Weiss JN, Garfinkel A, Karagueuzian HS, Chen PS, Qu Z. Early afterdepolarizations and cardiac arrhythmias. Heart Rhythm. 2010; 7(12):1891–9. Epub 2010/09/28. S1547-5271(10)00960-4 [pii] https://doi.org/10.1016/j.hrthm.2010.09.017 PMID: 20868774; PubMed Central PMCID: PMC3005298.
+8. Roden DM. Taking the "Idio" out of "Idiosyncratic": Predicting Torsades de Pointes. Pacing Clin Electrophysiol. 1998; 21(5):1029–34. PMID: 9604234
+9. January CT, Riddle JM. Early afterdepolarizations: mechanism of induction and block. A role for L-type Ca2+ current. Circ Res. 1989; 64(5):977–90. PMID: 2468430.
+10. January CT, Chau V, Makielski JC. Triggered activity in the heart: cellular mechanisms of early afterdepolarizations. Eur Heart J. 1991; 12 Suppl F:4–9. Epub 1991/12/01. PMID: 1725155.
+11. Zeng J, Rudy Y. Early afterdepolarizations in cardiac myocytes: mechanism and rate dependence. Biophys J. 1995; 68(3):949–64. https://doi.org/10.1016/S0006-3495(95)80271-7 PMID: 7538806.
+12. Tran DX, Sato D, Yochelis A, Weiss JN, Garfinkel A, Qu Z. Bifurcation and Chaos in a Model of Cardiac Early Afterdepolarizations. Phys Rev Lett. 2009; 102(25):258103. PubMed Central PMCID: PMCPMC2726623. https://doi.org/10.1103/PhysRevLett.102.258103 PMID: 19659123
+13. Xie Y, Izu LT, Bers DM, Sato D. Arrhythmogenic transient dynamics in cardiac myocytes. Biophys J. 2014; 106(6):1391–7. https://doi.org/10.1016/j.bpj.2013.12.050 PMID: 24655514; PubMed Central PMCID: PMC3984988.
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+20 / 24
+
+Early afterdepolarizations in ventricular myocytes
+14. Ku¨ gler P. Early afterdepolarizations with growing amplitudes via delayed subcritical Hopf bifurcations and unstable manifolds of saddle foci in cardiac action potential dynamics. PLoS ONE. 2016; 11(3): e0151178. https://doi.org/10.1371/journal.pone.0151178 PMID: 26977805
+15. Kurata Y, Tsumoto K, Hayashi K, Hisatome I, Tanida M, Kuda Y, et al. Dynamical mechanisms of phase-2 early afterdepolarizations in human ventricular myocytes: insights from bifurcation analyses of two mathematical models. American Journal of Physiology—Heart and Circulatory Physiology. 2017; 312(1):H106–H27. https://doi.org/10.1152/ajpheart.00115.2016 PMID: 27836893
+16. Strogatz SH. Nonlinear dynamics and Chaos: with applications to physics, biology, chemistry, and engineering. Cambridge: Westview Press; 2000. xi, 498 p.
+17. Izhikevich EM. Dynamical Systems in Neuroscience. Cambridge: MIT press; 2007. https://doi.org/10. 1523/JNEUROSCI.3516-07.2007
+18. Qu Z, Xie L-H, Olcese R, Karagueuzian HS, Chen P-S, Garfinkel A, et al. Early afterdepolarizations in cardiac myocytes: beyond reduced repolarization reserve. Cardiovasc Res. 2013; 99(1):6–15. https:// doi.org/10.1093/cvr/cvt104 PubMed Central PMCID: PMCPMC3687754. PMID: 23619423
+19. Damiano BP, Rosen MR. Effects of pacing on triggered activity induced by early afterdepolarizations. Circulation. 1984; 69(5):1013–25. PMID: 6705157.
+20. Sato D, Xie LH, Sovari AA, Tran DX, Morita N, Xie F, et al. Synchronization of chaotic early afterdepolarizations in the genesis of cardiac arrhythmias. Proc Natl Acad Sci U S A. 2009; 106(9):2983–8. https:// doi.org/10.1073/pnas.0809148106 PMID: 19218447; PubMed Central PMCID: PMCPMC2651322.
+21. de Lange E, Xie Y, Qu Z. Synchronization of early afterdepolarizations and arrhythmogenesis in heterogeneous cardiac tissue models. Biophys J. 2012; 103:365–73. PubMed Central PMCID: PMCPMC3400768. https://doi.org/10.1016/j.bpj.2012.06.007 PMID: 22853915
+22. Huang X, Kim TY, Koren G, Choi B-R, Qu Z. Spontaneous initiation of premature ventricular complexes and arrhythmias in type 2 long QT syndrome. American Journal of Physiology—Heart and Circulatory Physiology. 2016; 311(6):H1470–H84. https://doi.org/10.1152/ajpheart.00500.2016 PMID: 27765749
+23. Viswanathan PC, Rudy Y. Pause induced early afterdepolarizations in the long QT syndrome: a simulation study. Cardiovasc Res. 1999; 42(2):530–42. PMID: 10533588
+24. Clancy CE, Rudy Y. Linking a genetic defect to its cellular phenotype in a cardiac arrhythmia. Nature. 1999; 400(6744):566–9. https://doi.org/10.1038/23034 PMID: 10448858
+25. Gaur N, Rudy Y, Hool L. Contributions of Ion Channel Currents to Ventricular Action Potential Changes and Induction of Early Afterdepolarizations During Acute Hypoxia. Circ Res. 2009; 105(12):1196–203. https://doi.org/10.1161/CIRCRESAHA.109.202267 PMC2826175. PMID: 19875728
+26. Grandi E, Pasqualini FS, Bers DM. A novel computational model of the human ventricular action potential and Ca transient. J Mol Cell Cardiol. 2010; 48(1):112–21. https://doi.org/10.1016/j.yjmcc.2009.09. 019 PMID: 19835882; PubMed Central PMCID: PMC PMC2813400.
+27. Vandersickel N, Kazbanov IV, Nuitermans A, Weise LD, Pandit R, Panfilov AV. A Study of Early Afterdepolarizations in a Model for Human Ventricular Tissue. PLoS ONE. 2014; 9(1):e84595. https://doi. org/10.1371/journal.pone.0084595 PMID: 24427289
+28. Luo CH, Rudy Y. A model of the ventricular cardiac action potential: depolarization, repolarization, and their interaction. Circ Res. 1991; 68(6):1501–26. PMID: 1709839
+29. Faber GM, Rudy Y. Action potential and contractility changes in [Na(+)](i) overloaded cardiac myocytes: a simulation study. Biophys J. 2000; 78(5):2392–404. https://doi.org/10.1016/S0006-3495(00)76783-X PMID: 10777735
+30. ten Tusscher KH, Noble D, Noble PJ, Panfilov AV. A model for human ventricular tissue. Am J Physiol Heart Circ Physiol. 2004; 286(4):H1573–89. https://doi.org/10.1152/ajpheart.00794.2003 PMID: 14656705.
+31. O’Hara T, Virag L, Varro A, Rudy Y. Simulation of the undiseased human cardiac ventricular action potential: model formulation and experimental validation. PLoS Comput Biol. 2011; 7(5):e1002061. Epub 2011/06/04. https://doi.org/10.1371/journal.pcbi.1002061 PCOMPBIOL-D-10-00416 [pii]. PMID: 21637795; PubMed Central PMCID: PMCPMC3102752.
+32. Rush S, Larsen H. A practical algorithm for solving dynamic membrane equations. IEEE Trans Biomed Eng. 1978; 25(4):389–92. https://doi.org/10.1109/TBME.1978.326270 PMID: 689699
+33. Li G-R, Lau C-P, Leung T-K, Nattel S. Ionic current abnormalities associated with prolonged action potentials in cardiomyocytes from diseased human right ventricles. Heart Rhythm. 2004; 1(4):460–8. http://dx.doi.org/10.1016/j.hrthm.2004.06.003. PMID: 15851200
+34. Undrovinas AI, Maltsev VA, Kyle JW, Silverman N, Sabbah HN. Gating of the Late Na+ Channel in Normal and Failing Human Myocardium. J Mol Cell Cardiol. 2002; 34(11):1477–89. http://dx.doi.org/10. 1006/jmcc.2002.2100. PMID: 12431447
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+21 / 24
+
+Early afterdepolarizations in ventricular myocytes
+35. Guo D, Liu Q, Liu T, Elliott G, Gingras M, Kowey PR, et al. Electrophysiological Properties of HBI-3000: A New Antiarrhythmic Agent With Multiple-channel Blocking Properties in Human Ventricular Myocytes. J Cardiovasc Pharmacol. 2011; 57(1):79–85. https://doi.org/10.1097/FJC.0b013e3181ffe8b3 00005344-201101000-00011. PMID: 20980921
+36. Veldkamp MW, Verkerk AO, van Ginneken ACG, Baartscheer A, Schumacher C, de Jonge N, et al. Norepinephrine induces action potential prolongation and early afterdepolarizations in ventricular myocytes isolated from human end-stage failing hearts. Eur Heart J. 2001; 22(11):955–63. https://doi.org/ 10.1053/euhj.2000.2499 PMID: 11428819
+37. Antzelevitch C, Sun ZQ, Zhang ZQ, Yan GX. Cellular and ionic mechanisms underlying erythromycininduced long QT intervals and torsade de pointes. J Am Coll Cardiol. 1996; 28(7):1836–48. https://doi. org/10.1016/S0735-1097(96)00377-4 PMID: 8962574
+38. Burashnikov A, Shimizu W, Antzelevitch C. Fever accentuates transmural dispersion of repolarization and facilitates development of early afterdepolarizations and torsade de pointes under long-QT Conditions. Circ Arrhythm Electrophysiol. 2008; 1(3):202–8. https://doi.org/10.1161/CIRCEP.107.691931 PMID: 19649147.
+39. Li GR, Lau CP, Ducharme A, Tardif JC, Nattel S. Transmural action potential and ionic current remodeling in ventricles of failing canine hearts. Am J Physiol Heart Circ Physiol. 2002; 283(3):H1031–41. https://doi.org/10.1152/ajpheart.00105.2002 PMID: 12181133.
+40. Undrovinas IA, Maltsev AV, Sabbah NH. Repolarization abnormalities in cardiomyocytes of dogs with chronic heart failure: role of sustained inward current. Cellular and Molecular Life Sciences CMLS. 1999; 55(3):494–505. https://doi.org/10.1007/s000180050306 PMID: 10228563
+41. Sato D, Xie LH, Nguyen TP, Weiss JN, Qu Z. Irregularly appearing early afterdepolarizations in cardiac myocytes: random fluctuations or dynamical chaos? Biophys J. 2010; 99(3):765–73. https://doi.org/10. 1016/j.bpj.2010.05.019 PMID: 20682253; PubMed Central PMCID: PMC PMC2913181.
+42. Terentyev D, Rees CM, Li W, Cooper LL, Jindal HK, Peng X, et al. Hyperphosphorylation of RyRs Underlies Triggered Activity in Transgenic Rabbit Model of LQT2 Syndrome. Circ Res. 2014; 115 (11):919–28. https://doi.org/10.1161/CIRCRESAHA.115.305146 PMID: 25249569.
+43. Guo D, Zhao X, Wu Y, Liu T, Kowey PR, Yan GX. L-type calcium current reactivation contributes to arrhythmogenesis associated with action potential triangulation. J Cardiovasc Electrophysiol. 2007; 18 (2):196–203. https://doi.org/10.1111/j.1540-8167.2006.00698.x PMID: 17212595.
+44. Liu GX, Choi BR, Ziv O, Li W, de Lange E, Qu Z, et al. Differential conditions for early after-depolarizations and triggered activity in cardiomyocytes derived from transgenic LQT1 and LQT2 rabbits. J Physiol. 2012; 590(Pt 5):1171–80. Epub 2011/12/21. jphysiol.2011.218164 [pii] https://doi.org/10.1113/ jphysiol.2011.218164 PMID: 22183728.
+45. Zhao Z, Xie Y, Wen H, Xiao D, Allen C, Fefelova N, et al. Role of the transient outward potassium current in the genesis of early afterdepolarizations in cardiac cells. Cardiovasc Res. 2012; 95:308–16. Epub 2012/06/05. cvs183 [pii] https://doi.org/10.1093/cvr/cvs183 PMID: 22660482; PubMed Central PMCID: PMCPMC3400356.
+46. Nuss HB, Marba´ n E, Johns DC. Overexpression of a human potassium channel suppresses cardiac hyperexcitability in rabbit ventricular myocytes. J Clin Invest. 1999; 103(6):889–96. PMC408140. https://doi.org/10.1172/JCI5073 PMID: 10079110
+47. Song Y, Thedford S, Lerman BB, Belardinelli L. Adenosine-sensitive afterdepolarizations and triggered activity in guinea pig ventricular myocytes. Circ Res. 1992; 70(4):743–53. PMID: 1551200.
+48. Imanishi S, McAllister RG, Surawicz B. The effects of verapamil and lidocaine on the automatic depolarizations in guinea-pig ventricular myocardium. J Pharmacol Exp Ther. 1978; 207(2):294–303. PMID: 712619
+49. Ming Z, Aronson R, Nordin C. Mechanism of current-induced early afterdepolarizations in guinea pig ventricular myocytes. American Journal of Physiology—Heart and Circulatory Physiology. 1994; 267 (4):H1419–H28.
+50. Nguyen TP, Sovari AA, Pezhouman A, Iyer S, Cao H, Ko CY, et al. Increased susceptibility of spontaneously hypertensive rats to ventricular tachyarrhythmias in early hypertension. The Journal of Physiology. 2016; 594(6):1689–707. https://doi.org/10.1113/JP271318 PMID: 26775607
+51. Song Z, Ko C Y, Nivala M, Weiss James N, Qu Z. Calcium-Voltage Coupling in the Genesis of Early and Delayed Afterdepolarizations in Cardiac Myocytes. Biophys J. 2015; 108(8):1908–21. http://dx.doi. org/10.1016/j.bpj.2015.03.011. PubMed Central PMCID: PMCPMC4407256. PMID: 25902431
+52. Kojima A, Kitagawa H, Omatsu-Kanbe M, Matsuura H, Nosaka S. Sevoflurane Protects Ventricular Myocytes against Oxidative Stress-induced Cellular Ca2+ Overload and Hypercontracture. Anesthesiology. 2013; 119(3):606–20. https://doi.org/10.1097/ALN.0b013e318292ee52 PMID: 23571639
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+22 / 24
+
+Early afterdepolarizations in ventricular myocytes
+53. Edwards AG, Grandi E, Hake JE, Patel S, Li P, Miyamoto S, et al. Non-Equilibrium Reactivation of Na+ Current Drives Early Afterdepolarizations in Mouse Ventricle. Circulation: Arrhythmia and Electrophysiology. 2014. https://doi.org/10.1161/circep.113.001666 PMID: 25236710
+54. Guo W, Li H, London B, Nerbonne JM. Functional consequences of elimination of i(to,f) and i(to,s): early afterdepolarizations, atrioventricular block, and ventricular arrhythmias in mice lacking Kv1.4 and expressing a dominant-negative Kv4 alpha subunit. Circ Res. 2000; 87(1):73–9. PMID: 10884375.
+55. Nguyen TP, Singh N, Xie Y, Qu Z, Weiss JN. Repolarization reserve evolves dynamically during the cardiac action potential: effects of transient outward currents on early afterdepolarizations. Circ Arrhythm Electrophysiol. 2015; 8(3):694–702. Epub 2015/03/17. https://doi.org/10.1161/CIRCEP.114.002451 PMID: 25772542; PubMed Central PMCID: PMCPMC4472560.
+56. Kurata Y, Hisatome I, Matsuda H, Shibamoto T. Dynamical Mechanisms of Pacemaker Generation in IK1-Downregulated Human Ventricular Myocytes: Insights from Bifurcation Analyses of a Mathematical Model. Biophys J. 2005; 89(4):2865–87. http://dx.doi.org/10.1529/biophysj.105.060830. PMID: 16040746
+57. Zhao Z, Wen H, Fefelova N, Allen C, Baba A, Matsuda T, et al. Revisiting the ionic mechanisms of early afterdepolarizations in cardiomyocytes: predominant by Ca waves or Ca currents? Am J Physiol Heart Circ Physiol. 2012; 302(8):H1636–44. Epub 2012/02/07. ajpheart.00742.2011 [pii] https://doi.org/10. 1152/ajpheart.00742.2011 PMID: 22307670; PubMed Central PMCID: PMCPMC3330805.
+58. Maruyama M, Lin SF, Xie Y, Chua SK, Joung B, Han S, et al. Genesis of phase 3 early afterdepolarizations and triggered activity in acquired long-QT syndrome. Circ Arrhythm Electrophysiol. 2011; 4 (1):103–11. https://doi.org/10.1161/CIRCEP.110.959064 PMID: 21078812; PubMed Central PMCID: PMCPMC3045276.
+59. Maruyama M, Ai T, Chua S-K, Park H-W, Lee Y-S, Shen MJ, et al. Hypokalemia promotes late phase 3 early afterdepolarization and recurrent ventricular fibrillation during isoproterenol infusion in Langendorff perfused rabbit ventricles. Heart Rhythm. 2014; 11(4):697–706. http://dx.doi.org/10.1016/j.hrthm.2013. 12.032. PMID: 24378768
+60. Burashnikov A, Antzelevitch C. Reinduction of atrial fibrillation immediately after termination of the arrhythmia is mediated by late phase 3 early afterdepolarization-induced triggered activity. Circulation. 2003; 107(18):2355–60. Epub 2003/04/16. https://doi.org/10.1161/01.CIR.0000065578.00869.7C 01. CIR.0000065578.00869.7C [pii]. PMID: 12695296.
+61. Li Q, Su D, O’Rourke B, Pogwizd SM, Zhou L. Mitochondria-derived ROS bursts disturb Ca2+ cycling and induce abnormal automaticity in guinea pig cardiomyocytes: a theoretical study. American Journal of Physiology—Heart and Circulatory Physiology. 2015; 308(6):H623–H36. https://doi.org/10.1152/ ajpheart.00493.2014 PMID: 25539710
+62. Madhvani RV, Xie Y, Pantazis A, Garfinkel A, Qu Z, Weiss JN, et al. Shaping a new Ca(2+) conductance to suppress early afterdepolarizations in cardiac myocytes. J Physiol. 2011; 589(Pt 24):6081–92. Epub 2011/10/26. jphysiol.2011.219600 [pii] https://doi.org/10.1113/jphysiol.2011.219600 PMID: 22025660; PubMed Central PMCID: PMCPMC3286687.
+63. Antoons G, Volders PG, Stankovicova T, Bito V, Stengl M, Vos MA, et al. Window Ca2+ current and its modulation by Ca2+ release in hypertrophied cardiac myocytes from dogs with chronic atrioventricular block. J Physiol. 2007; 579(Pt 1):147–60. https://doi.org/10.1113/jphysiol.2006.124222 PMID: 17138604.
+64. Liu W, Kim TY, Huang X, Liu MB, Koren G, Choi BR, et al. Mechanisms linking T-wave alternans to spontaneous initiation of ventricular arrhythmias in rabbit models of long QT syndrome. The Journal of Physiology. 596(8):1341–55. https://doi.org/10.1113/JP275492 PMID: 29377142
+65. Chang MG, Chang CY, de Lange E, Xu L, O’Rourke B, Karagueuzian HS, et al. Dynamics of Early Afterdepolarization-Mediated Triggered Activity in Cardiac Monolayers. Biophys J. 2012; 102(12):2706–14. PubMed Central PMCID: PMCPMC3379011. https://doi.org/10.1016/j.bpj.2012.05.011 PMID: 22735520
+66. Qu Z, Hu G, Garfinkel A, Weiss JN. Nonlinear and stochastic dynamics in the heart. Physics Reports. 2014; 543(2):61–162. http://dx.doi.org/10.1016/j.physrep.2014.05.002. PubMed Central PMCID: PMCPMC4175480. PMID: 25267872
+67. Luo CH, Rudy Y. A dynamical model of the cardiac ventricular action potential: I. simulations of ionic currents and concentration changes. Circ Res. 1994; 74(6):1071–96. PMID: 7514509
+68. Mahajan A, Shiferaw Y, Sato D, Baher A, Olcese R, Xie L-H, et al. A rabbit ventricular action potential model replicating cardiac dynamics at rapid heart rates. Biophys J. 2008; 94(2):392–410. https://doi. org/10.1529/biophysj.106.98160 PubMed Central PMCID: PMCPMC2157228. PMID: 18160660
+69. Corrias A, Giles W, Rodriguez B. Ionic mechanisms of electrophysiological properties and repolarization abnormalities in rabbit Purkinje fibers. Am J Physiol Heart Circ Physiol. 2011; 300(5):H1806–H13. https://doi.org/10.1152/ajpheart.01170.2010 PMID: 21335469
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+23 / 24
+
+Early afterdepolarizations in ventricular myocytes
+70. Xie A, Song Z, Liu H, Zhou A, Shi G, Wang Q, et al. Mitochondrial Ca(2+) Influx Contributes to Arrhythmic Risk in Nonischemic Cardiomyopathy. Journal of the American Heart Association. 2018; 7(8). Epub 2018/04/09. https://doi.org/10.1161/JAHA.117.007805 PMID: 29627768; PubMed Central PMCID: PMCPMC6015427.
+71. Choi BR, Burton F, Salama G. Cytosolic Ca2+ triggers early afterdepolarizations and Torsade de Pointes in rabbit hearts with type 2 long QT syndrome. J Physiol-London. 2002; 543(2):615–31.
+72. Volders PG, Kulcsar A, Vos MA, Sipido KR, Wellens HJ, Lazzara R, et al. Similarities between early and delayed afterdepolarizations induced by isoproterenol in canine ventricular myocytes. Cardiovasc Res. 1997; 34(2):348–59. PMID: 9205549.
+73. Wilson D, Ermentrout B, Němec J, Salama G. A model of cardiac ryanodine receptor gating predicts experimental Ca2+-dynamics and Ca2+-triggered arrhythmia in the long QT syndrome. Chaos: An Interdisciplinary Journal of Nonlinear Science. 2017; 27(9):093940. https://doi.org/10.1063/1.5000711 PMID: 28964110
+
+PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006382 November 26, 2018
+
+24 / 24
+

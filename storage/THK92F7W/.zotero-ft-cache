@@ -1,0 +1,855 @@
+J Appl Physiol 88: 2143–2150, 2000.
+Analysis of the mechanisms of expiratory asynchrony in pressure support ventilation: a mathematical approach
+
+YOSHITSUGU YAMADA1 AND HONG-LIN DU2 1Surgical Center, The Institute of Medical Science, University of Tokyo, Tokyo 108, Japan; and 2Clinical Research Department, Newport Medical Instruments, Newport Beach, California 92658
+
+Yamada, Yoshitsugu, and Hong-Lin Du. Analysis of the
+
+mechanisms of expiratory asynchrony in pressure support
+
+ventilation: a mathematical approach. J Appl Physiol 88:
+
+2143–2150, 2000.—A mathematical model was developed to
+
+analyze the mechanisms of expiratory asynchrony during
+
+pressure support ventilation (PSV). Solving the model re-
+
+vealed several results. 1) Ratio of the ﬂow at the end of
+patient neural inspiration to peak inspiratory ﬂow (V˙ TI/V˙ peak)
+during PSV is determined by the ratio of time constant of the
+
+respiratory system (␶) to patient neural inspiratory time (TI)
+
+and the ratio of the set pressure support (Pps) level to maximal
+
+inspiratory fected more
+
+muscle pressure (Pmus max). by ␶/TI than by Pps/Pmus max.
+
+V˙2T)I/V˙V˙TpIe/aV˙k pineackreisasaefs-
+
+in a sigmoidal relationship to ␶/TI. An increase in Pps/
+
+iP.em.,uVs˙ mTI/aV˙xpesalkigbhetclyomsheisftlsotwheerV˙aTsI/VP˙ ppesa/kP-␶m/TuIscmuravxe
+
+to the right, increases at
+
+the same ␶/TI. 3) Under the selected adult respiratory mechan-
+
+ics, V˙ TI/V˙ peak ranges from 1 to 85% and has an excellent linear
+
+correlation with ␶/TI. 4) In mechanical ventilators, single
+
+ﬁxed levels of the ﬂow termination criterion will always have
+
+chances of both synchronized termination and asynchronized
+
+termination, depending on patient mechanics. An increase in
+
+␶/TI causes more delayed and less premature termination
+
+opportunities. An increase in Pps/Pmus max narrows the
+
+synchronized zone, making inspiratory termination predis-
+
+posed to be in asynchrony. Increasing the expiratory trigger
+
+sensitivity of a ventilator shifts the synchronized zone to the
+
+right, causing less delayed and more premature termination.
+
+Automation of expiratory trigger sensitivity in future mechani-
+
+cal ventilators may also be possible. In conclusion, our model
+
+provides a useful tool to analyze the mechanisms of expira-
+
+tory asynchrony in PSV.
+
+mechanical ventilation; patient-ventilator synchrony; mathematical modeling
+
+PRESSURE SUPPORT VENTILATION (PSV) has been one of the most frequently applied modes for partial ventilatory support. Because patients under PSV have control of the ventilatory rate and the inspiratory assist time, they feel more comfortable with PSV than with other partial ventilatory support modes (e.g., synchronized intermittent mandatory ventilation) (11). Nevertheless, recent clinical studies have revealed that patients under PSV may frequently encounter patientventilator asynchrony. Ventilators may not be in synchrony with the onset of the patient inspiratory effort, which causes
+The costs of publication of this article were defrayed in part by the payment of page charges. The article must therefore be hereby marked ‘‘advertisement’’ in accordance with 18 U.S.C. Section 1734 solely to indicate this fact.
+
+inspiratory asynchrony (or trigger asynchrony). Studies on inspiratory asynchrony have indicated that inspiratory asynchrony is related to a high patient work in breathing and difficulty in weaning patients from the mechanical ventilation (7, 8). In addition, patient-ventilator asynchrony may also be present during the onset of exhalation, i.e., expiratory asynchrony (9, 10, 14, 16). In this situation, the termination of the ventilator ﬂow occurs either before or after patients stop their inspiratory efforts. Expiratory asynchrony not only causes discomfort to patients but costs patients unnecessary inspiratory and expiratory work as well (12). When the termination of the ventilator ﬂow falls behind the end of the patient inspiratory effort (i.e., delayed termination), the patient recruits his expiratory muscles to ‘‘ﬁght’’ against the ventilator ﬂow, which increases expiratory workload (10). When the termination of the ventilator ﬂow occurs before the end of the patient inspiratory effort (i.e., premature termination), inspiratory muscle work continues into or even throughout the ventilator’s expiratory phase, thus resulting in inefficient inspiratory muscle work (16). Furthermore, a high lung volume caused by the previous breath with delayed termination may result in trigger failure of the subsequent inspiratory effort in patients with chronic obstructive pulmonary disease (COPD) (14). Premature termination in PSV, on the other hand, sometimes causes retriggering of inspiration and a stuttering pattern of ventilator assistance (16). Although expiratory asynchrony has been of clinical concern for years, there are very few studies exploring the mechanisms of expiratory asynchrony (20). Younes (20) used computer simulation to evaluate the effects of selected levels of respiratory mechanics and patient effort on the duration of ventilator assistance time during PSV. Because his presentation was limited to relatively few, selected levels of resistance, compliance, and patient effort, more general relationships governing expiratory asynchrony cannot be deduced.
+Flow cycling is the primary method for intensive care ventilators to terminate their inspiratory ﬂow delivery during PSV. The ventilator is cycled off when the inspiratory ﬂow has decayed to a certain level (i.e., termination criterion). Most current ventilators use an arbitrary termination criterion to terminate the inspiratory ﬂow delivery during PSV (e.g., 5% of the peak ﬂow in the Siemens Servo 300, 25% of the peak ﬂow in the Siemens Servo 900 and Bird 8400ST, 5 l/min in the Nellcor Puritan Bennett 7200ae). These arbitrary criteria have been shown to cause expiratory asynchrony in certain patient categories. Van de Graaff and co-workers (16) found that patients with prolonged and slow inspiratory efforts sometimes suffered premature termination under PSV with the Siemens Servo 900C ventilator. With this same ventilator, Jubran et al. (10) revealed delayed termination of ventilator ﬂow in patients with a long time constant and a high support pressure level. In a mechanical simulation study evaluating expiratory synchrony during PSV in different ventilators (17), we identiﬁed a delayed ventilator ﬂow termination with
+
+http://www.jap.org
+
+8750-7587/00 $5.00 Copyright ௠ 2000 the American Physiological Society
+
+2143
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+
+2144
+
+MECHANISMS OF EXPIRATORY ASYNCHRONY IN PSV
+
+weak inspiratory effort and long time constant using the Siemens Servo300. Surprisingly, ventilator ﬂow was never cycled off by the ﬂow criterion with the Nellcor Puritan Bennett 7200ae in the tested conditions.
+With the understanding that a single level of the ﬂow criterion in a speciﬁc ventilator probably would not satisfy all patient categories and the chances of premature termination and delayed termination are always likely, some ventilator manufacturers have introduced user-selectable termination criteria into their newest model ventilators in an effort to improve expiratory synchrony (e.g., Nellcor Puritan Bennett 840, Hamilton Galileo). Clinicians can select a termination ﬂow criterion (expiratory trigger sensitivity) to optimize the expiratory synchrony. This function, although it provides ﬂexibility to clinicians, breaks the simplicity of the application of PSV and has been shown to be difficult even with visual observation of the bedside airway pressure waveform (4, 6). Part of the difficulty in using this function is attributed to lack of clariﬁcation of the mechanisms of expiratory asynchrony in different patient mechanic conditions during PSV.
+To better understand the mechanisms of expiratory asynchrony caused by the ﬂow termination criteria in PSV of mechanical ventilators, we developed a mathematical model. Solving this model revealed that expiratory synchrony is governed by two ratios: the ratio of the respiratory time constant (␶) to patient neural inspiratory time (TI) and the ratio of the ventilator set pressure support level (Pps) to patient inspiratory muscle pressure (Pmus). The use of this model for automation of expiratory trigger sensitivity in the development of future mechanical ventilators is also possible.
+
+METHODS
+
+The Model
+
+During partial ventilatory support, the motion of the respiratory system can be represented by the single ﬁrstorder differential Eq. 1, with the assumption that inertial losses are negligible and that the pressure-ﬂow and pressurevolume relationships are linear in the range of tidal ventilation.
+
+Paw(t) ϩ Pmus(t) ϭ R · V˙ (t) ϩ E · ⌬V(t)
+
+(1)
+
+where at any instant (t), the volume displacement [⌬V(t)] from the end-expiratory level and the instantaneous ﬂow
+[V˙ (t)] are determined by the total driving pressure applied to
+the respiratory system, i.e., the time varying airway pressure (Paw) and patient-generated Pmus. R and E represent the resistance and elastance of the respiratory system, respectively.
+On the basis of this differential equation, the inspiratory ﬂow waveform during PSV can be solved analytically by assuming the form of the input pressure signals Paw(t) and Pmus(t).
+Paw(t) is simulated by assuming that the ventilator is triggered as soon as inspiratory effort succeeds in either generating inspiratory ﬂow or reducing Paw below the baseline pressure level (here assumed to be zero). Once the ventilator is triggered, Paw is assumed to exponentially increase to the Pps level with a ventilator time constant (␶v) and then maintain that level until the termination of inspiration (Fig. 1). Thus
+
+Paw(t) ϭ Pps(1 Ϫ eϪt/␶v)
+
+(2)
+
+Fig. 1. Model-derived time courses of airway pressure (Paw; top) and inspiratory muscle pressure (Pmus; bottom). When the ventilator is triggered, Paw is assumed to exponentially increase to the set pressure support level (Pps) with a time constant of ␶v. Pmus is approximated by a second-order polynomial function during neural inspiration time (TI). After the end of inspiration, Pmus decays exponentially during the entire expiration with a nearly linear decline (at a slope of ␣) during the ﬁrst 0.1 s. Pmus max, maximal Pmus; t, time.
+
+where t Ն 0. The time course of Pmus can be approximated by the following second-order polynomial function (13)
+
+Pmus(t) ϭ Ϫd · (t Ϫ TI)2 ϩ d · TI2
+
+where d is a constant; TI is deﬁned as the time between the onset of the increase in inspiratory Pmus and the start of its decline. It is assumed that Pmus reaches its maximum and becomes ﬂattened at the end of the neural inspiratory effort (t ϭ TI); thus the maximal Pmus (Pmus max) can be expressed as Pmus max ϭ d · TI2. Substituting this into the above equation yields the expression
+
+1 2t 2
+Pmus(t) ϭ ϪPmus max 1 Ϫ ϩ Pmus max TI
+
+(3)
+
+where 0 Յ t Յ TI. Substituting Eqs. 2 and 3 into Eq. 1 and solving the resultant differential equation for the initial
+condition of V˙ (t ϭ 0) yields
+
+V˙ (t) ϭ Pps · eϪt/␶ Ϫ eϪt/␶v ϩ 2Pmus max
+
+R 1 Ϫ (␶v /␶)
+
+R
+
+(4)
+
+1 2 31 2 4 ␶
+
+␶
+
+t
+
+· · 1 ϩ (1 Ϫ eϪt/␶) Ϫ
+
+TI
+
+TI
+
+TI
+
+where ␶ is the time constant of the patient respiratory system (␶ ϭ R/E).
+Rearranging the above equation to express V˙ (t) in terms of
+Pps/Pmus max and ␶/TI yields the equation
+
+V˙ (t)
+
+1
+
+ϭ
+
+· [eϪ(TI/␶) · (t/TI) Ϫ eϪ(TI/␶v) · (t/TI)]
+
+Pps/R 1 Ϫ (␶v /TI)(TI/␶)
+
+1 2 2
+
+␶
+
+ϩ
+
+·
+
+Pps/Pmus max TI
+
+(5)
+
+51 2 6 ␶
+
+t
+
+· 1 ϩ · [1 Ϫ eϪ(TI/␶)·(t/TI)] Ϫ
+
+TI
+
+TI
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+
+MECHANISMS OF EXPIRATORY ASYNCHRONY IN PSV
+
+2145
+
+This is a fundamental equation describing the inspiratory
+
+ﬂow proﬁle during PSV, which implies that the ﬂow proﬁle as
+
+the function of normalized time (t/TI) is determined by
+
+Pps/Pmus max, ␶/TI, and ␶v/TI. Furthermore, this equation also implies that, during PSV at a given level of ␶v/TI, the ratio of the ﬂow at the end of patient neural inspiration to peak
+inspiratory ﬂow (V˙ TI/V˙ peak) can be uniquely expressed and
+graphically plotted on the plane of Pps/Pmus max vs. ␶/TI.
+
+This provides the framework for the following analyses.
+Computation of V˙ TI/V˙ peak. To simplify the calculations,
+␶V/TI is assumed to be 0.06. This ␶V/TI value represents cases in which, for example, patient neural TI is 1.0 s and ventilator
+
+␶V is 0.06 s [␶V of 0.06 s corresponds to the ﬂow acceleration percent setting of 90% in the Nellcor Puritan Bennett 840
+
+ventilator (15)]. The inspiratory ﬂow rates at t during PSV
+
+over the entire TI were then computed with Eq. 5 by step-
+wise changing Pps/Pmus max and ␶/TI. ˙Vpeak and V˙ TI were
+determined in these calculations. In this study, Pps/Pmus-
+
+max was changed from 0.1 to 3.0 (at 0.1 intervals) and ␶/TI
+
+from 0.1 to 2.0 (at 0.1 intervals). In this way, we obtained 30 ϫ
+20 matrices for ˙Vpeak and V˙ TI, which yielded V˙ TI/V˙ peak on the
+Pps/Pmus max-␶/TI plane. To evaluate the separate effects of
+␶/TI and Pps/Pmus max on V˙ TI/V˙ peak, V˙ TI/V˙ peak values as a
+function of ␶/TI (ranging from 0.1 to 2.0 at 0.1 intervals) at ﬁve
+
+different levels of Pps/Pmus max (i.e., 1/3, 2/3, 1, 2, 3) were
+
+also plotted.
+V˙ TI/V˙ peak at the ranges of adult respiratory mechanics.
+Because expiratory asynchrony has been experienced primar-
+
+ily in adult applications of PSV (9, 10, 14, 16), we calculated
+V˙ TI/V˙ peak values at wide ranges of adult respiratory mechan-
+ics. The respiratory mechanics used were lung compliance of
+
+0.08, 0.04, and 0.02 l/cmH2O; chest wall compliance of 0.2 l/cmH2O; respiratory resistance of 5 and 20 cmH2O · lϪ1 · sϪ1;
+Pps of 10, 20, and 30 cmH2O; and Pmus max of 10 and 30
+cmH2O. The patient neural TI was assumed to be 1.0 s and ␶v/TI was the same as described above.
+Expiratory synchrony with representative termination crite-
+
+ria. Two representative termination criteria were chosen in
+
+this study: 25 and 5% of peak inspiratory ﬂow. This means
+
+that the ventilator is cycled off when the inspiratory ﬂow
+
+decays to the level that is equal to the threshold level, i.e., 25
+
+or 5% of peak inspiratory ﬂow. With the use of these termina-
+
+tion criteria, the ventilator will be in expiratory synchrony
+
+with is in
+
+tahseynpcahtireonntyifwV˙itThI/V˙thpeeakpiasteieqnutalwthoetnheV˙tThIr/Ve˙spheaokldislehvieglh. eIrt
+
+than (delayed termination) or lower than (premature termina-
+
+tion) the threshold level. When V˙ TI/V˙ peak is higher than the
+
+threshold level at the end of patient neural inspiration,
+
+however, the decline in Pmus after neural inspiration aug-
+
+ments the ﬂow decay so as to decelerate ﬂow to reach the
+
+threshold subsequently. Effect of the Pmus decline on the ﬂow
+
+decay can be approximated as ⌬Pmus/R. Physiologically, the
+
+cessation of Pmus is not instantaneous; rather, the inspira-
+
+tory muscle activity generally extends into the expiratory
+
+phase, resulting in residual inspiratory Pmus during neural
+
+expiration (13). In anesthetized humans and animals (2, 21),
+
+although the time course of the inspiratory Pmus during the
+
+entire expiration follows a curvilinear relationship, it is
+
+almost a linear decay during the ﬁrst 0.1 s of the expiration.
+
+This is also supported by our data from the patients under
+
+mechanical ventilation with PSV (18). Taking this Pmus
+
+decay pattern into consideration, we designate the rate of the
+
+Pmus decline (in percent) during the ﬁrst 0.1 s of expiration
+
+as ␣ (Fig. 1), i.e., Pmus is assumed to decay by ␣ ϫ Pmus max.
+
+Therefore, the contribution of the Pmus decline to the ﬂow
+
+decay after the end of TI would be modiﬁed to ␣ ϫ Pmus max/
+
+R. If we consider the delayed ventilator ﬂow terminations of
+
+up to 0.1 s as synchronous terminations, the conditions of synchronous terminations can be written as
+
+V˙ TI ˙Vpeak Ն 0.25 (or 0.05)
+
+and
+
+V˙ TI
+
+1 ␣ · Pmus max
+
+˙Vpeak Ϫ ˙Vpeak ·
+
+R
+
+Յ 0.25 (or 0.05)
+
+Rearranging
+
+V˙ TI
+
+0.25 (or 0.05) Յ ˙Vpeak Ն 0.25 (or 0.05)
+
+(6)
+
+Pps/R ␣ · Pmus max
+
+ϩ ˙Vpeak ·
+
+Pps
+
+The right side of Eq. 6 (upper limit) can be calculated using Eq. 5, generating a matrix distributed on the Pps/Pmus max-
+␶/TI plane. Comparing elements in V˙ TI/V˙ peak with both the
+lower limit (i.e., 0.25 or 0.05) matrix and the upper limit matrix, we obtained the zone for synchronous termination on
+the plane. The asynchronous zones were deﬁned if V˙ TI/V˙ peak
+was higher than the upper limit (delayed termination) or lower than the lower limit (premature termination).
+Although results from humans and animals with normal respiratory functions indicate that inspiratory Pmus decreases by ϳ25% in the ﬁrst 0.1 s (2, 21), the value of ␣ in this study was assumed to be 25 and 50% because a higher level of ␣ may represent the condition in which a sudden expiratory muscle activity augments the inspiratory ﬂow decay (1).
+
+RESULTS
+
+Computation of V˙ TI/V˙ peak
+
+V˙ TI/V˙ peak is determined by two ratios:
+Pmus max (Fig. 2). At the same Pps/Pmus
+
+␶/TI and Pps/
+max, V˙ TI/V˙ peak
+
+increases as ␶/TI increases. When ␶/TI remains the
+
+same, V˙ TI/V˙ peak
+increases. Figure
+nantly affected by
+
+decreases as the Pps/Pmus max
+
+3 reveals that V˙ TI/V˙ peak
+␶/TI. The inﬂuence of ␶/TI
+
+is predomi-
+on V˙ TI/V˙ peak
+
+Fig. 2. V˙ TI/V˙ peak plotted on the Pps/Pmus max-␶/TI plane. V˙ TI/V˙ peak,
+ratio of the ﬂow at the end of the patient neural inspiration to the peak inspiratory ﬂow (in percent); ␶, time constant of the respiratory system.
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+
+2146
+
+MECHANISMS OF EXPIRATORY ASYNCHRONY IN PSV
+
+the inspiratory termination predisposed to be in asynchrony (delayed or premature termination). When the patient mechanics remain unchanged, increasing the expiratory trigger sensitivity of a ventilator shifts the synchronized zone to the right, in general causing less delayed termination and more premature termination. An increase in ␣ (indicating a faster Pmus decay or expiratory muscle activity) broadens the synchronous zone and narrows the delayed termination zone.
+
+DISCUSSION
+
+Fig. 3. V˙ TI/V˙ peak as a function of ␶/TI at different levels of Pps/
+Pmus max. Levels of Pps/Pmus max are 1/3 (A), 2/3 (B), 1 (C), 2 (D),
+and 3 (E).
+
+follows a sigmoidal pattern. An increase in Pps/
+Pmus max slightly shifts the V˙ TI/V˙ peak-␶/TI curve to the
+right.
+V˙ TI/V˙ peak at the Ranges of Adult
+Respiratory Mechanics
+Under adult respiratory mechanics, V˙ TI/V˙ peak ranges
+from 1 to 85% (Table 1). It is affected more strongly by ␶/TI of the respiratory system than by Pps/Pmus max. Analysis using linear regression reveals an excellent
+correlation between the V˙ TI/V˙ peak and ␶/TI within the
+selected mechanic ranges, with a correlation coefficient of Ն0.96 (Table 2).
+Expiratory Synchrony With Representative Termination Criteria
+Expiratory synchronies with representative termination criteria are shown in Fig. 4. Single ﬁxed levels of the termination criterion, no matter how much they are, always have chances of both synchronized termination and premature as well as delayed termination, depending on the Pps, Pmus, ␶ of the respiratory system, and patient neural TI. An increase in ␶/TI causes greater opportunity of delayed termination and less chance of premature termination. An increase in Pps/Pmus max narrows the synchronized zone, making
+Table 1. V˙ TI/V˙ peak at the ranges of adult
+respiratory mechanics
+
+10 cmH2O Pmus max 30 cmH2O Pmus max ␶, s 10 Pps 20 Pps 30 Pps 10 Pps 20 Pps 30 Pps
+
+R (20), C (0.08) 1.14 79 70 65 85 82 79
+
+R (20), C (0.04) 0.66 58 48 43 70 64 58
+
+R (20), C (0.02) 0.36 30 22 19 44 36 30
+
+R (5), C (0.08) 0.29 21 15 12 34 26 21
+
+R (5), C (0.04) 0.17 8
+
+5
+
+4 16 11
+
+8
+
+R (5), C (0.02) 0.09 3
+
+2
+
+1
+
+6
+
+4
+
+3
+
+Values for ratio of the ﬂow at the end of patient inspiratory effort to
+peak inspiratory ﬂow (V˙ TI/V˙ peak) are shown in %. Pmus max, inspira-
+tory muscle pressure; Pps, set pressure support level (in cmH2O); ␶, mathematically calculated time constant of the respiratory system; R, resistance (in cmH2O · lϪ1 · sϪ1 ); C, compliance (in l/cmH2O).
+
+Analysis of the mechanisms of expiratory asynchrony
+
+could be done with a mathematical model, computer
+
+simulation, mechanical model simulation, or even ani-
+
+mal and/or human studies. Because it is difficult or
+
+unrealistic to manipulate the potentially involved pa-
+
+rameters in animals and humans, animal and human
+
+studies do not ﬁt well for this type of study. Mechanical
+
+model simulation and computer simulation have advan-
+
+tages because many parameters can be manipulated in
+
+a controlled manner and can be designed in a way that
+
+is mechanically closer to human physiology than math-
+
+ematical models. However, the use of a mathematical
+
+model approach, with some assumptions and simpliﬁca-
+
+tions, allows easier elucidation of the basic rules behind
+
+expiratory asynchrony than the use of other ap-
+
+proaches. In this study, we assumed the pressure-
+
+volume relationship to be linear in the range of tidal
+
+ventilation. We also assumed the pressure-ﬂow relation-
+
+ship to be linear so that we could solve the mathemati-
+
+cal model. This assumption, especially in intubated
+
+patients, is not true because the real pressure-ﬂow
+
+relationship is more of nonlinearity. This nonlinearity
+will attenuate the peak ﬂow and reduce V˙ TI/V˙ peak, thus,
+in general, shifting the results presented here toward
+
+delayed termination. We could incorporate trigger de-
+
+lay time (Tdelay) and trigger pressure (Ptrigger) into the model by changing TI, Pmus, and Pps to TI Ϫ Tdelay, Pmus max Ϫ Ptrigger, and Pps ϩ Ptrigger, predisposing to
+delayed terminations; however, in the model, we as-
+
+sumed that the ventilator is triggered as soon as the
+
+patient starts inspiratory efforts for the simplicity of
+
+data presentation. The airway pressure waveform in
+
+the model was characterized by an exponential curve
+
+with a variable rate constant (1/␶v), which incorporated changes in the slope of the pressurization. To simplify
+
+the data presentation, we ﬁxed ␶v /TI at 0.06, which represents cases in which the patient TI is 1.0 s and the
+
+ventilator time constant is 0.06 s (␶v of 0.06 s corresponds to the ﬂow acceleration setting of 90% in the
+
+Nellcor Puritan Bennett 840 ventilator). On the basis of
+
+Eq. 5, an increase
+
+Vi˙nTcIr/Ve˙apesaek.inIt␶mv/TeaI nwsiltlhraetduacneitnhcerepaesaekiﬂno␶wv
+
+and at a
+
+given TI will cause more delayed termination than
+
+what we presented in this study. This is consistent with
+
+the results from Bonmarchand et al. (3) who found that
+
+changing the pressurization time from 0.1 s to a
+
+maximum of 1.5 s greatly modiﬁed the ventilator TI,
+
+promoting delayed termination of inspiration. In the
+
+analyses of expiratory synchrony with the representa-
+
+tive termination criteria (i.e., 25 and 5% of the peak
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+
+MECHANISMS OF EXPIRATORY ASYNCHRONY IN PSV
+
+2147
+
+Table 2. Correlation between V˙ TI/V˙ peak (y) and ␶/TI (x) at the range of adult respiratory mechanics
+
+10 Pps
+
+10 cmH2O Pmus max 20 Pps
+
+30 Pps
+
+Equation Correlation coefficient
+
+y ϭ Ϫ1 ϩ 75x 0.98
+
+y ϭ Ϫ4 ϩ 68x 0.99
+
+y ϭ Ϫ5 ϩ 64x 0.99
+
+Pps values are shown in cmH2O. TI, patient neural inspiratory time.
+
+10 Pps
+y ϭ 9 ϩ 75x 0.96
+
+30 cmH2O Pmus max
+
+20 Pps
+
+30 Pps
+
+y ϭ 3 ϩ 76x 0.97
+
+y ϭ Ϫ1 ϩ 75x 0.98
+
+ﬂow), we arbitrarily deﬁned a termination delay of up to 0.1 s as synchronized termination. These assumptions and simpliﬁcations can be easily criticized because they are not necessarily equivalent to those in
+Fig. 4. Divisions of the synchronous zone (A), premature termination zone (B), and delayed termination zone (C) with the termination criterion of 5% peak ﬂow (top) and 25% peak ﬂow (bottom). ␣, Slope of the Pmus decline in the ﬁrst 0.1 s of expiration. Left vertical curve represents the ﬂow termination criterion line. The synchronous zone (A) is between this curve and middle curve (␣ 25% curve), assuming that ␣ is 25%. The synchronous zone (A) would be extended to between the left and right curve (␣ 50% curve) if ␣ is 50%, suggesting a faster decay of Pmus or that the active expiratory effort broadens the synchronous zone and narrows the delayed termination zone. Note that increasing the expiratory trigger sensitivity (i.e., termination ﬂow threshold) from 5 to 25% shifts the synchronized zone (A) to the right.
+
+reality; however, they are helpful and allow an in-depth
+
+mathematical analysis of the mechanisms of expiratory
+
+asynchrony in PSV.
+
+With these assumptions and simpliﬁcations being
+
+kept in mind, this mathematical model study reveals
+
+the following results during PSV. 1) The ratio of the
+ﬂow at the end of patient V˙ TI/V˙ peak during PSV is
+determined by two ratios, ␶/TI and Pps/Pmus max. 2)
+V˙ TI/V˙ peak is affected more by ␶/TI than by Pps/Pmus-
+max. Within the data ranges presented in the Fig. 3,
+V˙ TI/V˙ peak increases in a sigmoidal (s-shaped) relation-
+ship to ␶/TI. An increase in Pps/Pmusmax slightly shifts
+stheleecVt˙eTdI/Va˙ dpeuakl-t␶r/TesI pciruartvoerytometchheanriigcsh,t.V˙ T3I)/V˙Upenakdrearntghees
+from 1 to 85% and has an excellent linear correlation
+
+with ␶/TI. 4) Single ﬁxed levels of the ﬂow termination
+
+criterion used in mechanical ventilators will always
+
+have chances of both synchronized termination and
+
+asynchronized (premature and delayed) termination,
+
+depending on the patient mechanics. An increase in ␶/TI
+
+causes greater opportunity of delayed termination and
+
+less chance of premature termination. An increase in
+
+Pps/Pmus max narrows the synchronized zone, leaving
+
+the inspiratory termination predisposed to be in asyn-
+
+chrony (premature or delayed termination). Increasing
+
+the expiratory trigger sensitivity of a ventilator shifts
+
+the synchronized zone to the right, causing less delayed
+
+termination and more premature termination. An in-
+
+crease in ␣ (indicating a faster Pmus decay or expira-
+
+tory muscle activity) broadens the synchronous zone
+
+and narrows the delayed termination zone.
+
+Although all factors, including Pps, Pmus, ␶, and TI,
+
+iins ﬂthueenmcoesVt˙ T(FI/iV˙gp.e3ak,,Ttahbelew1e)i.gV˙hTtI/oV˙f ptehakeisinaﬂffueecntecde
+
+of by
+
+␶/TI ␶/TI
+
+in a sigmoidal pattern across the full data ranges, as
+
+shown in Fig. 3. V˙ TI/V˙ peak rises as ␶ becomes longer at a
+
+given TI, which implies that the expiratory trigger
+
+sensitivity should be set higher in the conditions of
+
+longer time constant. As an example of the results from
+this study, V˙ TI/V˙ peak turns out to be higher than 60% in
+the conditions of 20 cmH2O · lϪ1 · sϪ1 resistance and 0.08
+l/cmH2O compliance at a TI of 1.0 s (Table 1). This is
+consistent with the ﬁndings of the delayed inspiratory
+
+termination shown both in patients with COPD (10, 14)
+
+and in a mechanical lung model study (17) in which the
+
+ventilators with peak ﬂows of 5 or 25% as the termina-
+
+tion criterion were used [the Siemens 900C (10), Taema
+
+Cesar or Hamilton Amadeus (14), and Siemens 300
+
+(17)]. In another study on COPD patients, Jubran and
+
+co-workers (10) showed that 5 of their 12 studied
+
+patients displayed expiratory effort before the cessa-
+
+tion of inspiratory ﬂow (i.e., delayed termination).
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+
+2148
+
+MECHANISMS OF EXPIRATORY ASYNCHRONY IN PSV
+
+These ﬁve patients had an average time constant of 0.54 s compared with an average time constant of 0.38 s in the patients who displayed no expiratory effort during the inspiratory phase. The delayed termination at the long time constant can be explained because the inspiratory ﬂow decay after the peak level is slower as a result of a longer time constant. The strong relation-
+ship between V˙ TI/ ˙Vpeak and ␶ may also explain why
+expiratory synchrony can be achieved with the ventilator (Newport E200) in which expiratory trigger sensitivity is related to the elapsed inspiratory time (17).
+The direct effects of the Pps level and the magnitude
+of the patient inspiratory effort (Pmus) on V˙ TI/V˙ peak
+are not as important as those of ␶/TI (Fig. 3, Table 1); however, the higher the Pps/Pmus max, the narrower the synchronized zone becomes with a certain ﬂow criterion (Fig. 4). This means that the possibility of expiratory synchrony is reduced if a high level of pressure support is applied and/or the patient has a weak inspiratory effort (19). When the patient Pmus is predominant (compared with the ventilator support) in generating inspiratory ﬂow, the ventilator is predisposed to be in synchrony with the patient in terms of the inspiratory termination and vice versa. These results are consistent with the ﬁndings in the abovementioned study done by Jubran and co-workers (10) because the delayed termination existed at PSV of 20 cmH2O but disappeared at PSV of 10 and 5 cmH2O.
+It is surprising to ﬁnd that, even under the adult
+respiratory mechanics, V˙ TI/V˙ peak can vary in a very
+wide range, from 1 to 85%. This ﬁnding explains why expiratory asynchrony occurs frequently when mechanical ventilators with a ﬁxed level of ﬂow termination criteria are used. Contrary to a ﬁxed level of ﬂow termination criteria, user-selectable expiratory trigger sensitivity in some of the most recently released ventilators (e.g., Hamilton Galileo and Nellcor Puritan Bennett 840) provides ﬂexibility, allowing clinicians to manually select the ﬂow termination criteria to achieve good patient-ventilator synchrony. However, be-
+cause V˙ TI/V˙ peak may change when any of the four
+parameters (Pps, Pmus, ␶, and TI) change, clinicians may need to readjust the expiratory trigger sensitivity setting very frequently. This is obviously unrealistic in routine clinical practices. Because expiratory asynchrony is a clinical concern primarily in adult appli-
+cations (9, 10, 14, 16) and V˙ TI/ ˙Vpeak has an excellent
+linear correlation with ␶/TI in the range of adult mechanics (with correlation coefficient Ն0.96, Table 2), the adjustment of expiratory trigger synchrony for the purpose of patient-ventilator synchrony, in theory, could easily be done automatically by the current computer technologies in mechanical ventilator applications.
+Because of the assumptions and simpliﬁcations that we used in this mathematical model study, the results presented here may not be directly extrapolated to clinical application. It is especially true in terms of the data of expiratory synchrony with the representative termination criteria (Fig. 4), since our model did not take into account the role of the pressure criteria in the
+
+inspiratory termination. The divisions of the premature, synchronized, and delayed termination zones in Fig. 4 were based on the assumption that the ventilator has only ﬂow criteria to terminate the inspiratory ﬂow. Many mechanical ventilators, in reality, are also equipped with pressure criteria as a backup to terminate the inspiration. By pressure criteria, the ventilator ﬂow is terminated when Paw rises a certain amount (e.g., ϩ1.5, 2.0, 3.0, and 20.0 cmH2O in the Nellcor Puritan Bennett 7200ae, the Newport E200, the Siemens 900, and the Siemens 300 ventilators, respectively) above the Pps level. In fact, pressure criteria could become a primary method for terminating the ventilator ﬂow in some ventilators (17) if they are strict (i.e., the ventilator is cycled off at a small supraplateau pressure). The addition of a strict pressure criterion may fundamentally narrow the delayed termination zone and widen the synchronized zone, especially in patients with active expiratory efforts (at the cost of the patient expiratory work). It should be kept in mind, however, that a strict pressure criterion may cause other problems, such as premature termination of inspiration in the case of pressure variation at the plateau level.
+Contribution to Already Published Work
+Using computer simulation, Younes (20) evaluated the effects of patient respiratory mechanics and the level of patient inspiratory effort on the tidal volume and ventilator’s TI during PSV by choosing a few levels of resistance, compliance, and Pmus. His results indicate that, for a given level of patient resistance and compliance, expiratory asynchrony is affected by the change in the patient inspiratory effort. Although his data help to explain, in part, the mechanism of expiratory asynchrony, his approach is less likely to elucidate the general rules governing expiratory synchrony. With our simple but comprehensive mathematical formulation, however, we were able to characterize, in a ﬁrst-order approximation, the inﬂuence of ␶ (and thus resistance and compliance) in dimensionless form as the ratio ␶/TI, incorporating the effect of TI. It means that expiratory synchrony is not affected by ␶ alone but, rather, is affected by ␶/TI. Accordingly, we can conclude that changes in ␶ could result in different levels of expiratory asynchrony dependent on the patient’s adjustment of neural TI: if TI is changed proportionally to maintain a constant value of ␶/TI, there would be no change in expiratory asynchrony. In the same way, expiratory synchrony is governed by the balance in relative weight between patient effort magnitude (Pmus) and ventilator support level (Pps) in the manner of the ratio Pps/Pmus and not by the individual values of Pps or Pmus. As shown in Fig. 4, when the patient Pmus is predominant compared with the ventilator support pressure, the ventilator is predisposed to be in synchrony with the patient’s expiration. In contrast, when ventilator support pressure overwhelms the patient inspiratory effort, expiratory asynchrony may easily occur. In addition, Younes’ approach is
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+
+MECHANISMS OF EXPIRATORY ASYNCHRONY IN PSV
+
+2149
+
+Table 3. from the
+
+mCoamthpeamriastoicnaolffoV˙rTmI/uV˙lapeaakncdomV˙ pTIu/tVe˙dpeak
+
+read from the mechanical test lung model
+
+˙ ˙ VTI/Vpeak , %
+
+Pmus max, Mathematical Mechanical
+
+␶, s
+
+cmH2O
+
+model
+
+model
+
+R (20), C (0.08) 1.14
+
+32.9
+
+85
+
+71
+
+R (20), C (0.04) 0.66
+
+37.2
+
+73
+
+60
+
+R (20), C (0.02) 0.36
+
+41.1
+
+45
+
+44
+
+R (5), C (0.08) 0.29
+
+15.1
+
+28
+
+35
+
+R (5), C (0.04) 0.17
+
+20.0
+
+13
+
+21
+
+R (5), C (0.02) 0.09
+
+35.3
+
+7
+
+4
+
+Values for R are in cmH2O · lϪ1 · sϪ1 ; values for C are in l/cmH2O.
+
+limited to a set of speciﬁc conditions: he only computed machine TI for a few selected levels of resistance, compliance, and Pmus. As a result, Younes’ study only covers a range of ␶/TI values between ϳ0.3 and 0.6. As shown in Fig. 4, this range of ␶/TI cannot reveal information about expiratory asynchrony in other common pathophysiological conditions outside of this limited range.
+Potential Applications of This Study
+Although the assumptions used in this study preclude the direct extrapolation of our data to clinical applications, some basic rules that the study has revealed may be clinically helpful. In patients with a long time constant of respiratory system, such as COPD patients, clinicians may need to set a high level of expiratory trigger sensitivity to achieve expiratory synchrony. When a patient is stabilized with a good expiratory synchrony at a given expiratory trigger sensitivity level and if clinicians suction the patient’s airway (i.e., reduction in the airway resistance) or increase the Pps level, for instance, clinicians should
+reassure expiratory synchrony due to the change in V˙ TI/ V˙ peak. More importantly, our study may indicate the
+possibility of development of a computer-automated expiratory trigger sensitivity feature in future mechanical ventilators.
+
+APPENDIX
+Validation of the Mathematical Model Using a Mechanical Lung Model
+A mechanical lung model setup was used to validate the appropriateness of our mathematical model. The mechanical model (Michigan TTL, model 1600) consisted of two compartments in drive-dependent relationship (17). One side of TTL was driven by a Bear 5 ventilator using a sinusoidal ﬂow pattern. The other side of TTL was connected to a Siemens 300 ventilator through a parabolic resistor (R5 or R20). The two sides of TTL were connected completely by a metal connector, which allowed the two compartments to behave like compliances in series. The pressure at the driving compartment can therefore be taken as inspiratory Pmus when the compliance of the driving lung was set at 0.2 l/cmH2O to simulate the chest wall compliance. This mechanical model simulates the interactive relationship between a ventilator and a patient who does not exhibit active expira-
+
+tory effort. The compliance of the dependent lung was set to
+
+0.08, 0.04, or 0.02 l/cmH2O. The settings of the Siemens 300 were as follows: pressure support mode, pressure support of
+
+10 cmH2O, positive end-expiratory pressure of zero, pressure trigger sensitivity of Ϫ0.5 cmH2O, rise time of 1%. The Bear 5 was set at continuous mandatory ventilation with TI of 1.0 s
+
+and frequency of 10 breaths/min. The peak ﬂow of the Bear 5
+
+was set so that the peak ﬂow at the airway of the dependent
+
+lung achieved 1 l/s when the Siemens 300 was not connected.
+
+A hot wire ﬂow transducer (model RF-L, Minato Medical
+
+Science, Osaka, Japan) and a pressure transducer (Heise
+
+901A, Dresser Industries, Stratford, CT) were placed at the Y
+
+connector of the Siemens 300 to measure the patient Paw and
+
+ﬂow. The same pressure and ﬂow transducers were placed at
+
+the Y connector of the Bear 5 to measure Pmus max and to
+
+identify the time when the driving lung completed inspira-
+
+tion. The signals from the transducers were digitized at 100
+
+Hz and recorded on a computer recorder (model DT2831,
+
+Data Translation, Marlborough, MA). The ﬂow rate at the
+
+patient airway was measured both at its peak value (V˙ peak)
+
+and at the time when the driving lung completed inspiration
+
+(V˙ TI). Dividing V˙ TI by ˙Vpeak generated V˙ TI/V˙ peak values at
+
+different levels of Pps/Pmus max and ␶/TI in the mechanical
+
+Ecluaqnl.cgu5lfamrtooemddeftlrh.oemV˙mTtIah/Vte˙hpmeeamak tahvteiacmlaulaeatsipcpawrleomraeochdae. llBsaoonthdcaVV˙˙lcTTuII//lVV˙˙appteeeaadkk
+
+using values values
+
+measured from the mechanical model were compared (Table
+
+3). The data indicate a favorable consistency between the
+
+values from both models (r2 ϭ 0.98, P Ͻ 0.01, bias: 8% Ϯ 5%;
+
+means Ϯ SD).
+
+In this study, the Siemens 300 was chosen because it has a
+
+very high pressure cycling criteria in PSV (i.e., ϩ20 cmH2O above the target Pps level) (5). Our previous study using the
+
+same mechanical lung model (17) showed that the pressure
+
+criteria in the Siemens 300 under the above test conditions
+
+has never been activated, which allowed us to evaluate the
+
+effects of only ﬂow termination criteria.
+
+We acknowledge the skillful assistance in computer data calculations from Tomohisa Ohtake.
+Address for reprint requests and other correspondence: Y. Yamada, Surgical Center, The Institute of Medical Science, Univ. of Tokyo, Shiroganedai 4-6, Minato-ku, Tokyo 108, Japan (E-mail: ysyamada-tky@umin.u-tokyo.ac.jp).
+Received 17 September 1999; accepted in ﬁnal form 10 February 2000.
+
+REFERENCES
+1. Aslanian P and Brochard LJ. Partial ventilatory support. In: Physiological Basis of Ventilatory Support, edited by Marini JJ and Slutsky AS. New York: Marcel Dekker, 1998, p. 817–846.
+2. Behrakis PK, Higgs BD, Baydur A, Zin WA, and Milic-Emili J. Respiratory mechanics during halothane anesthesia and anesthesia-paralysis in humans. J Appl Physiol 55: 1085–1092, 1983.
+3. Bonmarchand G, Chevron V, Menard J-F, Girault C, MoritsBerthelot F, and Pasquis P, and Leroy J. Effects of pressure ramp slope values on the work of breathing during pressure support ventilation in restrictive patients. Crit Care Med 27: 715–722, 1999.
+4. Branson RD and Campbell RS. Pressure support ventilation, patient-ventilator synchrony, and ventilator algorithm. Respir Care 43: 1045–1047, 1998.
+5. Branson RD and Chatburn RL. New generation of microprocessor-based ventilators. In: Principles and Practice of Mechanical Ventilation, edited by Tobin MJ. New York: McGraw-Hill, 1994, p. 1247–1256.
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+
+2150
+
+MECHANISMS OF EXPIRATORY ASYNCHRONY IN PSV
+
+6. Bunburaphong T, Imanaka H, Nishimura M, Hess D, and Kacmarek RM. Performance characteristics of bilevel pressure ventilators: a lung model study. Chest 111: 1050–1060, 1997.
+7. Chao DC, Scheinhorn DJ, and Stearn-Hassenpﬂug M. Patient-ventilator trigger asynchrony in prolonged mechanical ventilation. Chest 112: 1592–1599, 1997.
+8. Fabry B, Guttmann J, Eberhard L, Bauer T, Haberthur C, and Wolff G. An analysis of desynchronization between the spontaneous breathing and ventilator during inspiratory pressure support. Chest 107: 1387–1394, 1995.
+9. Garcia-Raimundo M, Fraga R, Saz T, Aguilar G, Belda FJ, and Maruenda A. Incidence and types of desynchronization between spontaneous breaths and ventilator assistance with pressure support during routine weaning from mechanical ventilation in postoperative patients (Abstract). Crit Care Med 27: S335, 1999.
+10. Jubran A, Van de Graaff WB, and Tobin MJ. Variability of patient-ventilator interaction with pressure support ventilation in patients with chronic obstructive pulmonary disease. Am J Respir Crit Care Med 152: 129–136, 1995.
+11. MacIntyre NR. Respiratory function during pressure support ventilation. Chest 89: 677–683, 1986.
+12. MacIntyre NR. Weaning from mechanical ventilator support: volume assisting intermittent breaths vs. pressure assisting every breath. Respir Care 33: 121–125, 1988.
+13. Milic-Emili J and Zin WA. Relationship between neuromuscular respiratory drive and ventilatory output. In: Handbook of Physiology. The Respiratory System. Bethesda, MD: Am. Physiol. Soc., 1986, sect. 3, vol. III, pt. 2, p. 631–646.
+
+14. Nava S, Bruschi C, Fracchia C, Braschi A, and Rubini F. Patient-ventilator interaction and inspiratory effort during pressure support ventilation in patients with different pathologies. Eur Respir J 10: 177–183, 1997.
+15. Nellcor Puritan Bennett. Nellcor Puritan Bennett 840 Ventilator Operating Manual (version A). St. Louis, MO: Mallinkrodt, 1997.
+16. Van de Graaff WB, Gordey K, Dornseif SE, Dries DJ, Kleinman BS, Kumar P, and Mathru M. Pressure support: changes in ventilatory pattern and components of the work of breathing. Chest 100: 1082–1089, 1991.
+17. Yamada Y and Du H-L. Effects of different pressure support termination on patient-ventilator synchrony. Respir Care 43: 1048–1057, 1998.
+18. Yamada Y, Shigeta M, Suwa K, and Hanaoka K. Respiratory muscle pressure analysis in pressure-support ventilation. J Appl Physiol 77: 2237–2243, 1994.
+19. Younes M. Proportional assist ventilation and pressure support ventilation: similarities and differences. In: Ventilatory Failure, edited by Marini JJ and Roussos C. Berlin: Springer, 1992, p. 361–380.
+20. Younes M. Patient-ventilator interaction with pressure-assisted modalities of ventilatory support. Semin Respir Med 14: 299– 322, 1993.
+21. Zin WA, Pengelly LD, and Milic-Emili J. Single-breath method for measurement of respiratory mechanics in anesthetized animals. J Appl Physiol 52: 1266–1271, 1982.
+
+Downloaded from www.physiology.org/journal/jappl by ${individualUser.givenNames} ${individualUser.surname} (174.218.006.102) on May 22, 2018. Copyright © 2000 American Physiological Society. All rights reserved.
+

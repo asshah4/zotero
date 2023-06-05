@@ -1,0 +1,274 @@
+Digital Open Science Index, Biomedical and Biological Engineering Vol:9, No:9, 2015 waset.org/Publication/10002615
+
+World Academy of Science, Engineering and Technology International Journal of Biomedical and Biological Engineering
+Vol:9, No:9, 2015
+
+Poincaré Plot for Heart Rate Variability
+Mazhar B. Tayel, Eslam I. AlSaba
+
+ Abstract—Heart is the most important part in the body of living
+organisms. It affects and is affected by any factor in the body. Therefore, it is a good detector for all conditions in the body. Heart signal is a non-stationary signal; thus, it is utmost important to study the variability of heart signal. The Heart Rate Variability (HRV) has attracted considerable attention in psychology, medicine and has become important dependent measure in psychophysiology and behavioral medicine. The standards of measurements, physiological interpretation and clinical use for HRV that are most often used were described in many researcher papers, however, remain complex issues are fraught with pitfalls. This paper presents one of the nonlinear techniques to analyze HRV. It discusses many points like, what Poincaré plot is and how Poincaré plot works; also, Poincaré plot's merits especially in HRV. Besides, it discusses the limitation of Poincaré cause of standard deviation SD1, SD2 and how to overcome this limitation by using complex correlation measure (CCM). The CCM is most sensitive to changes in temporal structure of the Poincaré plot as compared toSD1 and SD2.
+Keywords—Heart rate variability, chaotic system, Poincaré, variance, standard deviation, complex correlation measure.
+I. INTRODUCTION
+OVER the last decade there has been a widespread interest in the study of variations in the beat-to-beat timing of the heart, known as heart rate variability (HRV). In certain circumstances, the evaluation of HRV has been shown to provide an indication of cardiovascular health [1]. However, often contradictory results have left clinical researchers skeptical about the efficacy of HRV assessment and there exists no clear consensus on how to estimate HRV in clinical practice.
+II. HEART RATE VARIABILITY
+Heart Rate Variability (HRV) is a powerful non-invasive method for analyzing the function of the autonomic nervous system. HRV was used the first clinically in 1965 when Hon and Lee [2] noted that fetal distress was accompanied by changes in beat-to-beat variation of the fetal heart, even before there was detectable change in the HR. In the 1970s used short-term HRV measurements as a marker of diabetic autonomic neuropathy [3]. Recently, alterations in HRV have been found in patients with many cardiovascular conditions. Patients with hypertension exhibit increased low frequency power (LFP) and reduced circadian patterns [4]. Congestive heart failure (CHF) is associated with reduced vagal but preserved sympathetic activity [5]. Heart rate (HR) may be good prognostic indicators for mortality, progression to
+Mazhar Basyouni Tayel and Eslam Ibrahim AlSaba are with the Electrical Engineering Department, Faculty of Engineering, Alexandria University, Alexandria, Egypt (e-mail: profbasyouni@gmail.com, eslamibrahim@ myway.com, eslamalsaba@gmail.com).
+
+surgery and the development of atrial fibrillation in patients with mitral regurgitation and patients with mitral valve prolapse show reduced high frequency power (HFP) [6]. Radio frequency ablation of supraventricular arrhythmia pathways leads to an increase in HR, reduce HRV and vagal tone measurements, beside the patients with cardiomyopathies exhibit reduced vagal tone. Therefore, HRV has been extensively investigated as a good tool to predict the risk of sudden cardiac death. Low HRV is an independent risk factor for the development of later cardiac arrest in survivors of cardiac arrest. The reduction in (HFP) and (LFP) are independent predictors of later sudden death following survival from cardiac arrest. Reduction in HFP appears superior at risk-stratifying patients [7]. To date most studies have concentrated on identifying HRV characteristics to predict the longer-term risk of developing fatal ventricular arrhythmias. Much less research has focused on the changes that occur in HRV in the period immediately prior to the development of ventricular arrhythmias [13].
+Although the understanding of the meaning of HRV is far from complete, it seems to be a marker of both dynamic and cumulative load. As a dynamic marker of load, HRV appears to be sensitive and responsive to acute stress. Under laboratory conditions, mental load including making complex decisions, and public speech tasks have been shown to lower HRV [13]. As a marker of cumulative wear and tear, HRV has also been shown to decline with the aging process. Although resting heart rate does not change significantly with advancing age, there is a decline in HRV, which has been attributed to a decrease in efferent vagal tone and reduced beta-adrenergic responsiveness. By contrast, regular physical activity (which slows down the aging process) has been shown to raise HRV, presumably by increasing vagal tone. In short, HRV appears to be a marker of two processes, relevant to the conceptualization of allostatic load: (1) frequent activation (short term dips in HRV in response to acute stress); and (b) inadequate response (long-term vagal withdrawal, resulting in the overactivity of the counter-regulatory system in this case, the sympathetic control of cardiac rhythm).
+A. The Ways of Measuring HRV
+The HRV calculations depend on electrocardiogram (ECG or EKG) wave intervals. HRV can be measured by using one of the three ways. The first way is Time Domain Analysis, which Statistics of the R-R intervals is used. The second way is Frequency Domain Analysis which power spectrum is used. The third way is Joint Time-Frequency Analysis and it can be considered the hybrid way. Each of these ways has merits and demerits. The Poincaré plot belongs to the third way.
+
+International Scholarly and Scientific Research & Innovation 9(9) 2015
+
+708
+
+Digital Open Science Index, Biomedical and Biological Engineering Vol:9, No:9, 2015 waset.org/Publication/10002615
+
+World Academy of Science, Engineering and Technology International Journal of Biomedical and Biological Engineering
+Vol:9, No:9, 2015
+
+III. POINCARÉ PLOT ANALYSIS
+A. Poincaré Plot
+The Poincaré plot analysis is a geometrical and non-linear method to assess the dynamics of heart rate variability (HRV). The Poincaré plot is a representation of a time series into a phase space, where the values of each pair of successive elements of the time series define a point in the plot. The theoretical background that supports the use of a phase space is the Takens theorem [8]. According to Takens, it is possible to reconstruct the attractor of a dynamical system by mapping a scalar measurement into a phase space using a given time delay and embedding dimension [9]. The Poincaré plot in HRV is a scatter plot of the current R-R interval plotted against the preceding R-R interval. It was constructed at a period of intervals before, for example 5 minutes. This method is described by following formula: Two adjacent RR intervals represent one point in the plot. The first RR interval (RR i) represents the x-coordinate, the second interval (RR i+1) represents y-coordinate [10]. Fig. 1 shows a Poincaré plot of a healthy patient. However, the assessment and standardization of these qualitative classifications are difficult because they are highly subjective. A quantitative analysis of the HRV attractor displayed by the Poincaré plot can be made by adjusting it to an ellipse. For the performance analysis, the SD1 (Standard Deviation1), SD2 (Standard Deviation 2) and area of ellipse are used as evaluation parameters [9]. The definitions are given in the next:
+
+√
+
+(3)
+
+√
+
+(4)
+
+are vectors defined as:
+
+, ,… ,
+
+(5)
+
+, ,… ,
+
+(6)
+
+Thus, it means, the
+
+and
+
+by angle
+
+correspond to the rotation of
+
+cos
+
+sin
+
+sin
+
+cos .
+
+(7)
+
+B. Area of Ellipse (S)
+Is the amount of area covered by the ellipse. It can be calculated by doing the product of π, SD1 and SD2 as:
+
+. 1. 2
+
+(8)
+
+The next example of calculations for Poincaré depend on the ECG signals of healthy and patient subjects taken from fantasia database as shown in Tables I and II. The SD1 and SD2 are in ms.
+
+Case 1 2 3 4 5 6
+
+TABLE I SD1 AND SD2 OF PATIENT PERSON
+
+SD1
+
+SD2
+
+S
+
+32.9287 120.0742 12415.2062
+
+21.8979 61.7105
+
+4243.17732
+
+25.2745 52.9018
+
+4198.3885
+
+21.3007 33.9414
+
+2270.14332
+
+15.7004 79.8127
+
+3934.70673
+
+23.2662 66.9031
+
+4887.66404
+
+Fig. 1 Poincaré plot of a healthy patient
+SD1: Standard Deviation 1 Is the standard deviation (SD) of the instantaneous (short term) beat-to-beat R-R interval variability (minor axis of the ellipse or SD1). SD1 can be calculated as:
+
+1
+
+1
+
+(1)
+
+SD2: Standard Deviation 2
+Is the standard deviation (SD) of the long term R-R interval variability (major axis of the ellipse or SD2). SD2 can be calculated as:
+
+TABLE II SD1 AND SD2 FOR NORMAL PERSON
+
+Case
+
+SD1
+
+SD2
+
+S
+
+1
+
+45.4924 117.4879 16782.69254
+
+2
+
+52.8311 133.4969 22145.75455
+
+3
+
+36.8274 126.5634 14635.54300
+
+4
+
+96.0846 268.1668 80907.43709
+
+5
+
+78.8477 159.1354 39399.02527
+
+6
+
+39.0706 138.8992 17040.38776
+
+From Tables I and II it is clear that, the Poincaré in normal case represent the statistical value bigger than in diseases case. The Poincaré plot in HRV is widely used to detect and monitoring many important and critical diseases especially in the congestive heart failure CHF and cancer cause of its sensitivity.
+
+2
+
+(2)
+
+where var(x) is the variance of variable x, and
+
+International Scholarly and Scientific Research & Innovation 9(9) 2015
+
+709
+
+Digital Open Science Index, Biomedical and Biological Engineering Vol:9, No:9, 2015 waset.org/Publication/10002615
+
+World Academy of Science, Engineering and Technology International Journal of Biomedical and Biological Engineering
+Vol:9, No:9, 2015
+
+Fig. 2 Poincaré plot from a 5 min record of ECG signal from before tilt in a healthy person
+
+C. Complex Correlation Measure (CCM)
+CCM evaluates point-to-point variation of the signal was plotted in a Poincaré plot. Moreover, CCM is a function of multiple lag correlation of the signal [12]. CCM computed in a windowed manner, which embeds the temporal information of the signal. A moving window of three consecutive points from the Poincaré plot is considered and the area of the triangle formed by these three points is computed. This area measures the temporal variation of the points in the window. If three points are aligned on a line then the area is zero, which represents the linear alignment of the points. Moreover, since the individual measure involves three points of the two dimensional plot, it is comprised of at least four different points of the time series for lag m = 1 and at most six points in case of lag m ≥ 3. Hence, the measure conveys information about four different lag correlation of the signal. Now, suppose the i-th window is comprised of points a(x1, y1), b(x2, y2) and c(x3, y3) then the area of the triangle (A) for ith window can be computed using the following determinant [12]:
+
+1 11
+
+2 21
+
+(9)
+
+3 31
+
+where A is defined on the real line and
+
+0,
+
+,
+
+0,
+
+0,
+
+,, ,
+
+If Poincaré plot is composed of N points then the temporal variation of the plot, termed as CCM, is composed of all overlapping three points’ windows and can be calculated as:
+
+∑‖ ‖
+
+(10)
+
+Fig. 3 Poincaré plots with similar SD1 and SD2 having different temporal dynamics. Two different RR interval time series of length N
+(N = 2000) with similar SD1 and SD2 values having different temporal dynamics (first 20 points) are shown in top and bottom
+panel
+The typical shape of a Poincaré plot is an elongated cloud of points around the line-of identity as shown in Fig. 2.
+Although the Poincaré is useful visual pattern for HRV, it has limitations. The primary limitation of the standard descriptors used for quantifying Poincaré plot is the lack of embedding temporal information. The standard deviations, SD1 and SD2, represent the distribution of signal in two dimensional space and carries only information of width and length. The Poincaré plots of similar SD1 and SD2 values can have completely different underlying temporal dynamics as shown in Fig. 3 [11]. The complex correlation measure (CCM) is used to overcome this limitation. The CCM is used to quantify the temporal variation of the Poincaré plot. In addition, CCM is more sensitive to changes in temporal structure of the signal than SD1 andSD2.
+
+where m represents lag of Poincaré plot. A(i) represents area of the i-th triangle. The length of major and minor axis of the ellipse are 2SD1, 2SD2, where SD1, SD2 are the dispersion perpendicular to the line of identity (minor axis) and along the line of identity (major axis) respectively.
+D.Sensitivity to Changes in Temporal Structure
+Literally, the sensitivity is defined as the rate of change of the value due to the change in temporal structure of the signal. The sensitivity of CCM was analyzed in order to define how it was affected by increasing amount of change in temporal structure [11]. By increasing the number of replacement points the probability of the amount of change in temporal structure of time-series signal should be increased. At each step, number of replaced points is increased by 50. The SD1, SD2 and CCM of a RR interval signal are calculated by increasing number of replacing points at a time. For a selected number of replacing points, it should be shuffled the points for 30 times and calculated all descriptors each time after shuffling. Finally, the replaced values of descriptors were taken as a mean of the calculated values. Now the sensitivity of
+
+International Scholarly and Scientific Research & Innovation 9(9) 2015
+
+710
+
+Digital Open Science Index, Biomedical and Biological Engineering Vol:9, No:9, 2015 waset.org/Publication/10002615
+
+World Academy of Science, Engineering and Technology International Journal of Biomedical and Biological Engineering
+Vol:9, No:9, 2015
+
+descriptors ∆SD1j, ∆SD2j and ∆CCMj was calculated using (11)-(13):
+
+∆1
+
+100%
+
+(11)
+
+∆2
+
+100%
+
+(12)
+
+∆
+
+100%
+
+(13)
+
+where SD10, SD20 and CCM0 were the parameters measured for the original data set without replacement and j represents
+the window number whose data was replaced. Moreover,
+SD1j, SD2j and CCMj represent the SD1, SD2 and CCM values respectively after replacement of jth step.
+
+Fig. 4 Sensitivity of descriptors with changed temporal structure
+Fig. 4 shows the sensitivity of all descriptors with change in temporal structure. ΔSD1, ΔSD2 and ΔCCM are calculated using the equations (11), (12) and (13). Value of ΔCCM is much higher than ΔSD1 and ΔSD2, which indicates that CCM is much more sensitive than SD1 and SD2 to the changes in underlying temporal structure of the data.
+IV. CONCLUSIONS
+The HRV plays an important role in psychological and medicine, because of the heart signal is non-stationary signal and the heart is an accurate indicator of human condition. Depending on the utmost importance of HRV, it needs sensitive and accurate technique to analyze it. The Poincaré plot is the powerful and sensitive tool. It depends on statistical calculations. The plot and calculations represent the healthy case by a large ellipse area and very small for critical diseases cases. The Poincaré plot needs a suitable period to analyzing HRV. The recommended period lies between 5 and 20 minutes. Although, the Poincaré is sensitive and useful tool for HRV visual pattern, it has limitation. This limitation comes from limitation of standard descriptors SD1 and SD2. For avoiding this limitation, the complex correlation measure CCM is used. As the theoretical definition of CCM it is clear that the correlation information measured inSD1 and SD2 is already present in CCM. However, this does not mean that, CCM is a derived measure from existing descriptors SD1 and SD2. CCM can be considered as an additional measure
+
+incorporating information obtained in SD1 and SD2. CCM is based on the autocorrelation at different lags of the time series hence giving an in-depth measurement of the correlation structure of the plot. Therefore, the value of CCM decreases with increased autocorrelation of the plot. In arrhythmia, the pattern of the Poincaré plots becomes more complex.
+REFERENCES
+[1] Malik M., Camm A.J. (eds.): Heart Rate Variability, Armonk, N.Y. Futura Pub. Co. Inc., 1995.
+[2] Hon EH, Lee ST. Electronic evaluations of the fetal heart rate patterns preceding fetal death, further observations. Am J Obstet Gynae 1965.
+[3] Ewing DJ, Martyn CN, Young RJ, Clarke BF. The value of cardiovascular autonomic function tests: 10 years’ experience in diabetes. Diabetes Care 1985.
+[4] Malik M, Farrell T, Cripps T, Camm AJ. Heart rate variability in relation to prognosis after myocardial infarction: selection of optimal processing techniques. Eur Heart J 1989.
+[5] Casolo G, Balli E, Taddei T, et al. Decreased spontaneous heart rate variability on congestive cardiac failure.Am J Cardiol 1989.
+[6] Marangoni S, Scalvini S, Mai R, et al. Heart rate variability assessment in patients with mitral valve prolapse syndrome. Am J Noninvas Cardiol 1993.
+[7] Dougherty CM, Burr RL. Comparison of heart rate variability in survivors and nonsurvivors of sudden cardiac arrest. Am J Cardiol 1992.
+[8] Takens F 1981 Detecting strange attractors in turbulence Springer Lecture Notes in Mathematics vol 898, pp 366–81
+[9] Claudia Lerma, Oscar Infante, Hector Perez-Grovas and Marco V.Jose. Poincaré plot indexes of heart rate variability capture dynamic adaptations after haemodialysis in chronic renal failure patients. Clinical Physiology & Functional Imaging (2003) 23, pp72–80.
+[10] J. Piskorski and P. Guzik. Filtering poincar e plots. Computation Methods in Science and Technology, June 2005.
+[11] Karmakar C, Khandoker A, Gubbi J, Palaniswami M: Complex Correlation Measure: a novel descriptor for Poincaré plot. BioMedical Engineering OnLine 2009
+[12] Rydberg A, Karlsson M, Hornsten R, Wiklund U. Can Analysis of Heart Rate Variability Predict Arrhythmia in Children with Fontan Circulation? Pediatr Cardiol 2008, 29:50-55.
+[13] Mazhar B. Tayel, Eslam I. AlSaba. "Robust and Sensitive Method of Lyapunov Exponent for Heart Rate Variability". International Journal of Biomedical Engineering and Science (IJBES), Vol. 2, No. 3, July 2015. pp 31 – 48
+
+International Scholarly and Scientific Research & Innovation 9(9) 2015
+
+711
+

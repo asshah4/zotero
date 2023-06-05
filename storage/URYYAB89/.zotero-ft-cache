@@ -1,0 +1,1878 @@
+1234567890():,; 1234567890():,;
+
+PROTOCOL
+https://doi.org/10.1038/s41596-021-00678-z
+
+In vivo and ex vivo electrophysiological study of
+the mouse heart to characterize the cardiac
+conduction system, including atrial and
+ventricular vulnerability
+Konstantin Hennis 1, René D. Rötzer 1, Julia Rilling1, Yakun Wu1, Stefan B. Thalhammer1,2, Martin Biel 1,2, Christian Wahl-Schott 3✉ and Stefanie Fenske 1,2✉
+The mouse is a common and cost-effective animal model for basic research, and the number of genetically engineered mouse models with cardiac phenotype is increasing. In vivo electrophysiological study in mice is similar to that performed in humans. It is indispensable for acquiring intracardiac electrocardiogram recordings and determining baseline cardiac cycle intervals. Furthermore, the use of programmed electrical stimulation enables determination of parameters such as sinoatrial conduction time, sinus node recovery time, atrioventricular-nodal conduction properties, Wenckebach periodicity, refractory periods and arrhythmia vulnerability. This protocol describes speciﬁc procedures for determining these parameters that were adapted from analogous human protocols for use in mice. We include details of ex vivo electrophysiological study, which provides detailed insights into intrinsic cardiac electrophysiology without external inﬂuences from humoral and neural factors. In addition, we describe a heart preparation with intact innervation by the vagus nerve that can be used as an ex vivo model for vagal control of the cardiac conduction system. Data acquisition for in vivo and ex vivo electrophysiological study takes ~1 h per mouse, depending on the number of stimulation protocols applied during the procedure. The technique yields highly reliable results and can be used for phenotyping of cardiac disease models, elucidating disease mechanisms and conﬁrming functional improvements in gene therapy approaches as well as for drug and toxicity testing.
+
+Introduction
+
+The intrinsic generation of a stable and rhythmic heartbeat is a fundamental requirement for life and is accomplished by the cardiac conduction system (CCS). The primary electrical activity that drives each heartbeat originates from pacemaker cells in the sinoatrial node (SAN) and ﬁrst activates the atria. It is then conducted via the atrioventricular node (AVN) to the His–Purkinje system, which terminates at the endocardial surface of the ventricular chambers. Finally, electrical activity spreads from endocardial to epicardial cardiomyocytes via gap junctions. In addition to this intrinsic sequence of excitation, the autonomic nervous system as well as a variety of circulating or locally released humoral factors inﬂuence the CCS from outside of the heart and modulate heart rate (HR) by adapting the frequency of impulse generation and the conduction velocity as a response to changes in physical and/or emotional activity. The study of cardiac electrophysiology aims at understanding the complex activity of the CCS as well as the vulnerability of the atrial and ventricular chambers in health and disease states. Genetically modiﬁed mice have emerged as the most common animal model for human diseases in all areas of basic research. Numerous murine models of cardiac electrophysiological disorders have been developed and have contributed to the understanding of the molecular mechanisms underlying human cardiac disease. In addition to experiments on the cellular and molecular level, the physiological consequences of genetic modiﬁcations can be examined ex vivo in isolated hearts or in vivo in the intact animal by electrophysiological study (EPS). Furthermore, the success of cardiac gene therapy approaches can be investigated by determining functional
+
+1Center for Drug Research, Department of Pharmacy, Ludwig-Maximilians-Universität München, Munich, Germany. 2German Center for Cardiovascular Research (DZHK), partner site Munich Heart Alliance, Munich, Germany. 3Hannover Medical School, Institute for Neurophysiology, Hanover, Germany.✉e-mail: Wahl-Schott.christian@mh-hannover.de; Stefanie.Fenske@LMU.de
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1189
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+improvements in impulse formation and propagation or changes in susceptibility to atrial and ventricular arrhythmias.
+Here, we describe the surgical steps involved in performing in vivo EPS (Procedure 1) and ex vivo EPS (Procedure 2) in the mouse heart. Additionally, we present a comprehensive set of programmed electrical stimulation protocols (Procedure 3) that can be combined with Procedure 1 or Procedure 2 to undertake in vivo EPS or ex vivo EPS, respectively. For in vivo EPS, an octapolar electrophysiology catheter is inserted into the jugular vein and advanced into the right atrium and ventricle (Supplementary Fig. 1). Surface electrocardiograms (ECGs) and intracardiac ECGs of the atrial and ventricular myocardium are recorded simultaneously. Concurrent intracardiac pacing of the right atrium or ventricle via the electrophysiology catheter can also be performed. The electrical stimulation protocols are based on standard clinical procedures performed in humans and provide unique opportunities to explore molecular mechanisms underlying impulse formation or conduction defects, cardiac arrhythmias or electrophysiological responses to pharmacological substances1–7. Speciﬁcally, the protocols for determining sinoatrial conduction time (SACT) and atrioventricular (AV) conduction were derived from analogous human protocols4–8, adapted, optimized and validated in the mouse. For ex vivo EPS, the electrophysiology catheter is placed via the superior vena cava (SVC) into the right atrium and right ventricle of the excised heart, followed by aortic cannulation and mounting of the heart to a Langendorff apparatus. This approach allows for determination of electrophysiological parameters under exclusion of external inﬂuences by humoral or neural factors, i.e., assessment of intrinsic cardiac electrophysiology1,2,9. In addition, we describe a heart preparation with intact innervation by the vagus nerve (VN) that can be used as an ex vivo model for vagal control of the CCS.
+
+Development of the protocol
+We initially developed this protocol to study the role of hyperpolarization-activated cyclic nucleotide-
+gated cation channel (HCN) 1 in cardiac pacemaking and impulse conduction by analyzing HCN1deﬁcient mice with cardiac symptoms reminiscent of sick sinus syndrome in humans10. To this end,
+we extensively reviewed the literature and screened for publications describing clinical electrophysiology protocols used in human cardiology. Speciﬁcally, for determining SACT and AV nodal refractory curves, we adapted human protocols4–7. In addition, we combined them with previously published studies to perform in vivo EPS in mouse hearts1–3. Recently, the method was further
+validated and extended by our group in a study investigating the role of cyclic adenosine monophosphate-dependent regulation of HCN4 in the SAN11. For comprehensive cardiac pheno-
+typing of genetically engineered mouse lines, this protocol can be combined with further methods for in vivo and ex vivo analysis of cardiac impulse formation and conduction12.
+
+Comparison with other methods Alternative methods used to obtain similar results include transesophageal EPS13. With this approach, atrial stimulation is achieved using an electrophysiology catheter inserted into the esophagus. One advantage of this technique compared with the more invasive transvenous approach is that it allows for repeated measurements over a longer time period, because mice easily survive this procedure. However, with this method, ventricular pacing is not possible. Therefore, many parameters that are important for the assessment of ventricular function and arrhythmia vulnerability cannot be determined by this method. Furthermore, transesophageal pacing produces large stimulus artifacts that obscure the atrial complex and compromise data analysis14.
+A second alternative method to the transvenous endocardial approach that also enables ventricular pacing is open chest epicardial stimulation1,2,15. However, this maximally invasive procedure requires intubation and artiﬁcial ventilation of the mouse and causes immense stress to the cardiovascular system, thereby drastically altering physiological conditions and highly limiting the validity of the results obtained. Additionally, the closest distance of the stimulation electrodes to the endocardial surface is achieved with the transvenous method, which produces the best estimation of sinus node recovery time (SNRT) and SACT. Moreover, His bundle recordings are only possible with the endocardial approach.
+
+Experimental design In general, in vivo and ex vivo EPS can be performed with mice of any genetic background and sex. However, the animals should have a minimum age of ~2 months. When comparing two or more
+
+1190
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+groups of mice, animals of the same sex and age should be used for experiments. This is important, because differences in heart size can have an inﬂuence on catheter positioning, which in turn affects the responses to intracardiac stimulation. Furthermore, differences in genetic background, sex and age can lead to differing baseline HRs, which will critically impact the electrophysiological parameters measured during EPS. As an ideal control, one should employ heterozygous breeding to be able to compare genetically modiﬁed mice with their wildtype (WT) littermates. The same applies to Crenegative control animals in the case of inducible mouse models. To test responses to the application of pharmacological agents, subcutaneous, intraperitoneal, intravenous or intracardiac injection of drugs can be carried out. The latter is achieved by administering the drug through an injection port directly connected to the lumen of the electrophysiology catheter. When testing drug-induced effects, one should include saline injections as a baseline control. If monitoring of disease progression or treatment effects is desired, measurements with different mice at varying timepoints (i.e., increasing age of the mice or increasing time after treatment) should be carried out.
+
+Expertise needed to implement the protocol Using this protocol, the experiments can easily be learned by persons with knowledge of surgical techniques and/or experience in animal experimentation. Experimenters must hold appropriate permission from local authorities to carry out animal studies. Access to an animal facility is required to keep and breed mice, but experiments can also be performed on purchased animals. Since in most cases EPS is designed as a terminal experiment, a low-germ environment for surgical techniques is sufﬁcient. However, if the approach is performed as survival surgery, aseptic conditions (e.g., animal operating room) are required.
+
+Limitations A potential limitation of the protocol, with the use of the speciﬁed catheter (outer diameter 2.0 Fr, electrode quantity 8, electrode length 0.5 mm, electrode spacing 0.5 mm, catheter tip length 8 mm), is that it precludes the use of very young mice less than 2 months of age. In these animals, correct placement of the catheter would be complicated due to small heart sizes. This will result in difﬁculties during catheterization, making damage to anatomical structures likely. Incorrect positioning of the catheter inside the heart is also expected to lead to capture problems, especially when atrial pacing is required. Furthermore, the catheter is relatively large compared with the heart size, even in older animals. A large part of the right atrial and ventricular volume will therefore be occupied by the catheter, which may substantially affect cardiac hemodynamics. This point is particularly important and may lead to unsuccessful experiments when measuring mouse lines with impaired cardiac function and reduced cardiac performance. Moreover, the catheter tip contains only eight electrodes, which makes the method not as spatially sensitive as EPS in human patients. By using a smaller-sized catheter it is possible to use mice 4–6 weeks of age, but this is challenging and requires very careful catheterization. Finally, species variability in heart size, basal HR, action potential duration and ionic currents determining repolarization time must be considered when interpreting murine electrophysiological parameters in the context of human cardiac disease1,2.
+
+Materials
+
+Reagents ● Mice: the protocol can be used on any mouse strain with mice from 2 months of age. In all
+experimental groups, male and female animals should be used for the experiments and the data collected should be analyzed separately since there are sex differences in cardiac parameters, e.g., HR ! CAUTION All experiments involving animals must conform to relevant institutional and governmental regulations. This protocol was approved by the German authorities (Regierung von Oberbayern) in accordance with German laws on animal experimentation, and it was performed according to the Guide for the Care and Use of Laboratory Animals published by the US National Institutes of Health. Effort was made to keep the number of animals to a minimum. ● Carbogen, 5 vol.% CO2 in O2 (Air Liquide, cat. no. P3750L50R5A001) ● Saline solution, 0.9% NaCl (B. Braun Melsungen, ref. 2350720) ● Local skin antiseptic agent (kodan Tinktur forte; Schuelke & Mayr, art. no. 104005) ● Eye ointment (5%, Bepanthen Augen- und Nasensalbe; Bayer Vital) ● Isoﬂurane, 100% (ISOTHESIA; Abbott Laboratories/Henry Schein Vet Pharma, art. no. 900-8932) ! CAUTION Isoﬂurane is harmful if it is inhaled or swallowed. It may cause nausea, vomiting, nose/
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1191
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+throat/respiratory irritation, headache, drowsiness and skin irritation. Wear gloves and long sleeves to avoid skin contact. Carbon ﬁlters should be used to scavenge waste anesthetic gas. ● Ketamine hydrochloride, 100 mg/ml (KetaVet Pﬁzer) ● Xylazine, 50 mg/ml (RompunTS Bayer Healthcare) ● Carprofen, 50 mg/ml (Rimadyl, Pﬁzer) ● Xylocaine (Lidocaine hydrochloride monohydrate; Sigma-Aldrich Chemie) ! CAUTION Lidocaine is harmful if swallowed and toxic if ingested. Wear suitable protective gear. ● Heparin, 5,000 IU/0.2 ml (heparin-sodium-5000-ratiopharm; Ratiopharm) ● Calcium chloride dihydrate (Merck KGaA, art. no. C3306) ● D(+)-Glucose (Carl Roth, art. no. X997.1) ● Magnesium sulfate heptahydrate (Merck KgaA, art. no. M5921) ● Potassium chloride (Merck KgaA, art. no. 60130) ● Potassium dihydrogen phosphate (Merck KGaA, art. no.1048730250) ● Sodium bicarbonate (Merck KgaA, art. no. S5761) ● Sodium chloride (Merck KgaA, art. no. S7653)
+
+Equipment Dissecting set ● Blunt dissecting scissors (Lexer-Baby scissors; FST, cat. no. 14078-10) ● Tungsten carbide scissor, straight (FST, cat. no. 14568-12) ● Vannas Spring Scissors, 2.5 mm cutting edge (FST; cat. no. 15000-08) ● Blunt forceps (Semken Forceps—Straight/13 cm; FST, cat. no. 11008-13) ● Dumont #5 forceps, 0.1 × 0.06 mm (FST, cat. no. 11251-20) ● Dumont SS Medical forceps, angled 45° (FST; cat. no. 11203-25) ● Standard pattern forceps, straight (FST, cat. no. 11000-13) ● Vessel cannulation forceps (S&T TIF02 11 cm; FST, cat. no. 00608-11) ● Needle holder, 12 cm, 4 6/8″ (KLS Martin Group, art. no. 20-632-12) ● Crile-Wood needle holder, 1.5 mm/13 mm (FST, cat. no. 12003-15) ● Guthrie retractor, straight, blunt (FST, cat. no. 17021-13)
+
+Surgical procedure and catheter insertion ● Anesthetic mask with gas scavenger (L.A.S. Lab Active Scavenger; Groppler Medizintechnik) ● Isoﬂurane vaporizer (Völker Medizintechnik) ● Homeothermic Blanket System with Flexible Probe (Harvard Apparatus; cat. no. 507221F) ● CIB’ER Mouse electrophysiology catheter (NuMED, ref. CM001) ● Connector cable (NuMED, ref. CC8200) ● Depilatory cream (Balea Enthaarungscreme 125 ml; dm-drogerie markt) ● Suture, silk, sterile suture, black, non-needled; 7/0 USP 0.5 metric 100 m; braided, non-absorbable
+(Resorba Medical, ref. H0F) ● Cotton swabs (Puritan sterile cotton tipped applicators, 6″ (15 cm); Puritan Medical Products,
+ref. 25–806 1WC) ● Leukosilk tape, 1.25 cm × 5 m (BSN Medical, ref. 01021-00) ● Sterile absorbent swabs (Sugi Sponge Points; Kettenbach, ref. 31603) ● Gazin gauze ball, size 3 (Lohmann & Rauscher International, ref. 15176)
+
+Surface ECG ● Subdermal needle electrodes, 13 × 0.40 mm, 0.5 × 27 G, 1.0 m (40″) (Xi’an Friendship Medical
+Electronics, ref. NE-S-1000/13/0.4)
+
+Langendorff apparatus with VN stimulation ● Animal Bio Amp (ADInstruments, art. no. FE231) ● Basic Langendorff System (Hugo Sachs Elektronik & Harvard Apparatus, 73-4343) ● PowerLab 8/35 data acquisition device (ADInstruments, art. no. PL3508) ● Cable with 4 mm banana plug and female ending (custom-made) ● Grounding set including gold pin contacts (Luigs & Neumann Feinmechanik und Elektrotechnik, art.
+no. 200-100 500 0261) ● Borosilicate glass capillaries, GB150ETF-8P (Science Products, art. no. Z-135818)
+
+1192
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+● Heat-shrinkable tubing 3:1 (E-M-C-Direct, art. no. 13053-C) ● Silver wire, 0.25 mm diameter (Merck KGaA, art. no. 327034-5M) ● Solder (Sn99.3Cu0.7), 1.5 mm diameter (Conrad Electronic SE, art. no. 588808 - NA) ● Stimulus isolator (ADInstruments, art. no. FE180)
+
+Data acquisition and analysis ● EP TRACER Portable (EP-TRACER 38; Cardiotek) ● EP-Tracer_V1.05 software (Cardiotek) ● Labchart v8.1.16 (ADInstruments) ● Excel 2013 (Microsoft) ● Origin 2018 (OriginLab)
+
+Other ● Stereo microscope Stemi 2000 (Carl Zeiss AG) ● Sterican hypodermic needle (27 G × 3/4″; B. Braun Melsungen AG, art. no. 4657705) ● Neoject hypodermic needle (24 G × 1″; DISPOMED WITT oHG, art. no. 10017) ● Syringes (Injekt-F Luer Solo, 1 ml, single use; B. Braun Melsungen, art. no. 9166017V) ● Eppendorf Research plus pipette, 1,000 µl (Eppendorf AG, cat. no. 3120000062) ● Pipette tips, 1,000 µl (Sarstedt, cat. no. 70.762) ● Reaction tube, 1.5 ml (Eppendorf safe-lock tubes; Eppendorf, cat. no. 0030120086) ● CRYO.S, 5 ml, PP, round bottom, internal thread, natural, sterile (Greiner Bio-One, ref. 124261) ● Bottle-top vacuum ﬁltration systems 0.2 µm, PES (Avantor; VWR, art. no. 514-0334P) ● Lab clamp (Fisher Scientiﬁc, art. no. 11343982) ● Lab stand with rectangular base plate (Hugo Sachs Elektronik & Harvard Apparatus, art. no. 73-0499) ● Syringe (Original Perfusor Syringe 50 ml; B. Braun Melsungen AG, art. no. 8728844F-06) ● 50 ml Falcon tube (Greiner Bio-One International, art. no. 227261) ● 100 mm Petri dish (Greiner Bio-One International, art. no. 664102)
+
+Reagent setup
+Xylocaine Dissolve or dilute xylocaine in sterile saline (0.9% sodium chloride) to obtain a ﬁnal concentration of 0.5 mg/ml (1.7 mM). This is used for local anesthesia of the surgical area when using isoﬂurane anesthesia. CRITICAL The xylocaine dilution must be prepared on the day of the surgical procedure.
+
+c c
+c
+
+Ketamine/xylazine Combine ketamine and xylazine in sterile saline (0.9% sodium chloride) so that the ﬁnal concentration of ketamine is 10 mg/ml and that of xylazine is 5 mg/ml. To induce anesthesia, administer 10 µl of this mixture per 1 g of body weight intraperitoneally. CRITICAL The anesthetics must be prepared on the day of the surgical procedure.
+
+Heparin Dilute the heparin (5,000 IU/0.2 ml) in sterile saline (0.9% sodium chloride) to obtain a solution with a ﬁnal concentration of 250 IU/ml heparin. Inject a volume equivalent to 1,000 IU/kg per mouse intraperitoneally, e.g., a mouse weighing 30 g is injected with 120 µl of the diluted solution. For adequate anticoagulation, wait at least 10 min after intraperitoneal injection of the drug before euthanizing the animal. CRITICAL The heparin dilution must be prepared on the day of the experiment.
+
+10× and 1× Krebs–Henseleit buffer
+Prepare two different 10× stock solutions (stock I and stock II). Stock I solution contains 1.1185 M
+NaCl, 47 mM KCl, 18 mM CaCl2, 12 mM MgSO4 and 12 mM KH2PO4 dissolved in 1 L doubledistilled H2O (ddH2O). Add CaCl2 after adding the full volume of water to avoid precipitation. Stock II solution contains 200 mM NaHCO3 dissolved in 1 L ddH2O. Stock solutions can be stored at 4 °C and used for 4 weeks. For the experiment, prepare fresh 1 L 1× Krebs–Henseleit (KH) buffer by mixing 100 ml of each stock solution with 800 ml ddH2O, and add glucose (11 mM). Sterile ﬁltrate the buffer before usage.
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1193
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Equipment setup
+Puncture cannula (custom-made) Bend the tip of a 24 G needle by a little less than 90° with blunt forceps or a Crile-Wood needle holder. Be careful not to touch the point of the needle as sharpness can easily be reduced, resulting in more difﬁcult vessel cannulation.
+
+Signal ground (custom-made) Attach the subcutaneous grounding electrode and the surface ECG electrodes that are not in use to a copper nail. The electrodes are grounded via the EP tracer device, which helps to minimize electrical noise.
+
+VN stimulation electrode (custom-made) Use two silver wire pieces ~15 cm long for the electrode. Put each piece of the wire through a glass capillary, and isolate the parts with heat-shrinkable tubing. Make sure that the openings of the capillaries are sealed. Use more tubing to attach the two parts to each other and solder the wires to the gold pin contacts. Chlorinate the tip of the electrode before usage.
+
+Procedure 1: in vivo EPS
+Setup of the acquisition system ● Timing 1–2 h 1 Set up a stereo microscope, EP tracer device and notebook computer on a large table or laboratory
+workbench (Fig. 1). 2 Place a heating mat under the stereo microscope, and connect the mat and temperature probe to
+the homeothermic blanket system device. 3 Connect the three subcutaneous ECG needle electrodes (Einthoven lead I, II, III) to the SURFACE
+ECG input of the EP tracer device. Attach the subcutaneous grounding electrode and all unused electrodes to the signal ground via a copper nail (Fig. 1b). 4 Couple the electrophysiology catheter to a connector cable, and insert the connector cable plugs into the catheter connection block (Fig. 1c). Link the connection block to the INTRACARDIAC 1..10 input of the EP tracer device. 5 Connect the EP tracer device to the notebook computer via USB cable.
+
+c c
+
+Anesthesia, body temperature control, surface ECG and prearrangements for the surgical procedure ● Timing 20–25 min 6 Turn on the heating mat under the stereo microscope, and set the temperature to 37 °C. 7 The surgical procedure can be performed under ketamine/xylazine (KX) anesthesia (option A) or
+isoﬂurane anesthesia (option B). CRITICAL The anesthetic regimen used has a high impact on the results. We recommend
+anesthesia with isoﬂurane because it affects cardiac function (e.g., HR, conduction velocity, contractility) to a lesser extent than KX anesthesia. In addition, the depth and length of anesthesia can be better controlled using isoﬂurane. However, the amount of equipment required is less with KX anesthesia, and catheter placement is easier due to the muscle-relaxing effect of xylazine. (A) KX anesthesia ● Timing 5–10 min
+(i) Induce anesthesia by intraperitoneal injection of 10 µl KX mixture per 1 g of body weight. Verify sufﬁcient depth of anesthesia using the following criteria: ● Lift the hind paw brieﬂy, and then release it. The muscle tone must be sufﬁciently reduced, and the hind paw must be limp and fall back accordingly ● The eyelid reﬂex must be extinguished. Check the corneal reﬂex, e.g., with the tip of a sterile swab. To avoid damage to the cornea by the suction effect of the swab, apply some eye ointment before the test. The corneal reﬂex must only be triggered by stronger stimuli ● Gently pinch the interdigital skin of the hind paw to check there is no toe pinch reﬂex ● Respiration should be approximately that of an awake, resting animal
+(ii) Once all reﬂexes are extinguished and breathing is normal, surgery can begin. CRITICAL The stage of surgical anesthesia lasts ~35–45 min. If necessary, maintain the
+anesthetic state by a second intraperitoneal injection of ketamine alone (10 mg/ml, 10 µl per 1 g body weight).
+
+1194
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+a
+
+PROTOCOL
+b
+
+c
+
+d
+
+e
+
+f
+
+1.0 mm
+
+1.0 mm
+
+Fig. 1 | Setup of the EPS system. a, Overview of the experimental setup composed of homeothermic blanket system and anesthetic mask with gas scavenger positioned under a stereo microscope (left), isoﬂurane vaporizer (middle), portable EP tracer with connected electrophysiology catheter and notebook computer (right). b, Subdermal needle electrodes (orange cables) are connected to the surface ECG wires (red, green and yellow). The needle electrode connected to the black cable serves as signal ground (green–yellow-striped cable). All unused ECG wires are attached to the signal ground via a copper nail. c, Connector cable pins plugged into the catheter connection box. d, Mouse under isoﬂurane anesthesia with rectal temperature probe and subdermal needle electrodes inserted under the skin of all four extremities. e, Close-up picture of the octapolar electrophysiology catheter tip. f, Custom-made 24 G vessel puncture cannula.
+
+(B) Isoﬂurane anesthesia ● Timing 2–3 min (i) Set up an isoﬂurane vaporizer in addition to the other parts of the acquisition system. (ii) Put an anesthetic mask in front of the microscope, and secure its position with tape. Make sure that the mask is connected to the isoﬂurane vaporizer and to the gas scavenger.
+(iii) Induce isoﬂurane anesthesia by placing the mouse in an induction chamber, and slowly raise the amount of isoﬂurane mixed with carbogen from 1% to 4% (vol/vol) at a ﬂow rate of 1.5 L/min.
+(iv) Place the mouse in a supine position on the warm heating mat, and rapidly place the isoﬂurane inhalation mask over the nose (Fig. 1d). Maintain anesthesia with an isoﬂurane concentration between 1.5% and 2.0% (vol/vol) at a ﬂow rate of 0.6–1.0 L/min. Turn on the scavenger. CRITICAL It is sufﬁcient to place the nostrils into the inhalation mask since mice are obligate nostril breathers. Therefore, be careful not to obstruct the nostrils.
+(v) Verify sufﬁcient depth of anesthesia as described in Step 7A(i). 8 Cover the eyes completely with eye ointment to avoid drying-out of the eyes.
+
+c
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1195
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+c
+
+9 Tape down the front paws with surgical tape. 10 To expose the surgical area, remove fur from the skin with depilatory cream. The neck and
+chest area, ranging from chin to costal arch, should be accessible and free of any residual hair (Fig. 1d). 11 Apply a small amount of ointment on a rectal temperature probe, and insert it ~0.5 cm deep into the rectum to monitor body temperature (Fig. 1d).
+CRITICAL STEP The body temperature in mice drops extremely fast during anesthesia and must be tightly controlled (35.5–37 °C). Use, e.g., gauze bandages as small blankets to cover the animals. Without proper heating, the HR drops considerably. 12 Insert needle electrodes subcutaneously into both front limbs and the left hind limb to record surface ECG according to Einthoven (lead I, II, III) (Fig. 1d). 13 Additionally, place a needle electrode into the right hind limb. This serves as signal grounding (Fig. 1d). 14 If using isoﬂurane anesthesia, administer xylocaine subcutaneously across the surgical area by several injections (ﬁve to six injections with ~10 µl each) to ensure sufﬁcient local anesthesia.
+
+Baseline surface ECG recording ● Timing 1–2 min 15 Open the CardioTek EP Tracer software (Supplementary Fig. 2). Choose ‘Setup’ > ‘Channels’ >
+‘Surface ECG’ (Supplementary Fig. 2a), and adjust the settings so that leads I, II and III are displayed in channel 1, 2 and 3, respectively (Supplementary Fig. 2b,d). 16 Click ‘Storage’ > ‘Continuous/Stop’ to begin and stop the 1–2 min baseline surface ECG recording.
+
+Placement of the EPS catheter in the right atrium and ventricle through the right jugular vein ● Timing 10–20 min 17 Use blunt forceps and sharp scissors to make a 0.5 cm straight skin incision ~2–3 mm to the
+right of the median plane. Cut the skin from below the chin toward the transversal pectoral muscles (Fig. 2a and Supplementary Video 1). 18 Form a subcutaneous pocket by lifting the skin with blunt forceps and carefully separating it from underlying tissue with the blunt face of scissors by advancing the closed scissors through subcutaneous tissue and then opening and carefully pulling back the branches of the scissors. Expand the incision by ~1–1.5 cm (Fig. 2b–e and Supplementary Video 1). 19 Bluntly dissect surrounding muscle and fat tissue with angled forceps by advancing the closed forceps through the tissue and then opening the branches of the forceps to expose the right external jugular vein. Isolate the vessel between the bifurcations of the anterior jugular vein and the lateral thoracic vein (Fig. 2f,g and Supplementary Video 1). 20 Slightly lift the right external jugular vein between the two bifurcations with angled forceps. Form a loop in 5-0 suture, and draw it underneath. Be careful not to injure the vascular wall owing to friction. Cut the suture loop to obtain two separate parts of suture placed beneath the blood vessel (Fig. 2h,i and Supplementary Video 1). 21 Place the ﬁrst suture to the most proximal part on the right external jugular vein (as close to the head as possible), and tie it off with a surgical knot. Apply tension with a clamp, and retract it toward the head. Place a loose knot to the second suture (Fig. 2j,k and Supplementary Video 1). 22 Gently pull the second suture with a needle holder (without securing it), and retract it distally toward the tail to stretch the vessel and temporarily obstruct blood ﬂow. Use the angled cannula (Fig. 1f) to puncture the right external jugular vein. Puncturing close to the head will result in a longer isolated section of the vein, improving chances of successful catheter introduction (Fig. 2l and Supplementary Video 1). 23 Carefully lift the vascular wall and use vessel cannulation forceps to insert the catheter into the opening underneath the cannula tip. Slide the catheter forward until the tip reaches the second suture. The puncture cannula can now be removed (Fig. 2m,n and Supplementary Video 1). 24 Loosen tension to the second suture so that the catheter can pass by, but keep tension to the cranial part. Slide the catheter slowly toward the heart while monitoring its position based on the electrical signals on the computer screen. 25 Once the catheter is located in the desired position (as judged by intracardiac ECG signals), secure the second suture (Fig. 2o and Supplementary Video 1). 26 Verify the correct catheter placement by comparing intracardiac and surface ECG traces (Fig. 3). Review whether A and V signals in the intracardiac leads occur synchronously to P waves and QRS
+
+1196
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+a
+
+Caudal
+
+b
+
+c
+
+PROTOCOL
+
+d
+
+e
+
+Cranial
+
+f
+
+g
+
+h
+
+i
+
+j
+
+k
+
+l
+
+m
+
+n
+
+o
+
+Fig. 2 | Catheter placement. a,b, Make a skin incision from below the chin toward the transverse pectoral muscles. c–e, Form a subcutaneous pocket, and expand the incision. f,g, Expose the right external jugular vein, and isolate the vessel between the bifurcations of anterior jugular vein and lateral thoracic vein (note the black arrows in f). h–k, Draw suture underneath the right external jugular vein, tie off the cranial end and form a loose knot on the caudal end. l, Stretch the vessel and puncture the most cranial part with an angled cannula. m, Lift the vascular wall, and insert the catheter underneath the cannula tip. n, Remove the cannula, and slide the catheter toward the heart. o, Secure the second suture when the catheter is located in the desired position. Scale bars: 2.0 mm in a–e, 1.0 mm in f–o.
+complexes in the surface ECG leads, respectively. In addition, verify the correct location of the catheter electrodes inside the right atrium and ventricle by reviewing the proportions of A and V signals in the intracardiac leads. Note that in the atrial leads (distal high right atrium, HRAd; proximal high right atrium, HRAp) the size of the A signals is supposed to be greater than that of the V signals because the catheter electrodes are located in the right atrium. Reverse considerations apply to ventricular leads. This indicates correct placement of the catheter in the desired position. Note that, for all intracardiac leads, the designations distal and proximal refer to the position of the electrodes in relation to the catheter tip.
+
+Baseline intracardiac ECG recording ● Timing 1–2 min 27 Click ‘Setup’ > ‘Channels’ > ‘INT1’ in the CardioTek EP Tracer software (Supplementary Fig. 2a,c),
+and adjust the settings so that the intracardiac atrial leads (HRAd, HRAp) and ventricular
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1197
+
+PROTOCOL
+
+I II III HRAd
+
+R
+
+P
+
+J
+
+Q
+
+T
+
+S R
+
+P
+
+J
+
+Q
+
+T
+
+S
+
+R
+
+J P
+
+Q
+
+T
+
+S
+
+A
+
+V
+
+NATURE PROTOCOLS
+
+HRAp RVd RVp
+
+A V
+A V
+H V
+A
+
+A
+
+V
+
+H
+
+50 ms
+Fig. 3 | Baseline surface and intracardiac ECG. (Upper) Surface ECG lead I, II and III. The P wave represents atrial activation and is followed by the QRS complex representing ventricular activation. Note that, in mouse, the ST segment is not isoelectric as in human ECG. A frequently used criterion for the end of the QRS complex in mice is the time at which the S wave intersects the isoelectric line. This is also the timepoint that marks the onset of the J wave that is characteristic for the mouse ECG and denotes early ventricular repolarization. The T wave represents heterogeneity in ventricular repolarization and is relatively small in the mouse ECG. The end of the T wave indicates the end of ventricular repolarization. (Lower) The four intracardiac electrograms are depicted. Note that the designations distal and proximal refer to the position of the electrodes in relation to the catheter tip. Atrial (A) and ventricular (V) signals in the intracardiac leads occur synchronously to P waves and QRS complexes in the surface ECG leads, respectively. The amplitude of the atrial signal decreases successively from HRAd to RVp, whereas the amplitude of the ventricular signal increases. This indicates correct placement of the catheter in the heart chambers. (Inset) Sometimes, with favorable catheter positioning, a small His deﬂection (H) can be recorded in RVd, reﬂecting the electrical activity of the His bundle. These recordings were obtained from a 2-month-old male mouse.
+
+leads (distal right ventricle, RVd; proximal right ventricle, RVp) are displayed (Supplementary Fig. 2d). 28 Take a 1–2 min baseline recording including the surface and intracardiac ECG leads immediately after catheter placement and before applying the ﬁrst stimulation protocol (Fig. 3). Baseline surface ECG (RR, PP, PQ, QRS, QT) and intracardiac ECG parameters (VV, AA, AV, AH, HV) are subsequently determined from this measurement.
+
+c
+
+Determination of correct stimulus amplitude and duration for atrial pacing protocols ● Timing 1–2 min
+CRITICAL The EP catheter delivers stimulation by isolated constant current with a constant stimulus duration. Before starting the pacing protocols, ﬁrst determine an appropriate pacing stimulus amplitude and duration to excite the cardiac tissue. It is known that, for shorter pulse durations, larger stimulus
+
+1198
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+amplitudes are required to trigger a propagated action potential. This is known as the strength–duration relationship16. 29 Select HRAd (output 1) as the stimulation electrode pair, since it is closest to the sinus node, for
+determination of correct stimulus amplitude and duration for atrial pacing. 30 Start with a stimulus duration of 0.5 ms and a stimulus amplitude of 0.5 mA, and check whether the
+stimulus directly elicits an atrial response (atrial signal ~3–6 ms after the stimulus artifact) that is followed by anterograde excitation of the ventricles (Supplementary Fig. 3). 31 If the stimulus fails to elicit a response, gradually increase the amplitude in 0.5 mA steps up to a value of 1.5 mA. 32 If still no atrial signal is elicited then additionally increase the stimulus duration stepwise to 1.5 ms. After determining the stimulation threshold, the stimulation amplitude should be increased by 1.5- to 2-fold to ensure capture throughout all atrial stimulation protocols. Usually, a maximal stimulus of 1.5 mA amplitude and 1.5 ms duration should reliably elicit an atrial signal. 33 Use the stimulus duration and amplitude thus determined to reliably elicit an atrial response for all stimulation protocols with atrial pacing.
+
+Determination of correct stimulus amplitude and duration for ventricular pacing protocols ● Timing 1–2 min 34 Select RVp (output 6) as the stimulation electrode pair for determination of correct stimulus
+amplitude and duration for ventricular pacing. 35 Start with a stimulus duration of 0.5 ms and a stimulus amplitude of 0.5 mA, and check whether the
+stimulus directly elicits a ventricular response (ventricular signal ~7–9 ms after the stimulus artifact) that is followed by retrograde excitation of the atria. 36 If the stimulus fails to elicit a response, gradually increase the amplitude in 0.5 mA steps up to a value of 1.5 mA. 37 If there is still no ventricular signal elicited then additionally increase the stimulus duration stepwise to 1.5 ms. After determining the stimulation threshold, the stimulation amplitude should be increased by 1.5- to 2-fold to ensure capture throughout all ventricular stimulation protocols. Usually, a maximal stimulus of 1.5 mA amplitude and 1.5 ms duration should reliably elicit a ventricular response. 38 Use the stimulus duration and amplitude thus determined to reliably elicit a ventricular response for all stimulation protocols with ventricular pacing.
+
+Procedure 2: ex vivo EPS
+Setup of the acquisition system ● Timing 1–2 h 1 Set up the EP tracer device and two notebook computers on a large table or laboratory workbench
+next to the Langendorff apparatus (Fig. 4). One computer is used to monitor the surface ECG with LabChart software, the second one for the CardioTek EP Tracer software to control intracardiac ECG and pacing. 2 Connect the stimulus isolator with the output 2 of the PowerLab 8/35 data acquisition device. Use two cables with a 4 mm shrouded banana plug and one female ending to connect the contact pins of the custom-made stimulation electrode with the stimulus isolator. Use a lab clamp to ﬁx the stimulation electrode at a position suitable to reach the VN during the experiment. 3 Plug the connections of the EP Tracer device and the electrophysiology catheter as explained in Steps 4 and 5 of Procedure 1. Surface ECG is acquired with the Langendorff apparatus and therefore is not connected to the EP Tracer.
+
+Prearrangements for the dissection procedure and heparinization ● Timing 35–45 min 4 Set up a stereo microscope close to the acquisition setup. 5 Warm the perfusion buffer to 37 °C in the jacketed glass reservoir by setting the water bath to 38 °C
+and switching on water circulation. 6 Adjust the pH of 1 L of 1× KH buffer in the jacketed glass reservoir by gasifying it with carbogen
+(95% O2 and 5% CO2) for at least 20 min before the experiment. 7 Prepare the perfusion apparatus. Prime the perfusion system with the preheated and pH-adjusted
+perfusion buffer, and run the perfusion buffer through the system for at least 5 min. Fill all tubing, bubble trap, etc. with the buffer, and ﬁnally set the ﬂow to 1.5 ml/min.
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1199
+
+PROTOCOL
+a
+Stimulus isolator TAM-D and
+SCP
+SE
+Recording chamber
+b
+
+BioAmp PowerLab Heating system
+
+NATURE PROTOCOLS
+Intracardiac ECG system
+
+c
+
+d
+
+e
+
+f
+
+Fig. 4 | Setup for combined measurement of surface and intracardiac ECG on isolated hearts. a, Overview of the entire setup for measurement of surface ECG, intracardiac ECG and optional VNS. SE, stimulating electrode. b, Stimulus isolator (upper left corner) with plugs for connecting the stimulation electrode. The bio-ampliﬁer (BioAmp; upper right corner) receives input from the recording (red and black) and reference electrodes (green). The PowerLab 8/35 (lower device) receives input from the transducer ampliﬁer module (TAM-D, input 1), the perfusion servo controller (SCP, input 2) and the bioampliﬁer (BioAmp, input 3). Output 2 is connected to the stimulus isolator. c, Heating system consisting of a jacketed buffer reservoir (left) and a water bath (right). d, TAM-D and SCP device controlling pump speed and perfusion pressure. The outputs are connected to the Power Lab 8/35. e, Intracardiac ECG recording system. f, Mounting area for the isolated heart with recording electrodes and stimulation electrode.
+
+1200
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+c
+
+CRITICAL STEP Check the ﬂow rate and the temperature of the perfusion buffer on a regular basis. Replace the peristaltic pump tubing every month to maintain constant ﬂow. If no bubble trap is used, ensure that no air bubbles are in the perfusion system as these can cause air embolism. 8 Add 40–50 ml of room temperature (20–25 °C) perfusion buffer to a 100 mm Petri dish for heart cannulation, and place it below the stereo microscope. 9 Prepare a perfusion-buffer-ﬁlled syringe with the aortic metal cannula attached, and position it under the stereo microscope with a lab stand and clamp. Make sure the opening of the cannula is in the middle or upper part of the ﬁeld of vision. 10 Cut two small pieces (~10 cm long) of 7/0 surgical silk, and knot them loosely around the upper part of the cannula. These need to be pulled over the aorta later during the workﬂow of the experiment. 11 Weigh the mouse, and induce heparinization by intraperitoneal injection of a volume of diluted heparin corresponding to a dose of 1,000 IU/kg heparin (~100–150 µl, needs to be calculated).
+CRITICAL STEP Adequate anticoagulation is necessary as the time for nerve and cardiac preparation and mounting of the heart takes ~10–15 min. Blood clots in the coronary arteries lead to ischemia, and clots in the atria and ventricles interfere with the heart’s normal contractions.
+
+c
+
+c
+
+Dissection of the VN connected to the isolated heart ● Timing 10–15 min 12 Anesthetize the mouse deeply using 5% isoﬂurane inhalation and euthanize it by cervical
+dislocation. 13 Place the mouse in supine position on the preparation dish. Tape down the front and hind paws
+using surgical tape (Fig. 5a). 14 Use blunt forceps and sharp tungsten-carbide Iris scissors to place a transverse skin incision ~1–2
+cm caudally to the sternum. Extend the incision to the submandibular edge by cutting, and remove the skin (Fig. 5b,c). 15 Separate the salivary glands with angled Dumont forceps, and resect the glands (Fig. 5d). 16 Lift the sternum with blunt forceps, and open the peritoneum by a 4–5 cm transverse incision 2 mm caudally of the sternum, along the lower costal arches (Fig. 5e,f). 17 To obtain free access to the diaphragm, lift the free end of the sternum with blunt forceps, carefully separate the liver from the diaphragm and displace abdominal organs caudally. Incise the diaphragm along the lower costal arches with scissors to expose the pleural cavity (Fig. 5g,h). 18 Separate the rib cage at the sternum using tungsten-carbide Iris scissors. On both sides, cut the lateral wall of the separated ribs from the costal arches up to the clavicles using tungsten-carbide Iris scissors and remove it. Make sure to carefully displace the lungs (Fig. 5i–k).
+CRITICAL STEP Cutting the costal arches should be performed with caution to avoid damage to the heart and the surrounding blood vessels. 19 Remove all lobes of the right and left lung (Fig. 5l). 20 Expose the trachea by separating the muscles overlying it, and cut the distal trachea close to the heart (Fig. 5m–o). 21 Identify the right cervical vagus nerve (RCVN), and carefully isolate it from the right common carotid artery running next to it using angled Dumont forceps (Fig. 5p–r).
+CRITICAL STEP Remove any tissue overlying the RCVN without damaging the nerve to obtain an isolated portion. 22 Pass a 10-cm-long 7/0 silk suture 1–2 cm underneath the isolated nerve, form a knot, tie it and cut the short end. The remaining long end is used to identify and position the nerve when the heart is mounted on the apparatus (Fig. 5s,t).
+CRITICAL STEP Do not pull the RCVN at any point of the experimental workﬂow. 23 Cut the nerve cranial to the knot, and remove the carotid arteries by cutting close to the heart (Fig. 5u,v). 24 Very carefully cut all remaining vessels, other nerves and tissue connecting the heart to the body.
+Carefully isolate the heart by grasping the thymus with forceps and transferring it together with the heart into a 100 mm Petri dish positioned under the stereo microscope (Figs. 5w,x and 6a).
+CRITICAL STEP Perform Steps 13–24 of Procedure 2 as quickly as possible. Do not lift the heart at the apex, because this will damage small vessels.
+
+c
+
+c
+
+c
+
+Cannulation of the aorta, insertion of the catheter and mounting ● Timing 5–10 min 25 Immerse the needle in the dish ﬁlled with buffer so that the tip of the needle is positioned ~1 mm
+below the liquid surface. Remove any air bubbles contained in the buffer from the syringe by squeezing a small amount of buffer out of the cannula.
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1201
+
+PROTOCOL
+
+a
+
+b
+
+e
+
+f
+
+i
+
+j
+
+m
+
+q
+RCVN
+
+RCCA
+
+u
+
+n
+Trachea
+r
+v
+
+c
+g
+k
+o
+RCVN + RCCA
+s
+w
+
+NATURE PROTOCOLS
+d h l p t x
+
+Fig. 5 | VN preparation and heart isolation. a–l, Preparation steps to expose the heart. m–u, Identiﬁcation, isolation and suturing of the RCVN running along the right common carotid artery (RCCA). v–x, Excision of the heart-VN preparation. Scale bars: 6.0 mm in d–f, 4.0 mm in m–x.
+
+c
+
+CRITICAL STEP If air bubbles in the buffer are not removed from the syringe before cannulation, they will enter the coronary arteries during ﬂushing of the heart and act as air emboli leading to an ischemic heart preparation. 26 Turn the heart to its anterior side, and remove the thymus by pulling each lobe aside with forceps; remove excess tissue. 27 Identify and expose the aortic root. Cut the aortic arch just distal to the right common carotid artery (Fig. 6b,c), i.e., ~3–4 mm distal to the aortic valve. 28 Use two ﬁne forceps to hold and carefully slip the aorta over the cannula. Pull the aorta up until the tip of the cannula is positioned ~0.5 mm proximal to the aortic valve (Fig. 6d,e). Use the two notches located 1 and 2 mm from the tip of the cannula to check for correct insertion depth. Furthermore, the correct positioning of the tip of the cannula can also be seen faintly through the aortic wall.
+
+1202
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+a
+
+b
+
+e
+
+c
+Ao
+f
+
+PROTOCOL
+d
+g
+VN
+
+h
+
+i
+
+SVC
+
+j
+
+k
+
+RHC
+
+l
+
+SE + VN
+
+m
+
+RHC
+
+4 mm 1.5 mm
+
+RE RE
+
+Fig. 6 | Combined VNS, surface and intracardiac ECG recording on an isolated mouse heart. a, Setup for cannulation of the isolated heart with stereo microscope and light source (left) and device for attaching the mounting cannula with stand, clamp and buffer-ﬁlled syringe (right). b,c, View of the anterior side of the heart and preparation of the aorta (Ao). Two preknotted silk threads are attached to the cannula. d, Vessel wall of the aorta is grasped with two forceps and spread apart to pull the aorta onto the cannula. e, Aorta is slipped over the cannula until the tip of the cannula is positioned in front of the aortic valve. f, Aorta is ﬁxed to the cannula with the prepared silk threads. g, Intact VN (white arrow) attached to a silk thread. h,i, Identiﬁcation and preparation of the SVC on the posterior side of the heart. j, Right heart catheter (RHC) insertion into the SVC. k, Preparation ready to be mounted on the Langendorff apparatus. l, Mounted mouse heart with the VN placed on the SE. Two recording electrodes (RE) are positioned on the right atrium and apex to record the surface ECG. The RHC is inserted through the SVC into the right atrium and ventricle for intracardiac ECG recording. m, Custom-made SE for electrical stimulation of the VN to induce acetylcholine release from the nerve endings.
+
+c
+
+c
+
+CRITICAL STEP Do not pull the aorta too far over the cannula to avoid the cannula tip penetrating the aortic valve. This would prevent optimal perfusion of the heart via the coronary arteries. 29 Pull the loosely knotted 7/0 silk suture over the aorta, and then secure the aorta to the cannula by tightening the knot. Additionally, stabilize the attachment with a second, counter-directional knot (Fig. 6f,g). 30 Flush the heart with a little buffer solution by gently pressing on the syringe plunger.
+CRITICAL STEP Monitor this process through the stereo microscope. Only with correct cannulation can one observe that the red blood is ﬂushed out of the coronary arteries by the transparent buffer. 31 Turn the cannula with the mounted heart to inspect its posterior side. Identify the SVC, and make an incision at the cranial end of the vessel with Vannas spring scissors (Fig. 6h,i). 32 Carefully lift the vascular wall and use vessel cannulation forceps to insert the catheter into the opening. Place the catheter in the right ventricle without using force or stretching the tissue (Fig. 6j,k). 33 Secure and support the catheter by applying gentle pressure against the cannula with your ﬁngers, detach the cannula from the syringe and transfer the heart to the Langendorff apparatus.
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1203
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+34 Fill the cannula with drops of the running perfusion system to avoid air inclusion, and mount the ﬁlled cannula with the catheter inserted and VN attached (Fig. 6l). Turn the switch of the Langendorff system to controlled setting to start perfusion. A constant pressure of 80 mmHg should be reached and maintained.
+35 Let the preparation equilibrate 8–10 min before starting the actual measurements. Place the VN on the custom-made Ag/AgCl-electrode (Fig. 6m), and conﬁrm that electrical stimulation leads to
+
+a Zone of no reset
+R
+P II
+
+A1A2 + A2A3 = 2 × A1A1
+
+R P
+
+S1 R P
+
+R P
+
+R P
+
+b Zone of reset
+R
+P II
+
+R S1
+
+A1A2 + A2A3 < 2 × A1A1
+
+R
+
+R
+
+R
+
+P
+
+P
+
+P
+
+P
+
+SAN PZN ATR
+
+SCL
+
+SCL
+
+SCL
+
+SCL
+
+A1
+
+A1
+
+A2
+
+A3
+
+A4
+
+SAN PZN ATR
+
+SCL
+
+A1
+
+A1
+
+SCL
+
+SCL
+
+SCL
+
+A2
+
+A3
+
+A4
+
+SACT
+
+SACT
+
+A1 RVp
+
+A1
+
+A2
+
+S1
+
+A3
+
+A4
+
+100 ms
+
+c Zone of interpolation
+R
+
+A1A2 + A2A3 ≥ A1A1
+
+R
+
+S1
+
+R
+
+R
+
+R
+
+P
+
+PP
+
+P
+
+P
+
+II
+
+SAN PZN ATR
+
+SCL A1
+
+A1 A2
+
+S1
+
+RVp
+
+A1
+
+A1 A2
+
+e
+
+SCL
+
+A3
+
+A4
+
+A3
+
+A4
+
+100 ms
+
+nZoo rneesopfonse Interpolation Reset No reset
+
+A2A3 (ms) A3A4 (ms) SNERP
+2 SACT
+
+1204
+
+140 120 100
+80 60
+20 40 60 80 100 A1A2 (ms)
+
+A1 RVp
+
+A1
+
+A2
+
+S1
+
+A3
+
+A4
+
+100 ms
+
+d Zone of no response
+
+A2 not present (AERP)
+
+R
+
+S1 R
+
+R
+
+R
+
+P
+
+P
+
+P
+
+P
+
+P
+
+II
+
+SAN PZN ATR
+
+SCL A1
+
+SCL A1
+
+SCL A1
+
+SCL
+
+A3
+
+A4
+
+A1 RVp
+f
+
+A1
+
+A1
+
+A3
+
+A4
+
+S1 100 ms
+
+nZoo rneesopfonse Interpolation Reset No reset
+
+A2A3/A1A1 A3A4/A1A1 SNERP
+2 SACT
+
+1.4
+
+1.2
+
+0.8
+
+0.6
+
+0.6
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1.0
+
+A1A2/A1A1
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+adequate reduction of HR. In this protocol, a stimulation frequency of 5 Hz is applied using biphasic pulses with a width of 1 ms at a pulse height of 4 V, which resulted in a mean HR reduction of ~33%.
+
+Procedure 3: stimulation protocols for in vivo and ex vivo EPS
+Stimulation protocol for determination of SACT using the Strauss method ● Timing 6–8 min 1 Use HRAd (output 1) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 29–33 of Procedure 1. 2 Apply 80–100 stimuli (S1) randomly during normal sinus rhythm (Fig. 7). There should be a pause
+of at least 3 s between successive stimuli, and they should be evenly distributed throughout the whole sinus cycle.
+
+Stimulation protocol for determination of SACT using the Narula method ● Timing 2–3 min 3 Use HRAd (output 1) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 29–33 of Procedure 1. 4 Apply short trains of eight atrial stimuli (S1) at a constant pacing cycle length (PCL) that should
+be 10 ms shorter than the spontaneous sinus cycle length (SCL). PCL = S1S1 = SCL − 10 ms (Extended Data Fig. 1). 5 Repeat the stimulation protocol 15–20 times. There should be a pause of 3–5 s between repetitions.
+
+Stimulation protocol for determination of SNRT ● Timing 9–12 min 6 Use HRAd (output 1) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 29–33 of Procedure 1. 7 For determination of SNRT, apply 30 s trains of atrial pacing at various PCL (S1S1) below the
+intrinsic SCL. PCL = S1S1 < SCL (Fig. 8). 8 Apply 300 stimuli for S1S1 of 100 ms, 333 stimuli for S1S1 of 90 ms and 375 stimuli for S1S1 of
+80 ms, respectively. Repeat the protocol three times at each PCL. 9 There should be a delay of 30 s between each pacing protocol.
+
+Stimulation protocol for determination of AV recovery and refractory curves (AVN relative, functional and effective refractory periods) ● Timing 8–9 min 10 Use HRAd (output 1) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 29–33 of Procedure 1. 11 Apply trains of eight stimuli at various PCL (S1S1) below the intrinsic SCL (e.g., 100 ms, 90 ms and
+80 ms) followed by one extrastimulus (S2).
+Fig. 7 | SACT SM. The effect of premature atrial stimuli depends on the timing within the cardiac cycle. a, A stimulus late in the cycle induces a compensatory pause. The stimulus induces an atrial extra beat, but it is too late to enter the SAN. Here, the impulse of the SAN is already formed, arrived at the PNZ. The collision of the impulse formed in the SAN and the atrial extra stimulus leads to a block; as excitation cannot enter the SAN, there is no reset. The next beat, A3, arrives in time as scheduled. b, A stimulus earlier in the cycle enters the SAN and resets it, and the next beat arrives earlier. The pause is less than compensatory; the shift is constant, independent of how early the stimulus is applied. c, Then, if the stimulus is applied even earlier, there is no reset, and the responses are interpolated. d, Even earlier, the premature stimulus falls into the atrial refractory period, and there is no response. ATR, right atrium. e, Method to determine SACT without normalization. The return cycle A2A3 (open circles) and postreturn cycles A3A4 (closed circles) are plotted as a function of the coupling interval of the premature atrial stimulus A1A2. Each data point represents one test cycle. The yellow horizontal line represents the mean spontaneous SCL (mean A1A1) of all test cycles. The upper diagonal line represents the line of full compensatory pauses. Since a full compensatory pause is deﬁned as A1A2 + A2A3 = 2 × A1A1, it follows that A2A3 = y = 2 − A1A2. The line intersects the y axis at point (0/2 × A1A1) and the x axis at point (2 × A1A1/0). The lower diagonal line is termed line of complete interpolation. Since interpolation is deﬁned as A1A2 + A2A3 = A1A1, it follows that A2A3 = y = 1 − A1A2. The line intersects the y axis at point (0/1 × A1A1) and the x axis at point (1 × A1A1/0). Zones of SAN responses to premature extrastimuli are indicated on top of the ﬁgure. Zone of no reset, zone of reset, zone of interpolation and zone of no response. For coupling intervals below the AERP, no atrial response was obtained. For details, see text. f, Method to determine SACT with normalization. The normalized return cycle (A2A3/A1A1) and normalized post-return cycles (A3A4/A1A1) are plotted as a function of the normalized coupling interval of the premature atrial stimulus (A1A2/A1A1). The yellow horizontal line represents the mean normalized spontaneous SCL (A1A1/A1A1 = 1). The upper diagonal line represents the line of full compensatory pauses. Since a full compensatory pause is deﬁned as A1A2 + A2A3 = 2 × A1A1, it follows that A2A3/A1A1 = y = 2 − A1A2/A1A1. The line intersects the y axis at point (0/2) and the x axis at point (2/0). The lower diagonal line is termed line of complete interpolation. Since interpolation is deﬁned as A1A2+A2A3 = A1A1 it follows that A2A3/A1A1 = y = 1 − A1A2/A1A1. The line intersects the y axis at point (0/1) and the x axis at point (1/0). Representative recordings in a–d are obtained from a 2-month-old male mouse. Representative graphical analysis in e–f is derived from a 4-month-old male mouse.
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1205
+
+PROTOCOL
+
+Stim II
+
+Electrode: HRAd Pacing drive train duration: 30 s S1S1: 100/90/80 ms Delay: 30 s
+
+S1
+
+S1
+
+S1
+
+S1 R P
+
+R P
+
+NATURE PROTOCOLS
+S1S1: 100 ms
+
+HRAp
+
+S1 A V
+
+S1 A1
+V1
+
+A2 V2
+
+V2 A2
+RVd
+H2 SNRT
+
+S1
+
+A2
+
+RVp
+
+100 ms
+Fig. 8 | SNRT. Stimulation protocol parameters, surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed. SNRT is measured as the interval between the last spike caused by stimulation (S1) and the ﬁrst spontaneous, sinus-node-triggered atrial activation A2 (S1A2 interval). To calculate cSNRT, the average SCL is subtracted from SNRT. Representative recordings are obtained from a 2-month-old male mouse.
+
+12 Subsequently, reduce the S1S2 coupling interval to 20 ms in 2 ms decrements with a 3 s delay between each stimulation train (Figs. 9 and 10 and Extended Data Figs. 2 and 3).
+
+Stimulation protocol for determination of Wenckebach point and 2:1 conduction ● Timing 2–3 min 13 Use HRAd (output 1) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 29–33 of Procedure 1. 14 To identify the antegrade AV Wenckebach point (WBP), use short trains of eight atrial stimuli
+starting with S1S1 intervals of 90 ms. 15 Successively reduce S1S1 intervals to 30 ms in 2 ms decrements with a 3 s delay between each
+stimulation train (Extended Data Fig. 4).
+
+Stimulation protocol for determination of right atrial effective refractory period ● Timing 7–9 min 16 Use HRAd (output 1) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 29–33 of Procedure 1. 17 With programmed atrial stimulation, apply trains of eight paced beats at various S1S1 intervals
+below the intrinsic SCL (e.g., 100 ms, 90 ms and 80 ms). Add one extrastimulus (S2) at an S1S2 interval 5 ms shorter than the previously determined atrioventricular nodal effective refractory period (AVNERP, Extended Data Fig. 3) to reliably induce AV conduction block. Subsequently, apply another extrastimulus (S3). The three-step protocol is used to avoid superposition of atrial and ventricular electrograms at short premature coupling intervals. 18 Successively reduce the S2S3 interval from 70 ms to 10 ms in 2 ms decrements with a 3 s delay between each stimulation train (Extended Data Fig. 5).
+
+Stimulation protocol for determination of right ventricular effective refractory period ● Timing 7–9 min 19 Use RVp (output 6) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 34–38 of Procedure 1.
+
+1206
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+a
+40 0
+–40
+
+Full refractory period
+
+ARP
+
+ERP RRP
+
+E D
+
+C
+
+B A
+
+Voltage [mV]
+
+–80
+
+b Atrium c
+
+AN
+
+A1
+
+23 4 5
+
+ERP
+
+AVN
+
+67 2
+
+Nodal
+
+PROTOCOL
+d
+Recovery curve
+
+A2 – V2 A2 – H2
+
+ERP
+
+A1A2
+
+Refractory curve
+
+V1 – V2 H1 – H2
+
+NH
+
+FRP
+
+FRP
+
+H1 Ventricle
+
+5 346 7
+
+A1A2
+
+Fig. 9 | Determination of refractory periods. a, Schematic of an action potential recorded in a cardiomyocyte. Absolute (ARP), relative (RRP) and effective refractory periods (ERP) are indicated. b, Model of the AVN. It is composed of three functionally distinct regions that are longitudinally connected in form of a conducting cable. The regions are the atrionodal (AN), the nodal (N) and nodal–His (NH). For details, see text. C, Characterization of AV nodal refractory properties. Ladder diagram showing atrial (A) and His bundle (H) responses to premature stimulation. A series of 20 basic (A1) stimuli are given, followed by a premature stimulus A2. Shown are the last of a series of 20 basic (A1) and one premature beat at different coupling intervals that decreases from A7 to A2 (indicated as 2–7). Nodal responses are superimposed, including those corresponding to the ERP and FRP. d, Top, AVN recovery curve. Bottom, AVN refractory curve. From d and c it can be seen that ERP is measured at the proximal segment, while FRP is determined at the distal site and thus is a measure of the output of that tissue. For further details, in particular for relations between recovery and refractory curves, see text. Panels a and b modiﬁed with permission from ref. 27.
+
+20 Apply trains of eight ventricular stimuli at various S1S1 intervals below the intrinsic SCL (e.g., 100 ms, 90 ms and 80 ms) followed by one extrastimulus (S2).
+21 Successively reduce the S1S2 interval to 20 ms in 2 ms decrements with a 3 s delay between each stimulation train (Extended Data Fig. 6).
+Atrial burst stimulation protocol to test for atrial vulnerability ● Timing 4–5 min 22 Use HRAd (output 1) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 29–33 of Procedure 1. 23 Apply a train of 100 atrial stimuli with an S1S1 interval of 50 ms. 24 Successively reduce the S1S1 interval to 10 ms (values should reach intervals below the right atrial
+effective refractory period (AERP)) in 10 ms decrements with a 3 s delay between each stimulation train. With this stimulation protocol, induction of atrial arrhythmia can be achieved (Extended Data Fig. 7a,b).
+Ventricular burst stimulation protocol to test arrhythmia vulnerability ● Timing 4–5 min 25 Use RVp (output 6) as stimulation electrode pair with stimulus amplitude and duration as
+determined in Steps 34–38 of Procedure 1. 26 Apply trains of 20 ventricular stimuli at various S1S1 intervals below the intrinsic SCL (e.g., 100 ms,
+90 ms and 80 ms) followed by six or eight extrastimuli (S2)17. 27 Reduce the S2S2 intervals from 50 ms to 20 ms in 2 ms decrements with a 10 s delay between each
+stimulation train. With this stimulation protocol, induction of ventricular arrhythmia can be achieved (Extended Data Fig. 7c,d).
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1207
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Stim II
+
+Electrode: HRAd Pacing drive train duration: 8 × S1S1, S1S1: 100 ms S1S2: 100–20 ms (∆ –2 ms) Delay: 3 s
+
+S1
+
+S1
+
+S1 R
+P
+
+S1
+
+S2
+
+S1S1: 100 ms S1S2: 84 ms
+R P
+
+HRAp RVd RVp
+
+A V
+
+A1
+
+A2
+
+V1
+
+V2
+
+H1
+
+H2
+
+A V
+H
+
+V1V2 [ms] H1H2 [ms] A2V2 [ms] H2V2 [ms]
+
+Refractory curve
+
+100
+
+95
+
+90 Effective 85
+
+Relative
+
+80
+
+75
+
+70
+
+Functional
+
+50 60 70 80 90 100 A1A2 [ms]
+
+100 ms
+
+Recovery curve
+
+70 60 50 40 30 20 10
+50
+
+60 70 80 90 100 A1A2 [ms]
+
+Fig. 10 | AV nodal recovery and refractory curves. (Upper) Stimulation protocol parameters, surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed. Inset, magniﬁcation of RVd to better visualize His deﬂection (H), which can only be detected with optimal catheter placement. (Lower) AV nodal refractory curve (left) and AV nodal recovery curve (right). Representative recordings and graphical analysis are obtained from a 2-month-old male mouse.
+
+Data analysis of EPS data in general ● Timing ~1 d per mouse 28 Analyze data using the CardioTek EP Tracer software together with a commonly used spreadsheet
+software such as Microsoft Excel or Origin. 29 Open recordings in the EP Tracer software. 30 Manually set the two cursors (red and green) to determine the time intervals between any two
+points (Supplementary Fig. 4). Time intervals can be measured with an accuracy of ±1 ms. 31 Transfer the time intervals manually to the spreadsheet software for graph plotting, statistical
+analysis and presentation of results (Tables 1–4).
+Determination of baseline surface and intracardiac ECG parameters ● Timing ~1 h 32 Select an episode with stable sinus rhythm during baseline ECG recording, and choose the
+surface and intracardiac ECG leads with the highest signal-to-noise ratio (Fig. 3). To avoid systematic errors, make sure to use the same leads among different groups of mice within one study. 33 Over a time period of at least 10 s, measure RR, PP, PQ, QRS and QT from a surface ECG lead and VV, AA, AV, AH and HV from an intracardiac ECG lead (Tables 1 and 2). 34 Determine mean HR from RR intervals.
+
+1208
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Table 1 | Baseline surface and intracardiac ECG parameters: in vivo EPS
+
+Parameter
+
+Value
+
+SEM
+
+RR interval (ms) PQ interval (ms) AV interval (ms) AH interval (ms) HV interval (ms) HR (bpm)
+
+120.8 37.7 40.3 25.3 15.0 504.3
+
+±4.9 ±1.2 ±1.3 ±1.0 ±0.4 ±18.7
+
+Values were obtained from 11 male WT mice with an average age of 3 months under baseline conditions. Measurements were taken immediately after catheter placement and prior to the ﬁrst stimulation protocol.
+
+Table 2 | Ex vivo surface and intracardiac ECG parameters under basal and VNS conditions: ex vivo isolated Langendorff heart
+
+Parameter
+
+Value
+
+SEM
+
+RR interval basal (ms) RR interval VNS (ms) PR interval basal (ms) PR interval VNS (ms) AV interval basal (ms) AV interval VNS (ms) AH interval basal (ms) AH interval VNS (ms) HV interval basal (ms) HV interval VNS (ms) HR basal (bpm) HR VNS (bpm)
+
+187.7 290.9 54.8 54.0 54.4 52.8 40.1 39.2 14.3 13.7 325.9 218.7
+
+±12.1 ±31.6 ±6.3 ±7.7 ±6.8 ±7.7 ±6.4 ±7.5 ±1.0 ±0.9 ±19.4 ±22.9
+
+Values were obtained from six male WT mice with an average age of 3.5 months under baseline condition and during VNS conditions.
+
+Determination of SACT: Strauss method ● Timing ~3 h 35 Measure the intervals A1A1 (spontaneous SCL), A1A2 (coupling interval length), A2A3 (return
+cycle length) and A3A4 (post-return cycle length) at each stimulation event during the entire recording (Fig. 7). 36 Plot A2A3 and A3A4 interval against the respective A1A2 (Fig. 7e). 37 Construct a horizontal straight line that represents the mean A1A1 value (mean spontaneous SCL) of all stimulation events (lower horizontal line, yellow). Ideally, the post-return cycle intervals (A3A4) lie on this line. 38 Construct a diagonal straight line that intersects the y axis at point (0/2 × A1A1) and the x axis at point (2 × A1A1/0). This is referred to as the line of full compensatory pauses. At the longest A1A2 coupling intervals, the A2A3 data points fall on this line and the range is referred to as zone of no reset (for explanation see also ‘Anticipated results’). 39 Determine the A2A3 intervals at which the data points begin to deviate from the line of full compensatory pause, and construct another horizontal straight line (upper horizontal line, red) in the region of the medium-length A1A2 coupling intervals. The range where the data points lie on this line is referred to as zone of reset. 40 Subtract the y-coordinate value of the lower horizontal line (yellow) from the y-coordinate value of the upper horizontal line (red). 41 Divide the value obtained by 2; this gives the SACT according to the Strauss method (SACT SM). 42 As an alternative to Steps 35–36, plot the normalized A2A3/A1A1 ratio and the normalized A3A4/ A1A1 ratio against the respective A1A2/A1A1 ratio (Fig. 7f). The advantage of normalization is that it accounts for variations in spontaneous SCL lengths A1A1.
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1209
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Table 3 | Expected values for standard clinical electrophysiological parameters determined in vivo
+
+Parameter
+
+Value (ms)
+
+SD
+
+SEM
+
+n (animals)
+
+SACT SM SACT NM SNRT 100 SNRT 90 SNRT 80 cSNRT 100 cSNRT 90 cSNRT 80 WBP 2:1 AVRRP 100 AVFRP 100 AVFRP 90 AVFRP 80 AVERP 100 AVERP 90 AVERP 80 A2V2 100 A2V2 90 A2V2 80 AVNERP 100 AVNERP 90 AVNERP 80 AERP 100 AERP 90 AERP 80 VERP 100 VERP 90 VERP 80
+
+13.66 13.36 150.86 160.49 169.18 40.36 52.03 60.27 67.00 49.60 88.05 72.48 73.68 74.18 53.93 54.65 55.75 40.95 43.50 46.35 48.30 49.70 51.80 20.80 19.80 18.60 32.80 33.30 34.30
+
+±3.29
+
+±0.74
+
+20
+
+±3.32
+
+±0.80
+
+17
+
+±14.55
+
+±3.25
+
+20
+
+±13.72
+
+±3.07
+
+20
+
+±14.61
+
+±3.27
+
+20
+
+±11.12
+
+±2.49
+
+20
+
+±13.64
+
+±3.05
+
+20
+
+±15.56
+
+±3.48
+
+20
+
+±3.76
+
+±0.84
+
+20
+
+±3.35
+
+±0.75
+
+20
+
+±2.95
+
+±0.66
+
+20
+
+±4.13
+
+±0.92
+
+20
+
+±3.98
+
+±0.89
+
+20
+
+±2.66
+
+±0.60
+
+20
+
+±4.14
+
+±0.93
+
+20
+
+±5.01
+
+±1.12
+
+20
+
+±4.53
+
+±1.01
+
+20
+
+±2.91
+
+±0.65
+
+20
+
+±3.80
+
+±0.85
+
+20
+
+±6.14
+
+±1.37
+
+20
+
+±4.07
+
+±0.91
+
+20
+
+±5.16
+
+±1.15
+
+20
+
+±4.67
+
+±1.05
+
+20
+
+±3.21
+
+±0.72
+
+20
+
+±3.89
+
+±0.87
+
+20
+
+±2.91
+
+±0.65
+
+20
+
+±6.40
+
+±1.43
+
+20
+
+±5.89
+
+±1.32
+
+20
+
+±7.41
+
+±1.66
+
+20
+
+Table 4 | Expected values for standard clinical electrophysiological parameters determined ex vivo: ex vivo isolated Langendorff heart
+
+Parameter
+
+Value (ms)
+
+SD
+
+SEM
+
+n (animals)
+
+SNRT 120 basal SNRT 120 vagus cSNRT 120 basal cSNRT 120 vagus WBP basal WBP vagus 2:1 basal 2:1 vagus
+
+211 411.1 41.99 136.44 99.14 99.33 81.33 85.00
+
+±49.15
+
+±18.58
+
+7
+
+±118.24
+
+±52.88
+
+5
+
+±39.31
+
+±14.86
+
+7
+
+±49.96
+
+±22.35
+
+5
+
+±7.38
+
+±2.79
+
+7
+
+±11.37
+
+±6.57
+
+3
+
+±8.26
+
+±3.37
+
+6
+
+±9.31
+
+±4.66
+
+4
+
+43 Construct the lower horizontal line that represents the normalized mean cycle length (A1A1/A1A1 = 1).
+44 Construct the diagonal line of full compensatory pauses that intersects the y axis at point (0/2) and the x axis at point (2/0).
+45 Proceed as described in Steps 39–41 for SACT calculation.
+
+1210
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Determination of SACT: Narula method ● Timing ~20 min 46 Measure the intervals A1A2 (coupling interval length) and A2A3 (return cycle length) after each
+stimulation train (Extended Data Fig. 1). 47 Subtract A2A3 from A1A2. 48 Divide the value obtained by 2; this gives the SACT according to the Narula method (SACT NM).
+
+Determination of SNRT ● Timing ~5 min 49 To determine SNRT, measure the interval between the last stimulation spike and the ﬁrst
+spontaneous, sinus node triggered atrial activation (S1A2 interval, Fig. 8). For rate-corrected SNRT (cSNRT), subtract the average SCL from SNRT.
+
+Determination of refractory periods of the AV conduction system from AV nodal refractory curves ● Timing ~3 h 50 Measure the intervals A1A2, V1V2, H1H2, A2V2, A2H2 and H2V2 at each stimulation event of the
+recording until AV-nodal conduction is lost (Fig. 10). 51 Plot V1V2 and H1H2 intervals against A1A2 to obtain the AV nodal refractory curve. 52 Construct a diagonal straight line with slope 1 (y = x). At long A1A2 coupling intervals, the V1V2
+and H1H2 data points fall on this diagonal line that represents the theoretical line of no AV conduction delay (identity line). For points on this curve, V1V2 and H1H2 intervals are equal to A1A2. At shorter A1A2 intervals, V1V2 decreases less than A1A2. The points lie above the identity line, indicating that AV conduction of the premature impulse A2 is delayed. The point at which V1V2 or H1H2 values start to deviate from the line marks the beginning of the relative refractory period of the AV conduction system (AVRRP). 53 At a critical A1A2 interval, V1V2 and H1H2 reach a minimum. Construct a horizontal line through the minimal V1V2 and H1H2 data points of the curve. The y-coordinate value of this horizontal line represents the functional refractory period of the AV conduction system (AVFRP). 54 At even shorter A1A2 intervals, V1V2 and H1H2 intervals begin to increase until complete block of conduction of the premature impulse occurs. Construct a vertical line through the V1V2 and H1H2 data points in this part of the curve. The x-coordinate value of this line represents the effective refractory period of the AV conduction system (AVERP).
+
+Determination of the minimum A2V2 or A2H2 intervals from AV nodal recovery curves ● Timing ~2 min 55 From the same recordings used to obtain the AV nodal refractory curves, plot A2V2 or A2H2
+against A1A2 to obtain the AV nodal recovery curves (Fig. 10). 56 The minimum A2V2 or A2H2 intervals are determined from the AV nodal recovery curve
+(horizontal line, red).
+
+Determination of AVNERP 57 From the same recording used to obtain AV nodal refractory and recovery curves, identify the
+longest S1S2 coupling interval with loss of AV-nodal conduction. This interval corresponds to the AVNERP (Extended Data Fig. 3).
+
+Determination of WBP and 2:1 cycle length ● Timing ~2 min 58 To determine the WBP, identify the longest S1S1 coupling interval of the recording at which AV
+block is observed (Extended Data Fig. 4b). 59 Determine the 2:1 cycle length, which corresponds to the longest S1S1 interval of the same
+recording at which 2:1 AV block is observed (Extended Data Fig. 4c).
+
+Determination of right AERP ● Timing ~2 min 60 To determine the right AERP, identify the longest S2S3 interval with absent atrial response
+(Extended Data Fig. 5).
+
+Determination of right ventricular effective refractory period ● Timing ~2 min 61 To determine the right ventricular effective refractory period (VERP), identify the longest S1S2
+interval with missing ventricular depolarization (Extended Data Fig. 6).
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1211
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Determination of ECG parameters and clinical electrophysiological parameters of Langendorff-perfused hearts under basal conditions and during VN stimulation ● Timing ~1 d per mouse 62 Determine the surface and intracardiac ECG recordings, stimulation protocols and clinical
+electrophysiological parameters in Langendorff-perfused hearts (Extended Data Figs. 8–10) using the same principles applied to in vivo EPS measurements. Generate respective data (such as those presented in Tables 2 and 4) following the same protocol steps described for in vivo EPS in Procedure 3. In addition to measurements under baseline conditions, the respective parameters can also be determined during vagus nerve stimulation (VNS). This enables speciﬁc investigation of vagal control of the CCS.
+
+Ex vivo surface and intracardiac ECG recording under baseline and VNS conditions ● Timing 3 min 63 Note that in the atrial leads (HRAd, HRAp) the size of atrial signals is greater than that of
+ventricular signals because the catheter electrodes are located in the right atrium. Reverse considerations apply to ventricular leads. This indicates correct placement of the catheter in the desired position. Record at least 1–2 min under baseline conditions, followed by 30 s VNS and 1 min recovery time (Extended Data Fig. 8).
+
+Ex vivo SNRT determination under basal and VNS conditions in the isolated heart ● Timing 3–4 min 64 Use 30 s trains of atrial pacing at a coupling interval of 120 ms to efﬁciently suppress sinus node
+automaticity. SNRT is measured as the interval between the last stimulation spike and the ﬁrst spontaneous, sinus-node-triggered atrial activation. To calculate cSNRT, subtract the average SCL from SNRT. For recordings under VNS condition, start nerve stimulation and observe a HR decrease before pacing the heart. The VNS should outlast at least 5–10 s the overdrive pacing for calculation of the average SCL under VNS (Extended Data Fig. 9).
+
+Ex vivo WBP and 2:1 conduction under basal and VNS conditions in the isolated heart ● Timing 5–10 min 65 To identify the antegrade AV WBP in the isolated, right vagus innervated heart, use the previously
+explained protocol for in vivo measurements (Procedure 3, Steps 13–15) with S1S1 coupling intervals starting at 120 ms. Under VNS condition, the stimulation should be kept until identifying 2:1 conduction (Extended Data Fig. 10).
+
+Troubleshooting Troubleshooting advice can be found in Tables 5 and 6.
+
+Table 5 | Troubleshooting table for in vivo EPS (Procedure 1) and data analysis (Procedure 3)
+
+Step
+
+Problem
+
+Possible reason
+
+Solution
+
+Procedure 1, Step 7
+Procedure 1, Steps 15, 25
+
+HR drops below a critical value of ~250 bpm
+Insufﬁcient signal quality (low signal-to-noise ratio)
+
+The mouse is too deeply anesthetized
+ECG traces are not ﬁltered, and electrical noise is picked up (electrical noise can originate from various sources)
+
+If using inhalation anesthesia (option B), slightly reduce the isoﬂurane concentration to ~1.0%. Euthanize the mouse if recovery cannot be achieved
+Find source of electrical noise by trial and error by, for example, switching off heating mat, scavenger, light source or socket. Connect all components to the signal ground. Cover single components with small, custommade Faraday cages. Signal quality can further be improved by applying a Notch Filter and/or ECG Muscle Filter in the CardioTek EP Tracer software. Click ‘Setup’ > ‘System Settings’ > ‘EP Tracer’, and activate Notch Filters for surface and intracardiac ECG. If necessary, choose ‘Setup’ > ‘System Settings’ > ‘Filters’ to additionally activate and adjust the ECG Muscle Filter (Supplementary Fig. 2e,f)
+Table continued
+
+1212
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Table 5 (continued)
+
+Step
+
+Problem
+
+Possible reason
+
+Solution
+
+Procedure 1, Step 23
+Procedure 1, Step 24
+Procedure 1, Step 25
+Procedure 1, Step 30
+Procedure 1, Step 33
+Procedure 3, Step 30
+Procedure 3, Step 31
+
+Bleeding occurs during surgery
+Catheter cannot be successfully inserted
+There is no signal in one or several intracardiac ECG leads
+Stimuli are not reliably captured, i.e., not every stimulus evokes an atrial signal Stimuli are still not reliably captured
+Variability within a certain parameter determined during data analysis is high
+There are missing n numbers in one or more of the determined parameters
+
+Blood loss may happen when the jugular vein is punctured for catheter insertion
+The pectoral muscles can cause a mechanical resistance that prevents the catheter from being inserted into the thorax
+The catheter electrodes (and/or connector cable) might be damaged
+In very small hearts (e.g., female animals), the stimulation electrodes HRAd (#1) might be positioned outside of the right atrium The catheter is not in the best position inside the heart
+Note that there is a slight delay between related signals in the different surface and intracardiac leads due to differences in electrode location It is not always possible to determine all parameters in every single mouse owing to arrhythmia, capture problems or other experimental difﬁculties
+
+In mice, loss of 0.1–0.2 ml blood is hemodynamically relevant and can negatively inﬂuence the measurements. If a short, slight bleeding occurs, substitute volume by intraperitoneal or intravenous injection of sterile saline. Euthanize the mouse if prolonged, heavy bleeding occurs
+Pull a little bit back, and make sure to push the catheter tip just below the superﬁcial pectoral muscle (musculus pectoralis superﬁcialis pars descendens) to follow the natural course of the vessel. You should be able to see the catheter showing through the muscular tissue (Fig. 2o)
+The electrodes at the catheter tip are very fragile and can easily take damage. Be extremely careful never to touch the electrodes with vessel cannulation forceps or other instruments. When not in use, the catheter should always be stored in protective tubing
+In this case, choose HRAp (#2) as stimulation electrode pair
+Capture problems may occur if the distance between the stimulation electrode and the endocardium is too large. Try to reposition the catheter or increase amplitude and/or duration of the stimuli (Supplementary Fig. 3)
+Make sure the same lead is used for the determination of a certain parameter in all animals of a test series to avoid systematic errors
+Data should be analyzed with a statistical test that takes repeated measures into account (e.g., ANOVA for repeated measures). In the case of randomly missing data points, the full, incomplete dataset can still be analyzed with a mixed effects model such as the restricted maximum likelihood approach
+
+Table 6 | Troubleshooting table for ex vivo EPS (Procedure 2)
+
+Step
+
+Problem
+
+Possible reason
+
+Solution
+
+Procedure 2, Step 11 Procedure 2, Step 30
+Procedure 2, Step 34
+Procedure 2, Step 35
+
+Blood clotting
+
+Anticoagulation is not sufﬁcient
+
+Increase the time of heparinization
+
+Blood remains in a coronary artery or the coronary arteries appear white after ﬂushing
+Pressure of 80 mmHg is not reached
+VNS does not induce (appropriate) HR reduction
+
+Remaining blood indicates that the preparation took too long or heparinization was not sufﬁcient. White appearance could be due to air trapped in the cannula Sealing of the aorta is insufﬁcient or the heart got damaged during preparation
+The VN is not positioned correctly or the stimulation settings are not appropriate for the electrode. Other reasons are a nonfunctional stimulation electrode or damaged VN/nerve endings
+
+Practice to gain speed or adjust heparinization. If air was ﬂushed inside the preparation, make sure that Step 25 of Procedure 2 is carried out properly
+Place the preparation under the microscope again, and try to tighten the knot attaching the aortic wall tightly to the cannula so any leaks are avoided. If the pressure is still not reached, the heart or the aortic tissue may have been perforated and needs to be discarded
+Try to reposition the VN. Higher stimulation frequencies, e.g., 10, 15, 20 or 30 Hz or slightly higher stimulus amplitudes can be tested. If the problem persists, try direct pacing of the heart with the stimulation electrode by holding it to the epicardial side of the ventricle. Stimulation artifacts should be clearly visible in the surface ECG when the electrode is intact. Unresponsiveness caused by injured VN/nerve endings excludes measurements of parameters under VNS conditions
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1213
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Timing
+Anticipated results
+1214
+
+In vivo EPS Procedure 1: in vivo EPS Steps 1–5, setup of the acquisition system: 1–2 h Steps 6–7, anesthesia, body temperature control
+Option A, KX: 5–10 min Option B, isoﬂurane: 2–3 min Steps 8–14, preparations: 15–20 min Steps 15–16, baseline surface ECG recording: 1–2 min Steps 17–26, surgery: 10–20 min Steps 27–28, baseline intracardiac ECG recording: 1–2 min Steps 29–38, determination of stimulus amplitude and duration: 2–4 min Total duration: ~40 min per mouse
+Procedure 2: ex vivo EPS Steps 1–3, setup of the acquisition system: 1–2 h Steps 4–10, prearrangements: 25–30 min Step 11, heparinization: 10–15 min Steps 12–24, dissection: 10–15 min Steps 25–34, cannulation, catheter insertion and mounting: 5–10 min Step 35, equilibration and VNS test: 10 min Total duration: ~50 min per mouse
+Procedure 3: stimulation protocols for in vivo and ex vivo EPS Steps 1–2, SACT SM: 6–8 min Steps 3–5, SACT NM: 2–3 min Steps 6–9, SNRT: 9–12 min Steps 10–12, AV recovery and refractory curves: 8–9 min Steps 13–15, WBP and 2:1 conduction: 2–3 min Steps 16–18, AERP: 7–9 min Steps 19–21, VERP: 7–9 min Steps 22–24, atrial burst stimulation: 4–5 min Steps 25–27, ventricular burst stimulation: 4–5 min Steps 28–62, data analysis: ~1 d per mouse Step 63, ex vivo ECG including VNS: 3 min Step 64, ex vivo SNRT including VNS: 3–4 min Step 65, ex vivo WBP and 2:1 conduction including VNS: 5–10 min Total duration: ~1 d per mouse
+Sinoatrial conduction time SACT represents the time in milliseconds that an electrical impulse generated in the SAN requires to reach the surrounding atrial tissue. It is determined using the Strauss method8,18 or the Narula method4 in analogy to human studies. The rationale for the Strauss method is to apply premature atrial stimulation during normal sinus rhythm7,8,18, while for the Narula method atrial stimulation follows a ﬁxed pacing cycle at a deﬁned rate4.
+Strauss method With the Strauss method7,8, SACT is indirectly determined by premature atrial stimulation during basic sinus rhythm. The A1A1 intervals represent spontaneous SCLs during spontaneous sinus rhythm. The coupling interval between the last spontaneous atrial signal (A1) and the atrial signal induced by the premature stimulus (A2) is given by the interval A1A2. The interval between the premature atrial signal (A2) and the ﬁrst spontaneous atrial beat (A3) is deﬁned as the return cycle A2A3, and the interval between the ﬁrst (A3) and the second spontaneous atrial beat (A4) is called the post-return cycle A3A4. Premature atrial stimuli are applied via the stimulation electrode at random timepoints during spontaneous sinus rhythm (Fig. 7). The entire sinus cycle is scanned by up
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+to 80 stimuli. After the measurement is completed, the spontaneous SCL (A1A1), coupling interval of the premature atrial stimulus (A1A2), the atrial return cycle length (A2A3) and the post-return cycle length (A3A4) are determined. Subsequently, the A2A3 as well as the related A3A4 intervals are plotted against the respective A1A2 interval (Fig. 7e). Alternatively, it is possible to normalize the intervals to the spontaneous cycle length A1A1 by calculating the ratios A1A2/A1A1, A2A3/A1A1 and A3A4/A1A1, respectively. If the normalized variant is chosen, the A2A3/A1A1 ratio and the corresponding A3A4/A1A1 ratio are plotted against the respective A1A2/A1A1 ratio (Fig. 7f). The advantage of the normalization is that it accounts for variations in basic SCLs during spontaneous sinus rhythm. It allows for comparison of SACT independent of different spontaneous cycle lengths during different runs of protocols. The responses of the SAN to premature atrial stimulation are shown in Fig. 7. Depending on the response to premature stimulation, four zones can be distinguished, i.e., the zone of no reset, the zone of reset, the zone of interpolation and the zone of no response:
+
+Zone of no reset. As the coupling intervals (A1A2) of the premature atrial stimulus decrease, the return cycles (A2A3) progressively lengthen (Fig. 7a,e,f). The corresponding A2A3 data points fall on the upper diagonal line with a slope of −1. This line indicates fully compensatory pauses. A fully compensatory pause is deﬁned as an interval that is twice as long as the single interval A1A1 between two successive spontaneous atrial signals in sinus rhythm (A1A2 + A2A3 = 2 × A1A1). If a pause is fully compensatory, the sum of the interval (A1A2) between the last spontaneous atrial beat (A1) and the premature atrial beat (A2) and the interval (A2A3) between the premature atrial beat (A2) and the ﬁrst spontaneous beat (A3) exactly matches 2 × A1A1 (A1A2 + A2A3 = 2 × A1A1). For example, if the premature stimulus A1A2 is applied 20% earlier, then the atrial return cycle A2A3 is 20% longer than A1A1. The diagonal line that deﬁnes fully compensatory pauses is given by: A1A2 + A2A3 = 2 × A1A1 or A2A3 = 2 × A1A1 − A1A2 (Fig. 7e). If one normalizes by A1A1, then: A2A3/A1A1 = 2 − A1A2/A1A1, or y = 2 − A1A2/A1A1 (Fig. 7f). The pause is fully compensatory because stimuli applied late during diastole do not penetrate and reset the SAN before it ﬁres spontaneously. Accordingly, this portion of the graph is designated ‘zone of no reset’. Figure 7a indicates what mechanistically happens within the SAN, the perinodal zone (PNZ) and the right atrium. The impulse generated by spontaneous ﬁring in the SAN during premature atrial stimulation in the zone of no reset collides with the atrial excitation generated by the premature stimulus (A2) and becomes extinguished. Therefore, no atrial depolarizations are generated.
+In Fig. 7e the post-return cycle A3A4, which is the ﬁrst spontaneous cycle after the return cycle, is also
+plotted (closed circles). By comparing A3A4 with the mean A1A1 intervals it is possible to assess
+the sinus cycle variability and SAN automaticity. During the zone of reset and the zone of no reset the post-return cycles A3A4 fall very close to the horizontal line of identity. This ﬁnding suggests that the
+premature atrial stimulations do not induce overdrive suppression or other alterations of SAN automaticity18,19.
+
+Zone of reset. As soon as the coupling interval A1A2 is decreased below a certain point of the spontaneous cycle length (80% in Fig. 7e), the return cycles A2A3 are no longer fully compensatory. The data points fall below the line of fully compensatory pauses but remain greater than one expected SCL. In some animals, A2A3 intervals remain constant during this phase, yielding a plateau (upper horizontal line). This zone is called ‘zone of reset’ (A1A2 + A2A3 < 2 × A1A1) because the premature atrial depolarizations penetrate, depolarize and reset the SAN prior to its next expected spontaneous ﬁring. These events are visualized in Fig. 7b for the SAN, the perinodal area and the right atrium.
+SACT is determined from the A2A3 intervals at the beginning of the zone of reset (Fig. 7b). The A1A2 interval at this borderline represents the longest premature coupling interval whose retrograde excitation front can reach the sinus node to repolarize and reset it, whereas later premature stimuli do not reset the pacemaker. Therefore, the return interval A2A3 at this borderline, minus the spontaneous atrial cycle A1A1, is equal to the sum of the conduction time of the electrical signal from the atrium into the SAN plus the conduction time required for the signal to travel out of the SAN into the atrium (2 × SACT). This calculation is based on the assumptions that times for signal propagation into and out of the SAN are approximately equal.
+
+Zone of interpolation. Atrial depolarizations even earlier in atrial diastole are followed by a sudden transition from the zone of reset to a third zone, which is designated as zone of interpolation (Fig. 7c). This zone corresponds to the area between the lower horizontal line and above the lower diagonal
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1215
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+line. Complete interpolation is deﬁned as A1A2 + A2A3 = A1A1. The lower diagonal line is termed line of complete interpolation and given by A2A3 = A1A1 − A1A2 (Fig. 7e) (after normalization: A2A3/A1A1 = 1 − A1A2/A1A1; y = 1 − A1A2/A1A1; Fig. 7f). This line indicates A2A3 values if A2 fails to enter the SAN when the tissue surrounding the SAN is refractory (Fig. 7c). In this case, the atrial response is interpolated between two normal sinus beats. Sinus node effective refractory period (SNERP) is determined as the A1A2 interval, at which the abrupt transition from zone of no reset to the zone of interpolation occurs.
+Zone of no response. At even shorter A1A2 coupling intervals, the atrial tissue is refractory (AERP) and the stimuli do not elicit premature atrial depolarizations. This is referred to as zone of no response (Fig. 7d).
+Limitations of SACT determination using the Strauss method. Retrograde conduction of the stimulus into the SAN may be different from antegrade conduction out of the SAN to the atrium, but it is not possible to distinguish between these two components. For this reason, comparison with WT controls is crucial when investigating mouse models with supposedly altered SACT. Furthermore, the spatial distance of the stimulation electrode from the SAN has a major inﬂuence on SACT values. The farther the site of stimulation is from the SAN, the greater is the overestimation of SACT. Therefore, we strongly recommend to compare animals of the same background, sex and age to minimize differences in heart size, which critically inﬂuence the position of the catheter inside the heart. Additionally, shifts of the leading pacemaker site to the perinodal region, which are sometimes caused by atrial premature depolarizations, reduce the antegrade conduction time from the sinus node to the atrium. In this case, the stimulus retrogradely penetrates the SAN and ﬁrst depolarizes the perinodal zone and the peripheral margins before it enters the central, leading pacemaker region of the SAN. If retrograde conduction is slow, the peripheral nodal regions already depolarize during this time and become the dominant pacemaker, resulting in an underestimation of SACT. Moreover, determination of SACT with the Strauss method becomes invalid in the presence of even mild degrees of sinus arrhythmia. Under these circumstances, it is unclear whether alterations in the return cycle are actually caused by the electrical stimulation or occur due to the presence of arrhythmia. As a consequence, we suggest to use the Narula method for determining SACT in the presence of sinus arrhythmia.
+
+Narula method
+To determine the SACT using the Narula method (Extended Data Fig. 1), atrial pacing at a rate slightly faster (SCL − 10 ms) than the sinus rate is used as stimulation interval (S1S1). The advantage of this technique is that it is faster and more easily performed than the Strauss technique, which requires the time-consuming premature atrial stimulation approach described above. The SACT is determined using a formula similar to that for the Strauss method by calculating the difference between the post-pacing pause (A1A2) and the subsequent SCL (A2A3) divided by 2 (SACT = (A1A2 − A2A3)/2)4. An important assumtion of the Narula method is that atrial pacing will not induce substantial overdrive suppression.
+
+Sinus node recovery time SNRT is the time in milliseconds that the sinus node needs to generate a spontaneous electrical signal following fast atrial overdrive pacing (Fig. 8). Determination of SNRT is used to test the integrity and functionality of SAN automaticity. The test is based on the hypothesis that SAN automaticity suppressed by overdrive pacing recovers less rapidly in a diseased SAN than in normal function.
+
+Refractory periods
+Refractoriness is the inability of depolarized tissue to be re-excited by premature stimulation. In single cells, the refractory periods can be measured using patch clamp electrodes or sharp microelectrodes (Fig. 9a). In the experiment shown, an action potential is induced in a cardiomyocyte by a current injection and the responses to a series of stimuli applied during and after the end of repolarization are recorded. Premature stimulation during early repolarization (dotted lines A and B) induce graded responses that do not propagate in cardiac tissue. The response C represents the earliest response that is propagated. It deﬁnes the end of the effective refractory period (ERP). Response E is elicited after the end of the repolarization. It is normal in terms of rising velocity and amplitude and thus deﬁnes
+
+1216
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+the end of the full recovery time. Responses within the relative refractory period (RRP) are characterized by reduced amplitude, duration and upstroke velocity. These responses are propagated by reduced speed through cardiac tissue. Refractoriness of heart tissue can be quantiﬁed in vivo using the EP catheter. Typically, the refractoriness of the AV junction, the atria and ventricles is investigated.
+Determination of refractoriness of the AV junction As in any cardiac tissue, in the AVN individual cells are connected via gap junctions. Therefore, electrical activity can only propagate from one cell to neighboring cells. In the AVN, propagation of electrical activity is discontinuous5,20,21, because functionally different types of cardiac tissues are connected and junctions between these tissues are present. It has been shown that the normal AVN is composed of three functionally distinct regions that are longitudinally connected in the form of a conducting cable20,22. From proximal to distal these zones are (1) the transitional cell zone, which connects the atrial cardiomyocytes to the AVN, (2) the central zone of the compact AVN and (3) the part of the His bundle that penetrates the septum (Fig. 9b). Consequently, three different cell types make up the AVN and perinodal area, which can be differentiated according to their electrophysiological properties: the atrionodal (AN), the nodal (N), and nodal–His (NH) cells22–24. The AN region corresponds to the cells in the transitional region. They are located close to the right atrium and display functional properties intermediate between atrial and nodal cells. The N region is composed of midnodal cells. The N cells represent the most typical of the nodal cells. These cells seem to be responsible for the major part of AV conduction delay and decremental conduction upon premature stimulation. In line with these properties, the action potentials of these cells have a slower rising phase and a longer action potential duration. The NH region corresponds to the distal nodal cells. The properties of these cells are intermediate between nodal and cells of the His bundle. As in the SAN, action potentials of N cells display slower upstroke velocities mainly driven by inward L-type Ca2+ currents. In addition, sodium channel density is lower in the midnodal zone of the AVN than in the AN and NH cell zones. As a consequence, conduction is slower through the compact AVN than the AN and NH cell zones.
+In Fig. 9b, the three different regions of the AVN are represented as longitudinal cable-like structures. These regions comprise the central nodal area (nodal), which is characterized by depressed excitability and decremental conduction, and two ﬂanking regions of full excitability, the AN region and the NH region. During sinus rhythm, every impulse propagates from the atrium across the AVN and the His–Purkinje network to the ventricle. On their journey, electrical impulses travel across different tissue zones of the AV junction and across the junctions between these zones. During normal excitation, these zones and junctions do not notably impair impulse conduction. However, during premature stimulation, premature electrical impulses can arrive in only partially recovered tissue and discontinuous propagation can be induced20. For example, an ectopic electric impulse generated in the atria may reach a junction (atrium–AN, AN–N, N–His, His–Purkinje system, etc.) or tissue in which propagation is not possible because the tissue did not yet recover from a previous depolarization. There is evidence that the nodal zone is the region that critically slows down AV conduction during premature stimulation. As a consequence, the next impulse may stop in the central region of the compact node, become extinguished or reinitiate conduction but only after a delay imposed by the time necessary for recovery of all tissues involved20.
+Refractory curves and recovery curves (also termed conduction curves and latency curves, respectively) AVN conduction is systematically investigated in vivo using the EP catheter. The idea is to induce discontinuous propagation through the AVN, which in turn is quantiﬁed and used to derive quantitative parameters to characterize refractory periods in vivo (Fig. 9d). This procedure is carried out by applying programmed premature stimulation to the proximal end of the conducting cable (in this case to the right atrium (A), which is proximal to the AVN and represents the input to the cable). At progressively shorter input intervals (S1S2), the response at the distal end of the cable (in this case at the right ventricle (V), which represents the output of the cable) is recorded (Fig. 9c).
+The protocol consists of two parts. To allow for reasonable stabilization of refractoriness the premature atrial stimulus (S2) is preceded by a train of eight paced beats (S1). The train of eight stimuli is applied at a S1S1 cycle length of 100 ms followed by one extra stimulus (S2). The coupling interval S1S2 is stepwise reduced in 2 ms steps to 20 ms in order to scan through the full range of atrial diastole. Subsequently, the protocol is repeated after a recovery time of 30 s using S1S1 cycle lengths of 90 ms and 80 ms. AV nodal refractory curves are constructed by plotting V1V2 or H1H2
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1217
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+intervals versus A1A2. Recovery curves are constructed by plotting A2V2 or A2H2 intervals versus A1A2 intervals (Fig. 9d). The decision which parameter to plot depends on whether the HIS signal can be reliably measured.
+
+Recovery curves. For recovery curves of the AVN (Fig. 9d), A2V2 or A2H2 intervals (output) are plotted versus A1A2 or H1A2 intervals (input)5,6,25. As A1A2 intervals decrease, the A2V2 latency intervals increase. The A2V2 lengthening is slight for relatively long A1A2 intervals and becomes larger as these intervals shorten. The diagonal line indicates A2V2 lengthening equal to the A1A2 shortenings (slope = −1). There is usually a segment of the curves that coincides with this line. The intuitive functional meaning of the AVN recovery curve is that it gives the conduction time through the AVN (the A2H2 interval) as a function of the recovery time from the last successful anterograde activation of the His bundle (H1A2 interval, or A1A2 interval).
+
+Refractory curves. Refractory curves are used to derive the AVRRP, AVFRP and AVERP (Fig. 9d). Refractory curves visualize the input–output relationship of the AVN by plotting the output intervals (V1V2 or H1H2) recorded at the distal recording site (right ventricle) on the y axis against the corresponding input intervals (A1A2) at the proximal recording site (right atrium). In the AVN (and any other system with discontinuous propagation), the output-to-input relation decreases to a minimum value at the functional refractory period (FRP) and then increases again at even shorter input intervals (Fig. 9c,d). Thus, the relation is characterized by a hook at short stimulation intervals (Fig. 9d). Figure 10 shows a refractory curve obtained in an in vivo experiment using the protocol described above. As atrial responses (A2) occur progressively earlier in the cardiac cycle (i.e., A1A2 intervals progressively shorten), ventricular intervals (V1V2) also progressively decrease. Because the decrease in V1V2 is proportional to A1A2 shortening, the data points fall on a straight line (identity line; slope = +1) that represents the theoretical curve of no AV conduction delay.
+At shorter A1A2 intervals, decremental conduction occurs; therefore, A2V2 conduction time increases and thus V1V2 intervals fall above the identity line. The point at which the V1V2 interval deviates from the identity line indicates the beginning of the RRP of the AVN tissue. Thus, the AVRRP (88 ms in Fig. 10) is deﬁned as the longest coupling interval of a premature stimulus that results in a prolonged conduction of a premature impulse (A1A2) relative to that of a basic driving cycle (A1A1). Therefore, the beginning of RRP indicates the end of the full recovery period, representing the zone during which conduction of the premature and driving cycle are identical and, thus, output intervals fall on the straight line of no AV conduction delay (identity line).
+As A1A2 is progressively shortened, conduction is initially delayed by a relatively small amount. This is caused by a horizontal course of the recovery curve that parallels the horizontal line for long A1A2 (Fig. 9d, upper panel; Fig. 10, bottom right panel). Overall, the V1V2 and H1H2 decrease in parallel to shortening of A1A2. As the recovery curves start to rise at shorter A1A2, H1H2 and V1V2 intervals deviate more and more from the straight line, points fall more and more above the line and the curve reaches a minimum (73 ms) at a critical A1A2 interval of 62 ms (Fig. 10; bottom left panel). This is the shortest V1V2 interval between two consecutively conducted impulses through the AVN and propagated to the His bundle and indicates the AVFRP. It corresponds to the y value of the minimum of the refractory curve. The FRP is a measure of the output from a tissue. It describes the ability of electrically active tissue to sustain conduction of premature impulses between the point of stimulation and the point of recording. To measure the FRP, two requirements need to be met: (a) measurement of the atrial response at a proximal point close to the structure whose refractoriness is being assessed (in this case, the A1A2 interval close to the proximal entry of the AVN) and (b) recording of the propagated impulse immediately distal to the conducting tissue (e.g., the His potential in response to AV nodal propagation; Fig. 9b).
+Surprisingly, when the coupling interval is further shortened, V1V2 and H1H2 are determined by the hyperbolic recovery curve, which rises more prominently than the A1A2 straight line falls. Consequently, V1V2 and H1H2 begin to increase (ascending left limb of the curve), even though the atrial interval shortened further. It has been shown that this increase occurs at very short coupling intervals because impulse propagation stops for some time at a junctional location. In some cases, an ascending left limb of the curve does not occur. In this particular situation, a horizontal branch is seen in the refractory curve that at the same time is the minimum of the curve (not shown). This is the case when the recovery curve rises only by the amount the straight-line falls. Nevertheless, both the ascending and the horizontal limb of the refractory curve indicate that, at short A1A2 intervals, impulse propagation stops for a short time at a junctional site and is then reinitiated. The time for which
+
+1218
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+electrical impulses stop can roughly be estimated from the length of the horizontal branch plus the length of the ascending limb5. In the particular case of the experiment shown in Fig. 10, the time would be 7.8 ms.
+At very short A1A2 intervals, conduction of the premature impulse is blocked (A1A2 = 53 ms in Fig. 10). The speciﬁc A1A2 interval leading to complete block is deﬁned as ERP. Thus, the AVERP is deﬁned as the A1A2 interval corresponding to the longest S1S2 pacing interval with loss of AV nodal conduction.
+It is also possible to plot the intervals between His bundle responses (H1H2 intervals) against the atrial intervals (A1A2) for the same experiment instead of the V1V2 intervals. The H1H2 intervals behave exactly like the V1V2 values in their trajectory, suggesting that the increase in AV conduction time that occurs with premature atrial pacing is entirely conﬁned to the region of the AVN, i.e., between the atrial and His bundle electrograms. Consistent with this notion, HV intervals are constant across all premature pacing intervals in these experiments.
+
+Relationship between recovery and refractory curves. AVN recovery curves are characterized by a hyperbolic relation between A1A2 and A2H2 or A2V25,6. Note that the curve is nearly horizontal for long A1A2 intervals and rises steeply for short A1A2 intervals. The refractory curve is a composite curve (H1H2 = A1A2 + A2H2 − A1H1) representing the sum of the recovery curve (A2H2) and the identity straight line given by A1A2 minus an offset A1H1 (A1A2 – A1H1 = H1A2). It approaches the straight line at large A1A2 and approaches the recovery curve at small A1A2.
+Given that the recovery curve is almost horizontal at large A1A2 values, the overall behavior of the refractory curve at long A1A2 is determined by the straight identity line with slope = +1. By contrast, at short A1A2 the hyperbolic recovery curve rises steeply. The increase of the recovery curve is much larger than the decrease due to a fall of the straight line A1A2 − A1H1. Therefore, at short A1A2, the refractory curve is determined by the recovery curve. Given the speciﬁc form of the curve at short and long A1A2 intervals, in the middle part of the curve a minimum V1V2 and H1H2 is present. Please also note that the horizontal line in the recovery curve corresponds to the 135° line in the refractory curve and that the asymptotic vertical line of the y axis in the recovery curve corresponds to the 45° line in the refractory curve.
+Important points to consider for refractory periods. From the above deﬁnition of FRP and ERP, a relation can be derived that needs to be fulﬁlled for faithful propagation of electrical impulses across different regions of the heart. As stated above, the refractory curves are input–output relations, which give output intervals of the distal segment of the conducting cardiac tissue as a function of input intervals at the proximal site of that tissue. FRP represents the fastest output interval of that tissue over the full range of stimulation (input) intervals. For an electrical impulse to be propagated from a proximal tissue segment (for example, the AVN) to the next, more distally located tissue segment (for example, the His network), the FRP of the more proximally located AVN needs to be longer than the ERP of the more distally located His network. If this relation is true for the full range of stimulation intervals, the output will always be longer than the ERP of the more distal segment and impulse propagation will continue. If the FRP of the proximal segment was shorter than the ERP of the more distal segment, the impulse would be blocked in the distal tissue if it arrived at intervals corresponding to the FRP of the proximal tissue.
+On the other hand, to measure the ERP of a more distal site (e.g., the His bundle), the electrical impulse must be conducted to the His bundle, and the FRP of the more proximal AVN needs to be shorter than the ERP of the more distal His bundle. Only if this is the case will the output of the AVN be fast enough to stimulate the His bundle to the point where the ERP is reached and conduction is blocked. Normally, however, this is not the case and the ERP of the AVN is reached and conduction blocked by the AVN before the FRP and ERP of the His bundle is reached.
+Another important point to consider is that the refractory periods depend on the basic pacing cycle, i.e., the A1A1 interval. For example, the refractory periods of the His system shorten with shorter A1A1 cycles. By contrast, the refractory periods of the AVN prolong with shorter A1A1 intervals, leading to a block and lack of delivery of the electrical impulse to the more distal His system.
+A special case arises if cardiac tissue segments each having a different FRP are connected. In this case, the overall response will be determined by the longest FRP.
+Finally, it should be noted that FRP is not a true measure of refractoriness. It is substantially determined by the AVN conduction time of the basic drive beat (A1H1); the longer the A1H1, the shorter the calculated FRP at any A2H2.
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1219
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Supra- and infra-Hisian refractory curves. A2V2 latencies can be further divided into A2H2 and H2V2 latency compounds. This is necessary to evaluate supra- and infra-His conduction. For this purpose, AV, AH and HV intervals are analyzed in intracardiac recordings in which the His signal is visible. AH as a surrogate for supra-Hisian conduction time is deﬁned as the time from the starting point of the atrial (A) signal to the maximum deﬂection of the His (H) signal in the intracardiac lead. HV is deﬁned as the time from the maximum deﬂection of the H signal to the ﬁrst deﬂection of the QRS complex in surface lead II. A2H2 and H2V2 intervals are plotted against A1A2 in Fig. 10. The shape of the curve shown in this ﬁgure is the most common pattern. As A1A2 shortens, A2H2 increases progressively until the ERP is reached and A2 is blocked. In contrast, the infra-Hisian conduction remains constant. This pattern occurs because the ERP of the infra-Hisian system is shorter than the refractory periods of the supra-Hisian system. Therefore, conduction in the AVN is blocked before the refractory period of the infra-Hisian system is reached. There are less common patterns in which the refractory period of the infra-Hisian system can be reached before the refractory period of the supra-Hisian system is reached (type II and type III patterns, not shown).
+
+Discontinuous AV conduction curve
+Dual AV nodal physiology is characterized by discontinuous conduction through the AVN in response to progressively premature programmed stimulation and is the underlying substrate for AV nodal reentrant tachycardia26. Dual AV nodal physiology may occur if two functionally distinct conduction pathways are present in the AVN that are proximally and distally connected and form a closed circuit. The pathway with the faster conduction velocity (beta pathway) has a longer refractory period. As a consequence, it takes longer for the beta pathway to recover and respond to an incoming activation. The slower alpha pathway has a shorter refractory period and recovers faster. Therefore, the alpha pathway can respond earlier than the beta pathway. If a premature beat occurs during the period when the fast pathway is still refractory but the slow pathway is not, the premature signal will travel down the slow pathway, prolonging the AH (and PR) interval. When the early signal reaches the more distal connection between the two pathways, it is possible that the faster one is now ready to electrically conduct. When this happens, the early signal splits, with part of it traveling downward along the normal conduction system into the ventricles. The other part of the signal returns backward, or retrograde, to the atrium via the fast pathway, causing a retrograde atrial signal (and P wave), called an atrial echo (Ae). Due to dual AV nodal pathways, discontinuous AV conduction can occur if the fast beta pathway is still refractory at short S1S2 coupling intervals. Hence, the conduction time increases abruptly at very short stimulation intervals (S1S2), resulting in discontinuous AV nodal refractory and recovery curves (Extended Data Fig. 2).
+
+Atrioventricular nodal ERP
+To determine AVNERP, the same measurements taken to obtain AV nodal refractory and recovery curves are used (Fig. 10). AVNERP is deﬁned as the ﬁrst (longest) S1S2 interval with loss of AV nodal conduction (Extended Data Fig. 3). This value can easily be determined on-line during the measurements. This is important because this value is needed for the stimulation protocol to determine AERP. Note that, in contrast, AVERP is deﬁned as the longest A1A2 interval at which the AV nodal conduction stops. In most cases, AVNERP and AVERP are identical or differ only minimally. However, AVERP can only be accurately determined after measurement.
+
+Wenckebach point WBP is deﬁned as the ﬁrst (longest) S1S1 coupling interval at which AV block is observed (Extended Data Fig. 4).
+
+2:1 conduction Using the same measurements taken to identify WBP, 2:1 conduction is determined as the ﬁrst (longest) S1S1 coupling interval at which 2:1 AV block is observed (Extended Data Fig. 4).
+
+Determination of atrial and ventricular refractory periods The concept of determining the refractoriness can be applied to any cardiac tissue, to the atrium, the ventricle and each component of the AV conduction system. It can be graphically presented as input versus output functions of the respective component of the cardiac tissue. For example, for the determination of atrial refractory periods, stimulation and recording electrodes in the atria are used.
+
+1220
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+For the determination of refractory periods of the ventricle, stimulation and recording electrodes in the ventricle are used. Atrial or ventricular ERP is reached when absolute refractory period of the atria/ventricles is reached and the atria/ventricles fail to conduct (Extended Data Figs. 5 and 6). Atrial/ventricular RRP is the longest coupling interval that induces the delay in the conduction time between the stimulus and the atrial or ventricular response (latent period starts). The atrial/ventricular FRP is deﬁned by the beginning of the decremental conduction, when conduction time starts to increase and deviates from the line of identity. (Note that FRP time is not a speciﬁc point on the action potential like ERP and RRP. It is related more closely to the transmission velocity of the tissue and its decremental conduction properties.)
+VERP (Extended Data Fig. 6) was evaluated analogously to AVNERP. The S1S1 intervals were 100 ms, 90 ms and 80 ms. The coupling interval S1S2 was stepwise reduced in 2 ms steps to 30 ms. Using a similar protocol, AERP could not reliably be determined due to superposition of atrial and ventricular electrograms at premature coupling intervals below 40 ms. To circumvent this problem, the following three-step protocol was used: after applying a train of eight S1 stimuli, an extra stimulus (S2) was given to induce AV conduction block at an S1S2 coupling interval 5 ms shorter than the determined AVNERP, followed by an increasingly premature S3. AERP was determined as longest S2S3 with absent atrial response (Extended Data Fig. 5).
+
+Atrial effective refractory period AERP is determined as the ﬁrst (longest) S2S3 interval with loss of atrial depolarization (Extended Data Fig. 5).
+
+Ventricular effective refractory period VERP is determined as the ﬁrst (longest) S1S2 interval with missing ventricular depolarization (Extended Data Fig. 6).
+
+Reporting Summary Further information on research design is available in the Nature Research Reporting Summary linked to this article.
+
+Data availability The data supporting the ﬁndings of this study are available within the paper and its supplementary information ﬁles. Source data are provided with this paper.
+
+References
+
+1. Berul, C. I. Electrophysiological phenotyping in genetically engineered mice. Physiol. Genomics 13, 207–216 (2003).
+2. Berul, C. I., Aronovitz, M. J., Wang, P. J. & Mendelsohn, M. E. In vivo cardiac electrophysiology studies in the mouse. Circulation 94, 2641–2648 (1996).
+3. Li, N. & Wehrens, X.H. Programmed electrical stimulation in mice. J. Vis. Exp. https://doi.org/10.3791/1730 (2010).
+4. Narula, O. S., Samet, P. & Javier, R. P. Signiﬁcance of the sinus-node recovery time. Circulation 45, 140–158 (1972).
+5. Rosenblueth, A. Functional refractory period of cardiac tissues. Am. J. Physiol. 194, 171–183 (1958). 6. Simson, M. B., Spear, J. & Moore, E. N. The relationship between atrioventricular nodal refractoriness and
+the functional refractory period in the dog. Circ. Res. 44, 121–126 (1979). 7. Strauss, H. C., Saroff, A. L., Bigger, J. T. Jr. & Giardina, E. G. Premature atrial stimulation as a key to the
+understanding of sinoatrial conduction in man. Presentation of data and critical review of the literature. Circulation 47, 86–93 (1973). 8. LaBarre, A. et al. Electrophysiologic effects of disopyramide phosphate on sinus node function in patients with sinus node dysfunction. Circulation 59, 226–235 (1979). 9. Saba, S., Wang, P. J. & Estes, N. A. 3rd. Invasive cardiac electrophysiology in the mouse: techniques and applications. Trends Cardiovasc. Med. 10, 122–132 (2000). 10. Fenske, S. et al. Sick sinus syndrome in HCN1-deﬁcient mice. Circulation 128, 2585–2594 (2013). 11. Fenske, S. et al. cAMP-dependent regulation of HCN4 controls the tonic entrainment process in sinoatrial node pacemaker cells. Nat. Commun. 11, 5555 (2020). 12. Fenske, S. et al. Comprehensive multilevel in vivo and in vitro analysis of heart rate ﬂuctuations in mice by ECG telemetry and electrophysiology. Nat. Protoc. 11, 61–86 (2016). 13. Hagendorff, A. et al. Conduction disturbances and increased atrial vulnerability in Connexin40-deﬁcient mice analyzed by transesophageal stimulation. Circulation 99, 1508–1515 (1999).
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+1221
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+14. Kaese, S. & Verheule, S. Cardiac electrophysiology in mice: a matter of size. Front. Physiol. 3, 345 (2012).
+15. Verheule, S. et al. Cardiac conduction abnormalities in mice lacking the gap junction protein connexin40. J. Cardiovasc. Electrophysiol. 10, 1380–1389 (1999).
+16. Coates, S. & Thwaites, B. The strength–duration curve and its importance in pacing efﬁciency: a study of 325 pacing leads in 229 patients. Pacing Clin. Electrophysiol. 23, 1273–1277 (2000).
+17. Clasen, L. et al. A modiﬁed approach for programmed electrical stimulation in mice: inducibility of ven-
+tricular arrhythmias. PLoS ONE 13, e0201910 (2018).
+18. Reiffel, J. A., Bigger, J. T. Jr. & Konstam, M. A. The relationship between sinoatrial conduction time and sinus cycle length during spontaneous sinus arrhythmia in adults. Circulation 50, 924–934 (1974).
+19. Kugler, J. D., Gillette, P. C., Mullins, C. E. & McNamara, D. G. Sinoatrial conduction in children: an index of sinoatrial node function. Circulation 59, 1266–1276 (1979).
+20. Jalife, J. The sucrose gap preparation as a model of AV nodal transmission: are dual pathways necessary for reciprocation and AV nodal “echoes”? Pacing Clin. Electrophysiol. 6, 1106–1122 (1983).
+21. Rosenblueth, A. The operator of the atrioventricular node. Arch. Inst. Cardiol. Mex. 25, 171–193 (1955).
+22. Paes de Carvalho, A. & de Almeida, D. F. Spread of activity through the atrioventricular node. Circ. Res. 8, 801–809 (1960).
+23. Eﬁmov, I. R. et al. Structure–function relationship in the AV junction. Anat. Rec. A Discov. Mol. Cell Evol. Biol. 280, 952–965 (2004).
+24. Hoffman, B. F., De Carvalho, A. P. & De Mello, W. C. Transmembrane potentials of single ﬁbres of the atrioventricular node. Nature 181, 66–67 (1958).
+25. Billette, J. Atrioventricular nodal activation during periodic premature stimulation of the atrium. Am. J. Physiol. 252, H163–H177 (1987).
+26. Katritsis, D. G. & Camm, A. J. Atrioventricular nodal reentrant tachycardia. Circulation 122, 831–840 (2010). 27. Hoffman, B. F. & Singer, D. H. Effects of digitalis on electrical activity of cardiac ﬁbers. Prog. Cardiovasc. Dis.
+7, 226–260 (1964).
+
+Acknowledgements
+This work was supported by the German Research Foundation (FE 1929/1-1, FE 1929/2-2, WA 2597/3-1, WA 2597/3-2, BI 484/5-1, BI 484/5-2, project P06 of TRR152).
+
+Author contributions
+K.H. carried out in vivo experiments, data analysis and ﬁgure preparation, and wrote the manuscript. R.R. carried out ex vivo experiments, data analysis and ﬁgure preparation. J.R. carried out ex vivo experiments and provided veterinary advice. Y.W. carried out ex vivo experiments. S.T. provided images for ﬁgure preparation. M.B. wrote parts of the manuscript. S.F carried out in vivo experiments, performed data analysis and composed the ﬁgures. C.W.S. and S.F. wrote the manuscript, designed the protocol and provided funding.
+Competing interests
+The authors declare no competing interests.
+
+Additional information
+Extended data is available for this paper at https://doi.org/10.1038/s41596-021-00678-z. Supplementary information The online version contains supplementary material available at https://doi.org/10.1038/s41596-021-00678-z. Correspondence and requests for materials should be addressed to Christian Wahl-Schott or Stefanie Fenske. Peer review information Nature Protocols thanks Alicia D’Souza, Roddy Hiram and Na Li for their contribution to the peer review of this work. Reprints and permissions information is available at www.nature.com/reprints. Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional afﬁliations.
+
+Received: 27 September 2021; Accepted: 9 December 2021; Published online: 21 March 2022
+
+Related links
+Key references using this protocol Fenske, S. et al. Nat. Commun. 11, 5555 (2020): https://doi.org/10.1038/s41467-020-19304-9 Fenske, S. et al. Circulation 128, 2585–2594 (2013): https://doi.org/10.1161/CIRCULATIONAHA.113.003712 Fenske, S. et al. Nat. Protoc. 11, 61–86 (2016): https://doi.org/10.1038/nprot.2015.139
+
+1222
+
+NATURE PROTOCOLS | VOL 17 | MAY 2022 | 1189–1222 | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Extended Data Fig. 1 | SACT NM. Stimulation protocol parameters, surface ECG lead I and intracardiac lead RVp are displayed. Schematic ladder diagram (middle) depicts the activation sequence during assessment of SACT with the Narula method. The red areas indicate retrograde and anterograde SACT, respectively. ATR, atrium. Representative recordings are obtained from a 4-month-old male mouse.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Extended Data Fig. 2 | Discontinuous AV conduction. Stimulation protocol parameters, surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed during premature atrial stimulation. (Upper) The representative ECG traces show discontinuous AV conduction following a premature beat with a coupling interval of 48 ms. The impulse generated by S2 travels down the slow alpha pathway (long A2V2) and retrogradely excites the beta pathway, producing an atrial echo (Ae). (Lower) Discontinuous AV nodal refractory and recovery curves. At a critical S1S2 interval of 58 ms, an abrupt increase in AV conduction time occurs. Unfortunately, a His deﬂection was not visible in these recordings. Representative recordings are obtained from a 4-month-old male mouse.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Extended Data Fig. 3 | AVNERP. Stimulation protocol parameters, surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed during premature atrial stimulation. The representative ECG traces depict that at a critical S1S2 interval of 42 ms a block of AV conduction occurs. The stimulus S2 induces an atrial signal A2 that is not followed by a ventricular signal. AVNERP is deﬁned as the longest S1S2 interval with loss of AV nodal conduction. Representative recordings are obtained from a 2-month-old male mouse.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+NATURE PROTOCOLS | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Extended Data Fig. 4 | WBP and 2:1 conduction. a, Stimulation protocol parameters to identify the anterograde WBP and 2:1 cycle length. b, Determination of WBP. Surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed during atrial stimulation. At a critical S1S1 interval of 54 ms, the ﬁrst AV block occurs. The sixth stimulus is not conducted from the atria to the ventricles. c, Determination of 2:1 conduction. Surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed during atrial stimulation. At a critical S1S1 interval of 48 ms, 2:1 conduction occurs. Every second atrial activation is conducted to the ventricles. For clarity, the timepoints of stimulus application in b and c are connected to the corresponding R peaks in the surface ECG. Representative recordings are obtained from a 2-month-old male mouse.
+
+NATURE PROTOCOLS | www.nature.com/nprot
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Extended Data Fig. 5 | AERP. (Upper) Stimulation protocol parameters, surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed during atrial stimulation. At a critical S2S3 interval, no atrial response is elicited because the atrial tissue is still refractory. AERP is determined as the ﬁrst (longest) S2S3 interval with loss of atrial depolarization. (Lower) Representative refractory curve and recovery curve of the atrial myocardium. The curves are determined by premature stimulation using the protocol described in the upper panel. Representative recordings and graphical analysis are obtained from a 4-month-old male mouse.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Extended Data Fig. 6 | VERP. (Upper) Stimulation protocol parameters, surface ECG lead II and intracardiac leads HRAp, RVd and RVp are displayed during ventricular stimulation. At a critical S1S2 interval, no ventricular response is elicited because the ventricular tissue is still refractory. VERP is determined as the ﬁrst (longest) S1S2 interval with loss of ventricular depolarization. (Lower) Representative refractory curve and recovery curve of the ventricular myocardium. The curves are determined by premature stimulation using the protocol described in the upper panel. Representative recordings are obtained from a 4-month-old male mouse. Representative graphical analysis is derived from a 4-month-old male mouse.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Extended Data Fig. 7 | Burst stimulation protocols to test vulnerability to arrhythmia. a, Stimulation protocol parameters to induce atrial tachycardia. b, Atrial ﬂutter following atrial burst stimulation. Surface ECG lead II and intracardiac leads HRAp and RVp are displayed. Example of sustained atrial tachycardia with a typical saw-tooth pattern of P waves on the surface ECG induced by atrial burst pacing with 100 stimuli with an interval of 10 ms. Atrial ﬂutter can be distinguished from atrial ﬁbrillation, since in atrial ﬁbrillation the atrial rate is so fast that the P waves are no longer identiﬁable. Regular AV conduction with a 3:1 conduction pattern can best be identiﬁed in lead RVp. Atrial and ventricular cycles were regular with a cycle length of 26 ms and 104.3 ± 0.5 ms, respectively. Representative recordings are obtained from a 4-month-old male WT mouse. c, Stimulation protocol parameters to induce ventricular tachycardia. d, Nonsustained ventricular tachycardia (NSVT) following ventricular burst stimulation. Surface ECG lead I and intracardiac leads HRAd and RVp are displayed during ventricular burst stimulation. NSVT was induced by eight burst stimuli with an interval of 32 ms in a WT mouse. This example shows a run of NSVT, which lasted for 1.8 s and was spontaneously terminated and converted to normal sinus rhythm. Representative recordings are obtained from a 2-month-old male mouse.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+Extended Data Fig. 8 | Ex vivo surface and intracardiac ECG recording under baseline conditions and during VNS. a, HR tachogram before, during and after VNS. Duration of nerve stimulation is indicated by the yellow line. Basal mean HR and mean HR during VNS are indicated by gray lines. The timepoints, for the representative ECG traces shown in b and c, are marked by blue circles. b,c, Surface ECG lead II and intracardiac leads HRAd, HRAp, RVd, and RVp are displayed during basal conditions (b) and during VNS (c). VNS stimulation artifacts are indicated (yellow). Representative recordings are obtained from a 4-month-old male mouse.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Extended Data Fig. 9 | Ex vivo SNRT without and during VNS. a, Representative HR tachograms derived from surface ECG recordings of a Langendorff-perfused heart before, during and after applying the SNRT stimulation protocol. SNRT recordings were performed without (left) and during VNS (right). Overdrive pacing duration is indicated by a gray line, and duration of VNS is depicted by a yellow line. Blue dashed rectangles represent the areas magniﬁed in b. b, Surface ECG lead II and intracardiac leads HRAp RVd and RVp are displayed from measurements without (1) and during VNS (2). VNS stimulation artifacts are indicated (yellow). SNRT is measured as the interval between the last stimulation spike S1 and the ﬁrst spontaneous, sinus-node-triggered atrial activation A2 (SNRT = S1A2 interval). c, To calculate cSNRT, subtract the average SCL from SNRT. VNS signiﬁcantly increases cSNRT values at a pacing cycle of 120 ms. Representative recordings are obtained from a 4-month-old male mouse. Statistical data are obtained from 3–4-month-old male mice.
+NATURE PROTOCOLS | www.nature.com/nprot
+
+NATURE PROTOCOLS
+
+PROTOCOL
+
+NATURE PROTOCOLS | www.nature.com/nprot
+
+PROTOCOL
+
+NATURE PROTOCOLS
+
+Extended Data Fig. 10 | Ex vivo WBP and 2:1 conduction during VNS. a, Representative HR tachogram derived from the surface ECG recording during VNS. Blue dashed squares indicate pacing cycles at which the WBP or the ﬁrst 2:1 conduction occur. The duration of the VNS is depicted by a yellow line. The basal mean HR and mean HR under VNS are presented by gray lines. b, Magniﬁcation of the timepoints indicated in a. Data points are shown with circles. WBP is reﬂected in a shortened/unstable paced HR in the HR tachogram, and 2:1 conduction shows a paced HR reduced by half. c, Duration of S1S1 coupling intervals where the WBP and ﬁrst 2:1 conduction occurred under basal and VNS condition. d, Detailed surface and intracardiac ECG of the WBP (left) and 2:1 conduction (right) from the recording shown in a. Representative recordings are obtained from a 3-monthold male mouse. Statistical data are obtained from 3–4-month-old male mice.
+
+NATURE PROTOCOLS | www.nature.com/nprot
+
+nature portfolio | reporting summary
+
+Stefanie Fenske Corresponding author(s): Christian Wahl-Schott Last updated by author(s): Sep 27, 2021
+Reporting Summary
+Nature Portfolio wishes to improve the reproducibility of the work that we publish. This form provides structure for consistency and transparency in reporting. For further information on Nature Portfolio policies, see our Editorial Policies and the Editorial Policy Checklist.
+
+Statistics
+For all statistical analyses, confirm that the following items are present in the figure legend, table legend, main text, or Methods section.
+n/a Confirmed The exact sample size (n) for each experimental group/condition, given as a discrete number and unit of measurement A statement on whether measurements were taken from distinct samples or whether the same sample was measured repeatedly The statistical test(s) used AND whether they are one- or two-sided Only common tests should be described solely by name; describe more complex techniques in the Methods section. A description of all covariates tested A description of any assumptions or corrections, such as tests of normality and adjustment for multiple comparisons
+A full description of the statistical parameters including central tendency (e.g. means) or other basic estimates (e.g. regression coefficient) AND variation (e.g. standard deviation) or associated estimates of uncertainty (e.g. confidence intervals)
+For null hypothesis testing, the test statistic (e.g. F, t, r) with confidence intervals, effect sizes, degrees of freedom and P value noted Give P values as exact values whenever suitable.
+For Bayesian analysis, information on the choice of priors and Markov chain Monte Carlo settings For hierarchical and complex designs, identification of the appropriate level for tests and full reporting of outcomes Estimates of effect sizes (e.g. Cohen's d, Pearson's r), indicating how they were calculated
+Our web collection on statistics for biologists contains articles on many of the points above.
+
+Software and code
+Policy information about availability of computer code
+Data collection In vivo EPS: EP-Tracer_V1.05, Schwarzer Cardiotek Ex vivo EPS: Labchart v8.1.16, ADInstruments and EP-Tracer_V1.05, Schwarzer Cardiotek
+
+Data analysis
+
+In vivo EPS: EP-Tracer_V1.05, Schwarzer Cardiotek Ex vivo EPS: Labchart v8.1.16, ADInstruments and EP-Tracer_V1.05, Schwarzer Cardiotek Excel 2013 (Microsoft Corporation USA) Origin® 2018 (OriginLab Corporation)
+
+For manuscripts utilizing custom algorithms or software that are central to the research but not yet described in published literature, software must be made available to editors and reviewers. We strongly encourage code deposition in a community repository (e.g. GitHub). See the Nature Portfolio guidelines for submitting code & software for further information.
+
+Data
+Policy information about availability of data All manuscripts must include a data availability statement. This statement should provide the following information, where applicable:
+- Accession codes, unique identifiers, or web links for publicly available datasets - A description of any restrictions on data availability - For clinical datasets or third party data, please ensure that the statement adheres to our policy
+
+The source data underlying Figures 3, 7, 8, 10; Extended Data Figures 1-10 and Tables 3-6 are provided with this paper as Source Data files.
+
+1
+
+March 2021
+
+nature portfolio | reporting summary
+
+Field-specific reporting
+
+Please select the one below that is the best fit for your research. If you are not sure, read the appropriate sections before making your selection.
+
+Life sciences
+
+Behavioural & social sciences
+
+Ecological, evolutionary & environmental sciences
+
+For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf
+
+Life sciences study design
+
+All studies must disclose on these points even when the disclosure is negative.
+
+Sample size
+
+No statistical methods were used to predetermine sample size. Sample sizes were chosen based on previous experience and considered to be sufficient based on publications in the field. Effort was taken to keep the number of animals at a minimum.
+
+Data exclusions
+
+Possible technical problems during in-vivo EPS that lead to data exclusion were measurements in which the stimulus did not always lead to a capture/response, in which an animal's spontaneous heart rate was temporarily or permanently faster than the S1S1 stimulus interval, or premature termination of the experiment due to an uncontrollable stage of anaesthesia. All exclusion criteria were pre-established
+
+Replication
+
+All attempts at replication were successful.
+
+Randomization Randomization is not relevant to our study because no different experimental groups were compared.
+
+Blinding
+
+Blinding is not relevant to our study because no different experimental groups were compared.
+
+Reporting for specific materials, systems and methods
+
+We require information from authors about some types of materials, experimental systems and methods used in many studies. Here, indicate whether each material, system or method listed is relevant to your study. If you are not sure if a list item applies to your research, read the appropriate section before selecting a response.
+
+Materials & experimental systems
+n/a Involved in the study Antibodies Eukaryotic cell lines Palaeontology and archaeology Animals and other organisms Human research participants Clinical data Dual use research of concern
+
+Methods
+n/a Involved in the study ChIP-seq Flow cytometry MRI-based neuroimaging
+
+Animals and other organisms
+
+Policy information about studies involving animals; ARRIVE guidelines recommended for reporting animal research
+
+Laboratory animals
+
+WT mice were obtained by in-house breeding and maintained on a mixed C57BL/6N and 129/SvJ background.
+
+All in vivo measurements were carried out in male animals . Sexes were not mixed because there are significant sex differences in cardiac parameters.
+
+Age of animals used in the experiments: In vivo electrophysiology: 2-4 months Ex vivo electrophysiology: 3-4 months
+
+Wild animals
+
+No wild animals were used.
+
+Field-collected samples No field-collected samples were used.
+
+Ethics oversight
+
+All animal studies were approved by the Regierung von Oberbayern, were in accordance with German laws on animal experimentation, and were performed in compliance with widely accepted ethical standards. Effort was taken to keep the number of animals at a minimum.
+
+2
+
+March 2021
+
+nature portfolio | reporting summary
+
+Note that full information on the approval of the study protocol must also be provided in the manuscript.
+3
+
+March 2021
+

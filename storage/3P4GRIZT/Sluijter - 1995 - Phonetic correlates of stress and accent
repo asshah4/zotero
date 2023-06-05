@@ -1,0 +1,886 @@
+      
+                    
+              
+                
+
+            
+          
+      
+                        
+                      
+  
+    <html>
+<!-- standard_html_header -->
+<HEAD>
+<META name="description" content="An academic directory and search engine">
+<META name="keywords" content="Accents and accentuation; Sluijter (1995) Phonetic correlates of stress and accent">
+<title
+  >Sluijter (1995) Phonetic correlates of stress and accent</title>
+<STYLE TYPE="text/css">
+  H1 { font-size: large; color: black; font-weight: bold; margin-top: 2px; margin-bottom: 2px }
+  H2 { font-size: medium; color: black; font-weight: bold; margin-top: 2px; margin-bottom: 2px }
+</STYLE>
+<BASEFONT SIZE="2">
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+function PopUp() {
+open("/PopUp","Window1","width=500,height=300");
+}
+//-->
+</SCRIPT>
+
+</HEAD>
+
+  
+  
+  
+  
+  
+  
+  
+<!dtml-unless "_.SecurityGetUser().has_role('Manager')">
+  
+<!/dtml-unless>
+
+
+
+<body leftmargin="0" rightmargin="0" topmargin="0" bgcolor="FFFFFF" link="5072B8" alink="C0C0C0" vlink="5072B8" 
+    >
+<DIV ALIGN="center">
+<table width=100% cellpadding=0 cellspacing=0 bgcolor=FFFFFF border=0>
+  <tr>
+    <td align=center valign=top>
+      <table width=100% cellpadding=0 cellspacing=0>
+        <tr bgcolor=5072B8>
+          <td align=center>
+            <table width=100% cellpadding=0 cellspacing=0 bgcolor=CCCC99>
+              <tr bgcolor=5072B8>
+                <td align=left valign=bottom bgcolor=5072B8 nowrap
+                  ><font face="Century Gothic" color=FFFFFF size=4
+                  ><b><big><big>&nbsp;getCITED</big></big></b></font>&nbsp;&nbsp;&nbsp;
+                </td>
+                <td align=RIGHT valign=BOTTOM>
+                  <!GoogleAd>
+                </td>
+              </tr>
+              <tr bgcolor=5072B8>
+                <td width=100% align=left valign=bottom bgcolor=5072B8 colspan=2 nowrap
+                  ><img src="/images/shim.gif" width=1 height=3 border=0></td>
+              </tr>
+              <tr bgcolor=000000
+                ><td colspan="2"
+                  ><img src="/images/shim.gif" height=1 width=1 border=0
+                ></td
+              ></tr>
+              <tr>
+                <td align=LEFT
+                  ><font size=2><B
+                  ><!-- nav0_dtml -->
+
+<table cellpadding=0 cellspacing=0 border=0>
+  <tr>
+      <td align=center valign=middle><FONT size=2><B>
+      &nbsp;&nbsp;<a href="/" tabindex="100" taborder="100"
+      >Home</a>&nbsp;&nbsp;
+    </td>
+      <td align=center valign=middle><FONT size=2><B>
+      &nbsp;&nbsp;<a href="/search/" tabindex="100" taborder="100"
+      >Search</a>&nbsp;&nbsp;
+    </td>
+      <td align=center valign=middle><FONT size=2><B>
+      &nbsp;&nbsp;<a href="/add/" tabindex="100" taborder="100"
+      >Add Content</a>&nbsp;&nbsp;
+    </td>
+      <td align=center valign=middle><FONT size=2><B>
+      &nbsp;&nbsp;<a href="/reports/" tabindex="100" taborder="100"
+      >Reports</a>&nbsp;&nbsp;
+    </td>
+      <td align=center valign=middle><FONT size=2><B>
+      &nbsp;&nbsp;<a href="/help/" tabindex="100" taborder="100"
+      >Help</a>&nbsp;&nbsp;
+    </td>
+    </tr>
+</table>
+
+<!-- /nav1_dtml --></font>
+                </td>
+                <td align=right valign=middle bgcolor=CCCC99 colspan=1 nowrap>
+                          
+<table width=100% CELLPADDING=0 CELLSPACING="0" border=0>
+  <FORM ACTION="/search/results" METHOD="post">
+  <tr bgcolor=CCCC99>
+    <td align=right valign=bottom nowrap>
+      <select name=SEARCH tabindex=1 taborder=1>
+        <option value="PUBLICATIONS" NAME="SEARCH" selected>Publications
+        <option VALUE="IDENTITIES" NAME="SEARCH" >People
+        <option VALUE="DEPARTMENTS" NAME="SEARCH" >Faculties
+        <option VALUE="INSTITUTIONS" NAME="SEARCH" >Institutions
+      </select
+      ><input type="text" taborder=2 tabindex=2 size=30 name="TEXT" 
+            ><input taborder=3 tabindex=3 type=submit value="Search" name="Action"
+    ></td>
+  </tr>
+  </FORM>
+</table>
+
+
+
+                </td>
+              </tr>
+              <tr bgcolor=000000
+                ><td colspan="2"
+                  ><img src="/images/shim.gif" height=1 width=1 border=0
+                ></td
+              ></tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+<!-- /standard_html_header -->
+          
+
+
+
+  
+  
+
+
+  
+
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+  <tr>
+    <td bgcolor=F0F0CC><table width=100% cellpadding=0 cellspacing=0 border=0>
+  <tr><td bgcolor=F0F0CC><img src="/images/shim.gif" width=1 height=3 border=0></td></tr>
+  <tr bgcolor=F0F0CC>
+    <td align=center><font size=2>
+              <a href="/GuestScreen"><B>Edit Publication</B></a>&nbsp;|
+        <a href="/GuestScreen"><B>Edit Contributors</B></a>&nbsp;|
+        <a href="/GuestScreen"><B>Delete Publication</B></a>&nbsp;|
+        <a href="/GuestScreen"><B>Edit References</B></a>&nbsp;|
+        <a href="/GuestScreen"><B>Edit Citations</B></a><BR>
+          </td>
+  </tr>
+  <tr><td bgcolor=F0F0CC><img src="/images/shim.gif" width=1 height=3 border=0></td></tr>
+  <tr><td bgcolor=000000><img src="/images/shim.gif" width=1 height=1 border=0></td></tr>
+  <tr><td bgcolor=F0F0F0><img src="/images/shim.gif" width=1 height=1 border=0></td></tr>
+  <tr bgcolor=F0F0F0>
+    <td align=center nowrap><FONT size=2>
+              <a href="/GuestScreen"><B>Add to Bookstack</B></a>&nbsp;|
+        <a href="/GuestScreen"><B>Show Bookstack</B></a>&nbsp;|
+        <a href="/GuestScreen"><B>Change Bookstack</B></a>
+          </td>
+  </tr>
+  <tr><td bgcolor=F0F0F0><img src="/images/shim.gif" width=1 height=1 border=0></td></tr>
+</table>
+</td>
+  </tr>
+  <tr><td bgcolor=000000><img src="/images/shim.gif" width=1 height=1 border=0></td></tr>
+  <tr><td bgcolor=FFFFFF><img src="/images/shim.gif" width=1 height=5 border=0></td></tr>
+</table>
+
+<TABLE WIDTH=100%><TR><TD VALIGN="TOP">
+<script type="text/javascript"><!--
+google_ad_client = "pub-0095926571345103";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text";
+google_ad_channel ="9978191679";
+google_color_border = "5072B8";
+google_color_bg = "F0F0CC";
+google_color_link = "5072B8";
+google_color_url = "5072B8";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></td><TD valign="TOP"><TABLE WIDTH="100%" BORDER="0">
+  </TABLE>
+
+  
+
+                                          
+                              
+<table width=100% cellpadding=5 cellspacing=0 border=0><tr><td width=100%>
+<table cellpadding=1 cellspacing=0 width=100%>
+      
+      <tr>
+    <td valign=top>
+                  <table cellspacing=0 cellpadding=0 border=0 width=100%>
+        <tr>
+          <td>
+            <table width=100% cellspacing=0 cellpadding=0 bgcolor=FFFFFF border=0>
+  <tr>
+    <td>
+      <h2><b>Phonetic correlates of stress and accent</h2>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor=CCCC99><img src="/images/shim.gif" width=1 height=1 border=0></td>
+  </tr>
+  <tr>
+    <td align=left><font size=2><b>
+      <a href="/GuestScreen"
+      >Post a Comment</a>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor=FFFFFF><img src="/images/shim.gif" width=1 height=3 border=0></td>
+  </tr>
+</table>
+
+          <td>
+        <tr>
+        <tr>
+          <td><FONT size=2>
+            <TABLE CELLPADDING=3 CELLSPACING=0 BORDER="0" width="100%">
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>CONTRIBUTORS:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    
+<TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+  <TR>
+    <TD VALIGN="top" ALIGN="left"><FONT SIZE=2>
+      <TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+                <FORM METHOD="post" action="/publication/LinkContributor">
+        <INPUT type="hidden" name="BYLINE" value="Sluijter, Agatha Martha">
+        <INPUT type="hidden" name="PUBLICATION_ID" value="100384990">
+        <INPUT type="hidden" name="PUB_TYPE_ID" value="2">
+        <INPUT type="hidden" name="AUTHOR_ORDER" value="1">
+                  <INPUT type="hidden" name="MEMBER_ID" value="10122214">
+                                      
+                          <TR>
+                              <td width=1% valign=bottom nowrap>
+            <INPUT type="image" src="/images/linkButton.gif" border=0>&nbsp;
+          </td>
+                              <td width=5% align=left nowrap><FONT SIZE=2>
+            <I>Author</I>:&nbsp;
+          </td>
+          <td align=left><FONT SIZE=2>
+                          <a href="/mbrz/10122214"><B>Sluijter, Agatha Martha</B></a>
+                              (b. 1966, d.
+                ----)
+                                    </td>
+        </tr>
+        </FORM>
+              </table>
+    </td>
+  </tr>
+</table>
+
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>PUBLISHER:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    <TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+  <TR>
+    <TD VALIGN="top" ALIGN="left"><FONT SIZE=2>
+      <TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+        <FORM type="submit" action=
+                                    "/GuestScreen"
+                              >
+        <INPUT TYPE="hidden" NAME="PUBLICATION_ID" VALUE="100384990">
+        <INPUT type="hidden" name="PUBLISHER_NAME" value="Holland Academic Graphics">
+        <TR>
+                                              <td width=1% valign=top nowrap>
+                <INPUT type="image" src="/images/linkButton.gif" border=0>&nbsp;
+              </td>
+                                          <td align=left><FONT SIZE=2>
+                          Holland Academic Graphics
+                                                      &nbsp;(The Hague)
+                                    </td>
+        </tr>
+        </FORM>
+      </table>
+    </td>
+  </tr>
+</table>
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>SERIES TITLE:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    <TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+  <TR>
+    <TD VALIGN="top" ALIGN="left"><FONT SIZE=2>
+      <TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+        <FORM type="submit" action="/publication/LinkParent">
+        <INPUT type="hidden" name="PUBLICATION_ID" value="100384990">
+        <INPUT type="hidden" name="SUPER_TYPE_ID" value="12">
+        <TR>
+                              <td width=1% valign=top nowrap>
+            <INPUT type="image" src="/images/linkButton.gif" border=0>&nbsp;
+          </td>
+                              <td align=left><FONT SIZE=2>
+                                                </td>
+        </tr>
+        </FORM>
+      </table>
+    </td>
+  </tr>
+</table>
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>YEAR:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                          1995
+  
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>PUB TYPE:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    Book
+  
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>VOLUME/EDITION:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>PAGES (INTRO/BODY):</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                      viii,&nbsp;
+  188&nbsp;p.
+
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>SUBJECT(S):</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    Accents and accentuation
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>DISCIPLINE:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                      <I>No discipline assigned<I>
+
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>LC NUMBER:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                  P231 .S58 1995
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>HTTP:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>LANGUAGE:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    English
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>PUB ID:</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    100-384-990 
+(<I>Last edited on</I> 
+<a href="/puba/100384990">2002/02/27 16:52:50 US/Mountain</a>)
+            </td>
+    </TR>
+  <TR>
+      <TD valign=top width=5% nowrap><FONT SIZE=2>
+              <B>SPONSOR(S):</B>
+          </TD>
+    <td valign=top><FONT SIZE=2>
+                    <TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+  <TR>
+    <TD VALIGN="top" ALIGN="left"><FONT SIZE=2>
+      <TABLE width=100% border=0 cellspacing=0 cellpadding=0>
+        <FORM type="submit" action="/publication/EditGrants">
+        <INPUT type="hidden" name="PUBLICATION_ID" value="100384990">
+        <INPUT type="hidden" name="SUPER_TYPE_ID" value="12">
+        <TR>
+                              <td width=1% valign=top nowrap>
+            <INPUT type="image" src="/images/edit.gif" border=0>&nbsp;
+          </td>
+                              <td align=left><FONT SIZE=2>
+            <table cellpadding=0 cellspacing=0 border=0>
+                        </table>
+          </td>
+        </tr>
+        </FORM>
+      </table>
+    </td>
+  </tr>
+</table>
+            </td>
+    </TR>
+</table>
+
+          </td>
+        </tr>
+  <tr>
+    <td colspan=1>
+                    <table>
+  <tr>
+    <td><FONT size=2>
+      <B>ABSTRACT:</B><BR>
+              Includes bibliographical references (p. [163]-171).
+          </td>
+  </tr>
+</table>
+
+                </td>
+  </tr>
+
+      </table>
+                </td>
+    <td width=5% valign=top bgcolor="FFFFFF">
+      <table width=100% cellpadding=1 cellspacing=0>
+        <tr>
+          <td width=100%>
+                                      
+
+<table width=100% cellpadding=1 cellspacing=0 bgcolor=CCCC99 border=0>
+  <tr>
+    <td width=100% align=center valign=bottom>
+      <FONT size=2 color=FFFFFF>
+      <B>STATISTICS</B>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width=100% border=0 cellspacing=0 cellpadding=0 bgcolor=F0F0CC>
+        <tr>
+          <td colspan=3 align=center><FONT size=2>
+            <small><I>Click on # to view</i></small>
+          </td>
+        </tr>
+              <tr>
+          <td align=left><FONT size=2>
+            &nbsp;<B>Citations</B>
+          </td>
+          <td align=left><FONT size=2>
+            &nbsp;
+          </td>
+          <td align=right><FONT size=2><B
+            >      0&nbsp;
+          </td>
+        </tr>
+              <tr>
+          <td align=left><FONT size=2>
+            &nbsp;<B>References</B>
+          </td>
+          <td align=left><FONT size=2>
+            &nbsp;
+          </td>
+          <td align=right><FONT size=2><B
+            >      0&nbsp;
+          </td>
+        </tr>
+                <tr>
+          <td align=left><FONT size=2>
+            &nbsp;<B>Comments</B>
+          </td>
+          <td align=left><FONT size=2>
+            &nbsp;
+          </td>
+          <td align=right><FONT size=2><b>
+                                          0&nbsp;
+                                    </td>
+        </tr>
+        <tr>
+          <td align=left><FONT size=2>
+            &nbsp;<B>Quality</B>
+          </td>
+          <td align=left><FONT size=2>
+            &nbsp;
+          </td>
+          <td align=right><FONT size=2>
+                <B>&nbsp;&nbsp;&nbsp;0/<a href="/?PUB=100384990&showStat=Ratings"
+                  >0.00</a></B>&nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td align=left><FONT size=2>
+            &nbsp;<B>Interest</B>
+          </td>
+          <td align=left><FONT size=2>
+            &nbsp;
+          </td>
+          <td align=right><FONT size=2>
+                <B>&nbsp;&nbsp;&nbsp;0/<a href="/?PUB=100384990&showStat=Ratings"
+                            >0.00</a></B>&nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td align=left><FONT size=2>
+            &nbsp;<B>View(er)s</B>
+          </td>
+          <td align=left><FONT size=2>
+          &nbsp;
+          </td>
+          <td align=right><FONT size=2>
+                <B>1/133</B>&nbsp;
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+                                  </td>
+        </tr>
+        <tr>
+          <td width=100%>
+            
+
+
+
+
+
+
+
+
+            
+            
+  
+
+  <script src="http://rcm.amazon.com/e/cm?t=homefordrmichkma&l=st1&search=SLUIJTER%20%20PHONETIC%20CORRELATES%20STRESS%20ACCENT&mode=books&p=9&o=1&bg1=F0F0CC&fc1=000000&lc1=5072B8" type="text/JavaScript"></script>
+  <noscript><MAP NAME="boxmap"><AREA SHAPE="RECT" COORDS="1, 103, 92, 112" HREF="http://rcm.amazon.com/e/cm/privacy-policy.html?o=1" ><AREA COORDS="0,0,10000,10000" HREF="http://www.amazon.com/exec/obidos/redirect-home/homefordrmichkma" ></MAP><img src="http://rcm-images.amazon.com/images/G/01/rcm/180x150.gif" width="180" height="150" border="0" usemap="#boxmap" alt="Shop at Amazon.com"></noscript>
+
+
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td width=100%>
+            <FORM ACTION="/GuestScreen" METHOD="post"
+      >
+<INPUT TYPE="hidden" NAME="PUBLICATION_ID" VALUE="100384990">
+<INPUT TYPE="hidden" NAME="Action" VALUE="Rate">
+  
+  
+
+<table width=100% cellpadding=1 cellspacing=0 bgcolor=CCCC99 border=0>
+  <tr>
+    <td align=center valign=top>
+      <INPUT TYPE="submit" NAME="submit" VALUE="SUBMIT RATING">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width=100% cellpadding=0 cellspacing=0 bgcolor=F0F0CC border=0>
+        <tr>
+          <td width=50% align=center>
+            <table border=0 width=100% cellspacing=0 cellpadding=0 border=0>
+              <tr>
+                <td colspan=3 align=center><FONT size=2>
+                  <B>Quality</B>
+                </td>
+              </tr>
+              <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >N/A
+                </TD>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="0" CHECKED>
+                </TD>
+              </tr>
+              <tr>
+                <td colspan=3 align=center><FONT size=2>
+                  <B>High</B>
+                </td>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >7
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="7" >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >6
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="6" >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >5
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="5" >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >4
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="4" >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >3
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="3" >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >2
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="2" >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >1
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RQUALITY" VALUE="1" >
+                </TD>
+              </tr>
+                            <tr>
+                <td colspan=3 align=center><FONT size=2>
+                  <B>Low</B>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td align=center bgcolor=CCCC99><img src="/images/shim.gif" width=1 height=1 border=0></td>
+          <td width=50% align=center>
+            <table border=0 width=100% cellspacing=0 cellpadding=0 border=0>
+              <tr>
+                <td colspan=3 align=center><FONT size=2>
+                  <B>Interest</B>
+                </td>
+              </tr>
+              <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >N/A
+                </TD>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="0" CHECKED>
+                </TD>
+              </tr>
+              <tr>
+                <td colspan=3 align=center><FONT size=2>
+                  <B>High</B>
+                </td>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >7
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="7" 
+                    >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >6
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="6" 
+                    >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >5
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="5" 
+                    >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >4
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="4" 
+                    >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >3
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="3" 
+                    >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >2
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="2" 
+                    >
+                </TD>
+              </tr>
+                            <tr>
+                <td align=left><FONT size=2>
+                  &nbsp;
+                </td>
+                <TD VALIGN="middle" ALIGN=left><FONT SIZE=2
+                  >1
+                </td>
+                <TD VALIGN="middle" ALIGN=right>
+                  <INPUT TYPE="radio" NAME="RINTEREST" VALUE="1" 
+                    >
+                </TD>
+              </tr>
+                            <tr>
+                <td colspan=3 align=center><FONT size=2>
+                  <B>Low</B>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </FORM>
+      </table>
+    </td>
+  </tr>
+</table>
+
+          </td>
+        </tr>
+        <tr>
+          <td align=center width=100%><b
+            ><a href="/pub/100384989">Prev</a> |
+            <a href="/pub/100384991">Next</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>            
+</table>
+
+</td></tr></table>
+</TD></TR></tABLE>
+
+        <!-- standard_html_footer -->
+
+    </TD>
+  </TR>
+  <TR><td width=100%><table width=100% cellpadding=5 cellspacing=0 border=0><tr>
+    <TD width=100% colspan=5 VALIGN="middle" ALIGN="center" bgcolor="FFFFFF"><FONT SIZE=1>
+      <HR>
+              &nbsp;&nbsp;&nbsp;
+        <A HREF="/help">ABOUT getCITED</A>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <A HREF="/contact"
+          >CONTACT US</A>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <B>USER INFO</B>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <B>PREFERENCES</B>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <A HREF="/help?TERM=Privacy">PRIVACY</A>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <B><A HREF="/utils/NewSession">LOG IN</A></B>&nbsp;&nbsp;&nbsp;
+            <br>
+      <FONT SIZE=2>
+      Comments? Suggestions? Send them to <a href="mailto: feedback@getCITED.org">
+      feedback@getCITED.org</a>.
+      <br><br><small>Copyright &#169 <font color=black>2000</font>-<font color=black>2006</font> getCITED Inc. All Rights Reserved.</small> 
+      </FONT>
+    </TD></tr></table></td>
+  </TR>
+</TABLE>
+
+
+</DIV>
+</BODY></HTML>
+<!-- /standard_html_footer -->
+
+

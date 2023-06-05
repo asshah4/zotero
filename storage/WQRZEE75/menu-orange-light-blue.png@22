@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                    
+
+
+
+    
+    
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+
+
+
+
+            
+              
+
+
+       
+
+
+ 
+
+
+<title>Annual Reviews - 404 Not Found</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+<meta name="robots" content="noarchive,noindex,nofollow" />
+
+
+
+
+
+
+<meta http-equiv="Expires" content="0" />
+ <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+ 
+
+<meta name="MSSmartTagsPreventParsing" content="true"/>
+<link rel="SHORTCUT ICON" href="/templates/jsp/_style4/_ar/favicon.ico"/>
+
+
+
+<link href="/templates/jsp/style.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/style.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/_ar/style.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/css/base-min.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/css/grids-min.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/css/reset-min.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/_ar/style.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/_ar/css/global.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_style4/_ar/css/custommenunav.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/templates/jsp/script.js"></script>
+<script type="text/javascript" src="/templates/jsp/_style4/script.js"></script>
+<script type="text/javascript" src="/templates/jsp/js/yui-min.js"></script>
+<script type="text/javascript" src="/templates/jsp/_style4/_ar/js/script.js"></script>
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<script type="text/javascript">
+        /*
+         * won't use browser specific css anymore, add browser class in body
+         * e.g to add IE specific styling add in beggining of css rule .ie*Body ... {}
+         */
+        function addUAClass() {
+            // when IE6, add ie6Body class in body, when IE7 add class ie7Body
+            // in body and when IE >= 8 add class ieBody in body
+            if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                var ieversion = new Number(RegExp.$1);
+                if (ieversion >= 8) {
+                    document.body.className = document.body.className + ' ieBody';
+                } else if (ieversion == 7) {
+                    document.body.className = document.body.className + ' ie7Body';
+                } else if (ieversion == 6) {
+                    document.body.className = document.body.className + ' ie6Body';
+                }
+            }
+            // when FF add ffBody className in body
+            if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Firefox/x.x or Firefox x.x (ignoring remaining digits);
+                document.body.className = document.body.className + ' ffBody';
+            }
+
+            // when Chrome add chromeBody className in body
+            if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Chrome
+                document.body.className = document.body.className + ' chromeBody';
+            }
+        }
+    </script></head><body onload="addUAClass();" class="yui3-skin-sam Page404 layout_generic">
+<div id="headerContent" class=" ">
+
+
+<div class="headerTop">
+     
+    <span class="logo">
+        <a href="/"><img src="/templates/jsp/_style4/_ar/images/logo.png" alt="Annual Reviews" /></a>
+    </span>
+    <div class="identities-bar">
+        
+
+
+    <div id="identity-bar">
+        <span id="individual-menu">
+            
+
+            
+                    
+                    <a href="https://www-annualreviews-org.proxy.library.emory.edu/action/showLogin?uri=">
+                        Log in
+                    </a>
+                    <span class="divider">
+                        &nbsp; | &nbsp;
+                    </span>
+                    <a href="https://www-annualreviews-org.proxy.library.emory.edu/action/registration">
+                        Register
+                    </a>
+                
+            
+                <span class="divider">
+                    &nbsp; | &nbsp;
+                </span>                
+                <a href="https://www-annualreviews-org.proxy.library.emory.edu/action/mobileDevicePairingLogin">&nbsp;Mobile&nbsp;</a>
+            
+            
+                <span class="divider">
+                    &nbsp; | &nbsp;
+                </span>
+                <a href="/page/activationForm.jsp">
+                    Activate
+                </a>
+            
+            
+                <span class="divider">
+                    &nbsp; | &nbsp;
+                </span>
+                <a href="/help?context=main" onclick="newWindow(this.href);return false;">
+                    Help
+                </a>
+            
+            
+                <span class="divider">
+                    &nbsp; | &nbsp;
+                </span>
+                
+                
+                <a href="/action/showCart?backUri=" class="smallBlackTxt">
+                    <span class="shoppingCart">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    Item:0
+                </a>
+            
+        </span>
+    </div>
+   
+        
+
+
+
+
+
+
+
+
+
+
+    <div id="quickSearch">
+        
+            
+        
+        
+        <form action="/action/doSearch" name="quickSearchLineForm" class="quickSearch" method="get"><div class="searchBox">
+                <span class="searchText">
+                
+                <input type="hidden" name="pageSize" value="20" />
+                <input onkeypress="if(event.keyCode==13) {submitQuickSearch(this.form);return false;}" type="text" name="all" value="" size="40" />
+                </span>
+                <span class="searchBtnImg">
+                    <input onclick="submitQuickSearch(this.form);return false;" class="formbutton" value="" />
+                </span>
+            </div>
+            
+                <div id="radioBtnsLine">
+                <span id="radioBtnsGroup" class="yui3-buttongroup">
+                    
+                        <input id="radio1" type="radio" name="type" value="journals" checked="checked" />
+                        <span class="labelForSearch">Journals</span>
+                    
+                        <input id="radio2" type="radio" name="type" value="geninfo" />
+                        <span class="labelForSearch">General Info</span>
+                    
+                </span>
+                <span class="advSearchLink">
+                    <a href="/action/doSearch">
+                        advanced search
+                    </a>
+                </span>
+            </div></form>
+    </div>
+   
+    </div>
+</div>
+<div class="headerBottom">
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="instBanner">
+    
+            
+            
+                <div class="instText">
+                    <span class="instText1">Access provided by:</span><br/>
+                    <span class="instText2">EMORY UNIVERSITY</span>
+                </div>
+            
+        
+
+</div>
+
+   
+    
+
+
+
+
+
+
+
+    
+
+    <div id="navigationWrapper">
+        <div id="hiddenSubMenu">
+            
+
+
+
+
+
+
+
+
+
+
+
+<div class="multiColumnListWrapper">
+    
+        <ul class="mainNavJournalList ">
+            
+                <li class="journal"><a href="/journal/anchem">Analytical Chemistry</a></li>
+            
+                <li class="journal"><a href="/journal/anthro">Anthropology</a></li>
+            
+                <li class="journal"><a href="/journal/astro">Astronomy and Astrophysics</a></li>
+            
+                <li class="journal"><a href="/journal/biochem">Biochemistry</a></li>
+            
+                <li class="journal"><a href="/journal/bioeng">Biomedical Engineering</a></li>
+            
+                <li class="journal"><a href="/journal/biophys">Biophysics</a></li>
+            
+                <li class="journal"><a href="/journal/cellbio">Cell and Developmental Biology</a></li>
+            
+                <li class="journal"><a href="/journal/chembioeng">Chemical and Biomolecular Engineering</a></li>
+            
+                <li class="journal"><a href="/journal/clinpsy">Clinical Psychology</a></li>
+            
+                <li class="journal"><a href="/journal/arcompsci">Computer Science</a></li>
+            
+                <li class="journal"><a href="/journal/conmatphys">Condensed Matter Physics</a></li>
+            
+        </ul>
+    
+        <ul class="mainNavJournalList ">
+            
+                <li class="journal"><a href="/journal/earth">Earth and Planetary Sciences</a></li>
+            
+                <li class="journal"><a href="/journal/ecolsys">Ecology, Evolution, and Systematics</a></li>
+            
+                <li class="journal"><a href="/journal/economics">Economics</a></li>
+            
+                <li class="journal"><a href="/journal/ento">Entomology</a></li>
+            
+                <li class="journal"><a href="/journal/energy">Environment and Resources</a></li>
+            
+                <li class="journal"><a href="/journal/financial">Financial Economics</a></li>
+            
+                <li class="journal"><a href="/journal/fluid">Fluid Mechanics</a></li>
+            
+                <li class="journal"><a href="/journal/food">Food Science and Technology</a></li>
+            
+                <li class="journal"><a href="/journal/genet">Genetics</a></li>
+            
+                <li class="journal"><a href="/journal/genom">Genomics and Human Genetics</a></li>
+            
+                <li class="journal"><a href="/journal/immunol">Immunology</a></li>
+            
+        </ul>
+    
+        <ul class="mainNavJournalList ">
+            
+                <li class="journal"><a href="/journal/lawsocsci">Law and Social Science</a></li>
+            
+                <li class="journal"><a href="/journal/marine">Marine Science</a></li>
+            
+                <li class="journal"><a href="/journal/matsci">Materials Research</a></li>
+            
+                <li class="journal"><a href="/journal/med">Medicine</a></li>
+            
+                <li class="journal"><a href="/journal/micro">Microbiology</a></li>
+            
+                <li class="journal"><a href="/journal/neuro">Neuroscience</a></li>
+            
+                <li class="journal"><a href="/journal/nucl">Nuclear and Particle Science</a></li>
+            
+                <li class="journal"><a href="/journal/nutr">Nutrition</a></li>
+            
+                <li class="journal"><a href="/journal/pathmechdis">Pathology: Mechanisms of Disease</a></li>
+            
+                <li class="journal"><a href="/journal/pharmtox">Pharmacology and Toxicology</a></li>
+            
+                <li class="journal"><a href="/journal/physchem">Physical Chemistry</a></li>
+            
+        </ul>
+    
+        <ul class="mainNavJournalList lastList">
+            
+                <li class="journal"><a href="/journal/physiol">Physiology</a></li>
+            
+                <li class="journal"><a href="/journal/phyto">Phytopathology</a></li>
+            
+                <li class="journal"><a href="/journal/arplant">Plant Biology</a></li>
+            
+                <li class="journal"><a href="/journal/polisci">Political Science</a></li>
+            
+                <li class="journal"><a href="/journal/psych">Psychology</a></li>
+            
+                <li class="journal"><a href="/journal/publhealth">Public Health</a></li>
+            
+                <li class="journal"><a href="/journal/resource">Resource Economics</a></li>
+            
+                <li class="journal"><a href="/journal/soc">Sociology</a></li>
+            
+        </ul>
+    
+    <div class="contentRight">
+        <ul class="mainNavJournalList"> <li class="journal"><a href="/page/journal/pubdates">Publication Dates</a></li><li class="journal"><a href="/page/help/coursereader">Adding to Your Course Reader</a></li><li class="journal">  <a href="/page/about/copyright-and-permissions">Copyright &amp; Permissions</a></li><li class="journal"><a href="/db/suppl">Supplemental Materials</a></li><li class="journal"><a href="/page/about/metadata">Access Metadata</a>  </li><li class="journal"><a href="/page/about/isi-rankings">JCR Rankings</a></li><li class="journal"><a href="/page/audio">Annual Reviews Audio &amp; Video Series</a></li></ul>
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+
+
+        </div>
+        <div class="navTabs">
+            
+
+<div id="topNavigation" class="yui3-menu yui3-menu-horizontal"><div class="yui3-menu-content"><ul><li class="yui3-menuitem"><a class="yui3-menu-label" href="/action/showPublications"><span class="rnd_corners tp"><span class="rnd1"></span><span class="rnd2"></span><span class="rnd3"></span></span><span class="innerMenuLabel">Journals</span></a></li>
+<li class="yui3-menuitem"><a class="yui3-menu-label" href="/page/subscriptions/general-information"><span class="rnd_corners tp"><span class="rnd1"></span><span class="rnd2"></span><span class="rnd3"></span></span><span class="innerMenuLabel">Subscriptions </span></a><div id="subscriptions-sub-menu" class="yui3-menu yui3-menu-hidden"><div class="yui3-menu-content"><ul><li class="yui3-menuitem"><a href="/page/subscriptions/general-information" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">General Ordering Info</span></a></li>
+<li class="yui3-menuitem"><a href="/page/subscriptions/online-activation-instructions" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Online Activation Instructions</span></a></li>
+<li class="yui3-menuitem"><a href="/action/ecommerce" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Personal Pricing</span></a></li>
+<li class="yui3-menuitem"><a href="/action/ecommerce?subscriberType=institution" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Institutional Pricing</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/society-partnerships" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Society Partnerships</span></a></li>
+</ul></div></div></li>
+<li class="yui3-menuitem"><a class="yui3-menu-label" href="/page/authors/general-information"><span class="rnd_corners tp"><span class="rnd1"></span><span class="rnd2"></span><span class="rnd3"></span></span><span class="innerMenuLabel">Authors </span></a><div id="authors-sub-menu" class="yui3-menu yui3-menu-hidden"><div class="yui3-menu-content"><ul><li class="yui3-menuitem"><a href="/page/authors/general-information" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">General Information</span></a></li>
+<li class="yui3-menuitem"><a href="/page/authors/author-instructions" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Author Instructions</span></a></li>
+</ul></div></div></li>
+<li class="yui3-menuitem"><a class="yui3-menu-label" href="/page/librarians/librarian-resource-page"><span class="rnd_corners tp"><span class="rnd1"></span><span class="rnd2"></span><span class="rnd3"></span></span><span class="innerMenuLabel">Librarians & Agents </span></a><div id="librarians-sub-menu" class="yui3-menu yui3-menu-hidden"><div class="yui3-menu-content"><ul><li class="yui3-menuitem"><a href="/page/librarians/librarian-resource-page" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Librarian Resource Center</span></a></li>
+<li class="yui3-menuitem"><a href="/action/institutionAdminSubscriptionManager" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Librarian Administration Tool</span></a></li>
+<li class="yui3-menuitem"><a href="/page/librarians/sitelicense" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Site License Information</span></a></li>
+<li class="yui3-menuitem"><a href="/page/librarians/terms-and-conditions" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Vendor Terms & Conditions</span></a></li>
+</ul></div></div></li>
+<li class="yui3-menuitem"><a class="yui3-menu-label" href="/page/about/overview"><span class="rnd_corners tp"><span class="rnd1"></span><span class="rnd2"></span><span class="rnd3"></span></span><span class="innerMenuLabel">About</span></a><div id="about-sub-menu" class="yui3-menu yui3-menu-hidden"><div class="yui3-menu-content"><ul><li class="yui3-menuitem"><a href="/page/about/overview" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Overview</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/our-mission-and-our-founder" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Our Mission & Our Founder </span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/philanthropy" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Philanthropy</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/our-team" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Our Team</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/careers-at-annual-reviews" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Careers at Annual Reviews</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/isi-rankings" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">JCR Rankings</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/copyright-and-permissions" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Copyright & Permissions</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/society-partnerships" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Society Partnerships</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/metadata" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Access Metadata</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/news-and-events" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">News & Events</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/news-and-events/awards" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Author Awards</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/faq" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">FAQ</span></a></li>
+<li class="yui3-menuitem"><a href="/db/directory" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Annual Reviews Directory</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/contact-us" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Contact Us</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/rssfeeds" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">RSS Feeds</span></a></li>
+<li class="yui3-menuitem"><a href="/page/about/privacy" class="yui3-menuitem-content"><span class="innerMenuitemContentSpan">Privacy Policy</span></a></li>
+</ul></div></div></li>
+</ul></div></div>
+
+        </div>
+    </div>
+
+    
+    <script type="text/javascript">
+        //  Call the "use" method, passing in "node-menunav".  This will load the
+        //  script and CSS for the MenuNav Node Plugin and all of the required
+        //  dependencies.
+        //  also load module "custommenunavskin" to customize skin of top navigation
+
+        var dict = {
+            modules: {
+                "custommenunavskin": {
+                    type: "css",
+                    fullpath: "/templates/jsp/_style4/_ar/css/custommenunav.css",
+                   supersedes: ['skin-sam-node-menunav']
+               }
+           }
+        };
+
+        // use these values of dict to change way we retrieve content over https
+        // the base is used to load loader-min.js (over https we'll serve it locally)
+        if (document.location.protocol == "https:") {
+            dict['comboBase'] = '/action/yui/combo?';
+            dict['combine'] = true;
+            dict['timeout'] = 10000;
+            dict['base'] = '/templates/jsp/js/';
+        }
+
+        YUI(dict).use("node-menunav", "custommenunavskin", function(Y) {
+            Y.on("domready", function () {
+                var menu = Y.one('#topNavigation');
+                menu.plug(Y.Plugin.NodeMenuNav, { submenuShowDelay: 0, submenuHideDelay: 0 });
+
+                // move hidden submenu of all journals in correct place
+                var hiddenSubMenu = Y.one("div#hiddenSubMenu > div:first-child");
+                var journalsSubMenu = Y.one("div#topNavigation ul li.yui3-menuitem");
+                if(journalsSubMenu != null) {
+                    journalsSubMenu.append(hiddenSubMenu);
+                }
+
+
+                // add custom handler on mouse move, since yui widget will try by default to align
+                // left hand side of submenu with parent menu's item left hand side, for this submenu we wnat it
+                // to display centered under its parent
+                var journalsTopMenuItemLabel = Y.one("div#topNavigation ul li.yui3-menuitem a");
+                journalsTopMenuItemLabel.on('mousemove', setMultiColStyle);
+                
+                function setMultiColStyle() {
+                    var multiColumnsList = Y.one("div#topNavigation .multiColumnListWrapper");
+                    multiColumnsList.setStyle('left', '-32em')
+                    multiColumnsList.setStyle('position', 'absolute');
+                    multiColumnsList.setStyle('top', '4px');
+                    multiColumnsList.setStyle('width', '85em');
+                }
+
+            });
+
+        });
+    </script>
+   
+</div>
+</div>
+                    
+        
+
+
+<div id="bodyWrapper">
+    <div id="doc4">
+        <div class="outerBorder">
+            <div class="innerBorder">
+                <div id="bd">
+                      <div class="shared_bodyWrapper">
+                        <div id="yui3-main">
+                            
+
+
+
+
+
+
+
+            
+              
+
+
+       
+
+
+ 
+<div class=" page_toolbar">
+    <div class="toolBar">
+        
+
+
+
+
+
+
+
+            
+              
+
+
+       
+
+
+ 
+<span class=" page_breadcrumbs">
+    
+        
+    
+
+    
+     
+   
+
+</span>
+
+        
+            
+
+
+
+
+
+
+
+            
+              
+
+
+       
+
+
+ 
+<span class=" page_quickLinks">
+    
+            <a href="/action/showMailPage?href=&amp;title=Annual+Reviews+-+404+Not+Found" onclick="newWindow(this.href); return false;">
+                
+                
+                <img src="/templates/jsp/_style4/_ar/images/envelope.png" border="0" />
+                Email Page To a Friend
+            </a>
+        
+    <!-- AddThis Button BEGIN -->
+    <a class="addthis_button_compact" href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4b6b2e341379daeb">
+        <img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/>
+    </a>
+    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#username=xa-4b6b2e341379daeb"></script>
+    
+    <script type="text/javascript">
+        var addthis_config = {
+            services_compact:'bebo,bitly,care2,citulike,connotea,delicious,digg,diigo,facebook,friendfeed,friendster,googlebuzz,hackernews,linkedin,misterwong,mixx,orkut,reddit,stumbleupon,technorati,tumblr,twitter,buzz',
+            ui_click: true
+        }
+    </script>
+    <!-- AddThis Button END -->
+</span>
+
+        
+    </div>
+</div>
+       
+                
+
+
+<div class=" page_header">
+    <div id="headerText"><h3>We're sorry, this page was not found.</h3></div>
+    <div id="headerGraphic">
+        
+    </div>
+</div>
+       
+                <p class="note">The Annual Reviews website has recently undergone a redesign.<br /><br />You've requested a page that cannot be found. Perhaps you were looking for:</p>            
+            
+            
+            <div class="note">
+                <ul> <li><a href="/page/authors/general-information">Information for Authors</a> <li><a href="/page/librarians/general-information">Information for Librarians</a><li><a href="/page/subscriptions/general-information">Order and Pricing Information</a> <li><a href="/page/subscriptions/online-activation-instructions">Online Activation Information</a></ul><br /><p>Still cant find what you are looking for? Please report the error to the <a href="mailto:web@annualreviews.org">Webmaster</a>.</p>
+            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="outerFooter">
+                    <div id="footer">
+                        
+<span class="rnd_corners tp"><span class="rnd1"></span><span class="rnd2"></span><span class="rnd3"></span></span>
+<div class="footerSnip">
+    
+<span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"> <a style="color: white; text-decoration: none;" href="/page/about/trademark">COPYRIGHT 2010</a>   |   <a style="color: white; text-decoration: none;" title="Supplemental Materials" href="/db/suppl">SUPPLEMENTAL MATERIALS</a>   |   <a style="color: white; text-decoration: none;" title="Personnel Directory" href="/db/directory">ANNUAL REVIEWS DIRECTORY</a>   |   <a style="color: white; text-decoration: none;" href="/page/about/privacy">PRIVACY POLICY</a></span></span><a style="color: white; text-decoration: none;" href="/page/about/privacy"><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;">   |  </span></span></a> <a title="Contact Annual Reviews" href="/page/about/contact-us"><span style="color: white; text-decoration: none;"><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;">CONTACT US</span></span><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"></span></span></span><span style="color: white; text-decoration: none;"><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"></span></span></span></a><a style="color: white; text-decoration: none;" href="../page/about/privacy"><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"> </span></span></a><span style="color: white; text-decoration: none;"><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;">  |  </span></span></span> <a title="Find Us On Facebook" href="http://www.facebook.com/AnnualReviews"><img alt="" style="vertical-align: text-bottom;" title="Find us on Facebook" src="/userimages/ContentEditor/1283923766814/facebook_badgesmall.png" height="21" width="21" /></a>  <a title="Follow Us On Twitter" href="http://www.twitter.com/AnnualReviews"><img alt="" style="vertical-align: text-bottom;" title="Follow Us on Twitter" src="/userimages/ContentEditor/1283923789273/twitter_badge_small.png" height="21" width="21" /></a>  <a title="Connect With Us On LinkedIn" href="http://www.linkedin.com/companies/annual-reviews"><img alt="" style="vertical-align: text-bottom;" title="Connect With Us on LinkedIn" src="/userimages/ContentEditor/1283923812028/linkedin_badge_small.png" height="21" width="21" /></a>  <a title="Follow Us on RSS" href="http://www.annualreviews.org.proxy.library.emory.edu/page/about/rssfeeds"><img alt="" style="vertical-align: text-bottom;" title="Follow Us on RSS" src="/userimages/ContentEditor/1288723394528/rss_image.png" height="21" width="21" /></a> 
+<br />
+
+</div>
+
+
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-1828393-3");
+  pageTracker._trackPageview();
+} catch(err) { }
+</script>
+
+
+<span class="rnd_corners btm"><span class="rnd3"></span><span class="rnd2"></span><span class="rnd1"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomBorder"></div>
+        <div class="bottomFooter">
+            
+<table style="margin: 10px;" class="mceItemTable" width="975">
+<tbody style="text-align: left;">
+<tr style="text-align: left;">
+<td style="text-align: left;" valign="top"><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;">Partner of:  <a title="Agora" href="http://www.aginternetwork.org/en/" target="_blank"><img alt="" src="/templates/jsp/_style4/_ar/images/agora-sml.gif" /></a>    <a title="HINARI" href="http://www.who.int.proxy.library.emory.edu/hinari/en/" target="_blank"><img alt="" src="/templates/jsp/_style4/_ar/images/hinari-sml.gif" /></a>
+<br />
+</span></span></td>
+<td style="text-align: left;" valign="top">
+<p><span class="fontSize2"><br />
+</span></p>
+<p><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;">Technology Partner - <a title="Technology Partner - Atypon" href="http://www.atypon.com/">Atypon</a>
+<br />
+</span></span></p>
+</td>
+<td style="text-align: left;"><span class="fontSize2"><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;">                </span> <a title="Project Counter" href="http://www.projectcounter.org/members.html"><img alt="" src="/templates/jsp/_style4/_ar/images/CounterLogo.jpg" /></a>  <a title="crossref membership" href="http://www.crossref.org/"><img alt="" src="/templates/jsp/_style4/_ar/images/CRMemberLogo.gif" /></a><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"></span></span><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"><span class="fontSize2"><br />
+</span></span></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+    </div>
+</div>
+        </body></html>
+
+
+    

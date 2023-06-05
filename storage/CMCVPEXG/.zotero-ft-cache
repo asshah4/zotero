@@ -1,0 +1,345 @@
+Received: 10 January 2017 DOI: 10.1002/sim.7607
+
+Revised: 20 October 2017
+
+Accepted: 13 December 2017
+
+RESEARCH ARTICLE
+
+Morning surge in blood pressure using a random‐effects multiple‐component cosinor model
+
+J.M. Madden1,2 | L.D. Browne2 | X. Li3 | P.M. Kearney2 | A.P. Fitzgerald2,4
+
+1 RCSI Population and Health Sciences, Royal College of Surgeons in Ireland, Dublin, Ireland 2 Department of Epidemiology & Public Health, University College Cork, Cork, Ireland 3 Department of Mathematics and Statistics, La Trobe University, Melbourne, Australia 4 Department of Statistics, University College Cork, Cork, Ireland
+Correspondence Jamie M. Madden, RCSI Population and Health Sciences, Royal College of Surgeons in Ireland, Beaux Lane House, Dublin, Ireland. Email: jamiemadden@rcsi.ie
+Funding information Health Research Board PhD/2007/16; Irish Health Research Board (Ref. HRC 2007/13)
+
+Blood pressure (BP) fluctuates throughout the day. The pattern it follows represents one of the most important circadian rhythms in the human body. For example, morning BP surge has been suggested as a potential risk factor for cardiovascular events occurring in the morning, but the accurate quantification of this phenomenon remains a challenge. Here, we outline a novel method to quantify morning surge. We demonstrate how the most commonly used method to model 24‐hour BP, the single cosinor approach, can be extended to a multiple‐component cosinor random‐effects model. We outline how this model can be used to obtain a measure of morning BP surge by obtaining derivatives of the model fit. The model is compared with a functional principal component analysis that determines the main components of variability in the data. Data from the Mitchelstown Study, a population‐based study of Irish adults (n = 2047), were used where a subsample (1207) underwent 24‐hour ambulatory blood pressure monitoring. We demonstrate that our 2‐component model provided a significant improvement in fit compared with a single model and a similar fit to a more complex model captured by b‐ splines using functional principal component analysis. The estimate of the average maximum slope was 2.857 mmHg/30 min (bootstrap estimates; 95% CI: 2.855‐ 2.858 mmHg/30 min). Simulation results allowed us to quantify the between‐individual SD in maximum slopes, which was 1.02 mmHg/30 min. By obtaining derivatives we have demonstrated a novel approach to quantify morning BP surge and its variation between individuals. This is the first demonstration of cosinor approach to obtain a measure of morning surge.
+KEYWORDS blood pressure patterns, circadian modelling, mixed‐effects models
+
+1 | INTRODUCTION
+
+Elevated blood pressure (BP) is the most prevalent treatable risk factor for cardiovascular disease affecting 1 billion people globally.1,2 It is well known that BP does not remain stationary but fluctuates throughout the day and follows a circadian
+
+The copyright line for this article was changed on 17 April 2018 after original online publication.
+-------------------------------------------------------------------------------------------------------------------------------This is an open access article under the terms of the Creative Commons Attribution‐NonCommercial License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited and is not used for commercial purposes. © 2018 The Authors. Statistics in Medicine published by John Wiley & Sons Ltd.
+
+1682 wileyonlinelibrary.com/journal/sim
+
+Statistics in Medicine. 2018;37:1682–1695.
+
+MADDEN ET AL.
+
+1683
+
+rhythm. Morning surge refers to the phenomenon that occurs in individuals during the first few hours after waking up in the morning when there is an exaggerated spike or surge in BP.3,4 It has frequently been suggested that this surge may be a risk factor for cardiovascular events occurring in the morning.3-5 However, the accurate quantification of this phenomenon remains a challenge. A recent meta‐analysis examining the prognostic significance of morning surge in 17 studies identified 7 different calculations for the term that highlights the problem.6 All but one of these 7 estimates involved simple subtraction of BP
+values where they subtracted some average night value minus an average of morning BP readings. While these measures can
+easily be calculated without the need for advanced methodology, they may not accurately quantify a surge or rate of change.
+Rather than focusing on one value (mean BP) as obtained by traditional measurement techniques, ambulatory blood pressure monitoring (ABPM), which obtains multiple readings over a 24‐hour period, offers a unique insight into an individual's underlying circadian rhythm.7 Parati et al8 argue that rather than simplifying ABPM data into mean summary
+measures, incorporating all the data in more advanced models can lead to more robust estimates of clinically relevant
+parameters such as dipping status and morning BP surge. To get a more advanced measure of surge, it is paramount that we
+can first accurately model ABPM. To date, the main approaches proposed to model 24‐hour BP that incorporate all the data and fully use the benefits of
+the longitudinal nature of ABPM include the cosinor method,9-13 cubic splines,14 polynomials,15 and recently a double logistic model.16,17 Moreover, there is no accepted “standard” method for analysing ABPM,15 and research on the longitudinal analysis of 24‐hour ABPM is lacking.14 Cosinor analysis has traditionally been the most common approach to modelling 24‐hour BP. This method oversimplifies the data as it attempts to describe a 24‐hour circadian pattern with the use of a single sinusoidal
+function. The assumption of a simple symmetrical pattern for diurnal BP is unable to account for large variation in BP over a 24‐hour period.8 Although not as common as the single‐component cosinor model, attempts to extend the model by including multiple cosine terms (Fourier analysis) allow more flexible curves to be obtained while remaining periodic.18-20 Most studies to date exploring the use of sinusoidal functions for ABPM have focused on fixed‐effects where the inference is on population effects.9-13 A key feature of ABPM analysis however is the exploration of subject‐specific effects (random‐ effects) where its use in cosinor models has been limited.21 Although mixed model approaches to cosinor analysis have previously been explored in different applications,22-24 this work is considered an extension of these in relation to ABPM.
+Thus, the purpose of this study is two‐fold. To first demonstrate that extending the traditional single cosinor to a multiple‐component cosinor in a random‐effects model can be achieved while offering a substantial improvement in fit to ABPM data compared with the single‐component model. Moreover, the model is compared with a functional principal
+component analysis (FPCA) that determines the main components that account for most variation in the data. The
+parameters from the cosinor model are compared with the functional principal component scores. The purpose of this
+was to determine if model fits from a model with fewer parameters that are more interpretable (cosinor) compare favourably with a more flexible data‐driven approach (FPCA).
+Secondly, by calculating first‐order derivatives of the model fit, we present a novel alternative method to locate and
+quantify the magnitude of slopes at critical points on the trajectory. This simple application of derivatives allows us to
+quantify a measure of morning BP that specifically represents a surge parameter. This may be beneficial in future studies
+exploring the prognostic significance of morning BP and chronotherapy effects of antihypertensive medication. For
+purposes of illustration of the models at a group level, we compare first derivative curves in those with and without
+evidence of subclinical target organ, specifically microalbuminuria. This is the first study to demonstrate the use of a multiple‐component cosinor random‐effects model to obtain a measure of morning BP surge.
+
+2 | METHODS
+2.1 | Study design and ABPM
+The analysis uses data from the Mitchelstown Study, a population‐based study of middle‐aged men and women, recruited in Ireland 2010‐2011. A description of the study design is available from previous publications.25,26 The study recruited patients attending a single large primary care centre, the Livinghealth Clinic, in Mitchelstown. Participants completed a detailed health and lifestyle questionnaire including a question on use of antihypertensive medication and attended for a physical examination including height, weight, BP, and fasting blood samples. Each participant provided an early morning spot urine sample on the day of their appointment. Laboratory analyses included analysis for albumin : creatinine ratio. Microalbuminuria is defined as albumin : creatinine ratio ⩾1.1 mg mmol−1.27 Study BP was measured 3 times after 5 minutes of rest in a seated position by experienced research nurses using an OMRON M7 BP monitor (OMRON Healthcare, the Netherlands). The average of the second and third measurements was used. The
+
+1684
+
+MADDEN ET AL.
+
+classification of hypertension was based on SBP ≥140 mmHg and/or DBP ≥90 mmHg and/or on antihypertensive
+treatment. ABPM was offered to all participants and was measured using dabl ABPM system (dabl Ltd, Ireland) with the Meditech ABOM‐05 Monitor (Meditech Ltd, Hungary). The monitors were programmed to obtain readings every 30 minutes and remained in place for 24‐hours. Participants kept diaries of wake and sleep periods, which were used
+to calculate sleep and waking times. Only participants with a minimum of 20 measurements during the day and a minimum of 7 measurements during the night period were included in the analysis.7,28 Additionally, any participants with data lacking for more than 2 consecutive hourly intervals were excluded.7,28,29 All participants provided written
+informed consent, and ethical approval was obtained from the Clinical Research Ethics Committee Cork.
+
+3 | STATISTICAL ANALYSIS
+
+3.1 | Cosinor analysis
+
+The single‐component cosinor model, which was first developed by Halberg,30,31 uses a single cosine function as a model for physiological processes that have a circadian rhythm. This can be extended to a multiple‐component model in the
+
+context of BP:
+
+
+
+
+
+BPðtÞ ¼ M þ Σni¼1Ai cos
+
+2πt τi
+
+þ
+
+θi
+
+þ et; i ¼ 1; 2…; n
+
+(1)
+
+where BP(t) is BP as a function of time (t); M is the midline estimating statistic of rhythm (MESOR), the average value over
+the period; A is the amplitude for each cosine term (half the difference between the highest and lowest values, or the distance between the MESOR and the highest [lowest] value); τ is the period or duration of 1 cycle corresponding to each cosine term; ϕ
+is the acrophase (a measure of the time of the overall high values recurring in each cycle for each cosine term); e is the error term; and n represents the number of cosine curves (n = 1 represents the case of the single‐component cosinor model).
+The fixed‐effects multiple‐component model in Equation 1 can be incorporated into a random‐effects model. The mixed‐effects model32,33 is a well‐recognised tool in the analysis of longitudinal data that allows both population (fixed‐ effects) and subject‐specific (random‐effects) trajectories to be obtained, which makes it useful for the analysis of ABPM data. It is assumed the random‐effects have mean zero and an unstructured variance‐covariance matrix. The individual level residuals (e) have mean zero and variance‐covariance matrix Σe. As individual ABPM readings taken close in time are likely to be correlated, a model with an independent residual correlation structure may not be appropriate. We compared this to a model with a first‐order autoregressive AR(1) structure and examined a plot of the autocorrelation function (ACF) to detect violations of the assumption of independence. We determined the appropriate number of cosine terms by graphically comparing subject‐specific predicted BP fits to the data (while increasing the number of terms) and formally by comparing models with different number of cosines using a likelihood ratio test (LRT).33,34 On the basis of an LRT we tested the inclusion of MESOR as a random effect compared with a model with it being set to a fixed‐effect only.
+Similarly, using an LRT, we compared a model that included both of the parameters comprising each harmonic (amplitude and acrophase) as random‐effects to a model with no harmonic terms set as random‐effects. If a significant improvement was obtained, the harmonic term (amplitude and acrophase) was included as a random effect in the final model. The
+appropriate variance and residual function structures were also identified using an LRT in addition with the ACF plot. Subject‐specific trajectories were based on empirical Bayes estimates of the random‐effects.33
+
+3.2 | Cosinor derivatives and morning surge
+
+To obtain an estimate of the maximum morning surge we first estimate BP(t) for each individual from our random‐ effects model and then obtain its first derivative, BP(t)′. The first derivative of BP(t), Equation 1 above, is given by
+
+
+
+
+
+BP'ðtÞ ¼ −Σni¼1Ai2τπi sin
+
+2πt τi
+
+þ
+
+θi
+
+; i ¼ 1; 2…; n
+
+(2)
+
+This will give the rate of change or slope at each time of the day, and from this the maximum slope during the morning period (maximum morning surge) could be estimated. This was done explicitly by first obtaining the subject‐specific predicted trajectories (BP(t) for each individual) for each minute of the 24‐hour period based on the empirical Bayes estimates of the random‐effects, and from these estimates, the derivatives were then calculated. Next, by limiting our analysis
+
+MADDEN ET AL.
+
+1685
+
+between 02:00 and 12:00 we can obtain the maximum slope and corresponding time during this period by numeric estimation, for each individual. As participants kept diary entries, we know their waking times. The earliest waking time is 05:00, but we broadened our period of interest further back to 02:00 in the unlikely event that an individual's maximum surge occurred just before waking. As the shape of the data is not overly complex over this period, assuming only one local maximum for this time is a reasonable assumption.
+
+3.3 | Cosinor bootstrap and simulations
+Bootstrap estimation was performed to get an unbiased estimate of the standard error for the morning slope. A total of 1000 bootstrap datasets were created by randomly resampling from the original dataset with replacement. The bootstrap estimates were examined and determined to follow a normal distribution from which a standard error could be obtained. Results from the analysis were used to obtain bias corrected 95% CI for the slopes.
+Additionally, to obtain an estimate of the between‐individual variance in maximum slopes we ran 1000 simulations based on our final model. From this we obtained an estimate of the distribution of the slopes. This is similar to exploring the distribution of the individual slopes from our final model but should result in a more precise estimate of between‐ person variation.
+
+3.4 | Functional principal component analysis
+The aim of FPCA is to find a combination of a few functions that capture the largest proportions of variation in the data. As a method of validation we compared model fits from the final multiple‐component cosinor model to a model arising from FPCA. The purpose of this was to determine if the cosinor model was capable of capturing fluctuations in BP as well as the FPCA, which is less restricted and can provide a flexible fit.
+We implemented an FPCA which can be seen as an analogous to multivariate principal component analysis where we can identify the main types of variation in patterns as a function of time as opposed to discrete measures.35,36 Instead of eigenvectors we obtain eigenfunctions that are associated with each eigenvalue and represent the functional principal component's (FPC) that describe the different variations in the data.
+To begin with, the mean curve was obtained through a method developed by Yao et al, which first ignores the hierarchical structure of the data and then fits a smooth curve to the pooled data.37 This estimate of the mean curve is then used to obtain the covariance matrix of the deviations from the mean for each pair of time points. This covariance matrix is smoothed using a bivariate smoother, and the main diagonal is removed to normalise the data. This smoothed covariance matrix is then decomposed into a linear combination of orthogonal (uncorrelated) eigenfunctions and eigenvalues, ie, into its principal components and scores.38 The first principal component captures the most variation, the second captures the second most variation, and so forth. Therefore, a linear combination of a few efficient functions can account for a high proportion of the variance. In our analysis, 10 B‐spline basis functions were used to estimate the mean function, and for the bivariate smoothing of the covariance function. The number of FPCs to include was then determined by visual inspection of a scree plot. In the context of random‐effects models these FPCs can be seen as patterns of within‐subject variation remaining after the mean fit.
+The weights that define the optimal fit to each function are the principal component scores. These can be used to obtain individual curves by multiplying the weights by the functions. Zero scores for an individual would result in their trajectory following the mean pattern. The scores would usually be estimated through numerical integration but with sparse data, as in the case of ABPM (compared with high sampling frequency data, eg, every second, that is often associated with functional data39), the approximation is sometimes deemed inadequate, and in this case the scores were estimated by the principal component analysis through conditional expectation method.37,38 Using this method the scores are estimated for each individual using their repeated measures while borrowing strength from the cohort with sample estimates of the mean function, covariance, eigenvalues, and eigenfunctions.37,38
+As a final step the random‐effects of the multiple‐component cosinor model were correlated with the individual FPC scores from the FPCA. This allowed us to determine if the cosinor model and their parameters were capturing the main components of 24‐hour BP obtained through FPCA, which was a more elaborate, flexible, and data‐driven approach. If they correlated well it would help advocate the use of our model.
+
+1686
+
+MADDEN ET AL.
+
+3.5 | Group comparison: target organ damage
+Finally, after the model has been compared with FPCA and as a method to illustrate the approach outlined, we ran the final model separately on those with and without evidence of microalbuminuria. Subject‐specific curves are obtained and plotted for each group. In addition, mean curves for both groups, over the 24‐hour period are overlaid on the same plot giving a graphical comparison. We also obtain and compare first derivative curves in both groups. Individual maximum morning surge values were obtained for each participant as before in each group, and the 2 groups were compared using a t test.
+
+3.6 | Software
+All analysis including bootstrapping and simulations were implemented in R.40 Although the model can be rewritten in a linear form,41 when n (number of cosine terms) is greater than 1 it is easier to obtain estimates of the parameters
+directly from the nonlinear model as opposed to calculating them post hoc using trigonometry with the linear model. However, Mikulich et al24 note that convergence can be problematic when using the nonlinear approach and when considering more complicated models, eg, including multiple fixed and random harmonic terms, the linear model is typically more efficient and more easily implemented. Conversely, Mikulich et al24 also stress the benefits of the nonlinear approach, particularly as highlighted above, that “specifying the random‐effects as nonlinear coefficients has interpretation advantages in that covariance matrices of the parameters of interest (amplitude, acrophase) are directly estimated.” For this reason the nonlinear mixed‐effects model was solved using the nlme command in the nlme R‐package.42 In this study, the authors did not have convergence issues, where initial starting values were obtained from a model incorporating fixed‐effects only. FPCA was used using the refund R‐package.43 A shiny app was also built in R using the shiny R‐package44 to illustrate different model fits that can be obtained from our final random‐effects model using simulated data based on the model. Shiny is an open package from RStudio, used to build web pages with interactive data visualisations with R. Data are uploaded to a server, and when the web page is visited, a user can easily cycle through different input values generating interactive visualisations.
+
+4 | RESULTS
+The study questionnaire and physical examination was completed by 2047 participants (response rate, 67%). ABPM was completed by 1207 participants (response rate, 58%), of whom 886 had a minimum of 20‐day and 7‐night measurements and no data missing for more than 2 consecutive hourly intervals. Their main clinical characteristics are presented in Table 1.
+Figure 1 is a graphical representation of ABPM for 4 individuals. Included are subject‐specific fits from a random‐ effects cosinor model with varying number of cosine terms; single, 2 and 3‐component models (n = 1, 2, 3). It can be seen
+
+TABLE 1 Baseline characteristics
+
+Characteristic
+
+Total (n = 2047)
+
+Age, y Gender, male n(%) BMI, n (%) Underweight/normal (<25 kg/m2) Overweight (25‐30 kg/m2) Obese (≥30 kg/m2) Office SBP, mmHg Office DBP, mmHg Hypertension, n (%)
+
+59.8 (5.5) 1008 (49.2)
+447 (21.9) 925 (45.3) 668 (32.8) 129.6 (16.9) 80.1 (9.8) 951 (46.5)
+
+Abbreviations: ABPM, ambulatory blood pressure monitor; BMI, body mass index. Data are mean (SD). Hypertension: ≥140/90 mmHg and/or on antihypertensive treatment.
+
+ABPM (Subsample) Total (n = 886) 59.9 (5.5) 401 (45.3)
+195 (22.0) 380 (42.9) 310 (35.0) 134.7 (17.7) 83.1 (10.2) 528 (59.7)
+
+MADDEN ET AL.
+
+1687
+
+FIGURE 1 ABPM readings (circles, thin black line) of 4 individuals along with predicted subject‐specific trajectories from a random‐effects model as a function of time using (1) single cosinor (thick black line); (2) 2‐component cosinor (thick red line); and (3) 3‐component cosinor (thick blue line) models
+that the single‐component model offers a very simplistic curve that struggles to capture the shape of the data. There is a large improvement observed however with both the 2‐ and 3‐component models where large fluctuations are accounted for more than in the restricted single model. When visually comparing all the 2‐ and 3‐component model fits, there was little difference between them. For this reason and to obtain the most parsimonious model we identified the 2‐component model as a satisfactory model to describe ABPM.
+The final 2‐component SBP cosinor model parameters estimates are presented in Table 2. Initially, all the parameters were included as fixed‐effects. A significant improvement in fit was observed when additionally including the MESOR and both the first and second harmonic terms as random‐effects, based on LRTs (all P < .001). As a consequence we included all parameters as random‐effects. The MESOR or average BP over 24‐hours was 124 mmHg. The values of the parameters for the first and second cosine curves are presented separately. As expected, the first cosine with period 24‐hours is the dominant curve with amplitude of 13.2 mmHg while the second cosine curve with period 12‐hours has amplitude 5.6 mmHg. Similarly, the phase shift of the first cosine is larger than the second one that are both measured from 12:00 in units of 30 minutes, 5.3 (2.6 h) compared with 1.0 (0.5 h), which corresponds to a time of approximately 14:18 and 12:30, respectively. Exploring the random‐effects covariance matrix suggests that there is a moderate positive correlation between the 2 amplitudes (r = .51) and the 2 phase shifts (r = .44). However, there is a weak correlation between the amplitudes and their corresponding phase shifts (−0.01 and −0.16). As some correlations were quite low we considered reducing the size of the covariance matrix by removing weak correlation terms, but as Harrell45 suggests removing separate terms in this way provides very little gains in terms of precision and power. As a result the covariance structure was not altered. The variation between individuals in the first cosine amplitude was greater compared with the second (SD, 6.1 vs 2.8 mmHg). However, in contrast, there was less variation in the phase shift of the first cosine compared with the second (9 vs 18 min). The within‐subject SD (σ) was 11.9 mmHg. Examining the ACF plot indicated that the inclusion of an AR1 residual structure adequately accounted for the autocorrelation in the data. On the basis of an LRT, incorporating an AR1 structure resulted in a significant improvement in fit compared with a model assuming independence in residuals (ρ = .22, P < .001). Residual diagnostic plots of the model (residuals vs fitted values, histogram of random‐effects and residuals) showed no violation of assumptions (results not shown).
+After applying the final 2‐component cosinor model to the data and obtaining the random‐effects coefficients, empirical Bayes estimates were obtained from which derivatives of the function were then calculated. Figure 2 presents ABPM readings for 3 individuals with their fitted subject‐specific trajectories and corresponding first derivative curves along with the original model and corresponding first derivate equations. This represents the rate of change or slope at each time point during the day. By focusing on the morning period we can obtain the magnitude and location (time) of
+
+1688
+
+MADDEN ET AL.
+
+TABLE 2 Model parameter estimates (SBP) along with corresponding correlations and variances
+
+Parameter
+
+Model
+
+Fixed‐effects
+
+Estimate (SE)
+
+24‐h MESOR, mmHg First cosine (24‐h period)
+Amplitude, mmHg Phase shift, 30 min Time of phase shift Second cosine (12‐h period) Amplitude, mmHg Phase shift, 30 min Time of phase shift Random‐effects Σ
+σ ρ
+
+124 (0.44)*
+13.2 (0.23)* 5.3 (0.02)* 14:18
+5.6 (0.14)* 1.0 (0.03)* 12:30
+172.3 0.18 37.0 −0.03 −0.01 0.1 0.30 0.51 −0.14 7.8 −0.03 0.01 0.44 −0.16 0.4 11.9 0.22
+
+*P < 0.001.
+Random‐effects matrix shown has variances on the diagonal and correlation coefficients on off‐diagonals. Phase shift measured from 12:00 noon. Time presented in 24‐h clock.
+
+the maximum surge. The estimate of the maximum slope obtained from the derivatives from our final model was 2.84 mmHg/30 min (Table 3). Also presented in Table 3 is the bias corrected bootstrap distribution estimates from which a standard error for the estimate of average maximum slope could be obtained (SE = .0012), resulting in 95% CI: 2.855 to 2.858 mmHg/30 min. The simulation results allowed us to quantify the between‐individual SD in maximum slopes, which was 1.01. Although we recommended the 2‐component model, for comparison purposes, we also included the average maximum morning surge from the simpler 1‐component model: 1.738 mmHg/30 min (Table 3). On the basis of a paired t test there was a statistically significant difference in the mean morning surge of the single‐ and 2‐component models using subject‐specific predictions, difference = −1.118 (95% CI: −1.155‐1.081) mmHg/30 min, P < .001.
+B‐splines were explored in FPCA. From a visual inspection of the scree plot, 3 principal components were retained (see Figure S1). Results indicated that the first 3 FPCs that accounted for 76.3% (FPC1), 9.2% (FPC2), and 6.8% (FPC3) accounted for 92.3% of total variation in the data. To help visualise and interpret the individual FPCs, Figure 3 illustrates the mean curve along with the effects to the pattern when a small amount of the component is added and subtracted from the mean. It is evident that the first component that accounts for most variance in the data represents a relatively constant shift in the mean. Individuals with positive scores on the second component have a slightly higher BP during the day and a lower BP at night indicating a large peak‐to‐tough value, those who score negatively have a slightly lower value during the day and higher value at night indicating a small peak‐to‐trough. It can be argued that this component is capturing dippers and nondippers. Individuals with positive scores on the third component are associated with an earlier dip at night and a large morning rise, those with a low value seem to be shifted to the right and have a slightly less pronounced morning rise. A larger version of Figure 3 can be found in Figure S2, with the first 6 FPCs included. The correlation matrix presented in Figure 4 shows strong correlations between the FPC scores and the individual random‐effects from the 2‐component cosinor model. It demonstrates, as expected that the first principal component score summarises the MESOR (mean curve). The second principal component score has a strong correlation with both amplitudes especially the first one (r = .9). Similarly the third principal component score has a strong correlation with both phases especially the first one (r = .9). A similar correlation matrix including all the FPC scores is included in Figure S3.
+
+MADDEN ET AL.
+
+1689
+
+FIGURE 2 ABPM readings of 3 individuals with fitted subject‐specific trajectories from a 2‐component cosinor random‐effects model (left panels). Their corresponding rate of change curves (first derivatives) are also plotted on right panels (red line indicating reference zero mark). The formulas for the 2‐component model and the corresponding first derivative are also presented
+
+The model was applied separately to those with and without evidence of microalbuminuria. A graphical comparison of the mean curves and their associated first derivatives is presented in Figure 5. It can be seen that, on the average over 24‐hours, those with microalbuminuria had higher SBP but the patterns were similar. As a result, the overall pattern in the rate of change over time is broadly similar in both groups. Although significantly lower in those with microalbuminuria, the difference in the maximum surge reached in the morning period between both groups was small, (2.6 vs 2.3 mm Hg/30 min, P < .01). The time of the maximum surge reached in the morning was 08:24 and 08:39 for those with and without microalbuminuria, respectively. At the point of their maximum first derivative or surge, a difference of 9 mmHg in average SBP was observed between those with and without microalbuminuria (129 vs 120 mmHg, P < .01).
+In addition, we have created a simple shiny app to illustrate different fits our model can provide to the data. We have simulated data based on our model, and fits and derivatives are shown to different simulated individuals. The link to the app is https://user632.shinyapps.io/App_Double_Cosinor/
+
+TABLE 3 Maximum morning surge (mmHg/30 min)
+
+Median
+
+Single‐component model Two‐component model
+Original model Simulations (1000) Bias corrected bootstrap
+
+1.732
+2.779 2.840 2.857
+
+Values are based on subject‐specific predictions.
+
+Mean 1.738
+2.857 2.840 2.857
+
+Variance/CI 0.373
+0.994 1.040 CI (2.855‐2.858)
+
+1690
+
+MADDEN ET AL.
+
+FIGURE 3 FPCA: each of the first 3 FPCs as variations about the mean along with the percentage of total variation explained by the component. The solid black line represents the mean SBP over the day and the functions obtained by adding and subtracting ± SD of the eigenfunctions to the mean. Plus signs indicate addition, and minus signs indicate subtraction
+
+FIGURE 4 Scatter plots and the corresponding correlations between the 2‐component random‐effects cosinor model parameters and the first 3 FPC scores from FPCA
+5 | DISCUSSION
+In this study we have demonstrated that extending the traditional single cosinor to a 2‐component cosinor in a random‐ effects model results in a substantial improvement in fit. From our findings, the evidence suggested that the 2‐component model offered similar fits to that of a 3‐component model and a spline model. In addition, using FPCA we have demonstrated that the main components of variation in the data correlate extremely well with the parameters from our model. By obtaining model derivatives we have demonstrated a novel approach to quantify rate of change of BP throughout the day. This is the first demonstration of a multiple‐component cosinor random‐effects model to obtain a measure of morning surge. The use of FPCA on ABPM data also offers a novel method to quantify blood pressure variability (BPV).
+
+MADDEN ET AL.
+
+1691
+
+FIGURE 5 A 2‐component cosinor random‐effects model implemented separately on those with and without presence of microalbuminuria. Subject‐specific curves for those with (black lines) and without (light grey lines) evidence of microalbuminuria are also displayed. Red (microalbuminuria) and blue (no microalbuminuria) lines represent average curves for both groups. The corresponding first derivative curves indicating the rate of change over the day for both groups are also presented
+Considering the traditional single cosinor model in the fixed‐effects context has been the most commonly used approach for the longitudinal analysis of ABPM, further research in an attempt to extend the model into a random‐ effects context while simultaneously including more harmonics seemed warranted. There has been much criticism of the single cosinor method,8,46,47 but we have illustrated that the inclusion of just one additional cosine term gives the model substantial flexibility, which helps alleviate many of the concerns raised. The main criticism has focused on the unrealistic assumption that diurnal BP follows a simple symmetrical pattern. Unlike the single model, multiple‐component models, while retaining the periodic property, can capture local minimum and maximum points as evident in this study. It has been stated that shapes closely approximating a single cosine curve are uncommon which is not under question.46 We realise that a 2‐component model does not offer a perfect fit but is much more flexible than a single model and to compromise for a parsimonious model and interpretable terms; it offers a good alternative to other methods with fewer parameters and a similar fit (eg, 3‐component cosinor).
+The use of FPCA enabled us to obtain the main patterns of variation in the data and determine how much each component contributed to the total variation in the data. This offers a novel method to describe variation within BP that, to our knowledge, has not been used before on ABPM data. The use of functional data analysis allows flexible fits to be obtained without the need to prespecify a model. Although similar, this is not the same as a traditional random‐effects model. FPCA will be inherently more flexible. For example, if we consider a 2‐component cosinor random‐effects model —it would assume a mean and 2 cosine terms with 2 different periods—FPCA however will try to estimate the “optimal” functions that explain the variability in the dataset. However, if the mean, a 1‐period cosine and 2‐period cosine are close to optimal then the rest of FPCA and the model fitting will be similar: random‐effects will be used to estimate the subject‐specific coefficients for each of these functions. The fact that the random‐effects from our model correlated well with the FPC scores help justify the use of our model. To elaborate, the 2‐component model correlates well with the optimal fit obtained through FPCA. Our finding that the first FPC correlates exactly with the mean value is not surprising where other studies have found in practise; the first FPC is essentially a mean shift.48,49 Not only do our values correlate, visually examining the effects of the scores on the mean pattern illustrate that the main components refer to a mean shift, peak‐to‐tough and a shift left to right which is being captured by the parameters of the cosinor model. In fact using FPCA and the cosinor model together complement each other well. Sometimes interpreting FPCs can be difficult and subjective but when it is used in parallel with a cosinor model and results correlate so well it is easier to explain findings. Although not as directly interpretable as a single cosinor model, the 2‐component model is still more intuitive than, for example, a spline model. An individual's amplitude being made up of the weighted sum of 2 cosine amplitudes throughout the day is more intuitive than an arbitrary spline coefficient. In addition, the MESOR, which is the average over 24‐hours, represents the most important parameter of BP.
+Of the definitions identified in the recent meta‐analysis examining the prognostic significance of morning surge, only one used a more advanced technique than simply obtaining differences between arbitrary night and day averages.6 Head
+
+1692
+
+MADDEN ET AL.
+
+et al16,17 developed a 6‐parameter double logistic model that is characterised by a day and night plateau of variable length, an independent slope for the fall and rise over the day and a midpoint for each transition. The double logistic model can be used to obtain the rate of rising during the morning period and the power of the morning surge, which is the derivative of the curve multiplied by the amplitude.50 However, it has been suggested that the parametric structure of the model is very simple and because of the day and night plateaus important BP fluctuations may be averaged out.8 The approach does however offer alternative morning BP measures that attempt to incorporate more data in a mathematical model than traditional methods, and Head et al have tried to refute some of the criticism. They argue that their model is quite flexible and can follow a single‐component cosinor model, a saw tooth shape in either direction as well as a square wave‐like shape.51 There are, however, some limitations. Importantly, they stress that the model cannot capture complex fluctuations associated with multiple‐component cosinor models and can miss short‐term peaks. Research suggests that more complex patterns such as the ones obtained through our approach are not necessarily an advantage as it may be difficult for an investigator to obtain a coherent picture from wavy curves.51 This may be true if the sole purpose is to decipher individual model fits. We argue however the main purpose of our method is to obtain an estimate of morning slope through derivative estimation, and this requires capturing the most accurate curve possible while simultaneously obtaining interpretable parameters that describe it. Obtaining the balance between obtaining complex curves and interpretable parameters is difficult. Complex wavy curves will not alter our ability to describe in simple terms the rate in change or surge. In addition their analysis has focused on analysing each individual ABPM curve one by one, which will result in inflated standard errors for their estimates unlike our model that incorporates random‐effects.
+The use of estimated derivatives in medical research can often offer new, intuitive clinical markers.52,53 In the context of modelling ABPM, considering the emphasis is on exploring curves, the use of derivatives is surprisingly rare. As highlighted we have demonstrated that obtaining derivatives from the cosinor model offers a novel method of determining morning slope that has not to the best of our knowledge been implemented elsewhere. An advantage of this approach is that it is not restricted to the analysis of morning slope but can be used to obtain critical points throughout the day, eg, dip. We have focused our analysis in this study to morning BP because of the substantial literature surrounding its potential prognostic significance and the debate surrounding its quantification.3-6 Morning parameters to date have focused on summary measures, usually the difference between a pre‐awakening value and post‐awakening value.6 The primary issue with this approach is that by definition a morning surge represents a spike or rate of increase in BP during this period, which is not accurately captured by differences between 2 time points. We propose that our method that specifically obtains a rate of change parameter is a better estimate. In fact Parati et al8 argue that a tangent with the steepest slope to a curve from a model that accurately captures morning BP could be the most appropriate estimate of the morning rise in BP. Provided that the model fits the data well, estimates derived from it should be more robust, which in turn will lead to more precise inferences being made to outcomes. Despite our comprehensive knowledge of BP, obtaining new measures and methods to model BP remains a crucial research priority, which may help advance our understanding of different aspects of BPV including morning surge.54,55 This may be particularly useful in clinical trials where we may be able to provide evidence that a new antihypertensive medication outperforms another in a way we would not traditionally be able to detect, eg, their mean values may indicate no difference. In this study, we illustrated how the model can be compared in 2 groups using those with and without evidence of microalbuminuria as an example. Although the microalbuminuria group had higher SBP, there was little difference in the pattern of the curves. A comparison using hard endpoints (cardiovascular events) as opposed to a surrogate marker of cardiovascular disease is recommended in future work.
+There are a number of limitations to the study. Primarily, we note that the model does not give the optimal fit to the data (although the parameters correlated well with the more flexible FPCA). In fact, it is acknowledged that it is extremely difficult for any model to capture all the features of a 24‐hour BP profile simultaneously. Perhaps the chosen model should be dependent on the research question posed. For instance, as highlighted complex models may not be the most intuitive to understand directly but if the purpose is to obtain a BP measure (eg, morning surge, dip) from the model post hoc through additional analyses (derivatives), an initial simple model may not necessarily be the best choice. Another limitation of the study was that we not able to include the effect of antihypertensive medication in the analysis. Although we knew if a participant was on treatment, we had insufficient data on the specific class of antihypertensive medication the individual was prescribed, which means that drug‐class comparisons were not possible.
+In conclusion, we have demonstrated a simple method to obtain a measure of morning BP surge using a random‐effects multiple‐component cosinor where our focus was not only at a group level but also at the individual level. In addition to the ability of the model to obtain estimates for the morning BP, we derived derivatives of the circadian curves, which allow us to locate and quantify the magnitude of other slopes at critical points on the trajectory. The approach offers novel alternative methods of quantifying new BP indices that may be useful in the exploration of BPV where there remains debate over
+
+MADDEN ET AL.
+
+1693
+
+its prognostic significance. The use of FPCA also offers a new alternative approach to quantify BPV. Considering the single‐ component cosinor has been the most common method of analysis for ABPM, a recommendation for future studies from the evidence presented in this study is to incorporate a second cosine in the context of a random‐effects model. The method offers a substantial improvement in fit compared with the traditional cosinor that is capable of capturing short‐term peaks and can be implemented in standard statistical software. Future studies should also investigate the clinical prognostic significance of the morning surge parameter obtained through the analysis outlined in this study.
+
+ACKNOWLEDGEMENTS
+We especially thank all participants in the study, the study nurses and administrators and the staff at the LivingHealth Clinic. We also want to thank the Editor, Dr Simon Day and the two anonymous referees for their suggestions and constructive comments which have added great value to the paper.
+
+FUNDING
+This research was funded by the Health Research Board PhD/2007/16. The Cork and Kerry Diabetes and Heart Disease Study was funded by a research grant from the Irish Health Research Board (Ref. HRC 2007/13).
+
+DISCLOSURE The authors declare that there is no conflict of interest.
+
+ORCID
+J.M. Madden http://orcid.org/0000-0003-2383-5150 L.D. Browne http://orcid.org/0000-0003-1361-1436
+
+REFERENCES
+1. Danaei G, Finucane MM, Lin JK, et al. National, regional, and global trends in systolic blood pressure since 1980: systematic analysis of health examination surveys and epidemiological studies with 786 country‐years and 5.4 million participants. Lancet. 2011;377(9765):568‐ 577.
+2. Lim SS, Vos T, Flaxman AD, et al. A comparative risk assessment of burden of disease and injury attributable to 67 risk factors and risk factor clusters in 21 regions, 1990‐2010: a systematic analysis for the global burden of disease study 2010. Lancet. 2012;380(9859):2224‐ 2260.
+3. Kario K. Morning surge in blood pressure and cardiovascular risk: evidence and perspectives. Hypertension. 2010;56(5):765‐773. 4. Kario K. Essential Manual of 24 Hour Blood Pressure Management: From Morning to Nocturnal Hypertension. Wiley‐Blackwell; 2015.
+5. Kario K, Pickering TG, Umeda Y, et al. Morning surge in blood pressure as a predictor of silent and clinical cerebrovascular disease in elderly hypertensives: a prospective study. Circulation. 2003;107(10):1401‐1406.
+6. Sheppard JP, Hodgkinson J, Riley R, Martin U, Bayliss S, McManus RJ. Prognostic significance of the morning blood pressure surge in clinical practice: a systematic review. Am J Hypertens. 2015;28(1):30‐41.
+7. O'Brien E, Parati G, Stergiou G, et al. European Society of Hypertension position paper on ambulatory blood pressure monitoring. J Hypertens. 2013;31(9):1731‐1768.
+8. Parati G, Vrijens B, Vincze G. Analysis and interpretation of 24‐h blood pressure profiles: appropriate mathematical models may yield deeper understanding. Am J Hypertens. 2008;21(2):123‐125. discussion 7‐9
+9. Ayala DE, Hermida RC, Mojon A, Fernandez JR, Iglesias M. Circadian blood pressure variability in healthy and complicated pregnancies. Hypertension. 1997;30(3 Pt 2):603‐610.
+10. Kelley K, Light RP, Agarwal R. Trended cosinor change model for analyzing hemodynamic rhythm patterns in hemodialysis patients. Hypertension. 2007;50(1):143‐150.
+11. Munakata M, Imai Y, Hashimoto J, et al. The influence of antihypertensive agents on circadian rhythms of blood pressure and heart rate in patients with essential hypertension. Tohoku J Exp Med. 1992;166(2):217‐227.
+12. Portaluppi F, Bagni B, Degli Uberti E, et al. Circadian rhythms of atrial natriuretic peptide, renin, aldosterone, cortisol, blood pressure and heart rate in normal and hypertensive subjects. J Hypertens. 1990;8(1):85‐95.
+
+1694
+
+MADDEN ET AL.
+
+13. Portaluppi F, Montanari L. Consistency of circadian blood pressure pattern assessed by non‐invasive monitoring and cosinor analysis in hospitalized hypertensive patients. Acta Cardiol. 1988;43(5):605‐613.
+14. Lambert PC, Abrams KR, Jones DR, Halligan AW, Shennan A. Analysis of ambulatory blood pressure monitor data using a hierarchical model incorporating restricted cubic splines and heterogeneous within‐subject variances. Stat Med. 2001;20(24):3789‐3805.
+15. Edwards LJ, Simpson SL. An analysis of 24‐h ambulatory blood pressure monitoring data using orthonormal polynomials in the linear mixed model. Blood Press Monit. 2014;19(3):153‐163.
+16. Head GA, Lukoshkova EV, Mayorov DN, van den Buuse M. Non‐symmetrical double‐logistic analysis of 24‐h blood pressure recordings in normotensive and hypertensive rats. J Hypertens. 2004;22(11):2075‐2085.
+17. Head GA, Reid CM, Shiel LM, Jennings GL, Lukoshkova EV. Rate of morning increase in blood pressure is elevated in hypertensives. Am J Hypertens. 2006;19(10):1010‐1017.
+18. Somes GW, Harshfield GA, Arheart KL, Miller STA. Fourier series approach for comparing groups of subjects on ambulatory blood pressure patterns. Stat Med. 1994;13(12):1201‐1210.
+19. Staessen JA, Fagard R, Thijs L, Amery A. Fourier analysis of blood pressure profiles. Am J Hypertens. 1993;6(6 Pt 2):184s‐187s.
+20. Hermida RC, Ayala DE, Mojon A, et al. Blood pressure patterns in normal pregnancy, gestational hypertension, and preeclampsia. Hypertension. 2000;36(2):149‐158.
+21. van Rijn‐Bikker PC, Snelder N, Ackaert O, et al. Nonlinear mixed effects modeling of the diurnal blood pressure profile in a multiracial population. Am J Hypertens. 2013;26(9):1103‐1113.
+22. Fontana A, Copetti M, Mazzoccoli G, Kypraios T, Pellegrini F. A linear mixed model approach to compare the evolution of multiple biological rhythms. Stat Med. 2013;32(7):1125‐1135.
+23. Mikulich SK, Zerbe GO, Jones RH, Crowley TJ. Relating the classical covariance adjustment techniques of multivariate growth curve models to modern univariate mixed effects models. Biometrics. 1999;55(3):957‐964.
+24. Mikulich SK, Zerbe GO, Jones RH, Crowley TJ. Comparing linear and nonlinear mixed model approaches to cosinor analysis. Stat Med. 2003;22(20):3195‐3211.
+25. Kearney PM, Harrington JM, Mc Carthy VJ, Fitzgerald AP, Perry IJ. Cohort profile: the Cork and Kerry diabetes and heart disease study. Int J Epidemiol. 2013;42(5):1253‐1262.
+26. Madden JM, O'Flynn AM, Dolan E, Fitzgerald AP, Kearney PM. Short‐term blood pressure variability over 24 h and target organ damage in middle‐aged men and women. J Hum Hypertens. 2015;
+27. Matsushita K, van der Velde M, Astor BC, et al. Association of estimated glomerular filtration rate and albuminuria with all‐cause and cardiovascular mortality in general population cohorts: a collaborative meta‐analysis. Lancet. 2010;375(9731):2073‐2081.
+28. O'Brien E, Parati G, Stergiou G. Ambulatory blood pressure measurement: what is the international consensus? Hypertension. 2013;62(6):988‐994.
+29. Hermida RC, Smolensky MH, Ayala DE, Portaluppi F. 2013 ambulatory blood pressure monitoring recommendations for the diagnosis of adult hypertension, assessment of cardiovascular and other hypertension‐associated risk, and attainment of therapeutic goals. Chronobiol Int. 2013;30(3):355‐410.
+30. Halberg FTY, Johnson EA. Circadian system phase–an aspect of temporal morphology; procedures and illustrative examples. In: Mayersbach HV, ed. Proc International Congress of Anatomists The Cellular Aspects of Biorhythms, Symposium on Biorhythms Edited by. New York: Springer‐Verlag; 1967:20‐48.
+31. Halberg F. Chronobiology. Annu Rev Physiol. 1969;31:675‐725. 32. Laird NM, Ware JH. Random‐effects models for longitudinal data. Biometrics. 1982;38(4):963‐974.
+33. Fitzmaurice G, Laird NM, Ware JH. Applied Longitudinal Analysis. New Jersey: John Wiley & Sons; 2011.
+34. Pinheiro JC, Bates DM. Mixed‐Effects Models in S and S‐PLUS. New York, NY: Springer; 2000.
+35. Mairesse O, De Valck E, Quanten S, et al. Sleepiness phenomics: modeling individual differences in subjective sleepiness profiles. Int J Psychophysiol. 2014;93(1):150‐161.
+36. Ramsey J, Hooker G, Graves S. Functional Data Analysis with R and MATLAB. Springer; 2009.
+37. Yao F, Muller H‐G, Wang J‐L. Functional data analysis for sparse longitudinal data. J Am Stat Assoc. 2005;100:577‐590. 38. Simpkin AJ, Metcalfe C, Martin RM, et al. Longitudinal prostate‐specific antigen reference ranges: choosing the underlying model of
+age‐related changes. Stat Methods Med Res. 2013; https://doi.org/10.1177/0962280213503928
+39. Goldsmith J, Liu X, Jacobson JS, Rundle A. New insights into activity patterns in children, found using functional data analyses. Med Sci Sports Exerc. 2016;48(9):1723‐1729.
+40. Team; RC. R: a language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. 2014; URL http://www.r-project.org/.
+41. Cornelissen G. Cosinor‐based rhythmometry. Theor Biol Med Model. 2014;11:16
+
+MADDEN ET AL.
+
+1695
+
+42. Pinheiro J BD, DebRoy S, Sarkar D and R Core Team. nlme: Linear and Nonlinear Mixed Effects Models. R package version 31–119. 2015
+43. LHF Scheipl, J Goldsmith, J Gellar, J Harezlak, MW McLean, B Swihart, L Xiao, C Crainiceanu and P Reiss. refund: regression with functional data. R package version 0.1–14. http://cran.r-project.org/package=refund. 2016
+44. WCJ Cheng, JJ Allaire, Y Xie and J McPherson. shiny: web application framework for R. R package version 0.13.2. http://cran.r-project. org/package=shiny. 2016
+45. Harrell F. Regression Modeling Strategies With Applications to Linear Models, Logistic and Ordinal Regression, and Survival Analysis. Springer; 2015.
+46. Reilly T, Atkinson G, Waterhouse J. Biological Rhythms and Exercise. New York: Oxford; 1997:151. 47. Wang Y, Ke C, Brown MB. Shape‐invariant modeling of circadian rhythms with random effects and smoothing spline ANOVA decompo-
+sitions. Biometrics. 2003;59(4):804‐812. 48. Di CZ, Crainiceanu CM, Caffo BS, Punjabi NM. Multilevel functional principal component analysis. Ann Appl Stat. 2009;3(1):458‐488. 49. Greven S, Crainiceanu C, Caffo B, Reich D. Longitudinal functional principal component analysis. Electron J Stat. 2010;4:1022‐1054.
+50. Head GA, Chatzivlastou K, Lukoshkova EV, Jennings GL, Reid CM. A novel measure of the power of the morning blood pressure surge from ambulatory blood pressure recordings. Am J Hypertens. 2010;23(10):1074‐1081.
+51. Head GA, Lukoshkova EV, Reid CM. Response to “analysis and interpretation of 24‐h blood pressure profiles”. Am J Hypertens. 2008;21(2):127‐129.
+52. Gamst A, Wolfson T, Parry B. Local polynomial regression modeling of human plasma melatonin levels. J Biol Rhythms. 2004;19(2):164‐174.
+53. Newell J, McMillan K, Grant S, McCabe G. Using functional data analysis to summarise and interpret lactate curves. Comput Biol Med. 2006;36(3):262‐275.
+54. Dolan E, O'Brien EI. It daily, monthly, or yearly blood pressure variability that enhances cardiovascular risk? Curr Cardiol Rep. 2015;17(11):93
+55. Parati G, Ochoa JE, Lombardi C, Bilo G. Blood pressure variability: assessment, predictive value, and potential as a therapeutic target. Curr Hypertens Rep. 2015;17(4):537
+
+SUPPORTING INFORMATION Additional Supporting Information may be found online in the supporting information tab for this article.
+
+How to cite this article: Madden JM, Browne LD, Li X, Kearney PM, Fitzgerald AP. Morning surge in blood pressure using a random‐effects multiple‐component cosinor model. Statistics in Medicine. 2018;37:1682–1695. https://doi.org/10.1002/sim.7607
+

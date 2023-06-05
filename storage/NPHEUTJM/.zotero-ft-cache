@@ -1,0 +1,1800 @@
+Research
+
+JAMA | Original Investigation
+Association of Surgical Left Atrial Appendage Occlusion With Subsequent Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Xiaoxi Yao, PhD; Bernard J. Gersh, MB, ChB, DPhil, MACC, FRCP; David R. Holmes Jr, MD; Rowlens M. Melduni, MD, MPH; Daniel O. Johnsrud, MD; Lindsey R. Sangaralingham, MPH; Nilay D. Shah, PhD; Peter A. Noseworthy, MD
+
+IMPORTANCE Surgical occlusion of the left atrial appendage (LAAO) may be performed during concurrent cardiac surgery. However, few data exist on the association of LAAO with long-term risk of stroke, and some evidence suggests that this procedure may be associated with subsequent development of atrial fibrillation (AF).
+OBJECTIVE To evaluate the association of surgical LAAO performed during cardiac surgery with risk of stroke, mortality, and development of subsequent AF.
+DESIGN, SETTING, AND PARTICIPANTS Retrospective cohort study using a large US administrative database that contains data from adult patients (Ն18 years) with private insurance or Medicare Advantage who underwent coronary artery bypass graft (CABG) or valve surgery between January 1, 2009, and March 30, 2017, with final follow-up on March 31, 2017. One-to-one propensity score matching was used to balance patients on 76 dimensions to compare those with vs without LAAO, stratified by history of prior AF at the time of surgery.
+EXPOSURES Surgical LAAO vs no surgical LAAO during cardiac surgery.
+MAIN OUTCOMES AND MEASURES The primary outcomes were stroke (ie, ischemic stroke or systemic embolism) and all-cause mortality. The secondary outcomes were postoperative AF (AF within 30 days after surgery among patients without prior AF) and long-term AF-related health utilization (event rates of outpatient visits and hospitalizations).
+RESULTS Among 75 782 patients who underwent cardiac surgery (mean age, 66.0 [SD, 11.2] years; 2 2091 [29.2%] women, 25 721 [33.9%] with preexisting AF), 4374 (5.8%) underwent concurrent LAAO, and mean follow-up was 2.1 (SD, 1.9) years. In the 8590 propensity score–matched patients, LAAO was associated with a reduced risk of stroke (1.14 vs 1.59 events per 100 person-years; hazard ratio [HR], 0.73 [95% CI, 0.56-0.96]; P = .03) and mortality (3.01 vs 4.30 events per 100 person-years; HR, 0.71 [95% CI, 0.60-0.84]; P < .001). LAAO was associated with higher rates of AF-related outpatient visits (11.96 vs 10.26 events per person-year; absolute difference, 1.70 [95% CI, 1.60-1.80] events per person-year; rate ratio, 1.17 [95% CI, 1.10-1.24]; P < .001) and hospitalizations (0.36 vs 0.32 event per person-year; absolute difference, 0.04 [95% CI, 0.02-0.06] event per person-year; rate ratio, 1.13 [95% CI, 1.05-1.21]; P = .002). In patients with prior AF (6438/8590 [74.9%]) with vs without LAAO, risk of stroke was 1.11 vs 1.71 events per 100 person-years (HR, 0.68 [95% CI, 0.50-0.92]; P = .01) and risk of mortality was 3.22 vs 4.93 events per 100 person-years (HR, 0.67 [95% CI, 0.56-0.80]; P < .001), respectively. In patients without prior AF (2152/8590 [25.1%]) with vs without LAAO, risk of stroke was 1.23 vs 1.26 events per 100 person-years (HR, 0.95 [95% CI, 0.54-1.68]), risk of mortality was 2.30 vs 2.49 events per 100 person-years (HR, 0.92 [95% CI, 0.61-1.37]), and risk of postoperative AF was 27.7% vs 20.2% events per 100 person-years (HR, 1.46 [95% CI, 1.22-1.73]; P < .001). The interaction term between prior AF and LAAO was not significant (P = .29 for stroke and P = .16 for mortality).
+CONCLUSIONS AND RELEVANCE Among patients undergoing cardiac surgery, concurrent surgical LAAO, compared with no surgical LAAO, was associated with reduced risk of subsequent stroke and all-cause mortality. Further research, including from randomized clinical trials, is needed to more definitively determine the role of surgical LAAO.
+JAMA. 2018;319(20):2116-2126. doi:10.1001/jama.2018.6024
+
+Supplemental content CME Quiz at jamanetwork.com/learning
+Author Affiliations: Robert D. and Patricia E. Kern Center for the Science of Health Care Delivery, Mayo Clinic, Rochester, Minnesota (Yao, Sangaralingham, Shah, Noseworthy); Division of Health Care Policy and Research, Department of Health Sciences Research, Mayo Clinic, Rochester, Minnesota (Yao, Shah); Department of Cardiovascular Medicine, Mayo Clinic, Rochester, Minnesota (Gersh, Holmes, Melduni, Noseworthy); Department of Internal Medicine, Mayo Clinic, Rochester, Minnesota (Johnsrud); OptumLabs, Cambridge, Massachusetts (Shah). Corresponding Author: Xiaoxi Yao, PhD, Mayo Clinic, 200 First St SW, Rochester, MN 55905 (yao.xiaoxi@mayo.edu).
+
+2116 © 2018 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+(Reprinted) jama.com
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Original Investigation Research
+
+C ardiac surgery is among the most commonly performed procedures, with more than 300 000 coronary artery bypass graft (CABG) and valve operations performed annually in the United States.1 Many patients who undergo cardiac surgery have a history of atrial fibrillation (AF), which is associated with an increased risk of stroke.2,3 Because thrombi in the left atrial appendage may account for the majority of cardioembolic strokes in AF,4 surgical occlusion of the left atrial appendage (LAAO) is sometimes performed during the surgery to reduce long-term risk of stroke.
+There are limited data on the effectiveness of LAAO to guide evidence-based decision making. A recent observational study demonstrated that LAAO was associated with a lower risk of thromboembolism in patients with AF.5 However, LAAO may not be beneficial in patients without AF, but in another recent observational study, more than half of the patients undergoing LAAO did not have prior AF, perhaps indicating that preemptive closure in patients perceived to be at a high risk of developing AF is common practice.6 However, little is known whether this approach is justified. Therefore, this study aimed to investigate whether LAAO during cardiac surgery was associated with reduced risks of stroke and mortality. This study specifically assessed outcomes stratified by whether patients had a history of AF at the time of surgery.
+A secondary aim was to investigate whether LAAO was associated with subsequent AF. A previous study found that LAAO may be associated with increased risk of postoperative AF,6 perhaps by promoting an atrial arrhythmogenic state resulting from increased left atrial filling pressures, inflammation, and sympatho-vagal imbalance.7-9 As such, this study examined the association between LAAO and postoperative AF, as well as long-term AF-related health care utilization.
+Methods
+The Mayo Clinic institutional review board exempted this study from review because the study used preexisting, deidentified data.
+Study Population This study was a retrospective cohort analysis using OptumLabs Data Warehouse, which contains data from patients with private insurance or Medicare Advantage of all ages and races throughout the United States.10,11 The cohort included adult patients (≥18 years) who underwent their first CABG or valve surgery (openheart valve replacement or repair) between January 1, 2009, and March 30, 2017. Patients were required to have at least 6 months of continuous enrollment in health insurance plans before the the surgery, defined as the baseline period, to capture patients’ medical history. The mean baseline period was 3.8 (SD, 3.3) years.
+The variables were defined by the presence of a claim with eligible diagnosis codes, procedure codes, or prescription fills. The absence of such claims was interpreted as the absence of the condition. Race/ethnicity was measured because it is a major socioeconomic characteristic and a risk factor for outcomes. The data were provided by OptumLabs, classified as nonHispanic white (white), non-Hispanic black (black), Asian, Hispanic, or other/unknown. Self-report was the primary source,
+
+Key Points
+Question Is surgical occlusion of the left atrial appendage (LAAO) during cardiac surgery associated with reduced risk of stroke or all-cause mortality?
+Finding In this retrospective cohort study of 75 782 patients undergoing cardiac surgery, concurrent surgical LAAO, compared with no surgical LAAO, was significantly associated with a lower risk of stroke (hazard ratio, 0.73) and mortality (hazard ratio, 0.71) among a propensity score–matched cohort of 8590 patients.
+Meaning Surgical LAAO in patients undergoing concurrent cardiac surgery was associated with reduced risk of subsequent stroke and all-cause mortality.
+and when data were missing, imputation was made by the data provider based on other available administrative data.12
+Exposure LAAO was identified using International Classification of Diseases, Ninth Revision (ICD-9) and International Statistical Classification of Diseases and Related Health Problems, Tenth Revision (ICD-10) procedure codes (ICD-9 37.36; ICD-10 02570ZK, 02B70ZK, 02L70ZK, 02L70CK).
+Outcomes The primary outcomes were ischemic stroke or systemic embolism (hereafter referred to as stroke) and all-cause mortality. Stroke was defined as a primary diagnosis during an emergency department visit or a primary or secondary diagnosis during an inpatient stay (diagnosis codes for stroke: ICD-9 433.x1, 434.x1, 436, and 444.x; ICD-10 I63.x, I74.x). Mortality was identified based on the Social Security Death Master File and discharge status.
+The secondary outcomes were postoperative AF, defined as newly diagnosed AF within 30 days after the surgery (a diagnosis code on an inpatient or outpatient claim [ICD-9 427.31; ICD-10 I48.0, I48.1, I48.2, I48.91]), and long-term AF-related health utilization, measured by the event rates of outpatient visits and hospitalizations with a diagnosis of AF. Although AF-related health utilization may underestimate the occurrence and frequency of AF episodes, it could be considered as a surrogate measure of the effect of AF on patients’ health and quality of life, as well as the burden on the health care system.
+Follow-up started from the day after the surgery until the end of the study period (March 31, 2017), the end of enrollment in health insurance plans, or death, whichever happened first. All outcomes were compared in the entire cohort, except for postoperative AF, which was assessed only in patients without prior AF, to avoid misclassification of “carry forward” diagnoses as postoperative AF episodes.
+Statistical Analysis The statistical analysis plan is available in Supplement 1. Propensity score matching was used to balance the differences in baseline characteristics between patients who underwent concurrent LAAO and those who did not. A propensity score, the probability of undergoing LAAO, was estimated using logistic regression based on sociodemographic characteristics, procedure-related
+
+jama.com
+
+(Reprinted) JAMA May 22/29, 2018 Volume 319, Number 20 2117 © 2018 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+Research Original Investigation
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+characteristics, medical history, concurrent medication use, year of the surgery, and the length of baseline period. Baseline medication use was defined as prescriptions within 3 months of the surgery, and the preoperative medication was defined as prescription within 1 week of the surgery. One-to-one nearest-neighbor caliper matching was used to match patients based on the logit of the propensity score using a caliper equal to 0.2 of the standard deviation of the logit of the propensity score.13 Patients were exact matched on baseline AF and use of oral anticoagulation.
+Standardized difference was used to assess the balance of covariates after matching, and a standardized difference less than 10% was considered acceptable.14 Balance of baseline characteristics was also assessed in patients with and without prior AF separately, because the comparisons between patients treated with and without LAAO were stratified by the presence of prior AF. Whether the hazard ratios (HRs) were the same between patients with and without prior AF was tested by the significance of the interaction term. One-third of the cohort had linked blood-based laboratory results. The availability of laboratory data depended on the contract between laboratory testing facilities and OptumLabs, rather than individual patient characteristics. Laboratory data were used to assess values for serum creatinine, serum calcium, serum albumin, hemoglobin, low-density lipoprotein cholesterol, and hemoglobin A1c. These laboratory data were not included in the model to calculate the propensity score, but the values and the proportion of missing values were balanced after matching on all other patient characteristics.
+Cox proportional hazards regression was used to compare patients treated with and without LAAO for stroke, mortality, and postoperative AF in the propensity score–matched cohort, with robust sandwich estimates to account for the clustering within matched sets.15 The Fine and Gray method was used to consider death as a competing risk when assessing nonfatal outcomes.16 The proportional hazards assumption was tested on the basis of Schoenfeld residuals.17 Poisson regression was used to assess AF-related outpatient visits and hospitalizations.
+P < .05 was considered statistically significant for all tests. All tests were 2-sided. All analyses were conducted using SAS version 9.4 (SAS Institute Inc) and Stata version 14.1 (StataCorp).
+Sensitivity Analyses Subgroup analyses for stroke and mortality were performed stratified by age, sex, race, surgery types, CHA2DS2-VASc score (congestive heart failure, hypertension, age ≥75 years [doubled], diabetes, stroke/transient ischemic attack/thromboembolism [doubled], vascular disease [prior myocardial infarction, peripheral artery disease, or aortic plaque], age 65-75 years, sex category [female]), HAS-BLED score (hypertension, abnormal renal and liver function, stroke, bleeding, labile international normalized ratio, elderly, drugs or alcohol), prior thromboembolism, prior bleeding, heart failure, and stage 3-5 chronic kidney disease. Whether the HRs were the same across the subgroups was tested by the significance of the interaction terms.
+Analyses using falsification end points were performed to test for residual confounding.18 Three end points unlikely to be a result of undergoing LAAO were selected: chronic obstructive pulmonary disease, pneumonia, and fracture.
+
+Sensitivity analyses were conducted using propensity score weighting (an overlap weight) instead of matching.19 Another sensitivity analysis was conducted assessing outcomes by the use of oral anticoagulants during follow-up. In patients without prior AF, a sensitivity analysis was conducted for stroke and mortality, stratified by whether patients developed AF during follow-up. AF-related health utilization excluding the first 30 days, stratified by whether patients had postoperative AF, was examined to assess whether patients with postoperative AF developed late AF.
+To illustrate variables associated with LAAO, multivariable logistic regression was performed in the entire cohort. To illustrate variables associated with postoperative AF, multivariable Cox proportional hazards regression was performed in patients without prior AF. In these 2 multivariable regression models, independent variables were selected using stepwise forward selection using a threshold of P = .10 for the addition to the model. A sensitivity analysis was performed in patients with prior AF, adjusting for whether patients underwent concomitant Maze procedure. All sensitivity and subgroup analyses were prespecified but were considered exploratory.
+Results
+Patient Characteristics Among 75 782 patients who underwent cardiac surgery, the mean age was 66.0 (SD, 11.2) years; 22 091 (29.2%) were women, 67 410 (89.0%) had a CHA2DS2-VASc score of 2 or more, 25 721 (33.9%) had preexisting AF, and 4374 (5.8%) underwent concurrent LAAO. Variables significantly associated with undergoing LAAO included a history of AF, valve surgery (particularly valve repair and mitral valve surgery), the use of oral anticoagulants before the surgery, and surgery performed in more recent years (eTable 1 in Supplement 2).
+The propensity score–matched cohort included 8590 patients followed up for a mean of 2.1 (SD, 1.9) years. Patients treated with and without LAAO were balanced on 76 baseline characteristics (Table 1 and Table 2). Of these patients, 2152/ 8590 (25.1%) did not have a history of AF; baseline characteristics stratified by whether patients had prior AF are reported in eTable 2 in Supplement 2. In patients with prior AF, the baseline characteristics were all balanced between patients who underwent LAAO and those who did not. In patients without prior AF, because of a relatively small number of patients, several variables had some imbalance, but adjusting for these variables in the regression analyses did not change the results.
+Primary and Secondary Outcomes Overall in the propensity score–matched patients, LAAO was associated with a reduced risk of stroke (1.14 vs 1.59 events per 100 person-years; absolute difference, 0.45 [95% CI, 0.09 to 0.82] event per 100 person-years; HR, 0.73 [95% CI, 0.56 to 0.96]; P = .03) and mortality (3.01 vs 4.30 events per 100 person-years; absolute difference, 1.29 [95% CI, 0.70 to 1.89] events per 100 person-years; HR, 0.71 [95% CI, 0.60 to 0.84]; P < .001) (Table 3 and Figure 1). The proportional hazards assumption was valid for all outcomes.
+
+2118 JAMA May 22/29, 2018 Volume 319, Number 20 (Reprinted) © 2018 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+jama.com
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Original Investigation Research
+
+Table 1. Baseline Demographic Characteristics and Medical History Before and After Propensity Score Matching
+
+Characteristic Age, y
+18-64 65-74 ≥75 Women Race Asian Black Hispanic/Latino White Other/unknown Geographic region Midwest Northeast South West Medical history Atrial fibrillation Other supraventricular arrhythmia Thromboembolism Heart failure Diabetes mellitus Stage 3-5 CKD Myocardial infarction Peripheral artery disease Major bleeding Intracranial bleeding Hypertension Hyperlipidemia Falls Anemia COPD Alcoholism Obesity Smoking Obstructive sleep apnea Nonskin cancer Ischemic stroke or systemic embolism Transient ischemic attack Ventricular arrhythmia Systolic heart failure Diabetes requiring insulin Dialysis Cardioversion Ablation Pacemaker or ICD PCI Liver disease Depression Dementia Hypothyroidism Thyrotoxicosis Ulcer in upper GI tract Preoperative endocarditis
+
+Before Propensity Score Matching
+
+No LAAO, No. (%) (n = 71 408)
+
+LAAO, No. (%) (n = 4374)
+
+65.8 (11.3)
+
+68.2 (10.6)
+
+30 157 (42.2)
+
+1471 (33.6)
+
+24 265 (34.0)
+
+1528 (34.9)
+
+16 986 (23.8)
+
+1375 (31.4)
+
+20 553 (28.8)
+
+1538 (35.2)
+
+1485 (2.1) 6171 (8.6) 4310 (6.0) 54 863 (76.8) 4579 (6.4)
+
+64 (1.5) 307 (7.0) 177 (4.0) 3486 (79.7) 340 (7.8)
+
+22 613 (31.7) 9500 (13.3)
+32 436 (45.4) 6859 (9.6)
+
+1755 (40.1) 497 (11.4)
+1527 (34.9) 595 (13.6)
+
+22 423 (31.4) 20 035 (28.1) 12 038 (16.9) 28 182 (39.5) 31 651 (44.3)
+9345 (13.1) 29 481 (41.3) 12 530 (17.5) 13 976 (19.6)
+928 (1.3) 64 537 (90.4) 63 313 (88.7)
+6006 (8.4) 46 228 (64.7)
+8914 (12.5) 3688 (5.2) 20 785 (29.1) 30 554 (42.8) 12 389 (17.3) 10 089 (14.1) 9266 (13.0) 5705 (8.0) 8502 (11.9) 12 015 (16.8) 9115 (12.8) 1626 (2.3) 2145 (3.0)
+673 (0.9) 5269 (7.4) 9474 (13.3) 9262 (13.0) 22 088 (30.9) 1832 (2.6) 14 826 (20.8) 2134 (3.0) 3688 (5.2)
+786 (1.1)
+
+3298 (75.4) 2190 (50.1)
+775 (17.7) 2422 (55.4) 1523 (34.8)
+600 (13.7) 1102 (25.2)
+586 (13.4) 1066 (24.4)
+89 (2.0) 3874 (88.6) 3686 (84.3)
+441 (10.1) 3178 (72.7)
+584 (13.4) 271 (6.2) 1235 (28.2) 1647 (37.7) 921 (21.1) 683 (15.6) 580 (13.3) 404 (9.2) 767 (17.5) 1114 (25.5) 368 (8.4)
+67 (1.5) 680 (15.5) 187 (4.3) 567 (13.0) 354 (8.1) 579 (13.2) 1385 (31.7) 129 (2.9) 1041 (23.8) 191 (4.4) 232 (5.3)
+71 (1.6)
+
+After Propensity Score Matching
+
+No LAAO, No. (%) (n = 4295)
+
+LAAO, No. (%) (n = 4295)
+
+68.4 (10.8)
+
+68.2 (10.6)
+
+1431 (33.3)
+
+1442 (33.6)
+
+1461 (34.0)
+
+1497 (34.9)
+
+1403 (32.7)
+
+1356 (31.6)
+
+1515 (35.3)
+
+1506 (35.1)
+
+59 (1.4) 296 (6.9) 175 (4.1) 3424 (79.7) 341 (7.9)
+
+64 (1.5) 305 (7.1) 175 (4.1) 3421 (79.7) 330 (7.7)
+
+1723 (40.1) 500 (11.6)
+1495 (34.8) 577 (13.4)
+
+1710 (39.8) 497 (11.6)
+1516 (35.3) 572 (13.3)
+
+3219 (74.9) 2161 (50.3)
+806 (18.8) 2402 (55.9) 1539 (35.8)
+603 (14.0) 1112 (25.9)
+596 (13.9) 1052 (24.5)
+83 (1.9) 3803 (88.5) 3676 (85.6)
+432 (10.1) 3161 (73.6)
+563 (13.1) 271 (6.3) 1207 (28.1) 1585 (36.9) 923 (21.5) 662 (15.4) 617 (14.4) 426 (9.9) 750 (17.5) 1126 (26.2) 363 (8.5)
+69 (1.6) 604 (14.1) 167 (3.9) 580 (13.5) 344 (8.0) 563 (13.1) 1375 (32.0) 130 (3.0) 1053 (24.5) 189 (4.4) 244 (5.7)
+81 (1.9)
+
+3219 (74.9) 2122 (49.4)
+768 (17.9) 2367 (55.1) 1508 (35.1)
+595 (13.9) 1098 (25.6)
+586 (13.6) 1045 (24.3)
+87 (2.0) 3807 (88.6) 3629 (84.5)
+430 (10.0) 3119 (72.6)
+578 (13.5) 263 (6.1) 1213 (28.2) 1627 (37.9) 896 (20.9) 672 (15.6) 575 (13.4) 398 (9.3) 749 (17.4) 1078 (25.1) 365 (8.5)
+67 (1.6) 622 (14.5) 174 (4.1) 556 (12.9) 351 (8.2) 569 (13.2) 1358 (31.6) 127 (3.0) 1019 (23.7) 185 (4.3) 229 (5.3)
+71 (1.7)
+
+Standardized Difference, % 1.5 0.5 1.8 2.3 0.4
+1.0 0.8 0.0 0.2 1.0
+0.6 0.2 1.0 0.3
+0.0 1.8 2.3 1.6 1.5 0.5 0.7 0.7 0.4 0.7 0.3 3.1 0.2 2.2 1.0 0.8 0.3 2.0 1.5 0.6 2.8 2.2 0.1 2.6 0.2 0.4 1.2 0.8 1.6 0.6 0.4 0.8 0.4 1.9 0.5 1.5 1.8
+(continued)
+
+jama.com
+
+(Reprinted) JAMA May 22/29, 2018 Volume 319, Number 20 2119 © 2018 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+Research Original Investigation
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Table 1. Baseline Demographic Characteristics and Medical History Before and After Propensity Score Matching (continued)
+
+Before Propensity Score Matching
+
+After Propensity Score Matching
+
+Characteristic CHA2DS2-VASc scorea
+0, 1
+
+No LAAO, No. (%) (n = 71 408)
+7901 (11.1)
+
+LAAO, No. (%) (n = 4374)
+471 (10.8)
+
+No LAAO, No. (%) (n = 4295)
+457 (10.6)
+
+LAAO, No. (%) (n = 4295)
+460 (10.7)
+
+Standardized Difference, %
+0.2
+
+2, 3
+
+26 982 (37.8)
+
+1515 (34.6)
+
+1398 (32.5)
+
+1482 (34.5)
+
+4.1
+
+≥4
+
+36 525 (51.1)
+
+2388 (54.6)
+
+2440 (56.8)
+
+2353 (54.8)
+
+4.1
+
+HAS-BLED score ≥3b
+
+42 278 (59.2)
+
+2782 (63.6)
+
+2808 (65.4)
+
+2733 (63.6)
+
+3.6
+
+Baseline medication
+
+Oral anticoagulant
+
+4393 (6.2)
+
+1368 (31.3)
+
+1308 (30.5)
+
+1308 (30.5)
+
+0.0
+
+Antiplatelet
+
+9834 (13.8)
+
+327 (7.5)
+
+313 (7.3)
+
+327 (7.6)
+
+1.2
+
+Rate-control drugs
+
+32 320 (45.3)
+
+2455 (56.1)
+
+2411 (56.1)
+
+2389 (55.6)
+
+1.0
+
+Antiarrhythmic drugs
+
+2302 (3.2)
+
+601 (13.7)
+
+539 (12.5)
+
+546 (12.7)
+
+0.5
+
+Other adrenergic blocking agents
+
+3798 (5.3)
+
+206 (4.7)
+
+206 (4.8)
+
+204 (4.7)
+
+0.2
+
+Other calcium channel blockers
+
+11 372 (15.9)
+
+575 (13.1)
+
+570 (13.3)
+
+571 (13.3)
+
+0.1
+
+Renin-angiotensin system antagonists
+
+30 801 (43.1)
+
+1896 (43.3)
+
+1875 (43.7)
+
+1863 (43.4)
+
+0.6
+
+Loop diuretics
+
+9270 (13.0)
+
+1165 (26.6)
+
+1108 (25.8)
+
+1126 (26.2)
+
+1.0
+
+Thiazides
+
+11 382 (15.9)
+
+627 (14.3)
+
+598 (13.9)
+
+623 (14.5)
+
+1.7
+
+Cholesterol-lowering drugs
+
+34 414 (48.2)
+
+2009 (45.9)
+
+1998 (46.5)
+
+1979 (46.1)
+
+0.9
+
+NSAIDs
+
+7008 (9.8)
+
+372 (8.5)
+
+377 (8.8)
+
+359 (8.4)
+
+1.5
+
+Diabetes drugs
+
+13 483 (18.9)
+
+552 (12.6)
+
+575 (13.4)
+
+547 (12.7)
+
+1.9
+
+Antiulcer agents
+
+13 144 (18.4)
+
+826 (18.9)
+
+815 (19.0)
+
+811 (18.9)
+
+0.2
+
+Preoperative medication
+
+β-Blocker
+
+6115 (8.6)
+
+345 (7.9)
+
+369 (8.6)
+
+340 (7.9)
+
+2.5
+
+Amiodarone
+
+573 (0.8)
+
+79 (1.8)
+
+72 (1.7)
+
+74 (1.7)
+
+0.4
+
+Statin
+
+5404 (7.6)
+
+290 (6.6)
+
+263 (6.1)
+
+288 (6.7)
+
+2.4
+
+Corticosteroid
+
+1492 (2.1)
+
+81 (1.9)
+
+100 (2.3)
+
+81 (1.9)
+
+3.1
+
+Laboratory results, mean (SD)
+
+Serum creatinine, mg/dL
+
+1.2 (2.9)
+
+1.1 (0.5)
+
+1.1 (0.4)
+
+1.1 (0.5)
+
+6.6
+
+Serum calcium, mg/dL
+
+9.4 (0.5)
+
+9.4 (0.5)
+
+9.4 (0.5)
+
+9.4 (0.5)
+
+2.2
+
+Serum albumin, g/dL
+
+4.2 (0.4)
+
+4.2 (0.4)
+
+4.2 (0.4)
+
+4.2 (0.4)
+
+2.7
+
+Hemoglobin, g/dL
+
+13.7 (1.8)
+
+13.5 (1.8)
+
+13.4 (1.8)
+
+13.5 (1.8)
+
+7.7
+
+LDL-C, mg/dL
+
+104.0 (39.6)
+
+97.6 (35.6)
+
+96.0 (34.9)
+
+97.5 (35.6)
+
+4.3
+
+HbA1c, %
+
+7.1 (1.7)
+
+6.7 (1.4)
+
+6.7 (1.5)
+
+6.7 (1.4)
+
+0.7
+
+Abbreviations: CKD, chronic kidney disease; COPD, chronic obstructive pulmonary disease; GI, gastrointestinal; HbA1c, hemoglobin A1c; ICD, implantable cardioverter-defibrillator; LAAO, surgical occlusion of the left atrial appendage; LDL-C, low-density lipoprotein cholesterol; NSAID, nonsteroidal anti-inflammatory drug; PCI, percutaneous coronary intervention.
+SI conversion factors: To convert creatinine values to μmol/L, multiply by 88.4; calcium values to mmol/L, multiply by 0.25; LDL-C values to mmol/L, multiply by 0.0259.
+a Range, 0 to 9; higher score indicates higher risk of stroke. Point score is
+
+calculated as 1 point each for heart failure, hypertension, diabetes, vascular disease, age 65 to 74 years, and female sex; 2 points for 75 years or older and prior stroke, TIA, or thromboembolism.
+b Range, 0 to 9; higher score indicates higher risk of bleeding. Point score is calculated as 1 point each for hypertension, abnormal kidney function, abnormal liver function, prior stroke, prior bleeding or bleeding predisposition, labile international normalized ratio (INR), older than 65 years, medication usage predisposing to bleeding, and alcohol use. This study did not consider INR, so the range is 0 to 8.
+
+LAAO was associated with higher rates of AF-related outpatient visits (11.96 vs 10.26 events per person-year; absolute difference, 1.70 [95% CI, 1.60 to 1.80] events per person-year; rate ratio, 1.17 [95% CI, 1.10 to 1.24]; P < .001) and hospitalizations (0.36 vs 0.32 event per person-year; absolute difference, 0.04 [95% CI, 0.02 to 0.06] event per person-year; rate ratio, 1.13 [95% CI, 1.05 to 1.21]; P = .002) (Table 4).
+Stratified Analyses by Preexisting AF Among the 6438 patients with prior AF in the matched cohort, for those with LAAO vs no LAAO, the risk of stroke was 1.11 vs 1.71 events per 100 person-years, respectively (absolute difference, 0.60 [95% CI, 0.16 to 1.03] event per 100 person-years; HR, 0.68 [95% CI, 0.50 to 0.92]; P = .01),
+
+and the risk of mortality was 3.22 vs 4.93 events per 100 person-years (absolute difference, 1.70 [95% CI, 0.98 to 2.43] events per 100 person-years; HR, 0.67 [95% CI, 0.56 to 0.80]; P < .001). Among the 2152 patients without prior AF for those with vs without LAAO, the risk of stroke was 1.23 vs 1.26 events per 100 person-years, respectively (absolute difference, 0.04 [95% CI, −0.67 to 0.74] event per 100 person-years; HR, 0.95 [95% CI, 0.54 to 1.68]), and the risk of mortality was 2.30 vs 2.49 events per 100 person-years (absolute difference, 0.19 [95% CI, −0.78 to 1.16] event per 100 person-years; HR, 0.92 [95% CI, 0.61 to 1.37)( Table 3 and Figure 1). The interaction term between prior AF and LAAO was not statistically significant (P = .29 for stroke and P = .16 for mortality).
+
+2120 JAMA May 22/29, 2018 Volume 319, Number 20 (Reprinted) © 2018 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+jama.com
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Original Investigation Research
+
+Table 2. Procedure-Related Characteristics Before and After Propensity Score Matching
+
+Characteristic Surgery types
+
+Before Propensity Score Matching
+
+No LAAO, No. (%) (n = 71 408)
+
+LAAO, No. (%) (n = 4374)
+
+After Propensity Score Matching
+
+No LAAO, No. (%) (n = 4295)
+
+LAAO, No. (%) (n = 4295)
+
+Standardized Difference, %
+
+CABG
+
+54 206 (75.9)
+
+2012 (46.0)
+
+1924 (44.8)
+
+2006 (46.7)
+
+3.8
+
+Mechanical valve replacement
+
+6006 (8.4)
+
+386 (8.8)
+
+408 (9.5)
+
+386 (9.0)
+
+1.8
+
+Bioprosthetic valve replacement
+
+14 405 (20.2)
+
+1506 (34.4)
+
+1531 (35.6)
+
+1493 (34.8)
+
+1.9
+
+Valve repair
+
+5134 (7.2)
+
+1227 (28.1)
+
+1183 (27.5)
+
+1161 (27.0)
+
+1.1
+
+CABG + valve surgery Valves treated during valve surgerya
+
+8343 (11.7)
+
+757 (17.3)
+
+751 (17.5)
+
+751 (17.5)
+
+0.0
+
+Aortic
+
+17 697 (69.3)
+
+1174 (37.6)
+
+1251 (40.1)
+
+1173 (38.6)
+
+3.0
+
+Mitral
+
+7276 (28.5)
+
+1946 (62.4)
+
+1871 (59.9)
+
+1867 (61.4)
+
+3.0
+
+Tricuspid or pulmonary
+
+2125 (8.3)
+
+451 (14.5)
+
+422 (13.5)
+
+432 (14.2)
+
+2.0
+
+Both mitral and aortic valves
+
+636 (2.5)
+
+121 (3.9)
+
+133 (4.3)
+
+120 (3.9)
+
+On-pump surgery Preoperative hemodynamic instabilityb
+
+48 723 (68.2) 731 (1.0)
+
+3467 (79.3) 25 (0.6)
+
+3388 (78.9) 30 (0.7)
+
+3390 (78.9)
+
+0.1
+
+25 (0.6)
+
+1.5
+
+Year of index procedure
+
+2009
+
+7922 (11.1)
+
+230 (5.3)
+
+263 (6.1)
+
+230 (5.4)
+
+3.3
+
+2010
+
+7910 (11.1)
+
+326 (7.5)
+
+310 (7.2)
+
+326 (7.6)
+
+1.4
+
+2011
+
+8028 (11.2)
+
+347 (7.9)
+
+338 (7.9)
+
+347 (8.1)
+
+0.8
+
+2012
+
+8372 (11.7)
+
+412 (9.4)
+
+402 (9.4)
+
+411 (9.6)
+
+0.7
+
+2013
+
+9078 (12.7)
+
+593 (13.6)
+
+600 (14.0)
+
+587 (13.7)
+
+0.9
+
+2014
+
+8278 (11.6)
+
+599 (13.7)
+
+568 (13.2)
+
+590 (13.7)
+
+1.5
+
+2015
+
+8751 (12.3)
+
+754 (17.2)
+
+759 (17.7)
+
+731 (17.0)
+
+1.7
+
+2016
+
+10 322 (14.5)
+
+887 (20.3)
+
+859 (20.0)
+
+855 (19.9)
+
+0.2
+
+2017 Length of baseline period, yc
+
+2747 (3.8) 3.7 (3.3)
+
+226 (5.2) 3.9 (3.3)
+
+196 (4.6) 3.9 (3.3)
+
+218 (5.1)
+
+2.4
+
+3.9 (3.3)
+
+0.8
+
+Abbreviations: CABG, coronary artery bypass graft; LAAO, surgical occlusion of the left atrial appendage. a Proportions calculated among patients who underwent valve surgery. b Includes cardiogenic shock, cardiac arrest, and resuscitation within 1 week
+before the procedure.
+
+c Time period before the surgery, which was used to establish patients’ medical history. Concomitant Maze procedure was performed in 2196 of the patients (2.9%), including 1068 (24.4%) of patients who underwent LAAO and 1128 (1.6%) of patients who did not undergo LAAO.
+
+Table 3. Stroke and All-Cause Mortality in Propensity Score–Matched Patients
+
+No LAAO
+
+Outcome
+
+No. of No. of Patients Events
+
+Ischemic Stroke or Systemic Embolism
+
+PersonYears
+
+Event Ratea
+
+LAAO
+No. of Patients
+
+No. of Events
+
+PersonYears
+
+Event Ratea
+
+Absolute Rate Difference (95% CI)a
+
+Overall
+
+4295 122 7665 1.59 4295
+
+90 7908 1.14 0.45 (0.09 to 0.82)
+
+AF at baseline
+
+3219
+
+97 5683 1.71 3219
+
+67 6032 1.11 0.60 (0.16 to 1.03)
+
+No AF at baseline 1076
+
+25 1982 1.26 1076
+
+23 1877 1.23 0.04 (−0.67 to 0.74)
+
+Death
+
+Overall
+
+4295 335 7792 4.30 4295 243 8083 3.01 1.29 (0.70 to 1.89)
+
+AF at baseline
+
+3219 285 5782 4.93 3219 199 6171 3.22 1.70 (0.98 to 2.43)
+
+No AF at baseline 1076
+
+50 2010 2.49 1076
+
+44 1912 2.30 0.19 (−0.78 to 1.16)
+
+Abbreviations: AF, atrial fibrillation; LAAO, surgical occlusion of the left atrial appendage.
+
+a Calculated as the number of events per 100 person-years.
+
+b The interaction term between prior AF and LAAO was not statistically significant (P = .29 for stroke and P = .16 for mortality).
+
+HR (95% CI)
+0.73 (0.56 to 0.96) 0.68 (0.50 to 0.92) 0.95 (0.54 to 1.68)
+0.71 (0.60 to 0.84) 0.67 (0.56 to 0.80) 0.92 (0.61 to 1.37)
+
+P Valueb
+.03 .01 .87
+<.001 <.001
+.67
+
+Among the 2152 patients without prior AF in the matched cohort, 515 (23.9%) developed newly diagnosed AF within 30 days after surgery. LAAO vs no LAAO was associated with a higher risk of postoperative AF (27.7% vs 20.2%; HR, 1.46 [95% CI, 1.22 to 1.73]; P < .001).
+In the propensity score–matched patients with prior AF with LAAO vs without LAAO, rates were 14.74 vs 13.11 events per person-year, respectively (absolute difference, 1.62 [95% CI, 1.49 to 1.76] events per person-year; rate ratio, 1.12 [95%
+
+CI, 1.06 to 1.19]; P < .001), for AF-related outpatient visits and 0.44 vs 0.41 event per person-year (absolute difference, 0.04 [95% CI, 0.01 to 0.06] event per person-year; rate ratio, 1.09 [95% CI, 1.01 to 1.17]; P = .03) for hospitalizations. Among patients without prior AF with LAAO vs without LAAO, rates were 3.01 vs 2.05 events per person-year, respectively (absolute difference, 0.95 [95% CI, 0.85 to 1.05] event per person-year; rate ratio, 1.46 [95% CI, 1.10 to 1.96]; P = .01), for outpatient visits and 0.08 vs 0.06 event per person-year (absolute difference,
+
+jama.com
+
+(Reprinted) JAMA May 22/29, 2018 Volume 319, Number 20 2121 © 2018 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+Research Original Investigation
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Figure 1. Cumulative Risks of Stroke and All-Cause Mortality in Propensity Score–Matched Patients
+
+A Stroke
+5
+4
+3
+2
+1
+0 0
+No. at risk No LAAO 4295 LAAO 4295
+
+Cumulative Risk, %
+
+All patients No LAAO
+LAAO
+
+P =.03
+
+1
+
+2
+
+3
+
+4
+
+Follow-up Time, y
+
+2502
+
+1481
+
+837
+
+473
+
+2551
+
+1542
+
+894
+
+508
+
+Cumulative Risk, %
+
+5 4 3 2 1 0
+0
+3219 3219
+
+Patients with AF at baseline No LAAO
+
+LAAO
+
+P =.01
+
+1
+
+2
+
+3
+
+4
+
+Follow-up Time, y
+
+1849
+
+1088
+
+623
+
+357
+
+1941
+
+1178
+
+688
+
+395
+
+Cumulative Risk, %
+
+5 4 3 2 1 0
+0
+1076 1076
+
+Patients without AF at baseline
+
+No LAAO
+
+LAAO
+
+P =.87
+
+1
+
+2
+
+3
+
+4
+
+Follow-up Time, y
+
+653
+
+393
+
+214
+
+116
+
+610
+
+364
+
+206
+
+113
+
+Cumulative Risk, %
+
+Cumulative Risk, %
+
+Cumulative Risk, %
+
+B Mortality 15 10 5
+
+All patients 15
+No LAAO
+10 LAAO
+5
+
+Patients with AF at baseline No LAAO
+
+Patients without AF at baseline 15
+
+10 LAAO
+5
+
+No LAAO LAAO
+
+0 0
+No. at risk No LAAO 4295 LAAO 4295
+
+P <.001
+
+1
+
+2
+
+3
+
+4
+
+Follow-up Time, y
+
+2552
+
+1510
+
+853
+
+479
+
+2588
+
+1579
+
+927
+
+531
+
+0 0
+3219 3219
+
+P <.001
+
+1
+
+2
+
+3
+
+4
+
+Follow-up Time, y
+
+1887
+
+1111
+
+635
+
+363
+
+1970
+
+1209
+
+715
+
+413
+
+0 0
+1076 1076
+
+P =.67
+
+1
+
+2
+
+3
+
+4
+
+Follow-up Time, y
+
+665
+
+399
+
+218
+
+116
+
+618
+
+370
+
+212
+
+118
+
+Y-axis scale in blue indicates range from 0% to 5%. All reported P values were obtained from Cox proportional hazards models. For stroke, in the surgical occlusion of the left atrial appendage (LAAO) group, median follow-up times were 1.4 (interquartile range [IQR], 0.5-2.7) years for all patients, 1.4 (IQR, 0.6-2.7) years for patients with prior atrial fibrillation (AF), and 1.2 (IQR, 0.5-2.6) years for patients without prior AF; in the no LAAO group, median follow-up times were 1.3 (IQR, 0.5-2.6) years for all patients, 1.3 (IQR, 0.5-2.5) years for
+
+patients with prior AF, and 1.4 (IQR, 0.5-2.7) years for patients without prior AF. For mortality, in the LAAO group, median follow-up times were 1.4 (IQR, 0.6-2.8) years for all patients, 1.5 (IQR, 0.6-2.8) years for patients with prior AF, and 1.2 (IQR, 0.5-2.6) years for patients without prior AF; in the no LAAO group, median follow-up times were 1.4 (IQR, 0.6-2.6) years for all patients, 1.3 (IQR, 0.6-2.5) years for patients with prior AF, and 1.5 (IQR, 0.6-2.7) years for patients without prior AF.
+
+Table 4. Atrial Fibrillation–Related Health Utilization After Cardiac Surgery in Propensity Score–Matched Patients
+
+No LAAO
+
+Outcome
+
+No. of Patients
+
+AF-Related Outpatient Visits
+
+Overall
+
+4295
+
+AF at baseline
+
+3219
+
+No AF at baseline 1076
+
+AF-Related Hospitalization
+
+Overall
+
+4295
+
+AF at baseline
+
+3219
+
+No AF at baseline 1076
+
+No. of Events
+79 951 75 825
+4126
+2473 2360
+113
+
+PersonYears
+
+Event Ratea
+
+LAAO
+No. of Patients
+
+No. of Events
+
+7792 5782 2010
+
+10.26 13.11
+2.05
+
+4295 3219 1076
+
+96 676 90 927
+5749
+
+7792 5782 2010
+
+0.32 4295 0.41 3219 0.06 1076
+
+2891 2738
+153
+
+Person- Event Absolute Rate
+
+Incident Rate Ratio
+
+Years Ratea Difference (95% CI)a (95% CI)
+
+P Value
+
+8083 6171 1912
+
+11.96 14.74
+3.01
+
+1.70 (1.60-1.80) 1.62 (1.49-1.76) 0.95 (0.85-1.05)
+
+1.17 (1.10-1.24) 1.12 (1.06-1.19) 1.46 (1.10-1.96)
+
+<.001 <.001
+.01
+
+8083 6171 1912
+
+0.36 0.04 (0.02-0.06)
+
+1.13 (1.05-1.21)
+
+.002
+
+0.44 0.04 (0.01-0.06)
+
+1.09 (1.01-1.17)
+
+.03
+
+0.08 0.02 (0.01-0.04)
+
+1.42 (1.01-2.00)
+
+.04
+
+Abbreviations: AF, atrial fibrillation; LAAO, surgical occlusion of the left atrial appendage. a Calculated as the number of events per person-year.
+
+0.02 [95% CI, 0.01 to 0.04] event per person-year; rate ratio, 1.42 [95% CI, 1.01 to 2.00]; P = .04) for hospitalizations (Table 4).
+In the multivariable regression using data from all 50 061 patients without prior AF, LAAO was associated with an
+
+increased risk of postoperative AF (HR, 1.48 [95% CI, 1.31 to 1.67]; P < .001). Other variables associated with postoperative AF included older age, a valve procedure, and a history of other supraventricular arrhythmia (eTable 3 in Supplement 2).
+
+2122 JAMA May 22/29, 2018 Volume 319, Number 20 (Reprinted) © 2018 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+jama.com
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Original Investigation Research
+
+Figure 2. Subgroup Analysis for Stroke in Propensity-Matched Patients With Atrial Fibrillation at Baseline
+
+No LAAO
+
+Subgroup All patients
+
+Event Rate per 100 No. of No. of Person- PersonPatients Events Years Years
+3219 97 5683 1.71
+
+Age, y
+
+18-64
+
+892 22 1542 1.43
+
+65-74
+
+1138 33 1929 1.71
+
+≥75
+
+1189 42 2212 1.90
+
+Sex
+
+Men
+
+2062 55 3538 1.55
+
+Women
+
+1157 42 2144 1.96
+
+Race
+
+White
+
+2605 83 4778 1.74
+
+Nonwhite
+
+614 14
+
+904 1.55
+
+Surgery types
+
+Isolated CABG
+
+807 17 1359 1.25
+
+Valve replacement 1544 58 2751 2.11
+
+Valve repair
+
+868 22
+
+CHA2DS2-VASc scoreb
+
+1573 1.40
+
+<4
+
+1922 41 3444 1.19
+
+≥4 HAS-BLED scorec
+
+1297 56 2239 2.50
+
+<3
+
+997 19 1838 1.03
+
+≥3
+
+2222 78 3845 2.03
+
+Prior thromboembolism
+
+No
+
+2551 66 4555 1.45
+
+Yes
+
+668 31 1127 2.75
+
+Prior bleeding
+
+No
+
+2358 67 4247 1.58
+
+Yes
+
+861 30 1436 2.09
+
+History of heart failure
+
+No
+
+1276 31 2356 1.32
+
+Yes
+
+1943 66 3326 1.98
+
+History of stage 3-5 CKD
+
+No
+
+2727 72 4946 1.46
+
+Yes
+
+492 25
+
+737 3.39
+
+LAAO
+Event Rate per 100 No. of No. of Person- PersonPatients Events Years Years 3219 67 6032 1.11
+
+HR (95% CI) 0.68 (0.50-0.92)
+
+923 1168 1128
+
+20 1626 1.23 19 2194 0.87 28 2212 1.27
+
+0.88 (0.48-1.62) 0.53 (0.30-0.94) 0.70 (0.43-1.12)
+
+2092 1127
+
+34 3826 0.89 33 2206 1.50
+
+0.59 (0.39-0.91) 0.80 (0.51-1.25)
+
+2582 57 4985 1.14
+
+637 NAa
+
+NAa 0.95
+
+0.68 (0.49-0.96) 0.64 (0.29-1.45)
+
+894 1494
+831
+
+13 1576 0.83 41 2744 1.49 13 1712 0.76
+
+0.67 (0.32-1.37) 0.73 (0.49-1.09) 0.59 (0.30-1.17)
+
+1994 1225
+
+34 3760 0.90 33 2272 1.45
+
+0.78 (0.50-1.23) 0.62 (0.40-0.95)
+
+1074 2145
+
+16 2007 0.80 51 4024 1.27
+
+0.78 (0.40-1.52) 0.65 (0.46-0.93)
+
+2606 613
+
+47 4976 0.94 20 1056 1.89
+
+0.68 (0.47-0.98) 0.71 (0.41-1.25)
+
+2408 811
+
+48 4555 1.05 19 1477 1.29
+
+0.69 (0.48-1.00) 0.65 (0.37-1.15)
+
+1321 1898
+
+24 2534 0.95 43 3498 1.23
+
+0.73 (0.43-1.24) 0.65 (0.44-0.96)
+
+2763 456
+
+52 5286 0.98 15 745 2.01
+
+0.70 (0.49-1.00) 0.64 (0.34-1.21)
+
+Favors Favors LAAO No LAAO
+
+P for Interaction
+
+.51 .37 .92 .84 .45 .64 .90 .84 .73 .81
+
+0.1
+
+1.0
+
+10
+
+HR (95% CI)
+
+AF indicates atrial fibrillation; CABG, coronary artery bypass graft; CKD, chronic kidney disease; LAAO, surgical occlusion of the left atrial appendage; NA, not available.
+a To maintain deidentification, OptumLabs does not allow researchers to disclose the number of events when the number is 10 or fewer. Medicare data have similar requirements.
+b The CHA2DS2-VASc score is a 0- to 9-point stroke risk score for which a higher point score indicates higher risk of stroke. The point score is calculated as follows: 1 point each for heart failure, hypertension, diabetes, vascular disease,
+
+age 65 to 74 years, and female sex; 2 points for age 75 years or older and prior stroke, transient ischemic attack, or thromboembolism.
+c The HAS-BLED score is a 0- to 9-point bleeding risk score for which a higher point score indicates higher risk of bleeding. The point score is calculated as follows: 1 point each for hypertension, abnormal kidney function, abnormal liver function, prior stroke, prior bleeding or bleeding predisposition, labile international normalized ratio, older than 65 years, medication usage predisposing to bleeding, and alcohol use. This study did not consider international normalized ratio, so the range is 0-8.
+
+Sensitivity Analyses The subgroup analyses were consistent with the main findings (Figure 2 and Figure 3; eFigures 1 and 2 in Supplement 2). For example, P values for interaction were nonsignificant for age, sex, CHA2DS2-VASc score, and chronic kidney disease. There were no significant relationships between LAAO and any of the falsification end points (HR, 0.94 [95% CI, 0.73 to 1.20]; P = .60 for chronic obstructive pulmonary disease; HR, 0.92 [95% CI, 0.81 to 1.05]; P = .20 for pneumonia; and HR, 0.91 [95% CI, 0.75 to 1.11]; P = .34 for fracture) in the overall cohort (eTable 4 in Supplement 2). The results using the propen-
+
+sity score weighting method were also consistent with the main findings (HR, 0.76 [95% CI, 0.61 to 0.95]; P = .02 for stroke and HR, 0.78 [95% CI, 0.68 to 0.90]; P < .001 for mortality in the overall cohort) (eTables 5 and 6 in Supplement 2).
+The use of oral anticoagulants over time was similar between patients undergoing and not undergoing LAAO in the propensity score–matched cohort (eFigure 3 in Supplement 2), which suggested that the associations seen with LAAO were not related to differential use of oral anticoagulants. The associations between LAAO and stroke or mortality stratified by oral anticoagulant use during follow-up was consistent with the main findings,
+
+jama.com
+
+(Reprinted) JAMA May 22/29, 2018 Volume 319, Number 20 2123 © 2018 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+Research Original Investigation
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Figure 3. Subgroup Analysis for Stroke in Propensity-Matched Patients Without Atrial Fibrillation at Baseline
+
+No LAAO
+
+Subgroup All patients
+
+Event Rate per 100 No. of No. of Person- PersonPatients Events Years Years
+1076 25 1982 1.26
+
+Age, y 18-64 65-74
+
+539 NAa 323 NAa
+
+NAa 0.60 NAa 1.35
+
+≥75
+
+214 11 384 2.87
+
+Sex
+
+Men
+
+718 13 1324 0.98
+
+Women
+
+358 12 658 1.82
+
+Race
+
+White Nonwhite
+
+819 20 1553 1.29
+
+257 NAa
+
+NAa 1.17
+
+Surgery types Isolated CABG
+
+366 NAa
+
+NAa 1.58
+
+Valve replacement 395 13
+
+Valve repair
+
+315 NAa
+
+CHA2DS2-VASc scoreb
+
+712 1.83 NAa 0.31
+
+<4
+
+812 13 1552 0.84
+
+≥4 HAS-BLED scorec
+<3
+
+264 12 490 NAa
+
+430 2.79 NAa 0.31
+
+≥3
+
+586 22 1029 2.14
+
+Prior thromboembolism
+
+No
+
+938 21 1757 1.20
+
+Yes
+
+138 NAa
+
+NAa 1.77
+
+Prior bleeding
+
+No
+
+885 20 1645 1.22
+
+Yes
+
+191 NAa
+
+NAa 1.48
+
+History of heart failure
+
+No
+
+617 15 1217 1.23
+
+Yes
+
+459 NAa
+
+NAa 1.31
+
+History of stage 3-5 CKD
+
+No
+
+965 19 1818 1.05
+
+Yes
+
+111 NAa
+
+NAa 3.65
+
+LAAO
+Event Rate per 100 No. of No. of Person- PersonPatients Events Years Years 1076 23 1877 1.23
+
+519 NAa 329 NAa 228 NAa
+
+NAa 0.76 NAa 1.68 NAa 1.68
+
+697 12 1232 0.97 379 11 644 1.71
+
+839 15 1567 0.96
+
+237 NAa
+
+NAa 2.58
+
+361 NAa 385 NAa 330 NAa
+
+NAa 1.30 NAa 1.27 NAa 1.11
+
+803 11 1431 0.77 273 12 445 2.69
+
+488 NAa 588 19
+
+NAa 0.44 962 1.97
+
+921 14 1640 0.85
+
+155 NAa
+
+NAa 3.81
+
+842 17 1529 1.11
+
+234 NAa
+
+NAa 1.73
+
+607 13 1096 1.19
+
+469 NAa
+
+NAa 1.28
+
+937 16 1647 0.97
+
+139 NAa
+
+NAa 3.05
+
+HR (95% CI) 0.95 (0.54-1.68)
+1.27 (0.43-3.75) 1.20 (0.46-3.13) 0.59 (0.23-1.50)
+0.96 (0.44-2.11) 0.92 (0.41-2.05)
+0.75 (0.38-1.46) 1.92 (0.62-5.94)
+0.75 (0.28-1.99) 0.71 (0.31-1.65) 3.43 (0.71-16.58)
+0.90 (0.40-2.02) 0.98 (0.44-2.17)
+1.42 (0.33-6.13) 0.89 (0.49-1.65)
+0.70 (0.36-1.38) 2.09 (0.65-6.75)
+0.91 (0.48-1.74) 1.08 (0.32-3.72)
+0.91 (0.43-1.93) 1.01 (0.42-2.42)
+0.90 (0.47-1.75) 0.89 (0.30-2.61)
+
+Favors Favors LAAO No LAAO
+
+P for Interaction
+
+.49 .92 .16 .20 .88 .59 .11 .82 .87 >.99
+
+0.1
+
+1.0
+
+10
+
+HR (95% CI)
+
+AF indicates atrial fibrillation; CABG, coronary artery bypass graft; CKD, chronic kidney disease; LAAO, surgical occlusion of the left atrial appendage; NA, not available.
+a To maintain deidentification, OptumLabs does not allow researchers to disclose the number of events when the number is 10 or fewer. Medicare data have similar requirements.
+b The CHA2DS2-VASc score is a 0- to 9-point stroke risk score for which a higher point score indicates higher risk of stroke. The point score is calculated as follows: 1 point each for heart failure, hypertension, diabetes, vascular disease,
+
+age 65 to 74 years, and female sex; 2 points for age 75 years or older and prior stroke, transient ischemic attack, or thromboembolism.
+c The HAS-BLED score is a 0- to 9-point bleeding risk score for which a higher point score indicates higher risk of bleeding. The point score is calculated as follows: 1 point each for hypertension, abnormal kidney function, abnormal liver function, prior stroke, prior bleeding or bleeding predisposition, labile international normalized ratio, older than 65 years, medication usage predisposing to bleeding, and alcohol use. This study did not consider international normalized ratio, so the range is 0-8.
+
+except that the association between LAAO and stroke was not significant among patients with AF taking oral anticoagulation (HR, 0.80 [95% CI, 0.51 to 1.24]) (eTable 7 in Supplement 2).
+Long-term AF-related health utilization excluding the first 30 days was higher for patients who had postoperative AF than for those who did not (6.68 vs 0.61 outpatient visits per personyear; absolute difference, 6.07 [95% CI, 5.89 to 6.24] event per person-year; P < .001 and 0.14 vs 0.02 hospitalization per person-year; absolute difference, 0.12 [95% CI, 0.10 to 0.15] event per person-year; P < .001), suggesting that patients with post-
+
+operative AF were at a higher risk of developing late AF (eTable 8 in Supplement 2).
+In patients who did not have prior AF but developed AF during follow-up, LAAO was not associated with a significant reduction in stroke (HR, 0.74 [95% CI, 0.34 to 1.62]) or mortality (HR, 0.73 [95% CI, 0.41 to 1.30]) (eTable 9 in Supplement 2). The majority of the patients (1430/2152 [66.4%]) without prior AF at the time of the surgery did not develop AF during follow-up. Adjusting for concomitant Maze procedure did not substantially affect the results (eTable 10 in Supplement 2).
+
+2124 JAMA May 22/29, 2018 Volume 319, Number 20 (Reprinted) © 2018 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+jama.com
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+Original Investigation Research
+
+Discussion
+In this large heterogeneous cohort of patients undergoing cardiac surgery, concurrent LAAO was associated with reduced risk of stroke and all-cause mortality and was associated with increased AF-related health care utilization.
+This study is the first to our knowledge to investigate associations between LAAO and clinical outcomes stratified by preexisting AF.20 The interaction between LAAO and prior AF was not statistically significant, which did not support a difference in the relative risk reduction with LAAO between patients with and without prior AF. In the current study, 1 in 4 patients undergoing LAAO did not have documented preoperative AF, and the absolute risk reduction for stroke and mortality associated with LAAO was small in these patients. However, the confidence intervals were wide, and thus, future studies with larger sample sizes will be needed to fully assess the interaction and the role of LAAO in patients without prior AF. The consideration of preemptive LAAO in patients without documented preoperative AF must be balanced against the fact that the majority of patients would not develop AF after the surgery and LAAO may be associated with an increased risk of subsequent AF.
+One in 3 patients in this cohort undergoing cardiac surgery had a history of AF, which is related to increased risks of stroke and mortality,2,3,21 and lifelong use of oral anticoagulants is recommended in 80% to 90% of patients with AF to prevent stroke.22,23 However, fewer than half of the patients with AF in practice adhere to oral anticoagulation,24 and 1 in 6 patients is deemed unsuitable for oral anticoagulation by his or her physician.25 Furthermore, some patients are still at a high risk of stroke despite oral anticoagulation treatment.26 Therefore, LAAO may be an option for patients with AF who have difficulty taking oral anticoagulant drugs and for those who desire further risk reduction in addition to anticoagulation. In our study, the association between LAAO and stroke was not significant among patients with AF who were taking oral anticoagulation. This could be attributable to the small number of events and patients in the subgroup, as well as the possibility that oral anticoagulation already reduced the risk of stroke, and the additional risk reduction from LAAO was relatively smaller than that seen in patients who did not receive oral anticoagulation.
+In patients with prior AF and in those without prior AF, LAAO was associated with a higher rate of AF-related health utilization during follow-up, which supports the previous observation that LAAO may be associated with subsequent AF.6 Although this study cannot directly measure the frequency and length of AF episodes, the increased number of AF-related outpatient visits and hospitalizations provided an important measure of the AF-related burden to patients and the health care system. Recent studies suggested that patients who developed postoperative AF incur a mean of $10 000 to $20 000 in additional hospital treatment costs, 12 to 24 hours of additional intensive care unit time, and an additional 2 to 5 days in the hospital.27 As such, the risk of subsequent AF needs to be discussed with patients during shared decision making.
+The current study may have greater generalizability than previous studies, because it included a large number of pa-
+
+tients of all ages and races undergoing cardiac surgery at a diverse range of institutions across the United States. The findings in patients with AF were consistent with those from a recent observational study,5 but that previous study was limited to patients 65 years and older who had prior AF, which represented only about 24% of all patients undergoing cardiac surgery in the current study. A randomized trial of 187 patients also found a lower risk of stroke with LAAO but did not find a difference in mortality, perhaps because of the small sample size.28 The ongoing Left Atrial Appendage Occlusion Study III trial (NCT01561651) plans to enroll 4700 patients, but that trial was limited to high-risk patients with documented AF or atrial flutter undergoing CABG and will not address the population without AF or those undergoing valve surgery.
+Limitations This study has several limitations. First, despite statistical adjustment, the study may still be subject to confounding. Some of the variables measured, eg, prior treatment with ablation, cardioversion, antiarrhythmic drugs, and medications for other chronic conditions, could be proxies for unmeasured aspects of the underlying diseases. Furthermore, the test of falsification end points provided some reassurance that there was no evidence for residual confounding.
+Second, the study relied on administrative data to ascertain baseline characteristics and outcomes, which could be subject to misclassification. For example, the postoperative AF may have been undercoded, but in patients without prior AF, 24% had postoperative AF, which was consistent with previous reports.29 Furthermore, it was unlikely there was any systemic difference in the ascertainment of comorbidities and outcomes between the 2 treatment groups, and thus, the misclassification should not have meaningfully affected the comparisons. The diagnosis and procedure codes used in this study were commonly used in previous studies and demonstrated good performance in validation studies, with positive predictive values around 90%.30-37
+Third, this study was unable to distinguish between LAAO by excision or by exclusion using sutures or stapling, because these procedures are all described by a single code. Nor were data available on the apparent success of closure as gauged by intraoperative transesophageal echocardiography.
+Fourth, the number of patients without prior AF undergoing LAAO was relatively small and the confidence intervals around the point estimates were relatively wide. However, since the absolute reduction in stroke risk was only 0.04 event per 100 person-years in this group, it would require an extremely large sample to detect such a small, and potentially clinically insignificant, difference.
+Conclusions
+Among patients undergoing cardiac surgery, concurrent surgical LAAO, compared with no surgical LAAO, was associated with reduced risk of subsequent stroke and all-cause mortality. Further research, including from randomized clinical trials, is needed to more definitively determine the role of surgical LAAO.
+
+jama.com
+
+(Reprinted) JAMA May 22/29, 2018 Volume 319, Number 20 2125 © 2018 American Medical Association. All rights reserved.
+
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+Research Original Investigation
+
+Left Atrial Appendage Occlusion and Stroke and Mortality Among Patients Undergoing Cardiac Surgery
+
+ARTICLE INFORMATION
+Accepted for Publication: April 18, 2018.
+Author Contributions: Dr Yao had full access to all of the data in the study and takes responsibility for the integrity of the data and the accuracy of the data analysis. Concept and design: Yao, Holmes, Melduni, Johnsrud, Noseworthy. Acquisition, analysis, or interpretation of data: Yao, Gersh, Melduni, Sangaralingham, Shah, Noseworthy. Drafting of the manuscript: Yao, Sangaralingham, Noseworthy. Critical revision of the manuscript for important intellectual content: Yao, Gersh, Holmes, Melduni, Johnsrud, Shah, Noseworthy. Statistical analysis: Yao, Holmes. Administrative, technical, or material support: Holmes, Sangaralingham, Shah, Noseworthy. Supervision: Holmes, Melduni, Shah, Noseworthy.
+Conflict of Interest Disclosures: All authors have completed and submitted the ICMJE Form for Disclosure of Potential Conflicts of Interest and none were reported.
+Funding/Support: This study was funded by the Mayo Clinic Robert D. and Patricia E. Kern Center for the Science of Health Care Delivery. Dr Melduni is supported by National Institutes of Health grant K01 (HL 135288).
+Role of the Funder/Sponsor: The funder/sponsor had no role in the design and conduct of the study; collection, management, analysis, and interpretation of the data; preparation, review, or approval of the manuscript; and decision to submit the manuscript for publication.
+REFERENCES
+1. Fingar K, Stocks C, Weiss A, Steiner C. Most frequent operating room procedures performed in US hospitals, 2003–2012: Healthcare Cost and Utilization Project Statistical Brief 186. https://www.hcup-us.ahrq.gov/reports/statbriefs /sb186-Operating-Room-Procedures-United -States-2012.jsp. Published December 2014. Accessed April 19, 2018.
+2. Benjamin EJ, Wolf PA, D’Agostino RB, et al. Impact of atrial fibrillation on the risk of death. Circulation. 1998;98(10):946-952.
+3. Kannel WB, Wolf PA, Benjamin EJ, Levy D. Prevalence, incidence, prognosis, and predisposing conditions for atrial fibrillation: population-based estimates. Am J Cardiol. 1998;82(8A):2N-9N.
+4. Blackshear JL, Odell JA. Appendage obliteration to reduce stroke in cardiac surgical patients with atrial fibrillation. Ann Thorac Surg. 1996;61(2):755759.
+5. Friedman DJ, Piccini JP, Wang T, et al. Association between left atrial appendage occlusion and readmission for thromboembolism among patients with atrial fibrillation undergoing concomitant cardiac surgery. JAMA. 2018;319(4): 365-374.
+6. Melduni RM, Schaff HV, Lee HC, et al. Impact of left atrial appendage closure during cardiac surgery on the occurrence of early postoperative atrial fibrillation, stroke, and mortality. Circulation. 2017; 135(4):366-378.
+
+7. Hoit BD, Shao Y, Tsai LM, Patel R, Gabel M, Walsh RA. Altered left atrial compliance after atrial appendectomy: influence on left atrial and ventricular filling. Circ Res. 1993;72(1):167-175.
+8. Hoit BD, Walsh RA. Regional atrial distensibility. Am J Physiol. 1992;262(5, pt 2):H1356-H1360.
+9. Davis CA III, Rembert JC, Greenfield JC Jr. Compliance of left atrium with and without left atrium appendage. Am J Physiol. 1990;259(4, pt 2): H1006-H1008.
+10. Wallace PJ, Shah ND, Dennen T, Bleicher PA, Crown WH. Optum Labs: building a novel node in the learning health care system [published correction appears in Health Aff (Millwood). 2014;33(9):1703]. Health Aff (Millwood). 2014;33 (7):1187-1194.
+11. Optum Research Data Assets. https://www.optum.com/content/dam/optum /resources/productSheets/5302_Data_Assets_Chart _Sheet_ISPOR.pdf. Published 2015. Accessed June 22, 2015.
+12. Hershman DL, Tsui J, Wright JD, Coromilas EJ, Tsai WY, Neugut AI. Household net worth, racial disparities, and hormonal therapy adherence among women with early-stage breast cancer. J Clin Oncol. 2015;33(9):1053-1059.
+13. Austin PC. Optimal caliper widths for propensity-score matching when estimating differences in means and differences in proportions in observational studies. Pharm Stat. 2011;10(2): 150-161.
+14. Austin PC. Balance diagnostics for comparing the distribution of baseline covariates between treatment groups in propensity-score matched samples. Stat Med. 2009;28(25):3083-3107.
+15. Gayat E, Resche-Rigon M, Mary JY, Porcher R. Propensity score applied to survival data analysis through proportional hazards models: a Monte Carlo study. Pharm Stat. 2012;11(3):222-229.
+16. Fine JP, Gray RJ. A proportional hazards model for the subdistribution of a competing risk. J Am Stat Assoc. 1999;94(446):496-509.
+17. Grambsch PM, Therneau TM. Proportional hazards tests and diagnostics based on weighted residuals. Biometrika. 1994;81(3):515-526.
+18. Prasad V, Jena AB. Prespecified falsification end points. JAMA. 2013;309(3):241-242.
+19. Li F, Morgan KL, Zaslavsky AM. Balancing covariates via propensity score weighting [published online November 13, 2017]. J Am Stat Assoc. doi:10.1080/01621459.2016.1260466
+20. Tsai YC, Phan K, Munkholm-Larsen S, Tian DH, La Meir M, Yan TD. Surgical left atrial appendage occlusion during cardiac surgery for patients with atrial fibrillation: a meta-analysis. Eur J Cardiothorac Surg. 2015;47(5):847-854.
+21. Wolf PA, Abbott RD, Kannel WB. Atrial fibrillation as an independent risk factor for stroke: the Framingham Study. Stroke. 1991;22(8):983-988.
+22. O’Brien EC, Kim S, Hess PL, et al. Effect of the 2014 atrial fibrillation guideline revisions on the proportion of patients recommended for oral anticoagulation. JAMA Intern Med. 2015;175(5): 848-850.
+
+23. Kirchhof P, Benussi S, Kotecha D, et al. 2016 ESC guidelines for the management of atrial fibrillation developed in collaboration with EACTS. Europace. 2016;18(11):1609-1678.
+24. Yao X, Abraham NS, Alexander GC, et al. Effect of adherence to oral anticoagulants on risk of stroke and major bleeding among patients with atrial fibrillation. J Am Heart Assoc. 2016;5(2):e003074.
+25. O’Brien EC, Holmes DN, Ansell JE, et al. Physician practices regarding contraindications to oral anticoagulation in atrial fibrillation. Am Heart J. 2014;167(4):601-609.
+26. Piccini JP, Sievert H, Patel MR. Left atrial appendage occlusion: rationale, evidence, devices, and patient selection. Eur Heart J. 2017;38(12):869876.
+27. Greenberg JW, Lancaster TS, Schuessler RB, Melby SJ. Postoperative atrial fibrillation following cardiac surgery. Eur J Cardiothorac Surg. 2017;52(4): 665-672.
+28. Park-Hansen J. The Left Atrial Appendage Closure by Surgery study (LAACS). https://www .escardio.org/The-ESC/Press-Office/Press -releases/closure-of-left-atrial-appendage -during-heart-surgery-protects-the-brain. Published 2017. Accessed October 9, 2017.
+29. Maisel WH, Rawn JD, Stevenson WG. Atrial fibrillation after cardiac surgery. Ann Intern Med. 2001;135(12):1061-1073.
+30. Kumamaru H, Judd SE, Curtis JR, et al. Validity of claims-based stroke algorithms in contemporary Medicare data. Circ Cardiovasc Qual Outcomes. 2014;7(4):611-619.
+31. Tirschwell DL, Longstreth WT Jr. Validating administrative data in stroke research. Stroke. 2002;33(10):2465-2470.
+32. Kokotailo RA, Hill MD. Coding of stroke and stroke risk factors using International Classification of Diseases, revisions 9 and 10. Stroke. 2005;36(8): 1776-1781.
+33. Jensen PN, Johnson K, Floyd J, Heckbert SR, Carnahan R, Dublin S. A systematic review of validated methods for identifying atrial fibrillation using administrative data. Pharmacoepidemiol Drug Saf. 2012;21(suppl 1):141-147.
+34. Noseworthy PA, Yao X, Abraham NS, Sangaralingham LR, McBane RD, Shah ND. Direct comparison of dabigatran, rivaroxaban, and apixaban for effectiveness and safety in nonvalvular atrial fibrillation. Chest. 2016;150(6):1302-1312.
+35. Yao X, Shah ND, Sangaralingham LR, Gersh BJ, Noseworthy PA. Non-vitamin K antagonist oral anticoagulant dosing in patients with atrial fibrillation and renal dysfunction. J Am Coll Cardiol. 2017;69(23):2779-2790.
+36. Fan J, Arruda-Olson AM, Leibson CL, et al. Billing code algorithms to identify cases of peripheral artery disease from administrative data. J Am Med Inform Assoc. 2013;20(e2):e349-e354.
+37. Yao X, Tangri N, Gersh BJ, et al. Renal outcomes in anticoagulated patients with atrial fibrillation. J Am Coll Cardiol. 2017;70(21):2621-2632.
+
+2126 JAMA May 22/29, 2018 Volume 319, Number 20 (Reprinted) © 2018 American Medical Association. All rights reserved.
+Downloaded From: https://jamanetwork.com/ on 03/26/2023
+
+jama.com
+

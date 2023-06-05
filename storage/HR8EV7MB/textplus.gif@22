@@ -1,0 +1,245 @@
+
+
+
+<html>
+<head>
+<title>User Authentication</title>
+
+
+
+
+
+<link rel="icon" href="/jhtml/css/css_images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/jhtml/css/css_images/favicon.ico" type="image/x-icon" />
+
+<LINK rev=stylesheet media=screen href="/jhtml/css/homepage_import.css" type="text/css" charset=utf-8 rel=stylesheet>
+
+<!--LINK rev=stylesheet media=screen href="/jhtml/css/SCI_LowBrowser.css" type="text/css" charset=utf-8 rel=stylesheet-->
+<script language=javascript src="/jhtml/scitation/js/scitationGlobal.js"></script>
+<script language="JavaScript" type="text/javascript" src="/jhtml/scitation/js/sci_layers.js"></script>
+
+
+
+<script language="JavaScript">
+<!-- Begin
+
+function Toggle(objElement)
+{
+   objElement.disabled = (!objElement.disabled)
+   if (document.layers)
+   {
+      if (objElement.disabled && objElement.type.substr(0,6) == "select")
+      {
+         for (intI=0; intI<objElement.options.length; intI++)
+         {
+            objElement.options[intI].frozenStatus = objElement.options[intI].selected
+         }
+      }
+   }
+}
+
+
+function isblank(s) {
+	for(var i = 0; i < s.length; i++) {
+		var c = s.charAt(i);
+		if ((c != ' ') && (c != '\n') && (c != '\t')) {
+			return false;
+		}
+	}
+	return true;
+}
+
+function p_jump2form(w) {
+	if ((w == null) || (w == "")) {
+		document.login_form.username.select();
+		document.login_form.username.focus();
+	}
+	if (w == "u") {
+		document.login_form.username.select();
+		document.login_form.username.focus();
+	}
+	if (w == "p") {
+		document.login_form.password.select();
+		document.login_form.password.focus();
+	}
+}
+
+function p_formcheck() {
+	var u = document.login_form.username.value;
+	var p = document.login_form.password.value;
+	if ((u == null) || (u == "") || isblank(u)) {
+		alert("Please enter your user name.");
+		p_jump2form('u');
+	}
+	else if ((p == null) || (p == "") || isblank(p)) {
+		alert("Please enter your password.");
+		p_jump2form('p');
+	}
+	else {
+		
+		Toggle(document.login_form.submit1)
+		document.login_form.submit1.value = " Please Wait...";
+		return true;
+	}
+	return false;
+}
+
+//-->
+</script>
+
+</head>
+<body class="LoginScreen" leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+<DIV align="center" id=ContentBody>	
+<!--
+-->
+   
+<!--
+http://scitation.aip.org/getabs/servlet/%22/img/icons/newsvine.jpg%22
+-->
+
+<br><br>
+
+
+<form method=post action="/eRights/servlet/Login" name="login_form" onSubmit="return p_formcheck();">
+<INPUT TYPE=HIDDEN NAME=badLoginURL VALUE="/error/badusername.jsp">
+<INPUT TYPE=HIDDEN NAME=redirectURL VALUE="http://scitation.aip.org/getabs/servlet/%22/img/icons/newsvine.jpg%22">
+
+
+<table width=550 border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td colspan=3><img src="/jimages/sciLoginScreens/sciLoginTop.gif" width=550 height=35 alt=""></td>
+</tr>
+
+<tr>
+<td background="/jimages/sciLoginScreens/sciLoginLeft.gif"><img src="/jimages/sciLoginScreens/spacer.gif" width=15 height=300 alt=""></td>
+<td align="center" bgcolor="#ffffff" valign="top">
+
+
+		<table width=520 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+		<td><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=15 alt=""></td>
+		</tr>
+
+		<tr>
+		<td valign="top">
+			
+			<table width=520 border=0 cellpadding=0 cellspacing=0>
+			<tr>
+			<td align="left" colspan=2><h4>Subscribers Only</h4></td>
+			</tr>
+			
+			<tr>
+			<td><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=10 alt=""></td>
+			</tr>
+			
+			<tr>
+			<td align="center" colspan="2">
+			
+                        
+			If you are a registered subscriber, please sign in below:
+			
+			</td>
+			</tr>
+			
+			<tr>
+			<td colspan=2><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=16 alt=""></td>
+			</tr>
+			
+			<tr>
+			<td align="right"><strong>Username:</strong>&nbsp;</td>
+			<td width="100%"><input class="SciFormInput" TYPE="text" NAME="username" SIZE="20"></td>
+			</tr>
+			
+			<tr>
+			<td colspan=2><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=22 alt=""></td>
+			</tr>
+			
+			<tr>
+			<td align="right"><strong>Password:</strong>&nbsp;</td>
+			<td width="100%"><input class="SciFormInput" TYPE="password" NAME="password" SIZE="20"></td>
+			</tr>
+			
+			<tr>
+			<td><img src="/jimages/sciLoginScreens/spacer.gif" width=200 height=15 alt=""></td>
+			<td width=182 height=20><a class="forgot" href="https://scitation-aip-org.proxy.library.emory.edu/accounts/forgotPassword.jsp">Forget your password?</a></td>
+			</tr>
+	
+			<tr>
+			<td colspan="2"><img src="/jimages/sciLoginScreens/spacer.gif" width=200 height=15 alt=""></td>
+			</tr>
+					
+			<tr>
+			<td>&nbsp;</td>
+			<td align="left"><input border="0" type="submit" NAME="submit1" VALUE="Sign In" class="FormButton_120"></td>
+			</tr>
+			</table>
+		
+</td>
+</tr>
+
+<tr>
+<td><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=50 alt=""></td>
+</tr>
+
+<tr>
+<td bgcolor="#A9B8D3"><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=1 alt=""></td>
+</tr>
+
+<tr>
+<td bgcolor="#E1E4E9"><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=1 alt=""></td>
+</tr>
+
+<tr>
+<td><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=10 alt=""></td>
+</tr>
+
+<tr>
+<td>
+	<table width=520 border=0 cellpadding=4 cellspacing=0>
+	<tr>
+	<td align="center"><a href="http://scitation.aip.org.proxy.library.emory.edu/myscitation/registration.do">Become a subscriber.</a></td>
+	
+	<td align="center">Mode:&nbsp;<a href="https://scitation-aip-org.proxy.library.emory.edu/ojps_login.jsp">Secure</a>&nbsp;|&nbsp;Standard</td>
+    
+	<td align="center"><a href="http://scitation.aip.org.proxy.library.emory.edu/servlet/HelpSystem?KEY=SCI&TYPE=HELP/LOGIN">Need help signing in?</a></td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+<tr>
+<td><img src="/jimages/sciLoginScreens/spacer.gif" width=1 height=5 alt=""></td>
+</tr>
+
+<tr>
+<td>
+	<table width=520 border=0 cellpadding=4 cellspacing=0>
+	<tr>
+	<td align="center"><a href="http://scitation.aip.org.proxy.library.emory.edu" class="nav">Scitation Home</a></td>
+	<td align="center"><a href="http://scitation.aip.org.proxy.library.emory.edu/contact.jsp" class="nav">Customer Service</a></td>
+	<td align="center"><a href="http://scitation.aip.org.proxy.library.emory.edu/jhtml/scitation/search/top.jsp?KEY=SPIN" class="nav">Search SPIN</a></td>
+	<td align="center"><a href="http://www.aip.org.proxy.library.emory.edu/journal_catalog/" class="nav">Subscriptions</a></td>
+	<td align="center"><a href="http://scitation.aip.org.proxy.library.emory.edu/servlet/HelpSystem?KEY=SCI&TYPE=HELP/FAQ" class="nav">About Scitation</a></td>
+	</tr>
+	</table>		
+	
+</td>
+</tr>
+</table>
+
+</td>
+<td background="/jimages/sciLoginScreens/sciLoginRight.gif"><img src="/jimages/sciLoginScreens/spacer.gif" width=15 height=300 alt=""></td>
+</tr>
+
+<tr>
+<td colspan=3><img src="/jimages/sciLoginScreens/sciLoginBot.gif" width=550 height=35 alt=""></td>
+</tr>
+</table>
+
+<br><br>
+
+</FORM>
+
+</DIV>
+</body>
+</html>

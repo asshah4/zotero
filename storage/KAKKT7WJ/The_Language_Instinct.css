@@ -1,0 +1,36 @@
+
+/* ::::: null ::::: */
+
+body { background: none repeat scroll 0% 0% rgb(255, 255, 255); font-family: "Luxi sans",Verdana,Lucida,Arial,sans-serif; text-align: center; margin: 0pt; }
+.menu { padding: 0.2em; background-color: rgb(255, 204, 153); text-align: center; margin: 0pt auto; clear: both; font-family: Georgia,times,serif; }
+.menu a { text-decoration: none; }
+a:hover { color: rgb(255, 0, 0); }
+blockquote { line-height: 1.1em; }
+li { margin-top: 0.4em; line-height: 1.1em; }
+@media only screen and (max-device-width: 480px) {
+  .menu { font-size: 1.5em; }
+  .amazon { display: none; }
+}
+.review { width: 35em; margin: 0pt auto; text-align: center; }
+h1 { margin: 0.4em 0pt 0.2em; font-size: 100%; line-height: 1.3em; }
+hr { width: 50%; text-align: center; margin-top: 1em; }
+.main { line-height: 1.5em; text-align: left; }
+a { text-decoration: none; }
+.main a:link { border-bottom: 1px solid blue; }
+dd { margin-left: 1em; }
+.note { font-size: smaller; line-height: 1.3em; }
+.biblio { font-family: monospace; font-size: smaller; text-align: left; margin-bottom: 1em; }
+.attrib { font-size: small; padding: 0.2em 0pt; border-top: 1px solid; border-bottom: 1px solid; margin: 0.5em 0pt; }
+@media print {
+  .review { width: 30em; font: 12pt "Times New Roman","TimesNR",Times,serif; }
+  a { color: black; border-bottom: medium none; }
+  .menu, dl, .biblio, .links, .ad, .amazon { display: none; }
+  .main a:link { color: black; border-bottom: medium none; }
+}
+@media handheld {
+  .review { width: 95%; }
+}
+@media only screen and (max-device-width: 480px) {
+  .review { width: 95%; font-size: 2em; }
+}
+.amazon { margin: 0.5em auto; width: 730px; clear: both; }

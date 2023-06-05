@@ -1,0 +1,179 @@
+J Appl Physiol 91: 1199–1206, 2001.
+Automated quantiﬁcation of sympathetic beat-by-beat activity, independent of signal quality
+
+J. W. HAMNER AND J. ANDREW TAYLOR Laboratory for Cardiovascular Research, Research and Training Institute, Hebrew Rehabilitation Center for the Aged, Boston 02131; and Division on Aging, Harvard Medical School, Boston, Massachusetts 02215
+Received 2 January 2001; accepted in ﬁnal form 19 April 2001
+
+Hamner, J. W., and J. Andrew Taylor. Automated quantiﬁcation of sympathetic beat-by-beat activity, independent of signal quality. J Appl Physiol 91: 1199–1206, 2001.—Sympathetic nerve activity (SNA) can provide critical information on cardiovascular regulation; however, in a typical laboratory setting, adequate recordings require assiduous effort, and otherwise high-quality recordings may be clouded by frequent baseline shifts, noise spikes, and muscle twitches. Visually analyzing this type of signal can be a tedious and subjective evaluation, whereas objective analysis through signal averaging is impossible. We propose a new automated technique to identify bursts through objective detection criteria, eliminating artifacts and preserving a beat-by-beat SNA signal for a variety of subsequent analyses. The technique was evaluated during both steady-state conditions (17 subjects) and dynamic changes with rapid vasoactive drug infusion (14 recordings from 5 subjects) on SNA signals of widely varied quality. Automated measures of SNA were highly correlated to visual measures of steady-state activity (r ϭ 0.903, P Ͻ 0.001), dynamic relation measures (r ϭ 0.987, P Ͻ 0.001), and measures of burst-by-burst variability (r ϭ 0.929, P Ͻ 0.001). This automated sympathetic neurogram analysis provides a viable alternative to tedious and subjective visual analyses while maximizing the usability of noisy nerve tracings.
+microneurography; baroreﬂex; time-series analysis
+A LARGE PERCENTAGE OF CARDIAC OUTPUT is distributed to skeletal muscle, making this vascular bed a key site for regulation of systemic resistance. Cardiopulmonary (13), arterial pressure (7), respiratory (15), ergoceptive (14), nociceptive (19), perceptual (1), and vestibular (16) reﬂexes all rely on sympathetic discharge to skeletal muscle for some aspect of their function. Therefore, accurate quantiﬁcation of sympathetic nerve activity during steady-state conditions or dynamic changes can provide critical information related to numerous physiological systems. Although many indirect estimates of vascular sympathetic activity have been proposed (6, 11), direct recordings of electrical activity emitted by peroneal, tibial, or radial muscle sympathetic nerves and vi-
+
+sual identiﬁcation of sympathetic bursts by a trained microneurographer are the only direct measures available in human research. Bursts have a characteristic shape consisting of a gradual rise and fall that is usually constrained by the cardiac cycle and at least twice the amplitude of random ﬂuctuations. Visual identiﬁcation requires a trained observer to scan the entire raw-voltage neurogram and decide, based on experience, whether the waveform during each heartbeat is the appropriate size and shape to differentiate it from background noise and be called a sympathetic burst. As one might expect, the inherent subjectivity of this analysis results in signiﬁcant interobserver variability with variances as high as 9% being reported (10). This has spurred development of numerous automated techniques to quantify sympathetic activity (2–4, 8, 9, 12). The most promising techniques are signal averaging of the raw neurogram (3, 8) and burst frequency determination from a gamma distribution model (4). Signal averaging is the more ﬂexible of these two methods and has proved valid for both steady-state conditions (3) and dynamic changes with rapid vasoactive drug infusion (8). However, the quality of signal averaging critically depends on the absence of baseline shifts, transient noise spikes, and/or muscle twitches, all of which can be frequent occurrences during neurogram recording in humans. The gamma distribution model effectively deals with these common noise artifacts and transients, but simple burst counting to index sympathetic activity precludes examination of beat-by-beat relations to other variables. We propose a fully automated technique that provides a rapid objective method that is minimally affected by signal quality and preserves beat-by-beat sympathetic neurograms. This artifact-free, beat-by-beat neurogram allows for objectivity as well as ﬂexibility in analysis paradigms; quantiﬁcation can be based on burst frequency and/or burst area; responses can be signal averaged from a variety of signals (e.g., respiration and pressure); and patterns can be identiﬁed with spectral and cross-spectral analysis and modeling.
+
+Address for reprint requests and other correspondence: J. A. Taylor, Laboratory for Cardiovascular Research, HRCA Research and Training Inst., 1200 Centre St., Boston, MA 02131 (E-mail: ataylor@mail.hrca.harvard.edu).
+
+The costs of publication of this article were defrayed in part by the payment of page charges. The article must therefore be hereby marked ‘‘advertisement’’ in accordance with 18 U.S.C. Section 1734 solely to indicate this fact.
+
+http://www.jap.org
+
+8750-7587/01 $5.00 Copyright © 2001 the American Physiological Society
+
+1199
+
+Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+
+1200
+
+AUTOMATED SYMPATHETIC NEUROGRAM ANALYSIS
+
+METHODS
+Subjects
+All data used in testing and validation were derived from previous published (17) and unpublished studies. Steadystate muscle sympathetic nerve activity was assessed from data in 10 young women (aged 18–28 yr; mean ϭ 22 Ϯ 4 yr), 11 young men (18–29 yr; mean ϭ 24 Ϯ 4 yr), and 13 older men (60–72 yr; mean ϭ 65 Ϯ 4 yr). Dynamic changes during bolus vasoactive drug infusion were assessed from 14 separate recordings in ﬁve subjects [3 young (25 yr) and 2 older (63 and 69 yr)]. All subjects were healthy nonsmokers, not on any medications, and supine during data collection. These studies were previously approved by the institutional review board of the Hebrew Rehabilitation Center for the Aged, and all volunteers had given their informed, written consent to participate.
+
+Protocols and Measurements
+
+Multiunit postganglionic muscle sympathetic nerve activity was obtained from a nerve fascicle of either the right or left peroneal nerve with a tungsten microelectrode in the manner as developed by Vallbo and Hagbarth (18). Neural activity was ampliﬁed (70,000- to 100,000-fold), and band pass was ﬁltered (700–2,000 Hz), rectiﬁed, and integrated (time constant of 0.1 s) to create the raw sympathetic neurogram. Electrocardiogram lead II, beat-by-beat photoplethysmographic arterial pressure (Finapres, Ohmeda), and respiration (Respitrace, Ambulatory Monitoring) were recorded continuously throughout each study. The signals were digitized at 500 Hz and stored for later analysis using commercial hardware and software (Windaq, Dataq Instruments and Matlab, The Mathworks). For the steady-state condition, data were derived from a 5-min rest period with 0.25-Hz paced respiration. For the dynamic condition, data were derived from a 5-min baseline period, followed by bolus injections of 100 ␮g of sodium nitoprusside and 150 ␮g phenylephrine spaced 60 s apart. This sequentially lowers and raises arterial pressure ϳ15 mmHg below and above baseline pressure (5).
+Visual Analysis of Sympathetic Activity
+For all recordings, the mean voltage neurogram was normalized by calibrating the height, in volts, of the largest, clearly identiﬁable burst during baseline recording to a value of 1,000 arbitrary integration units (AIU). This allows for calculation of relative changes in sympathetic activity independent of microelectrode distance from the nerve fascicle. Three points, manually placed on the calibrated neurogram by a trained observer, deﬁne the start, peak, and end of each burst of sympathetic activity. The generally accepted criteria for burst identiﬁcation are based mainly on morphology to discriminate sympathetic activity from background noise (i.e., a relatively gradual rise followed by a similarly sloped fall with a peak amplitude at least two times greater than random ﬂuctuations; Fig. 1). Transient noise spikes or muscle twitches are identiﬁed as rapid shifts in the neurogram that are unassociated with cardiovascular variables. Additional criteria are physiological in nature, such as timing relative to the QRS complex, width relative to the cardiac cycle, and relation to diastolic pressure. Once all sympathetic bursts are identiﬁed, the sections of signal between bursts are set to zero, providing a noise-free, visually detected neurogram for further analysis.
+
+Fig. 1. Illustration of the proposed method for automated sympathetic burst detection. Detection is triggered off the QRS complex and occurs in a window around the user-deﬁned latency (1.25 s in this case). The area of the band-pass-ﬁltered (passband ϭ 0.05–4 Hz) neurogram for parameter determination is centered at the peak. Amplitudes and slopes of rise and fall are calculated and compared with critical values. If 2 of the 4 criteria are met, the area surrounding the burst is set to zero, creating a beat-by-beat detected neurogram. ECG, electrocardiogram.
+Automated Neurogram Detection Algorithm
+Automated detection of sympathetic activity was written in Matlab software (version 5.3, The Mathworks) and used an algorithm based on the criteria for burst detection by a trained observer. We hypothesized that these criteria would objectively separate sympathetic bursts from background noise; Fig. 1 shows the basic structure of the automated neurogram detection algorithm.
+Algorithm structure. The ﬁrst step in analysis is the determination of latency from the generating R wave to consequent sympathetic burst; in this case, latency is 1.25 s (Fig. 1). The user determines the average latency for that subject and condition from obvious sympathetic bursts. Subsequently, the program identiﬁes local peaks in the neurogram within a window centered at the latency from the generating R wave. This window, equal to the latency Ϯ300 ms, allows for beat-by-beat variability in burst latency. From the identiﬁed peak, a section surrounding that peak and equal to the generating R-R interval is selected for further analysis. The ﬁrst derivative of this raw neurogram section is examined for large instantaneous changes characteristic of transient noise spikes and muscle twitch artifacts. If the window is free of artifacts, analysis proceeds on the corresponding section of a band-pass-ﬁltered version of the neurogram (passband ϭ 0.05–4 Hz). The second derivative of this ﬁltered neurogram identiﬁes the nearest local minima on either side of the peak as the start and end of the suspected burst. The area of the neurogram from start to peak deﬁnes the rise of the burst, whereas the area from peak to end deﬁnes the fall.
+
+J Appl Physiol • VOL 91 • SEPTEMBER 2001 • www.jap.org
+
+Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+
+AUTOMATED SYMPATHETIC NEUROGRAM ANALYSIS
+
+1201
+
+Criteria for burst identiﬁcation. Three possible burst detection criteria were originally proposed to describe the morphology of both the rise and fall: magnitude, slope, and residuals of the ﬁt, for a total of six possible parameters. Figure 1 shows the four parameters that were found to be most effective in separating bursts from noise without being redundant or nondeterministic. To select these criteria and their critical values, the steady-state data (n ϭ 34) were randomly split into a training set (n ϭ 17) and a validation set (n ϭ 17), each containing about 2,500 visually identiﬁed bursts. Parameters were optimized from the training set and then tested on the validation set, before being permanently ﬁxed at these values for all further analyses. To ﬁnd critical values, parameter values for all bursts and noise in the training set had to be calculated and compared.
+Linear regressions were determined between the peak and both start and end points of the burst (Fig. 1, bottom). We calculated amplitude, slope, and residuals of ﬁt for the rise and fall of the neurogram signal within each cardiac cycle. Parameters for neurogram signals that corresponded to visually identiﬁed sympathetic bursts were separated from those considered noise. The distributions of the residuals for rising and falling slopes did not differ between identiﬁed bursts and noise; therefore, these parameters were excluded from further consideration. Values for the remaining parameters were determined to minimize both the number of undetected bursts that were visually identiﬁed as actual bursts (false negatives) and automatically detected bursts that were visually identiﬁed as noise (false positives). The best value for each of the four remaining parameters was found by adjusting all parameters simultaneously via a Nelder-Mead simplex algorithm to minimize false negatives and false positives. Although all four parameters appeared to play an important overall role in differentiating bursts from noise, it was possible that, on a burst-by-burst basis, different combinations of these parameters might more effectively identify sympathetic activity. Therefore, the minimization process was repeated three times to see whether allowing a burst to meet any one, two, or three of the four parameter criteria increased performance. This resulted in four sets of param-
+
+eter values: one set of four parameters for each separate minimization procedure. Finally, steady-state activity (AIU/ 100 heartbeats) was calculated for each neurogram tracing in the training set using the four different sets of parameter values. The correlation between visual and automated indicated the best parameter set. The maximum correlation between visual and automated detection on the training set was achieved when a burst had to meet any two out of the four criteria to be considered a “true” burst. Therefore, this set of four optimized parameter values (rising and falling slopes ϭ 2,640 and 2,980 AIU/s; amplitudes ϭ 47.9 and 265 AIU) was used to validate the algorithm.
+A beat-by-beat neurogram is created from the raw neurogram by retaining the tracing sections identiﬁed by the algorithm as sympathetic bursts and setting sections identiﬁed as noise to a zero baseline. Figure 2, top, shows a raw nerve tracing with transient noise spikes, muscle twitches, and bursts identiﬁed both visually and automatically. Figure 2, bottom, shows the “average burst” for each of the three neurograms shown in the top panel (signal averaged raw, visual, and automatic) and was calculated by averaging each respective signal at the user-deﬁned burst latency. In this case, signal averaging shows a close correspondence between visual and automated techniques but an overestimation of sympathetic activity from the unedited raw signal.
+Assessments of Sympathetic Activity
+Validation of the automatic detection consisted of assessing the algorithm’s ability to measure sympathetic activity during both steady-state outﬂow and rapid and dynamically changing outﬂow. In addition, we wished to ensure that patterns of activity were preserved and that the algorithm was truly independent of artifacts. To accomplish this, we used several different approaches.
+Increases in sympathetic activity are manifested by greater burst area (additional neuron recruitment and/or multiple ﬁrings of recruited neurons during a cardiac cycle) and/or burst frequency (more neuron ﬁring during greater percentages of cardiac cycles). To account for changes due to
+
+Fig. 2. Comparison of 3 neurogram detection methods (signal averaged raw, visual, and automatic) on a signal clouded by transient noise spikes and muscle twitches. The average burst area for visual and automatic methods corresponds closely, and signal averaging of the raw waveform shows a much higher level of activity. AIU, arbitrary integration units.
+J Appl Physiol • VOL 91 • SEPTEMBER 2001 • www.jap.org
+Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+
+1202
+
+AUTOMATED SYMPATHETIC NEUROGRAM ANALYSIS
+
+either, total burst area is calculated by integrating the neurogram (in AIU) over the entire experimental period and normalizing for either the length of recording (AIU/min) or cardiac cycle frequency (AIU/100 heartbeats). This provides two measures of steady-state nerve trafﬁc.
+For the dynamic condition, the relation between burst area and diastolic pressure during bolus injections of vasoactive drugs was examined. The visually and automatically detected nerve tracings were averaged over 3-mmHg ranges to provide an “average burst” for each pressure bin. The slope and intercept of the linear relation between the integrated activity and diastolic pressure were calculated for a standard baroreﬂex gain.
+Sympathetic burst-by-burst variability was examined in the frequency domain via Welch’s averaged, modiﬁed periodogram method (20). First, the neurograms were divided into ﬁve equally overlapping segments. Each individual window was then linearly detrended, smoothed via a Hanning window, and fast-Fourier transformed to produce its power spectral density. Integrating this density provides the average magnitude of oscillation in the chosen frequency band. We wished to characterize an aspect of sympathetic activity not assessed by standard measures, that is, sympathetic nerve activity burst-by-burst variability. Therefore, we calculated the average broadband power of the neurogram in the range of 0.03–0.5 Hz. This frequency band was chosen to provide the most generality because it includes both high- and lowfrequency variations in activity and does not recapitulate indexes of overall steady-state activity.
+Lastly, we tested the independence of the automated detection algorithm from noise spikes, baseline shifts, and muscle twitches. The visual method is a priori independent of noise; therefore, we compared bias between the automated method and signal averaging of the raw neurogram. A change in bias for signals with artifacts would indicate that noise affects that method’s ability to assess sympathetic activity. Minute sections of nerve data were selected from each of 34 baseline recordings so that half of the tracings possessed artifacts and half were completely free of artifacts. The raw, visually identiﬁed, and automatically identiﬁed neurograms for these minute sections were all averaged, integrated, and calculated in AIU/100 heartbeats. The bias was determined by subtracting the signal averaged raw and automatically detected values from the activity for the visually identiﬁed neurograms.
+
+automated methods on the validation set, are shown in Fig. 3. The two measures were highly correlated (r ϭ 0.903, P Ͻ 0.001), although the automatic method had a consistent bias toward detecting more sympathetic
+activity. This bias is reﬂected in the signiﬁcantly dif-
+ferent mean values for sympathetic activity between the two methods (visual ϭ 704 Ϯ 170 vs. automatic ϭ 804 Ϯ 195 AIU/100 heartbeats; P Ͻ 0.01). In addition, activity reported in AIU per minute was highly correlated (r ϭ 0.909, P Ͻ 0.001) and signiﬁcantly different (visual ϭ 593 Ϯ 93 vs. automatic ϭ 706 Ϯ 109 AIU/ min; P Ͻ 0.05). However, bursts per minute did not
+
+Statistics
+Pearson product-moment correlation analysis was used to compare the two methods of quantifying sympathetic activity. In addition, Bland-Altman analysis was used to determine bias and examine trends in any differences between methods. Differences between the two techniques were evaluated with a paired t-test to identify signiﬁcant differences. Because bias from the visual method was not normally distributed, the difference between the automatic-detection algorithm and a signal-averaging approach was assessed with one-way ANOVA on ranks with a Student-Newman-Keuls post hoc correction. Differences were considered signiﬁcant at P Ͻ 0.05. For ease of interpretation, all values are reported as means Ϯ SE.
+
+RESULTS
+Steady-State Comparisons of Activity
+Linear regression and Bland-Altman plots, comparing calculated steady-state activity, for the visual and
+
+Fig. 3. Correlation and Bland-Altman analysis comparing the steady-state activity from the 2 detection methods reported in AIU/ 100 heartbeats. The dashed line (top) shows the line of identity. m, Slope of the relation.
+
+J Appl Physiol • VOL 91 • SEPTEMBER 2001 • www.jap.org
+
+Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+
+AUTOMATED SYMPATHETIC NEUROGRAM ANALYSIS
+
+1203
+
+nerve activity relation was not signiﬁcantly different between the two methods (visual r2 ϭ 0.788 Ϯ 0.035 vs. automatic r2 ϭ 0. 792 Ϯ 0.034; P ϭ 0.88). However, the bias was reﬂected in the signiﬁcantly different mean values of gain (visual ϭ Ϫ5.78 Ϯ 0.86 vs. automatic ϭ Ϫ5.36 Ϯ 0.76 AIU/mmHg; P Ͻ 0.05) and intercept (visual ϭ 433.8 Ϯ 69.5 vs. automatic ϭ 406.4 Ϯ 62.2 AIU; P Ͻ 0.05) between the two methods.
+Burst-by-Burst Variability
+Figure 5 shows results for the ﬁnal comparison of the average broadband powers derived from the validation set. The two measures of average power were highly correlated (r ϭ 0.929, P Ͻ 0.001), with the automatic
+
+Fig. 4. Correlation and Bland-Altman analysis comparing the sympathetic baroreﬂex gains from the 2 detection methods reported in AIU/mmHg. The dashed line (top) shows the line of identity.
+
+differ between visual and automatic (19.8 Ϯ 2.94 vs. 22.7 Ϯ 3.19; P ϭ 0.20).
+
+Sympathetic Baroreﬂex
+
+Comparison between the two methods for sympa-
+thetic baroreﬂex gains is shown in Fig. 4. Similar to the
+steady-state comparison, the two measures of sympathetic baroreﬂex gain were highly correlated (r ϭ 0.987, P Ͻ 0.001) with the automatic method showing a bias toward more negative gain (Ϫ0.418 Ϯ 0.166 AIU/mmHg). The strength of the pressure-sympathetic
+
+Fig. 5. Correlation and Bland-Altman analysis comparing the burstby-burst variability from the 2 detection methods reported in AIU2. The dashed line (top) shows the line of identity.
+
+J Appl Physiol • VOL 91 • SEPTEMBER 2001 • www.jap.org
+
+Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+
+1204
+
+AUTOMATED SYMPATHETIC NEUROGRAM ANALYSIS
+
+Fig. 6. On signals without artifacts, the bias for signal averaged raw was not different from the automatic method (Ϫ2,125 Ϯ 642 vs. Ϫ798 Ϯ 324 AIU/100 heartbeats; P ϭ 0.12). On neurograms with artifacts, however, signal averaging produced a signiﬁcantly greater bias (artifact ϭ Ϫ2,920 Ϯ 629 AIU/100 heartbeats; P Ͻ 0.05), whereas the automatic method was largely unaffected (artifact ϭ Ϫ916 Ϯ 348 AIU/100 heartbeats; P ϭ 0.78).
+
+Fig. 6. Box plot of bias from visual detection for the automated method and signal averaged raw for 1-min neurogram sections with and without artifacts (both n ϭ 17). The horizontal lines in the boxes indicate the median. The bottoms and tops of the boxes indicate the 25th and 75th percentiles, and the error bars indicate the 10th and 90th percentiles. * Signiﬁcant differences (P Ͻ 0.05) in all comparisons.
+method showing a bias toward larger average power. As before, this bias reﬂects a signiﬁcant difference in the average power determined by the two methods (visual ϭ 4,560 Ϯ 550 vs. automatic ϭ 5,130 Ϯ 590 AIU2; P Ͻ 0.05).
+Artifact Independence
+A box plot of bias from visual identiﬁcation for the automatic method and signal averaged raw is shown in
+
+DISCUSSION
+We set out to develop a technique for rapid and objective analysis of sympathetic nerve tracings that was not confounded by transient noise spikes, muscle twitches, and baseline shifts. We wanted to maintain the neurogram’s time-domain relationship to other physiological variables and provide maximum ﬂexibility for analysis. To accomplish this, we modeled a burst-detection algorithm on standard methods for visual detection. Using parameters determined from the morphology of visually identiﬁed bursts of sympathetic activity, we have successfully developed a novel, ﬂexible, and objective technique for the analysis of sympathetic neurograms.
+Most proposed automated analysis techniques have ignored the possibility of error incurred by transient noise in analyzed recordings. The error is likely to be dependent on the speciﬁcs of the particular technique and experimental conditions. We examined signal averaging over 1-min sections of data, where the effects of artifacts are maximized. In this case, the error bias of signal averaging was signiﬁcantly increased by noisy signals. However, signal averaging over a long period is quite reliable regardless of noise and baseline shifts (3), but one ill-timed noise spike during a baroreﬂex run can ruin an otherwise pristine data set.
+
+Fig. 7. Example of signal averaging approach to examine respiratory gating of sympathetic nerve activity. The raw neuogram was automatically detected and then averaged over the respiratory cycle. SNA, sympathetic nerve activity.
+J Appl Physiol • VOL 91 • SEPTEMBER 2001 • www.jap.org Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+
+AUTOMATED SYMPATHETIC NEUROGRAM ANALYSIS
+
+1205
+
+In ideal laboratory settings, concerns regarding external noise sources may be minimal, but researchers are still faced with issues regarding the inherent subjectivity of visual analysis. Interobserver variability has been reported to be as high as 9% (10), with intraobserver effects unreported but still possibly considerable. An objective technique for analysis is clearly an attractive alternative, and our method, using modern computing techniques, can reduce analysis time on particularly difﬁcult tracings from hours to minutes.
+The ﬁnal, and perhaps most signiﬁcant, advantage of this technique is the ﬂexibility provided by maintaining the neurogram’s time-domain characteristics. This allows for the characterization of sympathetic nerve activity by any of the conventional methods, such as burst frequency and burst area measures. In addition, sympathetic activity can be related to any measured variable through any number of less traditional methods, such as modeling, spectral and cross-spectral analysis, and signal averaging triggered from other physiological signals. Figure 7 shows one example of signal averaging to examine respiratory gating of sympathetic activity, with the neurogram averaged over several cycles of respiration. This ability to combine both traditional and novel analyses in one objective technique provides a clear advantage over other published, automated analysis methods (2-4, 8, 9, 12).
+Limitations
+This technique is modeled from a presumed “gold standard”: visual burst identiﬁcation by a trained observer. As has been noted elsewhere (8), visual analysis is most likely biased against low levels of activity. Our speciﬁc parameter values correspond to our trained microneurographer’s particular bias. It should be noted, however, that a less conservative microneurographer could reproduce our method to create a different set of parameter values and match their level of selectivity. Presumably, this would only effect the level of bias, not the relationship between the two methods. In addition, whereas our technique will not erroneously identify a transient noise spike or muscle twitch as a burst, it will set that area of the neurogram to zero activity; the presence of signiﬁcant artifacts superimposed on sympathetic bursts could result in underestimation of activity or render a tracing unusable. Finally, this technique is not valid to quantify sympathetic discharge that is unrelated to the cardiac cycle (e.g., skin sympathetic activity).
+In conclusion, the high correlation between our automated method and visual analysis of sympathetic neurograms shows that our technique is a viable alternative to the tedium and subjectivity of visual analysis. In addition, preservation of the beatby-beat neurogram allows for ﬂexibility in analysis, contrasting other automated analysis paradigms. This technique both maximizes the usability of noisy nerve tracings while minimizing analysis time and
+
+eliminating subjectivity. The result is a reliable analysis tool for quantiﬁcation of sympathetic nerve trafﬁc that is useful in any laboratory environment for any application.
+Special thanks to Drs. L. A. Lipsitz and B. Hunt for critical and helpful comments regarding the project and manuscript.
+This study was supported by National Institute on Aging Grants R29 AG-14376 awarded to J. A. Taylor and R01 AG-14420 awarded to L. A. Lipsitz.
+REFERENCES
+1. Anderson EA, Sinkey CA, and Mark AL. Mental stress increases sympathetic nerve activity during sustained baroreceptor stimulation in humans. Hypertension 17, Suppl 3: III43– III49, 1991.
+2. Baker L and Shiavi R. Detection of bursts of microneurographic activity and estimation of burst parameters. Comput Biol Med 29: 175–189, 1999.
+3. Birkett CL, Ray CA, Anderson EA, and Rea RF. A signal-averaging technique for the analysis of human muscle sympathetic nerve activity. J Appl Physiol 73: 376–381, 1992.
+4. Celka P, Vetter R, Vesin JM, Pruvot E, and Scherrer U. Exponential-type distribution of human muscle sympathetic nerve activity results in an automatic quantiﬁcation method. Comput Biol Med 28: 627–637, 1998.
+5. Ebert TJ and Cowley AW Jr. Baroreﬂex modulation of sympathetic outﬂow during physiological increases of vasopressin in humans. Am J Physiol Heart Circ Physiol 262: H1372–H1378, 1992.
+6. Esler M, Jackman G, Bobik A, Kelleher D, Jennings G, Leonard P, Skews H, and Korner P. Determination of norepinephrine apparent release rate and clearance in humans. Life Sci 25: 1461–1470, 1979.
+7. Fritsch JM, Eckberg DL, Graves LD, and Wallin BG. Arterial pressure ramps provoke linear increases of heart period in humans. Am J Physiol Regulatory Integrative Comp Physiol 251: R1086–R1090, 1986.
+8. Halliwill JR. Segregated signal averaging of sympathetic baroreﬂex responses in humans. J Appl Physiol 88: 767–773, 2000.
+9. Malpas SC and Ninomiya I. A new approach to analysis of synchronized sympathetic nerve activity. Am J Physiol Heart Circ Physiol 263: H1311–H1317, 1992.
+10. Mark AL, Victor RG, Nerhed C, and Wallin BG. Microneurographic studies of the mechanisms of sympathetic nerve responses to static exercise in humans. Circ Res 57: 461–469, 1985.
+11. Pagani M, Lombardi F, Guzzetti S, Rimoldi O, Furlan R, Pizzinelli P, Sandrone G, Malfatto G, Dell’Orto S, Piccaluga E, Turiel M, Giuseppe B, Cerutti S, and Malliani A. Power spectral analysis of heart rate and arterial pressure variabilities as a marker of sympatho-vagal interaction in man and conscious dog. Circ Res 59: 178–193, 1986.
+12. Rothman JL, Easty AC, Frecker RC, and Floras JS. Development and evaluation of two automated methods for quantifying human muscle sympathetic nerve activity. Comput Biol Med 21: 221–235, 1991.
+13. Sanders JS and Ferguson DW. Cardiopulmonary baroreﬂexes fail to modulate sympathetic responses during isometric exercise in humans: direct evidence from microneurographic studies. J Am Coll Cardiol 12: 1241–1251, 1988.
+14. Seals DR, Chase PB, and Taylor JA. Autonomic mediation of the pressor responses to isometric exercise in humans. J Appl Physiol 64: 2190–2196, 1988.
+15. Seals DR, Suwarno NO, and Dempsey JA. Inﬂuence of lung volume on sympathetic nerve discharge in normal humans. Circ Res 67: 130–141, 1990.
+16. Shortt TL and Ray CA. Sympathetic and vascular responses to head-down neck ﬂexion in humans. Am J Physiol Heart Circ Physiol 272: H1780–H1784, 1997.
+
+J Appl Physiol • VOL 91 • SEPTEMBER 2001 • www.jap.org
+
+Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+
+1206
+
+AUTOMATED SYMPATHETIC NEUROGRAM ANALYSIS
+
+17. Taylor JA, Williams TD, Seals DR, and Davy KP. Lowfrequency arterial pressure ﬂuctuations do not reﬂect sympathetic outﬂow: gender and age differences. Am J Physiol Heart Circ Physiol 274: H1194–H1201, 1998.
+18. Vallbo AB and Hagbarth KE. Impulses recorded with microelectrodes in human muscle nerves during stimulation of mechanoreceptors and voluntary contractions. Electroencephalogr Clin Neurophysiol 23: 389–396, 1967.
+
+19. Victor RG, Leimbach WN Jr, Seals DR, Wallin BG, and Mark AL. Effects of the cold pressor test on muscle sympathetic nerve activity in humans. Hypertension 9: 429–436, 1987.
+20. Welch PD. The use of fast Fourier transform for the estimation of power spectra: a method based on time averaging over short modiﬁed periodograms. IEEE Trans Audio Electro Engr 15: 70–73, 1967.
+
+J Appl Physiol • VOL 91 • SEPTEMBER 2001 • www.jap.org Downloaded from www.physiology.org/journal/jappl (099.159.029.046) on September 28, 2019.
+

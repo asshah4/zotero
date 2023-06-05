@@ -1,0 +1,732 @@
+Original Article
+
+Suppression of Early and Late Afterdepolarizations by Heterozygous Knockout of the Na+/Ca2+ Exchanger in a Murine Model
+
+Nils Bögeholz, MD; Paul Pauls, MSc; B. Klemens Bauer, MS; Jan S. Schulte, MD; Dirk G. Dechering, MD; Gerrit Frommeyer, MD; Uwe Kirchhefer, MD;
+Joshua I. Goldhaber, MD; Frank U. Müller, MD; Lars Eckardt, MD; Christian Pott, MD
+
+Background—The Na+/Ca2+ exchanger (NCX) has been implied to cause arrhythmias. To date, information on the role
+
+of NCX in arrhythmogenesis derived from models with increased NCX expression, hypertrophy, and heart failure.
+
+Furthermore, the exact mechanism by which NCX exerts its potentially proarrhythmic effect, ie, by promoting early
+
+afterdepolarization (EAD) or delayed afterdepolarization (DAD) or both, is unknown.
+
+Methods and Results—We investigated isolated cardiomyocytes from a murine model with heterozygous knockout of NCX
+
+(hetKO) using the patch clamp and Ca2+ imaging techniques. Action potential duration was shorter in hetKO with I Ktot
+not being increased. The rate of spontaneous Ca2+ release events and the rate of DADs were unaltered; however, DADs
+
+had lower amplitude in hetKO. A DAD triggered a spontaneous action potential significantly less often in hetKO when
+
+compared with wild-type. The occurrence of EADs was also drastically reduced in hetKO. ICa activity was reduced in hetKO, an effect that was abolished in the presence of the Ca2+ buffer BAPTA.
+
+Conclusions—Genetic suppression of NCX reduces both EADs and DADs. The following molecular mechanisms
+
+apply: (1) Although the absolute number of DADs is unaffected, an impaired translation of DADs into spontaneous
+
+action potentials results from a reduced DAD amplitude. (2) EADs are reduced in absolute number of occurrence,
+
+which is presumably a consequence of shortened action potential duration because of reduced NCX activity but also
+
+reduced I the latter possibly being caused by a direct modulation of Ca2+-dependent I inhibition by reduced NCX
+
+Ca
+
+Ca
+
+activity. This is the first study to demonstrate that genetic inhibition of NCX protects against afterdepolarizations
+
+and to investigate the underlying mechanisms.  (Circ Arrhythm Electrophysiol. 2015;8:1210-1218.
+
+DOI: 10.1161/CIRCEP.115.002927.)
+
+Key words: action potentials ◼ arrhythmias, cardiac ◼ heart failure ◼ Na+/Ca2+ exchanger
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+The Na+/Ca2+ exchanger (NCX) works as the main Ca2+ removal mechanism of the cardiac myocyte, extruding 1 Ca2+ ion to the extracellular compartment in exchange for 3 Na+ ions. Because of this electrogenic stoichiometry, NCX generates an electric inward current during elevation of the cytosolic Ca2+ concentration. This results in a prolongation of the action potential (AP) and may furthermore cause destabilization of the membrane potential resulting in cardiac arrhythmia by generation of early and late afterdepolarizations. Early afterdepolarizations (EAD) are defined as re-depolarizations occurring during the decay of the AP, whereas delayed afterdepolarizations (DAD) arise after full repolarization during electric diastole.
+A DAD is thought to be initiated by a spontaneous sarcoplasmic Ca2+ release (sCR) event that is translated via NCX
+
+inward mode into a depolarizing inward current forming a DAD.1 If the amplitude of the DAD exceeds the threshold for voltage gated Na+ channels (INa), a spontaneous AP (sAP) may occur, which may propagate and thus cause whole heart arrhythmia in the form of triggered activity.
+It is unknown whether the same mechanism may be responsible for the occurrence of EADs. Some studies have suggested an NCX-independent mechanism: Thus, reactivation of Ca2+ influx via L-type Ca2+ channels (ICa) during the repolarization phase may re-depolarize the membrane potential resulting in an EAD.2,3 However, others have suggested that DADs and EADs share a common mechanism that may be NCX dependent.4
+To date, the role of chronically altered NCX expression in the generation of arrhythmia has been limited to models with
+
+Received March 7, 2015; accepted August 13, 2015. From the Division of Electrophysiology, Department of Cardiovascular Medicine (N.B., P.P., B.K.B., D.G.D., G.F., L.E., C.P.) and Institute of Pharmacology and Toxicology (P.P., B.K.B., J.S.S., U.K., F.U.M.), University Hospital Münster, Münster, Germany; and Heart Institute, Cedars-Sinai Medical Center, Los Angeles, CA (J.I.G.). The Data Supplement is available at http://circep.ahajournals.org/lookup/suppl/doi:10.1161/CIRCEP.115.002927/-/DC1. Correspondence to Nils Bögeholz, MD, Division of Electrophysiology, Department of Cardiovascular Medicine, University Hospital Münster, AlbertSchweitzer-Campus 1, 48149 Münster, Germany. E-mail nils.boegeholz@ukmuenster.de © 2015 American Heart Association, Inc.
+
+Circ Arrhythm Electrophysiol is available at http://circep.ahajournals.org
+
+DOI: 10.1161/CIRCEP.115.002927
+
+1210
+
+Bögeholz et al   NCX Knockout Protects Against Afterdepolarizations   1211
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+WHAT IS KNOWN
+• The cardiac Na+/Ca2+ exchanger (NCX) may pro-
+mote afterdepolarizations of the cellular action potential thereby possibly causing ventricular arrhythmia, which may be especially crucial in patients with heart failure, where NCX expression is increased.
+• So far it is unknown whether genetic reduction of
+NCX expression may indeed suppress afterdepolarizations and - if yes - by which mechanism a potentially protective effect would work ie, by suppression of early or late afterdepolarizations or both.
+WHAT THE STUDY ADDS
+• This is the first study demonstrating that genetic knock-
+out of NCX protects from cellular afterdepolarizations.
+• Knockout of NCX leads to a reduced amplitude of
+delayed afterdepolarizations and also reduced the likelihood of early afterdepolarizations.
+• This confirms that chronic and specific NCX inhi-
+bition by pharmacological or genetic therapy could be a promising future strategy to treat ventricular arrhythmia.
+increased NCX expression5 and to animal models of heart failure or hypertrophy1,6–10 in which NCX is known to be overexpressed. Yet, in heart failure, a multitude of proarrhythmic alterations other than the upregulation of NCX has been identified,11 most importantly a reduction of K+ currents12,13 which promote a prolongation of AP duration and the occurrence of arrhythmia.
+It is therefore unknown whether genetic inhibition of NCX activity will suppress arrhythmia. Just as well, genetic inhibition may promote arrhythmia by mechanisms yet to be identified. If indeed genetic inhibition of NCX protects from afterdepolarizations, the question remains by which molecular mechanisms this protection is mediated. This could be a suppression of DADs, EADs, or even both, bearing the potential answer to the question of whether EADs and DADs share a common or a distinctly different molecular mechanism.
+We here investigated a non-failing murine model with heterozygous global knockout of NCX (hetKO). The aim of this study was to determine whether genetic NCX suppression affects the occurrence of afterdepolarizations and, if yes, whether this effect is limited to DADs or also includes EADs. In a second step, this study aimed at investigating the underlying molecular mechanisms that lead from reduced NCX activity to a potential antiarrhythmic effect by suppressing afterdepolarizations.
+Methods
+Generation of Heterozygous NCX Knockout Mice
+Generation of heterozygous global NCX knockout mice has been reported previously.14 The genotype of every animal entering experimentation was confirmed by polymerase chain reaction. Breeding, housing, and experimentation were performed in accordance to the guidelines of the Westfälische Wilhelms-University Münster
+
+and have been approved by the Landesamt für Natur, Umwelt, und Verbraucherschutz NRW. Animals used for experimentation were between 8 and 12.5 weeks of age.
+Immunoblot Analysis
+Immunoblot analysis on ventricular homogenates was performed as previously reported5 with minor modifications. Signal intensity was normalized to the housekeeping protein Csq.
+Isolation of Ventricular Cardiomyocytes
+Mice were sedated and euthanized with carbon dioxide inhalation. Single ventricular cardiomyocytes were isolated as reported previously15 with modifications as reported in the Data Supplement.
+Cellular Electrophysiology
+AP measurements and the potassium carried outward current were conducted using the perforated patch clamp technique. When recording I , the ruptured clamp method was used. For details, including
+Ca
+intracellular and extracellular solutions, see Data Supplement.
+Cellular Ca2+ Imaging
+Fluorescence emission at 522 nm (fluo-4-AM) or 405 and 495 nm wavelength (indo-1-AM) was taken as an indicator for the cytosolic Ca2+ level. The fluorescence emission was plotted in arbitrary light units. Whenever the Ca2+ signal was directly compared between separate cells, the ratio of the fluorescence signal of indo-1 was used for this subset of experiments. Details are available in the Data Supplement.
+Statistics
+Statistical analyses and database management were performed using SigmaPlot 11.2.0.5 (Systat Software Inc.). Data are expressed as mean±SEM. Student unpaired 2-tailed t test was used for direct comparison between both genotypes and between different cell populations of the same genotype. We performed 1-way or 2-way ANOVA test where applicable and accounted for multiple comparisons with 2-sided Dunnett’s method or Bonferroni correction, respectively. Rates and proportions were quantified using the z test. Unless not otherwise quoted, P values were calculated using Student t test. A P value <0.05 was considered to be statistically significant.
+Results
+Expression of Ca2+ Handling and Structural Proteins To confirm reduced NCX expression in heterozygous NCX knockout mice and to detect potential alterations of key Ca2+ handling and structural proteins, we performed immunoblot analyses (Figure 1A).
+NCX expression was significantly reduced to 46.6±9.2% in hetKO versus wild-type (WT; n=8 each; P<0.05). There was no significant difference in the expression of ryanodine receptor (hetKO: n=5; WT: n=5), Ca 1.2 (hetKO: n=8; WT:
+V
+n=8), phosphorylated ryanodine receptor (here and for all following proteins hetKO: n=6; WT: n=6), Csq, Tni, Plb, Trd, Jcn, and SERCA.
+Reduced NCX Activity in hetKO To validate, whether the reduced NCX expression leads to a reduced NCX activity in hetKO, caffeine (10 mmol/L) was rapidly applied to fluo-4-AM loaded isolated cardiomyocytes. Caffeine leads to a sudden and complete sarcoplasmic
+
+1212  Circ Arrhythm Electrophysiol  October 2015
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+T50 [in s]
+
+Signal intensity in % WT
+
+* A 150
+
+n.s.
+
+100
+
+C
+4.0
+
+*+
+
+50
+
+2.0
+
+0 NCX CsQ RyR RyRp Tni Plb Trd Jcn SERCA Cav1.2
+
+0
+
+WT het WT+
+
+KO Ni2+
+
+Fluo-4-AM signal normalized to WT
+
+B
+2 s
+
+WT
+hetKO WT + Ni2+
+
+WT
+hetKO D
+
+Caffeine-induced indo-1-AM amplitude
+[405 / 495 nm]
+
+n.s. 1.0 0.8 0.6 0.4 0.2
+0 WT hetKO
+
+Figure 1. Reduced Na+/Ca2+ exchanger (NCX) expression and activity in heterozygous knockout of NCX (hetKO) vs wild-type (WT).
+
+A, Immunoblot analysis: NCX expression was reduced in hetKO, whereas there was no significant alteration in the expression of other
+
+key Ca2+ handling and structural proteins (CsQ indicates calsequestrin; RyR, ryanodine receptor; RyRp, phosphorylated ryanodine recep-
+
+tor; CaV1.2, alpha 1C subunit of the L-type calcium channel; SERCA, sarcoendoplasmic reticulum Ca2+ ATPase; Jcn, junctin; Trd, triadin; Plb, phospholamban; and Tni, troponin I [n=5–8 for hetKO and WT for each protein; quantification by densitometry]). B, Caffeine-induced
+
+Ca2+ transients. Ca2+ removal was slowed in hetKO (n=16) when compared with WT (n=14), confirming reduced NCX activity. The effect
+
+of genetic NCX inhibition was reproduced in WT by adding the NCX antagonist Ni2+ (n=12). C, Quantification of time to half decay of the
+
+caffeine-induced
+
+Ca2+
+
+transient
+
+(T ) 50
+
+in
+
+hetKO
+
+and
+
+WT
+
+w/o
+
+Ni2+.
+
+D,
+
+Quantification
+
+of
+
+the
+
+amplitude
+
+of
+
+the
+
+caffeine-induced
+
+Ca2+
+
+transient
+
+which serves as a measure for sarcoplasmic reticular Ca2+ content (hetKO [n=15]; WT [n=16]). *P<0.05 hetKO vs WT; +P<0.05 WT+Ni2+ vs
+
+WT basal; n.s., non significant.
+
+reticular (SR) Ca2+ release (Figure 1B). The decay kinetics of the caffeine-induced Ca2+ transient serves as a direct measure of the Ca2+ extrusion capacity mediated via NCX. Ca2+ removal, obtained as time to half decay of the caffeineinduced Ca2+ transient (T ), was significantly slowed in
+50
+hetKO compared with WT confirming functionally reduced NCX activity in hetKO (T in s: WT, 1.7±0.2; n=14; hetKO,
+50
+3.1±0.2; n=16; P<0.05 hetKO versus WT; 1-way ANOVA test; 2-sided Dunnett’s method; Figure 1C). For control purposes, the effect of reduced NCX activity was reproduced in WT by adding the NCX inhibitor Ni2+ (10 mmol/L; T50 in s: WT, 4.0±0.6; n=12; P<0.05 versus basal; 1-way ANOVA test; 2-sided Dunnett’s method).
+Unaltered Amplitude of the Systolic Ca2+ Transient in hetKO The amplitude of the systolic Ca2+ transient was not altered between both genotypes (amplitude of the systolic Ca2+ transient; WT: 0.40±0.03, n=16; hetKO: 0.42±0.04, n=16; P=0.71 hetKO versus WT). There was no evidence for altered diastolic Ca2+ levels between both genotypes.
+Unaltered SR Ca2+ Content in hetKO The peak amplitude of the caffeine-induced Ca2+ transient is a measure for SR Ca2+ content.
+The amplitude of the caffeine-induced Ca2+ transient was unaltered suggesting no difference in the SR Ca2+ content between hetKO and WT (WT: 0.65±0.06, n=16; hetKO: 0.70±0.05, n=15; P=0.49 hetKO versus WT; Figure 1D).
+
+AP Kinetics To assess the effects of chronically reduced NCX activity on AP kinetics, APs were recorded using the perforated patch clamp method in current clamp mode (Figure 2A).
+AP duration obtained as time to half decay of the AP (APD ) was significantly reduced in hetKO compared with
+50
+WT (WT: 7.9±1.5 ms, n=20; hetKO: 4.1±0.5 ms, n=20; P<0.05 hetKO versus WT; Figure 2B). Resting membrane potential (WT: −68.4±1.2, n=20; hetKO: −68.7±1.1, n=20; P=0.84 hetKO versus WT) and AP amplitude (WT: 114.4±3.7,
+A 60
+
+Vm [mV] APD50 [in ms]
+
+0 WT hetKO
+
+B
+10 8 6
+4 2 0
+
+*
+WT hetKO
+
+-80
+50 ms
+Figure 2. Shortened action potential (AP) duration in heterozygous knockout of Na+/Ca2+ exchanger (hetKO). A, Representative AP recordings obtained in isolated cardiomyocytes using the patch clamp method. B, Quantification of the time to 50% repolarization of the AP (APD50; hetKO [n=20]; WT [n=20]); *P<0.05 hetKO vs wild-type (WT).
+
+Bögeholz et al   NCX Knockout Protects Against Afterdepolarizations   1213
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+n=20; hetKO: 110.9±4.1, n=20; P=0.54 hetKO versus WT) were unaltered between hetKO and WT.
+Potassium Carried Outward Current in hetKO Versus WT To exclude that the shortening of the AP is caused by an increase of voltage gated K+ currents, we measured the total K+ carried peak outward current (IKtot). IKtot was recorded in voltage clamped cardiomyocytes using perforated patch configuration in the presence of tetrodotoxin (10 µmol/L) and nifedipine (2 µmol/L) to avoid contamination of the recorded current by INa or ICa. Cells were clamped at −80 mV and then depolarized by square wave pulses (duration 1 s) ranging from −40 to +60 mV (Figure 3A). IKtot peak current was normalized to cell capacitance. Inactivation kinetics of I was measured
+Ktot
+taking the time to 25% decay (T ). 25 I peak current was slightly but significantly reduced in Ktot
+hetKO versus WT at potentials ranging from +40 to +60 mV (+60 mV; in pA/pF: WT, 29.2±2.8; n=10; hetKO, 23.7±2.4; n=10; P<0.05 hetKO versus WT; 2-way repeated measures ANOVA; Bonferroni correction; Figure 3B). There was a trend toward a slowed inactivation of IKtot in hetKO; however, this finding was not statistically significant (T25 in ms: WT, 53.6±9.7; hetKO: 79.6±10.3; P=0.08 hetKO versus WT). Cell capacitance was unaltered between hetKO and WT (in pF: WT, 117.2±9.0; hetKO, 122.2±8.3; P=0.69 hetKO versus WT).
+Unaltered Spontaneous SR Ca2+ Release in hetKO Versus WT Ca2+ transients of field stimulated fluo-4-AM-loaded cardiomyocytes were recorded during a stimulation protocol that was comprised of abrupt changes in pacing cycle length (20 sweeps each in Hz: 2, 1, 0.5, 0.25, 0.125, 0.5, 0.125, 1, and 3 minutes of rest). This protocol was repeated in the presence of 1 µmol/L isoproterenol.
+Throughout the protocol irregular Ca2+ activity was observed as (1) sCR, defined as a non–field-stimulated rise
+Figure 3. Measurement of the total voltage-dependent K+ peak current (IKtot) in heterozygous knockout of Na+/Ca2+ exchanger (hetKO; n=10) vs wild-type (WT; n=10) recorded in the voltage clamp mode. A, Representative tracings. B, Quantification: Peak IKtot normalized to cell capacitance in hetKO vs WT. hetKO exhibited a mild but significant decrease in peak IKtot amplitude (*P<0.05 WT vs hetKO; 2-way repeated measures ANOVA; Bonferroni correction).
+
+of the fluorescence signal during diastole; and (2) Ca2+ oscillations, defined as repeated-fluorescence upstrokes during the decay phase of a field stimulated fully developed Ca2+ transient (Figure 4A). The number of sCR events per all investigated cells was not significantly different between hetKO and WT (sCR/cell: WT, 70.4±10.1; n=30; hetKO, 54.8±9.3; n=27; P=0.26 WT versus hetKO; Figure 4B). The number of oscillations per all investigated cells was significantly smaller in hetKO than in WT (oscillations/cell: WT, 58.4±10.5; n=30; hetKO, 15.5±4.7; n=27; P<0.05 WT versus hetKO; Figure 4C).
+Reduced DAD Amplitude and Reduced Occurrence of sAPs in hetKO Versus WT Occurrence of DADs and sAPs was investigated in isolated amphotericin-perforated cardiomyocytes subjected to a proarrhythmic stimulation protocol (20 sweeps each in Hz: 5, 2, 1, 0.5, 0.25, 0.125, and 3 minutes of rest) that was repeated in the presence of isoproterenol (1 µmol/L) followed by 50 repetitions of an S2-beat-protocol containing 4 sweeps with 5 Hz followed by 1 short coupled sweep after 50 ms and a subsequent period of rest for 4 s.
+DADs were defined as temporary depolarizations of low amplitude during electric diastole, whereas sAPs were defined as full APs exceeding −10mV threshold triggered by a DAD and not by a current clamp command (Figure 5A). Each sAP was also numerically counted as a DAD because each sAP was triggered by a DAD. The number of cells showing DADs was not different between WT (19 of 20 [95%]) and hetKO (17 of 20 [85%]; P=0.60 WT versus hetKO; z test; Figure 5C), however, the number of cells exhibiting sAPs was significantly smaller in hetKO (hetKO: 6 of 20 [30%]; WT: 15 of 20 [75%]; P<0.05 WT versus hetKO; z test; Figure 5C).
+The number of DADs averaged to all investigated cells was also not significantly different between WT and hetKO (DAD/ cell: WT, 40.3±12.2; n=20; hetKO, 47.9±12.0; n=20; P=0.66 hetKO versus WT; Figure 5D), whereas the number of sAPs averaged to all investigated cells was significantly smaller in hetKO (sAPs/cell: WT, 10.6±3.0; n=20; hetKO, 2.1±1.1; n=20; P<0.05 hetKO versus WT; Figure 5E). Furthermore, in those cells that exhibited DADs (event-positive cells), the ratio of sAP/DAD was significantly smaller in hetKO than in WT. The mean amplitude of DADs was significantly reduced in hetKO versus WT (mean DAD amplitude in mV: WT, 4.52±0.09; hetKO, 2.89±0.05; P<0.05 hetKO versus WT; Figure 5B). At the same time, the mean duration of DADs was significantly prolonged in hetKO versus WT (mean DAD duration in s: WT, 0.58±0.02; hetKO, 0.67±0.01; P<0.05 hetKO versus WT).
+Reduced Occurrence of EADs in hetKO EADs were defined as re-depolarizations during repolarization of the AP that exceeded −40 mV after the membrane potential had dropped to below −40 mV (Figure 6A–6C). The shape of the EADs varied between temporary membrane fluctuations up to multiple steep upstrokes.
+The number of cells exhibiting EADs was significantly smaller in hetKO (2 of 20 [10%]) than in WT (17 of 20 [85%]; P<0.05 WT versus hetKO; z test; Figure 6D). The number of
+
+1214  Circ Arrhythm Electrophysiol  October 2015
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+Fluo-4-AM signal [a.u.]
+
+A
+2.0
+
+WT stim stim
+
+1.5
+
+1.0 sCR
+
+OSC
+
+hetKO stim stim 2.0
+
+1.5
+
+1.0 sCR 4 s
+
+stim stim OSC
+
+stim
+OSC stim
+
+stim stim
+
+sCR / all investigated cells
+
+B 100
+75 50 25
+0
+
+OSC sCR OSC
+
+stim stim
+
+OSC / all investigated cells
+
+C 80
+60 40 20
+0
+
+sCR
+
+n.s. WT hetKO
+*
+WT hetKO
+
+Figure 4. Irregular Ca2+ release activity in isolated heterozygous knockout of Na+/Ca2+ exchanger (hetKO; n=27) and wild-type (WT; n=30) myocytes during a defined prolonged field stimulation protocol containing rapid changes in pacing cycle lengths and isoproterenol exposure. A, Representative tracings of WT (top) and hetKO (bottom). Two types of irregular Ca2+ activity were distinguished. Spontaneous Ca2+ release (sCR) events, defined as spontaneously occurring isolated Ca2+ transients during diastole and Ca2+ oscillations (OSC), defined as singular or multiple spontaneous re-upstrokes occurring during the decay of a fully developed Ca2+ transient. B and C, Quantification: although OSC occurred more often in WT (C), there was no difference in the rate of occurrence of sCR (B). *P<0.05 hetKO vs WT; n.s., non significant.
+
+Fluo-4-AM signal [a.u.]
+
+EADs per all investigated cells was also significantly reduced in hetKO compared with WT (EADs/cell: WT, 66.2±20.8; n=20; hetKO, 0.2±0.1; n=20; P<0.05 hetKO versus WT; Figure 6E).
+Reduced L-type Ca2+ Current in hetKO Altered NCX activity has been described to regulate ICa.16–18 We therefore measured ICa in voltage clamped cardiomyocytes in ruptured patch configuration. Cells were clamped at −40 mV to inhibit I and then depolarized by square wave pulses
+Na
+(400 ms) ranging from −30 to +40 mV (Figure 7A). Peak current was normalized to cell capacitance. Pipette solution contained cesium chloride (120 mmol/L) and tetraethylammonium chloride (10 mmol/L) to inhibit voltage gated K+ currents. The baseline measurements of I (Figure 7A and 7B)
+Ca
+were performed in the absence of specific Ca2+ buffers. ICa amplitude was found to be reduced in hetKO compared
+with WT at voltage steps ranging from −10 to +30 mV (+10
+
+mV; in pA/pF: WT, −10.0±0.8; n=14; hetKO, −7.6±0.5; n=15;
+
+P<0.05 hetKO versus WT; 2-way repeated measures ANOVA;
+
+Bonferroni correction; Figure 7B). Inactivation kinetics of I Ca
+as time to 50% decay (T ) were not different between WT and 50
+hetKO (T50 in ms: WT, 14.9±1.2; hetKO, 12.7±0.6; P=0.10 hetKO versus WT). Cell capacitance was unaltered between
+
+hetKO and WT (in pF: WT, 132.0±10.5; hetKO, 125.9±5.6;
+
+P=0.60 hetKO versus WT).
+
+To test, whether enhanced Ca2+-dependent inactiva-
+
+tion of ICa is responsible for the observed reduction of ICa in
+hetKO, we repeated the measurements of ICa in the presence of the Ca2+ buffer 1,2-Bis(2-aminophenoxy)ethane-N,N,N’,N’-
+
+tetraacetic acid tetrakis(acetoxymethyl ester) (BAPTA; Figure
+
+7C). The cells (WT: n=15; hetKO: n=17) were dialyzed via
+
+the pipette solution with BAPTA (10 mmol/L) similar to pre-
+
+viously reported studies.16,17 Under these conditions, there was
+
+no significant difference in I amplitude (maximum I ampli-
+
+Ca
+
+Ca
+
+tude; in pA/pF: WT, 9.7±0.6; hetKO, 9.1±0.8; P=0.57 hetKO
+
+Vm [mV]
+
+Vm [mV]
+
+A 60
+0
+-80 60
+0
+-80
+
+WT
+AP triggered by clamp command
+
+B -67.5
+-70.0
+
+Vm [mV]
+
+DAD triggering
+an sAP
+200 ms WT
+hetKO AP triggered by clamp command
+
+-72.5
+-75.0
+C
+100
+
+% of cells with events
+
+DAD not
+
+50
+
+triggering
+
+an sAP
+
+0 200 ms
+
+WT
+
+hetKO
+
+500 ms
+
+n.s.
+
+*
+
+het WT KO
+DAD
+
+het WT KO
+sAP
+
+sAP / all investigated cells
+
+DAD / all investigated cells
+
+D
+60 40
+20 0
+E
+15 12 9 6 3
+0
+
+n.s. WT hetKO
+*
+WT hetKO
+
+Figure 5. Impaired translation of delayed afterdepolarizations (DADs) into spontaneous action potentials (APs) in heterozygous knockout of Na+/Ca2+ exchanger (hetKO) vs wild-type (WT, n=20 each). Membrane potential was recorded in isolated cells in the current clamp mode during a proarrhythmic pacing protocol containing sudden changes in pacing cycle lengths, burst stimulation, and isoproterenol exposure. Spontaneous APs were defined as full APs triggered by a DAD and not by a current clamp command. A, Exemplary tracings: in WT (top) the first AP is stimulated by a voltage clamp command. This is followed by a DAD triggering a spontaneous AP. In hetKO (bottom), the stimulated AP is followed by a DAD that does not trigger a spontaneous AP. B, Exemplary tracings of DADs with enlarged time and voltage scales. C–E (quantification), (C) There was no difference in the number of cells exhibiting DADs, but the number of cells exhibiting spontaneous APs was significantly smaller in hetKO. The average number of DADs per all investigated cells was also similar between both genotypes (D), whereas the average number of spontaneous APs per all investigated cells was significantly reduced in hetKO (E). *P<0.05 in hetKO vs WT; n.s., non significant.
+
+A
+
+B
+
+60
+
+40 20
+0 -20
+
+- 40 WT
+- 60 hetKO
+- 80 200 ms
+
+Bögeholz et al   NCX Knockout Protects Against Afterdepolarizations   1215
+
+EAD / cell
+
+C
+WT WT
+hetKO KO
+
+D
+
+100
+
+*
+
+80
+
+% of cells with EAD
+
+60
+
+40 20
+
+0 WT hetKO
+
+E
+
+100
+
+*
+
+EAD / all investigated cells
+
+80
+
+WT
+
+60
+
+40
+
+hetKO
+
+20
+
+0 WT hetKO
+
+Figure 6. Early afterdepolarizations (EADs) in wildtype (WT) and heterozygous knockout of Na+/Ca2+ exchanger (hetKO; n=20 each) during the pacing protocol used in Figure 5. The EAD shape varied between mild temporary membrane fluctuations (A), spike-like depolarizations (B), and steep upstrokes (C). D and E (quantification), Both the fraction of cells exhibiting EADs (D), and the number of EADs per all investigated cells (E) was significantly reduced in hetKO vs WT. *P<0.05.
+
+Vm [mV]
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+versus WT; 2-way repeated measures ANOVA; Bonferroni correction).
+Discussion
+This study is the first to evaluate the effect of genetically suppressed NCX activity on the generation of arrhythmia and the underlying cellular mechanisms. It is also the first study to investigate the effects of chronic and specific NCX inhibition on the generation of arrhythmia because synthetic NCX inhibitors lack specificity19–23 and—to our knowledge—have only been applied acutely as single shot applications and not chronically in the investigation of arrhythmia.23,24
+Knockout of NCX Suppresses Cellular Proarrhythmia Heterozygous KO mice did not show changes in the expression pattern of key Ca2+ handling and structural proteins (Figure 1A) or evidence of cellular hypertrophy as assessed by electric capacitance. Also, SR Ca2+ load (Figure 1D), the diastolic and the systolic Ca2+ levels were unaltered. A previous study has demonstrated normal whole heart cardiac function
+
+and morphology and no signs of structural heart disease or clinical cardiovascular pathology in hetKO.14 We observed a slight but significant reduction of IKtot in hetKO, however, this can neither explain the reduced AP duration nor the suppression of EADs, because reduced IKtot would tend to prolong AP duration instead of shortening it.
+The observed suppression of afterdepolarizations thus seems to be a genuine consequence of reduced NCX activity—and potentially its direct influence on I activity—and
+Ca
+not of long-term remodeling of cellular electrophysiology or Ca2+ homeostasis as an adaption to NCX knockout.
+Although in our model both EADs and DADs are suppressed, the molecular mechanisms by which reduction of NCX activity achieves this suppression may differ in both cases and are thus discussed separately in the following.
+NCX Knockout Suppresses Translation of DADs into sAPs DADs are triggered by sCR events. DADs are temporary depolarizations of low amplitude that occur during electric diastole and may or may not trigger a spontaneous AP. Thus, in mechanistic terms, the spontaneous AP occurs downstream
+
+A
+WT
+500 pA 20 ms hetKO
+500 pA 20 ms
+
+ICa [pA/pF] ICa [pA/pF]
+
+WT
+
+B
+
+hetKO
+
+C
+
+0
+
+0
+
++ BAPTA
+
+-2
+
+-2
+
+*
+-4
+
+*
+
+-4
+
+-6
+
+**
+
+-6
+
+*
+
+-8
+
+-8
+
+-10
+
+-10
+
+-12 -30 -20 -10 0 +10 +20 +30 +40
+Vm [mV]
+
+-12 -30 -20 -10 0 +10 +20 +30 +40
+Vm [mV]
+
+Figure 7. Voltage-gated Ca2+ currents (ICa) in heterozygous knockout of Na+/Ca2+ exchanger (hetKO; n=15) vs wild-type (WT; n=14). A, Exemplary tracings. Cells were held at −40 mV and subjected to square wave pulses of 400 ms ranging from −30 to +40 mV. B, Quantification of ICa amplitude in the absence of a Ca2+ buffer and (C) in the presence of BAPTA (WT: n=15; hetKO: n=17) normalized to cell capacitance and plotted against voltage commands. *P<0.05 in hetKO vs WT; 2-way repeated measures ANOVA; Bonferroni correction.
+
+1216  Circ Arrhythm Electrophysiol  October 2015
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+of the DAD and therefore the spontaneous AP has to be regarded as the final proarrhythmic substrate or proarrhythmic effector leading to triggered activity and arrhythmia of the whole heart.
+The most significant finding of this study is that NCX knockout does not reduce the absolute number of sCR events or DADs, but instead, it drastically reduces the number of spontaneous APs. How is this made possible? Any sCR from the SR will lead to a temporary increase of subsarcolemmal Ca2+ concentration which will drive NCX inward mode. If there are less NCX proteins expressed in the membrane, the peak amplitude of the NCX current will be smaller. At the same time, if the amount of spontaneously released SR Ca2+ is similar, NCX inactivation will be slower, that is, the period of NCX activity will be longer to extrude the same amount of Ca2+, a finding that has been demonstrated in previous studies.5,25–27 This would result in a DAD of smaller amplitude but longer duration as observed in this study (Figure 5). Because the triggering of a spontaneous AP is an all or nothing response, it is the peak amplitude of a DAD and not the absolute number of DADs or the duration of the individual DAD that is crucial for the generation of sAPs. In other words, a small number of high amplitude DADs are more likely to trigger a spontaneous AP than large numbers of low amplitude DADs. In our model, this is the mechanism by which NCX knockout impairs the translation of DADs into spontaneous APs.
+Suppression of EADs: Reduced AP Duration and Interaction of NCX With L-type Ca2+ Current It is currently not fully understood whether EADs and DADs share an identical mechanism, ie, whether NCX is involved only in the generation of DADs or also plays a role in the generation of EADs.
+The classic concept of NCX-mediated arrhythmia is that during diastole an sCR event is translated via NCX forward mode into a DAD, which subsequently triggers a spontaneous AP, and a similar mechanism has also been proposed for the role of NCX in the generation of EADs. However, the potential mechanisms underlying EADs seem to be more complex and ambiguous. EADs occur during the AP plateau or repolarization. During this phase, a multitude of ion channels are active, and ionic gradients are fluctuating. Thus, several alternative mechanisms have been suggested to contribute to the generation of EADs, including K+ current populations,28 late Na+ current,29,30 and predominantly ICa.3
+Therefore, one of the key findings of this study is that a selective suppression of NCX activity via knockout not only suppresses DADs but also drastically reduces the occurrence of EADs and Ca2+ oscillations (Figures 4 and 6).
+One obvious mechanism of this phenomenon is that the reduction of the AP duration (Figure 2) may reduce the occurrence of EADs in hetKO because EADs are more likely to occur when there is a prolongation of the AP.31 The reduction of NCX inward current alone may reduce AP duration to a degree where a suppression of EADs is achieved. However, the reduction of ICa activity (Figure 7A and 7B) as observed in this study may well also contribute to the shortening of the AP and thereby to the suppression of EADs because I
+Ca
+
+is an inward current and its reduction would thus accelerate
+
+repolarization.
+
+If the shortening of the AP was exclusively caused by
+
+reduced inward NCX current, one would not expect a reduc-
+
+tion of the APD during the early and positive potentials of the
+
+AP, because under these conditions, NCX reverse mode might
+
+be favored. Indeed, the most obvious absolute shortening of
+
+the AP was observed during later stages of the AP, however,
+
+the acceleration of the repolarization already reached signifi-
+
+cance at 25% repolarization, which in the spike-like murine
+
+AP is still relatively early. It is debatable whether NCX inward
+
+current, which is substantially driven by Ca2+ induced SR Ca2+
+
+release, is already fully developed at this early stage. ICa activation precedes SR Ca2+ release and thus maximum activation
+
+of NCX inward mode may influence APD earlier than NCX
+
+inward mode. Thus, the accelerated repolarization during
+
+the early stages of the AP observed in hetKO are most likely
+
+caused by the combination of reduced NCX inward current
+
+and reduced inward I . Ca Since Ca 1.2 expression was not altered between both V
+genotypes, we aimed at investigating whether the suppres-
+
+sion of I in hetKO is caused by a functional interaction Ca
+
+between NCX and I . One of the strongest inhibitors of I is
+
+Ca
+
+Ca
+
+Ca2+-dependent inactivation. We therefore repeated I meaCa
+
+surements in the presence of the Ca2+ buffer BAPTA. BAPTA
+
+supresses Ca2+-dependent inactivation of ICa because subsarcolemmal Ca2+ is buffered and therefore cannot function as an
+
+inhibitor of ICa. In the presence of BAPTA, the differences of
+ICa amplitude between hetKO and WT were eliminated, suggesting enhanced Ca2+-dependent inactivation as the cause
+
+for ICa suppression in hetKO (Figure 7C). These findings are in line with previous studies in other murine models with
+
+altered NCX expression.16,17 These observations support the
+
+hypothesis that reduced Ca2+ extrusion capacity by reduced
+
+NCX activity promotes Ca2+-dependent ICa inactivation by accumulation of Ca2+ in the dyadic cleft. Thus, next to the
+
+genetic suppression of NCX inward current, this direct func-
+
+tional interplay between NCX and I will also contribute to Ca
+the observed reduction of AP duration and the suppression
+
+of EAD in hetKO. The reduction of I is also essential for Ca
+the cell to maintain Ca2+ homeostasis: because knockout of
+
+NCX reduces cellular Ca2+ extrusion, the cell has to limit Ca2+
+
+uptake to avoid Ca2+ overload. This observation is supported
+
+by previous findings in a model with homozygous (com-
+
+plete) knockout of NCX.16,25 Further evidence for this adap-
+
+tive mechanism has been obtained in a model with increased
+
+NCX expression in which—complementary to NCX knock-
+
+out mice—ICa is increased,5,17 thereby preventing cellular Ca2+ loss because of increased Ca2+ removal by increased NCX
+
+activity.
+
+The fact that in hetKO ICa is also reduced at higher potentials, where NCX inward mode is unlikely to be active suggests
+
+that altered NCX activity may also influence subsarcolemmal
+
+Ca2+ during the diastolic part of the excitation contraction
+
+cycle.32 Possibly, reduced Ca2+ extrusion during diastole leads
+
+to subsarcolemmal Ca2+ accumulation promoting ICa inactivation. This again could result in some Ca2+ channels being inac-
+
+tivated even before or very early during depolarization, which
+
+would explain a reduction of I even at higher potentials. As Ca
+
+Bögeholz et al   NCX Knockout Protects Against Afterdepolarizations   1217
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+
+an alternative explanation, intracellular Ca2+ might also affect and modulate the voltage sensor of the L-type-Ca2+ channel, a mechanism that has been suggested by a previous study.33 Future studies are necessary to resolve this issue.
+If Ca2+-dependent inhibition of ICa is more pronounced in the face of reduced NCX expression, one would not only expect a reduced I amplitude but also an accelerated inacti-
+Ca
+vation of I . Indeed, this has been observed in homozygous Ca
+knockout mice16,25 and—conversely—a slowed inactivation was observed in homozygous overexpressor mice.5,17 In our study, we also observed a trend toward accelerated ICa inactivation in heterozygous KO mice, however, other than in homozygous KO mice, this trend did not reach statistical significance. One explanation may be that in homozygous KO mice, there is a complete NCX ablation, whereas in the heterozygous KO mice used in this study, NCX is only reduced to about half the normal expression level, thus resulting in a milder effect of NCX suppression on I inactivation.
+Ca
+Because altered NCX activity may also alter the dynamics of intracellular Na+ concentration and thereby the Na+ gradient, we cannot exclude that knockout of NCX affects the voltage-dependent Na+ current (INa) or—vice versa—that altered I will affect NCX activity. This may also influence AP dura-
+Na
+tion and proarrhythmia in the face of altered NCX activity. Future studies are necessary to address this issue.
+In contrast to DADs, which exhibited a characteristic all or nothing response that allowed easy separation of DADs from spontaneous APs (Figure 5), this was different in the case of EADs that appeared in several shapes and forms. To apply standard criteria, we defined an EAD as a redepolarization to more than −40 mV during the declining phase of the AP (after the membrane potential had first dropped to less than −40 mV). Applying these criteria, EADs ranged in shapes from mild temporary membrane fluctuations to steep upstrokes reaching up to potentials of >30 mV (Figure 6A–6C). Because the shapes of EADs were randomly distributed between these extremes, we were unable to mechanistically distinguish EADs from spontaneous APs. This may be a specific problem of murine models, where the plateau of the AP is at a low voltage when compared with higher mammals.34
+As a limitation of this study, a direct transfer of our results to human pathophysiology should only be undertaken with caution, because in humans, myocardial cellular electrophysiology significantly differs from murine electrophysiology as reflected by the much longer action potential. Thus, the pathophysiology of proarrhythmia may also differ between species. Also, as with other genetically modified murine models of arrhythmia, direct comparisons between different murine models may not be always be possible because different pacing protocols and different genetic backgrounds are used.5,29,35
+Conclusions This is the first work to investigate the effect of genetic NCX knockout on arrhythmogenesis and on the underlying molecular and electrophysiological mechanisms. This study demonstrates that chronic and specific NCX knockout directly reduces cellular proarrhythmia mediated by both late and early afterdepolarizations, although the underlying mechanisms downstream of NCX inhibition may differ. NCX
+
+knockout mice are thereby one of the few genetic models in which genetic manipulation does not result in a proarrhythmic phenotype but rather a phenotype that is protected against afterdepolarizations. Because cardiac diseases like heart failure are accompanied by NCX overexpression, the findings of this study should encourage further research on NCX suppression as a promising target for clinical pharmacological or genetic therapy to counter arrhythmia.
+Sources of Funding
+This work was supported by the German Heart Foundation (Deutsche Herzstiftung F/44/12) to Drs Pott, Müller, and Eckardt and the Deutsche Forschungsgemeinschaft, Sonderforschungsbereich SFB 656 (project C11) to Dr Eckardt.
+Disclosures
+None.
+References
+1. Pogwizd SM, Schlotthauer K, Li L, Yuan W, Bers DM. Arrhythmogenesis and contractile dysfunction in heart failure: roles of sodium-calcium exchange, inward rectifier potassium current, and residual beta-adrenergic responsiveness. Circ Res. 2001;88:1159–1167.
+2. Marban E, Robinson SW, Wier WG. Mechanisms of arrhythmogenic delayed and early afterdepolarizations in ferret ventricular muscle. J Clin Invest. 1986;78:1185–1192. doi: 10.1172/JCI112701.
+3. January CT, Riddle JM. Early afterdepolarizations: mechanism of induction and block. A role for L-type Ca2+ current. Circ Res. 1989;64:977–990.
+4. Volders PG, Kulcśar A, Vos MA, Sipido KR, Wellens HJ, Lazzara R, Szabo B. Similarities between early and delayed afterdepolarizations induced by isoproterenol in canine ventricular myocytes. Cardiovasc Res. 1997;34:348–359.
+5. Pott C, Muszynski A, Ruhe M, Bögeholz N, Schulte JS, Milberg P, Mönnig G, Fabritz L, Goldhaber JI, Breithardt G, Schmitz W, Philipson KD, Eckardt L, Kirchhof P, Müller FU. Proarrhythmia in a non-failing murine model of cardiac-specific Na+/Ca2+ exchanger overexpression: whole heart and cellular mechanisms. Basic Res Cardiol. 2012;107:247. doi: 10.1007/s00395-012-0247-7.
+6. Pogwizd SM, Qi M, Yuan W, Samarel AM, Bers DM. Upregulation of Na+/Ca2+ exchanger expression and function in an arrhythmogenic rabbit model of heart failure. Circ Res. 1999;85:1009–1019.
+7. de Groot SH, Schoenmakers M, Molenschot MM, Leunissen JD, Wellens HJ, Vos MA. Contractile adaptations preserving cardiac output predispose the hypertrophied canine heart to delayed afterdepolarization-dependent ventricular arrhythmias. Circulation. 2000;102:2145–2151.
+8. Mészáros J, Khananshvili D, Hart G. Mechanisms underlying delayed afterdepolarizations in hypertrophied left ventricular myocytes of rats. Am J Physiol Heart Circ Physiol. 2001;281:H903–H914.
+9. Sipido KR, Volders PG, de Groot SH, Verdonck F, Van de Werf F, Wellens HJ, Vos MA. Enhanced Ca2+ release and Na/Ca exchange activity in hypertrophied canine ventricular myocytes: potential link between contractile adaptation and arrhythmogenesis. Circulation. 2000;102:2137–2144.
+10. Bers DM, Pogwizd SM, Schlotthauer K. Upregulated Na/Ca exchange is involved in both contractile dysfunction and arrhythmogenesis in heart failure. Basic Res Cardiol. 2002;97 Suppl 1:I36–I42.
+11. Janse MJ. Electrophysiological changes in heart failure and their relationship to arrhythmogenesis. Cardiovasc Res. 2004;61:208–217.
+12. Pogwizd SM, Bers DM. Cellular basis of triggered arrhythmias in heart failure. Trends Cardiovasc Med. 2004;14:61–66. doi: 10.1016/ j.tcm.2003.12.002.
+13. Beuckelmann DJ, Näbauer M, Erdmann E. Alterations of K+ currents in isolated human ventricular myocytes from patients with terminal heart failure. Circ Res. 1993;73:379–385.
+14. Jordan MC, Henderson SA, Han T, Fishbein MC, Philipson KD, Roos KP. Myocardial function with reduced expression of the sodiumcalcium exchanger. J Card Fail. 2010;16:786–796. doi: 10.1016/ j.cardfail.2010.03.012.
+15. Kirchhefer U, Neumann J, Baba HA, Begrow F, Kobayashi YM, Reinke U, Schmitz W, Jones LR. Cardiac hypertrophy and impaired relaxation in
+
+1218  Circ Arrhythm Electrophysiol  October 2015
+
+transgenic mice overexpressing triadin 1. J Biol Chem. 2001;276:4142– 4149. doi: 10.1074/jbc.M006443200. 16. Pott C, Yip M, Goldhaber JI, Philipson KD. Regulation of cardiac L-type Ca2+ current in Na+-Ca2+ exchanger knockout mice: functional coupling of the Ca2+ channel and the Na+-Ca2+ exchanger. Biophys J. 2007;92:1431– 1437. doi: 10.1529/biophysj.106.091538. 17. Pott C, Goldhaber JI, Philipson KD. Homozygous overexpression of the Na+-Ca2+ exchanger in mice: evidence for increased transsarcolemmal Ca2+ fluxes. Ann N Y Acad Sci. 2007;1099:310–314. doi: 10.1196/ annals.1387.019. 18. Henderson SA, Goldhaber JI, So JM, Han T, Motter C, Ngo A, Chantawansri C, Ritter MR, Friedlander M, Nicoll DA, Frank JS, Jordan MC, Roos KP, Ross RS, Philipson KD. Functional adult myocardium in the absence of Na+-Ca2+ exchange: cardiac-specific knockout of NCX1. Circ Res. 2004;95:604–611. doi: 10.1161/01. RES.0000142316.08250.68. 19. Reuter H, Henderson SA, Han T, Matsuda T, Baba A, Ross RS, Goldhaber JI, Philipson KD. Knockout mice for pharmacological screening: testing the specificity of Na+-Ca2+ exchange inhibitors. Circ Res. 2002;91:90–92. 20. Tanaka H, Nishimaru K, Aikawa T, Hirayama W, Tanaka Y, Shigenobu K. Effect of SEA0400, a novel inhibitor of sodium-calcium exchanger, on myocardial ionic currents. Br J Pharmacol. 2002;135:1096–1100. doi: 10.1038/sj.bjp.0704574. 21. Barrientos G, Bose DD, Feng W, Padilla I, Pessah IN. The Na+/Ca2+ exchange inhibitor 2-(2-(4-(4-nitrobenzyloxy)phenyl)ethyl)isothiourea methanesulfonate (KB-R7943) also blocks ryanodine receptors type 1 (RyR1) and type 2 (RyR2) channels. Mol Pharmacol. 2009;76:560–568. doi: 10.1124/mol.109.057265. 22. Birinyi P, Acsai K, Bányász T, Tóth A, Horváth B, Virág L, Szentandrássy N, Magyar J, Varró A, Fülöp F, Nánási PP. Effects of SEA0400 and KBR7943 on Na+/Ca2+ exchange current and L-type Ca2+ current in canine ventricular cardiomyocytes. Naunyn Schmiedebergs Arch Pharmacol. 2005;372:63–70. doi: 10.1007/s00210-005-1079-x. 23. Milberg P, Pott C, Frommeyer G, Fink M, Ruhe M, Matsuda T, Baba A, Klocke R, Quang TH, Nikol S, Stypmann J, Osada N, Müller FU, Breithardt G, Noble D, Eckardt L. Acute inhibition of the Na+/Ca2+ exchanger reduces proarrhythmia in an experimental model of chronic heart failure. Heart Rhythm. 2012;9:570–578. doi: 10.1016/j.hrthm.2011.11.004. 24. Nagy ZA, Virág L, Tóth A, Biliczki P, Acsai K, Bányász T, Nánási P, Papp JG, Varró A. Selective inhibition of sodium-calcium exchanger by SEA0400 decreases early and delayed after depolarization in canine heart. Br J Pharmacol. 2004;143:827–831. doi: 10.1038/sj.bjp.0706026.
+
+25. Pott C, Philipson KD, Goldhaber JI. Excitation-contraction coupling in Na+Ca2+ exchanger knockout mice: reduced transsarcolemmal Ca2+ flux. Circ Res. 2005;97:1288–1295. doi: 10.1161/01.RES.0000196563.84231.21.
+26. Reuter H, Han T, Motter C, Philipson KD, Goldhaber JI. Mice overexpressing the cardiac sodium-calcium exchanger: defects in excitationcontraction coupling. J Physiol. 2004;554(Pt 3):779–789. doi: 10.1113/ jphysiol.2003.055046.
+27. Adachi-Akahane S, Lu L, Li Z, Frank JS, Philipson KD, Morad M. Calcium signaling in transgenic mice overexpressing cardiac Na+-Ca2+ exchanger. J Gen Physiol. 1997;109:717–729.
+28. Guo W, Li H, London B, Nerbonne JM. Functional consequences of elimination of i(to,f) and i(to,s): early afterdepolarizations, atrioventricular block, and ventricular arrhythmias in mice lacking Kv1.4 and expressing a dominant-negative Kv4 alpha subunit. Circ Res. 2000;87:73–79.
+29. Nuyens D, Stengl M, Dugarmaa S, Rossenbacker T, Compernolle V, Rudy Y, Smits JF, Flameng W, Clancy CE, Moons L, Vos MA, Dewerchin M, Benndorf K, Collen D, Carmeliet E, Carmeliet P. Abrupt rate accelerations or premature beats cause life-threatening arrhythmias in mice with longQT3 syndrome. Nat Med. 2001;7:1021–1027. doi: 10.1038/nm0901-1021.
+30. Orth PM, Hesketh JC, Mak CK, Yang Y, Lin S, Beatch GN, Ezrin AM, Fedida D. RSD1235 blocks late INa and suppresses early afterdepolarizations and torsades de pointes induced by class III agents. Cardiovasc Res. 2006;70:486–496. doi: 10.1016/j.cardiores.2006.01.026.
+31. Qu Z, Xie LH, Olcese R, Karagueuzian HS, Chen PS, Garfinkel A, Weiss JN. Early afterdepolarizations in cardiac myocytes: beyond reduced repolarization reserve. Cardiovasc Res. 2013;99:6–15. doi: 10.1093/cvr/ cvt104.
+32. Sipido KR, Bito V, Antoons G, Volders PG, Vos MA. Na/Ca exchange and cardiac ventricular arrhythmias. Ann N Y Acad Sci. 2007;1099:339–348. doi: 10.1196/annals.1387.066.
+33. Isaev D, Solt K, Gurtovaya O, Reeves JP, Shirokov R. Modulation of the voltage sensor of L-type Ca2+ channels by intracellular Ca2+. J Gen Physiol. 2004;123:555–571. doi: 10.1085/jgp.200308876.
+34. Bogeholz N, Eckardt L, Pott C. Advantages and limitations of transgenic mice: the role of the Na+/Ca2+ exchanger in cardiac electrophysiology and arrhythmia. Curr Med Chem. 2014;21:1330–1335.
+35. Waldeyer C, Fabritz L, Fortmueller L, Gerss J, Damke D, Blana A, Laakmann S, Kreienkamp N, Volkery D, Breithardt G, Kirchhof P. Regional, age-dependent, and genotype-dependent differences in ventricular action potential duration and activation time in 410 Langendorffperfused mouse hearts. Basic Res Cardiol. 2009;104:523–533. doi: 10.1007/s00395-009-0019-1.
+
+Downloaded from http://ahajournals.org by on July 13, 2022
+

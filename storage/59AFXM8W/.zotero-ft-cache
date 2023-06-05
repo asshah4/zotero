@@ -1,0 +1,591 @@
+Phil. Trans. R. Soc. A (2009) 367, 431–445 doi:10.1098/rsta.2008.0231
+Published online 22 October 2008
+Chronobiological analysis techniques. Application to blood pressure
+BY J. R. FERNA´ NDEZ*, R. C. HERMIDA AND A. MOJO´ N
+Bioengineering and Chronobiology Labs., E.T.S.I. Telecomunicaci´on, University of Vigo, Campus Universitario s/n, Vigo 36310, Spain
+Most variables of clinical interest show predictable changes with different frequencies, mainly, but not exclusively, along the rest–activity cycle (circadian variation). Methods of linear least-squares estimation have been designed for the detection of periodic components in sparse and noisy time series (as they are usually present in clinical situations). They include the single and population-mean cosinor methods. In cases where more than one period is statistically signiﬁcant over the span of time investigated, or when the waveform is non-sinusoidal, the use of multiple components analysis to ﬁt a model consisting of several cosine functions (harmonics or not from a given fundamental period) is recommended. We describe these methods, from the characterization of the underlying models to the process of parameter estimation. As an application example, we describe the modelling of the circadian variation of blood pressure (BP). In most individuals, BP presents a morning increase, a small postprandial valley and a deeper descent during nocturnal rest. This pattern can be easily modelled by means of a model with periods of 24 and 12 hours. Individuals that differ from this model might be considered to present increased cardiovascular risk.
+Keywords: ambulatory monitoring; blood pressure; circadian variation; cosinor; dipper; hypertension
+
+1. Introduction
+
+In the clinical world, it is not strange to disregard information relative to time of sampling. Nevertheless, it has been clearly demonstrated that the temporal structure of biological variables usually provides very valuable information. In multiple occasions, this temporal structure repeats itself periodically, leading us to the concept of biological rhythm. Chronobiology studies the temporal structure of biological variables.
+In clinical practice, we may distinguish between two kinds of data: individual data and hybrid data. A time series of values sampled from the same individual is called the individual data. If the same biological variable is time sampled in a set of individuals, pertaining to the same population, we talk about the hybrid data (a set of individual data). Commonly, biological time series are sparse and noisy. Rhythmometric procedures have been developed for detection of periods and
+* Author for correspondence (jramon.fernandez@uvigo.es).
+One contribution of 13 to a Theme Issue ‘Signal processing in vital rhythms and signs’.
+
+431
+
+This journal is q 2008 The Royal Society
+
+432
+
+J. R. Ferna´ndez et al.
+
+modelling variability of biological time series. The single cosinor method (Halberg 1969) is appropriate for modelling the individual data when only one frequency is present. If more than one period can be shown to be statistically signiﬁcant or when the waveform is not sinusoidal in shape, the use of multiple components analysis is recommended (Bingham et al. 1982). This method is an extension of the Fourier harmonic analysis (Bloomﬁeld 1976). Fourier analysis is performed in the frequency domain, while rhythmometric analysis is performed in the time domain. Moreover, Fourier analysis was designed for the balanced case (Bingham et al. 1982), a limited situation in which the data are equidistant and the time-series length is a multiple of the fundamental period. In addition, Fourier analysis does not provide statistical testing and conﬁdence intervals for the parameters.
+The single cosinor and multiple components methods have been extended for analysis of the hybrid data. These methods are the population-mean cosinor (Nelson et al. 1979), when only one period is ﬁtted to the data, and the population multiple components analysis (Fern´andez & Hermida 1998), which allows the ﬁt of several signiﬁcant periodicities to the data. Therefore, the population-mean cosinor method is, again, just a particular case of the population multiple components analysis. When the shape of the rhythm is best approximated by a complex model composed of two or more cosine curves that are harmonics of one fundamental period, the obtained model is also periodic. The main advantage of these rhythmometric procedures is that it is possible, with a relatively small number of parameters, to represent and explain the temporal variation of the data. The process of estimation of parameters is markedly different between the individual and the hybrid case. In the analysis of the individual data, the estimation of parameters and their conﬁdence intervals, as well as the validation or diagnosis of the model, are based on the linear regression theory. The rhythm characteristics obtained by individual multiple components analysis are considered as imputations or ﬁrstorder statistics for the hybrid procedures. The population multiple components method constitutes a second-order statistic, applied to the whole population. The population parameter estimates are based on the means of the individual estimated parameters.
+
+2. Mathematical models
+(a ) Individual models
+The approach is based on regression techniques and, as such, it is applicable to the analysis of unequidistant observations. One of the most popular methods is the single cosinor procedure. This method is applicable to the individual biological time series anticipated to be rhythmic with a given period. This procedure amounts to ﬁtting a cosine function of a ﬁxed anticipated period to the data by least squares. Thus, one obtains, for the period considered, an estimate of (i) the rhythm-adjusted mean or midline estimating statistic of rhythm (MESOR), deﬁned as the average value of the rhythmic function (e.g. cosine curve) ﬁtted to the data, (ii) amplitude, deﬁned as half the extent of rhythmic change in a cycle approximated by the ﬁtted cosine curve (difference between the maximum and the MESOR), and (iii) acrophase, lag from a deﬁned reference
+Phil. Trans. R. Soc. A (2009)
+
+Chronobiological analysis
+
+433
+
+time point (e.g. local midnight when the ﬁtted period is 24 hours) of the crest
+
+time in the cosine curve ﬁtted to the data. The goodness of ﬁt is indicated by
+
+minimizing the sum of squares of the residuals from the analysis, i.e. the
+
+differences between the actual measurements and the estimated functional form
+
+or best-ﬁtting curve. The single cosinor method is applicable only within very
+
+restrictive conditions (Bingham et al. 1982; De Prins & Waldura 1993): the
+
+approach requires that the data obtained be reasonably well represented by a
+
+cosine curve, and thus non-sinusoidality of the time series limits the applicability
+
+of the method. For a meaningful rhythmometric analysis by cosinor, it is
+
+important, therefore, to determine the approximate sinusoidality of the data.
+
+This requires at least the inspection of a graph of the data plotted against time
+
+(chronogram) and the assessment of sinusoidality by means of a statistical test.
+
+In cases where more than one period is statistically signiﬁcant over the span of
+
+time investigated or when the waveform is non-sinusoidal, the use of multiple
+
+components analysis to ﬁt a model consisting of several cosine functions (whether
+
+or not harmonics of a fundamental period) is recommended (Bingham et al.
+
+1982). Different names have been given in the literature to this method of ﬁtting
+
+multiple components to individual time series, including periodic regression
+
+(Batschelet 1981), sinusoidal regression (Quinn 1989), cosine analysis of
+
+harmonic and overlapping rhythms (Mattes et al. 1991) and partial Fourier
+
+series (De Prins & Hecquet 1992). When we use a model composed of two or
+
+more cosine curves that are harmonics of the fundamental period, the method of
+
+multiple components provides three additional summary parameters (Bingham
+
+et al. 1982): the overall amplitude (deﬁned as half the difference between the
+
+maximum and the minimum of the best-ﬁtted curve in one fundamental period),
+
+orthophase (deﬁned as the lag from a deﬁned reference of the crest time within
+
+the fundamental period in the curve of multiple components ﬁtted to the data)
+
+and bathyphase (deﬁned as the lag from a deﬁned reference of the time of the
+
+lowest value within a fundamental period in the curve of multiple components
+
+ﬁtted to the data). Figure 1 illustrates these concepts. In cases when only one
+
+periodic component is ﬁtted, it is obvious that the acrophase of this component
+
+corresponds to the orthophase and the amplitude of this component corresponds
+
+to the overall amplitude.
+
+The multiple components procedure for analysis of individuals consists
+
+of ﬁtting to the data, by least squares, a function with several (C ) ﬁxed
+
+anticipated periods, X C
+
+yn Z M C Ac cosðuctn C fcÞ C en; n Z 1; . ; N ;
+
+ð2:1Þ
+
+cZ1
+
+where yn is the observed value at time tn (not necessarily equidistant) of the studied variable; C is the number of sinusoidal components; uc are the angular frequencies, i.e. ucZ2p/tc, where tc, with cZ1, . ,C, are the ﬁtted periods; and N is the number of observed values (sample size). The remaining unknown
+quantities are obtained by estimation, and they are the MESOR (M in the
+equation), amplitude and acrophase (Ac and fc, respectively) of each ﬁtted components plus en, the residual from the analysis for the value yn. Assuming NO2CC1 and that the residuals are independent, with zero mean and common
+variance, the linear least-squares resolution of this equation provides, for each
+ﬁtted period, point and interval estimates of the amplitude and acrophase as well
+
+Phil. Trans. R. Soc. A (2009)
+
+434
+
+J. R. Ferna´ndez et al.
+
+– 0° – 60° –120° –180° –240° –300° – 0° orthophase
+
+bathyphase
+
+MESOR (M)
+
+2 × amplitude (2 × Ag)
+
+fundamental period
+
+time Figure 1. Main parameters in multiple components model.
+
+as MESOR (Bingham et al. 1982). If CZ1 (only one period), the model simpliﬁes to the single cosinor model. Given each of the C periods, the model is ﬁtted in its
+equivalent linear form after substituting Ac and fc by their Cartesian projections bcZAc cos fc and gcZKAc sin fc,
+
+X C yn Z M C ½bc cosðuctnÞ C gc sinðuctnÞ C en; n Z 1; . ; N :
+cZ1
+
+ð2:2Þ
+
+If all C frequencies in equation (2.2) are harmonics of a fundamental frequency, i.e. if all ﬁtted angular frequencies uj are integer multiples of uF, then the ﬁtted curve is periodic with period tFZ2p/u F, where tF is the fundamental period. In such a case, it is easy, by heuristic search, to ﬁnd the maximum and the
+minimum of the adjusted model. From these two values one can obtain three
+additional parameters not directly estimated from equation (2.2): the overall amplitude (Ag), orthophase (fO) and bathyphase (fB), as previously deﬁned.
+In order to estimate the parameters by least squares, the minimization of the
+residual sum of squares (RSS) is used as a criterion. This is deﬁned as
+
+X N RSSðM ; b1; g1; . ; bC ; gC Þ Z en2:
+nZ1
+
+ð2:3Þ
+
+The solution of this minimization process is given by the parameter vector estimation,
+
+q^ Z ðM^ ; b^1; g^1; . ; b^C ; g^C Þ:
+
+ð2:4Þ
+
+The procedure for the estimation of the parameters in this multiple component model, which also enables the calculation of conﬁdence intervals for the estimated parameters, was described previously (Bingham et al. 1982). The
+
+Phil. Trans. R. Soc. A (2009)
+
+Chronobiological analysis
+
+435
+
+estimations for the amplitude and acrophase of each component can be obtained by transforming the Cartesian coordinates b^ and g^ given by equation (2.4) to
+
+polar coordinates,
+
+qﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+
+A^c Z b^2c C g^2c;
+
+ð2:5Þ
+
+and
+
+tanðf^cÞ
+
+Kg^c Z b^c
+
+;
+
+where fc shall be chosen to be in the proper quadrant (Bingham et al. 1982). In order to validate the statistical signiﬁcance of each period in the model, a zeroamplitude test can be done. If the null hypothesis of zero amplitude is rejected, it can be assumed that the associated period is statistically relevant for the model. In other cases, the associated component should be removed from the model. The zeroamplitude hypothesis can be easily tested by means of an F-test. Note that Ac is equal to zero if and only if bc and gc are simultaneously zero (see equation (2.5)). The overall model statistical signiﬁcance shall also be checked. The null hypothesis is ‘all amplitudes are simultaneously zero’ against the alternative hypothesis ‘at least one is not null’. This can be done by means of a general F-test.
+The linear approach is only applicable if the C periods in equation (2.2) are chosen a priori. The resulting estimated parameters will depend markedly on the proper selection of periods. In those cases where the periods are unknown and cannot be anticipated, equation (2.2) can be solved by the use of nonlinear leastsquares techniques to estimate the periods, in addition to the other unknown parameters in the model (Alonso & Fern´andez 2001). As indicated above, the proper solution of equation (2.2) by least-squares estimation requires some assumptions. These basically relate to the appropriateness of the model, independence of errors and homogeneity of variance. In order to make statistical inferences, the hypothesis of normality is also usually assumed. These hypotheses can be tested, as it is usual in regression analysis, using the estimations of the errors, the residuals. When one or more of these tests yields p values less than a speciﬁed signiﬁcance level, transformations of the data or alternative models must be considered (Bingham et al. 1982).
+In many practical situations, it could be of interest to know if two or more individuals show similar rhythm parameters. For instance, when investigating the effect of an antihypertensive drug, it would be desirable to know if the treatment implies some kind of change in MESOR or amplitude. A method has been described for comparison of parameters from individual rhythmometric models with multiple components (Fern´andez et al. 2003). In the same paper, a non-parametric method is described for computation of conﬁdence intervals for parameters that are not directly estimated in the model, i.e. global amplitude, bathyphase and orthophase.
+
+(b ) Population models
+In many cases, it is of interest to study the rhythmic behaviour of a whole group or population. In this case, our sample is a set of I time series, each corresponding to different individuals pertaining to the same population. The same model is then adjusted to the I individuals, so I vectors of the parameters
+Phil. Trans. R. Soc. A (2009)
+
+436
+
+J. R. Ferna´ndez et al.
+
+are obtained, one from each individual, according to equation (2.4),
+
+q^1;q^2; . ;q^I :
+
+ð2:6Þ
+
+The method of population multiple components assumes that the vectors of
+
+individual parameters are a random sample from a multivariate normal
+
+population. The mean and the covariance matrix of this random variable thus
+
+can be estimated using the individual parameters (Fern´andez & Hermida 1998).
+
+The average of all of them gives us the estimated population parameters,
+
+q^pop
+
+Z ðM^ pop; b^1pop ; g^1pop ;
+
+.
+
+;
+
+b^Cpop
+
+;
+
+g^Cpop
+
+Þ
+
+Z
+
+PI
+i Z1
+I
+
+q^i
+
+:
+
+ð2:7Þ
+
+That is, the estimation of population MESOR is the average of all the individual MESORs and so on with the remaining parameters. The population estimates for the amplitude and acrophase of each component can be obtained by transforming the Cartesian coordinates b^ and g^ given by equation (2.7) to polar coordinates (see equation (2.5)). If the number of individuals I is greater than twice the number of components C, i.e. if IO2C, the assumed normality enables us to perform tests such as the null population amplitude one, and to compute conﬁdence intervals for all the parameters, except the special parameters of global amplitude, orthophase and bathyphase. When CZ1, i.e. there is only one period, the method is called population-mean cosinor. As in the case of individuals, it could be of interest to compare rhythmometric parameters from two or more populations. A method has been described for comparison of parameters from rhythmometric models with multiple components on the hybrid data (Ferna´ndez et al. 2004). In the same paper, a non-parametric method is described for the computation of conﬁdence intervals for population parameters that are not directly estimated in the model, i.e. global amplitude, bathyphase and orthophase.
+
+(c ) Practical considerations
+Time is a relative variable; implicitly we are always using a reference (for instance, midnight or 1 January). Working with individual series, we obtain some parameters that are related to time. Obviously, if we change the reference time, the orthophases, bathyphases and acrophases change. So, rhythmometric models should always show the reference time used. That is not specially important in individual analysis, but it is crucial in population analysis. All the individuals should use the same reference time. Traditionally, analysts used clock hours, but this reference time is not always appropriate. For instance, in the analysis of blood pressure (BP), individual times should be referenced to the rest–activity cycle. That is, the reference time should be the individual wake-up hour instead of 07.00 h. The process of expressing individual times as a function of an appropriate reference time is called synchronization. In individual analysis, the estimations of phases (acrophases, bathyphases and orthophases) should be interpreted according to the reference time used. Moreover, if the data are not properly synchronized, one can easily change the estimated values to adapt them to the desired reference. However, in the analysis of the hybrid data, bad synchronization can lead to obtaining erroneous estimates of population amplitudes, because amplitudes are calculated jointly with acrophases from their Cartesian coordinates (b and g). Figure 2 illustrates the situation.
+Phil. Trans. R. Soc. A (2009)
+
+Chronobiological analysis
+
+437
+
+(a)
+
+(b)
+
+0 4 8 12 16 20 24 time (hours)
+
+0 4 8 12 16 20 24 time (hours)
+
+Figure 2. Effect of synchronization on the population model. Simulated data are used for adjusting individual and population models with a fundamental period of 24 hours and its harmonic of 12 hours. (a) Data synchronized when 24 hour population component is statistically signiﬁcant and visually obvious. (b) Data not synchronized when the 24 hour component is not statistically signiﬁcant, and visually we can only appreciate the 12 hour component. The same individual data are used in both subplots, only individual time references are changed. Solid black lines, individual curves; dashed black lines, population.
+
+The use of linear least-squares methods with only one component (single and population-mean cosinor) should then be much more restricted than in general real practice, where misuse is common (De Prins & Waldura 1993). The sampling scheme could, however, limit the possible methods to be used. Too many clinical trials are designed to obtain not more than ﬁve or six data points for the variable of interest, sampled over the time span covering the fundamental period investigated (say 24 hours). Since the application of equation (2.1) needs an individual sample size NO2CC1, the described sampling rate would allow to ﬁt a multiple model with not more than two components. In these cases, or when, for instance, the resting and activity spans (or light–dark schedules) have different duration, one needs to realize that modelling the data with a unique cosine curve (and thus assuming a symmetric function around the MESOR) could only serve as a ﬁrst approximation. The results should then be provided for descriptive or comparative purposes without further inference. The minimal mathematical requirements, with respect to sample size needed to ﬁt a model with C components, are the ones speciﬁed above (IO2C and NiO2CC1ci ). Nevertheless, if the user wants reliable statistics, it is advisable to take higher values for I and Ni, ci.
+As described above, when the waveform is non-sinusoidal, the use of multiple components analysis to ﬁt a model consisting of several cosine functions is recommended (Bingham et al. 1982). When analysing individual time series, the problem of selecting those anticipated relevant periods is not trivial (De Prins & Hecquet 1992). It is not simple to select how many and which components should be used. In the individual analysis, one could use a procedure somehow similar to stepwise regression, taking into account that each periodic component added or deleted from the model is conﬁrmed by two predictors (the associated amplitude and acrophase or their equivalent Cartesian coordinates). In the analysis of the hybrid data, the problem becomes more complicated. Apart from the restrictions concerning sample sizes given above, some other considerations must be taken into account when using the methodology described here. First, the population multiple components procedure assumes that all individual time series in the sample are well modelled by the same multiple components model, which
+
+Phil. Trans. R. Soc. A (2009)
+
+438
+
+J. R. Ferna´ndez et al.
+
+therefore, should include the same anticipated periods. Second, the population multiple components procedure described here only takes into account the among-individuals variability, assuming that this variance is considerably greater than the within-individuals variability. Precautions should be taken before using the proposed method when that assumption cannot be met.
+
+3. BP measurement
+Hypertension is a common chronic condition affecting up to 35 per cent of human adults (Chobanian et al. 2003; Mancia et al. 2007). This condition is an important risk factor for stroke, heart attack and other vascular and renal diseases (Chobanian et al. 2003; Mancia et al. 2007). Pharmacological treatment of high BP reduces the incidence of these complications and prolongs life (Chobanian et al. 2003; Mancia et al. 2007). Accordingly, there has been a strong incentive, from the point of view of primary prevention, to identify individuals who have high BP and to provide them with appropriate treatment. BP determined casually in the physician’s ofﬁce has been commonly used for the diagnosis of hypertension and for the evaluation of treatment efﬁcacy (Chobanian et al. 2003; Mancia et al. 2007). These conventional time-unspeciﬁed single measurements, however, are only indicative of the BP status of only a brief and minimal fraction of the entire circadian (24 hour) BP pattern. The development of automatic instrumentation for non-invasive ambulatory BP monitoring (ABPM) has provided a method for BP assessment that compensates for most of the limitations of ofﬁce measurements (Staessen et al. 1999a). In hypertensive patients, the correlation between the BP level and the target organ damage, cardiovascular risk and long-term prognosis is closer for ABPM than for clinical measurements (Verdecchia et al. 1994; Staessen et al. 1999b; Verdecchia 2000; Clement et al. 2003). A major disadvantage of relying on clinical BP measurements for diagnosing hypertension and evaluating treatment efﬁcacy, and simultaneously the most important advantage of relying on ABPM, comes from the high-amplitude circadian pattern that characterizes BP. BP is affected by a variety of external factors, including ambient temperature/humidity, physical activity, emotional state (anxiety and anger), alcohol or caffeine consumption, meal composition and sleep/wake routine (Portaluppi & Smolensky 2001; Hermida et al. 2002). In addition, BP is also inﬂuenced by internal factors, such as ethnicity, gender, autonomic nervous system tone, vasoactive hormones and haematological and renal variables (Lemmer 1992; Sica & Wilson 2001).
+The predictable changes during the 24 hours in environmental and biological variables give rise to the circadian pattern in BP and heart rate (HR). In persons with normal BP and uncomplicated essential hypertension, BP declines to the lowest levels during night-time sleep, rises abruptly with morning awakening and attains near peak or peak values during the ﬁrst hours of diurnal activity. In the so-called normal dippers, the sleep-time BP mean (Mas) is lower by 10–20% than the daytime mean (Maw). In addition to this profound sleep-related nocturnal decline, the typical circadian pattern of BP exhibits two daytime peaks, the ﬁrst approximately 4 and the second approximately 12 hours after awakening, with a small afternoon nadir. Signiﬁcant gender differences in speciﬁc features of the BP and HR circadian rhythm have been identiﬁed. Typically, men exhibit a lower HR and higher BP than women, the differences being greater for systolic BP than
+Phil. Trans. R. Soc. A (2009)
+
+systolic blood pressure (mm Hg)
+
+Chronobiological analysis
+
+439
+
+phase (360° = one period = 1 day)
+
+– 0°
+
+– 60°
+
+–120°
+
+–180°
+
+–240°
+
+–300°
+
+– 0°
+
+139
+
+MMM
+
+MMM
+
+M
+
+133
+
+F
+
+F
+
+F
+
+F
+
+F
+
+M
+
+127
+
+FF
+
+F
+
+M
+
+121
+
+M
+
+MM
+
+115
+
+F
+
+F
+
+F F 109
+
+0* 0
+
+** 04.00
+
+******
+
+08.00
+
+12.00
+
+16.00
+
+time (hours after awakening)
+
+** 20.00
+
+* 24.00
+
+Figure 3. Circadian variation of systolic BP in men (M, grey curves) and women (F, black curves). Each graph shows the means and standard errors from the data at 2 hour intervals. These means are compared between groups by means of a t-test (asterisks indicate p!0.05). The curve represented for each group corresponds to the best-ﬁtting waveform model determined by population multiple-component analysis. The arrow descending from the upper horizontal time axis points to the circadian orthophase (rhythm’s crest time). Black boxes in time axis indicate sleep hours.
+
+for diastolic BP (Hermida et al. 2002). This pattern can be easily described by means of a population rhythmometric model with periodic components of 24 and 12 hours. With only ﬁve parameters, one obtains a model for the normal behaviour for the circadian rhythm of BP (ﬁgure 3, table 1). The extent of the sleep-time decline in BP has been mainly quantiﬁed through the so-called awake– asleep BP ratio (RBP), deﬁned as the night-time decline in BP relative to Maw, and calculated as
+
+RBP
+
+Z
+
+100
+
+Ã
+
+Maw K Mas Maw
+
+:
+
+ð3:1Þ
+
+Phil. Trans. R. Soc. A (2009)
+
+440
+
+J. R. Ferna´ndez et al.
+
+Table 1. Parameters from rhythmometric model for females and males (phases expressed in degrees, p-value from test for comparison of parameters)
+
+female male p-value
+
+MESOR A24 hours f24 hours A12 hours f12 hours Ag
+
+123.19 130.04 !0.001
+
+8.80 9.95 0.204
+
+K118 K114 0.330
+
+5.73 5.53 0.644
+
+K49 K60 0.062
+
+11.18 12.08 0.394
+
+fO
+K183 K55 0.430
+
+fB
+K295 K298 0.396
+
+Using this ratio, patients have been arbitrarily classiﬁed as dippers or non-
+dippers (RBP!10%) (O’Brien et al. 1988). More recently, this classiﬁcation has been somehow extended by dividing the patients into four possible groups: extreme
+dippers (RBPR20%), dippers (RBPR10%), non-dippers (RBP!10%) and inverse dippers or risers (RBP!0%, indicating asleep BP above the awake mean).
+
+4. Medical consequences of BP non-dipper status
+The extent of the nocturnal BP decline in hypertension seems to be of clinical importance in itself as a criterion of cardiovascular and other risks. Evidence is now available that night-time BP is the most potent predictor of outcome when compared to 24 hour and daytime values (Staessen et al. 1999b; Dolan et al. 2005; Kikuya et al. 2005). The reduction of the normal 10–20% sleep-time BP decline characteristic of the non-dipper pattern is associated with elevated risk of endorgan injury, particularly to the heart (left ventricular hypertrophy, congestive heart failure and myocardial infarct), brain (stoke) and kidney (albuminuria and progression to end-stage renal failure) (O’Brien et al. 1988; Verdecchia et al. 1994; Staessen et al. 1999b; Kario et al. 2001; Ohkubo et al. 2002; Ingelsson et al. 2006). Prospective studies have already demonstrated that the elevated risk of end-organ injury in non-dippers leads to the increased incidence of morbid and mortal cardiovascular events. O’Brien et al. (1988) reported that non-dipper hypertensive subjects are signiﬁcantly more likely to suffer from a stroke than dipper subjects. Verdecchia et al. (1994) also showed that, after an average follow-up period of 3.2 years, non-dipper hypertensive patients experienced approximately three times as many adverse cardiovascular events as dipper patients. More recently, Staessen et al. (1999b) reported that non-dippers experienced a greater incidence of stroke and myocardial infarction than the group of persons who had a normal dipper pattern. Moreover, Ingelsson et al. (2006) demonstrated that a non-dipper BP pattern and increased night-time diastolic BP is a predictor of incident congestive heart failure in elderly men. Kario et al. (2001) reported that, after 4 years of follow-up, hypertensive patients with a sleep-time riser BP proﬁle had a signiﬁcant increased incidence of fatal and non-fatal stroke when compared with all other groups of patients divided according to the dipping status. A recent survival analysis from the Ohasama study found, after an average follow-up of 9.2 years, that a 5 per cent decrease in the decline of sleep-time systolic BP in hypertensive patients was associated with a 31 per cent increase in the risk of cardiovascular mortality (Ohkubo et al. 2002). Even more relevant is the ﬁnding that dipper hypertensives had a relative hazard of cardiovascular mortality similar to that of non-dipper normotensives
+Phil. Trans. R. Soc. A (2009)
+
+Chronobiological analysis
+
+441
+
+(Ohkubo et al. 2002). These results indicate that non-dipping in BP is a risk factor of cardiovascular mortality, which is independent of the 24 hour mean BP value, i.e. the presence or absence of an elevated BP above the threshold used for the diagnosis of hypertension. These ﬁndings also suggest that cardiovascular risk could be inﬂuenced not only by the BP elevation, but also by the amplitude of the circadian BP rhythm. Accordingly, there is growing interest in how to tailor the treatment of hypertensive patients according to their circadian BP pattern (Hermida et al. 2007a).
+
+5. Example of application
+We studied 196 diurnally active and nocturnally resting Spanish adults, 117 men and 79 women, with a mean age of 50.69G1.21 years. The systolic, mean arterial and diastolic BP and HR of each person were automatically monitored every 20 min from 07.00 to 23.00 and every 30 min from 23.00 to 07.00 for 48 consecutive hours with a validated device. During monitoring, each subject maintained a diary listing the time of going to bed at night and awakening. Following the information from the diaries, each individual’s clock hours were ﬁrst re-referenced from clock time to hours after awakening. This transformation avoided the introduction of bias due to differences among subjects in their sleep/activity routine. Based on the calculated diurnal and nocturnal means, 135 subjects were classiﬁed as dippers whereas 61 subjects were classiﬁed as non-dippers. The data were analysed using population multiple components methods, with a fundamental period of 24 hours and its harmonic of 12 hours, as was recommended previously (Hermida et al. 2002). Figures 3 and 4 show the best-ﬁtted model for men and women, and for dipper and non-dipper populations. Tables 1 and 2 show the numerical values for the estimated parameters. A non-parametric comparison of parameters from two populations is also shown.
+
+6. Discussion
+The use of rhythmometric models allows us to understand the temporal behaviour of a biological variable such as BP and to detect potential differences between groups. Comparing the waveform of BP variability between men and women (ﬁgure 3), one can observe that both ﬁtted models are similar, except in MESOR. Moreover, the p values from table 1 show that only the difference in MESOR is statistically signiﬁcant between genders, while the values of amplitude or orthophase are not statistically different between groups. The other example, comparing dipper and non-dipper subjects, shows a different situation (ﬁgure 4). In this case, one cannot establish differences in MESOR between groups, but, as expected, the amplitude is signiﬁcantly lower in nondipper subjects by 9.36 mmHg ( p!0.001, from table 2). Differences in bathyphase are also statistically signiﬁcant, but they may not be clinically relevant (only 78, i.e. less than half an hour, the sampling interval during the night in this study). The inverse situation occurs with orthophases. The difference between estimations is considerable (1238, i.e. 08.20), but it is not statistically signiﬁcant. This fact can be explained by the large conﬁdence
+Phil. Trans. R. Soc. A (2009)
+
+442
+
+J. R. Ferna´ndez et al.
+
+phase (360° = one period = 1 day)
+
+– 0°
+
+– 60° –120° –180° –240° –300°
+
+– 0°
+
+137
+
+DD N
+
+DD
+
+D
+
+132
+
+N
+
+DD NN
+
+N
+
+N
+
+127
+
+N
+
+DN
+
+N
+
+NNN
+
+122
+
+systolic blood pressure (mm Hg)
+
+117
+
+D
+
+D 112
+DD
+
+0
+
+*
+
+****
+
+0
+
+04.00 08.00 12.00 16.00 20.00 24.00
+
+time (hours after awakening)
+
+Figure 4. Circadian variation of systolic BP in dipper (D, black curves) and non-dipper (N, grey curves) subjects. Each graph shows means and standard errors from the data at 2 hour intervals. These means are compared between groups by means of a t-test (asterisks indicate p!0.05). The curve represented for each group corresponds to the best-ﬁtting waveform model determined by population multiple components analysis. The arrow descending from the upper horizontal time axis points to the circadian orthophase (rhythm’s crest time). Black boxes in time axis indicate sleep hours.
+
+Table 2. Parameters from rhythmometric model for dipper and non-dipper subjects (phases expressed in degrees, p-value from test for comparison of parameters)
+
+MESOR A24 hours f24 hours A12 hours f12 hours Ag
+
+fO
+
+dipper
+
+126.41
+
+non-dipper 129.20
+
+p-value
+
+0.174
+
+12.30 3.31 !0.001
+
+K117 K104 0.180
+
+6.77 3.51 !0.001
+
+K62 K27 0.002
+
+14.74 5.38 !0.001
+
+K57 K180 0.926
+
+fB
+K300 K283 !0.001
+
+interval obtained for this parameter in the non-dipper group (K198 and K1858). The reduced circadian amplitude in non-dippers leads to oscillations in orthophases between the two relative maximums of the adjusted model, so its estimation presents great variability. According to these results, from the population point of view, it does not seem possible to distinguish dippers from
+Phil. Trans. R. Soc. A (2009)
+
+Chronobiological analysis
+
+443
+
+non-dippers on the basis of just the 24 hour mean BP values. In order to predict outcomes, some authors defend the use of chronobiological modelling against the day–night ratio (Cornelissen et al. 2007). Although both techniques do not exclude each other, most of the international studies (Verdecchia et al. 1994; Staessen et al. 1999b; Ohkubo et al. 2002; Dolan et al. 2005) have shown the power of the nocturnal mean of BP and the day–night ratio to predict cardiovascular morbidity and mortality.
+Therapeutic intervention in hypertension consists of adequate control of BP, the goal being to reduce cardiovascular morbidity and mortality. Owing to the increased cardiovascular risk in non-dipper subjects when compared with dippers, one might thus conclude that treatment of non-dippers should require increasing the circadian amplitude of BP that would result from decreasing the nocturnal BP mean to a larger extent than the diurnal BP mean. Previous ﬁndings indicate that this therapeutic goal requires contemplating chronotherapy (timing of the antihypertensive medication) as a proper strategy to remodel the circadian pattern of BP (Hermida et al. 2007a, 2008).
+However, the potential reduction in cardiovascular mortality associated with the normalization of the circadian variability of BP (i.e. conversion from non-dipper to dipper pattern) has not yet been fully established. Recent ﬁndings from the Monitorizaci´on Ambulatoria de Presi´on arterial y Eventos Cardiovasculares study (MAPEC; Hermida 2007), designed to investigate whether normalizing the circadian BP proﬁle towards a more dipper pattern by the use of chronotherapy reduces cardiovascular risk, indicate that the probability of event-free survival is strongly correlated with the awake–asleep BP ratio. Most importantly, results after just 3 years of follow-up suggested that increasing this ratio towards a more dipper pattern decreases cardiovascular risk, while decreasing the awake–asleep BP ratio is associated with increased morbidity and mortality (Hermida et al. 2007b).
+This research was supported in part by Direccio´n General de Investigacio´n, Ministerio de Educacio´n y Ciencia (SAF2006-6254); Conseller´ıa de Educacio´n e Ordenacio´n Universitaria, Direccio´n Xeral de Promocio´n Cient´ıﬁca e Tecnolo´xica do Sistema Universitario de Galicia, Xunta de Galicia (R.C.H.D); Conseller´ıa de Innovaci´on e Industria, Direccio´n Xeral de Investigacio´n, Desenvolvemento e Innovacio´n (INCITE07-PXI-322003ES); and Vicerrectorado de Investigacio´n, Universidad de Vigo.
+
+References
+Alonso, I. & Fern´andez, J. R. 2001 Nonlinear estimation and statistical testing of periods in nonsinusoidal longitudinal time series with unequidistant observations. Chronobiol. Int. 18, 285–308. (doi:10.1081/CBI-100103192)
+Batschelet, E. 1981 Circular statistics in biology. London, UK: Academic Press. Bingham, C., Arbogast, B., Corn´elissen, G., Lee, J. K. & Halberg, F. 1982 Inferential statistical
+methods for estimating and comparing cosinor parameters. Chronobiologia 9, 397–439. Bloomﬁeld, P. 1976 Fourier analysis of time series: an introduction. New York, NY: Wiley. Chobanian, A. V. et al. 2003 Seventh report of the joint national committee on prevention,
+detection, evaluation, and treatment of high blood pressure. Hypertension 42, 1206–1252. (doi:10.1161/01.HYP.0000107251.49515.c2) Clement, D. L. et al. 2003 Prognostic value of ambulatory blood-pressure recordings in patients with treated hypertension. New. Engl. J. Med. 348, 2407–2415. (doi:10.1056/NEJMoa022273)
+Phil. Trans. R. Soc. A (2009)
+
+444
+
+J. R. Ferna´ndez et al.
+
+Cornelissen, G., Halberg, F., Otsuka, K., Singh, R. B. & Chen, C.-H. 2007 Chronobiology predicts actual and proxy outcomes when dipping fails. Hypertension 49, 237–239. (doi:10.1161/01.HYP. 0000250392.51418.64)
+De Prins, J. & Hecquet, B. 1992 Data processing in chronobiologic studies. In Biological rhythms in clinical and laboratory medicine (eds Y. Touitou & E. Haus), pp. 90–113. Berlin, Germany: Springer.
+De Prins, J. & Waldura, J. 1993 Sightseeing around the single cosinor. Chronobiol. Int. 10, 395–400. (doi:10.3109/07420529309064493)
+Dolan, E. et al. 2005 Superiority of ambulatory over clinic blood pressure measurement in predicting mortality: the Dublin outcome study. Hypertension 46, 156–161. (doi:10.1161/01. HYP.0000170138.56903.7a)
+Ferna´ndez, J. R. & Hermida, R. C. 1998 Inferential statistical method for analysis of nonsinusoidal hybrid time series with unequidistant observations. Chronobiol. Int. 15, 191–204.
+Ferna´ndez, J. R., Mojo´n, A., Hermida, R. C. & Alonso, I. 2003 Methods for comparison of parameters from longitudinal rhythmometric models with multiple components. Chronobiol. Int. 20, 495–513. (doi:10.1081/CBI-120021383)
+Ferna´ndez, J. R., Mojo´n, A. & Hermida, R. C. 2004 Comparison of parameters from rhythmometric models with multiple components on hybrid data. Chronobiol. Int. 21, 469–484. (doi:10.1081/CBI-120038630)
+Halberg, F. 1969 Chronobiology. Annu. Rev. Physiol. 31, 675–725. (doi:10.1146/annurev.ph.31. 030169.003331)
+Hermida, R. C. 2007 Ambulatory blood pressure monitoring in the prediction of cardiovascular events and effects of chronotherapy: rationale and design of the MAPEC study. Chronobiol. Int. 24, 749–775. (doi:10.1080/07420520701535837)
+Hermida, R. C., Ayala, D. E., Ferna´ndez, J. R., Mojo´n, A., Alonso, I. & Calvo, C. 2002 Modeling the circadian variability of ambulatorily monitored blood pressure by multiple-component analysis. Chronobiol. Int. 19, 461–481. (doi:10.1081/CBI-120002913)
+Hermida, R. C., Ayala, D. E., Calvo, C., Portaluppi, F. & Smolensky, M. H. 2007a Chronotherapy of hypertension: administration-time-dependent effects of treatment on the circadian pattern of blood pressure. Adv. Drug. Deliv. Rev. 59, 923–939. (doi:10.1016/j.addr.2006.09.021)
+Hermida, R. C. et al. 2007b Reduction of cardiovascular morbidity by increasing the diurnal/nocturnal blood pressure ratio: the MAPEC study. J. Hypertens. 25, S139–S140.
+Hermida, R. C., Ayala, D. E., Fern´andez, J. R. & Calvo, C. 2008 Chronotherapy improves blood pressure control and reverts the nondipper pattern in patients with resistant hypertension. Hypertension 51, 69–76. (doi:10.1161/HYPERTENSIONAHA.107.096933)
+Ingelsson, E., Bjorklund-Bodegard, K., Lind, L., Arnlov, J. & Sundstrom, J. 2006 Diurnal blood pressure pattern and risk of congestive heart failure. JAMA 295, 2859–2866. (doi:10.1001/jama. 295.24.2859)
+Kario, K., Pickering, T. G., Matsuo, T., Hoshide, S., Schwartz, J. E. & Shimada, K. 2001 Stroke prognosis and abnormal nocturnal blood pressure falls in older hypertensives. Hypertension 38, 852–857. (doi:10.1161/hy1001.092640)
+Kikuya, M. et al. 2005 Ambulatory blood pressure and 10-year risk of cardiovascular and noncardiovascular mortality: the Ohasama study. Hypertension 45, 240–245. (doi:10.1161/01. HYP.0000152079.04553.2c)
+Lemmer, B. 1992 Cardiovascular chronobiology and chronopharmacology. In Cardiovascular chronobiology and chronopharmacology (eds Y. Touitou & E. Haus), pp. 418–427. Berlin, Germany: Springer.
+Mancia, G. et al. 2007 2007 guidelines for the management of arterial hypertension: the task force for the management of arterial hypertension of the european society of hypertension (ESH) and of the european society of cardiology (ESC). J. Hypertens. 25, 1105–1187. (doi:10.1097/HJH. 0b013e3281fc975a)
+Mattes, A., Witte, K., Hohmann, W. & Lemmer, B. 1991 Pharmﬁt-a nonlinear ﬁtting program for pharmacology. Chronobiol. Int. 8, 460–476. (doi:10.3109/07420529109059182)
+
+Phil. Trans. R. Soc. A (2009)
+
+Chronobiological analysis
+
+445
+
+Nelson, W., Tong, Y. L., Lee, J. K. & Halberg, F. 1979 Methods for cosinor-rhythmometry. Chronobiologia 6, 305–323.
+O’Brien, E., Sheridan, J. & O’Malley, K. 1988 Dippers and non-dippers. Lancet 2, 397. (doi:10. 1016/S0140-6736(88)92867-X)
+Ohkubo, T. et al. 2002 Prognostic signiﬁcance of the nocturnal decline in blood pressure in individuals with and without high 24-h blood pressure: the Ohasama study. J. Hypertens. 20, 2183–2189. (doi:10.1097/00004872-200211000-00017)
+Portaluppi, F. & Smolensky, M. H. 2001 Circadian rhythm and environmental determinants of blood pressure regulation in normal and hypertensive conditions. In Blood pressure monitoring in cardiovascular medicine and therapeutics (ed. W. B. White), pp. 79–118. Totowa, NJ: Humana Press.
+Quinn, B. G. 1989 Estimating the number of terms in a sinusoidal regression. J. Time Ser. Anal. 10, 71–75. (doi:10.1111/j.1467-9892.1989.tb00016.x)
+Sica, D. & Wilson, D. 2001 Sodium, potassium, the sympathetic nervous system, and the renin– angiotensin system: Impact on the circadian variability in blood pressure. In Blood pressure monitoring in cardiovascular medicine and therapeutics (ed. W. B. White), pp. 171–190. Totowa, NJ: Humana Press.
+Staessen, J. A., Beilin, L., Parati, G., Waeber, B. & White, W. 1999a Task force IV: clinical use of ambulatory blood pressure monitoring. Blood Press. Monit. 4, 319–331.
+Staessen, J. A. et al. 1999b Predicting cardiovascular risk using conventional vs ambulatory blood pressure in older patients with systolic hypertension. Systolic hypertension in Europe trial investigators. JAMA 282, 539–546. (doi:10.1001/jama.282.6.539)
+Verdecchia, P. 2000 Prognostic value of ambulatory blood pressure: current evidence and clinical implications. Hypertension 35, 844–851.
+Verdecchia et al. 1994 Ambulatory blood pressure. An independent predictor of prognosis in essential hypertension. Hypertension 24, 793–801.
+
+Phil. Trans. R. Soc. A (2009)
+

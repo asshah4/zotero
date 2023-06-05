@@ -1,0 +1,179 @@
+Proceedings of the 28th IEEE EMBS Annual International Conference New York City, USA, Aug 30-Sept 3, 2006
+
+WeD12.2
+
+Circadian and Ultradian Rhythms in Cardiac Autonomic Modulation
+
+Phyllis K. Stein, Eric J. Lundequam, Daniel Clauw, Kenneth E. Freedland, Robert M. Carney and Peter P. Domitrovich
+
+
+Abstract— Heart rate variability (HRV) patterns reflect the changing sympathetic and parasympathetic modulation of the autonomic nervous system. While overall and circadian heart rate (HR) and HRV are well characterized by traditional measures, ultradian cycles of HR and HRV are not. We have developed a method for capturing these rhythms during sleep and have now applied it to 24-hour recordings. Methods: HR/HRV for each 2-min was calculated using normal-to-normal (NN) interbeat intervals from 24-hour Holter recordings in 10 healthy subjects, aged 26±2 yrs, 5M, 5F. HR, the standard deviation of NN intervals (SDNN2), high frequency power (HF) and the LF (low frequency power)/HF ratio were plotted. A curvefitting algorithm, developed in MatLab, identified cyclic patterns of HR/HRV and extracted parameters to characterize them. Values were compared to those obtained in nighttime-only recordings in a set of 113 subjects, aged 58± 10 yrs, 65M, 48F. Results: Cyclic ultradian cycles were observed for each HR/HRV index. They had variable correspondences with each other and none could be considered surrogates. Although the number of cycles over 24 hours was greater, the mean cycle duration/number of cycles per hour was similar in both sets of recordings. Conclusions: Each HR/HRV parameter has its own rhythm, and the correspondence between these rhythms varies greatly across subjects. Although further studies are needed, it appears that there are intrinsic rhythms of autonomic modulation of HR on an scale of about 50 mins that persist during both the day and nighttimes. Quantification of ultradian patterns of HRV from 24-hour recordings is feasible and could provide new insights into autonomic physiology.
+Keywords—heart rate, heart rate variability, ultradian rhythms
+Manuscript received May 12, 2006. This work was supported in part by the NHLBI RO1HL65356 and a grant from the DOD.
+P.K. Stein is with the Washington University School of Medicine, St. Louis, MO 63108 USA and is director of the Heart Rate Variability Laboratory. (314-286-1350, fax: 314-286-1394; e-mail: pstein@im.wustl.edu).
+E.J. Lundequam is with the Washington University School of Medicine Heart Rate Variability Laboratory, St. Louis, MO 63108, USA (e-mail: eric@hrv.wustl.edu).
+K.E. Freedland is with the Washington University School of Medicine, St. Louis, MO 63108, USA. (e-mail: freedlak@bmc.wustl.edu).
+R.M. Carney is with the Washington University School of Medicine, St. Louis, MO, 63108, USA (e-mail: carneyr@bmc.wustl.edu).
+D. Clauw is with the Department of Rheumatology, University of Michigan, Ann Arbor, MI, 48109, USA. (e-mail: dclauw@med.umich.edu).
+P.P. Domitrovich is with the Washington University School of Medicine Heart Rate Variability Laboratory, St. Louis, MO 63108, USA (e-mail: ppd@hrv.wustl.edu).
+
+I. INTRODUCTION
+THE amount of time between heartbeats is controlled by
+the rate of depolarization of the sino-atrial node. This rate is controlled by a combination of sympathetic and parasympathetic inputs. For this reason, analysis of heart rate (HR) and heart rate variability (HRV) derived from intervals between normal heart beats provides insights into changing cardiac autonomic function [1]. Increased sympathetic control of the heart from one time point to the next tends to increase HRs, decreased the amount of vagally-modulated sinus arrhythmia measured as high frequency spectral power (HF), and increase the ratio between low frequency spectral power (LF) and HF (the LF/HF ratio). Conversely, a shift towards greater vagal control of the heart tends to produce decreased heart rates, increases in HF power and decreases in the low-tohigh frequency power (LF/HF) ratio. Clear circadian cycles of HR and HRV are seen in most subjects and correspond to periods of sleep and activity. The magnitude of these cycles is well captured by traditional HRV indices such as deviation of all normal-to-normal (NN) intervals. Cosinor analysis also provides a rough estimate of the magnitude of circadian rhythms [2].
+We have observed that HR and HRV fluctuate over time in a cyclic manner in most subjects. Although these cycles are especially prominent during the night time, they are seen in the daytime as well. We have developed a number of measures that quantify ultradian properties of HR/HRV cycles and would permit between-subjects comparisons. We have applied these measures during overnight polysomnography and shown that ultradian rhythms of cardiac autonomic modulation have a variable and often weak correspondence with traditional sleep stages. In the current study, we applied the methodology developed for the nighttime recordings to 24-hour recordings in young healthy subjects and compared these results to those obtained during the nighttime only. Our purpose was to explore the presence and magnitude of ultradian cycles of HRV during the entire 24-hour period.
+II. MATERIALS AND METHODS
+A. Subjects
+
+1-4244-0033-3/06/$20.00 ©2006 IEEE.
+
+429
+
+Authorized licensed use limited to: Emory University. Downloaded on July 15, 2009 at 11:55 from IEEE Xplore. Restrictions apply.
+
+Holter data were examined from 10 randomly selected healthy young subjects (5M, 5F, aged 26±2 yrs). All subjects were in normal sinus rhythm. Sleep time only data were previously obtained from 113 subjects, 65M, 48F, aged 58±10 yrs selected from a study of depression and sleep apnea in patients with known coronary artery disease. B. Extraction of Interbeat Intervals
+Holter recordings were scanned to research standards on a MARS 8000 Holter analyzer (GE Medical Systems, Milwaukee, WI). Polysomnograms are stored in European Data Format (EDF) and include one channel of ECG. ECGs were extracted from Alice 4 (Respironics, Murrysville, PA) overnight sleep studies using a custommade program written in Unix/C [3]. The ECG signal in EDF format was converted to a 2-channel RAW format that can be read by the MARS 8000 Holter scanner using software provided by the manufacturer. To generate the annotated beat-to-beat file for HRV analysis, each RAW file was loaded onto the Holter scanner as a duplicated single channel recording, and the ECG analyzed using standard research Holter analysis techniques. Specifically, careful attention was paid to accurate beat notation and to the uniformity of the detection of the onset of each sinus beat. The longest and shortest true NN intervals were identified for each recording, and intervals outside of these limits excluded from all calculations. Atrial and ventricular premature beats were also excluded. After editing, the labelled QRS data stream was transferred to a Sun Enterprise 450 server (Sun Microsystems, Palo Alto, CA) for time domain and frequency domain HRV analysis. Usable 2-min segments were required to have 80% normal-to-normal interbeat intervals for frequency domain and 50% normal-to-normal intervals for time domain HRV calculations.
+C. HRV Pattern Analysis Two-min averaged heart rates (HR), standard
+deviation of NN intervals (SDNN2), high frequency power (HF, 0.15-0.4 Hz) and the low (LF, 0.04-0.15 Hz) to high frequency power (LF/HF) ratio were calculated. These were plotted in four simultaneous windows using MatLab (The MathWorks, Matik, MA). The best-fit curve for each HR/HRV index was separately plotted over the raw data for each window using a custom filter designed around both the "filtfilt" and "filter" algorithms built into Matlab. In order to keep the ends of the filtered data from determining the start and end points of the HRV cycles, the first and last sections were filtered separately and then reattached to the original data. This reconstructed series was then filtered using the "filtfilt" algorithm thay processes the signal both forwards and backwards, using default settings. A trend line was then created using the "filtfilt" algorithm over ¼ of the length of the dataset. After the HRV cycle curves were created, the time and amplitude of the beginning, peak and end of every cycle for each HRV parameter were determined by automatic detection using trend-line crossing criteria. Pre-crossing
+
+minima, post-crossing maxima and post-peak minima were used to identify the actual start, peak and end of each cycle. This was followed by manual over-reading to add or delete peak or trough markers based on visual inspection. In order to adjust for incomplete cycles, and to permit comparisons between subjects, cycles beginning at a peak at the start of the recording and cycles ending with a peak at the end of the recording were excluded from the analysis. An example of ultradian rhythm detection is shown in Fig 1.
+D. HRV Pattern Measures For each HRV parameter, i.e., the number of cycles,
+number per hour, the average cycle peak amplitude (e.g., in beats/min for HR), the average and standard deviation of cycle lengths in seconds, the average change in amplitude from start to peak and peak to end, the slope of the line from start to peak (positive slope) and peak to trough (negative slope), and the average area under the curve were measured. Results from 24-hour analyses were compared with those obtained from the sleep time polysomnograms.
+E. Statistics Paired t-tests and correlational analysis was used to
+compare various HR/HR parameters. Software was SPSS 13.0 (SPSS, Chicago, IL).
+III. RESULTS
+Table 1 shows selected results of the 24-hour ultradian HRV analyses. Patterns similar to those shown in Fig. 1 were seen for all subjects. The average number of cycles was 15±6 for HF power, 20±3 for HR, 24±4 for the LF/HF ratio and 28±5 for SDNN2. The strongest correlations for the numbers of cycles were between SDNN2 and HF (r=0.71, p=0.002) and for SDNN2 and HR and (r=0.065, p=0.044). The remaining correlations for number of cycles and HR/HRV measures were not significant for this small number of subjects. The correlation between the amplitude of SDNN2 cycles and that of the HF cycles was also strong (r=0.73, p=0.017), but the rest of the correlations between cycle amplitudes were not significant. Cycle durations tended to be about 50 min for all measures, but the only significant correlations between cycle durations were for HF power and the LF/HF ratio (r=0.83, p=0.003). Correlations between positive and negative slopes of the ultradian cycles ranged from 0.80 for HR to 0.93 for the HRV indices in the Holter cohort.
+Table 2 shows results from the overnight polysomnograms from our previous study. Fig. 2 is an example of an analysis of an overnight sleep study in which HR cycles had a rough correspondence with wake or REM, the correspondence between ultradian cycles of HRV and sleep stages was weak. When the correlations
+
+430
+Authorized licensed use limited to: Emory University. Downloaded on July 15, 2009 at 11:55 from IEEE Xplore. Restrictions apply.
+
+between cycle amplitudes of the HR/HRV indices were explored, as in the Holter cohort, the strongest correlation (r=0.41) was between the amplitudes of SDNN2 and HF. In addition, the amplitudes of SDNN2 and HR were correlated (r=0.35), as were the amplitudes of HF and HR cycles (r=0.29), but none of the other correlations were significant for cycle amplitude. Also, as previously reported in this study [2], the correlation in cycle lengths between SDNN2 and HF was the strongest (r=0.40). Despite being drawn from a different population and despite reflecting only the nighttime period, the mean durations of the HR/HRV cycles were remarkable similar, as was the mean positive slope of the HR. Interestingly, while the correlations between mean slope up and mean slope were mostly 0.93 in the Holter cohort, they ranged from r=0.33 for HR to r=0.84 for HF power in the polysomnography group.
+III. DISCUSSION
+Results verify that there are measurable ultradian cycles of HR and HRV during wake as well as during sleep periods. The similarity in the mean cycle duration (roughly 50 min) between the two groups studied was remarkable. In this young cohort, we counted a minimum of 8 and maximum of 36 such cycles/24 hours per individual across the HR/HRV indices assessed. As can be seen in Fig. 1, these cycles are not synchronous, although relatively strong correspondences were seen for the magnitude and duration of HF power and SDNN2 cycles, suggesting a parasympathetic origin for these cycles. Also, as seen in Fig. 2, in many individuals during the nighttime, these cycles are not surrogates for sleep stages.
+Although the correlation between the magnitude of HF power, a measure of vagal control of HR and the magnitude of SDNN2, a measure of total HRV for each period was significant in both groups, it was markedly higher (r=0.73 compared r=0.41) for the younger group compared to the older one. We hypothesize that this was due to the significant prevalence of sinus arrhythmia of non-respiratory origin (erratic rhythm), a form of increased randomness in the time between heart beats, that exaggerates HF power, but does not reflect increased vagal control of heart rate [4].
+We are in the process of applying this new algorithm to other datasets, including a series of Holter recordings and overnight polysomnograms over up to 14 years in individuals who were participants in both the Cardiovascular Health Study and the Sleep Heart Health Study. Further developments in curve fitting and cycle identification and an exploration of other HRV measures, including non-linear ones, and averaging periods should provide additional insights into the utility and optimal measurement of these ultradian rhythms of HR/HRV,
+
+their underlying physiology and their potential use for comparisons between subjects.
+
+IV.
+
+CONCLUSIONS
+
+Results suggest that quantifiable ultradian rhythms of HR and HRV, not detected by conventional methods, are present during 24-hour, as well as nighttime ECG recordings. Further study will optimize measurement techniques and elucidate the significance of differences between subjects.
+REFERENCES
+[1] Stein PK and Kleiger RE. Insights from the study of heart rate variability. Annu Rev Med, vol 50, pp. 249-61, 1999.
+[2] Huikuri HV, Linnaluoto MK, Seppanen T, Airaksinen KE, Kessler KM, Takkunen JT, Myerburg RJ.Circadian rhythm of heart rate variability in survivors of cardiac arrest. Am J Cardiol. 1992;70:610-5.
+[3] Kemp B, Varri A, Rosa AC, Neilsen KD, Gade J. A simple format for exchange of digitized polygraphic recordings. Electroencephalogr Clin Neurophysiol, vol 82, pp. 391-3, 1992.
+[4] Stein PK, Hui N, Domitrovich PP … Sometimes higher heart rate variability is not better heart rate variability: insights from graphical and non-linear analyses. JCE ….2005.
+
+431
+Authorized licensed use limited to: Emory University. Downloaded on July 15, 2009 at 11:55 from IEEE Xplore. Restrictions apply.
+
+Figure 1. Ultradian rhythms of HR, SDNN2, HF and the LF/HF ratio for a typical subject. Note that rhythms tend to be of greater magnitude during the nighttime but persist during the entire recording. The sharp peak in HR during the daytime occurred during a bout of maximal exercise.
+
+Figure 2. Ultradian cycles of HR and HRV from overnight polysomnography. Darkened bars correspond to REM periods. Single darker bar reflect a wake period.
+
+Table I. Representative Ultradian HR/HR patterns measured from 24-hour Holter recordings.
+
+Number of Number of Mean Amplitude
+
+Mean
+
+Mean positive
+
+cycles
+
+cycles/hr
+
+(units)
+
+Duration
+
+slope
+
+(Range)
+
+(seconds)
+
+(units/sec)
+
+Heart Rate (bpm) SDNN2 (ms2) HF power (ms2)
+
+13-24 17-36 8-25
+
+0.85±0.14 1.17±0.22 0.63±0.25
+
+11.9±2.0 28.4±12.2 1432±1000
+
+47.5±4.2 43.3±4.8 50.0±4.7
+
+0.52±0.10 1.5±0.6 62.8±39.8
+
+LF/HF ratio
+
+15-30 0.99±0.19
+
+2.7±1.1
+
+44.3±2.4
+
+0.13±0.05
+
+Table II. Representative HR/HR pattern measured from overnight polysomnography.
+
+Number of Number of Mean Amplitude
+
+Mean
+
+cycles
+
+cycles/hr
+
+(units)
+
+Duration
+
+(Range)
+
+(seconds)
+
+Heart Rate (bpm) SDNN2 (ms2) HF power (ms2)
+
+3-12
+
+0.97±0.21
+
+8.7±3.2
+
+4-13
+
+1.11±0.24
+
+61±29
+
+3-12
+
+0.99±0.27
+
+620±1091
+
+50.2±10.4 44.9±9.0 47.5±10.7
+
+LF/HF ratio
+
+3-12
+
+1.01±0.23
+
+7.1±4.3
+
+48.2±9.5
+
+432
+
+Mean positive slope
+(units/sec)
+0.50±0.29 4.1±2.4 33.9±57.1 0.47±0.37
+
+Authorized licensed use limited to: Emory University. Downloaded on July 15, 2009 at 11:55 from IEEE Xplore. Restrictions apply.
+

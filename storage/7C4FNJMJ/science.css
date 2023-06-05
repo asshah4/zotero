@@ -1,0 +1,278 @@
+
+/* ::::: null ::::: */
+
+.nojs { display: none; }
+
+/* ::::: http://sciencedirect.nextbio.com/e/script/include.nb?type=css&name=tagCloud,elsevier&apiKey=F70C5A70-D194-4150-9F99-C8FC2266B65F ::::: */
+
+.nbApiNormalLink { font-family: 'Arial'; font-size: 9pt; color: rgb(0, 0, 0); }
+.nbApiNormalLink a { font-family: 'Arial'; font-size: 9pt; text-decoration: none; color: rgb(0, 0, 255); cursor: pointer; }
+.nbApiNormalLink a:hover { text-decoration: underline; }
+.nbApiTagCloudHeader { font-family: arial,verdana,helvetica,sans-serif; color: rgb(0, 0, 0); font-weight: bold; font-size: 8pt; vertical-align: middle; padding: 5px; }
+.nbApiTagCloud a { font-family: 'Arial'; text-decoration: none; color: rgb(0, 0, 255); cursor: pointer; }
+.nbApiTagCloud a:hover { text-decoration: underline; }
+.nbApiMapHolder { width: 715px; height: 350px; background-color: rgb(229, 227, 223); margin: 10px 10px 5px; }
+.nbApiTagCloudGroup { margin: 7px 5px 4px; padding-bottom: 4px; border-bottom: 1px solid rgb(204, 204, 204); }
+.nbApiTagCloudGroupLast { border-bottom: medium none; padding-bottom: 0pt; }
+.nbApiTagCloudGroupHead { font-size: 14px; font-weight: bold; color: rgb(102, 102, 102); text-transform: capitalize; }
+.nbApiTagCloudGroupCount { color: rgb(170, 170, 170); font-size: 9pt; }
+.nbApiTagCloudGroup table { width: 100%; font-size: 9pt; }
+.nbApiTagCloudShowLess .nbApiTagCloudMore, .nbApiTagCloudShowMore .nbApiTagCloudLess { display: none; }
+.nbApiTagCloudMoreLink img { border: 0px none; }
+.nbApiTagCloudMoreLink a { text-decoration: none; color: rgb(28, 148, 193); font-size: 8pt; text-transform: none; border: 0px none; }
+.nbApiTagCloudMoreLink a:hover { text-decoration: underline; }
+.nbApiHeader .nbApiSpacer { padding-top: 8px; }
+.nbApiHeader .nbApiSpacerNew { padding-top: 15px; }
+.nbApiH1 { font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-weight: bold; letter-spacing: -1px; margin: 0px; padding: 0px; }
+.nbApiH2 { font-family: Arial,Helvetica,sans-serif; font-size: 16px; font-weight: bold; letter-spacing: 0px; margin: 0px; padding: 0px; }
+.nbApiFinePrint { font-size: 11px; color: rgb(102, 102, 102); margin: 5px 0px 0px; padding: 0px; letter-spacing: 0px; }
+.nbApiExplain { font-size: 12px; color: rgb(102, 102, 102); margin: 5px 0px 0px; padding: 0px; letter-spacing: 0px; }
+.nbApiExplainHilite { font-size: 12px; font-weight: bold; color: rgb(0, 0, 0); margin: 5px 0px 0px; padding: 0px; letter-spacing: 0px; }
+.nbApiFoot { color: rgb(0, 0, 0); padding: 3px 15px; font-size: 9pt; }
+.nbApiClasp { text-align: left; padding: 3px 13px 1px; }
+.nbApiClasp a { color: rgb(122, 165, 68); font-size: 12px; font-weight: bold; }
+.nbApiClasp a:hover { text-decoration: none; border-bottom: 1px solid rgb(122, 165, 68); }
+.nbApiNextbioTagCloud_2 { margin-top: 5px; width: 341px; }
+.nbApiImgc, .nbApiImgo { border: medium none; margin-left: 6px; }
+.nbApiImgo { border: medium none; margin-left: 6px; background-image: url('nb_34.png@22'); background-repeat: no-repeat; height: 9px; position: relative; }
+.nbApiImgc { border: medium none; margin-left: 6px; background-image: url('nb_14.png@22'); background-repeat: no-repeat; height: 9px; position: relative; }
+.nbApiBeta { background-image: url('nb_06.png@22'); background-repeat: no-repeat; height: 18px; position: relative; margin-left: 10px; margin-bottom: 8px; }
+.nbApiBox { margin-left: 10px; }
+.nbApiBoxTop { background-image: url('nb_10.png@22'); background-repeat: no-repeat; height: 18px; overflow: hidden; }
+.nbApiBoxBody { background-image: url('nb_18.png@22'); background-repeat: repeat-y; background-position: left center; padding-bottom: 1px; }
+.nbApiEmphO { font-size: 15px; padding-right: 20px; background-image: url('nb_34.png@22'); background-repeat: no-repeat; background-position: right center; }
+.nbApiEmphC { font-size: 15px; padding-right: 20px; background-image: url('nb_14.png@22'); background-repeat: no-repeat; background-position: right center; }
+.nbApiHead { color: rgb(122, 165, 68); font-size: 12px; font-weight: bold; padding: 0px 13px 3px; }
+.nbApiFrameTop { background-image: url('nb_19.png@22'); background-repeat: no-repeat; font-size: 11px; font-family: arial,verdana,helvetica,sans-serif; height: 17px; margin: 0px 13px; padding: 4px 4px 0px; width: 305px; }
+.nbApiFrame { background-image: url('nb_25.png@22'); background-repeat: repeat-y; padding: 0px 5px; margin: 0px 13px; width: 305px; }
+.nbApiFrameBottom { background-image: url('nb_27.png@22'); background-repeat: no-repeat; height: 20px; color: rgb(0, 0, 255); font-size: 11px; text-align: right; margin: 0px 13px 10px; padding: 0px 15px 0px 5px; width: 305px; }
+.nbApiDivider { background-image: url('nb_33.png@22'); background-repeat: no-repeat; width: 329px; height: 2px; margin: 6px 0px 6px 1px; overflow: hidden; }
+.nbApiBoxBottom { background-image: url('nb_38.png@22'); background-repeat: no-repeat; }
+.nbApiTagCloudActiveImage { padding-left: 8px; background-image: url('icon_arrow_active.gif@22'); background-repeat: no-repeat; background-position: left center; margin-left: 10px; }
+.nbApiTagCloudMoreLink { padding-right: 10px; }
+.nbApiDefaultImg { background-image: url('ico.gif@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiGeneImg { background-image: url('gene.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiTissueImg { background-image: url('tissue.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiTreatmentImg { background-image: url('treatment.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiDiseaseImg { background-image: url('disease.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiBiosetImg { background-image: url('bioset.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiBiogroupImg { background-image: url('biogroup.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiNewsImg { background-image: url('news.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiAuthorImg { background-image: url('author.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiArticleImg { background-image: url('article.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiClinicTrialImg { background-image: url('clinictrial.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiStudyImg { background-image: url('study.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiSnpImg { background-image: url('snp.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiOrganismImg { background-image: url('organism.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiProfileImg { background-image: url('profile.png@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiVendorHomeImg { background-image: url('icon-vendorhome.gif@22'); background-repeat: no-repeat; width: 1px; font-size: 16px; padding-right: 20px; }
+.nbApiHelpBackground { position: absolute; top: 0px; left: 0px; z-index: 9999; background-color: rgb(102, 102, 102); opacity: 0.4; }
+.nbApiPopupBox { background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; display: none; width: 450px; z-index: 10000; border: 2px solid rgb(48, 48, 48); padding: 2px; }
+.nbApiPopupText { padding: 3px 7px 7px; font-weight: normal; font-family: arial,verdana,helvetica,sans-serif; color: rgb(0, 0, 0); font-size: 10pt; }
+.nbApiPopupTitle { font-weight: bold; font-family: arial,verdana,helvetica,sans-serif; color: rgb(0, 0, 0); font-size: 18px; }
+.nbApiCloseBox { background-image: url('delete.png@22'); background-repeat: no-repeat; width: 16px; font-size: 16px; }
+.nbApiNextbioLogoImg { background-image: url('nextbio_tiny.png@22'); background-repeat: no-repeat; width: 1px; font-size: 9px; padding-right: 95px; }
+.nbApiPoweredBy { color: rgb(141, 156, 149); font-size: 11px; font-weight: bold; padding-top: 5px; letter-spacing: 0px; }
+.nbApiSubsetIcon { background-image: url('subset.png@22'); background-repeat: no-repeat; width: 16px; height: 16px; overflow: hidden; cursor: pointer; }
+.nbApiHighlight { border-bottom: 1px dashed blue; cursor: pointer; }
+span.nbApiHighlight:hover, span.nbApiHighlightMo { background: none repeat scroll 0% 0% rgb(192, 192, 255); }
+.nbApiTagCloudGroup .nbApiHighlight { border-bottom: medium none; }
+.nbApiExPopup { background: url('nextbio_popup.png@22') no-repeat scroll 0% 0% transparent; width: 508px; height: 401px; position: absolute; display: none; z-index: 1000; font-size: 12px; font-family: Arial,Helvetica,Geneva,sans-serif; text-align: left; }
+.nbApiPopupClear { clear: both; overflow: hidden; width: 100%; height: 0pt; font-size: 0pt; }
+.nbApiExPopupInner { padding: 8px 10px 17px 4px; }
+.nbApiExPopupContainer { background: none repeat scroll 0% 0% rgb(255, 255, 255); border-left: 1px solid rgb(183, 183, 183); border-right: 1px solid rgb(183, 183, 183); height: 376px; position: relative; }
+.nbApiExPopupTitle { height: 28px; line-height: 28px; overflow: hidden; color: rgb(47, 47, 47); padding: 0pt 10px; }
+.nbApiExPopupTitle strong { font-size: 17px; color: rgb(238, 48, 36); padding-right: 5px; }
+.nbApiExPopupClose { width: 15px; height: 15px; position: absolute; top: 10px; right: 17px; z-index: 1001; background: url('nextbio_popup.png@22') no-repeat scroll -4px -8px rgb(135, 133, 133); cursor: pointer; overflow: hidden; }
+.nbApiExPopup a, .nbApiExPopup a:hover { text-decoration: none; color: rgb(15, 103, 134); }
+.nbApiExPopupReport, .nbApiExPopupDisableHl { font-style: italic; height: 16px; line-height: 12px; overflow: hidden; font-size: 11px; margin: 0pt 0pt 5px; padding: 0pt 10px; }
+.nbApiExPopupReport a, .nbApiExPopupReport a:hover, .nbApiExPopupDisableHl a, .nbApiExPopupDisableHl a:hover { text-decoration: underline ! important; color: rgb(108, 108, 108) ! important; }
+.nbApiExPopupTabs { border-bottom: 1px solid rgb(204, 204, 204); font-size: 11px; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 0px 10px; }
+.nbApiExPopupTabs ul { height: 38px; width: 100%; margin: 0pt; padding: 0pt; }
+.nbApiExPopupTabs ul li { float: left; list-style: none outside none; cursor: pointer; margin: 0pt -1px 0pt 0pt; padding: 0pt; }
+.nbApiExPopupTabs ul li a { float: left; height: 38px; background: url('nextbio_popup.png@22') no-repeat scroll 100% -412px transparent; overflow: hidden; cursor: pointer; padding: 0pt 16px 0pt 0pt; }
+.nbApiExPopupTabs ul li a, .nbApiExPopupTabs ul li a:hover { text-decoration: none; color: rgb(15, 103, 134); outline: medium none; }
+.nbApiExPopupTabs ul li a span { background: url('nextbio_popup.png@22') no-repeat scroll 0pt -412px transparent; float: left; cursor: pointer; height: 38px; padding: 6px 0pt 0pt 16px; }
+.nbApiExPopupTabs ul li a.selected { height: 39px; background: url('nextbio_popup.png@22') no-repeat scroll 100% -450px rgb(225, 225, 225); position: relative; margin: 0pt 0pt -1px; }
+.nbApiExPopupTabs ul li a.selected, .nbApiExPopupTabs ul li a.selected:hover { color: rgb(0, 0, 0); }
+.nbApiExPopupTabs ul li a.selected span { background: url('nextbio_popup.png@22') no-repeat scroll 0pt -450px transparent; height: 39px; }
+.nbApiExPopupContentWrap { background: none repeat scroll 0% 0% rgb(225, 225, 225); overflow: hidden; }
+.nbApiExPopupContent { background: none repeat scroll 0% 0% rgb(225, 225, 225); overflow: hidden; padding: 0pt 10px; }
+.nbApiExPopupMatchesTitle { font-size: 11px; color: rgb(0, 0, 0); height: 30px; overflow: hidden; line-height: 35px; }
+.nbApiExPopupSubTabs { font-size: 11px; }
+.nbApiExPopupSubTabs ul { height: 23px; margin: 0pt; padding: 0pt; }
+.nbApiExPopupSubTabs ul li { float: left; list-style: none outside none; cursor: pointer; margin: 0pt -1px 0pt 0pt; padding: 0pt; }
+.nbApiExPopupSubTabs ul li a { float: left; outline: medium none; height: 23px; overflow: hidden; cursor: pointer; padding: 0pt 12px 0pt 0pt; }
+.nbApiExPopupSubTabs ul li a span { float: left; cursor: pointer; height: 23px; padding: 6px 0pt 0pt 12px; }
+.nbApiExPopupSubTabs ul li a.selected { height: 24px; background: url('nextbio_popup.png@22') no-repeat scroll 100% -489px rgb(225, 225, 225); position: relative; margin: 0pt 0pt -1px; }
+.nbApiExPopupSubTabs ul li a.selected, .nbApiExPopupSubTabs ul li a.selected:hover { color: rgb(0, 0, 0); }
+.nbApiExPopupSubTabs ul li a.selected span { background: url('nextbio_popup.png@22') no-repeat scroll 0pt -489px transparent; height: 24px; }
+.nbApiExPopupRelatedText { overflow: auto; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-left: 1px solid rgb(204, 204, 204); border-right: 1px solid rgb(204, 204, 204); height: 181px; }
+.nbApiExPopupSummaryText { overflow: auto; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-left: 1px solid rgb(204, 204, 204); border-right: 1px solid rgb(204, 204, 204); height: 224px; }
+.nbApiExPopupTextWrap { border-bottom: 1px solid rgb(204, 204, 204); border-top: 1px solid rgb(204, 204, 204); margin: 10px 0pt 0pt; }
+.nbApiExPopupRelatedTextWrap { border-bottom: 1px solid rgb(204, 204, 204); border-top: 1px solid rgb(204, 204, 204); }
+.nbApiExPopupExperimText { background: none repeat scroll 0% 0% rgb(255, 255, 255); border-left: 1px solid rgb(204, 204, 204); border-right: 1px solid rgb(204, 204, 204); height: 181px; padding: 0pt 0pt 0pt 10px; }
+.nbApiExPopup p { line-height: normal; margin: 0pt; }
+.nbApiExPopupHR { height: 10px; overflow: hidden; font-size: 0pt; border-bottom: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 10px; }
+.nbApiExPopupNav { float: left; height: 44px; margin: 0pt; padding: 0pt; }
+.nbApiExPopupNav li { list-style: none outside none; float: left; margin: 0pt; padding: 0pt; }
+.nbApiExPopupNav li a { float: left; text-indent: -9999em; width: 44px; height: 44px; background-color: rgb(203, 203, 203); background-image: url('nextbio_popup.png@22'); position: relative; outline: medium none; }
+.nbApiExPopupNav li a span { display: none; position: absolute; background: none repeat scroll 0% 0% rgb(255, 252, 168); border: 1px solid rgb(205, 205, 205); color: rgb(102, 101, 67); font-size: 10px; text-indent: 0pt; white-space: nowrap; left: 0pt; bottom: 43px; cursor: default; z-index: 1003; padding: 5px; }
+.nbApiExPopupNav li a:hover span { display: block; }
+.nbApiExPopupNav li a span strong { display: block; font-size: 11px; }
+.nbApiExPopupNav li a span em { position: absolute; display: block; bottom: -6px; left: 50%; background: url('nextbio_popup.png@22') no-repeat scroll -169px -46px rgb(255, 252, 168); height: 6px; width: 11px; overflow: hidden; margin: 0pt 0pt 0pt -6px; }
+.nbApiExPopupNav li a.nbApiExPopupNav1 { background-position: -4px -29px; }
+.nbApiExPopupNav li a.nbApiExPopupNav2 { background-position: -48px -29px; }
+.nbApiExPopupNav li a.nbApiExPopupNav3 { background-position: -92px -29px; width: 45px; }
+.nbApiExPopupNav li a.nbApiExPopupNav1 span { left: -28px; }
+.nbApiExPopupNav li a.nbApiExPopupNav2 span { left: -18px; }
+.nbApiExPopupNav li a.nbApiExPopupNav3 span { left: -14px; }
+.nbApiExPopupStyledButton { float: right; height: 24px; cursor: pointer; line-height: 22px; font-size: 10px; background: url('nextbio_popup.png@22') no-repeat scroll 100% -513px rgb(223, 223, 223); margin: 8px 0pt 4px; padding: 0pt 11px 0pt 0pt; }
+.nbApiExPopupStyledButton, .nbApiExPopupStyledButton:hover { text-decoration: none; color: rgb(15, 103, 134); outline: medium none; }
+.nbApiExPopupStyledButton span { float: left; height: 24px; background: url('nextbio_popup.png@22') no-repeat scroll 0pt -513px transparent; padding: 0pt 0pt 0pt 18px; }
+.nbApiExPopupFooter { background: none repeat scroll 0% 0% rgb(225, 225, 225); height: 52px; top: 324px; left: 0pt; padding: 0pt 10px; }
+.nbApiExPopupButtons { overflow: hidden; height: 52px; padding: 0pt 10px 0pt 0pt; }
+.nbApiExPopupCopyright { position: absolute; right: 22px; bottom: 21px; font-size: 11px; }
+.nbApiExPopupCopyright, .nbApiExPopupCopyright a { color: rgb(122, 122, 122); }
+.nbApiExPopupCopyright a { text-decoration: none; }
+.nbApiExPopupCopyright a:hover { color: red; text-decoration: none; }
+.nbApiExPopupArticles { margin: 0pt; padding: 0pt 10px; }
+.nbApiExPopupArticles li { border-bottom: 1px dotted rgb(204, 204, 204); list-style: none outside none; margin: 0pt; padding: 8px 0pt; }
+.nbApiExPopupArticles li h5 { font-weight: 400; font-size: 12px; margin: 0pt 0pt 3px; padding: 0pt; }
+.nbApiExPopupArticles li p { font-size: 11px; margin: 0pt; }
+.nbApiExPopupArticles li p a, .nbApiExPopupArticles li p a:hover { color: rgb(78, 82, 239); }
+.nbApiExPopupArticles li cite { display: block; font-style: normal; font-weight: 700; color: rgb(84, 181, 83); font-size: 11px; margin: 0pt; }
+.nbApiExPopupArticles li cite a, .nbApiExPopupArticles li cite a:hover { color: rgb(84, 181, 83); }
+.nbApiExPopupArticles li cite small { font-weight: 400; color: rgb(0, 0, 0); }
+.nbApiExPopupInfoList { font-size: 11px; margin: 0pt; padding: 0pt; }
+.nbApiExPopupInfoList dt { float: left; width: 70px; font-weight: 400; color: rgb(127, 127, 127); margin: 0pt -70px 2px 0pt; }
+.nbApiExPopupInfoList dd { margin: 0pt 0pt 1px 70px; }
+.nbApiExPopupInfoList a, .nbApiExPopupInfoList a:hover { color: rgb(78, 82, 239); }
+.nbApiExPopupExperimTable { width: 100%; font-size: 11px; text-align: left; }
+.nbApiExPopupExperimTable th { font-weight: 400; font-style: italic; color: rgb(102, 102, 102); border-bottom: 2px solid rgb(204, 204, 204); height: 22px; vertical-align: middle; }
+.nbApiExPopupExperimTable td { border-bottom: 1px solid rgb(229, 229, 229); padding: 3px 0pt; }
+.nbApiExPopupExperimTable td a, .nbApiExPopupExperimTable td a:hover { color: rgb(78, 82, 239); }
+.nbApiExPopupExperimTable .First { width: 314px; }
+.nbApiExPopupExperimTextIn { overflow: auto; height: 159px; }
+.nbApiExPopupViewAll { font-size: 10px; padding: 12px 0pt; }
+.nbApiExPopupViewAll a { background: url('nextbio_popup.png@22') no-repeat scroll -4px -76px transparent; padding: 0pt 0pt 0pt 10px; }
+.nbApiExPopupClinicalTrials { margin: 0pt; padding: 0pt 10px; }
+.nbApiExPopupClinicalTrials li { border-bottom: 1px dotted rgb(204, 204, 204); list-style: none outside none; margin: 0pt; padding: 8px 0pt; }
+.nbApiExPopupClinicalTrials li h5 { font-weight: 400; font-size: 12px; margin: 0pt 0pt 3px; padding: 0pt; }
+.nbApiExPopupClinicalTrials li h5 small { color: rgb(102, 102, 102); display: block; }
+.nbApiExPopupClinicalTrials .ItemTable { color: rgb(76, 76, 76); font-size: 12px; width: 100%; margin: 0pt; }
+.nbApiExPopupClinicalTrials .ItemTable td { vertical-align: top; font-weight: 400; font-size: 11px; border: medium none; padding: 2px 10px 0pt 0pt; }
+.nbApiExPopupClinicalTrials .ItemTable td.Name { color: rgb(127, 127, 127); }
+.nbApiExPopupClinicalTrials .ItemTable td.Sponsor { color: rgb(152, 211, 152); }
+.nbApiExPopupGreen, .nbApiExPopupGreen:hover { color: rgb(0, 177, 57) ! important; }
+.nbApiExPopupRed, .nbApiExPopupRed:hover { color: red ! important; }
+.nbApiExPopupLegendIcon { width: 15px; height: 15px; overflow: hidden; display: inline-block; background: url('nextbio_popup.png@22') no-repeat scroll -19px -8px rgb(204, 204, 204); cursor: pointer; position: relative; margin: -3px 2px; }
+.nbApiExPopupLegend { background: none repeat scroll 0% 0% rgb(250, 250, 250); position: absolute; top: 141px; right: 11px; height: 182px; width: 319px; border-left: 1px solid rgb(204, 204, 204); display: none; z-index: 1002; font-size: 11px; }
+.nbApiExPopupLegendInner { border-top: 1px solid rgb(204, 204, 204); padding: 8px 13px; }
+.nbApiExPopupLegendClose { color: rgb(242, 100, 91); position: absolute; top: 8px; right: 10px; cursor: pointer; }
+.nbApiExPopupLegend h4 { font-weight: 400; font-size: 11px; color: rgb(0, 0, 0); margin: 0pt 0pt 10px; padding: 0pt; }
+.nbApiExPopupLegendList { margin: 0pt; padding: 0pt; }
+.nbApiExPopupLegendListLeft { float: left; width: 150px; margin: 0pt -150px 0pt 0pt; }
+.nbApiExPopupLegendListRight { margin: 0pt 0pt 0pt 150px; }
+.nbApiExPopupLegendList li { list-style: none outside none; margin: 0pt 0pt 4px; }
+.nbApiExPopupLegendList li img { vertical-align: middle; margin: 0pt 3px 0pt 0pt; }
+* html .nbApiExPopup {  }
+.nbApiExPopupContentWrap { overflow: hidden; }
+.nbApiExPopupContent { overflow: hidden; }
+.nbApiExPopupTabs { height: 25px; overflow: hidden; }
+.nbApiExPopupTabs { list-style: none outside none; cursor: pointer; margin: 0pt -1px 0pt 0pt; padding: 0pt 0pt 0pt 10px; }
+.nbApiExPopupTabs a { float: left; height: 25px; background: url('nextbio_popup.png@22') no-repeat scroll 100% -412px transparent; overflow: hidden; cursor: pointer; padding: 0pt 10px 0pt 0pt; }
+.nbApiExPopupTabs a, .nbApiExPopupTabs a:hover { text-decoration: none; color: rgb(15, 103, 134); outline: medium none; }
+.nbApiExPopupTabs a span { background: url('nextbio_popup.png@22') no-repeat scroll 0pt -412px transparent; float: left; cursor: pointer; height: 25px; padding: 6px 0pt 0pt 10px; }
+.nbApiExPopupTabs a.nbApiExSelectedTab { height: 26px; background: url('nextbio_popup.png@22') no-repeat scroll 100% -450px rgb(225, 225, 225); position: relative; margin: 0pt 0pt -1px; }
+.nbApiExPopupTabs a.nbApiExSelectedTab { color: rgb(0, 0, 0); }
+.nbApiExPopupTabs a.nbApiExSelectedTab span { background: url('nextbio_popup.png@22') no-repeat scroll 0pt -450px transparent; height: 26px; }
+.nbApiExPopupSubTabs { height: 23px; background: none repeat scroll 0% 0% rgb(225, 225, 225); }
+.nbApiExPopupSubTabs { float: left; list-style: none outside none; cursor: pointer; margin: 0pt -1px 0pt 0pt; padding: 0pt 0pt 0pt 10px; }
+.nbApiExPopupSubTabs a { float: left; outline: medium none; height: 23px; overflow: hidden; cursor: pointer; padding: 0pt 12px 0pt 0pt; }
+.nbApiExPopupSubTabs a span { float: left; cursor: pointer; height: 23px; padding: 6px 0pt 0pt 12px; }
+.nbApiExPopupSubTabs a.nbApiExSelectedSubTab { height: 24px; background: url('nextbio_popup.png@22') no-repeat scroll 100% -489px rgb(225, 225, 225); position: relative; margin: 0pt 0pt -1px; }
+.nbApiExPopupSubTabs a.nbApiExSelectedSubTab { color: rgb(0, 0, 0); }
+.nbApiExPopupSubTabs a.nbApiExSelectedSubTab span { background: url('nextbio_popup.png@22') no-repeat scroll 0pt -489px transparent; height: 24px; }
+.nbApiExPopupContent { clear: both; }
+.nbApiExPopupTextCont { clear: both; width: 460px; height: 212px; background: none repeat scroll 0% 0% rgb(255, 255, 255); overflow: auto; position: relative; }
+.nbApiExPopupText { clear: both; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 5px; position: relative; }
+.nbApiExPopupTextNoSubTabs { clear: both; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 5px; position: relative; }
+.nbApiExPopupTabs a.nbApiExTab { border-bottom: 1px solid rgb(204, 204, 204); }
+.nbApiExPopupTextInner { padding: 0px; }
+.nbApiExPopupTextInner div { position: relative; }
+.nbApiExPopupTextInner img { border: medium none; }
+.nbApiExPopupInfoList dt { position: relative; float: left; width: 170px; font-weight: 400; color: rgb(127, 127, 127); margin: 0pt -170px 2px 0pt; }
+.nbApiExPopupInfoList dd { margin: 0pt 0pt 1px 170px; }
+.nbApiExPopupInfoList { font-size: 12px; }
+.nbApiExPopupTextCont p { font-size: 12px; }
+.nbApiResultsList { font-size: 10px; color: rgb(0, 0, 0); padding: 0pt 10px; }
+.nbApiResultsList .nbApiResult .nbApiAuthors a { color: rgb(0, 118, 192); }
+.nbApiExPopupFooter { background: none repeat scroll 0% 0% rgb(225, 225, 225); height: auto; top: 324px; left: 0pt; padding: 0pt 10px; }
+.nbApiExPopupDetailedButton { height: 36px; background: none repeat scroll 0% 0% rgb(225, 225, 225); padding-top: 5px; }
+.nbApiExPopupCopyright { position: absolute; right: 25px; bottom: 17px; font-size: 11px; }
+.nbApiExPopupCopyright span.nbApiExPopupNBLogo { background: url('nextbio_logo.png@22') no-repeat scroll 0pt 50% transparent; height: 14px; width: 78px; overflow: hidden; }
+.nbApiExPopupCopyrightTop { right: 15px; top: 40px; bottom: auto; }
+.nbApiExPopupCopyrightTop span.nbApiExPopupNBLogo { background: url('nextbio_logo_w.png@22') no-repeat scroll 0pt 50% transparent; height: 14px; width: 78px; }
+.nbApiExPopupReport { position: absolute; left: 20px; bottom: 17px; margin: 0pt; padding: 0pt; }
+.nbApiExPopupDisableHl { position: absolute; left: 20px; bottom: 37px; margin: 0pt; padding: 0pt; }
+.nbApiExPopupMatchesTitle { width: 100%; font-size: 12px; color: rgb(0, 0, 0); height: 30px; overflow: hidden; line-height: 35px; position: relative; white-space: nowrap; }
+.nbApiExPopupContainer { background: none repeat scroll 0% 0% rgb(225, 225, 225); }
+.nbApiExPopupTitle { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.nbApiExPopupBarEditBox { padding: 3px; height: 22px; font-size: 11px; }
+.nbApiExPopupButton, a.nbApiExPopupButton { cursor: pointer; font-size: 11px; background: url('button-right.png@22') no-repeat scroll right center transparent; height: 24px; padding: 5px 5px 5px 0px; }
+.nbApiExPopupButton, a.nbApiExPopupButton:hover { text-decoration: none; color: rgb(15, 103, 134); outline: medium none; }
+.nbApiExPopupButton span { background: url('button-left.png@22') no-repeat scroll left center transparent; padding: 5px 11px 5px 18px; height: 24px; }
+.nbApiExPopupDefaultButton, a.nbApiExPopupDefaultButton { cursor: pointer; font-size: 11px; background: url('button-right.png@22') no-repeat scroll right center transparent; height: 24px; padding: 5px 5px 5px 0px; }
+.nbApiExPopupDefaultButton, a.nbApiExPopupDefaultButton:hover { text-decoration: none; color: rgb(15, 103, 134); outline: medium none; }
+.nbApiExPopupDefaultButton span { background: url('button-left.png@22') no-repeat scroll left center transparent; padding: 5px 11px 5px 18px; height: 24px; }
+.nbApiExPopupStyledButton { margin-top: 0px; }
+.nbApiExPopupExperimTable { font-size: 12px; }
+.nbApiExPopupContent .nbApiTabContent { padding: 5px; }
+.nbApiExPopupContent .AnnotationTitle { font-weight: bold; }
+.nbApiExPopupContent .SectionText { color: rgb(0, 0, 0); font-size: 9pt; font-weight: normal; padding-top: 10px; }
+.nbApiExPopupContent tr.AnnotationTitle td { padding-right: 10px; font-size: 9pt; }
+.nbApiExPopupContent tr.AnnotationText td { padding-right: 10px; padding-top: 5px; padding-bottom: 15px; vertical-align: top; font-size: 9pt; }
+.nbApiResultsList { font-size: 10px; color: rgb(0, 0, 0); }
+.nbApiResultsList .nbApiResult { font-size: 13px; }
+.nbApiResultsList .nbApiResult a { cursor: pointer; text-decoration: none; }
+.nbApiResultsList a:hover { text-decoration: underline; }
+.nbApiResultsList .nbApiResult .nbApiTitle a { font-size: 13px; color: rgb(0, 0, 255); }
+.nbApiResultsList div.nbApiResult { padding-bottom: 5px; padding-top: 5px; border-bottom: 1px solid rgb(204, 204, 204); }
+.nbApiResultsList .nbApiResult .nbApiSubtitle { font-size: 11px; }
+.nbApiResultsList .nbApiResult .nbApiAuthors { font-size: 12px; }
+.nbApiResultsList .nbApiResult .nbApiAuthors a { color: rgb(0, 64, 192); }
+.nbApiResultsList .nbApiResult .nbApiSource { font-size: 12px; color: rgb(0, 144, 32); }
+.nbApiMatchingSentences { margin: 10px; }
+.nbApiMatchingSentences li { margin-bottom: 4px; }
+.nbApiMatchingSentences td { font-size: 12px; vertical-align: top; margin-bottom: 10px; }
+.nbApiMatchingSentences div.nbApiExpand { background: url('expand.png@22') no-repeat scroll center top transparent; width: 11px; height: 14px; padding: 0px; cursor: pointer; overflow: hidden; }
+.nbApiMatchingSentences div.nbApiCollapse { background: url('collapse.png@22') no-repeat scroll center top transparent; width: 11px; height: 14px; padding: 0px; cursor: pointer; overflow: hidden; }
+.nbApiMatchingSentences div.nbApiBlackBullet { background: url('blackbullet.png@22') no-repeat scroll center top transparent; width: 11px; height: 14px; padding: 0px; overflow: hidden; }
+.nbApiMatchingSentences .NextbioSentenceHighlight { background-color: rgb(251, 250, 189); }
+.nbApiExS1 a { font-size: 11px ! important; padding-right: 10px; }
+.nbApiExS2 a { font-size: 12px ! important; padding-right: 10px; }
+.nbApiExS3 a { font-size: 14px ! important; padding-right: 10px; }
+.nbApiExS4 a { font-size: 16px ! important; padding-right: 10px; }
+.nbApiExS5 a { font-size: 19px ! important; padding-right: 10px; }
+.nbApiExS6 a { font-size: 22px ! important; padding-right: 10px; }
+.nbApiExS7 a { font-size: 28px ! important; padding-right: 10px; }
+p.nbApiPreInfo { font-size: 0.85em; color: rgb(108, 108, 108); }
+p.nbApiPreInfo img { vertical-align: middle; }
+p.nbApiPreInfo { vertical-align: bottom; }
+.nbApiResult p.nbApiPreInfo { clear: both; }
+.nbApiResultsList .nbApiResult p { font-size: 12px; }
+.nbApiLoading { background: url('busy.gif@22') no-repeat scroll 20px 20px transparent; padding: 20px 20px 20px 170px; }
+.nbApiHeader { padding: 0pt 14px 0px 12px; height: 60px; width: 336px; }
+.nbApiHeaderBack { background-image: url('nb_header.png@22'); background-repeat: no-repeat; }
+.nbApiHeaderNarrowBack { background-image: url('nb_header_narrow.png@22'); background-repeat: no-repeat; }
+.nbApiHeaderNewBack { background-image: url('nb_header_new.png@22'); background-repeat: no-repeat; }
+.nbApiHeaderNewNarrowBack { background-image: url('nb_header_narrow_new.png@22'); background-repeat: no-repeat; }
+.nbApiContainer { background-image: url('nb_bg_container.png@22'); background-repeat: repeat-y; width: 336px; padding: 10px 14px 2px 12px; }
+.nbApiContainerNarrow { background-image: url('nb_bg_container_narrow.png@22'); background-repeat: repeat-y; width: 188px; padding: 10px 14px 2px 12px; }
+.nbApiBottom { background-image: url('nb_bottom_grey.png@22'); background-repeat: no-repeat; margin: 0px; padding: 0px; width: 336px; height: 25px; position: relative; top: 0pt; }
+.nbApiBottomNarrow { background-image: url('nb_bottom_narrow_grey.png@22'); background-repeat: no-repeat; margin: 0px; padding: 0px; width: 208px; height: 25px; position: relative; top: 0pt; }
+.TagCloudControlsContainer { display: none; }
+.nbApiTagCloudMoreLink { float: right; }
+.nbApiSpacer { width: 316px; }
+.TagCloudControlsContainer { white-space: nowrap; }

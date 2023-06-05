@@ -1,0 +1,546 @@
+Physica A 311 (2002) 260 – 274
+
+www.elsevier.com/locate/physa
+
+Description of complex time series by multipoles
+M. Lewkowicza; ∗, J. Levitana;b, N. Puzanovc, N. Shnerba, K. Saermarkb
+aDepartment of Physics, College of Judea and Samaria, Ariel 44837, Israel bDepartment of Physics, The Technical University of Denmark, DK 2800 Lyngby, Denmark
+cThe Technological Incubator, Ariel 44837, Israel Received 11 February 2002
+Abstract
+We present a new method to describe time series with a highly complex time evolution. The time series is projected onto a two-dimensional phase–space plot which is quantiÿed in terms of a multipole expansion where every data point is assigned a unit mass. The multipoles provide an e cient characterization of the original time series. ⃝c 2002 Elsevier Science B.V. All rights reserved.
+PACS: 87.10.+e; 87.80.Tq; 05.45.Tp; 05.45.−a
+Keywords: Time series analysis; Non-stationary time series; Heart rate variability
+1. Introduction
+Up to now, two di erent measures of HRV analysis have been applied in the medical research: (a) Scale-dependent measures as SDNN (the standard deviation of the beat-to-beat interval time series); the standard deviation of the multiresolution wavelet transform as used by Turner et al. [1]; the standard deviation of the detrended time series as deÿned by Ashkenazy et al. [2], and (b) scale-independent measures (as the scaling exponent of the detrended uctuations (DFA) as introduced by Peng et al. [3]).
+Both methods have shown limited applicability individually [4–6], but rather a combination of both is necessary [7].
+In clinical medicine, the dynamics of the beat-to-beat (RR) time series is commonly represented by a phase–space (or recurrence) plot, where each R–R interval is plotted against the previous one. The classiÿcation of the phase–space plots is traditionally
+∗ Corresponding author. Fax: +972-3-9066161. E-mail address: lewkow@ycariel.yosh.ac.il (M. Lewkowicz).
+0378-4371/02/$ - see front matter ⃝c 2002 Elsevier Science B.V. All rights reserved. PII: S 0 3 7 8 - 4 3 7 1 ( 0 2 ) 0 0 8 3 1 - 2
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+261
+
+performed by visual inspection and semi-quantitative analysis of the various measures describing the features of the plot, as the length or width [8–10]. But, as pointed out by Malik [11], this approach ignores the varying density of points leading to similar plots due to hearts with very di erent dynamics.
+In this article, we present a new way to investigate phase–space plots from complex time series. In our analysis we calculate measures and parameters, which describe the features of the plot. The advantages of the method will become evident when applying it to well-known dynamical systems. By applying the method to the DIAMOND study [12] we shall demonstrate that these measures and parameters have more prognostic power than previous suggested risk markers.
+
+2. The multipoles
+
+We interpret the two-dimensional phase–space plot as a two-dimensional body where each data point is assigned a unit mass. The distribution of points will be expressed by the various moments known from (gravitational) potential theory.
+The monopole M represents the total mass, i.e., the number of data points. The gravitational dipole moment vanishes by choosing the origin of the coordinate system in the centre of mass. As the quadrupole tensor is traceless, we may restrict ourselves to the following form:
+
+Qij =
+
+Qxx 0 0 Qyy
+
+(1)
+
+and Qzz = −(Qxx + Qyy), where Qxx = (2x2 − y2) and Qyy = (2y2 − x2); the sums are over all the data points.
+Here, the x and y coordinates of the data points are measured in the principal coordinate system, where the o -diagonal terms of the Qij tensor vanish. These axis are positioned in praxis for beat-to-beat time series along and vertical to the diagonal of the original phase–space plot.
+Similarly, the octupole moments (with z = 0) in the principal axis coordinate are given by
+
+Txxx = (6x3 − 9x y2) ;
+
+Tyyy = (6y3 − 9x2y ) ;
+
+Txxy = (36x2y − 9y3) ;
+
+Txyy = (36x2y − 9y3) ;
+
+Txzz = (−9x y2 − 9x3) ;
+
+262
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+Tyzz = (−9x2y − 9y3) :
+
+(2)
+
+Since Tyzz + Txxy = −3Tyyy and Txyy + Txzz = −3Txxx, there are only four independent octupole measures.
+Finally, the hexadecapole moments (with z = 0) in the principal axis coordinate system are
+Hxxxx = (24x4 − 72x2y2 + 9y4) ;
+
+Hxxxy = (240x3y − 180x y3) ;
+
+Hxxyy = (−72x4 + 486x2y2 − 72y4);
+
+Hxyyy = (−180x3y + 240x y3) ;
+
+Hyyyy = (9x4 − 72x2y2 + 24y4) ;
+
+Hxxzz = (−72x4 − 72x2y2 + 9y4) ;
+
+Hyyzz = (18x4 − 54x2y2 − 72y4) ;
+
+Hxyzz = (−180x3y − 180x y3)
+
+(3)
+
+and since Hxxxy + Hxyyy = −1=3 Hxyzz and Hxxzz + Hyyzz = −6Hzzzz, there are only six independent hexadecapole measures.
+For the purpose of elucidating these multipoles, we demonstrate their characteristics on distributions D(x; y) that are reminiscent of actual density distributions from ECG recordings.
+In Fig. 1, we show the distributions along the x and y axis, respectively, for a typical phase–space plot of a 24-h Holter recording, where all the points were projected along the x- or y-axis, respectively. To a ÿrst approximation they can be described by Gaussian distributions, with x and y as standard deviations along the x- and y-axis, respectively. Therefore, we consider as a ÿrst example the density distribution as a product of two Gaussians.
+The quadrupole measures are then given by
+
+Qxx =
+
+(2x2 − y2)D(x; y) d x dy = 2
+
+2 x
+
+−
+
+2 y
+
+;
+
+Qyy =
+
+(2y2 − x2)D(x; y) d x dy = 2
+
+2 y
+
+−
+
+2 x
+
+:
+
+(4)
+
+Whereas in three dimensions a homogenous sphere has only zero quadrupole moments, its projection on the plane has a Gaussian mass distribution along the radial direction.
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+263
+
+Fig. 1. The projected distributions along the x (lower curve) and y-axis (upper curve), respectively, for a typical phase–space plot of a 24-h Holter recording from a healthy individual.
+
+If the projection is on the x–y plane one has a phase–space plot with a circular shape
+
+where the density of points decreases with increasing distance from the origin with
+
+x = y. In this case both principal quadrupole moments are positive. √ A vanishing quadrupole moment, for example Qyy, is obtained for x = 2 y, which
+
+deÿnes
+
+a
+
+reference
+
+ellipse
+
+in two
+
+dimensions; here Qxx = 3
+
+2 y
+
+.
+
+Varying the
+
+x= y ratio,
+
+one o√btains more or less elongated ellipses along the x-axis or y-axis, depending on x= y 2.
+
+For a symmetrical distribution as the Gaussian distribution the octupole moments
+
+vanish. We choose as a model distribution along the x-axis the normalized double
+
+exponential distributions
+
+E(x)
+
+=
+
+exp{−
+
+xx − ( x)
+
+e−x }
+
+(5a)
+
+and
+
+∃(x) =
+
+exp{
+
+xx − ex} ( x)
+
+;
+
+(5b)
+
+where the parameter x can obtain positive values and ( x) is the Gamma function. Similar distribution can be deÿned along the y-axis. A few curves with various ’s
+are shown in Fig. 2. These distributions are non-symmetric; the degree of the deviation from symmetry is deÿned by the skewness , which is deÿned for any distribution (x) by
+
+=
+
+∞ −∞
+
+x3
+
+(x) d x
+3
+
+;
+
+(6)
+
+x
+
+264
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+Fig. 2. The double exponential distributions: (a) E(x), (b) ∃(x) for = 1; 2; 3.
+
+with x being the standard deviation of the distribution. For E(x) the skewness is positive, while for ∃(x) it is negative.
+The quadrupole moments with these distributions are still as in Eqs. (4), where the
+variance is now a function of :
+
+2 = (1)( ) :
+
+(7)
+
+(1)( ) is the Trigamma function; in general, the Polygamma functions are deÿned as
+
+(n)(
+
+)
+
+=
+
+dn+1 d n+1
+
+ln
+
+( ):
+
+(8)
+
+The octupole moments are given by
+
+Txxx = ∓6 (2)( x) ; Tyyy = ∓6 (2) y ;
+
+Txyy = ±9 (2) ( x) ;
+
+Txxy = ±9 (2) y :
+
+(9)
+
+The upper sign applies for E(x) and the lower for ∃(x).
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+265
+
+These moments can be also expressed in terms of the skewness:
+
+Txxx = 6 x
+
+3 x
+
+;
+
+Tyyy = 6 y
+
+3 y
+
+;
+
+Txyy = −9 x
+
+3 x
+
+;
+
+Txxy = −9 y
+
+3 y
+
+:
+
+(10)
+
+The hexadecapole moments are rather cumbersome to interpret, hence we choose to employ the kurtosis [13], which is related to the hexadecapole moments:
+
+Äx =
+
+∞ −∞
+
+x4
+
+4
+
+(x)
+
+dx
+
+−
+
+3
+
+:
+
+(11)
+
+x
+
+The kurtosis is negative for a at topped distribution, vanishes for a Gaussian distribution and is positive for a sharp peaked distribution. For both double exponential distributions it is given by
+
+Ä= [
+
+(3)( (1)(
+
+) )]2
+
+:
+
+(12)
+
+3. Application to a non-linear system
+
+We shall in the following consider a simple non-linear system for ordinary di erential equations with time varying attractor dimension. Such a system was treated by Saermark et al. [14].
+The model is deÿned by the equations
+
+dx dt
+
+=
+
+(−y − z) + ÿ
+
+(y − y0 − x + x0) ;
+
+dy dt
+
+=
+
+(x + ay) + ÿ((x0 − x)(z − z0) + r(x − x0) + y0 − y) ;
+
+dz dt
+
+=
+
+(b + z(x − c)) + ÿ((x − x0)(y − y0) − B(z − z0)) :
+
+(13)
+
+The system reduces to the well-known Rossler system for = 1 and ÿ = 0 and to the Lorenz system for = 0 and ÿ = 1. In Ref. [14] we conÿned the examination of this system to the unit circle 2 + ÿ2 = 1 and investigated more closely the time evolution for the system when is ÿxed, =0:037005. The parameters for system (13) employed in Ref. [14] are given in Table 1.
+In Fig. 3 (taken from Ref. [14]), we display the trajectory for three di erent intervals. For the ÿrst 60 000 data points the trajectory is a limit cycle. A time local dimension was calculated for this segment and was found to be 1.35. The next 255 400 data points exhibit a typical Lorenz-like behaviour, which however is limited in time and followed by an approach to a ÿxed point (the last 85 000 data points). While the Lorenz-like segment may be characterized by a dimension of 1.78, the last segment can obviously not be ascribed any dimension.
+
+266
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+Table 1 The parameters for system (13)
+
+a
+
+0.15
+
+b
+
+0.20
+
+c
+
+10.00
+
+r
+
+45.92
+
+B
+
+4.00
+
+16.00
+
+x0
+
+−0:003001
+
+y0
+
+0.02001
+
+z0
+
+−0:02001
+
+Fig. 3. The trajectory for the system (12) for the three di erent intervals: (a) 1– 60000 data points, (b) 60001–315000, (c) 315001– 400000.
+In Ref. [14], Fig. 4a, outbursts of strong and intermittent oscillations of the x-component are apparent. They coincide precisely with the transitions from more stable to more complex types of trajectories and are repeated during the transition from the Lorenz-like attractor to the approach to a ÿxed point. This varying behaviour underlines the need for a more time-sensitive mode of description of such systems.
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+267
+
+Fig. 4. (a–c) The phase–space plot for the x(t) coordinate of system (12) for the same intervals as in Fig. 3. The plot is along the principal axis (see text).
+This system can also be treated with the multipole technique. As a ÿrst step, we construct the phase–space plot of the x-coordinate. Fig 4 shows the phase–space plot for the same three time segments treated in Ref. [14]. Not surprisingly, there is much resemblance between the trajectories (in this case in the x–z plane) and the phase–space plots for each of the three time segments. Moreover, as the last two time segments yield similar trajectories, they also yield similar phase–space plots. However, the similarity between the two trajectories cannot be described by two approximately, equal correlation dimensions, since the correlation dimension cannot be deÿned for the approach to a ÿxed point. On the other hand, the resemblance between the two phase–space plots is characterized by two approximately identical quadrupole moments (see Table 2). The di erence between the ÿrst two time segments is in the case of the trajectories represented by two rather di erent dimensions (1.35 and 1.78, respectively) and in the case of the phase–space plots re ected by two rather dissimilar quadrupole moments (1.2 and −83, respectively). But the multipole moments add some additional information about the distribution of the data points which is not available from the correlation dimension.
+
+268
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+Table 2
+Summary of the fractal dimension df and various multipoles for system (13) for the three time segments. For comparison the results for the Rossler and Lorenz attractor are given
+
+Number df
+
+Qxx
+
+Qyy
+
+Txxx
+
+of points
+
+Tyyy
+
+Äx
+
+Äy
+
+Äx =Äx
+
+RL I RL II RL III Rossler Lorenz
+
+5995 25500
+8500 40000 40000
+
+1.36
+
+0.38
+
+1.2
+
+1.78 261
+
+−83
+
+n.a 297
+
+−98
+
+2.13 255
+
+−127
+
+2.07 508
+
+−186
+
+0.35
+
+−0:15 0.51 0.49 0.96
+
+18309
+
+−92
+
+0.12 0.11 0.94
+
+19487
+
+−151
+
+0.11 0.11 0.95
+
+1465
+
+0.9 0.05 0.50 9.80
+
+−32
+
+13
+
+0.04 0.08 2.02
+
+In Fig. 5, we display for each of the three time segments the point density around the two principle axis of the phase–space plot. The symmetry along the y-axis and the lack of symmetry in the two latest time segments along the x-axis is evident. Some similar symmetry=asymmetry also appears in the trajectories.
+The lack of symmetry (large skewness) along the x-axis for the last two time segments is re ected by the large octupole moments Txxx(∼ 104), whereas the near symmetry (small skewness) along the y-axis is re ected by the much smaller values for the octupole moments Tyyy for the three time segments (∼ 102).
+It is noteworthy that the second and third time segments have approximately the same kurtosis along the x-axis (Äx) and along the y-axis (Äy), but a much higher x- and y-kurtosis for the ÿrst time segment. This re ects the small spread of data points around the origin of the principal axis during the ÿrst time segment, and their subsequent dispersion during the second and third time segments. It is remarkable that the ratio of the y- to x- kurtosis (Äy=Äx) stays almost constant and close to one at all times. This value is much closer to the value of (Äy=Äx) for the Lorenz attractor than for the Rossler attractor (2.02 and 9.80, respectively) and re ects the overall resemblance of the combined system considered with the Lorenz attractor rather than with the Rossler attractor. This resemblance with the Lorenz attractor is expected due to the small value, but is not revealed by either the rather identical correlation dimensions for these two attractors or their quadrupoles.
+4. Application to the Diamond study
+We shall in the following demonstrate how the multipoles perform as predictors for mortality in the group of survivors after acute myocardial infraction in the Diamond study [12].
+In this study 446 survivors of acute myocardial infarction (AMI) were enrolled. Di erent methods of analyzing HRV were compared with respect to predictive power of death after AMI. HRV was obtained from consecutive R–R intervals from 24 h ECG recordings 5 –10 days after AMI. The mortality was 25.6% after a follow-up of 685 ± 360 days (114 died).
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+269
+
+Fig. 5. The point density distribution along the two principal axis of the phase–space plot in Fig. 4. The time intervals are as in Fig. 3 (thick curve: along the x-axis; thin curve: along the y-axis).
+By calculating the quadrupole moments for all 446 recordings one can achieve a ÿrst separation into a high-risk group (Qyy ¿ − 1400 1 ) and into a low-risk group
+1 The quadrupoles are given in ms2.
+
+270
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+Fig. 6. Qyy as a risk factor. The patients are grouped into groups of 50 according to decreasing Qyy.
+(Qyy ¡ − 1400). This ÿrst separation has a better overall predictive accuracy than the standard deviation of the RR intervals (SDNN), which is the conventional HRV marker. In Fig. 6, we show that the mortality is decreasing with increasing values of Qyy.
+In order to appreciate the signiÿcance of the octupole moment we show in Fig. 7 the phase–space plot from two of the recordings from the Diamond study. They have approximately the same value for the quadrupole moment but very di erent octupole moments. Fig. 7a shows the phase–space plot of a survivor with the highest concentration of data points on the positive part of the x-axis, with the interpretation that the heart beats for extended periods with a low pulse rate (large RR intervals), where as Fig. 7b shows the plot of a deceased individual with the larger part of data points concentrated on the negative part of the x-axis, i.e., the heart is beating with a high pulse rate for extended periods. In Fig. 8a, we show the separating power of the octupole Txxx: 2 A similar analysis can be applied to the octupole moment Tyyy on the y-axis. The main result is that a high concentration of phase–space points on the positive y-axis (positive y-skewness) indicates a slow decrease and a fast increase in the heart rate which is a sign of impaired sympathetic and\or parasympathetic nervous system. Negative skewness on the y-axis, implying a slowly increasing and fast decreasing pulse, is hence one of the indications for a well-functioning heart function, which is also conÿrmed by the histogram in Fig. 8b.
+The additional octupole moments add very little to the overall predictive accuracy in the Diamond study and therefore are excluded here.
+Instead of seeking out the signiÿcant ones among the 16 hexadecupole moments, we shall use the kurtosis as mentioned above which is a powerful risk marker in the Diamond study. Table 3 lists 10 individuals with low-risk quadrupole and octupole moments but with a high value for concentration both around the x-axis as well as the y-axis and with a mortality of 90%, remarkable high relative to the overall mortality of 30%.
+2 The octupoles are given in ms3=103.
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+271
+
+Fig. 7. Phase–space plots for survivor (a) and non-survivor (b). Both have approximately the same Qyy.
+
+272
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+Fig. 8. (a) Txxx as a risk factor. The patients are grouped into groups of 50 according to decreasing Txxx. (b) Tyyy as a risk factor. The patients are grouped into groups of 50 according to increasing Tyyy.
+
+Table 3 11 patients with low-risk quadrupole and octupole moments, but with high-risk kurtosis ratios
+
+Patient #
+1 2 3 4 5 6 7 8 9 10 11
+
+Patient status
+Deceased Deceased Deceased Deceased Deceased Deceased Alive Deceased Deceased Deceased Deceased
+
+Qyy
+−1828 −1560 −1797 −1856 −2101 −2637 −1635 −1525 −1926 −1702 −1426
+
+Txxx
+−797 −108 −95 −389 −444 −1160 −204 −331 −261 −316 −69
+
+Äy =Äx
+1.97 2.01 2.25 2.27 2.31 2.36 2.37 2.38 2.40 2.43 2.48
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+273
+
+Fig. 9. MPW as a risk factor. The patients are grouped into groups of 50 according to decreasing MPW.
+Combining by optimization (as for example in Ref. [15]) the various moments into one parameter we obtain a combined parameter with an improved predictive accuracy.
+Fig. 9 shows the predictive potential of the optimized parameter, MPW (multipole moments weighted), where Qyy, Txxx and Äy=Äx are taken into consideration.
+5. Discussion
+We have studied two examples of non-stationary systems with rather complex time evolution.
+The series of RR intervals is an excellent example of a non-stationary and non-linear time series with a very complex behaviour. It seems reasonable to expect that the regulation of the heart rhythm which is a very complex mechanism due to its dependence on many subsystems in the body can be described optimally only by a method which has a diversity of di erent parameters describing partly di erent behaviours of those subsystems.
+The MPW performs better than the SDNN and the DFA which were superior among the methods compared in the study [8]. We conclude that the Multipole Method extracts information both in the frequency domain as well as in the time domain, and therefore performs better in prognostics than the traditional HRV methods, which are imbedded in one of the two domains.
+The multipoles moments di er crucially from the SDNN which does not include any time-ordering (shu ing the RR intervals will result in almost the same value for SDNN), while the multipoles due to the very construction of the phase–space plot bear intrinsic time dependence.
+
+274
+
+M. Lewkowicz et al. / Physica A 311 (2002) 260 – 274
+
+We also studied a combination of two well-known chaotic attractors, the Lorenz and the Rossler attractor. We showed that a fractal dimension analysis only partly re ects the richness that the combined system exhibits.
+Generally, the dimensional analysis is only feasible for systems which do not undergo marked changes in their time dependence. For those systems multipole analysis may reveal more details since it contains di erent moments describing di erent characteristics of the system studied.
+
+References
+[1] S. Thurner, M.C. Feuerstein, M.C. Teich, Phys. Rev. Lett. 80 (1998) 1544. [2] Y. Ashkenazy, M. Lewkowicz, J. Levitan, H. Moelgaard, P.E. Bloch-Thomsen, K. Saermark, Fractals
+6 (1998) 197. [3] C.K. Peng, S. Havlin, H.E. Stanley, A.L. Goldberger, Chaos 5 (1995) 82. [4] L.A. Nunes Amaral, A.L. Goldberger, P.C. Ivanov, H.E. Stanley, Phys. Rev. Lett. 81 (1998) 2388. [5] S. Thurner, M.C. Feuerstein, S.B. Lowen, M.C. Teich, Phys. Rev. Lett. 81 (1998) 5688. [6] K. Saermark, M. Moeller, U. Hintze, H. Moelgaard, P.E. BlochThomsen, H.V. Huikuri, J. Levitan,
+M. Lewkowicz, Fractals 8 (2000) 4. [7] Y. Ashkenazy, M. Lewkowicz, J. Levitan, S. Havlin, K. Saermark, H. Moelgaard, P.E. BlochThomsen,
+M. Moeller, U. Hintze, H. Huikuri, Europhys. Lett. 53 (2001) 709. [8] H.V. Huikuri, T. Seppanen, M.J. Kopistinen, K.E.J. Airaksinen, M.J. Ikaheimo, A. Castellanos,
+R.J. Meyerburg, Circulation 93 (1993) 1836. [9] P.W. Kamen, A.M. Tomkin, Aust. NZ. J. Med. 25 (1995) 18. [10] P.W. Kamen, H. Krum, A.M. Tomkin, Clin. Sci. 91 (1996) 201. [11] M. Malik, Curr. Opinion Cardiol 13 (1998) 36. [12] H.V. Huikuri, T.H. Makikallio, C.K. Peng, A.L. Goldberger, U. Hintze, M. Moller, Circulation 101
+(2000) 47. [13] M. Abramowitz, I. Stegun, Handbook of Mathematical Functions, Dover Publications, New York, 1970
+(Chapter 26). [14] K. Saermark, Y. Ashkenazy, L. Levitan, M. Lewkowicz, Physica A 236 (1997) 363. [15] E. Kreyszig, Advanced Engineering Mathematics, Wiley, New York, 1998.
+

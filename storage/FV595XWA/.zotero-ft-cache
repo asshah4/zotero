@@ -1,0 +1,475 @@
+A Practical Guide to Dose-Response Analyses and Risk Assessment in Occupational Epidemiology Author(s): Kyle Steenland and James A. Deddens Source: Epidemiology, Vol. 15, No. 1 (Jan., 2004), pp. 63-70 Published by: Lippincott Williams & Wilkins Stable URL: https://www.jstor.org/stable/20485841 Accessed: 27-03-2019 17:45 UTC
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org. Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at https://about.jstor.org/terms
+Lippincott Williams & Wilkins is collaborating with JSTOR to digitize, preserve and extend access to Epidemiology
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+ORIGINAL ARTICLE
+
+A Practical Guide to Dose-Response Analyses and Risk Assessment in Occupational Epidemiology
+Kyle Steenland*t and James A. Deddenstl
+
+Abstract: Dose-response modeling in occupational epidemiology is usually motivated by questions of causal inference (eg, is there a monotonic increase of risk with increasing exposure?) or risk as sessment (eg, how much excess risk exists at any given level of exposure?). We focus on several approaches to dose-response in occupational cohort studies. Categorical analyses are useful for detecting the shape of dose-response. However, they depend on the number and location of cutpoints and result in step functions rather than smooth curves. Restricted cubic splines and penalized splines are useful parametric techniques that provide smooth curves. Al though splines can complement categorical analyses, they do not provide interpretable parameters. The shapes of these curves will depend on the degree of "smoothing" chosen by the analyst. We recommend combining categorical analyses and some type of smoother, with the goal of developing a reasonably simple paramet ric model. A simple parametric model should serve as the goal of dose-response analyses because (1) most "true" exposure response curves in nature may be reasonably simple, (2) a simple parametric model is easily communicated and used by others, and (3) a simple parametric model is the best tool for risk assessors and regulators seeking to estimate individual excess risks per unit of exposure. We discuss these issues and others, including whether the best model is always the one that fits the best, reasons to prefer a linear model for risk in the low-exposure region when conducting risk assessment, and common methods of calculating excess lifetime risk at a given exposure from epidemiologic results (eg, from rate ratios). Points are illustrated using data from a study of dioxin and cancer.
+(Epidemiology 2004;15: 63-70)
+Submitted 17 October 2002; final version accepted 19 September 2003. From the *Rollins School of Public Health, Emory University, Atlanta,
+Georgia; the tNational Institute for Occupational Safety and Health (NIOSH), Cincinnati, Ohio; and the tDepartment of Mathematical Sci ences, University of Cincinnati, Cincinnati, Ohio. Correspondence: Kyle Steenland, Rollins School of Public Health, Emory University, 1518 Clifton Road, Atlanta, GA 30322. E-mail: nsteenl(sph.emory.edu. u Supplemental material for this article is available with the online version of the Journal at www.epidem.com.
+Copyright ? 2003 by Lippincott Williams & Wilkins ISSN: 1044-3983/04/1501-0063 DOI: 10.1097/01.ede.0000100287.45004.e7
+
+There are typically 2 motivations for dose-response (or exposure-response) analyses in epidemiology. First, in
+vestigators are interested in causal inference. One of Bradford
+Hill's criteria for judging causality is a "positive" dose response relationship. A positive dose-response, defined as
+one that increases, in a reasonably monotonic fashion, is more convincing than a simple excess of disease risk among the exposed versus the nonexposed. A second motivation for dose-response analyses is risk assessment, ie, estimating the increase in risk that results from a given increase in exposure. This usually requires a quantitative dose-response model, preferably based on epidemiologic data when they are avail
+able.1
+We discuss some techniques for evaluating dose-re sponse relationships and some issues that arise in doing so (see also the review by Stayner et al.2). By way of example, we use a cohort study of workers exposed to dioxin and followed, over time, for cancer mortality. In the example, the parameter of interest is the rate ratio, modeled using Cox regression. The exposure of interest is cumulative exposure, typical of many chronic disease studies.
+We consider categorical analyses, analyses using
+splines, and simple parametric models. When considering the last, we focus on the usual log-linear model for rates or rate ratios. We do not consider additive models, linear relative risk models, or biologically based models, because these are less commonly used by epidemiologists. However, many of the points made here would apply to those models as well.
+The usual log-linear model is one in which the log of the rate is modeled as a linear function of cumulative expo sure:
+Ln(rate) - B + 131 *cumexp, or equivalently,
+Ln(RR) = -1*cumexp, or RR = exp(Ql*cumexp),
+where RR is the rate ratio, and exp(f30) is the baseline or referent rate. Cumexp is cumulative exposure, which can be categorical or continuous.
+It has been our experience in a large number of occu pational cohort studies, conducted at the National Institute for
+
+Epidemiology * Volume 15, Number 1, January 2004 63
+
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+Steenland and Deddens Epidemiology * Volume 15, Number 1, January 2004
+
+Occupational Safety and Health (NIOSH),38 that Arate ratios tend to increase in a linear fashion at lower exposu3.r0es and
+
+then plateau or tail off at higher exposures. Possible reasons
+
+for this phenomenon include 1) mismeasurement of high
+
+exposures, 2) saturation of metabolic pathways at high expo sures, 3) depletion of susceptibles at high exposu0res, and 4)
+
+bias resulting from the healthy worker survivor effect. A
+iC2.0, woLG-O 1LJ
+fuller discussion of this phenomenon can be found in Stayner
+
+et al.9
+
+t5 ( ~~~~LOG-UNEA
+
+A model that captures this "plateau" effect is what we
+
+will call the "log-log" model (a form of the more general
+
+power model), in which the log of the rates is a linear
+function of the log of exposure:
+
+1.0-.................................................
+0 1 2 3 4 5 6 7 8 9 10
+
+CUMEXP
+
+Ln(rate) = I3, + fB1*ln(cumexp), or
+
+B
+
+Ln(rate) = f3 + f31*ln(cumexp + k),
+where k is a small constant that can represent a background level of exposure, or that is present so as to avoid taking the logarithm of 0 if there are nonexposed individuals in the study.
+Graphs of dose-response using the log-linear or log-log models take on different shapes depending on whether the axes are untransformed relative risks (RRs) versus cumula tive exposure, or whether the log(RR) or log(cumexp) are used. Figure 1 illustrates the shape of the generic curves for the log-linear and log-log models using different axes. In both Figures IA and IB, the 2 curves have approximately the same shape whether or not the scale of the rate ratio is logged (in the latter case, the log-linear curve is a straight line). One can see the tailing off of the rate ratio at high exposures in the model using the log of cumulative exposure (log-log model). The shapes of the curves change, however, when cumulative exposure is log-transformed (Fig. 1C), and it is the log-log curve that appears more linear. Choice of how to display model results is a matter of convenience, but could partly depend on the range of exposure; a log-normal exposure distribution with a long tail on the right lends itself to a log
+exposure scale.
+Categorical Models
+Typically, investigators use categorical models to "see" the shape of the dose-response without imposing a shape through a particular parametric model. This is often done by connecting the categorical rate ratios with a straight line to sketch a "curve" even though this curve is fictional; in fact, categorical analyses result in step functions in which the rate ratio is assumed (often unrealistically) to be constant within categories. Although we recommend that investigators rou tinely conduct categorical analysis, often such analyses could be only a first step. For risk assessment purposes and for
+
+T 2488W
+cZo CY74
+o t728 {
+= 4 0
+P IC 1.200
+t4 D ... ......... ..... ..... ...... ... ..... .......... 0 1 2 3 4 5 6 7 8 9 10
+CUMEXP
+C 3.0
+2.5 0
+2.0
+. ~~~~~LOG-UNEAR
+1.0 1 .. ......... - - - - - - - ........... - - - - - - - - ...........
+-6 -4 -3 -2 -1 0 1 2 3
+LOG CUMEXP
+FIGURE 1. Log-log curve: RR = exp(O.09*log[cumexp +0.001))/exp(O.09*log (0.001)). Log-linear curve: RR =
+exp(0.1*cumexp). (A) Rate ratio versus cumulative exposure. (B) Log rate ratio versus cumulative exposure. (C) Rate ratio versus log cumulative exposure.
+reporting results in a concise and universal form that can be used by others, it is useful to seek a simple parametric model that fits the data.
+
+64 C 2003 Lippincott Williams & Wilkins
+
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+Epidemiology * Volume 15, Number 1, January 2004 Dose-Response Analyses and Risk Assessment
+
+In categorical analyses, the number and choice of cutpoints will influence the shape of the observed dose
+response. Too few categories could obscure important aspects
+of the shape of the dose-response, whereas too many can do the same by adding random noise to the rate ratios for each category. Furthermore, the placement of the cutpoints will
+have a large influence on the perceived shape. To avoid
+arbitrariness, it is best to choose cutpoints that are based on "a priori" criteria before analysis is begun. One such method is to choose categories based on placing an equal number of cases in each category; this approach provides a similar variance for rate ratios across categories. An alternative
+method would be to choose categories based on equally
+spaced percentiles from the exposure distribution of all sub jects or of noncases within a cohort. Disadvantages of this latter approach include: 1) possibly unequal variance of rate ratios between categories, especially if there is not much difference between the mean exposure within percentiles at the low end of exposure (typical of log-normal exposure distributions); and 2) the lack of an obvious manner for determining the cumulative exposure for noncases when cumulative exposure is time-dependent and subjects can ap
+pear in multiple risk sets (like in Cox analyses). In the example below, we have chosen cutpoints based on the
+distribution of exposure among the cases. Ideally, the dataset is sufficiently large so that it is reasonably robust to these different choices. One of the advantages of smoothers such as splines is that they, to some degree, avoid these choices.
+Figure 2 shows categorical data for a study of dioxin and cancer.3 This study included 3538 men exposed to dioxin (TCDD) who were followed for all cancer mortality. The exposure of interest was cumulative serum dioxin (parts per trillion-years, or ppt-years), estimated through a job-exposure matrix and serum dioxin data on 170 subjects in the cohort. Cumulative exposures were highly skewed, typical of occu pational exposures, ranging at the end of exposure from 6 to 210,054 ppt-years (median 98, mean 1589). A 6-ppt back ground level was assumed. The mean duration of exposure was 2.7 years (standard deviation, 4.4). All models presented here included 3 categorical variables for year of birth, in addition to the exposure variables of interest.
+Figure 2A shows a step function for the dioxin data using 5 categories, with cutpoints formed by dividing the cancer deaths into quintiles of cumulative exposure (in ppt years). The highly skewed exposure data motivate the use of a log scale for exposure. Although a step function is a true representation of the results of a categorical analysis (assum ing no change in rate ratio within a category), it is common to use some single point within the category (eg, a mean or median) to represent the data, and these points can be con nected to provide a curve made up of linear pieces. Figures 2B and 2C show such categorical analyses using the medians of either 5 or 10 categories. The 5-category curve appears
+
+A
+2.0
+0.5
+0.5 ---------- ......... ....................... ........... 5.5 6.5 7.5 8.6 9.5 10.5 11.5 12.5
+LOG CUMDOSE 15 yr log (ppt-yas)
+B
+3.0 2.5 2.0 2 .0 A4
+0.5 I............................. ......... ............... &5 6.5 7.5 8.5 9.5 10.5 11.5 12.5
+LOG CUMDOSE 15 yr lag (ppt-yam)
+C
+3.0 2.5 F2.0
+0.5
+5.5 8.5 7.5 8.5 9.5 10.5 11.5 12.5
+LOG CUMDOSE 5 yr lag (p-years) FIGURE 2. Categorical analysis of dioxin and cancer m (256 deaths). (A) Five categories graphed as step functi
+Five categories with 95% confidence intervals. (C) T gories with 95% confidence intervals.
+consistent with a monotonically increasing dose-res The use of 10 categories shows some downturns in the However, the use of 10 categories increases random va
+
+? 2003 Lippincott Williams & Wilkins 65
+
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+Steenland and Deddens Epidemiology * Volume 15, Number 1, January 2004
+
+in each category, as evidenced by the increased width of thies summed with all previous ones, a procedure also used in
+
+confidence intervals.
+
+quadratic and cubic splines).
+
+We discuss 2 classes of splines: restricted cubic splines
+
+Splines
+Splines are parametric curves that serve as useful com plements to categorical analyses. Splines fall into the general class of "smoothers," which include LOESS and other types of generalized additive models.10 Splines provide a smooth curve of the dose-response curve and impose few constraints on that curve; however, they have the drawback of not providing interpretable parameters. Ordinary splines can be programmed by the investigator in most regression programs, although investigators will often need to produce the graphs themselves, based on the predicted values of the model. More
+complex penalized spline curves can now be fit using S PLUS (Insightful Corporation, Seattle, WA) in Cox regres
+sion, which produces a graph of dose-response automatically. Multivariate modeling with splines is done frequently by constructing splines for the exposure variable but leaving other variables in their customary form in a log-linear model.
+Splines are piece-wise polynomials with the pieces defined by cutpoints (called "knots"). They are parametric curves, although the parameters are usually not easily inter pretable and therefore of little inherent interest. The polyno mials are typically linear, quadratic, or cubic, with the last being perhaps the most common. The number of knots determines the degree of smoothing; the more knots, the less smoothing. There are typically a small number of knots (between 3 and 8) that can be specified by the investigator. A good discussion can be found in Harrell et al.'" or Green land.12 Figure 3 illustrates a simple linear spline with 3 knots based on the equation in the legend. This is a piece-wise
+
+and penalized splines. Restricted cubic splines1 1 are restricted to be linear at each end (before the first knot and after the last), as a result of instability in fitting polynomials at the extremes, and are constrained to meet smoothly at cutpoints. They can be used in any regression program and provide a prediction equation with estimated parameters. They have the same form as the linear spline in Figure 3, except that the estimated functions between knots are cubic. Figure 4 illus trates restricted cubic splines with 3 and 6 knots, chosen to be symmetric (10, 50, 90th percentiles, or 5, 23, 41, 59, 77, 95th percentiles, respectively), using the same dioxin/cancer data seen in the categorical data. Note that the spline with 3 knots looks more like a straight line (high degree of smoothing), whereas the spline with 6 knots has more "wiggles" (less smoothing) and follows the pattern of the categorical analysis
+based on deciles. Penalized splines are a more recent type of spline are
+available in some software packages (eg, the "pspline" function for Cox regression in S-PLUS), and are somewhat more com plicated mathematically than traditional splines.13"14 Penalized splines fit a linear combination of B-splines, whereas applying a penalty for a lack of smoothness. B-splines (the B stands for base function) consist of overlapping polynomial pieces that join together at the knots. A linear function of B-splines forms a smooth curve. The degree of smoothing is chosen by the user through specification of the "degrees of freedom" (df; not the traditional degrees of freedom of a x2 distribution). Typically, the knots are chosen by the program and are more numerous than in traditional cubic splines. The model is
+
+linear function in which the slopes of each piece are estimated separately (although in the equation, the slope of each piece
+
+Ln(rate) = - + X 31X + SI3kBk(X)
+
+12
+10 9
+0
+<Fi78/
+i!a65 / 4 3 2 1 ..................... . 0 10 20 30 40 50 60 70 80 CUMEXP FIGURE 3. Generic curve for a simple linear spline: RR 1 +0.3*cumexp-0.4*max(O,cumexp-6)+0.3*max(O,cumexp 21 )-O.1 *max(O,cumexp-65).
+
+2.0
+
+'
+
+0 t5 cS(3)
+to0 . 10 CATEGORIES
+
+05..5 5 6...5..7...5..8...6...9...5..1.0...5...1.1...5..1..2...5..........
+LOG CUMDOSE 15 yr Ing W-yar)
+FIGURE 4. Categorical data and 2 restricted cub and 6 knots) for dioxin data.
+
+66 ? 2003 Lippincott Williams & Wilkins
+
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+Epidemiology * Volume 15, Number 1, January 2004 Dose-Response Analyses and Risk Assessment
+
+where Bk(X) is a B-spline of degree q (default = 3 in S-PLUS). The user specifies the amount of smoothing by
+choosing the degrees of freedom (default = 4 in S-PLUS; the number of B-splines or base functions is approximately 3 times the degrees of freedom). A prediction equation can be obtained from S-PLUS only with some difficulty.
+The key to penalized splines is that a penalty is imposed on sum of absolute differences between adjacent f3k's, a penalty that is used in the likelihood (actually, the penalized
+maximum likelihood). In S-PLUS, the user imposes this penalty by choosing the degrees of freedom. The use of a
+penalty is analogous to modeling the f3k's as random effects,
+ie, 1kk N(O, o), where o, the variance permitted among the 3k's, determines the amount of smoothing. Figure 5 shows 2 penalized splines for the dioxin/cancer data with different amounts of smoothing (ie, different degrees of freedom).
+One possible advantage of a penalized versus restricted cubic spline is that the shape of the latter depends on the user's choice of knot location, whereas the former has more knots spread across the range of exposure (and the knots are chosen by the program in S-PLUS). Different knot locations in restricted cubic splines with the same number of knots do not change the shape of the curve very much if knots are chosen to be symmetric across exposure, but can affect the shape if knots are not symmetric. Figure 6 shows the dioxin data and 2 restricted cubic splines, both with the same number of knots but placed in somewhat different regions of the x-axis. These curves do not differ greatly.
+Another common smoothing method is a LOESS plot. LOESS is a nonparametric procedure for generating a moving weighted average of the outcome variable (or a moving weighted regression of the outcome on the exposure) within defined local regions of the x-axis, where the weights de crease as one moves away from the center of each specific region and become 0 beyond the range of the region. LOESS estimation, originally developed for linear regressions, is now available for logistic regression through the GAM procedure
+
+in SAS (SAS, Cary, NC) and S-PLUS (the "lo" f "gam"), but, to our knowledge, is not availabl tional logistic regression or Cox regression.
+Degree of Smoothing
+How much smoothing is desirable? There are s criteria such as the Akaike Information Criter which the model likelihood is penalized proportion number of estimated parameters. However, ch degree of smoothing is as much a philosophical as question and has no simple answer. Greenland1 that "with enough well-chosen categories, cubic closely approximate virtually any smooth curve. T tage seems of doubtful utility for epidemiolog however, because plausible trends and dose-resp are usually very simple in form." Even assumin response curves are indeed simple in form (an argue that a U-shaped curve is not simple in form tional data are subject to confounding, measurem interaction with other exposures, and random vari which could affect some parts of the dose-resp more than others. It could be desirable to smoo curvature ("wiggles") in search of the "true" s response curve.
+On the other hand, if such smoothing is done sufficient care, it might guide the investigator tow parametric form that is a wrong one, something w have been avoided by less smoothing and more ex the "wiggles." This issue is analogous to choosin ber (and placement) of cutpoints in categorica discussed previously (one could also argue that to the degree of acceptable heterogeneity in m and the need to explore rather than smooth over ogeneity). Some dose-response relationships ar
+2.0
+RCS(6)1 -
+
+2.5
+DF= 6
+
+2.0 1.5|,D
+
+--- DF= 3
+
+1.0 -
+
+5. 6.5 7.5 8.5 9.5 10.5 11.5 12.5
+
+LOG CtMDOSE 15 yr lg (ppt-yssm)
+
+O..'5s .8....5...7....5....8....5...9....5....1..0....5...1..1....5..1..2....5.. ....F.I.G..U ...R..E..6. Two restricted cubic splines with same nu
+knots placed in different regions of the x-axis: RCS( LOG CUMDOSE bg 15 yr Wm-yeam) cutpoints at 5, 23, 42, 58, 77, and 95th percentile;
+FIGURE 5. Penalized splines for the dioxin dcuattap.oints at 10, 20, 30, 40, 50 and 90th percentiles.
+
+? 2003 Lippincott Williams & Wilkins 67
+
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+Steenland and Deddens Epidemiology * Volume 15, Number 1, January 2004
+
+somewhat complicated, and splines or other smoothers used 2.0 with limited amounts of smoothing have proved useful in understanding them. Perhaps the best known examples are dose-response curves for air pollution and mortality in time series analyses, in which seasonal variation in weather creaFteo s 1.5 - -.
+
+----
+LOG- LO ? "
+
+a wave-like background pattern in mortality, and long-term
+
+decreases in pollution create linear downward Another example would be the U-shaped curve
+
+tfroerntdhs.e10sat"1i5l.l0
+
+-_
+
+LOG-UN
+
+poorly understood relationship between cholesterol and mor tality, in which Schwartz has argued that the smoothing
+
+curves outperformed categorical analyses in detecting a com
+
+plex relationship.10
+
+0 .?5 5......8......5... ..7.....5......8.....5......9......5......1...0......5.....1....1......5......12.5
+
+LOG CtMDOSE 1 yr 4 p-ymr)
+
+Choosing a Parametric Curve
+
+FIGURE 7. Two simple parametric models for th
+
+Splines, along with categorical analyses, can offer a
+
+visual guide to choosing a simpler parametric model. Simpler
+
+models are easier to apply in risk assessment and can pbpe t-year range over a 75-year lifetime (5.9-6
+
+preferred on grounds of parsimony. A simpler model can sbceale, close to the origin in Fig. 8). In this low-ex
+
+justified on statistical grounds as well if the model fit of tthhee log-log model has a high slope. With a sm
+
+(parametric) spline is no better than a simpler parameetxripc osure, risk increases very rapidly, perhaps
+
+model. Figure 7 shows the log-linear and log-log modelssof.or
+
+the dioxin data in Figures 2 and 4-6. Visually, the log-log One alternative is a piece-wise linear model with 2
+
+model clearly appears to be the better fit, conforming toptihecees. Here, 2 lines are fit to the data and joined at a single
+
+categorical data and the splines sees in earlier figures. Stactuistpoint, estimated as the point where the slope changes. We
+
+tically, the corresponding chi squares for change in muosdeedl an interactive method to pick the best cutpoint for a
+
+likelihoods (chi squares) with the addition of the expopsiuerce-wise linear model, judging the best cutpoint based on
+
+terms were 0.2 (1 df, P = 0.65) for the log-linear model, m 8.4odel fit (for a discussion of picking such cutpoints, see
+
+(1 df, P = 0.004) for the log-log model, and 9.3 (4 dfU, lPm=16). The dose-response curve for high exposures is as
+
+0.05) for the cubic spline model with 3 knots. These gsouom d ed to be largely independent of the slope for lower
+
+ness-of-fit data indicate an adequate fit by the log-log moedxeplosures (a debatable assumption).
+
+and no improvement by the spline over the log-log model (P Figure 8 shows the piece-wise model (with a 15-year
+
+= 0.82).
+
+lag) together with the log-log curve. Comparing their good
+
+The use of statistical tests to evaluate one dose-re
+
+ness-of-fit, the piece-wise model increased in the model
+
+sponse model versus another seems a legitimate use of
+
+likelihood by 8.2 (1 df, or 2 df if one considers the cutpoint
+
+hypothesis testing, and choosing a single best model based on
+
+as another parameter), versus an increase of 8.4 (1 df) for the
+
+a large improvement in goodness-of-fit seems appropriate.
+
+log-log model. Thus, the piece-wise model does not fit the
+
+However, when there are a variety of models that fit the data
+
+reasonably well, it might not be wise to pick the "best" model
+
+on purely statistical grounds, ie, based on a marginal im
+
+2.0
+
+provement in a log likelihood (see below).
+
+LOG
+
+Another legitimate use of a hypothesis test would be a simple trend test, determining whether the dose-response model improves on a null model of no increase in risk with increasing exposure. Detailed analyses of the shape of dose
+
+0 1.5 > / ~~~~~~~~PIECEWISE
+10
+
+response would not be justified when there is little probability
+
+that the dose-response differs from the null.
+
+Is the Best-Fitting Model the Best Model?
+In the dioxin data, the log-log model provides a rea sonable fit on statistical grounds. However, risk assessment for dioxin is focused on very low exposures, eg, the risk at twice background versus background levels (10 ppt vs. 5 ppt in the serum). This corresponds to exposures in the 375-750
+
+5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5
+LOG CUMDOSE 1 yr lag (ppt-ye)
+FIGURE 8. Log-log and piece-wise linear models
+data.
+
+68 ? 2003 Lippincott Williams & Wilkins
+
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+Epidemiology * Volume 15, Number 1, January 2004 Dose-Response Analyses and Risk Assessment
+
+data as well as the log-log curve. However, the rapid increase in risk with only a small increase in dose in the low-dose region, seen in the log-log curve, could be implausible bio logically and results in high estimates of excess risks with slight increases of exposure over background levels (see below). On grounds of biologic plausibility, one might prefer the results from the piece-wise linear model.
+Up to now, we have emphasized a "data-driven" ap proach to the selection of a best-fitting parsimonious para metric model for the data. However, when several models provide adequate fit, selection of the best model based on purely statistical grounds could be arbitrary. To quote Breslow on risk assessment and modeling,17 "the rational for selection of a model for analysis is the belief that the savings in variance afforded by the model assumptions will offset the increase in bias that results from the assumptions being incorrect. The common practice of allowing the data to dominate the model selection process, whether by stepwise entry of variables into a regression equation or evaluation of goodness-of-fit data in the observable effect range, is often inappropriate. A preferable strategy is to determine which of a broad class of models are reasonably consistent with the observed data and to select among these based on prior understanding of the subject matter. If the lack of such understanding precludes a definitive model choice, it is much wiser to admit this openly and accept the resultant uncertainty
+than it is to sweep the whole issue under the rug by presenting
+a single 'best' model."
+Calculation of Excess Lifetime Risk Based on the Dose-Response Model
+Once a model (or a set of models) has been chosen and the dose-response analyses completed, one can estimate the increase in rate of disease per unit of exposure. Risk assessors and regulators will then use this information to predict indi vidual lifetime risk for specific levels of exposure. When the data are based on humans (ie, epidemiology) and not on animals, this is a straightforward process of converting rates from populations to individual risks. Aside from a few uniquely occupational disease such as silicosis, most diseases occur in both exposed and nonexposed populations. This typically means calculating an excess lifetime risk of an outcome above and beyond a background risk. For example,
+
+the Occupational Safety and Health Administration (OSHA) is often interested in setting exposure limits that permit no more than a 1 per 1000 excess lifetime risk of serious disease or death after a lifetime 45-year exposure. The results of the dose-response model can easily be used to convert rates to risks, as follows, using standard formulas based on18:
+Risk = 1 - exp(-rate*At),
+where t corresponds to time. Time here would be age, so that risk might be estimated over a usual lifetime, based on standard lifetime expectancies (eg, through age 75 or 79, for men and women in the United States).
+This formula can be adapted to estimate the excess risk over time using a rate ratio rather than a rate. Furthermore, competing risks of death from any cause can be taken into account, which will slightly decrease the calculated excess risk. Gail19 has provided the following formula to calculate excess risk over time given a rate ratio (which could increase during exposure as cumulative exposure increases).
+Excess risk
+79
+= (rrii= - 12 )*0 qc(i) jex= p 2 [-E0(rri - 1)*qc(j) + qa(j)]
+Excess risk refers to cause of interest by rate for the nonexpo all-causes mortality specific rate ratio fo our case, this is a f
+increases from ag alternative formula the appendix, availa
+article at www.epide same results.
+Table 1 shows the derive the lifetime (t after a constant lifet standard backgroun exposure over backg
+
+TABLE 1. Excess Risks of Cancer Death Serum Dioxin (TCDD) During Lifetime,
+Rate Rati Background Risk Excess Risk (10 ppt vs. 5 ppt)
+Log-log model 12.3% 0.2% 1.02 Piece-wise model 12.3% 0.9% 1.07
+C 2003 Lippincott Williams & Wilkins 69
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+
+Steenland and Deddens Epidemiology * Volume 15, Number 1, January 2004
+
+high in fish, for example. Excess risk is predicted usin3g. Steeietnhlanedr K, Deddens J, Piacitelli L. Risk assessment for 2, 3, 7,
+
+the log-log or the piece-wise linear model.
+
+8-/?-dioxin (TCDD) based on an epidemiologic study. Am J Epidemiol.
+
+2001;154:451-458.
+
+Table 1 shows different predictions of the 2 diff4.eSrteeennlatnd K, Deddens J, Stayner L. Diesel exhaust and lung cancer in
+
+models in the low dose range, which is of interest to thtreucUkin.Sg .industry: dose-response analyses and risk assessment. Am JInd
+
+Environmental Protection Agency (EPA) in makingMaend. 1e9s9t8i;34:220-228.
+
+mate
+
+of
+
+risk
+
+at
+
+environmental
+
+levels.
+
+At
+
+low
+
+levels5.oSatfmeeonenlgxanwpdooKrk, eSrasnedxeprsoosendWto,
+
+Cal vert G. Kidney disease and arthritis silica. Epidemiology. 2001;12:405-412.
+
+sure, rates and risks increase very rapidly with in6.cSrteayanseirnLg, Smith R, Thun M, et al. A dose-response analysis and
+
+exposure in the log-log model but more slowly in thqeuanptiiteatcivee assessment of lung cancer risk and occupational cadmium wise model. One might argue that a doubling of backegxproosuuren. Adnn Epidemiol. 1992;2:77-194.
+7. Hornung R, Meinhardt T. Quantitative risk assessment of lung cancer in
+levels of serum dioxin (TCDD), which are quite low tUoS ubraengiuimnminers. Health Phys. 1987;52:417-430.
+with (5 ppt), is unlikely to result in an increase o8.fSte1e%nlanod fK, Whelan E, Deddens J, et al. Ethylene oxide and breast
+
+cancer mortality above the background risk of 12% (thceanrceirsikncidence in a cohort study of 7576 women. Can Causes Cont. 2003;14:531-534.
+for the general population at background dioxin level9s. )S.taFynoerr L, Steenland K, Dosemeci M, et al. Why do dose-response
+
+this reason, regulators might prefer the piece-wise cm urvoesdineloccupational studies often plateau at high exposures? Scand J
+
+even though it did not fit as well as the log-log mWoodrkeEln.vAiron. 2003;29:317-324.
+
+prudent
+
+course
+
+for
+
+the
+
+epidemiologist
+
+would
+
+be
+
+to10.pSvrcohlew1sa. rePtrnzoJcte.eTdhinegUs sXeVoIfI
+
+Generalized Additive Models in Epidemiology, International Biometrie Conference; Hamilton,
+
+results from both models.
+
+Ontario, Canada; August 8-12, 1994.
+
+11. Harrell F, Lee K, Pollock B. Regression models in clinical studies:
+
+SUMMARY
+Epidemiologic dose-response analyses are useful for
+
+determining relationships between predictors and response. J Nati Can cer Inst. 1988;80:1198-1202.
+12. Greenland S. Dose-response and trend analysis in epidemiology: alter
+
+causal inference and for risk assessment. Categorical analyses and use of smoothing techniques such as splines are useful for assessing the shape of the dose-response curve and can help in choosing a parametric model appropriate for risk assess ment. We recommend the routine use of both categorical analyses and some type of smoothing curve in data analyses, followed by exploration of a range of suitable parametric
+
+natives to categorical analysis. Epidemiology. 1995;6:356-365. 13. Eilers P, Marx B. Flexible smoothing with B-splines. Statistical Science.
+1996;11:89-103.
+14. Thurston S, Eisen E, Schartz J. Smoothing in survival models applied to workers exposed to several metalworking fluids. Epidemiology. 2002;
+13:685-692.
+15. Schwartz J, Spix C, Touloumi G, et al. Methodological issues in studies of air pollution and daily counts of deaths or hospital admissions. J Epidemiol Community Health. 1996;50(suppl 1):S3-S11.
+
+models that fit the data well. All of these should be candidates for graphic presentation in publications focused on dose response relationships. The best fitting model might not
+
+16. Ulm K. A statistical method for assessing a threshold in epidemiological studies. Stat Med. 1991;10:341-349.
+17. Breslow N. Biostatistics and Bayes. Statistical Science. 1990;5:269
+298.
+
+necessarily be the best model for risk assessment purposes.
+
+18. Kleinbaum D, Kooper L, Morganstern H, eds. Epidemiologic Research, Belmont, CA: Lifetime Learning; 1983.
+
+REFERENCES
+
+19. Gail M. Measuring the benefits of reduced exposure to environmental carcinogens. J Chron Dis. 1975;28:135-147.
+
+1. Hertz-Piccioto I. Epidemiology and quantitative risk assessment: a bridge from science to policy. Am J Public Health. 1995;85:484-491.
+2. Stayner L, Smith R, Bailer J, et al. Modeling epidemiologic studies of
+occupational cohorts for the quantitative assessment of carcinogenic hazards. Am J Ind Med. 1995;27:155-170.
+
+20. Biological Effects of Ionizing Radiation (BEIR) IV. Health Risks of
+Radon and Other Internally Deposited Alpha-Emitters. Committee on
+the Biological Effects of Research, Commission on Life Sciences,
+National Research Council. Washington, DC: National Academy Press; 1988.
+
+70 ? 2003 Lippincott Williams & Wilkins
+This content downloaded from 170.140.142.252 on Wed, 27 Mar 2019 17:45:13 UTC All use subject to https://about.jstor.org/terms
+

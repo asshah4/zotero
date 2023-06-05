@@ -1,0 +1,563 @@
+ORIGINAL RESEARCH
+
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+Heart Rate Variability for Risk Assessment of Myocardial Ischemia in Patients Without Known Coronary Artery Disease: The HRV-DETECT (Heart Rate Variability for the Detection of Myocardial Ischemia) Study*
+Ilan Goldenberg, MD;† Ronen Goldkorn, MD;† Nir Shlomo, MA; Michal Einhorn, MA; Jacob Levitan, PhD; Raphael Kuperstein, MD; Robert Klempfner, MD; Bruce Johnson, PhD
+Background-—Detecting signiﬁcant coronary artery disease (CAD) in the general population is complex and relies on combined assessment of traditional CAD risk factors and noninvasive testing. We hypothesized that a CAD-speciﬁc heart rate variability (HRV) algorithm can be used to improve detection of subclinical or early ischemia in patients without known CAD.
+Methods and Results-—Between 2014 and 2018 we prospectively enrolled 1043 patients with low to intermediate pretest probability for CAD who were screened for myocardial ischemia in tertiary medical centers in the United States and Israel. Patients underwent 1-hour Holter testing, with immediate HRV analysis using the HeartTrends DyDx algorithm, followed by exercise stress echocardiography (n=612) or exercise myocardial perfusion imaging (n=431). The threshold for low HRV was identiﬁed using receiver operating characteristic analysis based on sensitivity and speciﬁcity. The primary end point was the presence of myocardial ischemia detected by exercise stress echocardiography or exercise myocardial perfusion imaging. The mean age of patients was 61 years and 38% were women. Myocardial ischemia was detected in 66 (6.3%) patients. After adjustment for CAD risk factors and exercise stress testing results, low HRV was independently associated with a signiﬁcant 2-fold increased likelihood for myocardial ischemia (odds ratio, 2.00; 95% CI, 1.41–2.89 [P=0.01]). Adding HRV to traditional CAD risk factors signiﬁcantly improved the pretest probability for myocardial ischemia.
+Conclusions-—Our data from a large prospective international clinical study show that short-term HRV testing can be used as a novel digital-health modality for enhanced risk assessment in low- to intermediate-risk individuals without known CAD.
+Clinical Trial Registration-—URL: http://www.ClinicalTrials.gov. Unique identiﬁers: NCT01657006, NCT02201017). ( J Am Heart Assoc. 2019;8:e014540. DOI: 10.1161/JAHA.119.014540.)
+Key Words: coronary artery disease • heart rate variability • risk prediction
+
+C oronary artery disease (CAD) is a major public health problem accounting for the majority of deaths in the United States.1 Patients are frequently asymptomatic or exhibit nontypical symptoms until ischemic heart disease manifests itself as sudden cardiac death or myocardial infarction. Detecting signiﬁcant CAD in patients without
+
+known disease is complex and relies on combined assessment of traditional cardiovascular risk factors, clinical symptoms, and noninvasive testing. Exercise stress testing (EST) is the most commonly used modality for CAD assessment, but, because of its limited ability to correctly diagnose myocardial ischemia, it is not recommended for screening in the general
+
+From the Division of Cardiology, University of Rochester Medical Center, Rochester, NY (I.G.); Leviev Heart Center and the Israeli Association for Cardiovascular Trials, Sheba Medical Center, Tel Hashomer, Israel (I.G., R.G., N.S., M.E., R. Kuperstein, R. Klempfner); Tel Aviv University, Tel Aviv, Israel (I.G.); Ariel University, Ariel, Israel (J.L.); Cardiac Rehabilitation Center, Mayo Clinic, Rochester, MN (B.J.).
+Accompanying Data S1, Table S1, and Figure S1 are available at https://www.ahajournals.org/doi/suppl/10.1161/JAHA.119.014540 *This work was presented as an abstract at the American Heart Association Scientiﬁc Sessions 2020, Philadelphia, PA. †Dr Goldenberg and Dr Goldkorn contributed equally to this work.
+Correspondence to: Ilan Goldenberg, MD, Cardiology Division, Department of Medicine, University of Rochester Medical Center, 265 Crittenden Boulevard CU 420653, Rochester, NY 14642. E-mail: ilan.goldenberg@heart.rochester.edu
+Received September 7, 2019; accepted November 13, 2019. ª 2019 The Authors. Published on behalf of the American Heart Association, Inc., by Wiley. This is an open access article under the terms of the Creative Commons Attribution-NonCommercial-NoDerivs License, which permits use and distribution in any medium, provided the original work is properly cited, the use is noncommercial and no modiﬁcations or adaptations are made.
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 1
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+HRV-DETECT Goldenberg et al
+Clinical Perspective
+What Is New?
+• This is the ﬁrst study to evaluate short-term heart rate variability (HRV) testing for the detection of myocardial ischemia in individuals with low to intermediate pretest probability for coronary artery disease (CAD) in the setting of a large prospective multicenter clinical study.
+• Low HRV, assessed using the HeartTrends DyDx algorithm, was shown to be independently associated with a 2-fold increased risk for the presence of myocardial ischemia is individuals without known CAD.
+• HRV testing was shown to provide incremental diagnostic yield to traditional CAD risk factors and to exercise stress testing for the detection of myocardial ischemia.
+What Are the Clinical Implications?
+• Short-term HRV testing with the HeartTrends DyDx algorithm can be used as a novel digital-health modality for enhanced detection of myocardial ischemia in patients without known CAD.
+• The test can be used in conjunction with traditional cardiovascular risk factors to identify individuals without known CAD who have an increased likelihood for the presence of myocardial ischemia.
+• In the era of wearable digital monitoring devices and increased interest in personalized approaches to risk assessment, HRV may provide useful information to direct lifestyle change and to monitor general health status.
+population.2–5 Accordingly, additional noninvasive modalities with superior sensitivities are necessary for CAD screening and evaluation in individuals without known disease.
+Heart rate variability (HRV) values have been shown to be low in patients with CAD, and low HRV has been shown to be an independent predictor of cardiovascular mortality and sudden cardiac death.6–13 Prior data from 2 studies suggest that low HRV, as assessed by the HeartTrends algorithm, may provide a higher sensitivity for CAD detection compared with conventional EST.14,15
+The multicenter prospective HRV-DETECT (Heart Rate Variability for the Detection of Myocardial Ischemia) study was designed to evaluate the independent association of HRV with the presence of myocardial ischemia among 1043 patients without known CAD who underwent evaluation for the presence of myocardial ischemia. We hypothesized that HRV testing, using the new HeartTrends algorithm, may provide incremental risk stratiﬁcation data to traditional cardiovascular risk factors and EST for the detection of subclinical or early ischemia in patients without known CAD, possibly permitting more timely detection and earlier intervention in this population.
+
+Methods
+The data that support the ﬁndings of this study are available from the corresponding author upon reasonable request.
+Study Population
+The HRV-DETECT study is composed of 2 parallel multicenter prospective studies, designed to evaluate the independent association between HRV testing, using the HeartTrends algorithm, and the presence of myocardial ischemia, as detected by either positive exercise stress echocardiography (eSE) (study 1 [NCT02201017]) or positive exercise myocardial perfusion imaging (eMPI) test (study 2 [NCT01657006]).
+Between May 2014 and April 2018 we prospectively enrolled 1151 patients without known CAD who underwent eSE or eMPI in 4 tertiary medical centers from the United States (Mayo Clinic in Arizona and Minnesota) and Israel (Sheba Medical Center and Shaarei Zedek Medical Center). Inclusion criteria were the presence of: (1) at least 1 CAD risk factor (diabetes mellitus, hypertension, smoking, positive family history, and/or dyslipidemia) in asymptomatic patients referred for cardiovascular risk assessment; or (2) chest pain syndromes or equivocal/equivalent angina with low to intermediate pretest probability for CAD. Detailed inclusion and exclusion criteria are presented in Table S1. Of the 1151 enrolled patients, 67 had uninterpretable Holter results and 31 did not complete the EST. Thus, the ﬁnal study sample for the present analysis comprised 1043 patients, of whom 612 (59%) underwent evaluation using eSE and 431 (41%) were evaluated using eMPI.
+The 2 studies were approved by the institutional review boards of all participating centers and all patients provided informed consent before enrollment.
+Study Design
+The design of the HRV-DETECT study is presented in Figure 1. Eligible and consenting patients underwent a 1-hour period of digital Holter ECG recording for the purpose of accurate heart rate recording. Application of ECG electrodes was performed by medical technicians following standard recommendations, using approved Holter stickers. The 1-hour Holter ECG data were used for the HRV analysis by the HeartTrends algorithm. Subsequently, all patients underwent standard EST together with either echocardiography or myocardial perfusion imaging. The decision to perform eSE or eMPI was left to the discretion of the referring physician. Both tests were performed according to established American College of Cardiology/American Heart Association (AHA) clinical practice guidelines.3
+An independent core laboratory comprising 3 cardiologists experienced in echocardiogram readings blinded to the results of the HRV and the clinical characteristics of enrolled
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 2
+
+HRV-DETECT Goldenberg et al
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+Subject idenƟﬁcaƟon: No known CAD; Low-to-intermediate
+pre-test probability
+
+Subjects meeƟng inclusion/exclusion N = 1151 subjects
+
+One-hour digital Holter recorded. Heart rate data extracted for HRV
+analysis
+
+Heart rate data encrypted, HRV analyzed oﬄine & interpreted
+
+Perform Exercise Stress Test (EST) followed by Stress Echo or MPI
+PaƟent discharged with Stress Echo/MPI result. No intervenƟon in
+paƟent’s management
+
+EST data interpreted, blinded to Echocardiogram/MPI and HRV results
+
+HRV, EST, and CAD risk factors assessed as independent predictors of a posiƟve ECHO/MPI and long-term cardiovascular events
+
+Excluded: • Uninterpretable Holter (N=67) • Incomplete EST (N=31)
+
+Final analysis sample N= 1043
+
+Figure 1. Flow diagram of the HRV-DETECT (Heart Rate Variability for the Detection of Myocardial Ischemia) study design. CAD indicates coronary artery disease; EST, exercise stress test; HRV, heart rate variability; MPI, myocardial perfusion imaging.
+
+patients adjudicated the EST and stress echocardiograms. Similarly, a separate independent core laboratory comprising 3 cardiologists experienced in nuclear medicine adjudicated the myocardial perfusion imaging results. Analysis of the recorded Holter data by the HeartTrends algorithm was performed in an ofﬂine fashion, blinded to the EST and imaging results.
+The results of the HeartTrends algorithm were not available to the treating physicians and were not used to guide management.
+HRV Algorithm
+The Multipole method has been described in detail elsewhere.16,17 Brieﬂy, the Multipole HRV analysis is a new way of investigating the Poincare Plot from complex time series. The algorithm interprets the Poincare Plot as a 2-dimensional body, where each data point in the plot is assigned a unit mass to describe the total mass distribution within the plot. The measures obtained from these kinds of analyses bear intrinsic time dependence because of the construction of the plot as opposed to SD of the normalized NN interval analysis, which does not include any time ordering (shufﬂing the RR intervals lead to the same value for SD of the normalized NN interval). The Multipole method, as do other Poincare plot
+
+indices, derive information from both the time and frequency domains, as well as reﬂect increased randomness in the RR interval time series.
+From the detrended RR time series the algorithm calculates different multipoles––quadrupoles, octoupoles, and hexadecapoles––and derives the new HRV parameter DyDx. Quadrupoles describe the overall distribution of data points in the Poincare Plot, ie, the shape of the plot. DyDx calculates the ratio between the peak density on the y axis (Dy) and the x axis (Dx), respectively. A more detailed description of the technical aspects of the HeartTrends device is provided in Data S1.
+Deﬁnitions and Outcomes Measures
+EST was deﬁned as positive per AHA guidelines.18,19 The main ST-segment criteria included ≥1 mm of horizontal or downsloping ST-segment depression ≥80 ms after the J point (as compared with the level of the PQ interval) for 3 consecutive beats or ST-segment elevation ≥1 mm in a non–Q-wave lead other than V1 or AVR. Additional non–ST-segment ECG and clinical criteria for a positive EST test were implemented per AHA guidelines for exercise stress testing.18,19
+Myocardial perfusion imaging was deﬁned as positive when the amount of myocardial ischemia was >5% of the myocardium.
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 3
+
+HRV-DETECT Goldenberg et al
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+Stress echocardiograms were assessed as follows: segmental wall motion was evaluated and scored using the method by the American Society of Echocardiography4 as normal (score of 1), hypokinetic (score of 2), akinetic (score of 3), or dyskinetic (score of 4). A wall motion score index was derived by summation of individual segment scores divided by the number of interpreted segments. Inadequately visualized segments were not scored. A ﬁnal wall motion score index was derived for rest and peak stress echocardiograms by consensus between the 2 observers. If consensus in reading stress echocardiography study could not be reached, the judgment of a third observer was obtained. A stress echocardiography test was considered positive when new or worsening of preexisting wall motion abnormality was observed. Only echocardiographic criteria (new or worsening wall motion abnormality) were considered as positive tests.4
+The HRV score, as assessed by the HeartTrends algorithm, was dichotomized using receiver operating characteristic (ROC) analysis based on sensitivity and speciﬁcity as low versus high in the primary analysis, and was also assessed as a continuous measure and categorized by quartiles in 2 additional secondary analyses.
+Statistical Analysis
+We evaluated the association of the HeartTrends HRV algorithm with the presence of signiﬁcant myocardial ischemia as detected by a positive eSE or eMPI (deﬁned above). The sample size was calculated to show an independent association between HRV with the presence of signiﬁcant myocardial ischemia. With an expected event rate of 5%, we estimated that a sample of 1000 patients would be required to detect an odds ratio of 1.6 for HRV as a binary predictor of myocardial ischemia with >80% power, using 2sided 0.05 level tests and assuming a 10% dropout rate and uninterpretable tests.
+To identify the optimal decision threshold of HRV result for myocardial ischemia, ROC analysis was performed, and the best threshold was selected based on sensitivity and speciﬁcity. Baseline clinical characteristics of study patients were assessed by HRV. Continuous variables were compared using t test or Kruskal–Wallis test as appropriate for normal/nonnormal, distributed, continuous variables and expressed as meanÆSD/median (interquartile range). Categorical variables were assessed using chi-square test or Fisher exact test, when at least 1 of the cells in the table had an expected number <5.
+Multivariate regression analysis was used to assess the association of HRV, assessed as a continuous measure, with the presence of myocardial ischemia, as detected by eSE and eMPI. Multivariate logistic regression modeling was used to evaluate HRV as a categorical measure. Modeling was performed in 3 steps. Model 1 included only CAD risk factors;
+
+in model 2, HRV was added to the CAD covariates of model 1; and in model 3, the EST results and resting heart rate were added to the covariates of model 2 to assess the independent association of HRV with the presence of myocardial ischemia after further adjustment for EST and heart rate. The most appropriate predictive model for myocardial ischemia was selected using a stepwise algorithm based on Akaike information criterion. Pretest and posttest probabilities for the presence of myocardial ischemia were calculated by assessing the rate of myocardial ischemia among patients with 1, 2, and 3 CAD risk factors, before and after adding HRV as an additional risk factor. Area under the curve analysis was used to compare the effect of HRV on the improvement in the detection of myocardial ischemia with conventional CAD risk factors and EST, with Delong testing used for detecting differences in the area under the curve.
+Sensitivity analyses were performed by bootstrapping: (1) the ROC analysis for the identiﬁcation of the optimal HRV threshold; and (2) for the assessment of the association between HRV and the presence of myocardial ischemia in models 2 and 3. For this purpose, 100 bootstrap samples were generated. Bland-Altman analysis was used to evaluate the consistency of the HeartTrends algorithm derived from the 1-hour Holter data to the results derived from 20-minute recordings. Analyses were performed using SAS software (version 9.30; SAS Institute).
+Results
+The mean age of the 1043 study participants was 61 years (Æ10 years) and 56% were men. All patients had low to intermediate pretest probability for CAD, with a relatively high frequency of cardiovascular risk factors, including hypertension (45%), diabetes mellitus (17%), dyslipidemia (51%), and a family history of CAD (49%).
+ROC analysis identiﬁed a DyDx HRV value of 2.6 as being optimal for detection of myocardial ischemia among study patients. Thus, 433 study patients (42%) had low HRV (≤2.6) and 610 study patients (58%) had high HRV (>2.6). Baseline characteristics of study patients by low versus high HRV are shown in Table 1. Patients with low HRV had a signiﬁcantly higher frequency of known CAD risk factors, including older age, hypertension, diabetes mellitus, and dyslipidemia, and were likely to be treated with cardiovascular medications.
+Association Between HRV and the Presence of Myocardial Ischemia
+Myocardial ischemia, as detected by positive eSE or eMPI, was present in 66 (6.3%) patients. The frequency of myocardial ischemia was signiﬁcantly higher among patients with low HRV (11%) as compared with those with high HRV (3%,
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 4
+
+HRV-DETECT Goldenberg et al
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+Table 1. Baseline Clinical Characteristics by HRV
+
+Low HRV (≤2.6)
+
+High HRV (>2.6)
+
+Variable
+HRV result, median (IQR)
+
+(n=433)
+
+(n=610)
+
+P Value
+
+1.78 (1.74–1.95) 3.21 (2.88–3.56) <0.001
+
+Age, median (IQR) 64 (57–70)
+
+60 (51–67)
+
+<0.001
+
+Age ≥65, y
+
+236 (51)
+
+186 (32)
+
+<0.001
+
+Men
+
+248 (54)
+
+336 (58)
+
+0.18
+
+Hypertension
+
+242 (52)
+
+231 (40)
+
+<0.001
+
+Diabetes mellitus 109 (24)
+
+66 (11)
+
+<0.001
+
+Dyslipidemia
+
+260 (56)
+
+273 (47)
+
+0.004
+
+Family history of CAD
+
+243 (53)
+
+270 (47)
+
+0.066
+
+PVD
+
+7 (2)
+
+6 (1)
+
+0.68
+
+Past TIA or CVA
+
+6 (1)
+
+9 (2)
+
+0.68
+
+Past/current smoker 240 (52)
+
+303 (52)
+
+0.93
+
+Medications
+
+ACEIs
+
+37 (8)
+
+39 (7)
+
+0.51
+
+ARBs
+
+38 (8)
+
+27 (5)
+
+0.03
+
+b-Blockers
+
+75 (16)
+
+66 (11)
+
+0.03
+
+CCBs
+
+44 (10)
+
+39 (7)
+
+0.13
+
+Statins
+
+162 (35)
+
+128 (22)
+
+<0.001
+
+Diuretics
+
+20 (4)
+
+15 (3)
+
+0.17
+
+EST results
+
+Ischemic
+
+36 (8)
+
+45 (8)
+
+1.00
+
+Borderline/
+
+46 (10)
+
+67 (12)
+
+0.48
+
+ischemic
+
+Noninvasive imaging test for myocardial ischemia*
+
+Definitely ischemic
+
+47 (11)
+
+19 (3)
+
+0.002
+
+Nonischemic
+
+369 (85)
+
+572 (93)
+
+Possibly ischemic
+
+18 (4)
+
+19 (4)
+
+Data are shown as number (percentage) unless otherwise indicated. ACEIs indicates angiotensin-converting enzyme inhibitors; ARBs, angiotensin receptor blockers; CAD, coronary artery disease; CCBs, calcium channel blockers; CVA, cerebrovascular accident; EST, exercise stress test; HRV, heart rate variability; IQR, interquartile range; PVD, peripheral vascular disease; TIA, transient ischemic attack. *Patients underwent either stress myocardial perfusion imaging or stress echocardiography for the evaluation of ischemia.
+
+P=0.002) (Table 1). Accordingly, low HRV was associated with a sensitivity of 71% for the detection of myocardial ischemia, a speciﬁcity of 60%, a positive predictive value of 11%, and a negative predictive value of 97%.
+Consistent with those ﬁndings, multivariate analysis showed that low HRV was independently associated with the presence of myocardial ischemia. When dichotomized at the identiﬁed cutoff of 2.6, multivariate logistic regression
+
+analysis showed that low HRV was independently associated with a 2-fold (P=0.01) increased likelihood for the presence of myocardial ischemia after adjustment for CAD risk factors as compared with high HRV (model 2 in Table 2). Furthermore, when HRV was assessed as a continuous measure, multivariate regression analysis showed that each single unit reduction in HRV was independently associated with a corresponding 52% (odds ratio, 1.52; 95% CI, 1.11–2.13 [P=0.02]) increased likelihood for the presence of myocardial ischemia. Additional factors shown to be independently associated with the presence of myocardial ischemia in the multivariate models were age and a family history of CAD (Table 2).
+Use of HRV to Improve Pretest Probability for the Detection of Myocardial Ischemia
+We further assessed whether including HRV in the risk assessment would improve the pretest probability for the presence of myocardial ischemia based on traditional CAD risk factors, including age, hypertension, and a family history of CAD (Figure 2). This analysis showed that, among patients with none of the above CAD risk factors, the pretest probability for myocardial ischemia was 3%. Adding low HRV to the risk assessment increased the posttest probability in patients with no CAD risk factors to 4.2%, whereas high HRV reduced the posttest probability to 1.8%. Among patients with 3 CAD risk factors, the pretest probability for myocardial ischemia was 12%. Adding low HRV to the risk assessment in this higher-risk cohort increased the posttest probability to 16%, whereas high HRV reduced the posttest probability to 7%, suggesting that HRV can be used to improve conventional CAD risk assessment (Figure 2). Area under the curve analysis yielded consistent ﬁndings, demonstrating that adding HRV to individual CAD risk factors (Figure 3A through 3C), or to all CAD factors combined (Figure 3D), was associated with a signiﬁcant improvement in the sensitivity and speciﬁcity for the detection of myocardial ischemia.
+Comparison of Diagnostic Yield of EST and HRV for the Detection of Myocardial Ischemia
+Compared with HRV, EST was associated with a lower sensitivity of 30% but with a higher speciﬁcity of 94% for the detection of myocardial ischemia. Combined assessment of HRV and EST in the same multivariate model showed that both tests were independently associated with the presence of myocardial ischemia (model 3 in Table 2). Furthermore, area under the curve analysis showed that the addition of HRV to EST was associated with a signiﬁcant improvement in the sensitivity and speciﬁcity of EST for the detection of myocardial ischemia (Figure 4).
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 5
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+HRV-DETECT Goldenberg et al
+
+Table 2. Multivariate Logistic Regression Analysis: Independent Predictors of Myocardial Ischemia Detected by Noninvasive Testing
+
+Variable
+Age (per y) Men (vs women) Hypertension Diabetes mellitus Family history of CAD Positive HRV (≤2.57) Resting heart rate
+(per 1-unit increment) Positive EST
+
+Model 1
+OR (95% CI)
+1.05 (1.02–1.07) 1.31 (0.78–2.21) 1.01 (0.58–1.73) 1.64 (0.88–2.95) 2.11 (1.26–3.65)
+
+P Value
+0.002 0.31 0.99 0.11 0.01
+
+Model 2
+OR (95% CI)
+1.04 (1.01–1.07) 1.32 (0.79–2.24) 1.00 (0.58–1.71) 1.48 (0.79–2.67) 2.05 (1.22–3.55) 2.00 (1.41–2.89)
+
+CAD indicates coronary artery disease; EST, exercise stress test; HRV, heart rate variability; OR, odds ratio.
+
+P Value
+0.004 0.30 0.99 0.21 0.01 0.01
+
+Model 3 OR (95% CI)
+1.04 (1.01–1.07) 1.07 (0.61–1.89) 0.93 (0.52–1.64) 1.40 (0.72–2.61) 2.09 (1.21–3.73) 2.04 (1.46–2.92) 1.00 (0.98–1.03)
+7.03 (3.67–13.24)
+
+P Value
+0.01 0.81 0.79 0.31 0.01 0.01 0.65
+0.01
+
+Model Stability and Sensitivity Analyses
+Bootstrapping the ROC analysis for the identiﬁcation of the optimal threshold HRV showed a high correlation with the identiﬁed threshold of 2.6. Bootstrapping also demonstrated considerable stability in the association of HRV with the presence of myocardial ischemia.
+We also evaluated the consistency of the HRV results derived from the HeartTrends algorithm using 1-hour Holter recording versus data derived from 20-minute recordings. Bland-Altman analysis of the Holter ECG data for mean difference and 95% CIs yielded a P value of 0.0003 after 20 minutes (Figure S1), suggesting that this shorter interval
+
+may also be adequate for data analysis. The full 60 minutes of data were used for the current study.
+Discussion
+To our knowledge, this is the largest prospective multicenter clinical study to evaluate the association of HRV with the presence of myocardial ischemia in individuals without known CAD. Our ﬁndings provide several important clinical implications regarding risk assessment for myocardial ischemia in this population. We have shown that: (1) low HRV is independently associated with the presence of myocardial ischemia after adjusting for known CAD risk factors; (2) the
+
+25
+
+Post-test probability with HRV (%)
+
+20
+
+15
+Low HRV (DyDx)
+10
+
+5
+High HRV (DyDx >2.6)
+
+0
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+12
+
+14
+
+16
+
+18
+
+Pre-test probability by CAD risk factors (%)
+
+Figure 2. Posttest probability for myocardial ischemia by heart rate variability (HRV). CAD indicates coronary artery disease.
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 6
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+HRV-DETECT Goldenberg et al A P=0.005
+C P=0.005
+
+B P=0.002
+D P=0.047
+
+Figure 3. Comparison of area under the curve (AUC) for coronary artery disease (CAD) risk factors before and after the addition of heart rate variability (HRV) by: (A) age; (B) diabetes mellitus; (C) family history of CAD; and (D) comparison of model 2 (CAD risk factors without HRV) and model 3 (CAD risk factor+HRV)*. *P values were assessed using Delong tests.
+
+addition of HRV to conventional CAD risk assessment is associated with a signiﬁcant improvement in the probability for the detection of myocardial ischemia; and (3) the
+P=0.001
+
+independent association between HRV and the risk of myocardial ischemia remains consistent even after adjustment for EST results. Furthermore, HRV was shown to improve the diagnostic yield of EST for the detection of myocardial ischemia. These ﬁndings suggest that HRV can be used to improve risk stratiﬁcation among patients with low to intermediate pretest probability for CAD, providing incremental data to traditional cardiovascular risk factors and exercise stress testing.
+
+Figure 4. Comparison of area under the curve (AUC) for exercise stress test (EST) before and after the addition of heart rate variability (HRV).* *P values were assessed using Delong tests.
+
+Traditional Risk Assessment for CAD
+Cardiovascular disease results in 1 of every 3 deaths in the United States, or %800 000 per year.20 CAD accounts for more than half of all cardiovascular events in adults younger than 75 years and is the leading cause of death.1 Among those who die suddenly of CAD, more than half have no antecedent symptoms.1 In addition, myocardial infarction is frequently silent, causing no recognized symptoms but negatively affecting prognosis.21,22 This has resulted in screening programs designed to identify CAD before it manifests clinically, with EST
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 7
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+HRV-DETECT Goldenberg et al
+being the most widely used modality in screening programs.23 However, EST was not shown to provide incremental beneﬁts to risk assessment that is based on traditional cardiovascular risk factors, such as age, sex, lipid levels, blood pressure, smoking status, and presence of diabetes mellitus, and its beneﬁts were not shown to outweigh its possible harms and costs.24 Therefore, the American College of Physicians and other groups recommend against screening low- and intermediate-risk adults without known CAD with EST or more advanced modalities such as myocardial perfusion imaging or stress echocardiography.24 Despite this, inappropriate cardiac testing in low-risk adults has been identiﬁed as one of the most overused clinical practices,25 possibly attributable to the fact that traditional CAD risk factors are considered by clinical practitioners as insufﬁcient for CAD risk assessment. Accordingly, additional, simpler modalities are needed for improved CAD detection in patients without known disease.
+HRV for CAD Risk Assessment
+HRV is an established cardiovascular risk factor. The association of HRV and prognosis, both for all-cause and cardiovascular mortality, has been studied using ECG at rest, with exercise and in the ambulatory setting. A meta-analysis by Hillebrand and colleagues26 found that, using both resting and ambulatory ECG monitoring, lower HRV is associated with a 32% to 45% increased risk of ﬁrst cardiovascular event in patients without known CAD. Additionally, elevated HRV demonstrates a protective effect, with an increase in SD of the normalized NN interval of 1% resulting in an %1% reduction of fatal or nonfatal cardiovascular disease event.
+The present study extends prior data on the association between HRV and CAD risk and shows that low HRV, as assessed by the novel HeartTrends algorithm, is signiﬁcantly associated with the presence of myocardial ischemia in a large population of individuals without known CAD. This association was also evident when HRV was assessed as a continuous measure, wherein each 1-unit reduction in HRV was independently associated with a corresponding 52% increased likelihood for the presence of myocardial ischemia after adjustment for CAD risk factors. Notably, in the present study low HRV, identiﬁed using ROC analysis for sensitivity and speciﬁcity, was independently associated with a significant 2-fold increased likelihood for the presence of myocardial ischemia and improved the pretest probability for the presence of ischemia among patients with 0 to 3 traditional CAD risk factors.
+HRV and EST for CAD Risk Assessment
+A positive EST was also independently associated with the presence of myocardial ischemia in the present study
+
+population but had a lower sensitivity and a higher speciﬁcity compared with HRV. These data are consistent with prior reports on the sensitivity and speciﬁcity of EST. In a metaanalysis of 147 consecutively published reports involving 24 074 patients who underwent both coronary angiography and exercise testing revealed wide variability in sensitivity and speciﬁcity (mean sensitivity was 68%, with a range of 23% to 100% and an SD of 16%; mean speciﬁcity was 77%, with a range of 17% to 100% and an SD of 17%).27 Furthermore, in the few studies where workup bias was avoided by having patients agree to undergo both procedures, the approximate sensitivity and speciﬁcity of 1 mm of horizontal or downward ST depression were 50% and 90%, respectively.28,29 In the present study, EST was associated with a somewhat lower sensitivity and a similar speciﬁcity compared with prior reports, possibly attributable to the lower pretest probability for CAD in our study population. In contrast, HRV was associated with higher sensitivity of 71% and a negative predictive value of 97%, but had a lower speciﬁcity of 60%. Additionally, HRV testing was shown to signiﬁcantly improve the diagnostic yield of EST (Figure 4). These data further support the incorporation of short-term HRV testing with traditional cardiovascular risk factors for risk assessment in individuals without known CAD, wherein a negative test can effectively be used as an additional noninvasive modality to rule out signiﬁcant myocardial ischemia in an intermediaterisk population and a positive test suggests the need for additional CAD evaluation.
+Limitations
+Despite the fact that the present study comprises a large population of patients without known CAD who were prospectively enrolled in a multicenter clinical study, the rate of the primary end point (a positive eSE or eMPI) was only 6%, possibly attenuating the statistical power to detect a statistically signiﬁcant association with HRV and the presence of myocardial ischemia. However, this event rate was expected in individuals with low to intermediate pretest probability for CAD and formed the basis for the study’s sample size calculation. Furthermore, despite the relatively low event rate, our results remained statistically signiﬁcant after multivariate adjustment for traditional CAD risk factors and the EST results, further supporting the consistency of results on the independent association of HRV to the presence of myocardial ischemia.
+HRV was shown to be attenuated in noncardiovascular pathological conditions, including respiratory, neurologic, and renal disease.6 Therefore, it is possible that low HRV may reﬂect the presence of a noncardiac pathology rather than myocardial ischemia. Accordingly, it is important to incorporate the results of the test with the overall clinical status of
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 8
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+HRV-DETECT Goldenberg et al
+the individual and in the context of the presence of additional traditional CAD risk factors.
+It should also be noted that the present ﬁndings are applicable only to the present study population, comprising patients with a low to intermediate pretest probability for the presence of CAD without the presence of important comorbidities (such as cardiomyopathy, atrial ﬁbrillation, and moderate to severe pulmonary disease), which may be present in patients who are being evaluated for CAD.
+Conclusions
+HRV analysis has become an important tool in cardiology because its measurements are noninvasive and easy to perform, have relatively good reproducibility, and provide prognostic information on patients with heart disease. In the era of wearable digital monitoring devices and increased interest in personalized approaches to risk assessment, HRV may provide useful information to direct lifestyle change and monitor general health status. Our study demonstrates that short-term HRV analysis using remote digital technology can be used for improved risk assessment for myocardial ischemia in individuals without known CAD, providing incremental data to traditional cardiovascular risk factors.
+Sources of Funding
+The study was supported by an unrestricted research grant from Lev-El Diagnostics of Heart Disease, Jerusalem, Israel, to the Israeli Association for Cardiovascular Trials.
+Disclosures
+None.
+References
+1. Go AS, Mozaffarian D, Roger VL, Benjamin EJ, Berry JD, Borden WB, Bravata DM, Dai S, Ford ES, Fox CS, Franco S, Fullerton HJ, Gillespie C, Hailpern SM, Heit JA, Howard VJ, Huffman MD, Kissela BM, Kittner SJ, Lackland DT, Lichtman JH, Lisabeth LD, Magid D, Marcus GM, Marelli A, Matchar DB, McGuire DK, Mohler ER, Moy CS, Mussolino ME, Nichol G, Paynter NP, Schreiner PJ, Sorlie PD, Stein J, Turan TN, Virani SS, Wong ND, Woo D, Turner MB; American Heart Association Statistics Committee and Stroke Statistics Subcommittee. Heart disease and stroke statistics—2013 update: a report from the American Heart Association. Circulation. 2013;127:e6– e245.
+2. Moyer VA; U.S. Preventive Services Task Force. Screening for coronary heart disease with electrocardiography: U.S. Preventive Services Task Force recommendation statement. Ann Intern Med. 2012;157:512–518.
+3. Greenland P, Alpert JS, Beller GA, Benjamin EJ, Budoff MJ, Fayad ZA, Foster E, Hlatky MA, Hodgson JM, Kushner FG, Lauer MS, Shaw LJ, Smith SC, Taylor AJ, Weintraub WS, Wenger NK. 2010 ACCF/AHA guideline for assessment of cardiovascular risk in asymptomatic adults: executive summary. A report of the American College of Cardiology Foundation/American Heart Association Task Force on Practice Guidelines Developed in Collaboration With the American Society of Echocardiography, American Society of Nuclear Cardiology, Society of Atherosclerosis Imaging and Prevention, Society for Cardiovascular Angiography and Interventions, Society of Cardiovascular Computed
+
+Tomography, and Society for Cardiovascular Magnetic Resonance. Circulation. 2010;122:2748–2764.
+4. Douglas PS, Khandheria B, Stainback RF, Weissman NJ, Peterson ED, Hendel RC, Stainback RF, Blaivas M, Des Prez RD, Gillam LD, Golash T, Hiratzka LF, Kussmaul WG, Labovitz AJ, Lindenfeld J, Masoudi FA, Mayo PH, Porembka D, Spertus JA, Wann LS, Wiegers SE, Brindis RG, Douglas PS, Hendel RC, Patel MR, Peterson ED, Wolk MJ, Allen JM; American College of Cardiology Foundation; American Society of Echocardiography; American College of Emergency Physicians; American Heart Association; American Society of Nuclear Cardiology; Society for Cardiovascular Angiography and Interventions; Society of Cardiovascular Computed Tomography; Society for Cardiovascular Magnetic Resonance. ACCF/ASE/ACEP/AHA/ASNC/SCAI/SCCT/SCMR 2008 appropriateness criteria for stress echocardiography: a report of the American College of Cardiology Foundation Appropriateness Criteria Task Force, American Society of Echocardiography, American College of Emergency Physicians, American Heart Association, American Society of Nuclear Cardiology, Society for Cardiovascular Angiography and Interventions, Society of Cardiovascular Computed Tomography, and Society for Cardiovascular Magnetic Resonance endorsed by the Heart Rhythm Society and the Society of Critical Care Medicine. Circulation. 2008;117:1478–1497.
+5. Hendel RC, Berman DS, Di Carli MF, Heidenreich PA, Henkin RE, Pellikka PA, Pohost GM, Williams KA; American College of Cardiology Foundation Appropriate Use Criteria Task Force; American Society of Nuclear Cardiology; American College of Radiology; American Heart Association; American Society of Echocardiography; Society of Cardiovascular Computed Tomography; Society for Cardiovascular Magnetic Resonance; Society of Nuclear Medicine. ACCF/ASNC/ACR/AHA/ASE/SCCT/SCMR/SNM 2009 appropriate use criteria for cardiac radionuclide imaging: a report of the American College of Cardiology Foundation Appropriate Use Criteria Task Force, the American Society of Nuclear Cardiology, the American College of Radiology, the American Heart Association, the American Society of Echocardiography, the Society of Cardiovascular Computed Tomography, the Society for Cardiovascular Magnetic Resonance, and the Society of Nuclear Medicine. Circulation. 2009;119:e561–e587.
+6. Xhyheri B, Manfrini O, Mazzolini M, Pizzi C, Bugiardini R. Heart rate variability today. Prog Cardiovasc Dis. 2012;55:321–331.
+7. Task Force of the European Society of Cardiology the North American Society of Pacing Electrophysiology. Heart rate variability: standards of measurement, physiological interpretation, and clinical use. Circulation. 1996;93:1043–1065.
+8. Valkama JO, Huikuri HV, Koistinen J, Yli-M€ayry S, Juhani Airaksinen KE, Myerburg RJ. Relation between heart rate variability and spontaneous and induced ventricular arrhythmias in patients with coronary artery disease. J Am Coll Cardiol. 1995;25:437–443.
+9. Molgaard H, Sorensen KE, Bjerregaard P. Attenuated 24-h heart rate variability in apparently healthy subjects, subsequently suffering sudden cardiac death. Clin Auton Res. 1991;1:233–237.
+10. Bigger JT, Fleiss JL, Steinman RC, Rolnitzky LM, Kleiger RE, Rottman JN. Frequency domain measures of heart period variability and mortality after myocardial infarction. Circulation. 1992;85:164–171.
+11. Dekker JM, Crow RS, Folsom AR, Hannan PJ, Liao D, Swenne CA, Schouten EG. Low heart rate variability in a 2-minute rhythm strip predicts risk of coronary heart disease and mortality from several causes: the ARIC study. Circulation. 2000;102:1239–1244.
+12. Liao D, Cai J, Rosamond WD, Barnes RW, Hutchinson RG, Whitsel EA, Rautaharju P, Heiss G. Cardiac autonomic function and incident coronary heart disease: a population-based case-cohort study: the ARIC study. Am J Epidemiol. 1997;145:696–706.
+13. Tsuji H, Larson MG, Venditti FJ, Manders ES, Evans JC, Feldman CL, Levy D. Impact of reduced heart rate variability on risk for cardiac events: the Framingham Heart Study. Circulation. 1996;94:2850–2855.
+14. Oieru D, Shlomo N, Moalem I, Rozen E, Naimushin A, Klempfner R, Goldenberg I, Goldkorn R. A novel heart rate variability algorithm for the detection of myocardial ischemia—pilot data from a prospective clinical trial. Isr Med Assoc J. 2015;17:161–165.
+15. Goldkorn R, Naimushin A, Shlomo N, Dan A, Oieru D, Moalem I, Rozen E, Gur I, Levitan J, Rosenmann D, Mogilewsky Y, Klempfner R, Goldenberg I. Comparison of the usefulness of heart rate variability versus exercise stress testing for the detection of myocardial ischemia in patients without known coronary artery disease. Am J Cardiol. 2015;115:1518– 1522.
+16. Olesen RM, Thomsen PE, Saermark K. Statistical analysis of the DIAMOND MI study by the multipole method. Physiol Meas. 2005;26:591–598.
+17. Lewkowicz ML, Puzanov N, Shnerb N, Særmark K. Description of complex time series by multipoles. Physica A. 2002;311:260–274.
+18. Fletcher GF, Ades PA, Kligﬁeld P, Arena R, Balady GJ, Bittner VA, Coke LA, Fleg JL, Forman DE, Gerber TC, Gulati M, Madan K, Rhodes J, Thompson PD,
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 9
+
+ORIGINAL RESEARCH
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+HRV-DETECT Goldenberg et al
+Williams MA; American Heart Association Exercise, Cardiac Rehabilitation, and Prevention Committee of the Council on Clinical Cardiology, Council on Nutrition, Physical Activity and Metabolism, Council on Cardiovascular and Stroke Nursing, and Council on Epidemiology and Prevention. Exercise standards for testing and training: a scientiﬁc statement from the American Heart Association. Circulation. 2013;128:873–934.
+19. Mensah GA, Brown DW. An overview of cardiovascular disease burden in the United States. Health Aff (Millwood). 2007;26:38–48.
+20. Sheifer SE, Gersh BJ, Yanez ND III, Ades PA, Burke GL, Manolio TA. Prevalence, predisposing factors, and prognosis of clinically unrecognized myocardial infarction in the elderly. J Am Coll Cardiol. 2000;35:119–126.
+21. Sigurdsson E, Thorgeirsson G, Sigvaldason H, Sigfusson N. Unrecognized myocardial infarction: epidemiology, clinical characteristics, and the prognostic role of angina pectoris. The Reykjavik Study. Ann Intern Med. 1995;122:96–102.
+22. Chou R, Arora B, Dana T, Fu R, Walker M, Humphrey L. Screening asymptomatic adults with resting or exercise electrocardiography: a review of the evidence for the U.S. Preventive Services Task Force. Ann Intern Med. 2011;155:375–385.
+23. Lauer M, Froelicher ES, Williams M, Kligﬁeld P; American Heart Association Council on Clinical Cardiology, Subcommittee on Exercise, Cardiac Rehabilitation, and Prevention. Exercise testing in asymptomatic adults: a statement for professionals from the American Heart Association Council on Clinical Cardiology, Subcommittee on Exercise, Cardiac Rehabilitation, and Prevention. Circulation. 2005;112:771–776.
+
+24. Chou R; High Value Care Task Force of the American College of Physicians. Cardiac screening with electrocardiography, stress echocardiography, or myocardial perfusion imaging: advice for high-value care from the American College of Physicians. Ann Intern Med. 2015;162:438–447.
+25. Kale MS, Bishop TF, Federman AD, Keyhani S. Trends in the overuse of ambulatory health care services in the United States. JAMA Intern Med. 2013;173:142–148.
+26. Hillebrand S, Gast KB, de Mutsert R, Swenne CA, Jukema JW, Middeldorp S, Rosendaal FR, Dekkers OM. Heart rate variability and ﬁrst cardiovascular event in populations without known cardiovascular disease: meta-analysis and dose-response meta-regression. Europace. 2013;15:742–749.
+27. Gibbons RJ, Balady GJ, Beasley JW, Bricker JT, Duvernoy WF, Froelicher VF, Mark DB, Marwick TH, McCallister BD, Thompson PD Jr, Winters WL, Yanowitz FG, Ritchie JL, Gibbons RJ, Cheitlin MD, Eagle KA, Gardner TJ, Garson A Jr, Lewis RP, O’Rourke RA, Ryan TJ. ACC/AHA Guidelines for Exercise Testing. A report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Committee on Exercise Testing). J Am Coll Cardiol. 1997;30:260–311.
+28. Morise AP, Diamond GA. Comparison of the sensitivity and speciﬁcity of exercise electrocardiography in biased and unbiased populations of men and women. Am Heart J. 1995;130:741–747.
+29. DelCampo J, Do D, Umann T, McGowan V, Froning J, Froelicher VF. Comparison of computerized and standard visual criteria of exercise ECG for diagnosis of coronary artery disease. Ann Noninvasive Electrocardiol. 1996;1:430–442.
+
+DOI: 10.1161/JAHA.119.014540
+
+LJournal of the American Heart Association 10
+
+Supplemental Material
+
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+Data S1.
+Heart Trends Device The regulatory status: The previous software version was cleared for marketing in the USA under 510k number K012825. The cleared intended use was for the analysis, summary and reporting of up to 3 channels of prerecorded ambulatory ECG data. It was also intended to provide measurements of MPW (Multipole Parameter Weighted) HRV. Cleared Device description: The HeartTrends® software was employed as a measuring tool to present Heart Rate Variability (HRV) to qualified clinician review, edit and assessment. It provides measurements of the MPW HRV. Heart rate variability is a known method for analyzing the changes in heart rate over the recorded duration. Subjects with a low variability were suggested to be at increased risk for cardiac events. The HeartTrends device is based on a novel algorithm for analyzing heart rate variability, which is constructed from the Multipole method, based on a physical-mathematical description of complex time series. The Multipole method generates several parameters, multipoles, where every single one describes the HRV. The HeartTrends device received CE mark (0344) on 17 July 2013 and valid through 2024, for the product category: Software based medical devices for diagnostics-aid of ischemic heart diseases using Heart Rate Variability analysis. The DyDx indicator value can be used as a prognostic score to assist in diagnosis of coronary artery disease for which the physician renders their own opinion. HeartTrends does not offer a diagnostic opinion to the user. HeartTrends is intended to be used by qualified personnel in evaluating the subject in conjunction with the subject's clinical history, symptoms, other diagnostic tests, as well as the professional's clinical judgment.
+
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+The changes between the FDA-cleared software version and the version to be tested in this study were minimal; the base algorithm did not change, changes were made in the GUI dividing the software into a Client-Server base application, and adaptation to more recent operating systems. Additionally, there was a change in the intended use of the HeartTrends device, while used before for ECG data recording, storing and analysis, it is now investigated for the diagnosis of ischemic heart disease: The software underwent full software validation and verification that complies with international regulatory requirements.
+
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+Table S1. Inclusion and exclusion criteria for study participation.
+Inclusion Criteria:
+• Age ≥ 21
+• Referral for EST in a subjects without known CAD due to either one of the following two indications: 1. Chest pain syndrome or equivocal angina in subjects with low to intermediate pretest probability of CAD 2. At least one CAD risk factor (diabetes mellitus, hypertension, smoking, positive family history, and/or dyslipidemia) in asymptomatic subjects referred for cardiovascular risk assessment.
+• Willing and able to provide written informed consent
+Exclusion Criteria:
+• Acute Coronary Syndrome
+• Established CAD
+• Atrial fibrillation or flutter
+• Cardiac Pacemaker
+• Clinical diagnosis of heart failure
+• Severe COPD (FEV1< 50% predicted value)
+• Active myocarditis, constrictive pericarditis, any cardiomyopathy, cardiac or systemic amyloidosis
+• Known drug or alcohol dependence or any other factors which will interfere with the study conduct or interpretation of the results or in the opinion of the investigator are not suitable to participate;
+• Any illness that might reduce life expectancy to less than 1 year from screening
+• Left bundle branch block (LBBB), significant intraventricular conduction delay (IVCD) or significant (>1mm) ST deviations on baseline ECG
+
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+• Inability to perform an exercise stress test (i.e. orthopedic or neurological limitations)
+• Any significant valvular disease defined as:
+Established valvular regurgitation or stenosis abnormality above moderate severity
+• BMI >35 kg/m2
+• Recent (< 6 months) history of pulmonary embolism
+
+Downloaded from http://ahajournals.org by on December 20, 2019
+
+Figure S1. Bland-Altman analysis of the Holter ECG comparing HeartTrends results from 1-hour recordings with data derived from 20 minute recordings.*
+*The graph of tracks the P-Value over 10-minute time intervals. Results of the analysis also yielded statistically significant P-Values of: 0.000297, 0.000303, 0.000284, 0.000248, 0.000127 for all the 10 to 50-minute intervals analyzed.
+
+Downloaded from http://ahajournals.org by on December 20, 2019
+

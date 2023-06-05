@@ -1,0 +1,1268 @@
+Author Manuscript
+
+Author Manuscript
+
+HHS Public Access
+Author manuscript
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+Published in final edited form as: Comput Biol Med. 2019 January ; 104: 127–138. doi:10.1016/j.compbiomed.2018.11.013.
+Importance of the Heart Vector Origin Point Definition for an ECG analysis: The Atherosclerosis Risk in Communities (ARIC) study
+Erick A. Perez-Alday, PhD1, Yin Li-Pershing, BS1, Aron Bender, MD1, Christopher Hamilton, BA1, Jason A. Thomas, BS1, Kyle Johnson, BS1, Tiffany L. Lee, BA1, Ryan Gonzales, BS2, Aaron Li3, Kelley Newton, MS1, and Larisa G. Tereshchenko, MD, PhD1 1Knight Cardiovascular Institute, Oregon Health & Science University, Portland, OR 2Concordia University, Portland, OR 3Carleton College, Northfield, MN
+Abstract
+Aim——Our goal was to investigate the effect of a global XYZ median beat construction and the heart vector origin point definition on predictive accuracy of ECG biomarkers of sudden cardiac death (SCD).
+Methods——Atherosclerosis Risk In Community study participants with analyzable digital ECGs were included (n=15,768; 55% female, 73% white, mean age 54.2±5.8 y). We developed an algorithm to automatically detect the heart vector origin point on a median beat. Three different approaches to construct a global XYZ beat and two methods to locate origin point were compared. Global electrical heterogeneity was measured by sum absolute QRST integral (SAI QRST), spatial QRS-T angle, and spatial ventricular gradient (SVG) magnitude, azimuth, and elevation. Adjudicated SCD served as the primary outcome.
+Results——There was high intra-observer (kappa 0.972) and inter-observer (kappa 0.984) agreement in a heart vector origin definition between an automated algorithm and a human. QRS was wider in a median beat that was constructed using R-peak alignment than in time-coherent beat (88.1±16.7 vs. 83.7±15.9 ms; P<0.0001), and on a median beat constructed using QRS-onset as a zeroed baseline, vs. isoelectric origin point (86.7±15.9 vs. 83.7±15.9 ms; P<0.0001). ROC AUC was significantly larger for QRS, QT, peak QRS-T angle, SVG elevation, and SAI QRST if measured on a time-coherent median beat, and for SAI QRST and SVG magnitude if measured on a median beat using isoelectric origin point.
+Conclusion——Time-coherent global XYZ median beat with physiologically meaningful definition of the heart vector’s origin point improved predictive accuracy of SCD biomarkers.
+Correspondence: Larisa Tereshchenko, 3181 SW Sam Jackson Park Rd; UHN62; Portland, OR, 97239. tereshch@ohsu.edu. Phone: 503-494-7400; Fax:503-494-8550. Disclosures None.
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 2
+
+Keywords Electrocardiology; Vectorcardiogram; Median beat; Origin point; electrocardiography; sudden cardiac death; vectorcardiography
+Introduction
+According to the American Heart Association, out-of-hospital Sudden Cardiac Death (SCD) is the most frequent and the most dramatic mode of cardiovascular death, with a survival rate of about 10% [1]. The electrocardiogram (ECG) is a ubiquitous tool in clinical practice. Every day physicians rely on (semi)automatically measured ECG parameters such as corrected QT interval (QTc), and QRS duration to guide clinical decisions. QTc[2] and other ECG metrics[3] were included in the risk models of SCD. Our group recently developed a global electrical heterogeneity (GEH) risk score of SCD[4] and showed that addition of GEH ECG metrics to traditional clinical risk factors significantly improved reclassification of SCD risk.[5]
+It is well established that accuracy and reproducibility of ECG measurements are significantly improved if measurements are performed on a multi-lead, globally representative median beat.[6] However, it is unknown whether different approaches of a global multi-lead formation can affect VCG and ECG measurements. The Recommendations for the Standardization and Interpretation of the ECG[6] suggested that “a comparative study is needed of global measurements made by different methods”.
+The ECG measurements are based in the lead theory which assumes that the heart is a dipole vector (heart vector) that is moving during the cardiac cycle in three-dimensional (3D) space, forming vectorcardiographic (VCG) loops [7]. Projection of the heart vector movement on any ECG lead axis produces the waveform measured in that lead. The electrical origin of the heart vector has important electrophysiological and biophysical meaning, as it is defined by the isoelectric state of the heart.[8] The electrocardiographic method, developed by Einthoven and colleagues, quantifies the magnitude and direction of the resultant electromotive force produced by the heart at a given time instance during the cardiac cycle. In 1938, Wilson and Johnston highlighted the importance of the heart vector origin point (see Figure 3 from [8]), which corresponds to the electrocardiographic baseline. Due to technological limitations in the 1930s they were not able to define the origin point, and noted that “details are lost in the uniformly black area which surrounds the isoelectric point”.[8] Modern ECG signal resolution allows characterization of its fine features. However, contemporary ECG standards ignore VCG origin definition [6, 9].
+This study’s goals are (1) to define the heart vector origin point, (2) to compare global measurements made by different approaches to global median beat construction and VCG origin point definition, and (3) compare differences in predictive accuracy of ECG and VCG biomarkers of SCD in the Atherosclerosis Risk in Community (ARIC) study participants.
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 3
+
+Methods
+The algorithms and software used to calculate median beat and define the heart vector origin point, and software code are provided at https://github.com/Tereshchenkolab/Origin. The data underlying our work can be obtained via ARIC Coordinating Center at the University of North Carolina—Chapel Hill, as described online[10]. Also, most ARIC data can also be obtained from the National Heart, Lung, and Blood Institute (NHLBI) – maintained BioLINCC repository [11].
+Study Population The Atherosclerosis Risk in Communities (ARIC) study is an ongoing, prospective cohort study which was created to evaluate risk factors, progression, and outcomes of atherosclerosis in 15,792 participants (45% male, 74% white) enrolled in the United States in 1987–1989. The ARIC study protocol and design have been previously described [12]. The study protocol was approved by institutional review boards (IRB) at each field center, and all participants signed informed consent. In addition, this study was approved by the Oregon Health & Science University IRB.
+In this study, we included all ARIC participants with available and analyzable digital ECGs (n=15,768). Participants with absent or poor quality ECGs (due to noise, artifacts, missing leads; n=24) were excluded.
+SCD was defined as a sudden pulseless condition in a previously stable individual without evidence of a non-cardiac cause of cardiac arrest, if cardiac arrest occurred out of the hospital or in the emergency room. To identify cases of SCD in ARIC, cases of cardiovascular death that occurred by December 31, 2012, were reviewed and adjudicated by a committee of electrophysiologists, general cardiologists, and internists, as previously described.[13]
+Electrocardiogram analyses All resting 12-lead ECGs from the first baseline visit of the ARIC study were analyzed [4]. The sampling rate of ECG signals was 500Hz and amplitude resolution was 1µV.
+Construction of a representative global XYZ median beat A three-step approach was used for construction of all the comparison beats (Figure 1):
+1. Beat labeling and dominant type beat selection—First, each beat on a 10second 12-lead ECG recording was manually labeled by the team of physicians, as recently described.[14] Non-analyzable beats due to noise and artifacts, and non-dominant ectopic beats were excluded from analysis. Only normal sinus beats in a 10-second recording were included in the construction of a normal sinus median beat. Custom software for VCG analyses was written in MATLAB (MathWorks, Natick, MA, USA). Kors transformation matrix was used to obtain the orthogonal X, Y, and Z leads from 12-lead ECG.[15]
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 4
+
+2. Single-lead median beat construction—At the next step, all included beats on a single lead, V x, were then aligned to construct a representative single-lead median beat,VMX. The maximum absolute value of the QRS complex, maximum absolute of the first derivative (maximum |dV/dt|), and QRS onset were used to construct the different types of representative single-lead median beat (Figure 1A). After alignment, the representative median beat, VMX, was constructed using the median function of MATLAB (MathWorks, Natick, MA, USA). We also measured correlation between time-coherent global XYZ median beats constructed using single-lead X alignment by QRS peak and maximum |dV/dt|.
+
+3. Global XYZ multi-lead beat construction—At the third step, we constructed a global XYZ median beat. We compared three different types of global beats:
+1. R-aligned: single-lead alignment at the maximum value of the QRS complex was performed on all 3 leads X, Y, and Z, with subsequent multi-lead alignment by QRS peak;
+
+V MX _QRSpeak
+
+=
+
+VMX
+
+centered
+
+at
+
+max V QRS
+
+MX
+
+V MYQRSpeak
+
+=
+
+VMY
+
+centered
+
+at
+
+max V QRS
+
+MY
+
+V MZ _QRSpeak
+
+=
+
+VMZ
+
+centered
+
+at
+
+max V QRS
+
+MZ
+
+2. Q-aligned: single-lead alignment at the beginning of QRS complex was performed on all 3 leads X, Y, and Z, with subsequent multi-lead alignment by QRS onset;
+V MX _QRSonset = V MX centered atQRSonset V MX
+
+V MY _QRSonset = V MY centered atQRSonset V MY
+
+V MZ _QRSonset = V MZ centered atQRSonset V MZ
+3. time-coherent: single-lead alignment was performed only on a single lead (X). Corresponding time points on leads Y and Z were used for construction of timecoherent global XYZ median beat (Figure 1B).
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+V MX _Time
+
+=
+
+VMX
+
+centered at max QRS
+
+∂VMX ∂t
+
+Page 5
+
+V MYTime
+
+=
+
+VMY
+
+centered
+
+at
+
+max QRS
+
+∂VMX ∂t
+
+V MZ _Time
+
+=
+
+VMZ
+
+centered
+
+at
+
+max QRS
+
+∂VMX ∂t
+
+Vectorcardiogram origin point definition
+
+We defined VCG origin point based on its electrophysiological and biophysical meaning: the
+
+electrically quiet, or isoelectric state of the heart when the heart vector does not move in 3D
+
+space. The electrically silent period was defined as the segment between the end of
+
+repolarization and the onset of P-wave (if present), or the beginning of QRS complex. The
+
+Vector-Magnitude (VM) was obtained by computing the Euclidean norm,
+
+VM
+
+=
+
+2
+
+V
+
+2 M
+
+X
+
++
+
+V
+
+2 MY
+
++
+
+V 2M Z ,
+
+for
+
+each
+
+global XYZ media beat constructed
+
+(VM_QRSpeak,
+
+VM_QRSonset, and VM_time). The definition of the VCG origin point determines the definition of the VM ECG baseline. We compared our definition of the VCG origin point with the
+
+current industry standard,[16] which defines the zero value of an ECG baseline in a
+
+representative median beat at the beginning of a QRS (Figure 1C).
+
+Algorithm to detect the VCG electrically quiet origin point
+We developed an algorithm to detect the VCG origin point on a median beat and provided the software code at https://github.com/Tereshchenkolab/Origin. A schematic flowchart of the algorithm can be seen in Figure 2.
+Two time interval windows were identified to select an isoelectric segment in the TP segment (Figure 3A). The first window (w1) was dynamically calculated from the RR’ interval using the following equation (eq. 1):
+
+W1 = f loor RR′interval × 0.8 − 372.69 * 0.5 . (eq. 1)
+
+The center of the window, TC, also depended on the RR interval and the type of beat under investigation. Two cases were identified: (1) TC = 260ms, if RR interval (RRint) < 600 ms and median beat ≠ Supraventricular (S). TC = 320ms, for any other case: RRint ≥ 600 ms for any type of beat or RRint < 600 but median beat =S.
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 6
+
+TC =
+
+260 ms to the le f t o f Rpeak, i f RRint < 600 ms and beat ≠ S 320 ms to the le f t o f Rpeak, Any other case
+
+(eq. 2)
+
+The second window (w2) was a fixed window of 320ms with same Tc center (Figure 3A-ii). If the edges of w1 were larger than the edges of w2, the edges of w1 were set to be the same as w2.
+Following selection of the isoelectric baseline, the algorithm used two approaches to select the flattest line on VM and XYZ leads signal within w1: clustering of the signal with the least variance in a given window and minimum absolute change of magnitude closest to the end of the window.
+
+Searching for a candidate segment with the least variance—We calculated the variance on the X, Y, and Z lead signals with a moving window of 20ms (movvarXYZ). Using the MATLAB function movvar, we identified the segment with the least amount of variance i.e. the flattest portion of the signal (Figure 3B). Candidate points were identified by looking for the segments containing the largest number of counts from the histogram of movvarXYZ with a fixed bin width of 10 µV2. Once candidate points were identified, they were separated into clusters. The clusters were then defined such that the minimum distance between the edges of neighboring clusters was larger or equal to 8ms in order to reduce the impact of noise within the signal. The algorithm selected two candidate clusters comprised of the largest number of elements with which to perform origin point calculation.
+The absolute voltage gradient across X, Y, and Z was calculated with a time step of 10ms. Then, the average of the sum of the absolute voltage gradient across the X, Y, and Z leads of a given cluster was obtained. The cluster with the smallest average gradient was chosen to best approximate the isoelectric segment, and the origin point was chosen at the median time point of that candidate cluster. If the last criteria was not met and the algorithm could not identify an origin point candidate within w1, the search for an origin point was carried on to w2 with the algorithm described above.
+Searching for a candidate segment with the least change—As an alternative approach, we attempt to identify the isoelectric segment by computing the sum of the absolute voltage gradient on the X, Y, and Z leads (Figure 3C):
+
+x, y, z
+
+∇VM
+
+=
+
+dV x dtn
+
++
+
+dV y dtn
+
++
+
+dVz dtn
+
+(eq. 3)
+
+Then, we compared the gradient at any time step Δtn and their neighboring time points (Δtn − 1 and Δtn + 1) against the minimum of the sum of the voltage absolute gradient (eq. 4) in the window w1
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 7
+
+min
+
+x, y, z
+
+∇VM
+
+= argmintn:tn ∈
+
+w1(
+
+dV x dtn
+
++
+
+dV y dtn
+
++
+
+dVz dtn
+
+)
+
+(eq. 4)
+
+The candidate origin point was the middle point of the segment where the comparison was below a threshold of 0.1 mV, to look for a stable isoelectric line. The comparison was performed starting at the right edge of the window w1 (closest to the R peak), then working backward toward the preceding T wave with a time step of Δtn = 4ms.
+Final selection of the origin point—At the final step of the algorithm, the two previously identified candidate origin points were compared using the following criteria: area under the curve of reconstructed VM and sum of average absolute gradient in 10ms time steps. Individual VMs were reconstructed for each candidate by defining the candidate as the zero-value baseline. The area under the curve for each VM was computed only in window w1 (Figure 3D). The sum of the average absolute gradient of each VM, with a time step of 10ms, was calculated around each candidate. The final heart vector origin point with the smallest area under the windowed VM curve and the minimum average voltage gradient was selected.
+Accuracy of the VCG origin point detection algorithm
+Appropriate selection of the VCG origin point was confirmed manually by investigators (CH, RG, AL, KN, and KJ) with the aid of a graphical display (Figure 4) for all ECGs, separately for different beat construction and origin point methods. Agreement between an automatic detection and investigator’s opinion was assessed. Cases of disagreement were reviewed by the 2nd investigator (EAPA), who made a final determination and corrected origin point location as needed. Inter-observer and intra-observer agreement were evaluated.
+Detection of ECG fiducial points on global XYZ Vector-Magnitude
+All ECG fiducial points were automatically detected on global XYZ median beat VM, using previously validated algorithms.[17] QRS onset and offset were detected using the Pan and Tompkins approach.[17] T-offset was detected using the curve-length transformation by Zong et al.[18]
+Measurement of global electrical heterogeneity
+GEH was measured as previously described.[4] We have provided the software code for GEH analysis at Physionet (https://physionet.org/physiotools/geh/). The spatial peak area QRS, T, and SVG vectors were defined (Figure 5). The scalar value of SVG was measured by the sum absolute QRST integral (SAI QRST) as previously described.[19, 20] In addition, scalar value of SVG was also assessed as a QT integral on Vector-Magnitude signal (iVMQT), or an area-under-the-Vector-Magnitude signal curve from the QRS-onset to Toffset.[21] For comparison of the effect of beats alignment and origin point definition on ECG and VCG measurements, we did not validate the accuracy of fiducial points (QRS onset and offset, T offset) measurements on VM.
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 8
+
+Statistical analysis
+Statistical analysis was performed using STATA MP 15.1 (StataCorp LP, College Station, TX, USA). The κ-statistic was used to evaluate inter-observer and intra-observer agreement between an automated algorithm and investigators, and between different investigators. Paired multivariate test of means (Hotelling’s t-squared statistic) was used to compare ECG and VCG measurements performed on a median beat constructed using 3 different types of beats alignment: by QRS onset, QRS peak, and time-coherent. Paired t-test was used to compare ECG and VCG measurements performed on a median beat constructed using two different definitions of origin point: with origin points defined as the isoelectric flattest segment of Tend-Ponset or located at the QRS onset. Harrell’s C, and Gönen and Heller’s K concordance coefficients with 95% confidence intervals (CI) were calculated. Equality of the areas under the (receiver operating characteristic, ROC) curve (AUC) for studied ECG and VCG predictors of SCD was compared using a Wald test of the null hypothesis that all classifier AUC values are equal. [22] In addition, as we recently showed that the best predictive accuracy of ECG biomarkers is within 2 years after ECG recording,[14] timedependent (2-year) ROC AUC analysis was performed, using survival analysis framework[23, 24].
+
+Results
+Study population
+Clinical characteristics of the study population are shown in Table 1. Approximately half of the study participants were female, and 73% were white. Approximately one-third of the study population had a common cardiovascular risk factor (e.g. hypertension, smoking). Average traditional ECG parameters were normal. Over a median follow-up of 24.4 years, 581 SCDs occurred (incidence 1.77 (95%CI 1.63–1.92) per 1,000 person-years).
+Agreement in VCG origin point definition
+Human observers agreed with automated detection of isoelectric origin point in 97.97% of time-coherent global beats, 97.65% of R-peak-aligned, and 96.84% of QRS-onset-aligned global XYZ beats. The intra-observer agreement was high (kappa 0.972), as well as interobserver agreement (kappa 0.984).
+Effect of beats alignment on ECG and VCG measurements
+Marked changes were observed in the ECG and VCG morphology in different types of global beats (Figure 6). The type of beat significantly affected all ECG and VCG measurements (Table 2). QRS duration and QT interval were larger in an R-aligned global median beat compared to a time-coherent beat. Direction of peak QRS, T, and SVG vectors was affected by different alignment to the largest degree, whereas differences in direction of area vectors were less prominent, albeit statistically significant. The narrowest peak QRS-T angle was observed on the time-coherent global median beat. Alignment by QRS onset produced peak QRS-T angle that was wider by 5 degrees. Alignment by R-peaks leads to further widening of peak QRS-T angle by additional 5 degrees (Table 2).
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 9
+
+Different types of beats were characterized by significant differences in SCD predictive accuracy (Table 3 and Figure 7). Predictive accuracy of spatial peak QRS-T angle measured on a time-coherent global median beat was significantly better than predictive accuracy of peak QRS-T angle measured on a global median beat that was constructed using QRS onset alignment. Overall, across all studied ECG and VCG predictors of SCD, time-coherent global XYZ median beat facilitated significantly higher predictive accuracy of SCD (Table 3 and Figure 7).
+
+Effect of VCG origin point location on ECG and VCG measurements
+Noticeable differences were observed in the ECG and VCG morphology when comparing the two definitions of origin point (Figure 6). The VCG origin point significantly affected all ECG and VCG measurements (Table 2). QRS duration, QTc, SAI QRST, and SVG were significantly larger if measured on a median beat constructed using QRS-onset definition of the heart vector origin. However, spatial peak QRS-T angle was significantly wider if measured on a median beat constructed using isoelectric origin point (Table 2).
+The definition of the ECG origin point as an electrically-silent isoelectric segment of the cardiac cycle resulted in the most physiologically accurate measurement of GEH and traditional ECG parameters on a time-coherent global XYZ beat, which was highlighted by significantly higher ROC AUCs (Table 3 and Figure 7).
+
+Discussion
+In this study, we defined the origin point of the heart vector as the electrically silent portion of the cardiac cycle (isoelectric period). We showed that the physiologically meaningful definition of the heart vector’s origin point and time-coherent global XYZ median beat construction affected ECG measurements, and improved predictive accuracy of ECG and VCG biomarkers of SCD.
+The origin of the heart vector
+Our results highlight the importance of the electrophysiological definition of the electrical origin point of the heart vector (Figure 6). We defined the heart vector origin as a point in 3D space which corresponds to the interval of time within the cardiac cycle where the heart vector does not move in 3D space. An appropriate selection of the heart vector origin point defines the ECG’s baseline, which then affects all subsequent ECG and VCG measurements. Current ECG guidelines do not define the heart vector origin point.[6, 9] Traditionally, the beginning of the QRS complex is defined as a “zero” value on a 12-lead ECG (Figure 1Cii). [16] However, the beginning of the QRS complex is not electrically silent: it is a time of atrial repolarization. Moreover, detection of QRS onset is challenging, resulting in disagreement between different algorithms.[25] A physiologically accurate definition of the heart vector origin point is crucial for accurate VCG and ECG measurements. Our algorithm searches for the flattest line within the cardiac cycle to provide a robust and reproducible solution, which is important for accurate detection of QRS, T, and SVG peak vectors. To facilitate its implementation, we provided our open-source Matlab software on GitHub.
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 10
+
+A heart dipole model is a mathematical approximation with limitations. While a single dipole model is a good approximation of the healthy heart’s electrical activity in healthy individuals, a single dipole model may be less accurate in diseased hearts.[26] Multipolar modeling can better characterize electrical activity of the heart, but it requires body surface mapping. Widely used 12-lead ECG technology is based on a single dipole model. In our work, we demonstrated that it is possible to localize the heart vector’s origin point, and to construct a time-coherent, global median XYZ beat. Vector-Magnitude that is zeroed at the origin of the heart vector provides the most physiologically accurate cardiac beat. This is a fundamental step for any further global ECG and VCG measurements.
+
+Appropriate construction of the global XYZ median beat
+Modern ECG industry standards endorse the use of a representative median beat[6] for accurate ECG measurements. For the development of a median beat, every beat included in the template beat must be properly aligned (Figure 6). Several approaches to beat alignment are currently employed although some algorithm developers do not disclose details of their beat alignment process. A recent comparison of leading ECG algorithms revealed significant differences in ECG measurements by ECG manufacturers.[25] Different approaches to beat alignment may be one of the reasons of discrepant results of ECG measurements. Results of our study showed that time-coherent beat construction is the best approach, which preserves the physiological sequence of cardiac activation and recovery. The time-coherent approach takes an easily detectable fiducial point as detected only on one ECG lead (e.g., X). Corresponding time-points on two other leads (e.g., Y and Z) are taken regardless of their morphological features. Such an approach significantly reduces the chance of error and preserves cardiac beat morphology. Our study shows that the time-coherent beat construction and a physiological definition of the heart vector origin improved the dynamic predictive value of ECG and VCG measurements.
+
+Novelty of the work
+In this work we, for the first time, defined the origin point of the heart vector, and developed a novel algorithm to identify XYZ coordinates of the origin point in VCG. In addition, we developed a Matlab software application, and provided the open-source software at: https:// github.com/Tereshchenkolab/Origin. For the first time, we compared different approaches of global beat construction. We proposed a time-coherent approach of global median XYZ (VCG) beat construction, zeroed in the origin point. “Recommendations for the Standardization and Interpretation of the Electrocardiogram” [6] suggested that “a comparative study is needed of global measurements made by different methods.” We used data of the a large prospective cohort study of more than 15,000 participants, and showed significant differences in global ECG measurements (QT interval, QRS duration) as a result of different approaches to global median beat construction.
+
+Strengths and Limitations
+The strength of our study derives from the large prospective cohort design, and use of a clinically significant, well-adjudicated SCD outcome. However, as we analyzed resting 12lead ECGs in a community, we did not encounter cardiac arrhythmias with heart rate above
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 11
+
+139 bpm. Our developed algorithm is not designed to define an origin point if the heart rate exceeds 139 bpm. Additional studies are needed to define origin point in tachycardia.
+As we focused on a global XYZ beat construction, we did not compare all possible singlelead beats alignment approaches. Specifically, we did not compare template matching or cross-correlation, which is an important step which can potentially affect the dominant beat selection.[27] Theoretically, if performed separately on each lead, cross-correlation can shift beats in time to a different degree in different leads, therefore distorting global temporal relationships and precluding formation of time-coherent global XYZ beat. The effect of cross-correlation on the formation of a time-coherent global XYZ beat deserves further study.
+We used single-lead alignment by QRS peak. While we found a high degree of correlation between global time-coherent XYZ beats constructed using single X-lead alignment by QRS peak and maximum |dV/dt| using 10-sec stationary resting ECGs (see Supplementary Material), use of QRS peak in the alignment might produce an error as the QRS peak can be affected by respiration and noise.[28] Maximum |dV/dt| is more stable fiducial point, and, therefore, single-lead alignment by maximum |dV/dt| was implemented in the final version of our algorithm.
+
+Conclusion
+A physiologically meaningful definition of the heart vector’s origin point and time-coherent global XYZ median beat preserved cardiac beat morphology and improved predictive accuracy of SCD biomarkers.
+
+Supplementary Material
+Refer to Web version on PubMed Central for supplementary material.
+
+Acknowledgements:
+The authors thank the staff and participants of the ARIC study for their important contributions. We would like to acknowledge the SCD mortality classification committee members: Nona Sotoodehnia (lead), Selcuk Adabag, Sunil Agarwal, Lin Chen, Rajat Deo, Leonard Ilkhanoff, Liviu Klein, Saman Nazarian, Ashleigh Owen, Kris Patton, and Larisa Tereshchenko.
+Funding Sources:
+The Atherosclerosis Risk in Communities study has been funded in whole or in part with Federal funds from the National Heart, Lung, and Blood Institute, National Institutes of Health, Department of Health and Human Services (USA) under Contract nos. (HHSN268201700001I, HHSN268201700002I, HHSN268201700003I, HHSN268201700004I, HHSN268201700005I). This work was supported by 1R01HL118277 and 2R56HL118277 (LGT).
+References
+[1]. Benjamin EJ, Virani SS, Callaway CW, Chamberlain AM, Chang AR, Cheng S, Chiuve SE, Cushman M, Delling FN, Deo R, Heart disease and stroke statistics—2018 update: a report from the American Heart Association, Circulation 137 (2018) e67–e492. [PubMed: 29386200]
+[2]. Deo R, Norby FL, Katz R, Sotoodehnia N, Adabag S, DeFilippi CR, Kestenbaum B, Chen LY, Heckbert SR, Folsom AR, Kronmal RA, Konety S, Patton KK, Siscovick D, Shlipak MG, Alonso
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 12
+
+A, Development and Validation of a Sudden Cardiac Death Prediction Model for the General Population, Circulation 134 (2016) 806–816. 10.1161/CIRCULATIONAHA.116.023042 [PubMed: 27542394]
+[3]. Aro AL, Reinier K, Rusinaru C, Uy-Evanado A, Darouian N, Phan D, Mack WJ, Jui J, Soliman EZ, Tereshchenko LG, Chugh SS, Electrical risk score beyond the left ventricular ejection fraction: prediction of sudden cardiac death in the Oregon Sudden Unexpected Death Study and the Atherosclerosis Risk in Communities Study, Eur Heart J 38 (2017) 3017–3025. 10.1093/ eurheartj/ehx331 [PubMed: 28662567]
+[4]. Waks JW, Sitlani CM, Soliman EZ, Kabir M, Ghafoori E, Biggs ML, Henrikson CA, Sotoodehnia N, Biering-Sorensen T, Agarwal SK, Siscovick DS, Post WS, Solomon SD, Buxton AE, Josephson ME, Tereshchenko LG, Global Electric Heterogeneity Risk Score for Prediction of Sudden Cardiac Death in the General Population: The Atherosclerosis Risk in Communities (ARIC) and Cardiovascular Health (CHS) Studies, Circulation 133 (2016) 2222–2234. 10.1161/ CIRCULATIONAHA.116.021306 [PubMed: 27081116]
+[5]. Waks JW, Tereshchenko LG, Global electrical heterogeneity: A review of the spatial ventricular gradient, J Electrocardiol 49 (2016) 824–830. 10.1016/j.jelectrocard.2016.07.025 [PubMed: 27539162]
+[6]. Kligfield P, Gettes LS, Bailey JJ, Childers R, Deal BJ, Hancock EW, van HG, Kors JA, Macfarlane P, Mirvis DM, Pahlm O, Rautaharju P, Wagner GS, Josephson M, Mason JW, Okin P, Surawicz B, Wellens H, Recommendations for the standardization and interpretation of the electrocardiogram: part I: the electrocardiogram and its technology a scientific statement from the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society endorsed by the International Society for Computerized Electrocardiology, J Am Coll.Cardiol 49 (2007) 1109–1127. [PubMed: 17349896]
+[7]. Frank E, An accurate, clinically practical system for spatial vectorcardiography, Circulation 13 (1956) 737–749. [PubMed: 13356432]
+[8]. Wilson FN, Johnston FD, The vectorcardiogram, American Heart Journal 16 (1938) 14–28. 10.1016/S0002-8703(38)90899-3
+[9]. Bailey JJ, Berson AS, Garson A, Jr., Horan LG, MacFarlane PW, Mortara DW, Zywietz C, Recommendations for standardization and specifications in automated electrocardiography: bandwidth and digital signal processing. A report for health professionals by an ad hoc writing group of the Committee on Electrocardiography and Cardiac Electrophysiology of the Council on Clinical Cardiology, American Heart Association, Circulation 81 (1990) 730–739. [PubMed: 2297875]
+[10]. ARIC. Study Description 1987 Available at: http://www2.cscc.unc.edu/aric/distributionagreements. Accessed June 22nd, 2018. http://www2.cscc.unc.edu/aric/distribution-agreements.
+[11]. NIH/NHLBI. Biologic Specimen and Data Repository Information Coordinating Center 1987 Available at: https://biolincc.nhlbi.nih.gov/. Accessed June 22, 2018.
+[12]. The ARIC Investigators. The Atherosclerosis Risk in Community (ARIC) Study: Design and Objectives, Am J Epidemiol 129 (1989) 687–702. [PubMed: 2646917]
+[13]. O’Neal WT, Singleton MJ, Roberts JD, Tereshchenko LG, Sotoodehnia N, Chen LY, Marcus GM, Soliman EZ, Association Between QT-Interval Components and Sudden Cardiac Death: The ARIC Study (Atherosclerosis Risk in Communities), Circ Arrhythm Electrophysiol 10 (2017). 10.1161/CIRCEP.117.005485
+[14]. Perez Alday Erick A, German D, Bender A, Li-Pershing A, Hamilton C, Thomas Jason A, Gonzales R, Li A, Newton K, Tereshchenko L, Abstract 12033: Dynamic Predictive Accuracy of Electrocardiographic Biomarkers of Sudden Cardiac Death Within a Survival Framework: The Atherosclerosis Risk in Communities (ARIC) Study, Circulation 138 (2018) A12033–A12033. 10.1161/circ.138.suppl_1.12033
+[15]. Kors JA, van HG, Sittig AC, van Bemmel JH, Reconstruction of the Frank vectorcardiogram from standard electrocardiographic leads: diagnostic comparison of different methods, Eur.Heart J 11 (1990) 1083–1092. [PubMed: 2292255]
+[16]. Healthcare G, Marquette 12SL ECG analysis program, Physician’s Guide. Revision B (2015).
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Page 13
+
+[17]. Pan J, Tompkins W, A real-time QRS detection algorithm, IEEE transactions on bio-medical engineering 32 (1985) 230–236. [PubMed: 3997178]
+[18]. Zong W, Saeed M, Heldt T, A QT interval detection algorithm based on ECG curve length transform, Comput.Cardiol 33 (2006) 377–380.
+[19]. Sur S, Han L, Tereshchenko LG, Comparison of sum absolute QRST integral, and temporal variability in depolarization and repolarization, measured by dynamic vectorcardiography approach, in healthy men and women, PLoS One 8 (2013) e57175 10.1371/journal.pone.0057175 [PubMed: 23451181]
+[20]. Tereshchenko LG, Cheng A, Fetics BJ, Butcher B, Marine JE, Spragg DD, Sinha S, Dalal D, Calkins H, Tomaselli GF, Berger RD, A new electrocardiogram marker to identify patients at low risk for ventricular tachyarrhythmias: sum magnitude of the absolute QRST integral, J Electrocardiol 44 (2011) 208–216. [doi] [PubMed: 21093871]
+[21]. Thomas JA, E AP-A, Junell A, Newton K, Hamilton C, Li-Pershing Y, German D, Bender A, Tereshchenko LG, Vectorcardiogram in athletes: The Sun Valley Ski Study, Ann Noninvasive Electrocardiol (2018) e12614 10.1111/anec.12614 [PubMed: 30403442]
+[22]. DeLong ER, DeLong DM, Clarke-Pearson DL, Comparing the areas under two or more correlated receiver operating characteristic curves: a nonparametric approach, Biometrics 44 (1988) 837–845. [PubMed: 3203132]
+[23]. Heagerty PJ, Lumley T, Pepe MS, Time-dependent ROC curves for censored survival data and a diagnostic marker, Biometrics 56 (2000) 337–344. [PubMed: 10877287]
+[24]. Cattaneo M, Malighetti P, Spinelli D, Estimating receiver operative characteristic curves for timedependent outcomes: The stroccurve package, Stata Journal 17 (2017) 1015–1023.
+[25]. Kligfield P, Badilini F, Denjoy I, Babaeizadeh S, Clark E, De Bie J, Devine B, Extramiana F, Generali G, Gregg R, Helfenbein E, Kors J, Leber R, Macfarlane P, Maison-Blanche P, Rowlandson I, Schmid R, Vaglio M, van Herpen G, Xue J, Young B, Green CL, Comparison of automated interval measurements by widely used algorithms in digital electrocardiographs, American Heart Journal 200 (2018) 1–10. [PubMed: 29898835]
+[26]. Okamoto Y, Teramachi Y, Musha T, Tsunakawa H, Harumi K, Moving multiple dipole model for cardiac activity, Jpn Heart J 23 (1982) 293–304. [PubMed: 7097995]
+[27]. van Bemmel JH, Kors JA, van Herpen G, Methodology of the modular ECG analysis system MEANS, Methods Inf Med 29 (1990) 346–353. [PubMed: 2233382]
+[28]. Kors JA, Talmon JL, van Bemmel JH, Multilead ECG analysis, Computers and biomedical research, an international journal 19 (1986) 28–46.
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Perez-Alday et al.
+
+Page 14
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Figure 1. Construction of the Vector-Magnitude. (A) (i) Normal sinus beats with the absolute maximum |dV/dt| marked in each beat are used to (ii) construct the median single-lead (Xlead) beat. Beats are aligned by maximum |dV/dt|. (B) Time-coherent global XYZ (i) multilead beat construction. Resultant vectorcardiogram (ii) and vector magnitude (iii) are shown. (C) Vectorcardiogram origin point definition, using (i) the physiological approach with the isoelectric heart vector origin definition, (ii) current industry standard, defined baseline at the beginning of QRS complex.
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Perez-Alday et al.
+
+Page 15
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Figure 2. Schematic of the algorithm to automatically detect the electrical origin point.
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Perez-Alday et al.
+
+Page 16
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Figure 3. The process to detect the electrical origin point. (A) Selection of the time interval window. Methods to detect origin point: (B) Clustering the signal with moving variance, and (C) Minimum absolute gradient. The AUC obtained from the minimum absolute gradient, AUCM, has a lower value compared to the AUC obtained from the clustering method, AUCC. (D) Therefore, the origin point calculated with the minimum method (red signal) is selected.
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Perez-Alday et al.
+
+Page 17
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Figure 4. Viewer to assess origin point detection accuracy. The click buttons (i) and keyboard shortcuts (ii) are included.
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Perez-Alday et al.
+
+Page 18
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Figure 5. GEH measurement example of peak and area vectors. (A) Vector Magnitude, and XYZ leads. (B) Sum Absolute QRST integral (SAI QRST) measurement. (C) Vectorcardiographic loops. (D) Peak QRS, T, and spatial ventricular gradient (SVG) vectors, and measurement of SVG direction (azimuth and elevation) is shown.
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Perez-Alday et al.
+
+Page 19
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Figure 6. XYZ leads and Vector-Magnitude obtained using three different alignment methods and two different electrical origin point location. (A) Signal alignment using the R-peak; (B) timecoherent global beat; (C) signal alignment using the beginning of the QRS complex. (i) Vector-Magnitude with origin point calculated in the TP interval; (ii) Vector-Magnitude with the origin point calculated in the PR interval; (iii) overlapped X, Y and Z leads.
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Perez-Alday et al.
+
+Page 20
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Figure 7. Comparison of time-dependent AUCs for window of SCD prediction within 2 years, for (A) QRS duration, (B) QTc, (C) SAI QRST, (D) Spatial peak QRS-T angle, (E) peak SVG elevation, (F) peak SVG azimuth. An upper panel shows an AUC difference relative to mean ROC for each ECG/VCG parameter. A lower panel shows specific AUC.
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Clinical characteristics of study population
+
+Characteristic
+
+n=15,768
+
+Age±SD, years
+
+54.2±5.8
+
+Female, n(%)
+
+8,696(55.2)
+
+White, n(%)
+
+11,471(72.8)
+
+Diabetes, n(%)
+
+1,876(12.0)
+
+Hypertension, n(%)
+
+5,498(34.9)
+
+Anti-hypertensive drugs, n(%) 4,767(35.0)
+
+CHD, n(%)
+
+769(4.9)
+
+Heart failure, n(%)
+
+739(4.8)
+
+Stroke, n(%)
+
+278(1.8)
+
+Peripheral artery disease, n(%)
+
+635(4.2)
+
+Atrial fibrillation, n(%)
+
+36(0.2)
+
+Current smoking, n(%)
+
+4,120(26.2)
+
+Body-mass-index±SD, kg/m2
+
+27.7±5.4
+
+Total cholesterol±SD, mmol/L
+
+5.6±1.1
+
+Triglycerides±SD, mmol/L
+
+1.5±1.0
+
+Alcohol consumption±SD, g/wk 42.4±97.0
+
+Heart rate±SD, bpm
+
+66.3±10.3
+
+Corrected QT±SD, ms
+
+416.4±19.7
+
+QRS duration±SD, ms
+
+92.3±12.7
+
+Bundle branch block, n(%)
+
+677(4.3)
+
+Table 1.
+
+Page 21
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Table 2. Effect of the global beat construction and origin point location on ECG and VCG measurements
+
+Perez-Alday et al.
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Measurement
+
+Cross-corr (12SL) OP(+) T-coherent T-coherent OP(+) R-aligned R-aligned OR(+) Q-aligned Q-aligned P-value
+
+QRS duration(SD),ms
+
+92.3(12.7)
+
+83.7(15.9)
+
+86.7(15.9) 88.1(16.7)
+
+89.5(16.3) 83.9(17.0)
+
+87.2(16.8) <0.0001
+
+QT interval(SD), ms
+
+400.1(31.3)
+
+378.3(29.3)
+
+379.5(29.8) 385.0(30.7)
+
+384.3(31.6) 377.7(30.0)
+
+379.1(30.0) <0.0001
+
+Peak QRS-T angle(SD),°
+
+45.9(34.0)
+
+42.6(31.7) 55.7(32.1)
+
+49.6(30.0) 50.6(34.8)
+
+47.0(32.8) <0.0001
+
+Area QRS-T angle(SD),°
+
+68.4(34.1)
+
+57.2(30.5) 69.5(33.8)
+
+53.7(31.2) 68.1(33.4)
+
+57.0(30.3) <0.0001
+
+Peak SVG azimuth(SD),°
+
+4.3(25.3)
+
+3.2(24.2) 17.1(20.1)
+
+17.6(20.1) 7.2(30.3)
+
+5.8(28.7) <0.0001
+
+Area SVG azimuth(SD),°
+
+−2.6(24.9)
+
+−6.4(21.5) −3.2(23.3)
+
+2.1(24.9) −3.6(23.1)
+
+−6.2(21.0) <0.0001
+
+Peak SVG elevation(SD),°
+
+63.7(15.6)
+
+62.6(15.3) 64.7(16.0)
+
+64.0(16.1) 66.9(19.2)
+
+65.7(19.0) <0.0001
+
+Area SVG elevation(SD),°
+
+64.3(16.3)
+
+59.3(15.7) 64.1(15.8)
+
+60.3(17.0) 63.9(15.6)
+
+60.0(16.8) <0.0001
+
+Peak SVG magnitude(SD), mV
+
+1.60(0.43)
+
+1.67(0.45) 1.69(0.43)
+
+1.77(0.44) 1.54(0.44)
+
+1.61(0.45) <0.0001
+
+iVMQT (SD), mV*ms
+
+80.0(24.2)
+
+86.5(24.9) 79.0(24.2)
+
+85.0(25.5) 80.8(24.2)
+
+87.5(25.0) <0.0001
+
+Wilson’s SVG(SD), mV*ms
+
+48.2(17.8)
+
+61.3(21.5) 47.9(18.1)
+
+61.1(21.4) 48.4(18.1)
+
+61.5(21.3) <0.0001
+
+SAI QRST(SD), mV*ms
+
+121.6(37.0)
+
+132.7(38.8) 121.4(36.6)
+
+131.4(38.5) 121.2(36.8)
+
+133.1(38.8) <0.0001
+
+OP(+)=isoelectric origin point identified
+
+Page 22
+
+Perez-Alday et al.
+
+Page 23
+
+Author Manuscript
+
+Author Manuscript
+
+Table 3.
+Effect of the global beat construction and origin point location on predictive accuracy, measured by cumulative ROC AUC
+
+Measurement
+
+Global beat type
+
+Harrell’s C Gönen and Heller’s K (95%CI) P-value
+
+QRS duration
+
+OP(+) Time-Coherent 0.572
+
+0.542 (0.531 – 0.552)
+
+<0.05
+
+Time-Coherent
+
+0.573
+
+0.537 (0.528 – 0.546)
+
+OP(+) R-aligned
+
+0.548
+
+0.538 (0.523 – 0.551)
+
+R-aligned
+
+0.557
+
+0.541 (0.529 – 0.553)
+
+OP(+) Q-aligned
+
+0.588
+
+0.536 (0.528 – 0.543)
+
+Q-aligned
+
+0.578
+
+0.538 (0.528 – 0.547)
+
+QTc interval
+
+OP(+) Time-Coherent 0.516
+
+0.540 (0.518 – 0.561)
+
+<0.05
+
+Time-Coherent
+
+0.515
+
+0.527 (0.504 – 0.549)
+
+OP(+) R-aligned
+
+NS
+
+NS
+
+R-aligned
+
+NS
+
+NS
+
+OP(+) Q-aligned
+
+0.520
+
+0.535 (0.516 – 0.554)
+
+Q-aligned
+
+0.509
+
+0.525 (0.503 – 0.546)
+
+Peak QRS-T angle
+
+OP(+) Time-Coherent 0.704
+
+0.628 (0.617 – 0.639)
+
+<0.05
+
+Time-Coherent
+
+0.699
+
+0.622 (0.611 – 0.632)
+
+OP(+) R-aligned
+
+0.700
+
+0.656 (0.643 – 0.669)
+
+R-aligned
+
+0.697
+
+0.649 (0.637 – 0.661)
+
+OP(+) Q-aligned
+
+0.678
+
+0.627 (0.613 – 0.640)
+
+Q-aligned
+
+0.679
+
+0.625 (0.612 – 0.637)
+
+Area QRS-T angle
+
+OP(+) Time-Coherent 0.697
+
+0.660 (0.646 – 0.675)
+
+<0.05
+
+Time-Coherent
+
+0.690
+
+0.651 (0.637 – 0.664)
+
+OP(+) R-aligned
+
+0.698
+
+0.662 (0.647 – 0.676)
+
+R-aligned
+
+0.690
+
+0.650 (0.637 – 0.664)
+
+OP(+) Q-aligned
+
+0.701
+
+0.662 (0.648 – 0.677)
+
+Q-aligned
+
+0.695
+
+0.653 (0.640 – 0.666)
+
+Peak SVG azimuth
+
+OP(+) Time-Coherent 0.584
+
+0.567 (0.552 – 0.582)
+
+<0.05
+
+Time-Coherent
+
+0.586
+
+0.589 (0.554 – 0.584)
+
+OP(+) R-aligned
+
+0.609
+
+0.580 (0.561 – 0.598)
+
+R-aligned
+
+0.605
+
+0.577 (0.557 – 0.596)
+
+OP(+) Q-aligned
+
+0.577
+
+0.552 (0.535 – 0.569)
+
+Q-aligned
+
+0.577
+
+0.551 (0.534 – 0.568)
+
+Area SVG azimuth
+
+OP(+) Time-Coherent 0.562
+
+0.567 (0.550 – 0.584)
+
+<0.05
+
+Time-Coherent
+
+0.564
+
+0.567 (0.550 – 0.585)
+
+OP(+) R-aligned
+
+0.563
+
+0.566 (0.547 – 0.585)
+
+R-aligned
+
+0.547
+
+0.545 (0.522 – 0.567)
+
+OP(+) Q-aligned
+
+0.568
+
+0.578 (0.560 – 0.595)
+
+Q-aligned
+
+0.566
+
+0.564 (0.546 – 0.581)
+
+Peak SVG elevation(SD),° OP(+) Time-Coherent 0.620
+
+0.599 (0.582 – 0.616)
+
+<0.05
+
+Time-Coherent
+
+0.619
+
+0.602 (0.585 – 0.618)
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+
+Author Manuscript
+
+Perez-Alday et al.
+
+Measurement
+
+Global beat type
+
+Harrell’s C Gönen and Heller’s K (95%CI) P-value
+
+OP(+) R-aligned
+
+0.620
+
+0.596 (0.579 – 0.613)
+
+R-aligned
+
+0.621
+
+0.596 (0.579 – 0.612)
+
+OP(+) Q-aligned
+
+0.604
+
+0.598 (0.577 – 0.620)
+
+Q-aligned
+
+0.611
+
+0.603 (0.582 – 0.623)
+
+Area SVG elevation(SD),° OP(+) Time-Coherent 0.614
+
+0.596 (0.579 – 0.612)
+
+<0.05
+
+Time-Coherent
+
+0.612
+
+0.597 (0.580 – 0.614)
+
+OP(+) R-aligned
+
+0.600
+
+0.590 (0.572 – 0.608)
+
+R-aligned
+
+0.604
+
+0.584 (0.567 – 0.600)
+
+OP(+) Q-aligned
+
+0.600
+
+0.591 (0.573 – 0.609)
+
+Q-aligned
+
+0.601
+
+0.587 (0.570 – 0.604)
+
+iVMQT
+
+OP(+) Time-Coherent 0.573
+
+Time-Coherent
+
+0.548
+
+0.553 (9.540 – 0.566) 0.547 (0.531 – 0.563)
+
+<0.05
+
+OP(+) R-aligned
+
+0.563
+
+0.549 (0.535 – 0.563)
+
+R-aligned
+
+0.549
+
+0.544 (0.528 – 0.560)
+
+OP(+) Q-aligned
+
+0.569
+
+0.552 (0.538 – 0.565)
+
+Q-aligned
+
+0.550
+
+0.546 (0.529 – 0.562)
+
+SAI QRST
+
+OP(+) Time-Coherent 0.551
+
+0.547 (0.531 – 0.562)
+
+<0.05
+
+Time-Coherent
+
+0.529
+
+0.536 (0.517 – 0.555)
+
+OP(+) R-aligned
+
+0.547
+
+0.544 (0.527 – 0.560)
+
+R-aligned
+
+0.531
+
+0.536 (0.517 – 0.554)
+
+OP(+) Q-aligned
+
+0.548
+
+0.544 (0.529 – 0.560)
+
+Q-aligned
+
+0.530
+
+0.536 (0.518 – 0.555)
+
+OP(+)=isoelectric origin point identified on TP segment
+
+Page 24
+
+Author Manuscript
+
+Author Manuscript
+
+Author Manuscript
+
+Comput Biol Med. Author manuscript; available in PMC 2020 January 01.
+

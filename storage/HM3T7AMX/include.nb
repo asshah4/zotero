@@ -1,0 +1,4961 @@
+
+
+
+
+
+
+  
+    
+
+
+
+
+// NextBio name space 
+var nbApi;
+if (!nbApi) nbApi = {debug: false};
+
+nbApi.apiKey = "F70C5A70-D194-4150-9F99-C8FC2266B65F";
+nbApi.nameSpace = "nbApi";
+nbApi.debug = false;
+nbApi.sessionId = "b29e58cfed1e4997814516fe1f09a4a2";
+nbApi.timeStamp = "557b7f52de6f9aa8662d308f03fc706b";
+nbApi.timeoutStamp = "4d5cf4bf56670591";
+if (!nbApi.urlContext) {
+  nbApi.urlContext = "http://sciencedirect.nextbio.com/e";  
+}
+nbApi.imgContext = "http://sciencedirect.nextbio.com/e/s/img3";
+
+nbApi.debugMode = function(debug)
+{           
+  nbApi.setDebugMode(debug);
+};
+nbApi.setDebugMode = function(debug)
+{           
+  nbApi.debug = debug == true;
+};
+nbApi.getDebugMode = function()
+{           
+  return nbApi.debug == true;
+};
+
+
+  
+    
+
+
+
+
+  // NextBio API utility functions
+  // requires jsApi.jsp
+  
+  // LoadFrame(config, bAlert) - load from server in an iFrame 
+  // configuration parameters:
+  // config.target - required. Id of a div, span, td, etc. to receive results loaded from server  
+  // config.url - required. URL of a web service processing AJAX call  
+  // config.query - optional. List of parameters for the URL (see above)
+  // config.success - optional. A callback function that will be excuted in case of a successfull call, after results are loaded to the target 
+  //    success(args) - where args is described below. 
+  // config.failure - optional. A callback function that will be executed in case of a failed call:  
+  //    failure(args) - where args is described below. 
+  // config.args - optional. A string that will be passsed as a parameter to success() and/or failure() callbacks if either one is specified.
+  // bAlert - optional. True if we want to display alerts.
+  nbApi.loadFrame = function(config)
+  {
+    var bAlert = nbApi.getDebugMode();
+    if (config == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: No configuration object.");
+      return false;
+    }
+    if (config.url == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: Configuration object contains no URL.");
+      return false;
+    }   
+    var target = document.getElementById(config.target);
+    if (target == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: Target with id=" + congig.target + " was not found on this page.");
+      return;
+    } 
+    var id = "nbTagCloud_" + config.target;
+    var url = config.url;
+    if (config.query != null)
+      url += "?" + config.query; 
+    var target = document.getElementById(config.target);
+    target.innerHTML = "<iframe id=\'" + id + "\' style=\'" + config.style + "\'></iframe>";
+    target = document.getElementById(id);
+    target.src = url;
+  };
+
+  // LoadScript(config) - load from server as a javascript script
+  // configuration parameters:
+  // config.target - required. Id of a div, span, td, etc. to receive results loaded from server  
+  // config.url - required. URL of a web service processing AJAX call  
+  // config.query - optional. List of parameters for the URL (see above)
+  // config.success - optional. A callback function that will be excuted in case of a successfull call, after results are loaded to the target 
+  //    success(args) - where args is described below. 
+  // config.failure - optional. A callback function that will be executed in case of a failed call:  
+  //    failure(args) - where args is described below. 
+  // config.args - optional. A string that will be passsed as a parameter to success() and/or failure() callbacks if either one is specified.
+  // config.scriptTarget - optional.  If id of parent to load script into.  When using wz_tooltip library, should not be in the tooltip popup. Solves DE4705
+  nbApi.loadScript = function(config)
+  {
+    var bAlert = nbApi.getDebugMode();
+    if (config == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: No configuration object.");
+      return false;
+    }
+    var target = document.getElementById(config.target);
+    if (target == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: Target doesn't exist.");
+      return false;
+    }
+    if (config.url == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: Configuration object contains no URL.");
+      return false;
+    }                                                      
+    var message;
+    if (config.message != null)
+    {
+      if (config.messageStyle == null)
+        message = config.message; 
+      else
+        message = '<span style="' + config.messageStyle + '">' + config.message + '</span>';
+      message = '<span class="nbApiLoading">&nbsp;' + message;
+      nbApi.setInnerHtml(config.target, message);
+      target.style.cursor = "wait";
+    }
+    var url = config.url;
+    var params = "containerId=" + config.containerId + "&targetId=" + config.target + "&callback=" + config.callbackName; 
+  // setup timeout callback
+    var timeoutId = null;
+    if (config.timeout != null && config.timeout > 0)
+    {
+      timeoutId = nbApi.createId("nextbioTimeout");  
+      var timeout = setTimeout(function(){nbApi.loadTimeoutHandler(config.target, timeoutId, config.timeoutCallback)}, config.timeout);
+      target.setAttribute(timeoutId, timeout);
+      params += "&timeoutId=" + timeoutId;
+      if (config.timeoutTerminate == true)
+      {
+        params += "&timeoutTerminate=true";
+      }
+    }  
+  
+    if (config.query == null)
+      config.query = params;
+    else
+      config.query += "&" + params;
+    url += "?" + config.query; 
+    target.nextbioScriptCallback = config.callback;
+    target.nbApi_highlight = config.highlight;
+    nbApi.importScript(url, config.iFrameId, config.scriptTarget||config.target);
+  };
+
+  nbApi.updateTargetHTML = function(json)
+  {
+    if (json == null || json.target == null) 
+      return;
+    var target = document.getElementById(json.target);
+    if (target == null)
+      return;
+  
+    if (json.timeoutId != null)
+    {
+      var timeoutId = target.getAttribute(json.timeoutId);
+      if (timeoutId == null || timeoutId.length == 0)
+      {
+        if (json.timeoutTerminate == true)
+        {
+          return;
+        }
+      }
+      else
+      {
+        clearTimeout(timeoutId);
+        target.setAttribute(json.timeoutId, null);
+      }
+    } 
+    target.innerHTML = "";
+    target.nextbioIsLoaded = false;
+  
+    var bLoaded = json.response != null && json.response.length > 0;
+    var body = null;
+    if (bLoaded)
+    {
+      target.nextbioIsLoaded = true;
+      if (target.nextbioHeader != null && target.nextbioHeader.length > 0)
+      {
+        var header = document.createElement("div");
+        if (target.nextbioHeaderClassName != null)
+          header.className = target.nextbioHeaderClassName;
+        header.innerHTML = target.nextbioHeader;
+        target.appendChild(header);
+      }
+      body = document.createElement("div");
+      body.className = target.nextbioTargetClassName;
+      body.innerHTML = json.response;
+      target.appendChild(body);
+      if (target.nextbioFooter != null && target.nextbioFooter.length > 0)
+      {
+        var footer = document.createElement("div");
+        if (target.nextbioFooterClassName != null)
+          footer.className = target.nextbioFooterClassName;
+        footer.innerHTML = target.nextbioFooter;
+        target.appendChild(footer);
+      }
+    }
+    target.style.cursor = "auto";
+  
+    if (target.nextbioScriptCallback != null)
+      target.nextbioScriptCallback(json.target, bLoaded, json);
+
+    if (body && target.nbApi_highlight)
+      nbApi.highlight(body);
+  };
+  nbApi.updateTargetText = function(json)
+  {
+    if (json == null || json.target == null || json.response == null)
+      return;
+    var target = document.getElementbyId(json.target);
+    if (json.timeoutId != null)
+    {
+      var timeoutId = target.getAttribute(json.timeoutId);
+      if (timeoutId == null || timeoutId.length == 0)
+      {
+        if (json.timeoutTerminate == true)
+        {
+          return;
+        }
+      }
+      else
+      {
+        clearTimeout(timeoutId);
+        target.setAttribute(json.timeoutId, null);
+      }
+    } 
+    target.innerText = json.response;
+    target.textContent = json.response;
+    target.style.cursor = "auto";
+  };
+  
+  nbApi.setInnerHtml = function(id, html)
+  {
+    if (id == null || html == null)
+      return;
+    var el = document.getElementById(id);
+    if (el == null)
+      return;
+    el.innerHTML = html;
+  };
+  nbApi.setInnerText = function(id, text)
+  {
+    if (id == null || text == null)
+      return;
+    var el = document.getElementById(id);
+    if (el == null)
+      return;
+    el.innerText = text;
+    el.textContent = text;
+  };
+  nbApi.getInnerText = function(obj)
+  {
+    if (obj == null)
+      return null;
+    var el = obj;
+    if (typeof(obj) != "object")
+    {
+      el = document.getElementById(obj);
+    }
+    if (el == null)
+      return null;
+    if (el.innerText)
+      return el.innerText;
+    else
+      return el.textContent;
+  };
+  nbApi.setAttr = function(id, attr, text)
+  {
+    if (id == null || attr == null)
+      return;
+    var el;
+    if (typeof(id) != "object")
+      el = document.getElementById(id);
+    else
+      el = id;  
+    
+    if (el == null)
+      return;
+    if (!text)
+      el.removeAttribute(attr);
+    else
+      el.setAttribute(attr, text);
+  };
+  nbApi.normalizeString = function(str)
+  {
+    if (str == null)
+      return "";
+    str = str.replace(/^\s+/, "");  
+    str = str.replace(/\s+$/, "");  
+    str = str.replace(/\s+/g, " ");
+    return str;  
+  };
+  nbApi.trim = function(str)
+  {
+    if (str == null)
+      return "";
+    str = str.replace(/^\s+/, "");  
+    str = str.replace(/\s+$/, "");  
+    return str;  
+  };
+  // Adds one or more CSS classes to the element. Duplicate classes are automatically filtered out.
+  nbApi.addClass = function(element, newClassName)
+  {
+    if (element == null)
+      return;
+    var className = element.className;
+    if (className == null || className.length == 0)
+    {
+      element.className = newClassName;
+      return;
+    }
+    var nameArray = element.className.split(/\s+/);
+    var out = newClassName;
+    for (i = 0; i < nameArray.length; i++)
+    {
+      if (nameArray[i] != newClassName)
+      {
+        out += " " + nameArray[i];
+      }
+      
+    }
+    out = nbApi.trim(out);
+    element.className = out;
+  };
+  nbApi.removeClass = function(element, className)
+  {
+    if (element == null)
+      return;
+    if (className == null)
+      return;
+  
+    var nameArray = element.className.split(/\s+/);
+    var out = "";
+    for (i = 0; i < nameArray.length; i++)
+    {
+      if (nameArray[i] != className)
+      {
+        if (i > 0)
+          out += " ";
+        out += nameArray[i];
+      }
+      
+    }
+    out = nbApi.trim(out);
+    if (out.length > 0)
+      element.className = out;
+    else
+      element.className = null;
+  };
+  
+  nbApi.getWindowHeight = function() 
+  {
+  	var myHeight = 0;
+     if( typeof( window.innerWidth ) == 'number' ) {
+       //Non-IE
+       myHeight = window.innerHeight;
+     } else if( document.documentElement &&
+         ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+       //IE 6+ in 'standards compliant mode'
+       myHeight = document.documentElement.clientHeight;
+     } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+       //IE 4 compatible
+       myHeight = document.body.clientHeight;
+     }
+     return myHeight;
+  };
+  
+  nbApi.getWindowWidth = function() 
+  {
+  	var myWidth = 0;
+     if( typeof( window.innerWidth ) == 'number' ) {
+       //Non-IE
+       myWidth = window.innerWidth;
+     } else if( document.documentElement &&
+         ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+       //IE 6+ in 'standards compliant mode'
+       myWidth = document.documentElement.clientWidth;
+     } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+       //IE 4 compatible
+       myWidth = document.body.clientWidth;
+     }
+     return myWidth;
+  };
+  
+  nbApi.getElementLeft = function(eElement) 
+  {
+     if (!eElement && this)                    // if argument is invalid
+     {                                         // (not specified, is null or is 0)
+        eElement = this;                       // and function is a method
+     }                                         // identify the element as the method owner
+  
+     var bIE = document.all ? true : false; // initialize var to identify IE
+  
+     var nLeftPos = eElement.offsetLeft;       // initialize var to store calculations
+     var eParElement = eElement.offsetParent;  // identify first offset parent element
+  
+     while (eParElement != null)
+     {                                         // move up through element hierarchy
+  
+        if(bIE)                             // if browser is IE, then...
+        {
+           if( (eParElement.tagName != "TABLE") && (eParElement.tagName != "BODY") )
+           {                                   // if parent is not a table or the body, then...
+              nLeftPos += eParElement.clientLeft; // append cell border width to calcs
+           }
+        }
+        else                                   // if browser is Gecko, then...
+        {
+           if(eParElement.tagName == "TABLE")  // if parent is a table, then...
+           {                                   // get its border as a number
+              var nParBorder = parseInt(eParElement.border);
+              if(isNaN(nParBorder))            // if no valid border attribute, then...
+              {                                // check the table's frame attribute
+                 var nParFrame = eParElement.getAttribute('frame');
+                 if(nParFrame != null)         // if frame has ANY value, then...
+                 {
+                    nLeftPos += 1;             // append one pixel to counter
+                 }
+              }
+              else if(nParBorder > 0)          // if a border width is specified, then...
+              {
+                 nLeftPos += nParBorder;       // append the border width to counter
+              }
+           }
+        }
+        nLeftPos += eParElement.offsetLeft;    // append left offset of parent
+        eParElement = eParElement.offsetParent; // and move up the element hierarchy
+     }                                         // until no more offset parents exist
+     if (scroll) {
+     		eParElement = eElement;
+     		while (eParElement) {
+     			if (eParElement.scrollLeft) {
+     				nLeftPos -= eParElement.scrollLeft;
+     			}
+     			eParElement = eParElement.parentNode;
+     		}
+     }
+     return nLeftPos;                          // return the number calculated
+  };
+  
+  
+  // get the top offset of the element.  If scroll is true, take scrolling into account
+  nbApi.getElementTop = function(eElement, scroll) 
+  {
+     if (!eElement && this)                    // if argument is invalid
+     {                                         // (not specified, is null or is 0)
+        eElement = this;                       // and function is a method
+     }                                         // identify the element as the method owner
+  
+     var bIE = document.all ? true : false; // initialize var to identify IE
+  
+     var nTopPos = eElement.offsetTop;         // initialize var to store calculations
+     var eParElement = eElement.offsetParent;  // identify first offset parent element
+  
+     while (eParElement != null)
+     {                                         // move up through element hierarchy
+        if(bIE)                             // if browser is IE, then...
+        {
+           if( (eParElement.tagName != "TABLE") && (eParElement.tagName != "BODY") )
+           {                                   // if parent a table cell, then...
+              nTopPos += eParElement.clientTop; // append cell border width to calcs
+           }
+        }
+        else                                   // if browser is Gecko, then...
+        {
+           if(eParElement.tagName == "TABLE")  // if parent is a table, then...
+           {                                   // get its border as a number
+              var nParBorder = parseInt(eParElement.border);
+              if(isNaN(nParBorder))            // if no valid border attribute, then...
+              {                                // check the table's frame attribute
+                 var nParFrame = eParElement.getAttribute('frame');
+                 if(nParFrame != null)         // if frame has ANY value, then...
+                 {
+                    nTopPos += 1;              // append one pixel to counter
+                 }
+              }
+              else if(nParBorder > 0)          // if a border width is specified, then...
+              {
+                 nTopPos += nParBorder;        // append the border width to counter
+              }
+           }
+        }
+  
+        nTopPos += eParElement.offsetTop;      // append top offset of parent
+        eParElement = eParElement.offsetParent; // and move up the element hierarchy
+     }                                         // until no more offset parents exist
+     if (scroll) {
+     		eParElement = eElement;
+     		while (eParElement) {
+     			if (eParElement.scrollTop) {
+     				nTopPos -= eParElement.scrollTop;
+     			}
+     			eParElement = eParElement.parentNode;
+     		}
+     }
+     return nTopPos;                           // return the number calculated
+  };
+  // get scroll factor for the element
+  nbApi.getScrollLeft = function()
+  {
+    if (typeof( window.pageXOffset ) == 'number')
+      return window.pageXOffset;
+    if (document.body != null && document.body.scrollLeft)
+      return document.body.scrollLeft;  
+    if (document.documentElement != null && document.documentElement.scrollLeft)
+      return document.documentElement.scrollLeft;
+    return 0;    
+  };
+  
+  nbApi.getScrollTop = function()
+  {
+    if (typeof( window.pageYOffset ) == 'number')
+      return window.pageYOffset;
+    if (document.body != null && document.body.scrollTop)
+      return document.body.scrollTop;  
+    if (document.documentElement != null && document.documentElement.scrollTop)
+      return document.documentElement.scrollTop;
+    return 0;    
+  };
+  
+  nbApi.onEvent = function(event, popupObj, param, extra)
+  {
+    if (event == null || popupObj == null)
+      return;
+    var containerId = null;
+    var isObj = typeof(popupObj) == "object";
+    if (isObj == true)
+      containerId = popupObj.containerId;
+    else
+      containerId = popupObj;
+    if (containerId == null)
+      return;
+    var container = document.getElementById(containerId);
+    if (container == null)
+      return;  
+    if (event.type.toLowerCase() == "click")
+    {
+      if (container.nextbioOnClick != null) 
+      {
+        if (isObj == true)
+          return container.nextbioOnClick(event, popupObj);
+        else
+          return container.nextbioOnClick(event, containerId, param, extra, container.nextbioUrlContext);
+      }
+    }
+    else if (event.type.toLowerCase() == "mouseover")
+    {
+      if (container.nextbioOnMouseOver != null)
+      {
+        if (isObj == true)
+          container.nextbioOnMouseOver(event, popupObj);
+        else
+          container.nextbioOnMouseOver(event, containerId, param, extra, container.nextbioUrlContext);
+      }
+    }
+    else if (event.type.toLowerCase() == "mouseout")
+    {
+      if (container.nextbioOnMouseOut != null)
+      {
+        if (isObj == true)
+          container.nextbioOnMouseOut(event, popupObj);
+        else
+          container.nextbioOnMouseOut(event, containerId, param, extra, container.nextbioUrlContext);
+      }
+    }
+  };
+  nbApi.showFrame = function(event, popupObj, param, extra, urlContext)
+  {
+    if (event == null || popupObj == null)
+      return false;
+    var redirect = false;
+    var popupId = null;
+    var owner = null;
+    if (typeof(popupObj) == "object")
+    {
+      popupId = popupObj.containerId;
+      param = popupObj.tagName;
+      extra = popupObj.customParam;
+      urlContext = popupObj.urlContext;
+      redirect = popupObj.redir;
+      owner = popupObj.owner;
+      if (urlContext == null && nbApi.consumer != null)
+        urlContext = nbApi.consumer.targetUrl;
+    }
+    else
+      popupId = popupObj;
+    if (popupId == null)
+      return false;
+    if (param == null)
+      return false;
+    var url;
+    if (urlContext == null)
+      urlContext = "http://sciencedirect.nextbio.com/e";
+    var context = "ov"; 
+    if (!popupObj.isFakeId && nbApi.consumer && nbApi.consumer.name == "elsevier.sciencedirect")
+    {
+      context = "ft";
+    }
+    if ("" == "1.0.ui2")
+    {
+      url = urlContext + "/home/home.nb?q=" + encodeURIComponent(param) + "&" + extra;
+    }
+    else if (param.indexOf('%') >= 0 || param.indexOf('/') >= 0 || param.indexOf('+') >= 0) {
+      url = urlContext + "/search/" + context + ".nb?q=" + encodeURIComponent(param) + "&" + extra;
+    }
+    else
+    {
+      if (event.urlContext != null)
+        context = event.urlContext;
+      url = urlContext + "/search/" + context + "/" + encodeURIComponent(param) + "?" + extra;
+    }
+    if (redirect)
+    {
+      var targetUrl = encodeURIComponent(url);
+      var campaignParam = "";
+      campaignParam += "NextBio|";
+      campaignParam += "tagType=" + popupObj.type + "|";
+      var viewMore = popupObj.viewMore=="yes"?"yes":"no";
+      campaignParam += "viewMore=" + viewMore + "|";
+      campaignParam += "sessionId=" + popupObj.sessionId + "|";
+      campaignParam += "pii=" + popupObj.pii + "|";
+      campaignParam += "uiStrategy=" + popupObj.strategy + "|";
+      campaignParam += "tagName=" + popupObj.tagName + "|";
+      campaignParam += "cloudSize=" + popupObj.size + "|";
+      campaignParam += "version=" + nbApi.consumer.version;
+      campaignParam = encodeURIComponent(campaignParam);
+      url = nbApi.consumer.redirectUrl + "?campaign_par=" + campaignParam + "&targetURL=" + targetUrl;    
+    }
+    var container = document.getElementById(popupId + "_frame_container");
+    var frameProperties = nbApi.getFrameProperties(popupId);
+    if (frameProperties == null)
+    {
+      if (container == null)
+        return false; 
+      nbApi.removeFrame(popupId);
+      var frame = document.createElement("iframe");
+      frame.id = popupId + "_frame";
+      frame.style.top = "0px";
+      frame.style.left = "0px";
+//       frame.style.width = "100%";
+//       frame.style.height = "100%";
+      frame.style.width = container.style.width;
+      frame.style.height = container.style.height;
+      frame.frameBorder = 1;
+      container.appendChild(frame);
+      frame.src = url; 
+      return false;
+    }
+    if (frameProperties.iFrame == "true" || frameProperties.iFrame == true)
+    {
+      if (container == null)
+        return false; 
+      nbApi.removeFrame(popupId);
+      var winWidth = nbApi.getWindowWidth();
+      var winHeight = nbApi.getWindowHeight();
+//       var frameWidth = Math.min(winWidth - 50, frameProperties.width);
+//       var frameHeight = Math.min(winHeight - 50, frameProperties.height);
+//       frameWidth = Math.max(frameWidth, 200);
+//       frameHeight = Math.max(frameHeight, 150);
+      var frameTop = Math.floor((winHeight - frameHeight)/2) + nbApi.getScrollTop() - 20; 
+      var frameLeft = Math.floor((winWidth - frameWidth)/2) + nbApi.getScrollLeft() - 10; 
+      frameTop = Math.max(frameTop, 0);
+      frameLeft = Math.max(frameLeft, 0);
+      
+//      container.style.position = "absolute";
+//       container.style.top = frameTop + "px";
+//       container.style.left = frameLeft + "px";
+      var frame = document.createElement("iframe");
+      frame.id = popupId + "_frame";
+      frame.frameBorder = 0;
+      container.appendChild(frame);
+      container.style.display = "";
+      frame.style.position = "relative";
+      frame.style.top = "0px";
+      frame.style.left = "0px";
+//       frame.style.width = "100%";
+//       frame.style.height = "100%";
+      frame.style.width = container.style.width;
+      frame.style.height = container.style.height;
+      frame.frameBorder = 1;
+      frame.src = url; 
+      return false;
+    }
+  
+    var target = frameProperties.target;
+    if (owner && (!target))
+    {
+      if (frameProperties.targetName)
+      {
+        owner.target = frameProperties.targetName;
+      }
+      owner.href = url;
+      return true;
+    }  
+  
+    var screenWidth = screen.availWidth != null ? screen.availWidth : screen.width;
+    var screenHeight = screen.availHeight != null ? screen.availHeight : screen.height - 100; // to account for non-client area of a window. 
+    var frameWidth = Math.min(screenWidth - 50, frameProperties.width);
+    var frameHeight = Math.min(screenHeight - 50, frameProperties.height);
+    frameWidth = Math.max(frameWidth, 200);
+    frameHeight = Math.max(frameHeight, 200);
+    var frameTop = frameProperties.top < 0 ? Math.floor((screenHeight - frameHeight)/2) : frameProperties.top; 
+    var frameLeft = frameProperties.left < 0 ? Math.floor((screenWidth - frameWidth)/2) : frameProperties.left; 
+    frameTop = Math.max(frameTop, 0);
+    frameLeft = Math.max(frameLeft, 0);
+  
+    var winParams = "resizable=yes,scrollbars=yes,status=yes,toolbar=yes,location=yes,menubar=no,top=" + frameTop + ",left=" + frameLeft + ",width=" + frameWidth + ",height=" + frameHeight;
+    try
+    {
+      if (window[target] != null)
+        window[target].close();
+    }
+    catch (error){}
+    var newWindow = window.open(url, frameProperties.targetName, winParams);
+    if (target != null)
+      window[target] = newWindow; 
+    return false;
+  };
+  nbApi.hideFrame = function(popupId)
+  {
+    if (popupId == null)
+      return;
+    var popup = document.getElementById(popupId + "_frame_popup");
+    if (popup == null)
+      return;  
+    popup.style.display = "none";
+    nbApi.removeFrame(popupId);
+  };
+  nbApi.removeFrame = function(popupId)
+  {
+    if (popupId == null)
+      return;
+    var frame = document.getElementById(popupId + "_frame");
+    if (frame == null)
+      return;
+    var container = frame.parentNode;
+    if (container == null)
+      return;
+    container.removeChild(frame);
+  };
+  nbApi.getFrameProperties = function(popupId)
+  {
+    if (popupId == null)
+      return null;
+    var popup = document.getElementById(popupId);  
+    if (popup == null)
+      return null;
+    var properties = {
+      target: popup.nextbioTarget,
+      targetName: popup.nextbioTargetName,
+      iFrame: popup.getAttribute("nextbioIFrame"),
+      top: popup.nextbioTop,
+      left: popup.nextbioLeft,
+      width: popup.nextbioWidth, 
+      height: popup.nextbioHeight
+    };
+    return properties;
+  };
+  
+  // importScript(url) - load javascript dynamically
+  // url - url of a javascript file
+  nbApi.importScript = function(url, iFrameId, targetId)
+  {
+    var bAlert = nbApi.getDebugMode();
+    if (url == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: importScript: No URL.");
+      return;
+    }
+    var target = null;
+    if (iFrameId != null)
+    {
+      var iFrame = document.getElementById(iFrameId);
+      if (iFrame == null)
+      {
+        if (bAlert)
+          alert("Nextbio API: importScript: iFrame with id '" + iFrameId + "' not found.");
+        return;
+      }
+      var script = iFrame.contentWindow.document.createElement("script");
+      script.type = "text/javascript";
+      if (targetId)
+        target = iFrame.contentWindow.document.getElementById(targetId);
+      if (!target)
+        target = iFrame.contentWindow.document.body;
+      target.appendChild(script);
+      script.src = url;
+    }
+    else 
+    {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      if (targetId)
+        target = document.getElementById(targetId);
+      if (!target)
+        target = document.body;
+      target.appendChild(script);
+      script.src = url;
+    }
+  };
+  
+  //================ extensions ==========
+  nbApi.findParentByClassName = function(obj, className)
+  {
+    if (obj == null || className == null)
+      return null;
+    while (obj != null)
+    {
+      if (obj.nodeType == 1 && obj.className != null)
+      {
+        var names = obj.className.split(" ");
+        for (var i = 0; i < names.length; i++)
+        {
+          if (nbApi.trim(names[i]) == className)
+          {
+            return obj;
+          }
+        }
+      }  
+      obj = obj.parentNode;
+    }  
+    return null;
+  };
+  
+  nbApi.findParentByTagName = function(obj, tagName)
+  {
+    if (obj == null || tagName == null)
+      return null;
+    tagName = tagName.toLowerCase();
+    obj = obj.parentNode;
+    while (obj != null)
+    {   
+      var objTagName = nbApi.trim(obj.tagName);
+      if (objTagName != null)
+        objTagName = objTagName.toLowerCase();
+      if (obj.nodeType == 1 && objTagName == tagName)
+        return obj;  
+      obj = obj.parentNode;
+    }  
+    return null;
+  };
+  
+  nbApi.show = function (targetId, bShow)
+  {
+    var element = document.getElementById(targetId);
+    if (element != null)
+      element.style.display = bShow?"inline":"none";
+  };
+  
+  nbApi.findElementsByName = function(name, type)
+  {
+    var group = document.getElementsByName(name);
+    if ((group == null || group.length == 0) && type != null)
+      group = document.getElementsByTagName(type);
+    if (group == null || group.length == 0)
+      return group;
+    var out = new Array();
+    var j = 0;            
+    for (i = 0; i < group.length; i++)
+    {
+      var nameAttr = group[i].getAttribute("name");
+      if (nameAttr == name)
+      {
+        out[j] = group[i];
+        j++;
+      }
+    }
+    return out;
+  };
+  
+  nbApi.findPosition = function(obj) 
+  {
+    var left = 0;
+    var top = 0;
+  	var iter = obj;
+    if (obj.offsetParent) 
+    {
+    	do 
+      {
+    		left += obj.offsetLeft;
+    		top += obj.offsetTop;
+    	} while (obj = obj.offsetParent);
+    }
+    else
+    {
+      left = obj.offsetLeft;
+      top = obj.offsetTop;   
+    }
+  
+  	while (iter) 
+    {
+      if (iter.tagName && iter.tagName.toLowerCase() == "body")
+      {
+        break;
+      }
+    	if (iter.scrollLeft) 
+      {
+    		left -= iter.scrollLeft;
+    	}
+    	if (iter.scrollTop) 
+      {
+    		top -= iter.scrollTop;
+    	}
+    	iter = iter.parentNode;
+  	}
+    return {left: left, top: top};
+  };
+  
+  nbApi.createId = function(id) 
+  {
+    var date1 = new Date();
+    date1.setFullYear(2000,1,1);
+    var date2 = new Date();
+    id += date2.getTime() - date1.getTime();
+    return id;
+  };
+  
+  nbApi.loadTimeoutHandler = function(targetId, timeoutId, timeoutCallback)
+  {
+    var bAlert = nbApi.getDebugMode();
+    if (targetId == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: Timeout Handler: No target id.");
+      return false;
+    }
+    if (timeoutId == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: Timeout Handler: No timeout id.");
+      return false;
+    }
+    var target = document.getElementById(targetId);
+    if (target == null)
+    {
+      if (bAlert)
+        alert("Nextbio API: Timeout Handler: Target doesn't exist.");
+      return false;
+    }
+    target.setAttribute(timeoutId, null);
+  
+    if (timeoutCallback == null)
+    {
+      return true;
+    }
+    return timeoutCallback(target);
+  };
+  nbApi.setCookie = function(cookieName, value, time)
+  {
+      var cookie=cookieName + "=" + escape(value) + ";path=/;";
+      if (time != null)
+      {
+        var date=new Date();
+        date.setFullYear(date.getFullYear() + time);
+        cookie += ";expires=" + date.toGMTString();
+      }
+      document.cookie=cookie;
+  }
+  nbApi.getCookie = function(cookieName)
+  {
+    if (document.cookie.length > 0)
+    {
+      cookieStart = document.cookie.indexOf(cookieName + "=");
+      if (cookieStart != -1)
+      { 
+      cookieStart = cookieStart + cookieName.length + 1; 
+      cookieEnd = document.cookie.indexOf(";", cookieStart);
+      if (cookieEnd == -1) cookieEnd = document.cookie.length;
+      return unescape(document.cookie.substring(cookieStart, cookieEnd));
+      } 
+    }
+    return "";
+  }
+  nbApi.hidePopup = function(name)
+  {  
+    var elements = nbApi.findElementsByName(name, "div");
+    if (elements)
+    {      
+      for (i = 0; i < elements.length; i++)
+      {
+        elements[i].style.display="none";
+      }
+    }
+    var back = document.getElementById("nbApiHelpBackId");
+    if (back)
+    {
+      document.body.removeChild(back);
+    }
+  }
+  nbApi.showPopup = function(config)
+  {  
+    if (!config)
+      return;
+    var pos = nbApi.findPosition(config.owner);    
+    var elements = nbApi.findElementsByName(config.helpBoxId, "div");
+    if (elements == null)
+      return;
+    var helpBox = elements[0];
+    if (config.bModal)
+    {
+  		var back = document.createElement("div");
+  		back.id="nbApiHelpBackId";
+  		back.onclick = function()
+      {
+        helpBox.style.display="none"; 
+        document.body.removeChild(back);
+      };
+  		back.className = "nbApiHelpBackground";
+      var pageSize = nbApi.pageSize();
+  		back.style.width = pageSize.width + "px";
+  		back.style.height = pageSize.height + "px";
+  		document.body.appendChild(back);
+		}
+    helpBox.style.display = "block";
+    var winWidth = nbApi.getWindowWidth();
+    var winHeight = nbApi.getWindowHeight();
+
+    var top = 0;
+    var left = 0;
+    if (config.align == "center")
+    {
+      top = (winHeight - helpBox.offsetHeight)/2;
+      if (top < 0)
+        top = 0;
+      top += nbApi.getScrollTop();
+
+      left = (winWidth - helpBox.offsetWidth)/2;
+      if (left < 0)
+        left = 0;
+      left += nbApi.getScrollLeft();
+    }
+    else
+    {
+      top = (pos.top + helpBox.offsetHeight) < winHeight ? pos.top : (winHeight - helpBox.offsetHeight);
+      if (top < 0)
+        top = 0;
+      top += nbApi.getScrollTop();
+      left = (pos.left + helpBox.offsetWidth) < winWidth ? pos.left : (winWidth - helpBox.offsetWidth - 25);
+      left += nbApi.getScrollLeft();
+    }
+    helpBox.style.top = top + "px";
+    helpBox.style.left = left + "px";
+    nbApi.trackUrl("/interact/help/"+config.helpBoxId);
+    
+  }
+  
+  nbApi.showHelp = function(config)
+  {
+    if (!config)
+      return false;
+    if (!config.owner || !config.name)
+      return false;
+    config.owner.href = "http://sciencedirect.nextbio.com/e/help/download.nb?f=" + config.name + ".pdf";
+    return true;
+  }
+
+  nbApi.pageSize = function()
+  {
+    var pageWidth = 0;
+    var pageHeight = 0;
+    if( window.innerHeight && window.scrollMaxY ) // Firefox 
+    {
+      pageWidth = window.innerWidth + window.scrollMaxX;
+      pageHeight = window.innerHeight + window.scrollMaxY;
+    }
+    else if( document.body.scrollHeight > document.body.offsetHeight ) // all but Explorer Mac
+    {
+      pageWidth = document.body.scrollWidth;
+      pageHeight = document.body.scrollHeight;
+    }
+    else // works in Explorer 6 Strict, Mozilla (not FF) and Safari
+    { 
+      pageWidth = document.body.offsetWidth + document.body.offsetLeft; 
+      pageHeight = document.body.offsetHeight + document.body.offsetTop; 
+    }
+    return {width: pageWidth, height: pageHeight};
+  }  
+  nbApi.getElementsByClassName = function(el, clazz, tag)  {
+    var a = [];
+    var re = new RegExp('\\b' + clazz + '\\b');
+    var els = el.getElementsByTagName(tag||"*");
+    for(var i=0,j=els.length; i<j; i++)
+        if(re.test(els[i].className))a.push(els[i]);
+    return a;
+  }
+/**
+ * Give a parameter string (e.g. a=x&b=y), look up a parameter in it
+ * @param str parameter string
+ * @param param parameter to look up
+ * @return parameter value
+ */
+
+nbApi.getParam = function(str, param)
+{
+  if (str == null)
+    return null;
+  var paramHead = param + "="; 
+  var begin = str.indexOf(paramHead);
+  if (begin < 0) // str doesn't have this param - return null
+    return null;
+
+  if (begin > 0) 
+  {
+    begin = str.indexOf("&" + paramHead); // make sure we found exact match
+    if (begin < 0) // str doesn't have this param - return null
+      return null;
+    begin++; // skip "&"
+  }
+  var end = str.indexOf("&", begin);  
+  if (end < 0) // this is the last param 
+  {
+    end = str.length;
+  }
+  var result = str.substring(begin + paramHead.length, end);
+  return result;
+}
+// make sure that the element's position is within window bounds
+nbApi.getAdjustedPosition = function(element, y, x, rightBound, bottomBound)
+{
+  if (element == null)                             
+    return;
+  var left = x;  
+  var top = y - element.offsetHeight; // x, y are coords of bottom left corner  
+  var bottom = bottomBound, right = rightBound;
+  if (bottom == null)
+    bottom = nbApi.getWindowHeight() - 10; 
+  if (right == null)
+    right = nbApi.getWindowWidth() - 10; 
+  
+  var deltaY = top;
+  var deltaX = right - (left + element.offsetWidth);
+  scrollTop = nbApi.getScrollTop();
+  top += scrollTop; // to account for page scrolling  
+  if (deltaY < 0)
+  {
+    top -=  deltaY; 
+    if (top < scrollTop)
+      top = scrollTop + 5; 
+  }
+  var newY = top + element.offsetHeight;
+
+  scrollLeft = nbApi.getScrollLeft();
+  left += scrollLeft; // to account for page scrolling  
+  if (deltaX < 0)
+  {
+    left += deltaX;
+    if (left < scrollLeft)
+      left = scrollLeft;
+  }
+  return {x: left, y: newY};
+}
+nbApi.truncateWithEllipses = function(str, maxSize, terminator)
+{
+  if (str == null || maxSize == null)
+    return null;
+  if (terminator == null)
+    terminator = "...";  
+  var out = str.substr(0, maxSize);
+  if (maxSize < str.length)
+  {
+    out += terminator;
+  }
+  return out; 
+}
+nbApi.cancelEvent = function(event)
+{
+	if (!event) 
+    event = window.event;
+  if (event)
+  {
+    event.cancelBubble = true;
+  	if (event.stopPropagation)
+    { 
+      event.stopPropagation();
+    }
+  }
+}
+/**
+ * Return the standard icon for a given type
+ * @param type, type, e.g. "gene", "biogroup"
+ * @param opaque if true, use IE6 opaque icons if available.  These icons will work on a white
+ * background.  This should only be set if the use of the Png class doesn't prevent
+ * blue backgrounds
+ * @return base url for the icon
+ */
+nbApi.getIcon = function(type, root, bLabel, opaque) 
+{
+  if (type == null || root == null)
+    return null;
+  type = type.toLowerCase();
+
+  if (bLabel == true)
+    root += "/labels/";
+  else
+    root += "/icons/";  
+    
+  opaque = (opaque && navigator.userAgent.indexOf("MSIE 6") > 0)?"_opq":"";
+
+  if (type == "gene" || type == "feature" || type == "genes") return root + "gene" + opaque + ".png";
+  if (type == "tissue" || type == "tissues") return root + "tissue" + opaque + ".png";
+  if (type == "treatment" || type == "compound" || type == "treatments") return root + "treatment" + opaque + ".png";
+  if (type == "disease" || type == "diseases") return root + "disease" + opaque + ".png";
+  if (type == "bioset") return root + "bioset" + opaque + ".png";
+  if (type == "biogroup" || type == "biogroups") return root + "biogroup" + opaque + ".png";
+  if (type == "biosource") return root + "biosource.png";
+  if (type == "biodesign") return root + "biodesign.png";
+  if (type == "genemode") return root + "genemode.png";
+  if (type == "snp") return root + "snp" + opaque + ".png";
+  if (type == "author") return root + "author" + opaque + ".png";
+  if (type == "study") return root + "study" + opaque + ".png";
+  if (type == "organism") return root + "organism" + opaque + ".png";
+  return root + "unknown.png";
+};
+
+nbApi.addEvent = function(elem, evtType, func, capture) 
+{
+  capture = (capture) ? capture : false;
+  if (elem.addEventListener) 
+  {
+    elem.addEventListener(evtType, func, capture);
+    return true;
+  } 
+  if (elem.attachEvent) 
+  {
+    elem.attachEvent("on" + evtType, func);
+    return true;
+  } 
+  return false;
+} 
+nbApi.addEventHandler = function(element, eventName, handler) 
+{
+  nbApi.removeEvent(element, eventName, handler, false)
+  var rc = nbApi.addEvent(element, eventName, handler, false);
+  if (rc) return;
+  eventName = "on" + eventName;  
+  var chain = (element[eventName]) ? element[eventName] : function(){};
+  element[eventName] = function(event) 
+  {
+    chain(event);
+    handler(event);
+  }
+}
+nbApi.removeEvent = function(elem, evtType, handler, capture) 
+{
+  capture = (capture) ? capture : false;
+  if (elem.removeEventListener) 
+  {
+    elem.removeEventListener(evtType, handler, capture);
+  } 
+  else if (elem.attachEvent) 
+  {
+    elem.detachEvent("on" + evtType, handler);
+  } 
+  else 
+  {
+    elem["on" + evtType] = null;
+  }
+}
+nbApi.showSection = function(targetId, bShow)
+{
+  var element = document.getElementById(targetId);
+  if (element != null)
+    element.style.display = bShow?"block":"none";
+}
+nbApi.visibility = function(targetId, bShow)
+{
+  var element = document.getElementById(targetId);
+  if (element != null)
+    element.style.visibility = bShow?"visible":"hidden";
+}
+nbApi.updateSNPLink = function(obj) 
+{
+	var popup = nbApi.findParentByClassName(obj, "nbApiExPopup");
+	if (popup && obj){
+		var it = popup.getAttribute("nbItemTitle");
+		var url = obj.getAttribute("url");
+		if (url && it){
+			var urlAry = [];
+			urlAry = url.split('?');
+			if (urlAry.length < 2)
+				url = url + '?' + it;
+			else
+				url = url + '&' + it;
+			obj.setAttribute("href",url); 
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+nbApi.trackUrl = function(url,key) {
+
+try {
+  
+  if (document.readyState && document.readyState != "complete") {
+    setTimeout(function () {nbApi.trackUrl(url,key)}, 200);
+    return;
+  }
+  if (!nbApi.trackIframe || key) {
+    var iframe = document.createElement("iframe");
+    
+    iframe.style.display="none";
+    document.body.appendChild(iframe);
+    var ifrcont = iframe.contentWindow || ifrm.contentDocument.document || ifrm.contentDocument;
+    if (!key) {
+      nbApi.trackIframe = iframe;
+      nbApi.trackIframeContent = ifrcont;
+    }
+    var doc = ifrcont.document;
+    doc.open();
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    var qJsHost = (("https:" == document.location.protocol) ? "https://secure" : "http://edge");
+    doc.write('<html><body>'+unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")+
+    '<script type="text/javascript">' +
+    'var pageTracker;(function() { if (self._gat) {pageTracker = _gat._getTracker("'+(key||"UA-3589787-52")+'");pageTracker._trackPageview("'+url+'");} else {setTimeout(arguments.callee,500)}})();'+
+    '</script>'+
+    '</body></html>');
+    doc.close();
+  } else if (nbApi.trackIframeContent.pageTracker){
+    nbApi.trackIframeContent.pageTracker._trackPageview(url);
+  }
+} catch (e) {if (doc) doc.close()}
+
+}
+
+nbApi.trackExtUrl = function(x) {
+  try {
+    x = x.href || x;  
+    x = x.replace(/.*\/\//,"").replace(/\/.*/, "");  
+    nbApi.trackUrl("/external/"+x+"/popup");
+  } catch (e) {}
+}
+
+nbApi.imgTrack = function(args) {
+  var url = "http://sciencedirect.nextbio.com/e/t.nb?"+args+"&t="+(new Date()).getTime();
+  var img = document.getElementById("nbApiimgTrk");
+  if (img) {
+    img.src = url;
+  } else {
+    img = document.createElement("img");
+    img.style.position="absolute";
+    img.style.width = img.style.height = "1px";
+    img.style.left = img.style.top = "-999px";
+    img.style.visibility = "hidden";
+    img.id="nbApiimgTrk";
+    img.src = url;
+    document.body.appendChild(img);
+  }
+}
+
+nbApi.whichElement = function(e)
+{
+  var target;
+  if (!e) var e = window.event;
+  if (e.target) target = e.target;
+  else if (e.srcElement) target = e.srcElement;
+  if (target.nodeType == 3) // work around Safari bug
+  target = target.parentNode;
+  return target;
+}
+
+nbApi.loadCss = function(url) {
+  if(document.createStyleSheet) {
+    document.createStyleSheet(url);
+  } else {
+    var styles = "@import url('"+url+"');";
+    var newSS=document.createElement('link');
+    newSS.rel='stylesheet';
+    newSS.href='data:text/css,'+escape(styles);
+    document.getElementsByTagName("head")[0].appendChild(newSS);
+  }
+}
+/**
+ * Determine the URL for a given search.  When calling from code that only runs within the nextbio
+ * context, consider using searchUrl() instead.
+ * @param root The root for the current contect e.g. "/b"
+ * @param page The search page, e.g. "disc" or "lit"
+ * @param searchTerm The term being searched for e.g. "esr1"
+ * @param query the query arguments to appear after the ?, e.g. "id=1234&type=gene"
+ * @return search URL
+ */
+nbApi.searchUrl = function(root,page,searchTerm,query, doNotEncode) 
+{
+  var encTerm = doNotEncode ? searchTerm : encodeURIComponent(searchTerm);
+  // there is a problem on our server if the url contains an encoded % (%25) or / (%2F)
+  // if the search term contains a %, included it as part of the q, otherwise
+  // we include it as part of the URL
+  if (searchTerm.indexOf('%') >= 0 || searchTerm.indexOf('/') >= 0 || searchTerm.indexOf('+') >= 0) {
+      return root + "/search/" + page + ".nb?" + _nextbio_setParam(query,"q",encTerm);
+  }
+  if (query == null || query.length == 0) {
+      query = "";
+  } else {
+      query = "?" + query;
+  }
+  return root + "/search/" + page + "/" + encTerm + query;
+};
+nbApi.sendFeedback = function(config)
+{
+  var target = "nextbio_feedback";
+  if (config && config.target)
+    target = config.target;                                                                     
+  var url = nbApi.urlContext + "/corp/feedback.nb?url=" + encodeURIComponent(window.location.href);  
+  var winParams = "resizable=yes,scrollbars=yes,status=yes,toolbar=yes,location=yes,menubar=yes";
+  try
+  {
+    if (window[target] != null)
+      window[target].close();
+  }
+  catch (error){}
+  var newWindow = window.open(url, target, winParams);
+  if (target)
+    window[target] = newWindow; 
+  return false;
+}
+nbApi.getComputedStyle = function(el, style)
+{
+  var computedStyle;
+  if (typeof el.currentStyle != 'undefined')
+    { computedStyle = el.currentStyle; }
+  else
+    { computedStyle = document.defaultView.getComputedStyle(el, null); }
+
+  return computedStyle[style];
+}
+  
+    
+
+
+
+
+  // NextBio Tag Cloud Support JavaScript Library
+  // requires jsApi.jsp, jsUtils.jsp
+  // all the internal function names and global variables should begin with _nextbio_ (as in _nextbio_Load()).
+  
+  // _nextbio_TagTypes - collection of predefined tag types (subtabs)
+  nbApi.tagTypes = {literature: "literature", fullText: "fullText", clinicalTrials: "clinicalTrials"};
+  // _nextbio_GetTagTypes() - returns collection of predefined tag types
+  nbApi.getTagTypes = function()
+  {
+    return nbApi.tagTypes;
+  };
+  // NbTagCloudTypes - collection of predefined tag cloud types (data sources)
+    nbApi.tagCloudTypes = {literature: "literature", fullText: "fullText", clinicalTrials: "clinicalTrials"};
+  // NbTagCloudTypes() - returns collection of predefined tag types
+  nbApi.getTagCloudTypes = function()
+  {
+    return nbApi.tagCloudTypes;
+  };
+  
+  // nbCreateTagCloud(tagType, key, bAlert) - create basic cloud configuration object
+  // tagType - type of tags (_nextbio_TagTypes.literature, _nextbio_TagTypes.fullText, _nextbio_TagTypes.clinicalTrials )
+  // bAlert - optional. True if we want to display alerts.
+  nbApi.createTagCloud = function(type)
+  {
+    var bAlert = nbApi.getDebugMode();
+    if (type == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: Tag cloud type is not specified.");
+      return null;
+    }
+    var tagTypes = nbApi.getTagTypes();
+    if (tagTypes[type] == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: Illegal tag type value.");
+      return null;
+    }
+    var tagCloud = {
+      attributes: 
+      {
+        tagCloudType: true,     // one of the values defined in _nextbio_TagTypes: literature, clinicalTrials, etc.
+        tagType: true,  // tag filter: "bioset", "study", "compound", etc.
+        query: true,    // a search string 
+        id: true,    //  an object id
+        source: true,   // search source. Default "nextbio" source means NextBio general Search and assumes that query is a string of search terms
+        extra: true,    // additional parameters to clarify meaning of query and id
+        className: true,    // css style
+        urlContext: true,    // context to prepend to relative url    
+        header: true,   // header to display on top of the cloud
+        headerClassName: true,   // CSS class to display header
+        headerStyle: true,   // style to display header
+        footer: true,   // header to display on top of the cloud
+        footerClassName: true,   // CSS class to display header
+        footerStyle: true,   // style to display header
+        message: true,   // message to display while the cloud is loaded
+        messageClassName: true,   // CSS class to display message
+        messageStyle: true,   // style to display message
+        frameTarget: true,   // target name for a new popup window. If null - open in old browser window
+        frameTargetName: true,   // name for a window target property
+        iFrame: true,   // If true - open popup in an iFrame, otherwise - open in a new browser window
+        frameTop: true,   // popup position
+        frameLeft: true,   // popup position
+        frameWidth: true,   // popup width
+        frameHeight: true,   // popup height
+        onClick: true,   // customer defined function to be executed when onclick event fires up: onClick(event, tagName, customOnClickParam)
+        onClickParam: true,   // customer defined parameter string to be passed to onClick(event, tagName, customOnClickParams)
+        onMouseOver: true,   // customer defined function to be executed when onmouseover event fires up: onMouseOver(event, tagName, onMouseOverParam)
+        onMouseOverParam: true,   // customer defined parameter string to be passed to onMouseOver(event, tagName, onMouseOverParam)
+        onMouseOut: true,   // customer defined function to be executed when onmouseover event fires up: onMouseOut(event, tagName, onMouseOutParam)
+        onMouseOutParam: true,   // customer defined parameter string to be passed to onMouseOut(event, tagName, onMouseOutParam)
+        callback: true,   // pointer to callback to be executed after cloud is loaded with a standard (Nextbio provided) function (updateTargetHTML()) 
+        callbackName: true,   // name of a callback to be executed after cloud is loaded - currently through dynamic script tag
+        timeout: true,   // if loading time exceeds the timeout, timeout callback is invoked (if specified)
+        timeoutTerminate: true, // if true, don't load the tag cloud after loading time exceeds the timeout 
+        timeoutCallback: true,   // callback function to be executed after if loading time is more than timeout. timeoutCallBack(targetObject);
+        delay: true,   // for testing only. instructs server to sleep for specified time (milliseconds)
+        report: true,   // for testing only. generate a report.
+        iFrameId: true,  // id of an iFrame to be used in loadScript/importScript functions (for concurrent execution)
+        cloudSize: true   // how many tags to display
+      },
+      tagCloudType: type, 
+      tagType: "ALL", 
+      source: "nextbio",
+      frameTarget: "nextbio_popup_frame",   // target name for a new popup window. If null - open in old browser window
+      iFrame: false,   // If true - open popup in an iFrame, otherwise - open in a new browser window
+      frameTop: -1,   // popup position
+      frameLeft: -1,   // popup position
+      frameWidth: 790 + 240,   // popup width
+      frameHeight: 700,   // popup height
+      className: "nbApiTagCloud",
+      headerClassName: "nbApiTagCloudHeader",
+      urlContext: "http://sciencedirect.nextbio.com/e",
+      messageStyle: "font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; color: #808080;",
+      onClick: function (event, containerId, tagName, customParam, urlContext){return nbApi.showFrame(event, containerId, tagName, customParam, urlContext);},
+      callbackName: "nbApi.updateTargetHTML",
+      delay: 0,
+      cloudSize: 40   // how many tags to display
+    };
+    tagCloud.setAttribute = function(attrName, attrValue)
+    {
+      nbApi.setTagCloudAttribute(tagCloud, attrName, attrValue);
+    }
+    tagCloud.load = function(targetId)
+    {
+      nbApi.loadTagCloud(targetId, tagCloud);
+    }
+    return tagCloud;
+  };
+  // nbSetTagCloudAttribute(tagCloud, attrName, attrValue, bAlert, bEncode) - convenience function that sets attribute values
+  // makes sure that attrName is a known attribute name and can be modified
+  // tagCloud - tag cloud object
+  // attrName, attrValue - attribute name/value pair
+  // bEncode - optional. True if we need to URI encode attribute's value
+  nbApi.setTagCloudAttribute = function(tagCloud, attrName, attrValue, bEncode)
+  {
+    var bAlert = nbApi.getDebugMode();
+    if (tagCloud == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: tagCloud is not specified.");
+      return tagCloud;
+    }
+    if (tagCloud.attributes == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: Not a legitimate tag cloud object.");
+      return tagCloud;
+    }
+    if (tagCloud.attributes[attrName] != true)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: Illegal or unknown attribute name.");
+      return tagCloud;
+    }
+    if (bEncode == true)
+      attrValue = encodeURIComponent(attrValue);  
+    tagCloud[attrName] = attrValue;
+    return tagCloud;
+  };
+  // nbLoadTagCloud(targetId, tagCloud, bAlert)
+  // load tag cloud and insert results in a target 
+  // targetId - HTML id of a div, span, etc. that will contain tag cloud
+  // tagCloud - a tag cloud object created with nbCreateTagCloud() and configured with nbSetTagCloudAttribute() methods
+  // bAlert - optional. True if we want to display alerts.
+  nbApi.loadTagCloud = function(targetId, tagCloud)
+  {
+    var bAlert = nbApi.getDebugMode();
+    if (targetId == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: target id is not specified.");
+      return;
+    }
+    if (tagCloud == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: tagCloud is not specified.");
+      return tagCloud;
+    }
+    if (nbApi.apiKey == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: API key is not specified.");
+      return;
+    }
+    if (tagCloud.tagCloudType == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: Tag cloud type is not specified.");
+      return;
+    }
+    if (tagCloud.source == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: Source is not specified.");
+      return;
+    }
+    var element = document.getElementById(targetId);
+    if (element == null)
+    {
+      if (bAlert)
+        alert("Nextbio Tag Cloud: target not found.");
+      return;
+    }
+    element.nextbioOnClick = tagCloud.onClick;
+    element.nextbioOnClickParam = tagCloud.onClickParam;
+    element.nextbioOnMouseOver = tagCloud.onMouseOver;
+    element.nextbioOnMouseOverParam = tagCloud.nextbioOnMouseOverParam;
+    element.nextbioOnMouseOut = tagCloud.onMouseOut;
+    element.nextbioOnMouseOutParam = tagCloud.nextbioOnMouseOutParam;
+    element.nextbioUrlContext = tagCloud.urlContext;
+    element.nextbioTarget = tagCloud.frameTarget;
+    element.nextbioTargetName = tagCloud.frameTargetName;
+    element.setAttribute("nextbioIFrame", tagCloud.iFrame);
+    element.nextbioTop = tagCloud.frameTop;
+    element.nextbioLeft = tagCloud.frameLeft;
+    element.nextbioWidth = tagCloud.frameWidth;
+    element.nextbioHeight = tagCloud.frameHeight;
+    element.nextbioTargetClassName = tagCloud.className;
+    element.nextbioHeaderClassName = tagCloud.headerClassName;
+    element.nextbioHeader = tagCloud.header;
+    element.nextbioFooterClassName = tagCloud.footerClassName;
+    element.nextbioFooter = tagCloud.footer;
+
+
+  
+    if (tagCloud.message != null)
+      nbApi.addClass(element, tagCloud.className);
+    var query = "type=" + tagCloud.tagCloudType + "&apiKey=" + nbApi.apiKey + "&source=" + tagCloud.source + "&tagType=" + tagCloud.tagType;
+    query += "&sid=" + nbApi.sessionId;
+    query += "&ts=" + nbApi.timeStamp;
+    query += "&tos=" + nbApi.timeoutStamp;
+    
+      query += "&dpId=" + 1;
+    
+    
+
+    if (tagCloud.query != null)
+      query += "&query=" +  encodeURIComponent(tagCloud.query);
+    if (tagCloud.id != null)
+      query += "&id=" +  encodeURIComponent(tagCloud.id);
+    if (tagCloud.extra != null)
+      query += "&extra=" +  encodeURIComponent(tagCloud.extra);
+    query += "&nameSpace=" +  "nbApi";
+    if (tagCloud.delay > 0)
+      query += "&delay=" +  tagCloud.delay;
+    if (tagCloud.report == true)
+      query += "&report=true";
+    if (tagCloud.iFrameId != null)
+      query += "&framed=true";
+    if (tagCloud.cloudSize != null)
+      query += "&tagCloudSize=" + tagCloud.cloudSize;
+    
+    query += "&ehighlight=true";
+    
+    
+    var url = tagCloud.urlContext;
+    if (url == null)
+      url = "http://sciencedirect.nextbio.com/e";
+    url += "/service/tags.nb";      
+    var config = 
+    {
+      target: targetId,
+      callbackName: tagCloud.callbackName,
+      callback: tagCloud.callback,
+      url: url,
+      query: query,
+      timeout: tagCloud.timeout,
+      timeoutCallback: tagCloud.timeoutCallback,
+      timeoutTerminate: tagCloud.timeoutTerminate,
+      message: tagCloud.message,
+      messageStyle: tagCloud.messageStyle,
+      report: tagCloud.report,
+      iFrameId: tagCloud.iFrameId
+    };  
+    config.highlight = true;
+    nbApi.loadScript(config);  
+  };
+  nbApi.tagCloudShowLess=function(type) {
+    var el = document.getElementById("nbApitagCloud"+type);
+    nbApi.addClass(el,"nbApiTagCloudShowLess");
+    nbApi.removeClass(el,"nbApiTagCloudShowMore");
+  }
+  nbApi.tagCloudShowMore=function(type) {
+    var el = document.getElementById("nbApitagCloud"+type);
+    nbApi.addClass(el,"nbApiTagCloudShowMore");
+    nbApi.removeClass(el,"nbApiTagCloudShowLess");
+    if (el)
+      el.nbExpand = "yes";
+  }
+nbApi.tagCloudReportFromId = function(div, id, search, iFrameId)
+{
+    var tagCloud = nbApi.createTagCloud(nbApi.getTagTypes().fullText);
+    tagCloud.setAttribute("id", id);
+    tagCloud.setAttribute("query", search);
+    tagCloud.setAttribute("iFrameId", iFrameId);
+    tagCloud.setAttribute("report", true);
+    tagCloud.load(div);
+};
+
+  
+    
+
+
+
+
+// NextBio effects JavaScript library 
+// requires jsApi.jsp, jsUtils.jsp
+
+nbApi.highlightSteps = 25;
+nbApi.highlightColor = "#93B6E0";
+nbApi.highlightDuration = 1000;
+
+  /**
+   * Highlight an element by color-flashing it's background
+   * @param el, element, e.g. <div>, <span>
+   * @param step, step number in the highlight sequence. For internal use only.    
+   */
+  nbApi.highlight = function(el, step, target, startTime) 
+  { 
+    if (el == null)
+    {
+      return;
+    }
+    if (step == null || step < 1)  
+      step = 0;
+
+    if (target == null)
+    {
+      target = document.createElement("div");
+      target.className = "nbApiHighlightTarget";
+      target.style.display = "none";
+      target.style.position = "absolute";
+      el.appendChild(target);
+      target.style.background = nbApi.highlightColor;
+      target.style.display = "inline";
+    }
+    var position = nbApi.findPosition(el);
+    target.style.top = position.top + "px";
+    target.style.left = position.left + "px";
+    target.style.width = el.offsetWidth + "px";
+    target.style.height = el.offsetHeight + "px";
+
+    var date = new Date();
+    var time = 0; 
+    var timeLeft = 0;
+    if (startTime == null)
+    {
+      startTime = date;
+    }
+    timeLeft = nbApi.highlightDuration - (date.getTime() - startTime.getTime());
+    if (timeLeft < 0)
+      timeLeft = 0;
+    var stepTime = nbApi.highlightDuration / nbApi.highlightSteps;
+    var stepsLeft = timeLeft / stepTime;
+
+    var opacity = stepsLeft / nbApi.highlightSteps;
+    if (opacity != 0)
+    {
+      target.style.opacity = new Number(opacity).toFixed(2).toString();
+      target.style["-ms-filter"] = "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + new Number(opacity * 100).toFixed(0).toString() + ")";
+      target.style.filter = "alpha(opacity=" + new Number(opacity * 100).toFixed(0).toString() + ")";
+    }
+
+    if (timeLeft < 1 || stepsLeft < 1)
+    {
+      if (target != null)
+        el.removeChild(target);
+      return;
+    }
+    var nextStep = step + 1;  
+    var timeout = setTimeout(function(){nbApi.highlight(el, nextStep, target, startTime)}, stepTime);
+  };
+  
+  /**
+   * Convert RGB string to a JSON object with R, G and B values
+   * @param rgb, RGB string, i.e. "#ffeebb"
+   */
+  nbApi.rgb2json = function(rgb)
+  {
+    if (rgb == null || rgb.length == 0 || rgb.indexOf("#") != 0)
+      return {r: 0, g: 0, b: 0};
+    var rStr, gStr, bStr;
+    rStr = gStr = bStr ="00";
+    rStr = rgb.substr(1, 2); 
+    if (rgb.length > 3)  
+      gStr = rgb.substr(3, 2);
+    if (rgb.length > 5)  
+      bStr = rgb.substr(5, 2);
+    
+    var json = {r: parseInt(rStr, 16), g: parseInt(gStr, 16), b: parseInt(bStr, 16)};
+    return json;  
+  }
+
+  /**
+   * Convert RGB values to a JSON object with H, S and L (hue, saturation and luminosity) values
+   * @param R, R-value, integer
+   * @param G, G-value, integer
+   * @param B, B-value, integer
+   */
+  nbApi.rgb2hsl = function(R, G, B)
+  {  
+    var H, S, L;
+    var var_R = ( R / 255 );                     //RGB from 0 to 255
+    var var_G = ( G / 255 );
+    var var_B = ( B / 255 );
+    
+    var var_Min = Math.min( var_R, var_G, var_B );    //Min. value of RGB
+    var var_Max = Math.max( var_R, var_G, var_B );    //Max. value of RGB
+    var del_Max = var_Max - var_Min;             //Delta RGB value
+    
+    L = ( var_Max + var_Min ) / 2 ;
+    if ( del_Max == 0 )                     //This is a gray, no chroma...
+    {
+       H = 0;                                //HSL results from 0 to 1
+       S = 0;
+    }
+    else                                    //Chromatic data...
+    {
+      if ( L < 0.5 ) 
+        S = del_Max / ( var_Max + var_Min );
+      else           
+        S = del_Max / ( 2 - var_Max - var_Min );
+      
+      var del_R = ( ( ( var_Max - var_R ) / 6 ) + ( del_Max / 2 ) ) / del_Max;
+      var del_G = ( ( ( var_Max - var_G ) / 6 ) + ( del_Max / 2 ) ) / del_Max;
+      var del_B = ( ( ( var_Max - var_B ) / 6 ) + ( del_Max / 2 ) ) / del_Max;
+      
+      if ( var_R == var_Max ) 
+        H = del_B - del_G;
+      else if ( var_G == var_Max ) 
+        H = ( 1 / 3 ) + del_R - del_B;
+      else if ( var_B == var_Max ) 
+        H = ( 2 / 3 ) + del_G - del_R;
+      
+      if ( H < 0 ) 
+        H += 1;
+      if ( H > 1 )
+        H -= 1;
+    }  
+    return {h: H, s: S, l: L}
+  }  
+  
+  /**
+   * Convert HSL values to a JSON object with R, G and B values
+   * @param H, H-value, integer
+   * @param S, S-value, integer
+   * @param L, L-value, integer
+   */
+  nbApi.hsl2rgb = function(H, S, L)
+  {
+    var R, G, B, var_1, var_2;
+    if ( S == 0 )                       //HSL from 0 to 1
+    {
+       R = L * 255;                      //RGB results from 0 to 255
+       G = L * 255;
+       B = L * 255;
+    }
+    else
+    {
+      if ( L < 0.5 ) 
+        var_2 = L * ( 1 + S );
+      else           
+        var_2 = ( L + S ) - ( S * L );
+      
+      var_1 = 2 * L - var_2;
+      
+      R = 255 * nbApi.Hue_2_RGB( var_1, var_2, H + ( 1 / 3 ) );
+      G = 255 * nbApi.Hue_2_RGB( var_1, var_2, H );
+      B = 255 * nbApi.Hue_2_RGB( var_1, var_2, H - ( 1 / 3 ) );
+    }
+    return {r: new Number(R).toFixed(0), g: new Number(G).toFixed(0), b: new Number(B).toFixed(0)}; 
+  }
+
+  /**
+   * Internal helper function
+   */
+  nbApi.Hue_2_RGB = function( v1, v2, vH )             //Function Hue_2_RGB
+  {
+    if ( vH < 0 ) 
+      vH += 1;
+    if ( vH > 1 ) 
+      vH -= 1;
+    if ( ( 6 * vH ) < 1 ) 
+      return v1 + ( v2 - v1 ) * 6 * vH;
+    if ( ( 2 * vH ) < 1 ) 
+      return v2;
+    if ( ( 3 * vH ) < 2 ) 
+      return v1 + ( v2 - v1 ) * ( ( 2 / 3 ) - vH ) * 6;
+    return v1;
+  }
+
+
+  
+    
+
+
+
+
+// Functions related to popup windows.  
+nbApi.nextbio_popupId; // visible popup id
+nbApi.popupMisc = {};
+nbApi.popupMisc.FAKE_ID = 1000000000;
+nbApi.popupEvenHandlers = {};
+nbApi.popupEvenHandlers.onmouseover = function(event){nbApi.cancelTimeout();};
+nbApi.popupEvenHandlers.onclick = function(event)
+{
+  nbApi.popupEvenHandlers.stopMove(event);
+  nbApi.closePopup();
+};
+nbApi.popupEvenHandlers.startMove = function(event, objId)
+{
+  objId = "WzTtDiV";
+  var clientY = event.clientY;
+  var clientX = event.clientX;
+  nbApi[objId + "_y"] = clientY;
+  nbApi[objId + "_x"] = clientX;
+  var obj = document.getElementById(objId); 
+  nbApi[objId] = obj;
+  if (!obj)
+    return;
+  var pos = nbApi.findPosition(obj);
+  nbApi[objId + "_pos"] = pos;
+}
+nbApi.popupEvenHandlers.stopMove = function(event, objId)
+{
+  objId = "WzTtDiV";
+  nbApi[objId] = null;
+}
+nbApi.popupEvenHandlers.move = function(event, objId)
+{
+  objId = "WzTtDiV";
+  var obj = nbApi[objId];
+  if (!obj)
+    return;
+  var newY = event.clientY;
+  var newX = event.clientX;
+  var oldY = nbApi[objId + "_y"];
+  var oldX = nbApi[objId + "_x"];
+  var pos = nbApi[objId + "_pos"];
+  var top = pos.top + (newY - oldY);
+  var left = pos.left + (newX - oldX);
+  obj.style.top = top + "px";
+  obj.style.left = left + "px";
+}
+nbApi.popupEvenHandlers.onmouseover2 = function(){
+  nbApi.clearHideTimeout();
+}
+nbApi.popupEvenHandlers.onmouseout2 = function(){
+  nbApi.clearHideTimeout;
+  nbApi.popupWindow.hideTimeout = setTimeout(nbApi.closePopup, 400);
+}
+nbApi.clearHideTimeout = function() {
+  if (nbApi.popupWindow.hideTimeout) {
+    clearTimeout(nbApi.popupWindow.hideTimeout);
+    nbApi.popupWindow.hideTimeout = null;
+  }
+}
+// load and display data in a "popup". Intended to work with a popupLink.tag  
+// popupId - popupId used in popupLink tag
+// url - ajax call url
+// paramList - ajax call url parameters 
+// y. x, height , width - desired position and size of a popup window
+// forceLoad - force reload of the popup (ajax call) every time we display it
+//             valid values: "hard" - unconditional reload, "soft" - reload if popupId changed since last call
+// quickHide -- if true, popup pops down if the mouse moves out of initial element and popup for long time
+nbApi.displayPopup = function(eventSource, popupId, url, paramList, event, height, width, forceLoad, forwardUrl, title, prefix, bPersistent, quickHide)
+{ 
+  nbApi.closePopup();
+  var popup = document.getElementById(popupId);
+  window.nextbioPopup = popup;
+  if (popup == null)
+    return;
+  popup.setAttribute("nbSwitchTab", "true");  
+
+  var termName;
+  if (eventSource && typeof(eventSource) == "object")
+  {
+    termName = popup.getAttribute("nbTermName"); // explicitly set nbTermName overrides source content
+    if (!termName)
+    {
+      termName = eventSource.getAttribute("nbApiTag"); // explicitly set nbTermName overrides source content
+      if (!termName)
+        termName = nbApi.getInnerText(eventSource);
+    }
+    popup.setAttribute("nbName", termName);
+    popup.setAttribute("nbTermFilter", "tf=" + encodeURIComponent(termName));
+    var termArr = nbApi.findElementsByName(popupId + "_term", "span");
+    if (termArr && termArr.length)
+    {
+      for (var i = 0; i < termArr.length; i++)
+      {
+        termArr[i].innerHTML = nbApi.truncateWithEllipses(termName, 15);
+      }
+    }
+  }
+  nbApi.nextbio_popupId = popupId;
+  popup.style.display = "none";
+  if (paramList == null)    
+    paramList = "";
+  var type = nbApi.getParam(paramList, "type");
+  var searchTerm = paramList.indexOf("linkOutSearchTerm");
+  var subTitle;
+  if (title != null && searchTerm < 0)  
+  {
+    var titleEnd = title.indexOf(",");  	
+  	if (titleEnd < 0 )
+  		subTitle = title;
+  	else
+  		subTitle = title.substring(0, titleEnd);
+  	// strip replace {comma} with ","	
+  	if (subTitle.length > 1)
+  		subTitle = subTitle.replace(/\{comma\}/g, ",");
+		paramList += "&linkOutSearchTerm=" + encodeURIComponent(subTitle);
+  }
+  var query = null;
+  if (subTitle != null)  
+  {
+    query = subTitle;
+    paramList += "&q=" + encodeURIComponent(query);
+  }
+  if (query != null && ("treatment" == type || "tissue" == type || "disease" == type))  
+  {
+    paramList += "&synonym=" + encodeURIComponent(query);
+  }
+   
+  var scrollTop = nbApi.getScrollTop();
+  var scrollLeft = nbApi.getScrollLeft();
+  var clientY = event.clientY;
+  var clientX = event.clientX;
+  
+  if (quickHide) {
+    nbApi.addEventHandler(popup, "mouseover", nbApi.popupEvenHandlers.onmouseover2);
+    nbApi.addEventHandler(eventSource, "mouseover", nbApi.popupEvenHandlers.onmouseover2);
+    nbApi.addEventHandler(popup, "mouseout", nbApi.popupEvenHandlers.onmouseout2);
+    nbApi.addEventHandler(eventSource, "mouseout", nbApi.popupEvenHandlers.onmouseout2);
+    nbApi.popupWindow.eventSource = eventSource;
+  }
+
+  var bForceLoad = (forceLoad == "hard") || (forceLoad == "soft" && nbApi.nextbio_popupId != popupId);
+  if (bForceLoad == true || popup.loaded == null || popup.loaded == false)
+  {
+    popup.loaded = true;
+    var targetId = popupId + "_content";
+    popup.setAttribute("nbDynamicUrl", nbApi.urlContext + url);
+    popup.setAttribute("nbDynamicQuery", paramList);
+
+    var sdUrl = popup.getAttribute("sdUrl");
+    var publicationId = popup.getAttribute("publicationId");
+    nbApi.enablePopupTabs = true;
+    nbApi.addEventHandler(document.body, "click", nbApi.popupEvenHandlers.onclick);
+        nbApi.TagToTip(popupId, 
+          BGCOLOR, '', 
+          BORDERWIDTH, 0,          
+          PADDING, 0,
+          ABOVE, true, 
+          FIX, [-5000, -5000],
+          FONTSIZE, '',
+          COPYCONTENT, false,
+          STICKY, true
+        );
+        var pos = nbApi.getAdjustedPosition(popup, clientY - 10, clientX + 10);
+        nbApi.TagToTip(popupId, 
+          BGCOLOR, '', 
+          BORDERWIDTH, 0,
+          PADDING, 0,
+          ABOVE, true, 
+          FIX, [pos.x, pos.y],
+          FONTSIZE, '',
+          COPYCONTENT, false,
+          STICKY, true
+        );
+      nbApi.updatePopupEx({popupId: popupId, initial:true, callback: function(target, bLoaded, json){
+      nbApi.trackUrl("/interact/popup/"+type+"/"+query);
+    }});
+  } 
+  else
+  {
+    nbApi.addEventHandler(document.body, "click",nbApi.popupEvenHandlers.onclick);
+    nbApi.TagToTip(popupId, 
+      BGCOLOR, '', 
+      BORDERWIDTH, 3,
+      PADDING, 0,
+      ABOVE, true, 
+      OFFSETX, -10,
+      FONTSIZE, '',
+      COPYCONTENT, false,
+      STICKY, true,
+      SHADOW, true
+    );
+  } 
+  if (forwardUrl != null)
+  {
+    var modParamList = paramList.replace("type=treatment","type=compound");  // DE2561
+    var href = forwardUrl + "?" + modParamList;
+    nbApi.setInnerHtml(popupId + "_forwardText" , "VIEW COMPLETE DETAILS");
+    nbApi.setAttr(popupId + "_forwardUrl" , "href", href);
+
+  }
+  if (termName)
+    title = termName;
+  if (title != null)
+  {
+    title = title.replace(/,/g, ", ");
+ 		title = title.replace(/\{comma\}/g, ",");
+    title = nbApi.normalizeString(title);
+    var shortTitle = nbApi.truncateWithEllipses(title, 45); 
+//    nbApi.setAttr(popupId + "_title" , "title", title);
+    nbApi.setInnerText(popupId + "_title" , shortTitle);
+  }
+  if (prefix != null)
+  {
+    prefix = prefix.toLowerCase();
+    if (prefix == "feature")
+      prefix = "gene";
+    if (prefix == "treatment")
+      prefix = "compound";
+    nbApi.setInnerHtml(popupId + "_prefix" , prefix);  
+  }
+  var icon = document.getElementById(popupId+"_img");
+  if (icon)
+    icon.src = nbApi.getIcon(prefix, nbApi.imgContext, null, true);
+    
+  return popup;
+}
+nbApi.closePopup = function() {
+  nbApi.UnTip(true);
+  nbApi.clearHideTimeout();
+  if (nbApi.popupWindow.eventSource) {
+      nbApi.removeEvent(nbApi.popupWindow.eventSource, "mouseover", nbApi.popupEvenHandlers.onmouseover2, false);
+      nbApi.removeEvent(nbApi.popupWindow.eventSource, "mouseout", nbApi.popupEvenHandlers.onmouseout2, false);
+      nbApi.popupWindow.eventSource = null;
+  }
+  
+}
+
+nbApi.cancelTimeout = function()
+{
+  if (nbApi.popupWindow.pendingTimeoutId != null)
+    clearTimeout(nbApi.popupWindow.pendingTimeoutId);
+  nbApi.popupWindow.pendingTimeoutId = null;
+
+}
+// pops up a list of items from itemList or an item popup if there is only one item in the list
+nbApi.popupItems = function(/* eventSource, popupId, url, itemsList, event, bNow, delay, popupCb, quickHide */)
+{
+  // old index doesn't provide eventSource
+  // this is a hack to get around this problem
+  var eventSource;
+  var popupId;
+  var url;
+  var itemsList;
+  var event;
+  var bNow;
+  var delay;
+  var popupCb;
+  var quickHide; // if true, hide popup on mouse out instead of requiring a click
+  eventSource = popupId = url = itemsList = event = bNow = delay = filter = popupCb = quickHide = null;
+  var i = 0;  
+  if (typeof(arguments[0]) == "object")
+  {
+    eventSource = arguments[i++];
+  }
+  if (i < arguments.length)
+  {
+    popupId = arguments[i++];  
+  }
+  if (i < arguments.length)
+  {
+    url = arguments[i++];  
+  }
+  if (i < arguments.length)
+  {
+    itemsList = arguments[i++];  
+  }
+  if (i < arguments.length)
+  {
+    event = arguments[i++];  
+  }
+  if (i < arguments.length)
+  {
+    bNow = arguments[i++];  
+  }
+  if (i < arguments.length)
+  {
+    delay = arguments[i++];  
+  }
+  if (i < arguments.length)
+  {
+    popupCb = arguments[i++];  
+  }
+  if (i < arguments.length)
+  {
+    quickHide = arguments[i++];  
+  }
+// end hack
+  nbApi.cancelEvent(event);
+  if (delay == null)
+    delay = 500;
+  if (bNow != true)
+  {
+    nbApi.cancelTimeout();
+//    document.body.onmouseover = function(event){nbApi.cancelTimeout();};
+    nbApi.addEventHandler(document.body, "mouseover", nbApi.popupEvenHandlers.onmouseover);
+    var myEvent = new Object();
+    myEvent.clientX = event.clientX;
+    myEvent.clientY = event.clientY;
+    myEvent.nbEvent = true;
+    
+    nbApi.popupWindow.pendingTimeoutId = setTimeout(function(){nbApi.popupItems(eventSource, popupId, url, itemsList, myEvent, true, null, popupCb, quickHide)}, delay);
+    this.onmouseout = function()
+    {
+      nbApi.cancelTimeout();
+    };
+    return;
+  }
+  if (popupId == null || url == null || itemsList == null || itemsList.length == 0)
+    return;    
+  if (popupCb) popupCb();  // if there is a callback when we actually popup up the popup, call it.
+  url = nbApi.urlContext + url;  
+  var item;
+  if (itemsList.length == 1)
+  {
+    item =  itemsList[0];
+    var query = "id=" + item[1] + "&type=" + item[0];
+    nbApi.popupMisc[popupId + "_termId"] = item[1];
+    var popup = nbApi.displayPopup(eventSource, popupId, url, query, event, null, null, "hard", nbApi.urlContext + "/search/ov.nb", item[2], item[0], false, quickHide);
+		return;
+  }
+  var html = "<div id='NbPopupListFrameId' class='NbPopupListFrame' onmouseover='nbApi.cancelEvent(event);' onmousemove='nbApi.cancelEvent(event);' onclick='nbApi.cancelEvent(event);' >";
+  for (i = 0; i < itemsList.length; i++)
+  { 
+    var item =  itemsList[i];
+    var itemId = item[1];
+    var itemType = item[0];
+    var itemTitle = item[2].replace(/\'/g, "\\x27");
+    itemTitle = itemTitle.replace(/\"/g, "\\x22"); 
+    itemTitle = nbApi.normalizeString(itemTitle);   
+    var image;  
+    var bPopup = true;
+    image = nbApi.getIcon(itemType, nbApi.imgContext, true);  
+    var doPopup;
+    var title = item[2];
+  	if (title.length > 1)
+  		title = title.replace(/\{comma\}/g, ",");
+    if (bPopup)
+    {
+      doPopup = 'nbApi.displayPopup(null, "' + popupId + '","' + url + '","id=' + itemId + '&type=' + itemType + 
+        '",event,null,null, "hard", nbApi.urlContext + "/search/ov.nb", "' +  itemTitle + '", "' + itemType + '", false, quickHide);';
+    }
+    else
+    {
+      doPopup = 'submitFilter(\"' + itemTitle + '\");';
+      title = "filter by <b>" + title + "</b>";
+    }
+    if (bPopup == false && _noFilter)
+      break;
+    if (bPopup == false || i < 10)
+    {
+      html += "<div class='NbPopupListEntry' onmouseover='this.className=\"NbPopupListSelected\"' ";
+      html += "onmouseout='this.className=\"NbPopupListEntry\"' ";
+      html += "onclick='" + doPopup + "'>";
+      html += "<img class='LinkIcon' src='" + image + "' alt='' />&nbsp;" + title;
+      html += "</div>";
+    }
+  }
+  html += "</div>";
+  var dlg = nbApi.createPopupWindow(eventSource, "_popupList", "NbPopupList", html);  
+}
+nbApi.popupWindow = new Object;
+
+nbApi.createPopupWindow = function(eventSource, id, className, html)
+{
+	// create a dialog if we don't already have one
+    nbApi.Tip(html, 
+      BGCOLOR, '', 
+      BORDERWIDTH, 0,
+      PADDING, 0,
+      ABOVE, true, 
+      OFFSETX, 0,
+      JUMPHORZ, true,
+      JUMPVERT, true, 
+      FONTSIZE, '',
+      COPYCONTENT, false,
+      STICKY, true,
+      CLICKCLOSE, true
+    );
+}
+// hide tabs that are not supposed to be displayed for this publication
+// config={tabs:tabs, publicationId: publicationId}
+nbApi.hideInvalidTabs = function(config)
+{
+  if (!config || !config.popup)
+    return;
+    
+  var tabs = config.tabs;
+  if (!tabs || tabs.length == 0)
+    return;
+  var publicationId = config.popup.getAttribute("nbPublicationId");
+  
+  for (var i = 0; i < tabs.length; i++)
+  {
+    var realIdOnly = tabs[i].getAttribute("nbRealIdOnly");
+    if ("true" == realIdOnly && publicationId && publicationId >= nbApi.popupMisc.FAKE_ID)
+    {
+      tabs[i].style.display = "none";
+    }
+    else
+    {
+      var subTabs = document.getElementsByName(tabs[i] + "_subTab");
+      nbApi.hideInvalidTabs({tabs: subTabs, popup: config.popup});
+    } 
+  }
+  return;
+} 
+// deselect all tabs and return default tab index
+nbApi.deselectTabs = function(tabs)
+{
+  if (!tabs || tabs.length == 0)
+    return null;
+  var theTab = 0;  
+  for (var i = 0; i < tabs.length; i++)
+  {
+    var isDefaultTab = tabs[i].getAttribute("nbDefault");
+    if ("true" == isDefaultTab && tabs[i].style.display != "none")
+    {
+      theTab = i;
+    }
+    tabs[i].className = "nbApiExTab";
+  }
+  return tabs[theTab];
+} 
+// deselect all subtabs and return default tab 
+// if config.subTabId is not null, return matching tab
+nbApi.deselectSubTabs = function(config)
+{
+  if (!config || !config.popupId || !config.tabId)
+    return null;
+  var subTabsContainer = document.getElementById(config.popupId + "_SubTabs");   
+  if (!subTabsContainer || !subTabsContainer.childNodes)
+    return null;  
+  var subTabs = new Array();
+  var j = 0;
+  for (var i = 0; i < subTabsContainer.childNodes.length; i++)
+  {
+    var tabId;
+    if (!subTabsContainer.childNodes[i].getAttribute)
+      continue;
+    tabId = subTabsContainer.childNodes[i].getAttribute("tabId");
+    if (!tabId || tabId != config.tabId)
+      continue;
+    subTabs[j++] = subTabsContainer.childNodes[i];
+  }
+  if (subTabs.length == 0)
+    return null;
+  var theSubTab = 0;
+  for (var i = 0; i < subTabs.length; i++)
+  {
+    var isDefaultSubTab = subTabs[i].getAttribute("nbDefault");
+    if (!config.subTabId && "true" == isDefaultSubTab && subTabs[i].style.display != "none" || subTabs[i].id == config.subTabId)
+    {
+      theSubTab = i;
+    }
+    subTabs[i].className = "nbApiExSubTab";
+  }
+  return subTabs[theSubTab];
+}
+//select tab
+nbApi.selectTab = function(tab)
+{
+  if (!tab)
+    return;
+  tab.className = "nbApiExSelectedTab";
+  tab.style.display="";
+}
+//select subtab
+nbApi.selectSubTab = function(tab)
+{
+  if (!tab)
+    return;
+  tab.className = "nbApiExSelectedSubTab";
+//    setTimeout(function() {tab.blur()},0);
+}
+nbApi.showSubTabs = function(popupId, tab, subTabs)
+{
+  if (!popupId || !tab)
+    return;
+  var tabConts = nbApi.findElementsByName(popupId + "_subTabContainer", "div");
+  var tabContainer = document.getElementById(popupId + "_SubTabs");
+  var subTabsId = tab.id + "_subTabs";
+  var showSubTabs = false;
+  if (tabConts != null && tabConts.length > 0)
+  {                               
+    for (var i = 0; i < tabConts.length; i++)
+    {
+      var contId = tabConts[i].id; 
+      if (subTabs && contId == subTabsId)
+      {
+        tabContainer.innerHTML = tabConts[i].innerHTML;
+        showSubTabs = true;
+        break;
+      }
+    }
+  }
+  
+  tabContainer.style.display = showSubTabs?"":"none";
+  var content = document.getElementById(popupId + "_content");
+  if (content && showSubTabs)
+  {
+    tabContainer.style.display = "";
+    content.className = "nbApiExPopupText";
+  }
+  else
+  {
+    tabContainer.style.display = "none";
+    content.className = "nbApiExPopupTextNoSubTabs";
+  }
+}
+
+
+
+/**
+ * find and select tab and subtab. If config doesn't have this information - use default tab/subtab
+ * 
+ *  config.popupId - popup id 
+ *  config.tabId - tab to select 
+ *  config.subTabId - subtab to select 
+ */  
+nbApi.setPopupTabEx = function(config)               
+{
+  if (!config.popupId)
+    return null;
+  var tabs = document.getElementsByName(config.popupId + "_tab");
+  if (!tabs || tabs.length == 0)
+    return null;
+
+  nbApi.hideInvalidTabs({popup: config.popup, tabs: tabs});
+ 
+  if (!config.tabId && !config.subTabId) // use default tab and subtab
+  {
+    // find default tab. If none - use first available
+    var theTab = nbApi.deselectTabs(tabs);
+    if (!theTab)
+      return null;
+    nbApi.selectTab(theTab);
+    config.tabId = theTab.id;
+    //get subtabs
+    var subTabs = document.getElementsByName(theTab.id + "_subTab");    
+    // show subtabs
+    nbApi.showSubTabs(config.popupId, theTab, subTabs && subTabs.length);
+    // if no subtabs - return main tab
+    if (!subTabs || subTabs.length == 0)
+      return theTab;
+    var theSubTab = nbApi.deselectSubTabs(config); 
+    nbApi.selectSubTab(theSubTab);
+    return theSubTab;
+  }
+
+  if (config.tabId && !config.subTabId) // use default subtab
+  {
+    nbApi.deselectTabs(tabs);
+    var theTab = document.getElementById(config.tabId);
+    if (!theTab)
+      return null; 
+    nbApi.selectTab(theTab);
+    config.tabId = theTab.id;
+    //get subtabs
+    var subTabs = document.getElementsByName(theTab.id + "_subTab");    
+    // show subtabs
+    var theSubTab = nbApi.showSubTabs(config.popupId, theTab, subTabs && subTabs.length);
+    if (!subTabs || subTabs.length == 0)
+      return theTab;
+    var theSubTab = nbApi.deselectSubTabs(config); 
+    nbApi.selectSubTab(theSubTab);
+    return theSubTab;
+  }
+  if (config.tabId && config.subTabId) 
+  {
+    nbApi.deselectTabs(tabs);
+    var theTab = document.getElementById(config.tabId);
+    if (!theTab)
+      return null; 
+    nbApi.selectTab(theTab);
+    config.tabId = theTab.id;
+    //get subtabs
+    var subTabs = document.getElementsByName(theTab.id + "_subTab");    
+    // show subtabs
+    var theSubTab = nbApi.showSubTabs(config.popupId, theTab, subTabs && subTabs.length);
+    if (!subTabs || subTabs.length == 0)
+      return theTab;
+    var theSubTab = nbApi.deselectSubTabs(config); 
+    nbApi.selectSubTab(theSubTab);
+    return theSubTab;
+  }
+}
+/**
+ * Update content section of a popup
+ * popupId - id of a popup
+ * tabId - id of a tab
+ * subTabId - id of a subTab 
+ * url - url to update from
+ * paramList - query part of the url
+ * limit - max number of entries to return
+ * filter - if true, use filter
+ * switchTabs - if true, swutch tabs 
+ * 
+ */       
+nbApi.updatePopupEx = function(config)
+{ 
+  if (!nbApi.enablePopupTabs)
+    return;
+  if (!config)
+    return;
+  if (!config.popupId)
+    return;
+
+  if (config.updateTabs == null)
+    config.updateTabs = true;  
+  var popup = config.popup;
+  if (!popup)
+  {
+    popup = window.nextbioPopup;
+    config.popup = popup;
+  }
+  if (!popup)
+  {
+    popup = document.getElementById(config.popupId);
+    config.popup = popup;
+  }
+  if (config.initial)
+  {
+    var switchable = popup.getAttribute("nbSwitchable");
+    nbApi.visibility(popup.id + "_tabBar", (switchable == "false"));  
+  }
+  if (config.updateTabs)
+  {
+    var tab = nbApi.setPopupTabEx(config); // select tab or subtab
+    if (!tab)
+      return;
+    popup.setAttribute("nbSelectedTabId", tab.id);  
+    config.currentTabId = tab.id;  
+    config.tabMessage = "Please wait while the information is loaded."
+    nbApi.setTabMessage(config);  
+    nbApi.visibility(popup.id + "_buttonBar", false);  
+    nbApi.setButtonBar(config);
+    if (!config.url) // load default tab              
+    {
+      tab.onclick();
+      if (config.callback)
+        config.callback();
+      return false;
+    }
+  }
+  if (!config.paramList)    
+    paramList = "";
+  var modUrl = config.url;
+  if (config.fixUrl)
+    modUrl = nbApi.urlContext + config.url;
+  var targetId = config.popupId + "_content";
+  var target = document.getElementById(targetId);
+  if (target)
+  {
+    target.innerHTML = "<span class='nbApiLoading'>&nbsp;</span>Loading...";
+  }
+  var modParamList = config.paramList;
+  if (config.fixQuery)
+  {
+    if (config.limit && config.limit > 0)
+      modParamList += "&maxNumRow=" + config.limit;
+    if (config.filter)
+      modParamList += "&tf=" + encodeURIComponent(popup.getAttribute("nbName"));
+    modParamList += "&nameSpace=" +  "nbApi";
+    modParamList += "&js=e";
+    modParamList += "&small=" + popup.getAttribute("small");
+    modParamList += "&log=true&logType=POPUPTAB";
+    var tracking = popup.getAttribute("nbTracking");
+    if (tracking) {
+      modParamList += "&"+tracking + "&logTagName=" + encodeURIComponent(popup.getAttribute("nbName"));
+    }
+    if (config.tabId)
+    {
+      modParamList += "&logTab=" + config.tabId.replace(config.popupId+"_","");
+    }
+    if (config.subTabId) {
+      modParamList += "&logSubtab=" + config.subTabId.replace(config.popupId+"_","");
+    }
+    else if (config.menuId)
+    {
+      modParamList += "&logSubTab=" + config.menuId;
+    }
+  }
+  if (navigator.userAgent.indexOf("MSIE 6") >= 0 || navigator.userAgent.indexOf("MSIE 7") >= 0) {
+    
+    var charset = document.charset;
+    if (charset)
+    {
+      modParamList += "&charset=" + charset;
+    }
+  }
+  var switchCfg = {popupId: config.popupId, force: true};
+  switchCfg.timeout = setTimeout(function(){nbApi.switchTab(switchCfg)}, 5000);
+  var callback = function(targetId, bLoaded, json)
+  {
+    if (switchCfg.timeout) 
+    {
+      clearTimeout(switchCfg.timeout);
+      switchCfg.timeout = null;      
+    } 
+    else  
+      return;
+    if (nbApi.switchTab(config))
+      return;
+    config.tabMessage = null;
+    nbApi.setTabMessage(config);  
+    nbApi.visibility(popup.id + "_tabBar", true);  
+    nbApi.dynamicSubTabs(targetId, bLoaded, json);
+    if (config.callback) {
+      config.callback(targetId, bLoaded, json);
+    }
+    nbApi.checkButtonBar();
+    nbApi.visibility(popup.id + "_buttonBar", true);  
+  }
+  // save parameters for posible future use
+  popup.setAttribute("nbLastUrl", modUrl);
+  popup.setAttribute("nbLastQuery", modParamList);  
+  if (config.iFrameId)
+    popup.setAttribute("nbIFrameId", config.iFrameId);
+  nbApi.loadScript({containerId: config.popupId, target: targetId, scriptTarget: config.popupId+"_script", iFrameId: config.iFrameId, url: modUrl, query: modParamList, callbackName: "nbApi.updateTargetHTML", callback: callback});
+  if (!config.initial) {
+    var u = "/interact/popupTab/";
+    if (config.tabId)
+    {
+      u += config.tabId.replace(config.popupId+"_","");
+    }
+    if (config.subTabId) {
+      u += "/"+config.subTabId.replace(config.popupId+"_","");
+    }
+    else if (config.menuId)
+    {
+      u += config.menuId;
+    }
+    nbApi.trackUrl(u);
+  }
+  
+}
+nbApi.checkButtonBar = function() {
+  var obb = document.getElementById("nextbio_overrideButtonBar0");
+  if (obb) {
+    nbApi.setButtonBar({buttonBarId: "nextbio_overrideButtonBar0", element: obb}); 
+  } else {
+    obb = document.getElementById("nextbio_overrideButtonBar");
+    if (obb) {
+      nbApi.setButtonBar({buttonBarId: "nextbio_overrideButtonBar", element: obb}); 
+    }
+  }
+}
+// see if there is a fallback request withing the last loaded tab
+// if there is on - switch to that tab
+nbApi.switchTab = function(config) 
+{
+  if (!config)
+    return false;
+  config.timeout = null;  
+  var popup = window.nextbioPopup;
+  if (!popup)
+    popup = document.getElementById(config.popupId);
+  if (!popup)
+    return false;
+  var nbSwitchTab  = popup.getAttribute("nbSwitchTab");
+  if (config.switchTabs == "false" || (nbSwitchTab != "true"))
+    return false;  
+  popup.removeAttribute("nbSwitchTab");
+  if (!config.force)
+  {
+    var tabSwitcher = document.getElementById("nextbio_tabSwitcher");
+    if (!tabSwitcher)
+      return false;
+  }
+  var selectedTabId  = popup.getAttribute("nbSelectedTabId");
+  if (!selectedTabId || !selectedTabId.length)
+    return false;
+  var selectedTab = document.getElementById(selectedTabId); 
+  if (!selectedTab) 
+    return false;
+  var nextTabId = selectedTab.getAttribute("nbNextTabId");
+  if (!nextTabId || !nextTabId.length)
+    return false;
+  var nextTab = document.getElementById(nextTabId); 
+  if (!nextTab)
+    return false;
+  selectedTab.style.display="none";
+  nextTab.onclick();  
+  return true;
+}
+
+nbApi.updateMenuEx = function(config)
+{
+  if (!config ||!config.menuId || !config.itemId)
+    return;
+  var items = document.getElementsByName(config.menuId + "_menuItem");
+  if (!items)
+    return;
+  var selectedMenu;
+  for (var i = 0; i < items.length; i++)
+  {
+    if (items[i].id == config.itemId)
+    {
+      items[i].className = "nbApiExSelectedSubTab";
+      selectedMenu = items[i];
+    }
+    else
+    {
+      items[i].className = "nbApiExSubTab";
+    }
+  }   
+//   nbApi.updatePopupTerm({element: selectedMenu});
+  nbApi.setTabMessage({currentTabId: selectedMenu.id, element: selectedMenu}); 
+  nbApi.setButtonBar({currentTabId: selectedMenu.id, element: selectedMenu}); 
+}
+/**
+ * Build dynamic query string
+ * config.query: query string
+ * config.dQuery: list of attribute names containing query strings
+ * config.popupId - id of a popup
+ */ 
+nbApi.buildPopupQuery = function(config)
+{
+  var dQuery = "";  
+  if (!config)
+    return dQuery;
+  var popup;
+  if (config.popup)
+  {
+    popup = config.popup;
+  }
+  else if (window.nextbioPopup)
+  {
+    popup = window.nextbioPopup;
+  }
+  else if (config.element) 
+  {
+    popup = nbApi.findParentByClassName(config.element, "nbApiExPopup");
+  }
+  else if (config.popupId && config.popupId.length) 
+  {
+    popup = document.getElementById(config.popupId);
+  }
+  if (!popup)
+    return dQuery;
+  if (config.dQuery && config.dQuery.length)
+  {
+    var qArray = config.dQuery.split(",");
+    for (var i = 0; i < qArray.length; i++)
+    {
+      var dynamicQuery = popup.getAttribute(nbApi.trim(qArray[i]));
+      if (dynamicQuery && dynamicQuery.length)
+      {
+        if (i > 0)
+          dQuery += "&";  
+        dQuery += dynamicQuery;
+      }
+    }
+  }
+  var query = "";
+  if (dQuery.length)
+    query = dQuery;
+  if (dQuery.length && config.query && config.query.length) 
+    query += "&";
+  if (config.query && config.query.length)
+    query += config.query;
+  var hash = "";
+  if (config.dHash && config.dHash.length)
+  {
+    var qArray = config.dHash.split(",");
+    for (var i = 0; i < qArray.length; i++)
+    {
+      var dynamicHash = popup.getAttribute(nbApi.trim(qArray[i]));
+      if (dynamicHash && dynamicHash.length)
+      {
+        if (i > 0)
+          hash += "&";  
+        hash += dynamicHash;
+      }
+    }
+  }
+  if (hash.length) 
+  {
+    query += "#";
+    query += hash;
+  }
+
+  return query;
+}
+/**
+ * Build a URL out of url, query and dynamic query, if any. Fix URL if needed
+ * if config.obj is provided, set obj.href to new url value 
+ * config.url - url
+ * config.query: query string
+ * config.dQuery: list of attribute names containing query strings
+ * congig.popupId - popup id
+ * config.fixUrl - prepend urlContext, if true  
+ * config.obj - anchor that requests new url 
+ *    
+ */ 
+nbApi.buildPopupUrl = function(config)
+{
+  if (!config)
+    return "";
+  var url = config.url;
+  if (config.fixUrl)
+  {
+    url = nbApi.urlContext + url;
+  }
+  var query = nbApi.buildPopupQuery(config);
+  if (query && query.length)
+    url += "?" + query;
+  if (config.element)
+    config.element.href = url;
+  return url;
+}
+/**
+ * find dynamically defined menu and set it instead of current sub tabs
+ */ 
+nbApi.dynamicSubTabs = function()
+{
+  var menuArr = nbApi.getElementsByClassName(document, "nbApiExPopupMenu", "div");
+  if (!menuArr || !menuArr.length)
+    return;
+  var menu = menuArr[0];  
+  var popup = window.nextbioPopup;
+  if (!popup)
+  {
+    popup = nbApi.findParentByClassName(menu, "nbApiExPopup");
+  }
+  var text = nbApi.findParentByClassName(menu, "nbApiExPopupTextNoSubTabs");
+  if (popup)
+  {
+    nbApi.updatePopupTerm({popup:popup, menuId: menu.id});
+    var subTabs = document.getElementById(popup.id + "_SubTabs");
+    if (subTabs)
+    {
+      subTabs.innerHTML = menu.innerHTML;
+      subTabs.style.display="";
+      if (text)
+        text.className = "nbApiExPopupText";
+    }
+    var menuItemArr = document.getElementsByName(menu.id + "_menuItem");      
+    if (!menuItemArr || !menuItemArr.length)
+      return;
+    for (var i = 0; i < menuItemArr.length; i++)
+    {
+      if (menuItemArr[i].className == "nbApiExSelectedSubTab")
+      {
+        nbApi.setTabMessage({currentTabId: menuItemArr[i].id, popup: popup}); 
+        nbApi.setButtonBar({currentTabId: menuItemArr[i].id, popup: popup}); 
+        break;
+      }
+    }
+  }
+}
+/**
+ * find and set tab message for the tab
+ * config.tabId - id of a tab 
+ * config.popupId 
+ * config.element - oject that requests this operation 
+ */ 
+nbApi.setTabMessage = function(config)
+{
+  if (!config || !config.currentTabId)
+    return;    
+  var popup = window.nextbioPopup;
+  if (!config.popup)
+    config.popup = popup;  
+  if (!config.popupId && !config.popup && !config.element)  
+    return; 
+  if (!config.popupId && config.popup && config.popup.id)
+    config.popupId = config.popup.id; 
+  if (!config.popupId) 
+  {
+    var popup = nbApi.findParentByClassName(config.element, "nbApiExPopup");
+    config.popupId = popup.id;
+  }
+  var tabTitle = document.getElementById(config.popupId + "_PopupTabTitle");
+  if (!tabTitle)
+    return;
+  if (config.tabMessage)
+  {
+    tabTitle.innerHTML = config.tabMessage;
+  }
+  else
+  {  
+  var tabMessage = document.getElementById(config.currentTabId + "_message");
+  if (tabMessage)
+    tabTitle.innerHTML = tabMessage.innerHTML;
+  else
+    tabTitle.innerHTML = "&nbsp;";
+  }  
+}
+nbApi.setButtonBar = function(config)
+{
+  if (!config || (!config.currentTabId && !config.buttonBarId))
+    return;    
+  var popup = window.nextbioPopup;
+  if (!config.popup)
+    config.popup = popup;
+  if ((!config.popupId || !config.popupId.length) && config.popup && config.popup.id)
+    config.popupId = config.popup.id; 
+  if (!config.popupId && !config.element)  
+    return; 
+  if (!config.popupId || !config.popupId.length) 
+  {
+    var popup = nbApi.findParentByClassName(config.element, "nbApiExPopup");
+    config.popupId = popup.id;
+  }
+  var tabButtonBar = document.getElementById(config.buttonBarId || (config.currentTabId + "_buttonBar"));
+  var buttonBar = document.getElementById(config.popupId + "_buttonBar");
+  if (!buttonBar)
+    return;
+  buttonBar.innerHTML = "";
+  if (!tabButtonBar)
+    return;
+  buttonBar.innerHTML = tabButtonBar.innerHTML;
+}
+
+
+// updates popup's content area. Fixes url and query
+// config.updateTabs - if true or null - update tabs in a regular way. Otherwise - do not update tabs.
+nbApi.simpleUpdateEx = function(config)
+{
+  var popup = window.nextbioPopup;
+  if (!popup)
+    return;
+  nbApi.updatePopupEx({popupId: popup.id,
+                                 popup: popup, 
+                                 tabId: config.tabId, 
+                                 subTabId: config.subTabId, 
+                                 url: config.url, 
+                                 paramList: nbApi.buildPopupQuery({popupId: popup.id, query: config.query, dQuery: config.dQuery}), 
+                                 filter: config.filter, 
+                                 fixUrl:true, 
+                                 fixQuery:true,
+                                 switchTabs: config.switchTabs, 
+                                 updateTabs: config.updateTabs});  
+}
+
+nbApi.updatePopupTerm = function(config)
+{
+  var popup;
+  if (config.popup)
+  {
+    popup = config.popup;
+  }
+  else if (window.nextbioPopup)
+  {
+    popup = window.nextbioPopup;
+  }
+  else if (config.element) 
+  {
+    popup = nbApi.findParentByClassName(config.element, "nbApiExPopup");
+  }
+  else if (config.popupId) 
+  {
+    popup = document.getElementById(popupId);
+  }
+  else
+    return;
+  var termName = popup.getAttribute("nbName");
+  termName = nbApi.truncateWithEllipses(termName, 15);   
+  var id = config.menuId?config.menuId:popup.id; 
+  var termArr = nbApi.findElementsByName(id + "_term", "span");
+  if (!termArr && termArr.length)
+    return;
+  
+  for (var i = 0; i < termArr.length; i++)
+  {
+    termArr[i].innerHTML = termName;
+  }
+  
+}
+
+//report false positive term
+nbApi.reportFalseTerm = function(config){
+    if (!confirm ("Would you like to report this term as false positive?")) {
+        return false;
+    } 
+    var pageUrl = document.URL;       
+    var paramList;
+    var modurl;
+    if(config && config.target){
+    	modurl = "http://sciencedirect.nextbio.com/e" + config.url;
+    	paramList = "term=" + config.term + "&type=" + config.type + "&article=" +config.article + "&publicationId=" +config.publicationId + "&pageUrl=" +pageUrl;
+    	nbApi.loadScript({target: config.target, url: modurl, query: paramList, scriptTarget:config.scriptTarget});
+    	alert("An email has been sent. Thank you for reporting.");
+    }    
+    
+}
+/**
+ *  load matching sentences filtered by a string of space separated terms
+ *  
+ *  config.element - <a> tag that calls this function
+ *  config.targetId - id of a target div
+ *  config.filterId - id of an <input> that contains the filter string
+ *  
+ */      
+nbApi.filterSentences = function(config)
+{
+  // find filter string
+  if (!config || !config.event)
+    return;
+  if (config.event.type == "keypress" && config.event.keyCode != 13)
+    return;  
+  var filter = document.getElementsByName(config.filterName);
+  if (!filter || !filter.length)
+      return;
+  var value = "";
+  for (var i = 0; i < filter.length; i++)
+  {
+    if (filter[i].value && filter[i].value.length)
+    {
+      if (config.clear)
+      {
+        filter[i].value = "";
+      }
+      else
+      {
+        value = nbApi.normalizeString(filter[i].value);
+        filter[i].value = value;
+        break;
+      }
+    }
+  }
+  var query = config.query;
+  if (value.length)
+    query += "&filter=" + encodeURIComponent(value);
+  nbApi.simpleUpdateEx(    
+    {
+      tabId: config.tabId, 
+      url: config.url, 
+      query: query,
+      dQuery: config.dQuery,
+      filter: true,
+      switchTabs: "false",
+      updateTabs: false
+      });
+  return;
+}
+
+/**
+ *  expand or collapse a matching sentence
+ *  config.element - element that requested the operation
+ *  config.targetId - id of an elemen that will receive the new content
+ *  config.number  number of the sentence being updated
+ *  config.padding - number of the sentences before and afer the sentence in question
+ *  config.url - url of the sentence server
+ *  config.query - query    
+ */  
+nbApi.updateSentence = function(config)
+{
+  if (!config || !config.element)
+    return;
+  var popup = window.nextbioPopup;
+  if (!popup)
+    return;  
+  var url = popup.getAttribute("nbLastUrl");
+  var query = popup.getAttribute("nbLastQuery");
+  var iFrameId = popup.getAttribute("nbIFrameId");
+  if (!query)
+    query = "";
+  query += "&encNum=" + config.encryptedNumber; 
+  if (config.encryptedDocumentId)
+    query += "&encId=" + config.encryptedDocumentId;
+  var expanded = config.element.getAttribute("nbExpanded");
+  var target = document.getElementById(config.targetId);
+  var original = document.getElementById(config.targetId + "_collapsed");
+  if ("true" == expanded)
+  {
+    config.element.className = "nbApiExpand";
+    config.element.setAttribute("nbExpanded", "false");
+    target.style.display = "none";
+    if (original)
+    {
+      original.style.display = "";
+    }
+  } 
+  else
+  {
+    original.style.display = "none";
+    config.element.className = "nbApiCollapse";
+    config.element.className = "nbApiCollapse";
+    config.element.setAttribute("nbExpanded", "true");
+    var loaded = config.element.getAttribute("nbLoaded");
+    if (loaded == "true")
+    {
+      target.style.display = "";
+      return;
+    }
+    target.innerHTML = "<span class='nbApiLoading'>&nbsp;</span>Loading...";
+    target.style.display = "";
+    config.element.setAttribute("nbLoaded", "true");
+    var callback = function()
+    {
+    }
+    nbApi.loadScript({containerId: popup.id, target: config.targetId, scriptTarget:config.popupId+"_script", iFrameId: iFrameId, url: url, query: query, callbackName: "nbApi.updateTargetHTML", callback: callback});
+  }
+}
+
+  
+    
+
+
+
+
+
+nbApi.WzTooltip = function() {
+  /* The following is based on the Walter Zorn tooltip library, and is subject to its own copyright */
+  /* This notice must be untouched at all times.
+Copyright (c) 2002-2008 Walter Zorn. All rights reserved.
+
+wz_tooltip.js	 v. 5.31
+
+The latest version is available at
+http://www.walterzorn.com
+or http://www.devira.com
+or http://www.walterzorn.de
+
+Created 1.12.2002 by Walter Zorn (Web: http://www.walterzorn.com )
+Last modified: 7.11.2008
+
+Easy-to-use cross-browser tooltips.
+Just include the script at the beginning of the <body> section, and invoke
+Tip('Tooltip text') to show and UnTip() to hide the tooltip, from the desired
+HTML eventhandlers. Example:
+<a onmouseover="Tip('Some text')" onmouseout="UnTip()" href="index.htm">My home page</a>
+No container DIV required.
+By default, width and height of tooltips are automatically adapted to content.
+Is even capable of dynamically converting arbitrary HTML elements to tooltips
+by calling TagToTip('ID_of_HTML_element_to_be_converted') instead of Tip(),
+which means you can put important, search-engine-relevant stuff into tooltips.
+Appearance & behaviour of tooltips can be individually configured
+via commands passed to Tip() or TagToTip().
+
+Tab Width: 4
+LICENSE: LGPL
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License (LGPL) as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+For more details on the GNU Lesser General Public License,
+see http://www.gnu.org/copyleft/lesser.html
+*/
+
+var config = new Object();
+
+
+//===================  GLOBAL TOOLTIP CONFIGURATION  =========================//
+var tt_Debug	= false		// false or true - recommended: false once you release your page to the public
+var tt_Enabled	= true		// Allows to (temporarily) suppress tooltips, e.g. by providing the user with a button that sets this global variable to false
+var TagsToTip	= false		// false or true - if true, HTML elements to be converted to tooltips via TagToTip() are automatically hidden;
+							// if false, you should hide those HTML elements yourself
+
+// For each of the following config variables there exists a command, which is
+// just the variablename in uppercase, to be passed to Tip() or TagToTip() to
+// configure tooltips individually. Individual commands override global
+// configuration. Order of commands is arbitrary.
+// Example: onmouseover="Tip('Tooltip text', LEFT, true, BGCOLOR, '#FF9900', FADEIN, 400)"
+
+config. Above			= false		// false or true - tooltip above mousepointer
+config. BgColor			= '#E9F2FF'	// Background colour (HTML colour value, in quotes)
+config. BgImg			= ''		// Path to background image, none if empty string ''
+config. BorderColor		= '#8EAACE'
+config. BorderStyle		= 'solid'	// Any permitted CSS value, but I recommend 'solid', 'dotted' or 'dashed'
+config. BorderWidth		= 1
+config. CenterMouse		= false		// false or true - center the tip horizontally below (or above) the mousepointer
+config. ClickClose		= false		// false or true - close tooltip if the user clicks somewhere
+config. ClickSticky		= false		// false or true - make tooltip sticky if user left-clicks on the hovered element while the tooltip is active
+config. CloseBtn		= false		// false or true - closebutton in titlebar
+config. CloseBtnColors	= ['#990000', '#FFFFFF', '#DD3333', '#FFFFFF']	// [Background, text, hovered background, hovered text] - use empty strings '' to inherit title colours
+config. CloseBtnText	= '&nbsp;X&nbsp;'	// Close button text (may also be an image tag)
+config. CopyContent		= true		// When converting a HTML element to a tooltip, copy only the element's content, rather than converting the element by its own
+config. Delay			= 400		// Time span in ms until tooltip shows up
+config. Duration		= 0			// Time span in ms after which the tooltip disappears; 0 for infinite duration, < 0 for delay in ms _after_ the onmouseout until the tooltip disappears
+config. Exclusive		= false		// false or true - no other tooltip can appear until the current one has actively been closed
+config. FadeIn			= 100		// Fade-in duration in ms, e.g. 400; 0 for no animation
+config. FadeOut			= 100
+config. FadeInterval	= 30		// Duration of each fade step in ms (recommended: 30) - shorter is smoother but causes more CPU-load
+config. Fix				= null		// Fixated position, two modes. Mode 1: x- an y-coordinates in brackets, e.g. [210, 480]. Mode 2: Show tooltip at a position related to an HTML element: [ID of HTML element, x-offset, y-offset from HTML element], e.g. ['SomeID', 10, 30]. Value null (default) for no fixated positioning.
+config. FollowMouse		= true		// false or true - tooltip follows the mouse
+config. FontColor		= '#000044'
+config. FontFace		= 'Arial,Helvetica,sans-serif'
+config. FontSize		= '8pt'		// E.g. '9pt' or '12px' - unit is mandatory
+config. FontWeight		= 'normal'	// 'normal' or 'bold';
+config. Height			= 0			// Tooltip height; 0 for automatic adaption to tooltip content, < 0 (e.g. -100) for a maximum for automatic adaption
+config. JumpHorz		= false		// false or true - jump horizontally to other side of mouse if tooltip would extend past clientarea boundary
+config. JumpVert		= true		// false or true - jump vertically		"
+config. Left			= false		// false or true - tooltip on the left of the mouse
+config. OffsetX			= 14		// Horizontal offset of left-top corner from mousepointer
+config. OffsetY			= 8			// Vertical offset
+config. Opacity			= 100		// Integer between 0 and 100 - opacity of tooltip in percent
+config. Padding			= 3			// Spacing between border and content
+config. Shadow			= false		// false or true
+config. ShadowColor		= '#D7D7D7'
+config. ShadowWidth		= 1
+config. Sticky			= false		// false or true - fixate tip, ie. don't follow the mouse and don't hide on mouseout
+config. TextAlign		= 'left'	// 'left', 'right' or 'justify'
+config. Title			= ''		// Default title text applied to all tips (no default title: empty string '')
+config. TitleAlign		= 'left'	// 'left' or 'right' - text alignment inside the title bar
+config. TitleBgColor	= ''		// If empty string '', BorderColor will be used
+config. TitleFontColor	= '#FFFFFF'	// Color of title text - if '', BgColor (of tooltip body) will be used
+config. TitleFontFace	= ''		// If '' use FontFace (boldified)
+config. TitleFontSize	= ''		// If '' use FontSize
+config. TitlePadding	= 2
+config. Width			= 0			// Tooltip width; 0 for automatic adaption to tooltip content; < -1 (e.g. -240) for a maximum width for that automatic adaption;
+									// -1: tooltip width confined to the width required for the titlebar
+//=======  END OF TOOLTIP CONFIG, DO NOT CHANGE ANYTHING BELOW  ==============//
+
+
+
+
+//=====================  PUBLIC  =============================================//
+function Tip()
+{
+	tt_Tip(arguments, null);
+}
+function TagToTip()
+{
+	var t2t = tt_GetElt(arguments[0]);
+	if(t2t)
+		tt_Tip(arguments, t2t);
+}
+function UnTip(force)
+{
+	tt_OpReHref();
+	if(tt_aV[DURATION] < 0 && (tt_iState & 0x2))
+		tt_tDurt.Timer("tt_HideInit()", -tt_aV[DURATION], true);
+	else if(force || !(tt_aV[STICKY] && (tt_iState & 0x2)))
+		tt_HideInit();
+}
+
+//==================  PUBLIC PLUGIN API	 =====================================//
+// Extension eventhandlers currently supported:
+// OnLoadConfig, OnCreateContentString, OnSubDivsCreated, OnShow, OnMoveBefore,
+// OnMoveAfter, OnHideInit, OnHide, OnKill
+
+var tt_aElt = new Array(10), // Container DIV, outer title & body DIVs, inner title & body TDs, closebutton SPAN, shadow DIVs, and IFRAME to cover windowed elements in IE
+tt_aV = new Array(),	// Caches and enumerates config data for currently active tooltip
+tt_sContent,			// Inner tooltip text or HTML
+tt_t2t, tt_t2tDad,		// Tag converted to tip, and its DOM parent element
+tt_musX, tt_musY,
+tt_over,
+tt_x, tt_y, tt_w, tt_h; // Position, width and height of currently displayed tooltip
+
+function tt_Extension()
+{
+	tt_ExtCmdEnum();
+	tt_aExt[tt_aExt.length] = this;
+	return this;
+}
+function tt_SetTipPos(x, y)
+{
+	var css = tt_aElt[0].style;
+
+	tt_x = x;
+	tt_y = y;
+	css.left = x + "px";
+	css.top = y + "px";
+	if(tt_ie56)
+	{
+		var ifrm = tt_aElt[tt_aElt.length - 1];
+		if(ifrm)
+		{
+			ifrm.style.left = css.left;
+			ifrm.style.top = css.top;
+		}
+	}
+}
+function tt_HideInit()
+{
+	if(tt_iState)
+	{
+		tt_ExtCallFncs(0, "HideInit");
+		tt_iState &= ~(0x4 | 0x8);
+		if(tt_flagOpa && tt_aV[FADEOUT])
+		{
+			tt_tFade.EndTimer();
+			if(tt_opa)
+			{
+				var n = Math.round(tt_aV[FADEOUT] / (tt_aV[FADEINTERVAL] * (tt_aV[OPACITY] / tt_opa)));
+				tt_Fade(tt_opa, tt_opa, 0, n);
+				return;
+			}
+		}
+		tt_tHide.Timer("tt_Hide();", 1, false);
+	}
+}
+function tt_Hide()
+{
+	if(tt_db && tt_iState)
+	{
+		tt_OpReHref();
+		if(tt_iState & 0x2)
+		{
+			tt_aElt[0].style.visibility = "hidden";
+			tt_ExtCallFncs(0, "Hide");
+		}
+		tt_tShow.EndTimer();
+		tt_tHide.EndTimer();
+		tt_tDurt.EndTimer();
+		tt_tFade.EndTimer();
+		if(!tt_op && !tt_ie)
+		{
+			tt_tWaitMov.EndTimer();
+			tt_bWait = false;
+		}
+		if(tt_aV[CLICKCLOSE] || tt_aV[CLICKSTICKY])
+			tt_RemEvtFnc(document, "mouseup", tt_OnLClick);
+		tt_ExtCallFncs(0, "Kill");
+		// In case of a TagToTip tip, hide converted DOM node and
+		// re-insert it into DOM
+		if(tt_t2t && !tt_aV[COPYCONTENT])
+			tt_UnEl2Tip();
+		tt_iState = 0;
+		tt_over = null;
+		tt_ResetMainDiv();
+		if(tt_aElt[tt_aElt.length - 1])
+			tt_aElt[tt_aElt.length - 1].style.display = "none";
+	}
+}
+function tt_GetElt(id)
+{
+	return(document.getElementById ? document.getElementById(id)
+			: document.all ? document.all[id]
+			: null);
+}
+function tt_GetDivW(el)
+{
+	return(el ? (el.offsetWidth || el.style.pixelWidth || 0) : 0);
+}
+function tt_GetDivH(el)
+{
+	return(el ? (el.offsetHeight || el.style.pixelHeight || 0) : 0);
+}
+function tt_GetScrollX()
+{
+	return(window.pageXOffset || (tt_db ? (tt_db.scrollLeft || 0) : 0));
+}
+function tt_GetScrollY()
+{
+	return(window.pageYOffset || (tt_db ? (tt_db.scrollTop || 0) : 0));
+}
+function tt_GetClientW()
+{
+	return tt_GetWndCliSiz("Width");
+}
+function tt_GetClientH()
+{
+	return tt_GetWndCliSiz("Height");
+}
+function tt_GetEvtX(e)
+{
+	return (e ? ((typeof(e.pageX) != tt_u) ? e.pageX : (e.clientX + tt_GetScrollX())) : 0);
+}
+function tt_GetEvtY(e)
+{
+	return (e ? ((typeof(e.pageY) != tt_u) ? e.pageY : (e.clientY + tt_GetScrollY())) : 0);
+}
+function tt_AddEvtFnc(el, sEvt, PFnc)
+{
+	if(el)
+	{
+		if(el.addEventListener)
+			el.addEventListener(sEvt, PFnc, false);
+		else
+			el.attachEvent("on" + sEvt, PFnc);
+	}
+}
+function tt_RemEvtFnc(el, sEvt, PFnc)
+{
+	if(el)
+	{
+		if(el.removeEventListener)
+			el.removeEventListener(sEvt, PFnc, false);
+		else
+			el.detachEvent("on" + sEvt, PFnc);
+	}
+}
+function tt_GetDad(el)
+{
+	return(el.parentNode || el.parentElement || el.offsetParent);
+}
+function tt_MovDomNode(el, dadFrom, dadTo)
+{
+	if(dadFrom)
+		dadFrom.removeChild(el);
+	if(dadTo)
+		dadTo.appendChild(el);
+}
+
+//======================  PRIVATE  ===========================================//
+var tt_aExt = new Array(),	// Array of extension objects
+
+tt_db, tt_op, tt_ie, tt_ie56, tt_bBoxOld,	// Browser flags
+tt_body,
+tt_ovr_,				// HTML element the mouse is currently over
+tt_flagOpa,				// Opacity support: 1=IE, 2=Khtml, 3=KHTML, 4=Moz, 5=W3C
+tt_maxPosX, tt_maxPosY,
+tt_iState = 0,			// Tooltip active |= 1, shown |= 2, move with mouse |= 4, exclusive |= 8
+tt_opa,					// Currently applied opacity
+tt_bJmpVert, tt_bJmpHorz,// Tip temporarily on other side of mouse
+tt_elDeHref,			// The tag from which we've removed the href attribute
+// Timer
+tt_tShow = new Number(0), tt_tHide = new Number(0), tt_tDurt = new Number(0),
+tt_tFade = new Number(0), tt_tWaitMov = new Number(0),
+tt_bWait = false,
+tt_u = "undefined";
+
+
+function tt_Init()
+{
+	tt_MkCmdEnum();
+	// Send old browsers instantly to hell
+	if(!tt_Browser() || !tt_MkMainDiv())
+		return;
+	tt_IsW3cBox();
+	tt_OpaSupport();
+	tt_AddEvtFnc(document, "mousemove", tt_Move);
+	// In Debug mode we search for TagToTip() calls in order to notify
+	// the user if they've forgotten to set the TagsToTip config flag
+	if(TagsToTip || tt_Debug)
+		tt_SetOnloadFnc();
+	// Ensure the tip be hidden when the page unloads
+	tt_AddEvtFnc(window, "unload", tt_Hide);
+}
+// Creates command names by translating config variable names to upper case
+function tt_MkCmdEnum()
+{
+	var n = 0;
+	for(var i in config)
+		eval("window." + i.toString().toUpperCase() + " = " + n++);
+	tt_aV.length = n;
+}
+function tt_Browser()
+{
+	var n, nv, n6, w3c;
+
+	n = navigator.userAgent.toLowerCase(),
+	nv = navigator.appVersion;
+	tt_op = (document.defaultView && typeof(eval("w" + "indow" + "." + "o" + "p" + "er" + "a")) != tt_u);
+	tt_ie = n.indexOf("msie") != -1 && document.all && !tt_op;
+	if(tt_ie)
+	{
+		var ieOld = (!document.compatMode || document.compatMode == "BackCompat");
+		tt_db = !ieOld ? document.documentElement : (document.body || null);
+		if(tt_db)
+			tt_ie56 = parseFloat(nv.substring(nv.indexOf("MSIE") + 5)) >= 5.5
+					&& typeof document.body.style.maxHeight == tt_u;
+	}
+	else
+	{
+		tt_db = document.documentElement || document.body ||
+				(document.getElementsByTagName ? document.getElementsByTagName("body")[0]
+				: null);
+		if(!tt_op)
+		{
+			n6 = document.defaultView && typeof document.defaultView.getComputedStyle != tt_u;
+			w3c = !n6 && document.getElementById;
+		}
+	}
+	tt_body = (document.getElementsByTagName ? document.getElementsByTagName("body")[0]
+				: (document.body || null));
+	if(tt_ie || n6 || tt_op || w3c)
+	{
+		if(tt_body && tt_db)
+		{
+			if(document.attachEvent || document.addEventListener)
+				return true;
+		}
+		else
+			tt_Err("wz_tooltip.js must be included INSIDE the body section,"
+					+ " immediately after the opening <body> tag.", false);
+	}
+	tt_db = null;
+	return false;
+}
+function tt_MkMainDiv()
+{
+	// Create the tooltip DIV
+	if(tt_body.insertAdjacentHTML)
+		tt_body.insertAdjacentHTML("afterBegin", tt_MkMainDivHtm());
+	else if(typeof tt_body.innerHTML != tt_u && document.createElement && tt_body.appendChild)
+		tt_body.appendChild(tt_MkMainDivDom());
+	if(window.tt_GetMainDivRefs /* FireFox Alzheimer */ && tt_GetMainDivRefs())
+		return true;
+	tt_db = null;
+	return false;
+}
+function tt_MkMainDivHtm()
+{
+	return(
+		'<div id="WzTtDiV"></div>' +
+		(tt_ie56 ? ('<iframe id="WzTtIfRm" src="javascript:false" scrolling="no" frameborder="0" style="filter:Alpha(opacity=0);position:absolute;top:0px;left:0px;display:none;"></iframe>')
+		: '')
+	);
+}
+function tt_MkMainDivDom()
+{
+	var el = document.createElement("div");
+	if(el)
+		el.id = "WzTtDiV";
+	return el;
+}
+function tt_GetMainDivRefs()
+{
+	tt_aElt[0] = tt_GetElt("WzTtDiV");
+	if(tt_ie56 && tt_aElt[0])
+	{
+		tt_aElt[tt_aElt.length - 1] = tt_GetElt("WzTtIfRm");
+		if(!tt_aElt[tt_aElt.length - 1])
+			tt_aElt[0] = null;
+	}
+	if(tt_aElt[0])
+	{
+		var css = tt_aElt[0].style;
+
+		css.visibility = "hidden";
+		css.position = "absolute";
+		css.overflow = "hidden";
+		return true;
+	}
+	return false;
+}
+function tt_ResetMainDiv()
+{
+	tt_SetTipPos(0, 0);
+	tt_aElt[0].innerHTML = "";
+	tt_aElt[0].style.width = "0px";
+	tt_h = 0;
+}
+function tt_IsW3cBox()
+{
+	var css = tt_aElt[0].style;
+
+	css.padding = "10px";
+	css.width = "40px";
+	tt_bBoxOld = (tt_GetDivW(tt_aElt[0]) == 40);
+	css.padding = "0px";
+	tt_ResetMainDiv();
+}
+function tt_OpaSupport()
+{
+	var css = tt_body.style;
+
+	tt_flagOpa = (typeof(css.KhtmlOpacity) != tt_u) ? 2
+				: (typeof(css.KHTMLOpacity) != tt_u) ? 3
+				: (typeof(css.MozOpacity) != tt_u) ? 4
+				: (typeof(css.opacity) != tt_u) ? 5
+				: (typeof(css.filter) != tt_u) ? 1
+				: 0;
+}
+// Ported from http://dean.edwards.name/weblog/2006/06/again/
+// (Dean Edwards et al.)
+function tt_SetOnloadFnc()
+{
+	tt_AddEvtFnc(document, "DOMContentLoaded", tt_HideSrcTags);
+	tt_AddEvtFnc(window, "load", tt_HideSrcTags);
+	if(tt_body.attachEvent)
+		tt_body.attachEvent("onreadystatechange",
+			function() {
+				if(tt_body.readyState == "complete")
+					tt_HideSrcTags();
+			} );
+	if(/WebKit|KHTML/i.test(navigator.userAgent))
+	{
+		var t = setInterval(function() {
+					if(/loaded|complete/.test(document.readyState))
+					{
+						clearInterval(t);
+						tt_HideSrcTags();
+					}
+				}, 10);
+	}
+}
+function tt_HideSrcTags()
+{
+	if(!window.tt_HideSrcTags || window.tt_HideSrcTags.done)
+		return;
+	window.tt_HideSrcTags.done = true;
+	if(!tt_HideSrcTagsRecurs(tt_body))
+		tt_Err("There are HTML elements to be converted to tooltips.\nIf you"
+				+ " want these HTML elements to be automatically hidden, you"
+				+ " must edit wz_tooltip.js, and set TagsToTip in the global"
+				+ " tooltip configuration to true.", true);
+}
+function tt_HideSrcTagsRecurs(dad)
+{
+	var ovr, asT2t;
+	// Walk the DOM tree for tags that have an onmouseover or onclick attribute
+	// containing a TagToTip('...') call.
+	// (.childNodes first since .children is bugous in Safari)
+	var a = dad.childNodes || dad.children || null;
+
+	for(var i = a ? a.length : 0; i;)
+	{--i;
+		if(!tt_HideSrcTagsRecurs(a[i]))
+			return false;
+		ovr = a[i].getAttribute ? (a[i].getAttribute("onmouseover") || a[i].getAttribute("onclick"))
+				: (typeof a[i].onmouseover == "function") ? (a[i].onmouseover || a[i].onclick)
+				: null;
+		if(ovr)
+		{
+			asT2t = ovr.toString().match(/TagToTip\s*\(\s*'[^'.]+'\s*[\),]/);
+			if(asT2t && asT2t.length)
+			{
+				if(!tt_HideSrcTag(asT2t[0]))
+					return false;
+			}
+		}
+	}
+	return true;
+}
+function tt_HideSrcTag(sT2t)
+{
+	var id, el;
+
+	// The ID passed to the found TagToTip() call identifies an HTML element
+	// to be converted to a tooltip, so hide that element
+	id = sT2t.replace(/.+'([^'.]+)'.+/, "$1");
+	el = tt_GetElt(id);
+	if(el)
+	{
+		if(tt_Debug && !TagsToTip)
+			return false;
+		else
+			el.style.display = "none";
+	}
+	else
+		tt_Err("Invalid ID\n'" + id + "'\npassed to TagToTip()."
+				+ " There exists no HTML element with that ID.", true);
+	return true;
+}
+function tt_Tip(arg, t2t)
+{
+	if(!tt_db || (tt_iState & 0x8))
+		return;
+	if(tt_iState)
+		tt_Hide();
+	if(!tt_Enabled)
+		return;
+	tt_t2t = t2t;
+	if(!tt_ReadCmds(arg))
+		return;
+	tt_iState = 0x1 | 0x4;
+	tt_AdaptConfig1();
+	tt_MkTipContent(arg);
+	tt_MkTipSubDivs();
+	tt_FormatTip();
+	tt_bJmpVert = false;
+	tt_bJmpHorz = false;
+	tt_maxPosX = tt_GetClientW() + tt_GetScrollX() - tt_w - 1;
+	tt_maxPosY = tt_GetClientH() + tt_GetScrollY() - tt_h - 1;
+	tt_AdaptConfig2();
+	// Ensure the tip be shown and positioned before the first onmousemove
+	tt_OverInit();
+	tt_ShowInit();
+	tt_Move();
+}
+function tt_ReadCmds(a)
+{
+	var i;
+
+	// First load the global config values, to initialize also values
+	// for which no command is passed
+	i = 0;
+	for(var j in config)
+		tt_aV[i++] = config[j];
+	// Then replace each cached config value for which a command is
+	// passed (ensure the # of command args plus value args be even)
+	if(a.length & 1)
+	{
+		for(i = a.length - 1; i > 0; i -= 2)
+			tt_aV[a[i - 1]] = a[i];
+		return true;
+	}
+	tt_Err("Incorrect call of Tip() or TagToTip().\n"
+			+ "Each command must be followed by a value.", true);
+	return false;
+}
+function tt_AdaptConfig1()
+{
+	tt_ExtCallFncs(0, "LoadConfig");
+	// Inherit unspecified title formattings from body
+	if(!tt_aV[TITLEBGCOLOR].length)
+		tt_aV[TITLEBGCOLOR] = tt_aV[BORDERCOLOR];
+	if(!tt_aV[TITLEFONTCOLOR].length)
+		tt_aV[TITLEFONTCOLOR] = tt_aV[BGCOLOR];
+	if(!tt_aV[TITLEFONTFACE].length)
+		tt_aV[TITLEFONTFACE] = tt_aV[FONTFACE];
+	if(!tt_aV[TITLEFONTSIZE].length)
+		tt_aV[TITLEFONTSIZE] = tt_aV[FONTSIZE];
+	if(tt_aV[CLOSEBTN])
+	{
+		// Use title colours for non-specified closebutton colours
+		if(!tt_aV[CLOSEBTNCOLORS])
+			tt_aV[CLOSEBTNCOLORS] = new Array("", "", "", "");
+		for(var i = 4; i;)
+		{--i;
+			if(!tt_aV[CLOSEBTNCOLORS][i].length)
+				tt_aV[CLOSEBTNCOLORS][i] = (i & 1) ? tt_aV[TITLEFONTCOLOR] : tt_aV[TITLEBGCOLOR];
+		}
+		// Enforce titlebar be shown
+		if(!tt_aV[TITLE].length)
+			tt_aV[TITLE] = " ";
+	}
+	// Circumvents broken display of images and fade-in flicker in Geckos < 1.8
+	if(tt_aV[OPACITY] == 100 && typeof tt_aElt[0].style.MozOpacity != tt_u && !Array.every)
+		tt_aV[OPACITY] = 99;
+	// Smartly shorten the delay for fade-in tooltips
+	if(tt_aV[FADEIN] && tt_flagOpa && tt_aV[DELAY] > 100)
+		tt_aV[DELAY] = Math.max(tt_aV[DELAY] - tt_aV[FADEIN], 100);
+}
+function tt_AdaptConfig2()
+{
+	if(tt_aV[CENTERMOUSE])
+	{
+		tt_aV[OFFSETX] -= ((tt_w - (tt_aV[SHADOW] ? tt_aV[SHADOWWIDTH] : 0)) >> 1);
+		tt_aV[JUMPHORZ] = false;
+	}
+}
+// Expose content globally so extensions can modify it
+function tt_MkTipContent(a)
+{
+	if(tt_t2t)
+	{
+		if(tt_aV[COPYCONTENT])
+			tt_sContent = tt_t2t.innerHTML;
+		else
+			tt_sContent = "";
+	}
+	else
+		tt_sContent = a[0];
+	tt_ExtCallFncs(0, "CreateContentString");
+}
+function tt_MkTipSubDivs()
+{
+	var sCss = 'position:relative;margin:0px;padding:0px;border-width:0px;left:0px;top:0px;line-height:normal;width:auto;',
+	sTbTrTd = ' cellspacing="0" cellpadding="0" border="0" style="' + sCss + '"><tbody style="' + sCss + '"><tr><td ';
+
+	tt_aElt[0].style.width = tt_GetClientW() + "px";
+	tt_aElt[0].innerHTML =
+		(''
+		+ (tt_aV[TITLE].length ?
+			('<div id="WzTiTl" style="position:relative;z-index:1;">'
+			+ '<table id="WzTiTlTb"' + sTbTrTd + 'id="WzTiTlI" style="' + sCss + '">'
+			+ tt_aV[TITLE]
+			+ '</td>'
+			+ (tt_aV[CLOSEBTN] ?
+				('<td align="right" style="' + sCss
+				+ 'text-align:right;">'
+				+ '<span id="WzClOsE" style="position:relative;left:2px;padding-left:2px;padding-right:2px;'
+				+ 'cursor:' + (tt_ie ? 'hand' : 'pointer')
+				+ ';" onmouseover="tt_OnCloseBtnOver(1)" onmouseout="tt_OnCloseBtnOver(0)" onclick="tt_HideInit()">'
+				+ tt_aV[CLOSEBTNTEXT]
+				+ '</span></td>')
+				: '')
+			+ '</tr></tbody></table></div>')
+			: '')
+		+ '<div id="WzBoDy" style="position:relative;z-index:0;">'
+		+ '<table' + sTbTrTd + 'id="WzBoDyI" style="' + sCss + '">'
+		+ tt_sContent
+		+ '</td></tr></tbody></table></div>'
+		+ (tt_aV[SHADOW]
+			? ('<div id="WzTtShDwR" style="position:absolute;overflow:hidden;"></div>'
+				+ '<div id="WzTtShDwB" style="position:relative;overflow:hidden;"></div>')
+			: '')
+		);
+	tt_GetSubDivRefs();
+	// Convert DOM node to tip
+	if(tt_t2t && !tt_aV[COPYCONTENT])
+		tt_El2Tip();
+	tt_ExtCallFncs(0, "SubDivsCreated");
+}
+function tt_GetSubDivRefs()
+{
+	var aId = new Array("WzTiTl", "WzTiTlTb", "WzTiTlI", "WzClOsE", "WzBoDy", "WzBoDyI", "WzTtShDwB", "WzTtShDwR");
+
+	for(var i = aId.length; i; --i)
+		tt_aElt[i] = tt_GetElt(aId[i - 1]);
+}
+function tt_FormatTip()
+{
+	var css, w, h, pad = tt_aV[PADDING], padT, wBrd = tt_aV[BORDERWIDTH],
+	iOffY, iOffSh, iAdd = (pad + wBrd) << 1;
+
+	//--------- Title DIV ----------
+	if(tt_aV[TITLE].length)
+	{
+		padT = tt_aV[TITLEPADDING];
+		css = tt_aElt[1].style;
+		css.background = tt_aV[TITLEBGCOLOR];
+		css.paddingTop = css.paddingBottom = padT + "px";
+		css.paddingLeft = css.paddingRight = (padT + 2) + "px";
+		css = tt_aElt[3].style;
+		css.color = tt_aV[TITLEFONTCOLOR];
+		if(tt_aV[WIDTH] == -1)
+			css.whiteSpace = "nowrap";
+		css.fontFamily = tt_aV[TITLEFONTFACE];
+		css.fontSize = tt_aV[TITLEFONTSIZE];
+		css.fontWeight = "bold";
+		css.textAlign = tt_aV[TITLEALIGN];
+		// Close button DIV
+		if(tt_aElt[4])
+		{
+			css = tt_aElt[4].style;
+			css.background = tt_aV[CLOSEBTNCOLORS][0];
+			css.color = tt_aV[CLOSEBTNCOLORS][1];
+			css.fontFamily = tt_aV[TITLEFONTFACE];
+			css.fontSize = tt_aV[TITLEFONTSIZE];
+			css.fontWeight = "bold";
+		}
+		if(tt_aV[WIDTH] > 0)
+			tt_w = tt_aV[WIDTH];
+		else
+		{
+			tt_w = tt_GetDivW(tt_aElt[3]) + tt_GetDivW(tt_aElt[4]);
+			// Some spacing between title DIV and closebutton
+			if(tt_aElt[4])
+				tt_w += pad;
+			// Restrict auto width to max width
+			if(tt_aV[WIDTH] < -1 && tt_w > -tt_aV[WIDTH])
+				tt_w = -tt_aV[WIDTH];
+		}
+		// Ensure the top border of the body DIV be covered by the title DIV
+		iOffY = -wBrd;
+	}
+	else
+	{
+		tt_w = 0;
+		iOffY = 0;
+	}
+
+	//-------- Body DIV ------------
+	css = tt_aElt[5].style;
+	css.top = iOffY + "px";
+	if(wBrd)
+	{
+		css.borderColor = tt_aV[BORDERCOLOR];
+		css.borderStyle = tt_aV[BORDERSTYLE];
+		css.borderWidth = wBrd + "px";
+	}
+	if(tt_aV[BGCOLOR].length)
+		css.background = tt_aV[BGCOLOR];
+	if(tt_aV[BGIMG].length)
+		css.backgroundImage = "url(" + tt_aV[BGIMG] + ")";
+	css.padding = pad + "px";
+	css.textAlign = tt_aV[TEXTALIGN];
+	if(tt_aV[HEIGHT])
+	{
+		css.overflow = "auto";
+		if(tt_aV[HEIGHT] > 0)
+			css.height = (tt_aV[HEIGHT] + iAdd) + "px";
+		else
+			tt_h = iAdd - tt_aV[HEIGHT];
+	}
+	// TD inside body DIV
+	css = tt_aElt[6].style;
+	css.color = tt_aV[FONTCOLOR];
+	css.fontFamily = tt_aV[FONTFACE];
+	css.fontSize = tt_aV[FONTSIZE];
+	css.fontWeight = tt_aV[FONTWEIGHT];
+	css.textAlign = tt_aV[TEXTALIGN];
+	if(tt_aV[WIDTH] > 0)
+		w = tt_aV[WIDTH];
+	// Width like title (if existent)
+	else if(tt_aV[WIDTH] == -1 && tt_w)
+		w = tt_w;
+	else
+	{
+		// Measure width of the body's inner TD, as some browsers would expand
+		// the container and outer body DIV to 100%
+		w = tt_GetDivW(tt_aElt[6]);
+		// Restrict auto width to max width
+		if(tt_aV[WIDTH] < -1 && w > -tt_aV[WIDTH])
+			w = -tt_aV[WIDTH];
+	}
+	if(w > tt_w)
+		tt_w = w;
+	tt_w += iAdd;
+
+	//--------- Shadow DIVs ------------
+	if(tt_aV[SHADOW])
+	{
+		tt_w += tt_aV[SHADOWWIDTH];
+		iOffSh = Math.floor((tt_aV[SHADOWWIDTH] * 4) / 3);
+		// Bottom shadow
+		css = tt_aElt[7].style;
+		css.top = iOffY + "px";
+		css.left = iOffSh + "px";
+		css.width = (tt_w - iOffSh - tt_aV[SHADOWWIDTH]) + "px";
+		css.height = tt_aV[SHADOWWIDTH] + "px";
+		css.background = tt_aV[SHADOWCOLOR];
+		// Right shadow
+		css = tt_aElt[8].style;
+		css.top = iOffSh + "px";
+		css.left = (tt_w - tt_aV[SHADOWWIDTH]) + "px";
+		css.width = tt_aV[SHADOWWIDTH] + "px";
+		css.background = tt_aV[SHADOWCOLOR];
+	}
+	else
+		iOffSh = 0;
+
+	//-------- Container DIV -------
+	tt_SetTipOpa(tt_aV[FADEIN] ? 0 : tt_aV[OPACITY]);
+	tt_FixSize(iOffY, iOffSh);
+}
+// Fixate the size so it can't dynamically change while the tooltip is moving.
+function tt_FixSize(iOffY, iOffSh)
+{
+	var wIn, wOut, h, add, pad = tt_aV[PADDING], wBrd = tt_aV[BORDERWIDTH], i;
+
+	tt_aElt[0].style.width = tt_w + "px";
+	tt_aElt[0].style.pixelWidth = tt_w;
+	wOut = tt_w - ((tt_aV[SHADOW]) ? tt_aV[SHADOWWIDTH] : 0);
+	// Body
+	wIn = wOut;
+	if(!tt_bBoxOld)
+		wIn -= (pad + wBrd) << 1;
+	tt_aElt[5].style.width = wIn + "px";
+	// Title
+	if(tt_aElt[1])
+	{
+		wIn = wOut - ((tt_aV[TITLEPADDING] + 2) << 1);
+		if(!tt_bBoxOld)
+			wOut = wIn;
+		tt_aElt[1].style.width = wOut + "px";
+		tt_aElt[2].style.width = wIn + "px";
+	}
+	// Max height specified
+	if(tt_h)
+	{
+		h = tt_GetDivH(tt_aElt[5]);
+		if(h > tt_h)
+		{
+			if(!tt_bBoxOld)
+				tt_h -= (pad + wBrd) << 1;
+			tt_aElt[5].style.height = tt_h + "px";
+		}
+	}
+	tt_h = tt_GetDivH(tt_aElt[0]) + iOffY;
+	// Right shadow
+	if(tt_aElt[8])
+		tt_aElt[8].style.height = (tt_h - iOffSh) + "px";
+	i = tt_aElt.length - 1;
+	if(tt_aElt[i])
+	{
+		tt_aElt[i].style.width = tt_w + "px";
+		tt_aElt[i].style.height = tt_h + "px";
+	}
+}
+function tt_DeAlt(el)
+{
+	var aKid;
+
+	if(el)
+	{
+		if(el.alt)
+			el.alt = "";
+		if(el.title)
+			el.title = "";
+		aKid = el.childNodes || el.children || null;
+		if(aKid)
+		{
+			for(var i = aKid.length; i;)
+				tt_DeAlt(aKid[--i]);
+		}
+	}
+}
+// This hack removes the native tooltips over links in Opera
+function tt_OpDeHref(el)
+{
+	if(!tt_op)
+		return;
+	if(tt_elDeHref)
+		tt_OpReHref();
+	while(el)
+	{
+		if(el.hasAttribute && el.hasAttribute("href"))
+		{
+			el.t_href = el.getAttribute("href");
+			el.t_stats = window.status;
+			el.removeAttribute("href");
+			el.style.cursor = "hand";
+			tt_AddEvtFnc(el, "mousedown", tt_OpReHref);
+			window.status = el.t_href;
+			tt_elDeHref = el;
+			break;
+		}
+		el = tt_GetDad(el);
+	}
+}
+function tt_OpReHref()
+{
+	if(tt_elDeHref)
+	{
+		tt_elDeHref.setAttribute("href", tt_elDeHref.t_href);
+		tt_RemEvtFnc(tt_elDeHref, "mousedown", tt_OpReHref);
+		window.status = tt_elDeHref.t_stats;
+		tt_elDeHref = null;
+	}
+}
+function tt_El2Tip()
+{
+	var css = tt_t2t.style;
+
+	// Store previous positioning
+	tt_t2t.t_cp = css.position;
+	tt_t2t.t_cl = css.left;
+	tt_t2t.t_ct = css.top;
+	tt_t2t.t_cd = css.display;
+	// Store the tag's parent element so we can restore that DOM branch
+	// when the tooltip is being hidden
+	tt_t2tDad = tt_GetDad(tt_t2t);
+	tt_MovDomNode(tt_t2t, tt_t2tDad, tt_aElt[6]);
+	css.display = "block";
+	css.position = "static";
+	css.left = css.top = css.marginLeft = css.marginTop = "0px";
+}
+function tt_UnEl2Tip()
+{
+	// Restore positioning and display
+	var css = tt_t2t.style;
+
+	css.display = tt_t2t.t_cd;
+	tt_MovDomNode(tt_t2t, tt_GetDad(tt_t2t), tt_t2tDad);
+	css.position = tt_t2t.t_cp;
+	css.left = tt_t2t.t_cl;
+	css.top = tt_t2t.t_ct;
+	tt_t2tDad = null;
+}
+function tt_OverInit()
+{
+	if(window.event)
+		tt_over = window.event.target || window.event.srcElement;
+	else
+		tt_over = tt_ovr_;
+	tt_DeAlt(tt_over);
+	tt_OpDeHref(tt_over);
+}
+function tt_ShowInit()
+{
+	tt_tShow.Timer("tt_Show()", tt_aV[DELAY], true);
+	if(tt_aV[CLICKCLOSE] || tt_aV[CLICKSTICKY])
+		tt_AddEvtFnc(document, "mouseup", tt_OnLClick);
+}
+function tt_Show()
+{
+	var css = tt_aElt[0].style;
+
+	// Override the z-index of the topmost wz_dragdrop.js D&D item
+	// joel@nextbio:  Change zIndex from 1010 to 100010 for DE4801
+	css.zIndex = Math.max((window.dd && dd.z) ? (dd.z + 2) : 0, 100010);
+	if(tt_aV[STICKY] || !tt_aV[FOLLOWMOUSE])
+		tt_iState &= ~0x4;
+	if(tt_aV[EXCLUSIVE])
+		tt_iState |= 0x8;
+	if(tt_aV[DURATION] > 0)
+		tt_tDurt.Timer("tt_HideInit()", tt_aV[DURATION], true);
+	tt_ExtCallFncs(0, "Show")
+	css.visibility = "visible";
+	tt_iState |= 0x2;
+	if(tt_aV[FADEIN])
+		tt_Fade(0, 0, tt_aV[OPACITY], Math.round(tt_aV[FADEIN] / tt_aV[FADEINTERVAL]));
+	tt_ShowIfrm();
+}
+function tt_ShowIfrm()
+{
+	if(tt_ie56)
+	{
+		var ifrm = tt_aElt[tt_aElt.length - 1];
+		if(ifrm)
+		{
+			var css = ifrm.style;
+			css.zIndex = tt_aElt[0].style.zIndex - 1;
+			css.display = "block";
+		}
+	}
+}
+function tt_Move(e)
+{
+	if(e)
+		tt_ovr_ = e.target || e.srcElement;
+	e = e || window.event;
+	if(e)
+	{
+		tt_musX = tt_GetEvtX(e);
+		tt_musY = tt_GetEvtY(e);
+	}
+	if(tt_iState & 0x4)
+	{
+		// Prevent jam of mousemove events
+		if(!tt_op && !tt_ie)
+		{
+			if(tt_bWait)
+				return;
+			tt_bWait = true;
+			tt_tWaitMov.Timer("tt_bWait = false;", 1, true);
+		}
+		if(tt_aV[FIX])
+		{
+			tt_iState &= ~0x4;
+			tt_PosFix();
+		}
+		else if(!tt_ExtCallFncs(e, "MoveBefore"))
+			tt_SetTipPos(tt_Pos(0), tt_Pos(1));
+		tt_ExtCallFncs([tt_musX, tt_musY], "MoveAfter")
+	}
+}
+function tt_Pos(iDim)
+{
+	var iX, bJmpMod, cmdAlt, cmdOff, cx, iMax, iScrl, iMus, bJmp;
+
+	// Map values according to dimension to calculate
+	if(iDim)
+	{
+		bJmpMod = tt_aV[JUMPVERT];
+		cmdAlt = ABOVE;
+		cmdOff = OFFSETY;
+		cx = tt_h;
+		iMax = tt_maxPosY;
+		iScrl = tt_GetScrollY();
+		iMus = tt_musY;
+		bJmp = tt_bJmpVert;
+	}
+	else
+	{
+		bJmpMod = tt_aV[JUMPHORZ];
+		cmdAlt = LEFT;
+		cmdOff = OFFSETX;
+		cx = tt_w;
+		iMax = tt_maxPosX;
+		iScrl = tt_GetScrollX();
+		iMus = tt_musX;
+		bJmp = tt_bJmpHorz;
+	}
+	if(bJmpMod)
+	{
+		if(tt_aV[cmdAlt] && (!bJmp || tt_CalcPosAlt(iDim) >= iScrl + 16))
+			iX = tt_PosAlt(iDim);
+		else if(!tt_aV[cmdAlt] && bJmp && tt_CalcPosDef(iDim) > iMax - 16)
+			iX = tt_PosAlt(iDim);
+		else
+			iX = tt_PosDef(iDim);
+	}
+	else
+	{
+		iX = iMus;
+		if(tt_aV[cmdAlt])
+			iX -= cx + tt_aV[cmdOff] - (tt_aV[SHADOW] ? tt_aV[SHADOWWIDTH] : 0);
+		else
+			iX += tt_aV[cmdOff];
+	}
+	// Prevent tip from extending past clientarea boundary
+	if(iX > iMax)
+		iX = bJmpMod ? tt_PosAlt(iDim) : iMax;
+	// In case of insufficient space on both sides, ensure the left/upper part
+	// of the tip be visible
+	if(iX < iScrl)
+		iX = bJmpMod ? tt_PosDef(iDim) : iScrl;
+	return iX;
+}
+function tt_PosDef(iDim)
+{
+	if(iDim)
+		tt_bJmpVert = tt_aV[ABOVE];
+	else
+		tt_bJmpHorz = tt_aV[LEFT];
+	return tt_CalcPosDef(iDim);
+}
+function tt_PosAlt(iDim)
+{
+	if(iDim)
+		tt_bJmpVert = !tt_aV[ABOVE];
+	else
+		tt_bJmpHorz = !tt_aV[LEFT];
+	return tt_CalcPosAlt(iDim);
+}
+function tt_CalcPosDef(iDim)
+{
+	return iDim ? (tt_musY + tt_aV[OFFSETY]) : (tt_musX + tt_aV[OFFSETX]);
+}
+function tt_CalcPosAlt(iDim)
+{
+	var cmdOff = iDim ? OFFSETY : OFFSETX;
+	var dx = tt_aV[cmdOff] - (tt_aV[SHADOW] ? tt_aV[SHADOWWIDTH] : 0);
+	if(tt_aV[cmdOff] > 0 && dx <= 0)
+		dx = 1;
+	return((iDim ? (tt_musY - tt_h) : (tt_musX - tt_w)) - dx);
+}
+function tt_PosFix()
+{
+	var iX, iY;
+
+	if(typeof(tt_aV[FIX][0]) == "number")
+	{
+		iX = tt_aV[FIX][0];
+		iY = tt_aV[FIX][1];
+	}
+	else
+	{
+		if(typeof(tt_aV[FIX][0]) == "string")
+			el = tt_GetElt(tt_aV[FIX][0]);
+		// First slot in array is direct reference to HTML element
+		else
+			el = tt_aV[FIX][0];
+		iX = tt_aV[FIX][1];
+		iY = tt_aV[FIX][2];
+		// By default, vert pos is related to bottom edge of HTML element
+		if(!tt_aV[ABOVE] && el)
+			iY += tt_GetDivH(el);
+		for(; el; el = el.offsetParent)
+		{
+			iX += el.offsetLeft || 0;
+			iY += el.offsetTop || 0;
+		}
+	}
+	// For a fixed tip positioned above the mouse, use the bottom edge as anchor
+	// (recommended by Christophe Rebeschini, 31.1.2008)
+	if(tt_aV[ABOVE])
+		iY -= tt_h;
+	tt_SetTipPos(iX, iY);
+}
+function tt_Fade(a, now, z, n)
+{
+	if(n)
+	{
+		now += Math.round((z - now) / n);
+		if((z > a) ? (now >= z) : (now <= z))
+			now = z;
+		else
+			tt_tFade.Timer(
+				"tt_Fade("
+				+ a + "," + now + "," + z + "," + (n - 1)
+				+ ")",
+				tt_aV[FADEINTERVAL],
+				true
+			);
+	}
+	now ? tt_SetTipOpa(now) : tt_Hide();
+}
+function tt_SetTipOpa(opa)
+{
+	// To circumvent the opacity nesting flaws of IE, we set the opacity
+	// for each sub-DIV separately, rather than for the container DIV.
+	tt_SetOpa(tt_aElt[5], opa);
+	if(tt_aElt[1])
+		tt_SetOpa(tt_aElt[1], opa);
+	if(tt_aV[SHADOW])
+	{
+		opa = Math.round(opa * 0.8);
+		tt_SetOpa(tt_aElt[7], opa);
+		tt_SetOpa(tt_aElt[8], opa);
+	}
+}
+function tt_OnCloseBtnOver(iOver)
+{
+	var css = tt_aElt[4].style;
+
+	iOver <<= 1;
+	css.background = tt_aV[CLOSEBTNCOLORS][iOver];
+	css.color = tt_aV[CLOSEBTNCOLORS][iOver + 1];
+}
+function tt_OnLClick(e)
+{
+	//  Ignore right-clicks
+	e = e || window.event;
+	if(!((e.button && e.button & 2) || (e.which && e.which == 3)))
+	{
+		if(tt_aV[CLICKSTICKY] && (tt_iState & 0x4))
+		{
+			tt_aV[STICKY] = true;
+			tt_iState &= ~0x4;
+		}
+		else if(tt_aV[CLICKCLOSE])
+			tt_HideInit();
+	}
+}
+function tt_Int(x)
+{
+	var y;
+
+	return(isNaN(y = parseInt(x)) ? 0 : y);
+}
+Number.prototype.Timer = function(s, iT, bUrge)
+{
+	if(!this.value || bUrge)
+		this.value = window.setTimeout(s, iT);
+}
+Number.prototype.EndTimer = function()
+{
+	if(this.value)
+	{
+		window.clearTimeout(this.value);
+		this.value = 0;
+	}
+}
+function tt_GetWndCliSiz(s)
+{
+	var db, y = window["inner" + s], sC = "client" + s, sN = "number";
+	if(typeof y == sN)
+	{
+		var y2;
+		return(
+			// Gecko or Opera with scrollbar
+			// ... quirks mode
+			((db = document.body) && typeof(y2 = db[sC]) == sN && y2 &&  y2 <= y) ? y2 
+			// ... strict mode
+			: ((db = document.documentElement) && typeof(y2 = db[sC]) == sN && y2 && y2 <= y) ? y2
+			// No scrollbar, or clientarea size == 0, or other browser (KHTML etc.)
+			: y
+		);
+	}
+	// IE
+	return(
+		// document.documentElement.client+s functional, returns > 0
+		((db = document.documentElement) && (y = db[sC])) ? y
+		// ... not functional, in which case document.body.client+s 
+		// is the clientarea size, fortunately
+		: document.body[sC]
+	);
+}
+function tt_SetOpa(el, opa)
+{
+	var css = el.style;
+
+	tt_opa = opa;
+	if(tt_flagOpa == 1)
+	{
+		if(opa < 100)
+		{
+			// Hacks for bugs of IE:
+			// 1.) Once a CSS filter has been applied, fonts are no longer
+			// anti-aliased, so we store the previous 'non-filter' to be
+			// able to restore it
+			if(typeof(el.filtNo) == tt_u)
+				el.filtNo = css.filter;
+			// 2.) A DIV cannot be made visible in a single step if an
+			// opacity < 100 has been applied while the DIV was hidden
+			var bVis = css.visibility != "hidden";
+			// 3.) In IE6, applying an opacity < 100 has no effect if the
+			//	   element has no layout (position, size, zoom, ...)
+			css.zoom = "100%";
+			if(!bVis)
+				css.visibility = "visible";
+			css.filter = "alpha(opacity=" + opa + ")";
+			if(!bVis)
+				css.visibility = "hidden";
+		}
+		else if(typeof(el.filtNo) != tt_u)
+			// Restore 'non-filter'
+			css.filter = el.filtNo;
+	}
+	else
+	{
+		opa /= 100.0;
+		switch(tt_flagOpa)
+		{
+		case 2:
+			css.KhtmlOpacity = opa; break;
+		case 3:
+			css.KHTMLOpacity = opa; break;
+		case 4:
+			css.MozOpacity = opa; break;
+		case 5:
+			css.opacity = opa; break;
+		}
+	}
+}
+function tt_Err(sErr, bIfDebug)
+{
+	if(tt_Debug || !bIfDebug)
+		alert("Tooltip Script Error Message:\n\n" + sErr);
+}
+
+//============  EXTENSION (PLUGIN) MANAGER  ===============//
+function tt_ExtCmdEnum()
+{
+	var s;
+
+	// Add new command(s) to the commands enum
+	for(var i in config)
+	{
+		s = "window." + i.toString().toUpperCase();
+		if(eval("typeof(" + s + ") == tt_u"))
+		{
+			eval(s + " = " + tt_aV.length);
+			tt_aV[tt_aV.length] = null;
+		}
+	}
+}
+function tt_ExtCallFncs(arg, sFnc)
+{
+	var b = false;
+	for(var i = tt_aExt.length; i;)
+	{--i;
+		var fnc = tt_aExt[i]["On" + sFnc];
+		// Call the method the extension has defined for this event
+		if(fnc && fnc(arg))
+			b = true;
+	}
+	return b;
+}
+
+tt_Init();
+
+  /* End of Walter Zorn tooltip library */
+  Number.prototype.Timer = function(s, iT, bUrge)
+  {
+      if(!this.value || bUrge)
+          this.value = window.setTimeout(function() {eval(s)}, iT);
+  }
+  
+  function tt_Err(){}
+  this.Tip = Tip;
+  this.UnTip = UnTip;
+  this.TagToTip = TagToTip;
+}
+
+if (window.tt_GetMainDivRefs == null)
+{
+  window.tt_GetMainDivRefs  = true;
+}
+nbApi.wzTooltip = new nbApi.WzTooltip;
+nbApi.Tip = nbApi.wzTooltip.Tip;
+nbApi.UnTip = nbApi.wzTooltip.UnTip;
+nbApi.TagToTip = nbApi.wzTooltip.TagToTip;
+
+  
+    
+
+
+
+
+nbApi.getBody = function() {
+  
+  return document.body;
+}
+
+nbApi.highlightPopupDiv = null;
+nbApi.highlightPopup = function(evt) {
+  evt = evt || event;
+  if (evt) {
+    var span = evt.target || evt.srcElement;
+    if (span) {
+      
+      var ok=false;
+      if (span.className.indexOf('nbApiHighlightEl') >= 0) {
+        ok = true;
+      } else {
+        var o = span.o;
+        while (o && o.group) {
+          if (document.body.className.indexOf('nbApiShowHighlight'+o.group) >= 0) {
+            ok = true;
+          }
+          o = o.next;
+        }
+      }
+      ok=true;
+      if (ok) {
+        if (nbApi.highlightPopupDiv == null) {
+          var tagCloudArray = nbApi.getElementsByClassName(document, "nbApiTagCloudBody", "div");
+          nbApi.highlightPopupDiv = tagCloudArray[0].getAttribute("nextbioId");
+        }
+        if (nbApi.highlightPopupDiv) {
+          var pup = document.getElementById(nbApi.highlightPopupDiv + '_popup');
+          o = span.o;
+          var syn = o.syn||"";
+          
+          var text = nbApi.getInnerText(span);
+          if (text && text.toLowerCase() != o.tag.toLowerCase()) {
+            syn += "|"+o.tag;
+          }
+          var nbNav = "id0=" + o.id + "&t0=" +  o.group + "&q0=" + o.tag;
+          function popupCb() {
+            pup.setAttribute("nbNav", nbNav);
+            if (syn) {
+              pup.setAttribute("nbSyn", "syn="+syn);
+            } else {
+              pup.removeAttribute("nbSyn");
+            }
+          }
+          nbApi.popupItems(span, pup.id, '/search/anno.nb', [[o.group, o.id, o.tag] ], evt, true, 0, popupCb, false);
+          evt.cancelBubble=true;
+        }
+      }
+    }
+  }
+}
+
+nbApi.prepHighlightState = 0; 
+nbApi.pendingHighlight = [];  
+nbApi.highlightTries = 0;  
+nbApi.prepHighlight = function() {
+  var highlightFirst = false;  // if true, we will only highlight the first instance of any term
+  
+  if (document.getElementById("articleBody") == null && nbApi.highlightTries++ < 10) {
+    setTimeout(nbApi.prepHighlight, 500);
+    return;
+  }
+  if (nbApi.prepHighlightState) return;
+  if (nbApi.getCookie("nbApiNoHighlight") == "1") {
+    // highlighting is disabled
+    document.getElementById("nbApidisableHl").style.display="none";
+    document.getElementById("nbApienableHl").style.display="";
+    return;
+  }
+  nbApi.prepHighlightState = 1;
+  document.getElementById("nbApidisableHl").style.display="";
+  document.getElementById("nbApienableHl").style.display="none";
+  
+  var map = {};
+  var links = nbApi.getElementsByClassName(document,"nbApiTagLink", "a");
+  for (var i=0; i<links.length; i++) {
+    var l = links[i];
+    var id = l.getAttribute("nbApiId");
+    var tag = l.getAttribute("nbApiTag");
+    var group;
+    var p = l;
+    do {
+      p = p.parentNode;
+      group = p.getAttribute("nbApiGroup");
+    } while (p && !group);
+    var syn = l.getAttribute("nbApiSyn");
+    function addToMap(s) {
+      s = s.toLowerCase();
+      var o = {id:id,s:s,tag:tag,group:group,syn:syn};
+      if (map[s]) o.next = map[s];
+      map[s] = o;
+    }
+    addToMap(tag);
+    if (syn) {
+      var synA = syn.split("|");
+      for (var j=0; j<synA.length; j++) {
+        addToMap(synA[j]);
+      }
+    }
+  }
+  
+  var a=[];
+  for (var e in map) {
+    a.push(map[e]);
+  }
+  a.sort(function(s1,s2) {return s2.s.length-s1.s.length});
+  
+  var aa=[[],[],[],[]];
+  for (var i=0; i<a.length; i++) {
+    var w=a[i].s;
+    var k=0;
+    if (/^\w/.test(w)) {
+      k += 1;
+    }
+    if (/\w$/.test(w)) {
+      k += 2;
+    }
+    aa[k].push(w);
+  }
+  
+  var maxlen = 50000;  
+  if (navigator.userAgent.indexOf("Gecko") >= 0) {
+    maxlen = 500;
+  }
+  var ab=[];
+  for (var i=0; i<4; i++) {  
+    if (aa[i].length) {
+      var s="";
+      for (var j=0; j<aa[i].length; j++) {
+        var w = aa[i][j].replace(/[\[|()?*+&]/g,"\\"+"$&");  
+        s += (s?'|':'')+w;
+        if (s.length > maxlen) {  
+          s = s.replace(/ /g,'\\s+');  
+          ab.push(((i%2==0)?'':'\\b') + "(" + s + ")" + (i>1?'\\b':''));
+          s='';
+        }
+      }
+      if (s) {
+        s = s.replace(/ /g,'\\s+');  
+        ab.push(((i%2==0)?'':'\\b') + "(" + s + ")" + (i>1?'\\b':''));
+      }
+    }
+  }
+  var index = 0;
+  var re;
+  doRe();
+  
+  
+  function doRe() {
+    if (index < ab.length) {
+      re = new RegExp(ab[index++],'i');
+      doHighlight(nbApi.getBody());
+      for (var i=0; i<nbApi.pendingHighlight.length; i++) {
+        nbApi.pendingHighlight[i]();
+      }
+      if (index < ab.length) {
+        setTimeout(doRe);
+      } else {
+        nbApi.prepHighlightState = 2;
+        nbApi.pendingHighlight = [];
+      }
+    } else {
+      nbApi.prepHighlightState = 2;
+      nbApi.pendingHighlight = [];
+    }
+  }
+
+  function getClass(s) {
+    var o = map[s.toLowerCase()];
+    var clazz="nbApiHighlight";
+
+    return clazz;
+  }
+  
+  function doHighlight(el) {
+    var r;
+    if (el.nodeType == 3) { // text node
+      var text = el.nodeValue;
+      if (text) {
+        r = text.match(re);
+        if (r) {
+          var frag = document.createDocumentFragment();
+          while (r) {
+            var s = r[0].toLowerCase().replace(/\s+/g,' ');  
+            var o = map[s];
+            if (r.index > 0) {
+              frag.appendChild(document.createTextNode(text.substr(0,r.index)));
+            }
+            if (highlightFirst && o.seen) {  // we don't want to add an underline if we've already seen it, just append the text
+              frag.appendChild(document.createTextNode(r[0]));
+            } else {
+              o.seen = true;
+              var span = document.createElement("span");
+              span.className = getClass(s);
+              span.o = o;
+              span.appendChild(document.createTextNode(r[0]));
+              
+              if (span.addEventListener) {
+                span.addEventListener("click", nbApi.highlightPopup, false);
+              } else if (span.attachEvent) {
+                span.attachEvent("onclick", nbApi.highlightPopup);
+              } else {
+                span.onclick=nbApi.highlightPopup;
+              }
+              
+              if (navigator.userAgent.indexOf("MSIE") >= 0 && span.attachEvent) {
+                span.attachEvent("onmouseover", nbApi.highlightMOver);
+                span.attachEvent("onmouseout", nbApi.highlightMOut);
+              }
+              frag.appendChild(span);
+            }
+            text = text.substr(r.index+r[0].length);
+            r = text.match(re);
+          }
+          if (text) {
+            frag.appendChild(document.createTextNode(text));
+          }
+          el.parentNode.replaceChild(frag,el);
+        }
+      }
+    } else if (el.tagName=='SPAN' && el.title && (r = el.title.match(re)) != null && r[0] == el.title) {
+      
+      nbApi.addClass(el, getClass(el.title));
+      el.o = map[el.title.toLowerCase()];
+    } else if (el.hasChildNodes()) {
+      if (el.className.indexOf('nbApiNoHighlight') >= 0 || el.className.indexOf('nbApiHighlight') >= 0 || el.className == "refText" || (highlightFirst && nbApi.getComputedStyle(el,'display')=="none")) {
+        
+        
+        
+        
+        return;
+      }
+      switch (el.tagName) {
+        case 'SCRIPT': case 'STYLE': case 'OBJECT': case 'EMBED': return;
+        case 'A': if (el.href) return;  
+        default:
+        
+        var a=[];
+        for (var i=0; i<el.childNodes.length; i++) {
+          a[i] = el.childNodes[i];
+        }
+        for (var i=0; i<a.length; i++) {
+          doHighlight(a[i]);
+        }
+      }
+    }
+  }
+  
+}
+
+nbApi.highlightMOver = function(evt) {
+  evt = evt || event;
+  if (evt) {
+    var span = evt.target || evt.srcElement;
+    if (span) {
+      var o = span.o;
+      nbApi.addClass(span, 'nbApiHighlightMo');
+    }
+  }
+}
+nbApi.highlightMOut = function(evt) {
+  evt = evt || event;
+  if (evt) {
+    var span = evt.target || evt.srcElement;
+    if (span) {
+      var o = span.o;
+      nbApi.removeClass(span, 'nbApiHighlightMo');
+    }
+  }
+}
+
+nbApi.removeHighlight = function() {
+  var a=nbApi.getElementsByClassName(document,"nbApiHighlight");
+  for (var i=0; i<a.length; i++) {
+    var el = a[i];
+    el.className = "";
+    if (el.removeEventListener) {
+      el.removeEventListener("click", nbApi.highlightPopup, false);
+    } else if (el.detachEvent) {
+      el.detachEvent("onclick", nbApi.highlightPopup);
+      el.detachEvent("onmouseover", nbApi.highlightMOver);
+      el.detachEvent("onmouseout", nbApi.highlightMOut);
+    } else {
+      el.onclick=null;
+    }
+  }
+  
+}
+
+
+nbApi.disableHl = function() {
+  nbApi.removeHighlight();
+  nbApi.setCookie("nbApiNoHighlight","1");
+  document.getElementById("nbApidisableHl").style.display="none";
+  document.getElementById("nbApienableHl").style.display="";
+  nbApi.prepHighlightState=0;
+}
+
+nbApi.enableHl = function() {
+  nbApi.setCookie("nbApiNoHighlight","0");
+  nbApi.prepHighlight();
+}
+  
+    
+
+
+
+
+// NextBio Tag Cloud Support JavaScript Library
+// Elsevier specific part of the tag cloud API
+// requires jsApi.jsp, jsUtils.jsp, jsTagCloud.jsp
+
+nbApi.consumer={};
+nbApi.consumer.name="elsevier.sciencedirect";
+nbApi.consumer.version="1.0";  
+nbApi.consumer.redirect=true;
+nbApi.consumer.redirectUrl="http://www.sciencedirect.com/science/redirect";
+nbApi.consumer.targetUrl="http://sciencedirect.nextbio.com/e";
+
+
+nbApi.tagCloudFromQueryEx = function(config)
+{
+  
+    var tagCloud = nbApi.createTagCloud(nbApi.getTagTypes().fullText);
+    tagCloud.setAttribute("query", config.query);
+    tagCloud.setAttribute("callback", config.callback);
+    tagCloud.setAttribute("timeout", config.timeout);
+    tagCloud.setAttribute("timeoutTerminate", config.timeoutTerminate == true);
+    tagCloud.setAttribute("timeoutCallback", config.timeoutCallback);
+    tagCloud.setAttribute("frameTarget", null);
+    
+    if (config.urlContext != null)
+      tagCloud.setAttribute("urlContext", config.urlContext);
+    if (config.delay != null)
+      tagCloud.setAttribute("delay", config.delay);
+    tagCloud.setAttribute("iFrameId", config.iFrameId);
+    tagCloud.setAttribute("iFrame", config.iFrame);
+    tagCloud.setAttribute("extra", config.extra);
+    tagCloud.load(config.div);
+  
+  
+
+};
+nbApi.tagCloudFromQuery = function(div, search, callback, timeout, timeoutTerminate, timeoutCallback, iFrameId, urlContext, delay, iFrame)
+{
+  
+    var tagCloud = nbApi.createTagCloud(nbApi.getTagTypes().fullText);
+    tagCloud.setAttribute("query", search);
+    tagCloud.setAttribute("callback", callback);
+    tagCloud.setAttribute("timeout", timeout);
+    tagCloud.setAttribute("timeoutTerminate", timeoutTerminate == true);
+    tagCloud.setAttribute("timeoutCallback", timeoutCallback);
+    tagCloud.setAttribute("frameTarget", null);
+    
+    if (urlContext != null)
+      tagCloud.setAttribute("urlContext", urlContext);
+    if (delay != null)
+      tagCloud.setAttribute("delay", delay);
+    tagCloud.setAttribute("iFrameId", iFrameId);
+    tagCloud.setAttribute("iFrame", iFrame);
+    tagCloud.load(div);
+  
+  
+
+};
+
+nbApi.tagCloudFromId = function(div, id, search, callback, timeout, timeoutTerminate, timeoutCallback, iFrameId, urlContext, iFrame)
+{
+  
+    var tagCloud = nbApi.createTagCloud(nbApi.getTagTypes().fullText);
+    tagCloud.setAttribute("id", id);
+    tagCloud.setAttribute("query", search);
+    var cb = function(arg1, arg2) {
+      callback(arg1,arg2);
+      
+      nbApi.prepHighlight();
+      
+      setTimeout(function() {nbApi.trackUrl("/interact/tagCloud","UA-3589787-51")},500);
+    }
+    tagCloud.setAttribute("callback", cb);
+    tagCloud.setAttribute("timeout", timeout);
+    tagCloud.setAttribute("timeoutTerminate", timeoutTerminate == true);
+    tagCloud.setAttribute("timeoutCallback", timeoutCallback);
+    tagCloud.setAttribute("frameTarget", null);
+    tagCloud.setAttribute("cloudSize", 100);
+    if (urlContext != null)
+      tagCloud.setAttribute("urlContext", urlContext);
+    tagCloud.setAttribute("iFrameId", iFrameId);
+    tagCloud.setAttribute("iFrame", iFrame);
+    tagCloud.load(div);
+  
+  
+};
+
+nbApi.tagCloudFromPii = function(div, id, search, callback, timeout, timeoutTerminate, timeoutCallback, iFrameId, urlContext, iFrame)
+{
+  nbApi.tagCloudFromId(div, id, search, callback, timeout, timeoutTerminate, timeoutCallback, iFrameId, urlContext, iFrame);
+};
+
+nbApi.tagCloudFromDoi = function(div, id, search, callback, timeout, timeoutTerminate, timeoutCallback, iFrameId, urlContext, iFrame)
+{
+  nbApi.tagCloudFromId(div, id, search, callback, timeout, timeoutTerminate, timeoutCallback, iFrameId, urlContext, iFrame);
+};
+
+nbApi.tagcloudOpen = function(elementName, groupName)
+{
+  var elements = nbApi.findElementsByName(groupName, "div");
+  if (elements == null)
+    return;
+  var elementId = "tag_" + elementName;  
+  var switchId = "switch_" + elementName;  
+  var switches = nbApi.findElementsByName("switch_" + groupName, "span");
+
+  for (var i = 0; i < switches.length; i++)
+  {
+    switches[i].className = "nbApiEmphO";
+  }
+  for (var i = 0; i < elements.length; i++)
+  {
+    var element = elements[i];
+    if (element.id != elementId)
+    {
+      element.style.display = "none";
+    }
+    else
+    {
+      var image = document.getElementById("switch_" + elementName);
+      if (element.style.display == "none")
+      {
+        element.style.display = "block";
+        image.className = "nbApiEmphC";
+      }
+      else
+      {
+        element.style.display = "none";
+      }
+    }
+  } 
+};
+nbApi.showMoreTerms = function(groupName, more)
+{
+  if (groupName == null)
+    return;
+  var longDiv = document.getElementById("long_" + groupName);
+  var shortDiv = document.getElementById("short_" + groupName);
+  var moreLink = document.getElementById("more_" + groupName);
+  var lessLink = document.getElementById("less_" + groupName);
+  
+  if (more == null || more == true)
+  {
+    longDiv.style.display = "block";
+    shortDiv.style.display = "none";
+    lessLink.style.display = "block";
+    moreLink.style.display = "none";
+  }
+  else
+  {
+    longDiv.style.display = "none";
+    shortDiv.style.display = "block";
+    lessLink.style.display = "none";
+    moreLink.style.display = "block";
+  }
+};
+nbApi.showMatchingSentences = function(config)
+{                                              
+  if (!config)
+    return;
+  var popup = document.getElementById(config.popupId);
+  if (!popup)
+    return;                                     
+  popup.setAttribute("nbPublicationId", "id=" + config.publicationId);   
+  popup.setAttribute("publicationId", config.publicationId);  
+//  popup.setAttribute("nbSyn", "syn=" + config.term);
+  popup.setAttribute("nbTermName", config.term);
+  nbApi.popupItems(config.element, config.popupId, '', [['search', '', config.term] ], config.event, false, 500); 
+};
+         
+

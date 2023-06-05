@@ -1,0 +1,613 @@
+Article
+
+Circadian Rhythms of Early Afterdepolarizations and Ventricular Arrhythmias in a Cardiomyocyte Model
+Casey O. Diekman1,2,* and Ning Wei3
+1Department of Mathematical Sciences, New Jersey Institute of Technology, Newark, New Jersey; 2EPSRC Centre for Predictive Modelling in Healthcare, Living Systems Institute, University of Exeter, Exeter, United Kingdom; and 3Department of Mathematics, Purdue University, West Lafayette, Indiana
+ABSTRACT Sudden cardiac arrest is a malfunction of the heart’s electrical system, typically caused by ventricular arrhythmias, that can lead to sudden cardiac death (SCD) within minutes. Epidemiological studies have shown that SCD and ventricular arrhythmias are more likely to occur in the morning than in the evening, and laboratory studies indicate that these daily rhythms in adverse cardiovascular events are at least partially under the control of the endogenous circadian timekeeping system. However, the biophysical mechanisms linking molecular circadian clocks to cardiac arrhythmogenesis are not fully understood. Recent experiments have shown that L-type calcium channels exhibit circadian rhythms in both expression and function in guinea pig ventricular cardiomyocytes. We developed an electrophysiological model of these cells to simulate the effect of circadian variation in L-type calcium conductance. In our simulations, we found that there is a circadian pattern in the occurrence of early afterdepolarizations (EADs), which are abnormal depolarizations during the repolarization phase of a cardiac action potential that can trigger fatal ventricular arrhythmias. Speciﬁcally, the model produces EADs in the morning, but not at other times of day. We show that the model exhibits a codimension-2 Takens-Bogdanov bifurcation that serves as an organizing center for different types of EAD dynamics. We also simulated a two-dimensional spatial version of this model across a circadian cycle. We found that there is a circadian pattern in the breakup of spiral waves, which represents ventricular ﬁbrillation in cardiac tissue. Specifically, the model produces spiral wave breakup in the morning, but not in the evening. Our computational study is the ﬁrst, to our knowledge, to propose a link between circadian rhythms and EAD formation and suggests that the efﬁcacy of drugs targeting EAD-mediated arrhythmias may depend on the time of day that they are administered.
+
+SIGNIFICANCE Why are life-threatening cardiac arrhythmias more likely to occur in the morning than in the evening? The electrical properties of the heart exhibit daily rhythms because of molecular circadian clocks within cardiomyocytes. Our computational model of ventricular myocytes shows that clock-controlled expression of a voltage-gated calcium ion channel leads to early afterdepolarizations (EADs) at certain times of the day. EADs, in which the membrane potential of a cardiomyocyte depolarizes a second time before fully repolarizing, can trigger arrhythmias. To our knowledge, this is the ﬁrst study linking the circadian clock to EAD formation. Our computational results suggest that the efﬁcacy of antiarrhythmic medications targeting this calcium ion channel may depend on the time of day the drug is taken.
+
+INTRODUCTION
+Sudden cardiac arrest (SCA) occurs when the electrical system of the heart malfunctions and is the most common single cause of natural death in the United States (1). SCA often transpires in the setting of acquired structural heart
+Submitted December 19, 2019, and accepted for publication November 10, 2020. *Correspondence: diekman@njit.edu Editor: Arthur Sherman. https://doi.org/10.1016/j.bpj.2020.11.2264 Ó 2020 Biophysical Society.
+
+disease in older adults or inherited channelopathies in the young (2). In these conditions, an ischemic event or other stimuli can lead to arrhythmias such as ventricular tachycardia and ventricular ﬁbrillation (3). These abnormally fast and irregular heartbeats do not pump blood properly and can cause sudden cardiac death (SCD) within minutes if emergency treatment is not begun immediately (4).
+The risk of sudden cardiac arrest is not constant throughout the day. Several epidemiological studies have found that SCD is more likely to occur in the morning than in the evening (5,6). Ventricular tachyarrhythmias
+
+Biophysical Journal 120, 319–333, January 19, 2021 319
+
+Diekman and Wei
+
+also exhibit a diurnal rhythm with a peak in the morning (7,8). Two recent studies did not ﬁnd the expected morning peaks in SCA and ventricular arrhythmias between 6 and 12 AM; however, they did observe nadirs in these events during the early morning hours between 12 and 6 AM (9,10). The biophysical mechanisms underlying these daily rhythms in adverse cardiovascular events are not fully understood. The master circadian ($24-h) pacemaker in the hypothalamus, the suprachiasmatic nucleus (SCN), inﬂuences a variety of cardiovascular phenomena by coordinating daily rhythms in the release of hormones and other circulating molecules. Recently, it has been demonstrated that circadian clocks within heart muscle cells (cardiomyocytes) also regulate rhythms in cardiac electrophysiology (11).
+These intracellular circadian clocks are comprised of transcriptional and translational feedback loops that lead to $24-h rhythms in gene expression. In mice, cardiac ion channel expression and myocardial repolarization are under the control of a clock-dependent oscillator that regulates potassium channel-interacting protein 2 (KChIP2), a subunit required for generating the transient outward potassium current Ito (12). Reduced Ito amplitude has arrhythmogenic consequences, perhaps due to lengthened QT (repolarization and depolarization) intervals, and may contribute to sudden death in the early stages of human heart failure (13). The effect of circadian variation in potassium current on action potential (AP) duration and QT interval has been studied using mathematical models of murine, guinea pig, and human myocytes (14,15). Recent experiments in guinea pig myocytes have shown that L-type calcium current (ICaL) is under circadian control as well, possibly through the PI3K-Akt signaling pathway (16). How QT interval is affected by circadian oscillations in the concentration of sodium, potassium, and calcium ions in plasma was also studied in biophysically detailed models of human left ventricular cardiomyocytes (17).
+In addition to lengthened QT intervals, the presence of early afterdepolarizations (EADs) is also associated with the development of ventricular arrhythmias (18). EADs are voltage deﬂections that occur before full repolarization of the membrane potential during an AP. Extensive modeling of EADs has been performed to understand the ionic and dynamical mechanisms involved in the generation of EADs in isolated cells and their spatial propagation in cardiac tissue (19–24). At a basic level, EADs result from reduced repolarization reserve because of reduced outward potassium currents or elevated inward calcium currents (25). Thus, circadian variation in these currents could render myocytes more vulnerable to EADs at certain times of day and play a role in the observed circadian proﬁle of ventricular arrhythmias and SCDs.
+In this work, we use biophysical modeling and dynamical systems analysis to study how circadian variation in ionic conductances affects EAD generation. First, we ﬁt a conductance-based model to published electrophysiological
+
+data from guinea pig ventricular myocytes at two circadian time points. We then perform simulations of single-cell and two-dimensional (2-D) spatial domain versions of the model across a circadian cycle. In the single-cell model, we ﬁnd that EADs occur in the morning, but not at other times of day. In the spatial model, we observe that spiral wave breakup, a phenomenon associated with ventricular arrhythmias in cardiac tissue, occurs in the morning, but not in the evening. We also show that the single-cell model exhibits a codimension-2 Takens-Bogdanov bifurcation, which can serve as an organizing center for the different types of EAD dynamics that have been observed. To the best of our knowledge, this work is the ﬁrst to consider connections between the circadian clock and EADs.
+
+METHODS
+
+Single-cell model
+
+We used recently published voltage-clamp recordings from guinea pig ventricular myocytes to modify the Sato et al. (26) minimal model of cardiac action potential generation. This conductance-based model describes the dynamics of the membrane potential V using the HodgkinHuxley modeling formalism and is a three-dimensional system of ordinary differential equations:
+
+dV C
+dt
+
+¼
+
+Iapp
+
+À ICaL
+
+À IK
+
+(1)
+
+¼ Iapp À gCaL Â dNðVÞ Â f Â ðV À ECaÞ À gK Â x Â ðV À EKÞ;
+
+and
+
+df dt
+
+¼
+
+fNðVÞ tf
+
+À
+
+f
+
+;
+
+(2)
+
+dx dt
+
+¼
+
+xNðVÞ tx
+
+À
+
+x:
+
+(3)
+
+The model includes an inward L-type calcium current (ICaL), an outward potassium current (IK), and an externally applied current Iapp. Inward sodium current is not included here because it does not impact EAD genera-
+tion because of the inactivation of this current at depolarized membrane
+potentials (27). The calcium current activates instantaneously as a function
+of voltage, dN(V). Inactivation of the calcium current is governed by the gating variable f with steady-state inactivation fN(V) and time constant tf. Activation of the potassium current occurs on a slower timescale and is
+described by the gating variable x with steady-state activation xN(V) and time constant tx. The speciﬁc membrane capacitance is C ¼ 1 mF/cm2.
+The voltage-dependent activation and inactivation functions are sigmoids
+given by
+
+yNðVÞ
+
+¼
+
+1
+
+þ
+
+ÀÂ 1 exp V
+
+À
+
+Ã Á qy sy
+
+(4)
+
+for y ¼ d, f, and x, with half-(in)activation voltages qy and slopes proportional to 1/sy.
+All of the parameters for the potassium current, except the maximal conductance gK, were kept the same as in the Sato model: tx ¼ 300 ms, reversal potential EK ¼ À80 mV, and activation kinetics qx ¼ À40 mV
+
+320 Biophysical Journal 120, 319–333, January 19, 2021
+
+and sx ¼ À5 mV. For the calcium current, we set tf ¼ 80 ms as in the Sato model and then ﬁtted the remaining parameters to the voltage-clamp data
+from Chen et al. (16) shown in Fig. 1 A. In these recordings, Chen et al.
+measured the L-type calcium current in cardiomyocytes isolated from
+guinea pigs housed under 12 h:12 h light/dark cycles, with the lights turned
+on at Zeitgeber time 0 (ZT 0, 7:00 AM) and turned off at ZT 12 (7:00 PM).
+They performed voltage-clamp experiments in the morning (ZT 3) and at night (ZT 15), in which they held cardiomyocytes at À80 mV and then depolarized them in 10 mV increments from À70 to þ60 mV. They found that at both times of day, the largest calcium currents were evoked at the þ10 mV voltage step. Furthermore, the current density at this voltage step was signiﬁcantly larger in the morning than at night.
+We digitized their published I-V curves and normalized the data at ZT 3 and ZT 15 using the peak current density at þ10 mV for each time of day. We then averaged these normalized curves to obtain a single curve to use
+as input to a parameter estimation algorithm. Speciﬁcally, we used an un-
+constrained nonlinear optimization routine (the Nelder-Mead algorithm
+fminsearch in MATLAB; The MathWorks, Natick, MA) and voltageclamp simulations to ﬁnd the parameter values ECa ¼60 mV, qd ¼ À7.3 mV, sd ¼ À8.6 mV, qf ¼ À13.3 mV, and sf ¼ 11.9 mV. These parameter values minimized the squared error between the model-generated ICaL I-V curve and the average normalized I-V curve from the voltage-clamp
+data. The ﬁt of the model to these data falls sharply as the activation kinetic parameters (qd and sd) deviate from the estimated values but is less sensitive to deviations in the inactivation kinetic parameters (qf and sf). With the reversal potential and gating kinetics held ﬁxed, we varied the maximal conductance and found that gCaL ¼ 0.3 mS/cm2 produced a model I-V curve (blue curve in Fig. 1 B) similar to the experimental data from ZT 3, whereas the gCaL ¼ 0.15 mS/cm2 curve (red curve in Fig. 1 B) was similar to the data from ZT 15.
+To determine the maximal conductance gK, we performed current-clamp simulations and compared the model traces to the current-clamp recordings from Chen et al. (16) shown in Fig. 1 C. For these simulations, we set Iapp ¼ 0 and simulated for 10 ms with initial conditions V0 ¼ À80 mV, f0 ¼ fN(À80) ¼ 0.9963, and x0 ¼ xN(À80) ¼ 0.0003354. At t ¼ 10 ms, we instan-
+
+Circadian Rhythms of Cardiac Arrhythmias
+taneously set V ¼ 0 to mimic the effect of a stimulating current pulse (23). We then measure the action potential duration at 90% repolarization (APD90), which is the amount of time it takes for the voltage to return to 90% of its value before the spike. We ﬁnd that setting gK ¼ 0.1 mS/cm2 with gCaL ¼ 0.15 mS/cm2 (blue curve in Fig. 1 D) yields an APD90 for the model that is similar to the APD90 in the experimental data at ZT 15. Furthermore, setting gK ¼ 0.1 mS/cm2 with gCaL ¼ 0.3 mS/cm2 (red curve in Fig. 1 D) gives a model APD90 that is very similar to the experimental APD90 at ZT 3.
+Simulations of the single-cell model were performed using MATLAB R2017a (The Mathworks) and ode15s, a variable-step, variable-order solver for stiff ordinary differential equations. The code for these simulations is provided at the ModelDB repository (https://senselab.med.yale.edu/ modeldb/).
+Bifurcation analysis
+The single-cell model was analyzed by decomposing it into a fast subsystem (Eqs. 1 and 2) and a slow subsystem (Eq. 3), as in (28). This decomposition is justiﬁed by the observation that outward potassium currents typically activate more slowly than the activation and inactivation of inward calcium currents during a cardiac AP, as reﬂected by the large spread between tf and tx in the Sato model. We then treat the slow variable x as a bifurcation parameter and study the bifurcation structure of the fast subsystem:
+dV ¼ FðV; f Þ dt
+df ¼ GðV; f Þ: dt
+The linearization of this system at a steady state (V*, f*) is given by the Jacobian matrix
+
+FIGURE 1 Fitting model parameters to voltage and current-clamp data from guinea pig cardiomyocytes. (a) Voltage-clamp data of L-type calcium current from (16) are shown. (b) Simulated voltage-clamp experiment with gCaL ¼ 0.3 mS/cm2 (dashed red line and open circles) and gCaL ¼ 0.15 mS/cm2 (solid blue line and open squares) is shown for gK ¼ 0.1 mS/cm2. (c) Current-clamp recording of action potentials in guinea pig cardiomyocytes from (16) is shown. (d) Simulated current-clamp experiment with gCaL ¼ 0.3 mS/cm2 (dashed red line) and gCaL ¼ 0.15 mS/cm2 (solid blue line) is shown for gK ¼ 0.1 mS/cm2. To see this ﬁgure in color, go online.
+Biophysical Journal 120, 319–333, January 19, 2021 321
+
+Diekman and Wei
+
+0
+
+ÀgCaL
+
+À dN
+
+0
+
+ðV
+
+Þ
+
+,
+
+f
+
+,
+
+ðV
+
+À
+
+ECaÞ
+
+þ
+
+dNðVÞ
+
+,
+
+f
+
+Á
+
+À
+
+gK
+
+,
+
+x
+
+J ¼ BBB@
+
+C fN0
+
+tf
+
+1
+
+ÀgCaL , dNðVÞ , ðV À ECaÞ
+
+C À1
+
+CCCA
+
+:
+
+tf
+
+V ¼ VÃ;f ¼ f Ã
+
+At a steady state, we have that F(V, f) ¼ G(V, f) ¼ 0. To ﬁnd steady states, we set f* ¼ fN(V*) to satisfy G(V*, f*) ¼ 0 and then solve F(V*, f*) ¼ 0 for V*:
+À gCaL Â dNðVÃÞ Â fNðVÃÞ Â ðVÃ À ECaÞ À gK Â x Â ðVÃ À EKÞ ¼ 0
+(5)
+Hopf bifurcation occurs when trace(J) ¼ 0 and determinant(J) > 0. Saddle-node bifurcation occurs when trace(J) s 0 and determinant(J) ¼ 0. Takens-Bogdanov (TB) bifurcation occurs when Hopf and saddle-node bifurcation points coalesce and the Jacobian matrix has two zero eigenvalues (29). The conditions for this codimension-2 bifurcation are trace(J) ¼ 0 and determinant(J) ¼ 0, that is,
+
+where Gx and Gy are longitudinal and transverse conductances associated with the diffusion terms representing intercellular currents. To simulate a
+2-D sheet of guinea pig cardiac tissue, we modiﬁed the monodomain reac-
+tion-diffusion MATLAB code developed by Hammer (31). We solved the PDEs numerically on a 128 Â 128 isotropic (Gx ¼ Gy ¼ 25 mS/cm2) grid using a ﬁnite-difference scheme for spatial derivatives, the explicit Eu-
+ler method for time derivatives, and Neumann (no-ﬂux) boundary condi-
+tions, with a time step of 0.1 ms and a space step of 0.01 cm. Cardiomyocytes are typically 100 mm in length and 10–25 mm in diameter. Thus, our simulated tissue size of 1.6384 cm2 represents $128 cells in the longitudinal direction and 512–1280 cells in the transverse direction (or
+65,536–163,480 cells in total). We used an S1-S2 cross-ﬁeld stimulation protocol, with the ﬁrst stimulus
+(S1) delivered to the left boundary of the domain at t ¼ 0 with strength Iapp ¼ 500 mA/cm2 and a duration of 2 ms. The second stimulus (S2)
+
+ÀgCaL
+
+À dN
+
+0
+
+ðV
+
+Ã
+
+Þ
+
+Â
+
+fNðVÃÞ
+
+Â
+
+ðVÃ
+
+À
+
+ECaÞ
+
+þ
+
+dNðVÃÞ
+
+Â
+
+Á fN ðV Ã Þ
+
+À
+
+gK
+
+C
+
+Â
+
+x
+
+À
+
+1 tf
+
+¼0
+
+(6)
+
+and
+
+ÀÂ gCaL dNðV
+Â ðVÃ
+
+ÃÞ À
+
+Â fNðVÃÞ þ dNðVÃÞ ECaÞ þ dNðVÃÞfNðVÃ
+
+ÂÁ Þ
+
+fN 0 ðV Ã ÞÃ À gK Â x
+
+¼
+
+0:
+
+(7)
+
+To ﬁnd TB points, we simultaneously solve Eqs. 5, 6, and 7. Bifurcations were also identiﬁed using the dynamical systems software package XPPAUT (30).
+
+Circadian variation of calcium conductance
+To simulate a circadian rhythm in the maximal conductance of the calcium channel, we assumed a sinusoidal waveform with peak and trough times of ZT 3 and ZT 15, respectively:
+gCaLðtÞ ¼ 0:15 þ 0:075ðsinð2pðt þ 3Þ = 24Þ þ 1Þ (8)
+
+Spatial model
+
+In cardiac tissue, neighboring cells are electrically coupled through gap junctions. The spatiotemporal evolution of the cellular membrane potential in a 2-D domain can be described by the following reaction-diffusion partial differential equation (PDE):
+
+vV C vt
+
+¼
+
+Iapp
+
+À
+
+ICaL
+
+À IK
+
+þ
+
+v2V Gx vx2
+
+þ
+
+v2V Gy vy2
+
+;
+
+(9)
+
+was delivered to the bottom domain boundary at t ¼ 810 ms with the same strength as S1 and a duration of 3 ms. This stimulation procedure generates spiral waves in our 2-D domain, as shown in Fig. 6.
+RESULTS
+Elevated L-type calcium current in the morning can induce EADs
+To investigate the role that circadian rhythmicity of the Ltype calcium current plays in the electrical activity of guinea pig cardiomyocytes, we simulated an electrophysiological model of these cells (Eqs. 1, 2, and 3) with maximal conductance values corresponding to morning and evening time points: speciﬁcally, gCaL ¼ 0.3 mS/cm2 at ZT 3 and gCaL ¼ 0.15 mS/cm2 at ZT 15. We determined these parameter values, along with the gating kinetics of the calcium current (Eq. 4), by ﬁtting voltage-clamp data from Chen et al. (16) as described in the Methods (see Fig. 1, A and B). This model, with maximal potassium conductance gK ¼ 0.1 mS/cm2, can reproduce the circadian variation in action potential duration observed in current-clamp recordings (see Fig. 1, C and D). In the current-clamp data, APD90 is 11.5% greater at ZT 3 (228.0 ms) than ZT 15 (204.5 ms); in the model, APD90 is 16% greater at ZT 3 (225.5 ms) than
+
+322 Biophysical Journal 120, 319–333, January 19, 2021
+
+Circadian Rhythms of Cardiac Arrhythmias
+
+FIGURE 2 Model exhibits early afterdepolarizations for high gCaL and low gK. Voltage trajectories from simulated current-clamp experiments with gCaL ¼ 0.3 mS/cm2 (dashed red line) and gCaL ¼ 0.15 mS/cm2 (solid blue line) are shown for gK ¼ 0.05 mS/cm2. To see this ﬁgure in color, go online.
+ZT 15 (194.4 ms). The model enables us to explore the interaction between the potassium conductance and circadian variation of L-type calcium. We ﬁnd that if gK is lowered to 0.05 mS/cm2, then the difference between morning and evening becomes more pronounced, with APD90 being 97.5% greater at ZT 3 (579.9 ms) than ZT 15 (293.6 ms); see Fig. 2. Moreover, the action potential at ZT 3 now exhibits secondary voltage depolarizations during the repolarization phase, known as EADs.
+Dynamics of EAD generation
+To understand the dynamical mechanism underlying the generation of these EADs, we follow Tran et al. (28) and perform a fast-slow decomposition of our model. As described in the
+
+Methods, we study bifurcations in the fast (V, f) subsystem
+(Eqs. 1 and 2), treating the slow variable x as a bifurcation
+parameter. The fast subsystem generally has three ﬁxed
+points for small values of x and one ﬁxed point for large
+values of x, forming a Z-shaped curve in the V, x plane
+(Fig. 3). The curve consists of an upper branch of depolarized
+ﬁxed points, a middle branch of unstable ﬁxed points, and a
+lower branch of hyperpolarized stable ﬁxed points. As x is
+increased, the ﬁxed points on the upper branch change
+from stable (solid red curve) to unstable (dashed black curve)
+at a subcritical Hopf bifurcation, where unstable limit cycles
+(open green circles) are born. These unstable periodic solu-
+tions are terminated at a homoclinic bifurcation with a saddle
+point on the middle branch of ﬁxed points. As x is increased
+further, the upper and middle branches of ﬁxed points
+approach each other and eventually coalesce, destroying
+these ﬁxed points in a saddle-node bifurcation. With gCaL ¼ 0.15 mS/cm2 and gK ¼ 0.1 mS/cm2, the Hopf and saddle-node bifurcations occur at xHB ¼ 0.202 and xSN ¼ 0.275, respectively (Fig. 3 A). When repolarizing, the AP trajectory
+(blue curve) passes through the V, x plane to the right of these values (x > xSN) and therefore repolarizes monotonically without EADs. If gCaL is increased to 0.3 mS/cm2 with gK held ﬁxed (Fig. 3 B), the Hopf and saddle-node bifurcation points move to the right (xHB ¼ 0.376, xSN ¼ 0.551), but so does the AP trajectory; here, the AP repolarizes through the region xHB < x < xSN without EADs. Similarly, if gCaL is held ﬁxed at 0.15 mS/cm2 but gK is reduced to 0.05 mS/ cm2 (Fig. 3 C), the trajectory repolarizes without EADs through the region xHB ¼ 0.404 < x < xSN ¼ 0.551. However, if gCaL is increased to 0.3 mS/cm2 and gK is reduced to 0.05 mS/cm2, the model does exhibit EADs. The AP trajectory
+
+FIGURE 3 Bifurcation diagrams with bifurcation parameter x for various values of gCaL and gK. Trajectories from the full system (solid blue lines) are projected onto the x-V plane and overlayed with steady states of the fast subsystem (solid red lines are stable, dashed black lines are unstable), along with bifurcation points (solid black dots) and unstable periodic orbits (open green circles) emanating from the subcritical Hopf bifurcation. (a) Normal APs for gCaL ¼ 0.15 mS/cm2 and gK ¼ 0.1 mS/cm2 are shown. (b) Increased APD, but not EADs, with increased gCaL is shown. (c) Increased APD, but not EADs, with reduced gK is shown. (d) EADs with increased gCaL and reduced gK are shown. To see this ﬁgure in color, go online.
+Biophysical Journal 120, 319–333, January 19, 2021 323
+
+Diekman and Wei
+now repolarizes through a region where x < xHB ¼ 0.753 and the fast subsystem contains a stable ﬁxed point (Fig. 3 D). This ﬁxed point is a stable focus, and the trajectory exhibits damped oscillations until it reaches xHB. To the right of xHB, the ﬁxed point is now an unstable focus, and the trajectory exhibits one more voltage peak before repolarizing fully.
+TB bifurcation as an organizing center
+Several different dynamical mechanisms can give rise to secondary oscillations that grow in amplitude, which is the EAD pattern typically observed in experiments. In the ﬁrst mechanism to be characterized, stable limit cycles with growing amplitudes emerge from a supercritical Hopf bifurcation in the fast subsystem (28). More recently, K€ugler (23) demonstrated that EADs with growing amplitudes can also arise either from a delayed subcritical Hopf bifurcation in the fast subsystem or along the unstable manifold of a saddle-focus ﬁxed point in the full system. In the latter case, there is no Hopf bifurcation. The EADs explored earlier in this work are of the subcritical Hopf type; see the bifurcation diagrams in Fig. 3. In these diagrams, the Hopf bifurcations occur relatively near a saddle-node bifurcation. This suggests that by varying another parameter in conjunction with the bifurcation parameter x, the Hopf and saddle-node bifurcations can be made to coalesce in a TB bifurcation. Indeed, Fig. 4 A shows that the Hopf and saddle-node bifurcation points approach and collide with each other as x and gCaL are decreased simultaneously, with the TB bifurcation occurring at x ¼ 0.411, gCaL ¼ 0.0224 mS/ cm2. We simulated the model with parameters chosen near the TB bifurcation point (gCaL ¼ 0.02, gK ¼ 0.01, qx ¼ 10, tx ¼ 1100) and observed EADs as shown in Fig. 4, B and C. The eigenvalues of the full system linearized at the ﬁxed point (V*, f*, x*) ¼ (À12.74, 0.4882, 0.3664), which corresponds to a location near the saddle-node bifurcation point shown in Fig. 4 B, are l1,2 ¼ 0.0025 5 0.0066i and l3 ¼ À0.0068. Thus, this ﬁxed point is classiﬁed as a spiral saddle of index
+
+2 (32). The EADs arise because of the spiraling movement of the trajectory caused by the unstable manifold of the saddle focus, which is the second EAD-generating mechanism found by K€ugler (23). Although the gK, qx, and tx parameter values used in Fig. 4, B and C are different from the physiologically derived Sato model values used in our simulations throughout the rest of the study, this example illustrates how knowledge of the TB bifurcation can help identify parameter sets that produce different types of EAD dynamics.
+Circadian variation of calcium current
+The voltage-clamp experiments of Chen et al. (16) revealed a day and night difference in L-type calcium current, with larger currents in the morning (ZT 3) than at night (ZT 15). Correspondingly, they observed longer duration action potentials in their current-clamp recordings at ZT 3 than at ZT 15. We used our model to simulate action potentials across the circadian cycle by assuming that gCaL follows a sinusoidal waveform with a period of 24 h (Eq. 8), with a maximum of gCaL ¼ 0.3 at ZT 3 and a minimum of gCaL ¼ 0.15 at ZT 15. We performed these simulations with two different gK-values to represent the heterogeneity in potassium channel expression that has been found across different cells of the ventricular myocardium (33) or among different guinea pigs. With gK held ﬁxed at 0.1, we ﬁnd that EADs do not occur in our model simulations at any time of day. Fig. 5, A and B show the APD90 values across a circadian cycle with gK ¼ 0.1 and gK ¼ 0.05, respectively. With gK ¼ 0.05, we ﬁnd that EADs occur in our simulations over a large portion of the day ($8 h), speciﬁcally from ZT 23 to ZT 7.
+We then analyzed the sensitivity of these results to the ICaL kinetic parameters (qd, sd, qf, and sf) that we estimated from the voltage-clamp data. We performed simulations of the model perturbing each of these parameters one at a time, with up to 50% reductions and 50% increases in each of the parameters from their estimated values. With gK ¼ 0.1, we
+
+FIGURE 4 EAD generation via a different dynamical mechanism near the Takens-Bogdanov (TB) bifurcation point. (a) Two-parameter bifurcation diagram showing the location of Hopf bifurcations (H, cyan curve) and saddle-node bifurcations (SN, magenta curve) is given for bifurcation parameters gCaL and x, with gK ¼ 0.01 mS/cm2. The Hopf and SN curves coalesce at a codimension-2 TB bifurcation (solid black dot). (b) Trajectory exhibiting an EAD (solid blue line) from the full system projected onto the x-V plane and overlayed with steady states of the fast subsystem (solid red lines are stable, dashed black lines are unstable), along with the saddle-node bifurcation point (solid black dot), is shown for maximal conductance parameters (gCaL ¼ 0.02 mS/cm2, gK ¼ 0.01 mS/cm2) chosen near the TB bifurcation point shown in (a). (c) Voltage time course of the EAD trajectory shown in (b) is given. To see this ﬁgure in color, go online.
+324 Biophysical Journal 120, 319–333, January 19, 2021
+
+Circadian Rhythms of Cardiac Arrhythmias
+
+FIGURE 5 Action potential durations and EADs
+over a circadian cycle. Colorbar indicates APD (in
+ms), solid white dots are hourly ZT markers, and
+black lines separate regions of parameter space with and without EADs. (a) Circadian variation of gCaL (Eq. 8) with gK ¼ 0.1 mS/cm2 does not result in EADs. (b) Circadian variation of gCaL with reduced gK ¼ 0.05 mS/cm2 is shown. EADs occur between ZT 23 and ZT 7. To see this ﬁgure in color,
+go online.
+
+found that EADs still did not occur in our simulations over the range of gCaL-values (0.15–0.3) explored, consistent with our ﬁndings using the ICaL kinetic values estimated from the data. With gK ¼ 0.05, we found that a 50% reduction in sd and qf lowered the value of gCaL at which EADs emerge compared with our simulations with the estimated values of these parameters (from 0.27 to 0.23 and 0.18, respectively), whereas a 50% reduction in qd and sf raised the value of gCaL at which EADs emerge (to 0.37 and 0.42, respectively). A 50% increase in qd, sd, and sf also lowered the value of gCaL at which EADs emerge (to 0.19, 0.20, and 0.21, respectively), whereas a 50% increase in qf raised the value of gCaL at which EADs emerge (to 0.42). In summary, these simulations indicate that perturbing the ICaL kinetic parameters away from their estimated values tends to increase, rather than decrease, the portion of the circadian cycle over which EADs are observed.
+EADs lead to pathological electrical activity in 2-D tissue simulations
+To explore whether the single-cell EADs triggered by circadian variation of ion channel conductances leads to abnormal electrical activity in cardiac tissue, we simulated a 2-D
+
+spatial domain as described in the Methods. An S1-S2 stimulation protocol triggered spiral waves at both ZT 3 (gCaL ¼ 0.3 mS/cm2) and ZT 15 (gCaL ¼ 0.15 mS/cm2) with either normal (gK ¼ 0.1 mS/cm2) or low (gK ¼ 0.05 mS/cm2) potassium conductance (Fig. 6). Of these four scenarios, only the ZT 3 low gK combination exhibited EADs in the spatial model (Fig. 7). In addition, this combination led to the steepest APD restitution curve (Fig. 8), a commonly used indicator of the propensity for ventricular tachyarrhythmias (34–36). To test this propensity, we next simulated heterogeneity in potassium channel conductance across the tissue with the leftmost 80% of the domain set to gK ¼ 0.05 mS/cm2 and the rightmost 20% set to gK ¼ 0.1 mS/cm2. At ZT 15, the solution consists of a single spiral wave (Fig. 9 A). However, at ZT 3, multiple spiral waves are born and collide into each other (Fig. 9 B). This type of spiral wave breakup has been associated with ventricular ﬁbrillation.
+Circadian variation of calcium current in a human ventricular AP model
+In the previous sections, we have used a reduced model of the cardiac AP to facilitate mathematical analysis of the
+
+Biophysical Journal 120, 319–333, January 19, 2021 325
+
+Diekman and Wei
+
+FIGURE 6 Spiral waves in a 2-D domain. Color bar indicates membrane voltage (mV) at snapshots of t ¼ 300, 900, 1200, 1500, 1800, 2100, and 2400 ms
+for simulations of Eq. 9 on a 128 Â 128 grid under an S1-S2 cross-ﬁeld stimulation protocol. (a) Parameters corresponding to ZT 15 (gCaL ¼ 0.1 mS/cm2) with gK ¼ 0.1 mS/cm2 are shown. (b) Parameters corresponding to ZT 3 (gCaL ¼ 0.3 mS/cm2) with gK ¼ 0.1 mS/cm2 are shown. (c) Parameters corresponding to ZT 15 (gCaL ¼ 0.1 mS/cm2) with reduced gK ¼ 0.05 mS/cm2 are shown. (d) Parameters corresponding to ZT 3 (gCaL ¼ 0.3 mS/cm2) with reduced gK ¼ 0.05 mS/cm2, which produce EADs in the isolated single-cell model as shown in Fig. 3 D, are shown. To see this ﬁgure in color, go online.
+
+dynamics underlying EAD generation. In reduced models, multiple ionic currents are lumped together, and thus, the full richness of the kinetics and interactions of the variety of currents present in cardiac cells are not captured. To explore the effect of circadian variation of L-type calcium current in a more biophysically detailed model, we performed simulations with the O’Hara-Rudy (ORd) model of the human ventricular AP (37). This model incorporates 12 distinct ionic currents: sodium, L-type calcium, transient outward potassium, rapid delayed rectiﬁer potassium, slow delayed rectiﬁer potassium, inward rectiﬁer potassium, sodium-calcium exchange, sodium-potassium ATPase, sarcolemmal calcium pump, sodium background, calcium background, and potassium background. The model also includes diffusion ﬂuxes of Naþ, Kþ, and Ca2þ from the submembrane space to the myoplasm, sarcoplasmic reticulum (SR) calcium release ﬂux via ryanodine receptors, calcium uptake via SERCA pumps, and calcium translocation from network SR to junctional SR compartments. The ORd model of L-type calcium current is based on experimental data from undiseased human ventricular myocytes and includes both voltage-dependent inactivation and calcium-dependent inactivation based on Ca2þ-calmodulin protein kinase kinetics. The maximal L-type current density is modeled using the Goldman-Hodgkin-Katz current equation:
+
+ICaL
+
+¼
+
+PCa
+
+Â
+
+z2Ca
+
+Â
+
+VF2 RT
+
+À
+
+Á
+
+Â
+
+gCai
+
+Â
+
+½Ca2þss
+
+Â
+
+Àexp
+
+zca VF
+ÁRT
+
+À gCao
+
+exp
+
+zCa VF RT
+
+À 1:0
+
+Â
+
+½Ca2þo;
+
+(10)
+
+where PCa is the permeability of the membrane to Ca2þ, zCa is the valence of the ion, V is membrane voltage, F is the
+Faraday constant, R is the gas constant, T is temperature, gCa is the activity coefﬁcient of the ion, [Ca2þ]ss is the Ca2þ concentration in the submembrane space, and [Ca2þ]o is the external Ca2þ concentration.
+We simulated the ORd model over a grid of PCa and GKR-values (Fig. 10 A), where GKR is the maximal conductance of the rapid delayed rectiﬁer Kþ current.
+The model exhibits EADs for a range of high PCa-values, provided that GKR is low enough. For example, with GKR held ﬁxed at 0.01 mS/mF, the model does not exhibit EADs if PCa < 1.5 Â 10À4 cm/s but does exhibit EADs if PCa is above this value (Fig. 10 B). Thus, if there were a circadian rhythm in PCa such that its value traversed this threshold over the course of the day-night cy-
+cle, then the ORd model would predict that EADs would
+occur at certain times of the day and not others (assuming
+
+326 Biophysical Journal 120, 319–333, January 19, 2021
+
+Circadian Rhythms of Cardiac Arrhythmias
+
+FIGURE 7 Voltage trajectories for three locations in the 2-D spatial model. Leftmost (black), center (blue), and rightmost (red) grid points for the middle row of the 128 Â 128 domain shown in Fig. 6 are given. (a) Parameters corresponding to ZT 15 (gCaL ¼ 0.1 mS/cm2) with gK ¼ 0.1 mS/cm2 are shown. (b) Parameters corresponding to ZT 3 (gCaL ¼ 0.3 mS/cm2) with gK ¼ 0.1 mS/cm2 are shown. (c) Parameters corresponding to ZT 15 (gCaL ¼ 0.1 mS/cm2) with reduced gK ¼ 0.05 mS/cm2 are shown. (d) Parameters corresponding to ZT 3 (gCaL ¼ 0.3 mS/cm2) with reduced gK ¼ 0.05 mS/cm2 are shown. To see this
+ﬁgure in color, go online.
+
+all other parameters are held ﬁxed), consistent with our ﬁndings for the Sato model. DISCUSSION Cardiac arrhythmogenesis and circadian rhythms Epidemiological studies have shown that the occurrence of life-threatening cardiac arrhythmias, such as ventricular
+FIGURE 8 APD restitution curves from the 2-D spatial model. APD and diastolic interval (DI) were calculated for the leftmost (black) voltage trajectories shown in Fig. 7. Open circles denote (DI, APD) values from each of the four simulations. Linear ﬁts to the data points for the simulations shown in Fig. 7 A (solid black), Fig. 7 B (dashed blue), Fig. 7 C (dashed-dotted red), and Fig. 7 D (dotted green) are shown. To see this ﬁgure in color, go online.
+
+tachycardia and ventricular ﬁbrillation, exhibits time-of-day dependence with a peak in the morning hours (38). For example, episodes of ventricular tachyarrhythmias recorded in patients with implantable cardioverter deﬁbrillators were signiﬁcantly increased between 8:00 and 11:00 AM (7). Controlled laboratory studies indicate that the time-of-day ﬂuctuations in adverse cardiovascular events are not solely due to daily rhythms in behavior and the external environment, suggesting that internally generated circadian oscillations inﬂuence cardiac arrhythmogenesis (39). Normal electrical properties of the heart, such as electrocardiogram waveforms and heart rate, also demonstrate robust circadian rhythms (40,41). The circadian system could exert this inﬂuence through two primary mechanisms: 1) regulation of cardiac electrophysiology by the central circadian clock in the hypothalamus through neurohumoral factors and the autonomic nervous system or 2) local circadian clocks in cardiomyocytes themselves driving circadian rhythms in ion channel expression (11). In this work, we considered the local mechanism and explored how circadian rhythms in calcium and potassium conductances affect ventricular myocyte electrical activity across the day-night cycle. Support for the central mechanism includes evidence of diurnal variation in sympathetic reactivity, vascular tone, and platelet aggregation (42–44).
+Two recent studies did not ﬁnd the morning peaks in ventricular arrhythmias or sudden cardiac arrest expected from
+
+Biophysical Journal 120, 319–333, January 19, 2021 327
+
+Diekman and Wei
+
+FIGURE 9 Spiral wave breakup in a 2-D domain. The same simulation and stimulation protocol as Fig. 6 are used but with heterogeneity in potassium
+conductance across the domain; gK ¼ 0.05 mS/cm2 for the leftmost 80% of the domain and gK ¼ 0.1 mS/cm2 for the rightmost 20%. (a) Single spiral wave for parameters corresponding to ZT 15 (gCaL ¼ 0.15 mS/cm2) is shown. (b) Breakup into multiple spiral waves for parameters corresponding to ZT 3 (gCaL ¼ 0.3 mS/cm2) is shown. To see this ﬁgure in color, go online.
+
+FIGURE 10 EADs in the ORd model. (a) Action potential duration is
+shown for a range of PCa- and GKr-values. For (PCa, GKR) parameter com-
+binations below and to the right of the white line, the ORd model exhibits
+EADs. (b) Voltage traces for simulations with increasing PCa-values and GKR ¼ 0.01 are shown. With PCa ¼ 1 Â 10À4, the model does not produce EADs (left panel). With PCa ¼ 2 Â 10À4, the model produces a single EAD (middle panel). With PCa ¼ 3 Â 10À4, the model produces multiple EADs
+(right panel). To see this ﬁgure in color, go online.
+
+earlier epidemiological and implantable-cardioverter-deﬁbrillator-based studies (9,10). It has been suggested that modern heart failure therapies, in particular b-adrenoreceptor antagonists (b-blockers), may blunt the morning peak in myocardial ischemia and sudden cardiac death (3,45). badrenergic stimulation by catecholamines is known to elevate intracellular calcium through an increase in ICaL and sarcoplasmic reticular Ca2þ content, and the main antiarrhythmic effect of b-blockers is thought to be the suppression of proarrhythmic Ca2þ-dependent afterdepolarizations (46,47). Although we have not explicitly incorporated catecholamine-induced afterdepolarizations into our models, one could simulate the effect of b-blockers as a reduction in gCaL. This would lower the morning peak in ICaL and blunt the circadian rhythm in EADs observed in our simulations. On the other hand, it has been proposed that another effect of chronic b-blocker use is long-term adaptational electrophysiological remodeling that reduces the density of transient outward and inward rectiﬁer potassium channels (47). If one were to simulate the reduction of these channel densities in the Sato model by decreasing gK, it would make the model more sensitive to even a blunted circadian rhythm in ICaL and restore the prediction that EADs are more likely to occur in the morning. More detailed mathematical modeling of b-adrenergic stimulation could help delineate these competing effects and provide further insight into the interaction of b-blocker use and circadian rhythms in cardiovascular events.
+
+328 Biophysical Journal 120, 319–333, January 19, 2021
+
+Circadian Rhythms of Cardiac Arrhythmias
+
+Local cardiac circadian clock
+Circadian clocks have been found in mammalian tissues throughout the body, including the heart. These peripheral clocks operate using the same molecular machinery as the central clock in the SCN. The basic mechanism is a negative feedback loop in which the protein products of the clock genes Per and Cry inhibit their own production by repressing their transcriptional activator complex CLOCKBMAL1. The timescales of the biochemical processes involved in this transcription-translation feedback loop lead to oscillations in the abundance of PER and CRY proteins with a period of $24 h. The expression of many other genes and proteins that are not necessarily integral to the clock mechanism are also inﬂuenced by CLOCK-BMAL1 and exhibit $24-h oscillations. Such clock-controlled genes (CCGs), including those that encode ion channels, can then modulate cellular processes in a time-of-day-dependent manner (48). Oscillations in the expression of core circadian clock genes have been observed in the intact heart, cultured myocardial tissue, and isolated cardiomyocytes (11). Studies in mice with cardiomyocyte-speciﬁc CLOCK mutations and BMAL1 knockouts demonstrate that 10% of the cardiac transcriptome is regulated by local circadian clocks in the heart (49,50). Through these CCGs, the cardiomyocyte circadian clock impacts a variety of key cellular functions, including cardiac metabolism, signal transduction, contractility, and electrophysiology (51).
+Circadian transcription of cardiac ion channels
+Several ion channel subunits exhibit circadian rhythms in expression within the ventricles of animal models (11). The levels of transcripts associated with Naþ current (Scna5, Nav1.5, INa) (52), L-type Ca2þ current (Cacna1c and Cacna1d, Cav1.2 and Cav1.3, ICaL) (16,49), transient outward Kþ current (Kcnd2, Kv4.2, Ito) (53), ultrarapidly activating delayed rectiﬁer Kþ current (Kcna5, Kv1.5, IKur) (54), rapidly activating delayed rectiﬁer Kþ current (Kcnh2, Kv11.1, IKr) (55), two-pore background Kþ current (Kcnk3, K2p3.1, IK2p) (53), and gap junction current (Gja5 and Gja1, connexins Cx40 and Cx43) (56) oscillate over a 24-h period. In some cases, rhythms in channel subunit gene expression have been related to day and night differences in electrophysiological properties and cardiac pacemaking. For example, elevated KCNA5 and KCND2 protein levels at ZT 6 and ZT 18, respectively, correlate with increased steady-state currents for Ito and IKur at those time points (54). KChIP2, a regulator of Ito, has been implicated in the circadian rhythm of cardiac repolarization. Jeyaraj et al. (12) showed that Kruppel-like factor 15 (Klf15) is a CCG that directly regulates KChIP2 expression, and that deletion of Klf15 abolishes the circadian rhythm in QT interval and increases susceptibility of mice to ventricular arrhythmias. However, Gottlieb et al. (57) concluded that
+
+KChIP2 is not a mechanistic link between the cardiac circadian clock and ventricular repolarization and arrhythmogenesis, based on their ﬁnding that KChIP2-deﬁcient mice still have a circadian rhythm in QT interval. Rather, they suggest that Klf15 expression controls the transcription of other genes responsible for the circadian rhythm in repolarization and susceptibility to arrhythmias.
+Circadian variation of L-type Ca2D current
+In this work, we focused on circadian regulation of L-type Ca2þ channels because of the evidence supporting local cardiac clock control of these channels and the importance of L-type current for cardiac pacemaking. The a1D subunit of the L-type channel (Cacna1d) shows circadian variation in both mRNA and protein expression levels in the hearts of wild-type mice, but not in the hearts of cardiomyocytespeciﬁc CLOCK mutation mice (49). In guinea pigs, the a1C subunit of the L-type channel (Cacna1c) is rhythmic at the protein level with a peak at ZT 3, which correlates to larger L-type calcium current at that time point (16). Voltage-gated L-type Ca2þ channels have also been proposed as a link between circadian oscillations in electrical activity and the molecular clock in SCN neurons (58–61) and retinal photoreceptors (62).
+Although circadian variation of potassium channel expression has been observed in mouse and rat ventricles, the voltage-clamp studies of Chen et al. (16) did not ﬁnd a signiﬁcant time-of-day dependence for the major outward potassium currents (IKs and IKr) in guinea pig ventricular myocytes. Thus, in this work we assume the potassium current to be constant throughout the day-night cycle. Instead, we consider the effect of circadian variation in ICaL in the presence of lower or higher levels of IK, reﬂecting the heterogeneity in potassium channel expression one might expect to ﬁnd across different cells or individuals.
+Mathematical analysis of EADs
+Mathematical modeling studies have shown that increased inward calcium current and decreased outward potassium current can elongate the cardiac AP and produce the pathological voltage oscillations known as EADs (22,25,63,64). To understand the genesis of EADs, minimal models of the cardiac AP have been analyzed using dynamical systems tools such as slow-fast decomposition and bifurcation theory. Tran et al. (28) showed that EADs involve supercritical Hopf and homoclinic bifurcations in the fast subsystem and claimed that under periodic pacing the homoclinic bifurcation leads to chaotic behavior. Sato et al. (26) argued that deterministic chaos, rather than random ﬂuctuations due to noise, is the primary cause of the irregular EAD dynamics frequently seen in cardiac experiments. K€ugler (23) showed that EADs can also arise from alternative dynamical mechanisms, such as delayed subcritical Hopf or limit point
+
+Biophysical Journal 120, 319–333, January 19, 2021 329
+
+Diekman and Wei
+bifurcations of the fast subsystem. Furthermore, K€ugler et al. (65) argued that a cascade of period-doubling bifurcations underlies EAD chaos in both periodically paced and unpaced cardiomyocytes. These studies all decomposed the full model into fast and slow subsystems with a single gating variable in the slow subsystem. K€ugler et al. (66) performed a slow-fast decomposition with two slow variables and proposed a folded-node singularity of the slow ﬂow as a novel mechanism for EAD generation. Vo and Bertram (24) analyzed the same model treating two variables as slow and also attributed EADs to folded-node singularities and their associated canard orbits. They demonstrated that the appearance of dynamical chaos under periodic pacing can be understood using the theory of candard-induced mixed-mode oscillations (67).
+In this work, we utilized the same three-variable model for cardiac APs introduced in (26) and studied in (23,24), but we reﬁtted the parameters of the L-type calcium current to the voltage-clamp data of (16). With these parameters, when the model is analyzed with a 1-slow-2-fast structure, the EADs are generated by a subcritical Hopf bifurcation in the fast subsystem. This is one of the EAD mechanisms explored in (23). We then showed that a TB bifurcation is present in this model and that near the TB point, we can ﬁnd EADs generated by the unstable manifold of a saddle-focus ﬁxed point of the full system. This is the other EAD mechanism explored in (23). Thus, the TB bifurcation serves as an organizing center for the dynamics and helps connect some of the different types of EADs that have been observed previously.
+Modeling of cardiac tissue
+To study how circadian variation of ionic conductances affects cardiac excitability at the tissue level, we simulated a 2-D spatial model using reaction-diffusion PDEs and an S1-S2 stimulation protocol. The spatial model exhibited spiral wave solutions at both circadian time points (ZT 3 and ZT 15) and with both low and high potassium conductance (gK ¼ 0.05 and 0.1). Under the conditions in which the single-cell model exhibits EADs (ZT 3 with gK ¼ 0.05), the spiral waves in the spatial model had a faster propagation speed, analogous to the heart beating faster as during ventricular tachycardia. When spatial heterogeneity in potassium conductance was introduced, the time of day at which the single-cell model exhibits EADs produced spiral wave breakup, a behavior associated with ventricular ﬁbrillation (68). It is generally accepted that EADs at the cellular level can lead to arrhythmias such as polymorphic ventricular tachycardias and torsades de pointes (TdP) at the tissue level (24). Modeling studies have shown that single-cell EADs can cause wave initiation, that these EADs can synchronize to form 2D wave patterns, and that meandering waves in heterogeneous tissue can give rise to the classic ECG appearances of polymorphic ventricular tachycardias
+
+and TdP (18,69,70). Vandersickel et al. (22) performed a systematic study of single-cell EAD excitations and their 2D manifestations in a model of human ventricular tissue. However, there are still many open questions about how EADs progress to perpetuating arrhythmias (71).
+CONCLUSIONS
+The main ﬁnding of this work is that circadian rhythms in Ltype calcium conductance can lead to EADs at certain times of the day in a model of guinea pig ventricular myocytes. To our knowledge, this is the ﬁrst computational study to consider how the cardiomyocyte circadian clock inﬂuences the genesis of EADs. We are not aware of experimental data demonstrating circadian variation in EAD frequency. Human induced pluripotent stem cell-derived cardiomyocytes may provide an avenue for testing this modeling prediction in a preclinical in vitro setting (72). We propose that circadian rhythms in EAD occurrence may contribute to the time-of-day-dependent patterns observed in ventricular tachyarrhythmias and sudden cardiac death. However, to establish this connection, there are some limitations of our study that would need to be addressed, as discussed below.
+First, ZTs for the guinea pig experiments need to be related to real-world time for humans. Guinea pigs are a commonly used animal model for cardiac electrophysiology because the shape of guinea pig action potentials is more similar to human APs than are the APs of smaller rodents such as mice. On the other hand, guinea pigs are not a commonly used animal model for circadian experiments, and they do not have particularly strong sleep-wake rhythms (73). Guinea pigs are crepuscular, meaning they are most active at dawn and dusk and are neither nocturnal nor diurnal (74). A recent study that used a machine learning algorithm (CYCLOPS) to analyze RNA sequencing data from human cardiac tissue found that several genes encoding Ltype Ca2þ channel subunits exhibit circadian rhythms in gene expression that peak during daylight hours (75). In our guinea pig simulations, EADs occurred between ZT 23 and ZT 7 (Fig. 5 B). Assuming a similar phase relationship between guinea pigs and humans, this corresponds to an increased likelihood of EAD-induced arrhythmias in the ﬁrst few hours after waking up, in accordance with the peak time window for sudden cardiac death found in epidemiological studies (5,6,76).
+Second, in this study we primarily employed a minimal model of cardiac AP generation consisting of a single Ca2þ current and a single Kþ current. The advantage of this approach is that the low dimensionality of the model facilitates bifurcation analysis and an understanding of how circadian rhythms affect the dynamics underlying EAD generation. A disadvantage is that the model is lacking descriptions of some speciﬁc types of ion channels that may be relevant for daily variation of cardiac electrical properties. For example, Nav1.5 sodium channels and Kv11.1
+
+330 Biophysical Journal 120, 319–333, January 19, 2021
+
+Circadian Rhythms of Cardiac Arrhythmias
+
+(mERG) potassium channels display circadian rhythms in transcription in mouse hearts (52,55). Moreover, cardiomyocyte-speciﬁc deletion of Bmal1 abolishes circadian oscillations in both of these channels, suggesting they are under the control of the local cardiac molecular clock 11. In future work, we plan to investigate how circadian rhythms in these conductances affect the propensity for EADs and arrhythmias in more detailed models of cardiac electrophysiology that include many types of ionic currents and intracellular calcium dynamics. In addition, electrophysiological models could be integrated with models of the molecular circadian clock to explore other types of interactions between clock gene expression and cardiac function. For example, it has recently been suggested that circadian rhythms in the expression of the clock gene Rev-Erba are associated with the time-of-day variation in perioperative myocardial ischemia-reperfusion injury observed in patients undergoing aortic valve replacement (77).
+Because of the critical role that ICaL plays in EAD formation, L-type Ca2þ channels have been identiﬁed as a promising therapeutic target for suppressing EADs and their arrhythmogenic consequences (78–80). Based on the results of our study, we suggest that special attention should be paid to the time of day that drugs targeting L-type channels for EAD suppression are taken to enhance their effectiveness. Tailoring the timing of drug administration based on circadian factors, known as chronomedicine or chronopharmacology, is an emerging area of precision medicine with clinical trials showing dosing-time-dependent efﬁcacy or toxicity across several conditions, including hypertension and other cardiovascular disorders (81,82). Computational modeling of how the circadian clock modulates therapeutic targets can be used to help predict the optimal dosage time to maximize efﬁcacy or minimize side effects (83). Ideally, systems pharmacology models, combined with data from wearable devices, could be used to estimate a patient’s circadian phase and provide personalized chronotherapy (84).
+Cardiotoxicity is the leading cause of drug development discontinuation and withdrawal of drugs from the market (81,85). Multiple drugs that have been pulled from the market for causing fatal TdP have the unintended side effect of blocking Kv11.1 (hERG) potassium channels, and screening for ERG block is now a mandatory requirement for new pharmaceuticals (86). ERG block is a sensitive, but not speciﬁc, measure of TdP risk; i.e., it gives few false negatives, but false positives may be preventing safe drugs from entering the market (87). The Comprehensive In Vitro Proarrhythmia Assay is a new global initiative to create guidelines for the assessment of drug-induced TdP that recommends a central role for computational modeling of ion channels and in silico evaluation of compounds (88,89). As noted above, many cardiac ion channels exhibit circadian oscillations, including ERG. Thus, we propose that circadian clock modeling should be incorporated into
+
+the Comprehensive In Vitro Proarrhythmia Assay paradigm for assessing drug-induced cardiotoxicity.
+AUTHOR CONTRIBUTIONS
+C.O.D. and N.W. designed research, performed research, and wrote the manuscript.
+ACKNOWLEDGMENTS
+This material is based upon work supported by the National Science Foundation under grant no. DMS 1555237 and the U.S. Army Research Ofﬁce under grant no. W911NF-16-1-0584. C.O.D. gratefully acknowledges the ﬁnancial support of the US-UK Fulbright Commission and of the EPSRC via grant EP/N014391/1.
+REFERENCES
+1. Stecker, E. C., K. Reinier, ., S. S. Chugh. 2014. Public health burden of sudden cardiac death in the United States. Circ. Arrhythm. Electrophysiol. 7:212–217.
+2. Hayashi, M., W. Shimizu, and C. M. Albert. 2015. The spectrum of epidemiology underlying sudden cardiac death. Circ. Res. 116:1887– 1906.
+3. Katritsis, D. G., B. J. Gersh, and A. J. Camm. 2016. A clinical perspective on sudden cardiac death. Arrhythm. Electrophysiol. Rev. 5:177– 182.
+4. Spector, P. S. 2005. Diagnosis and management of sudden cardiac death. Heart. 91:408–413.
+5. Muller, J. E., P. L. Ludmer, ., P. H. Stone. 1987. Circadian variation in the frequency of sudden cardiac death. Circulation. 75:131–138.
+6. Willich, S. N., D. Levy, ., J. E. Muller. 1987. Circadian variation in the incidence of sudden cardiac death in the Framingham Heart Study population. Am. J. Cardiol. 60:801–806.
+7. Koza´k, M., L. Krivan, and B. Semra´d. 2003. Circadian variations in the occurrence of ventricular tachyarrhythmias in patients with implantable cardioverter deﬁbrillators. Pacing Clin. Electrophysiol. 26:731– 735.
+8. Ruwald, M. H., A. J. Moss, ., V. Kutyifa. 2015. Circadian distribution of ventricular tachyarrhythmias and association with mortality in the MADIT-CRT trial. J. Cardiovasc. Electrophysiol. 26:291–299.
+9. Patton, K. K., A. S. Hellkamp, ., J. E. Poole; SCD-HeFT Investigators. 2014. Unexpected deviation in circadian variation of ventricular arrhythmias: the SCD-HeFT (Sudden Cardiac Death in Heart Failure Trial). J. Am. Coll. Cardiol. 63:2702–2708.
+10. Ni, Y. M., C. Rusinaru, ., S. S. Chugh. 2019. Unexpected shift in circadian and septadian variation of sudden cardiac arrest: the Oregon Sudden Unexpected Death Study. Heart Rhythm. 16:411–415.
+11. Black, N., A. D’Souza, ., M. R. Boyett. 2019. Circadian rhythm of cardiac electrophysiology, arrhythmogenesis, and the underlying mechanisms. Heart Rhythm. 16:298–307.
+12. Jeyaraj, D., S. M. Haldar, ., M. K. Jain. 2012. Circadian rhythms govern cardiac repolarization and arrhythmogenesis. Nature. 483:96–99.
+13. Grubb, S., K. Calloe, and M. B. Thomsen. 2012. Impact of KChiP2 on cardiac electrophysiology and the progression of heart failure. Front. Physiol. 3:118.
+14. Fotiadis, P., and D. B. Forger. 2013. Modeling the effects of the circadian clock on cardiac electrophysiology. J. Biol. Rhythms. 28:69–78.
+15. Seenivasan, P., S. N. Menon, ., S. Sinha. 2016. When the clock strikes: modeling the relation between circadian rhythms and cardiac arrhythmias. J. Phys. Conf. Ser. 759:1–8.
+
+Biophysical Journal 120, 319–333, January 19, 2021 331
+
+Diekman and Wei
+16. Chen, Y., D. Zhu, ., J. Zou. 2016. CLOCK-BMAL1 regulate the cardiac L-type calcium channel subunit CACNA1C through PI3K-Akt signaling pathway. Can. J. Physiol. Pharmacol. 94:1023–1032.
+17. Fijorek, K., M. Puskulluoglu, and S. Polak. 2013. Circadian models of serum potassium, sodium, and calcium concentrations in healthy individuals and their application to cardiac electrophysiology simulations at individual level. Comput. Math. Methods Med. 2013:429037.
+18. Weiss, J. N., A. Garﬁnkel, ., Z. Qu. 2010. Early afterdepolarizations and cardiac arrhythmias. Heart Rhythm. 7:1891–1899.
+19. Krogh-Madsen, T., and D. J. Christini. 2012. Nonlinear dynamics in cardiology. Annu. Rev. Biomed. Eng. 14:179–203.
+20. Xie, Y., D. Sato, ., J. N. Weiss. 2010. So little source, so much sink: requirements for afterdepolarizations to propagate in tissue. Biophys. J. 99:1408–1415.
+21. Zhao, Z., Y. Xie, ., L.-H. Xie. 2012. Role of the transient outward potassium current in the genesis of early afterdepolarizations in cardiac cells. Cardiovasc. Res. 95:308–316.
+22. Vandersickel, N., I. V. Kazbanov, ., A. V. Panﬁlov. 2014. A study of early afterdepolarizations in a model for human ventricular tissue. PLoS One. 9:e84595.
+23. K€ugler, P. 2016. Early afterdepolarizations with growing amplitudes via delayed subcritical Hopf bifurcations and unstable manifolds of saddle foci in cardiac action potential dynamics. PLoS One. 11:e0151178.
+24. Vo, T., and R. Bertram. 2019. Why pacing frequency affects the production of early afterdepolarizations in cardiomyocytes: an explanation revealed by slow-fast analysis of a minimal model. Phys. Rev. E. 99:052205.
+25. Qu, Z., L. H. Xie, ., J. N. Weiss. 2013. Early afterdepolarizations in cardiac myocytes: beyond reduced repolarization reserve. Cardiovasc. Res. 99:6–15.
+26. Sato, D., L. H. Xie, ., Z. Qu. 2010. Irregularly appearing early afterdepolarizations in cardiac myocytes: random ﬂuctuations or dynamical chaos? Biophys. J. 99:765–773.
+27. Luo, C. H., and Y. Rudy. 1991. A model of the ventricular cardiac action potential. Depolarization, repolarization, and their interaction. Circ. Res. 68:1501–1526.
+28. Tran, D. X., D. Sato, ., Z. Qu. 2009. Bifurcation and chaos in a model of cardiac early afterdepolarizations. Phys. Rev. Lett. 102:258103.
+29. Diekman, C., M. Golubitsky, and T. McMillen. 2012. Reduction and dynamics of a generalized rivalry network. SIAM J. Appl. Dyn. Syst. 11:1–33.
+30. Ermentrout, G. B., and D. H. Terman. 2010. Mathematical Foundations of Neuroscience. Springer, New York.
+31. Hammer, P. 2008. Spiral waves in monodomain reaction-diffusion model. https://ww2.mathworks.cn/matlabcentral/ﬁleexchange/22492-spiralwaves-in-monodomain-reaction-diffusion-model.
+32. Hillborn, R. C. 2000. Chaos and Nonlinear Dynamics: An Introduction for Scientists and Engineers. Oxford University Press, Oxford, UK.
+33. Viswanathan, P. C., R. M. Shaw, and Y. Rudy. 1999. Effects of IKr and IKs heterogeneity on action potential duration and its rate dependence: a simulation study. Circulation. 99:2466–2474.
+34. Garﬁnkel, A., Y. H. Kim, ., P. S. Chen. 2000. Preventing ventricular ﬁbrillation by ﬂattening cardiac restitution. Proc. Natl. Acad. Sci. USA. 97:6061–6066.
+35. Kim, B. S., Y. H. Kim, ., Y. M. Ro. 2002. Action potential duration restitution kinetics in human atrial ﬁbrillation. J. Am. Coll. Cardiol. 39:1329–1336.
+36. Orini, M., N. Srinivasan, ., P. Lambiase. 2015. Reliability of APDrestitution slope measurements: quantiﬁcation and methodological comparison. Comput. Cardiol. 42:545–548.
+37. O’Hara, T., L. Vira´g, ., Y. Rudy. 2011. Simulation of the undiseased human cardiac ventricular action potential: model formulation and experimental validation. PLoS Comput. Biol. 7:e1002061.
+
+38. Portaluppi, F., and R. C. Hermida. 2007. Circadian rhythms in cardiac arrhythmias and opportunities for their chronotherapy. Adv. Drug Deliv. Rev. 59:940–951.
+39. Chellappa, S. L., N. Vujovic, ., F. A. J. L. Scheer. 2019. Impact of circadian disruption on cardiovascular function and disease. Trends Endocrinol. Metab. 30:767–779.
+40. Dilaveris, P. E., P. F€arbom, ., M. Malik. 2001. Circadian behavior of P-wave duration, P-wave area, and PR interval in healthy subjects. Ann. Noninvasive Electrocardiol. 6:92–97.
+41. Degaute, J. P., E. Van Cauter, ., P. Linkowski. 1994. Twenty-fourhour blood pressure and heart rate proﬁles in humans. A twin study. Hypertension. 23:244–253.
+42. Hossmann, V., G. A. Fitzgerald, and C. T. Dollery. 1980. Circadian rhythm of baroreﬂex reactivity and adrenergic vascular response. Cardiovasc. Res. 14:125–129.
+43. Panza, J. A., S. E. Epstein, and A. A. Quyyumi. 1991. Circadian variation in vascular tone and its relation to alpha-sympathetic vasoconstrictor activity. N. Engl. J. Med. 325:986–990.
+44. Toﬂer, G. H., D. Brezinski, ., J. E. Muller. 1987. Concurrent morning increase in platelet aggregability and the risk of myocardial infarction and sudden cardiac death. N. Engl. J. Med. 316:1514–1518.
+45. Strike, P. C., and A. Steptoe. 2003. New insights into the mechanisms of temporal variation in the incidence of acute coronary syndromes. Clin. Cardiol. 26:495–499.
+46. Workman, A. J. 2010. Cardiac adrenergic control and atrial ﬁbrillation. Naunyn Schmiedebergs Arch. Pharmacol. 381:235–249.
+47. Kharche, S. R., T. Stary, ., H. Zhang. 2014. Effects of human atrial ionic remodelling by b-blocker therapy on mechanisms of atrial ﬁbrillation: a computer simulation. Europace. 16:1524–1533.
+48. Zhang, J., J. C. Chatham, and M. E. Young. 2020. Circadian regulation of cardiac physiology: rhythms that keep the heart beating. Annu. Rev. Physiol. 82:79–101.
+49. Bray, M. S., C. A. Shaw, ., M. E. Young. 2008. Disruption of the circadian clock within the cardiomyocyte inﬂuences myocardial contractile function, metabolism, and gene expression. Am. J. Physiol. Heart Circ. Physiol. 294:H1036–H1047.
+50. Young, M. E., R. A. Brewer, ., K. L. Gamble. 2014. Cardiomyocytespeciﬁc BMAL1 plays critical roles in metabolism, signaling, and maintenance of contractile function of the heart. J. Biol. Rhythms. 29:257–276.
+51. Martino, T. A., and M. E. Young. 2015. Inﬂuence of the cardiomyocyte circadian clock on cardiac physiology and pathophysiology. J. Biol. Rhythms. 30:183–205.
+52. Schroder, E. A., M. Lefta, ., B. P. Delisle. 2013. The cardiomyocyte molecular clock, regulation of Scn5a, and arrhythmia susceptibility. Am. J. Physiol. Cell Physiol. 304:C954–C965.
+53. Tong, M., E. Watanabe, ., Y. Ozaki. 2013. Circadian expressions of cardiac ion channel genes in mouse might be associated with the central clock in the SCN but not the peripheral clock in the heart. Biol. Rhythm Res. 44:519–530.
+54. Yamashita, T., A. Sekiguchi, ., H. Watanabe. 2003. Circadian variation of cardiac Kþ channel gene expression. Circulation. 107:1917– 1922.
+55. Schroder, E. A., D. E. Burgess, ., B. P. Delisle. 2015. The cardiomyocyte molecular clock regulates the circadian expression of Kcnh2 and contributes to ventricular repolarization. Heart Rhythm. 12:1306–1314.
+56. Tong, M., S. Wang, ., X. Chen. 2016. Circadian expression of connexins in the mouse heart. Biol. Rhythm Res. 47:631–639.
+57. Gottlieb, L. A., A. Lubberding, ., M. B. Thomsen. 2017. Circadian rhythm in QT interval is preserved in mice deﬁcient of potassium channel interacting protein 2. Chronobiol. Int. 34:45–56.
+58. Pennartz, C. M., M. T. de Jeu, ., A. M. Geurtsen. 2002. Diurnal modulation of pacemaker potentials and calcium current in the mammalian circadian clock. Nature. 416:286–290.
+
+332 Biophysical Journal 120, 319–333, January 19, 2021
+
+59. Nahm, S.-S., Y. Z. Farnell, ., D. J. Earnest. 2005. Circadian regulation and function of voltage-dependent calcium channels in the suprachiasmatic nucleus. J. Neurosci. 25:9304–9308.
+60. Colwell, C. S. 2011. Linking neural activity and molecular oscillations in the SCN. Nat. Rev. Neurosci. 12:553–569.
+61. Belle, M. D. C., and C. O. Diekman. 2018. Neuronal oscillations on an ultra-slow timescale: daily rhythms in electrical activity and gene expression in the mammalian master circadian clockwork. Eur. J. Neurosci. 48:2696–2717.
+62. Ko, M. L., Y. Liu, ., G. Y. Ko. 2007. The expression of L-type voltage-gated calcium channels in retinal photoreceptors is under circadian control. J. Neurochem. 103:784–792.
+63. Kurata, Y., K. Tsumoto, ., T. Shibamoto. 2017. Dynamical mechanisms of phase-2 early afterdepolarizations in human ventricular myocytes: insights from bifurcation analyses of two mathematical models. Am. J. Physiol. Heart Circ. Physiol. 312:H106–H127.
+64. Huang, X., Z. Song, and Z. Qu. 2018. Determinants of early afterdepolarization properties in ventricular myocyte models. PLoS Comput. Biol. 14:e1006382.
+65. K€ugler, P., M. A. K. Bulelzai, and A. H. Erhardt. 2017. Period doubling cascades of limit cycles in cardiac action potential models as precursors to chaotic early Afterdepolarizations. BMC Syst. Biol. 11:42.
+66. K€ugler, P., A. H. Erhardt, and M. A. K. Bulelzai. 2018. Early afterdepolarizations in cardiac action potentials as mixed mode oscillations due to a folded node singularity. PLoS One. 13:e0209498.
+67. Brøns, M., M. Krupa, and M. Wechselberger. 2006. Mixed mode oscillations due to the generalized canard phenomenon. Fields Institute Communications. 49:39–63.
+68. Fenton, F. H., E. M. Cherry, ., S. J. Evans. 2002. Multiple mechanisms of spiral wave breakup in a model of cardiac electrical activity. Chaos. 12:852–892.
+69. de Lange, E., Y. Xie, and Z. Qu. 2012. Synchronization of early afterdepolarizations and arrhythmogenesis in heterogeneous cardiac tissue models. Biophys. J. 103:365–373.
+70. Chang, M. G., D. Sato, ., Z. Qu. 2012. Bi-stable wave propagation and early afterdepolarization-mediated cardiac arrhythmias. Heart Rhythm. 9:115–122.
+71. Vandersickel, N., T. P. de Boer, ., A. V. Panﬁlov. 2016. Perpetuation of torsade de pointes in heterogeneous hearts: competing foci or re-entry? J. Physiol. 594:6865–6878.
+72. K€ugler, P. 2020. Modelling and simulation for preclinical cardiac safety assessment of drugs with human iPSC-derived cardiomyocytes. Jahresbericht der Deutschen Mathematiker-Vereinigung. 122:209–257.
+73. Clemons, D. J., and J. L. Seeman. 2011. The Laboratory Guinea Pig, Second Edition. CRC Press, Boca Raton, FL.
+74. Lee, K. N., S. T. Pellom, ., S. Chirwa. 2014. Characterization of the Guinea pig animal model and subsequent comparison of the behavioral
+
+Circadian Rhythms of Cardiac Arrhythmias
+effects of selective dopaminergic drugs and methamphetamine. Synapse. 68:221–233.
+75. Ruben, M. D., G. Wu, ., J. B. Hogenesch. 2018. A database of tissuespeciﬁc rhythmically expressed human genes has potential applications in circadian medicine. Sci. Transl. Med. 10:1–8.
+76. Thakur, R. K., R. G. Hoffmann, ., J. H. Ip. 1996. Circadian variation in sudden cardiac death: effects of age, sex, and initial cardiac rhythm. Ann. Emerg. Med. 27:29–34.
+77. Montaigne, D., X. Marechal, ., B. Staels. 2018. Daytime variation of perioperative myocardial injury in cardiac surgery and its prevention by Rev-Erba antagonism: a single-centre propensity-matched cohort study and a randomised study. Lancet. 391:59–69.
+78. Madhvani, R. V., Y. Xie, ., R. Olcese. 2011. Shaping a new Ca2þ conductance to suppress early afterdepolarizations in cardiac myocytes. J. Physiol. 589:6081–6092.
+79. Madhvani, R. V., M. Angelini, ., R. Olcese. 2015. Targeting the late component of the cardiac L-type Ca2þ current to suppress early afterdepolarizations. J. Gen. Physiol. 145:395–404.
+80. Markandeya, Y. S., and T. J. Kamp. 2015. Rational strategy to stop arrhythmias: early afterdepolarizations and L-type Ca2þ current. J. Gen. Physiol. 145:475–479.
+81. Ruben, M. D., D. F. Smith, ., J. B. Hogenesch. 2019. Dosing time matters. Science. 365:547–549.
+82. Cederroth, C. R., U. Albrecht, ., B. Canlon. 2019. Medicine in the fourth dimension. Cell Metab. 30:238–250.
+83. Ballesta, A., P. F. Innominato, ., F. A. Levi. 2017. Systems chronotherapeutics. Pharmacol. Rev. 69:161–199.
+84. Kim, D. W., C. Chang, ., J. K. Kim. 2019. Systems approach reveals photosensitivity and PER2 level as determinants of clock-modulator efﬁcacy. Mol. Syst. Biol. 15:e8838.
+85. Ferdinandy, P., I. Baczko´, ., R. Schulz. 2019. Deﬁnition of hidden drug cardiotoxicity: paradigm change in cardiac safety testing and its clinical implications. Eur. Heart J. 40:1771–1777.
+86. McMillan, B., D. J. Gavaghan, and G. R. Mirams. 2017. Early afterdepolarisation tendency as a simulated pro-arrhythmic risk indicator. Toxicol. Res. (Camb.). 6:912–921.
+87. Parikh, J., P. Di Achille, ., V. Gurev. 2019. Global sensitivity analysis of ventricular myocyte model-derived metrics for proarrhythmic risk assessment. Front. Pharmacol. 10:1054.
+88. Fermini, B., J. C. Hancox, ., J. I. Vandenberg. 2016. A new perspective in the ﬁeld of cardiac safety testing through the comprehensive in vitro proarrhythmia assay paradigm. J. Biomol. Screen. 21:1–11.
+89. Li, Z., G. R. Mirams, ., D. G. Strauss. 2020. General principles for the validation of proarrhythmia risk prediction models: an extension of the CiPA in silico strategy. Clin. Pharmacol. Ther. 107:102–111, Published online November 10, 2019.
+
+Biophysical Journal 120, 319–333, January 19, 2021 333
+

@@ -1,0 +1,948 @@
+1234567890():,;
+
+ARTICLE
+
+https://doi.org/10.1038/s41467-019-09770-1
+
+OPEN
+
+Identiﬁcation of peripheral neural circuits that
+
+regulate heart rate using optogenetic and viral
+
+vector strategies
+
+Pradeep S. Rajendran 1, Rosemary C. Challis 2, Charless C. Fowlkes3, Peter Hanna1, John D. Tompkins1, Maria C. Jordan1, Sarah Hiyari1, Beth A. Gabris-Weber4, Alon Greenbaum2, Ken Y. Chan2,6, Benjamin E. Deverman2,6, Heike Münzberg5, Jeffrey L. Ardell1, Guy Salama 4, Viviana Gradinaru 2 & Kalyanam Shivkumar 1
+
+Heart rate is under the precise control of the autonomic nervous system. However, the wiring of peripheral neural circuits that regulate heart rate is poorly understood. Here, we develop a clearing-imaging-analysis pipeline to visualize innervation of intact hearts in 3D and employed a multi-technique approach to map parasympathetic and sympathetic neural circuits that control heart rate in mice. We identify cholinergic neurons and noradrenergic neurons in an intrinsic cardiac ganglion and the stellate ganglia, respectively, that project to the sinoatrial node. We also report that the heart rate response to optogenetic versus electrical stimulation of the vagus nerve displays different temporal characteristics and that vagal afferents enhance parasympathetic and reduce sympathetic tone to the heart via central mechanisms. Our ﬁndings provide new insights into neural regulation of heart rate, and our methodology to study cardiac circuits can be readily used to interrogate neural control of other visceral organs.
+
+1 Cardiac Arrhythmia Center and Neurocardiology Research Program of Excellence, David Geffen School of Medicine, University of California - Los Angeles (UCLA), Los Angeles, CA 90095, USA. 2 Division of Biology and Biological Engineering, California Institute of Technology, Pasadena, CA 91125, USA. 3 Department of Computer Science, University of California - Irvine, Irvine, CA 92697, USA. 4 Department of Cell Biology, University of Pittsburgh, Pittsburgh, PA 15261, USA. 5 Neurobiology of Nutrition and Metabolism Department, Louisiana State University, Baton Rouge, LA 70808, USA. 6Present address: Stanley
+Center for Psychiatric Research, Broad Institute, Massachusetts Institute of Technology, Cambridge, MA 02142, USA. Correspondence and requests for
+materials should be addressed to V.G. (email: viviana@caltech.edu) or to K.S. (email: kshivkumar@mednet.ucla.edu)
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+1
+
+ARTICLE
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+Situation-dependent changes in heart rate are essential for survival and are under the precise control of the autonomic nervous system (ANS)1. Heart rate reduction during sleep2 and elevation during exercise3 result from changes in parasympathetic and sympathetic tone. In fact, heart rate variability has been utilized extensively as an index of ANS function4–6. Although it is well known that the parasympathetic and sympathetic nervous systems innervate the sinoatrial (SA) node7,8 and regulate heart rate9–13, the wiring of these neural circuits in the periphery is not well characterized. Anatomical and functional maps of these fundamental cardiac circuits are needed to understand physiology, characterize remodeling in disease (e.g., sick sinus syndrome14), and develop novel therapeutics. However, these efforts have been hindered by a shortage of tools that target the peripheral nervous system (PNS) with speciﬁcity and precision.
+Cardiac circuit anatomy has traditionally been studied using thin sections15 and whole-mount preparations16. However, these methods do not preserve the structure of intact circuits and only provide 2D information. In contrast, tissue clearing methods render tissues optically transparent while preserving their molecular and cellular architecture and can be combined with a variety of labeling strategies to enable 3D visualization of intact circuits17,18. To trace cardiac circuits, dyes and proteins have historically been used. However, achieving cell type-speciﬁcity and/or sparse labeling needed for singe-cell tracing and delineating circuit connectivity is difﬁcult or not possible with these methods19. Additionally, many peripheral neuronal populations such as intrinsic cardiac ganglia are challenging to access surgically for tracer delivery. Adeno-associated viruses (AAVs) can address these limitations since they can be used to express genes of interest (e.g., ﬂuorescent proteins) in deﬁned cell populations in wild-type and transgenic animals20–22. In addition, intersectional strategies can be used to titrate gene expression to achieve sparse labeling21. AAVs can also be delivered systemically to target difﬁcult-to-reach populations20–22.
+Functional mapping of cardiac circuits has relied on electrical or pharmacological manipulation of the ANS with simultaneous physiological measurements23,24. However, each of these methods has disadvantages. Electrical techniques lack spatial precision and speciﬁcity. Autonomic nerves such as the vagus contain motor and sensory ﬁbers25, and electrical stimulation typically activates both ﬁber types26,27 as well as surrounding tissues28. Pharmacological techniques exhibit improved selectivity but lack temporal resolution. In contrast, optogenetics, which uses light-sensitive ion channels (e.g., channelrhodopsin-2 (ChR2), halorhodopsin), enables precise spatiotemporal control of deﬁned cell populations.
+Here, we develop a clearing-imaging-analysis pipeline to visualize innervation of whole hearts in 3D and employ a multitechnique approach, which includes AAV-based sparse labeling and tracing, retrograde neuronal tracing with cholera toxin subunit B (CTB), and optogenetics with simultaneous physiological measurements, to map peripheral parasympathetic and sympathetic neural circuits that regulate heart rate in mice.
+Results
+Tissue clearing and computational pipeline to assess cardiac innervation. To characterize global innervation of the mouse heart in 3D, we developed a clearing-imaging-analysis pipeline (Fig. 1a). We stained whole hearts with an antibody against the pan-neuronal marker protein gene product 9.5 (PGP9.5) and rendered them optically transparent using an immunolabelingenabled three-Dimensional Imaging of Solvent-Cleared Organs (iDISCO) protocol (Fig. 1b)29. We used confocal microscopy to image large tissue volumes (Fig. 1c and Supplementary Movie 1)
+
+and both confocal and lightsheet microscopy to image entire hearts (Supplementary Movie 2)30,31. We observed cardiac ganglia surrounding the pulmonary veins and a dense network of nerve ﬁbers coursing through the atrial and ventricular myocardium (Fig. 1c). In contrast to whole-mount stained hearts, innervation was seen throughout the entire thickness of the myocardium in iDISCO-cleared hearts, with large-diameter nerve ﬁber bundles located near the epicardium and smaller ﬁber bundles in the mid-myocardium and endocardium (Fig. 1c, Supplementary Fig. 1, and Supplementary Movie 3). To analyze these data, we created a semiautomated computational pipeline to detect nerve ﬁbers over large tiled volumes and to measure microanatomical features of ﬁbers such as diameter and orientation (Fig. 1d and e). Large-diameter nerve ﬁber bundles typically entered near the base of the dorsal heart. These bundles coursed perpendicular to the atrioventricular (AV) groove and branched into smaller ﬁber bundles as they progressed towards the apex. These data from healthy hearts will be important for future characterization of neural remodeling in cardiovascular diseases such as myocardial infarction (MI) in which innervation patterns are disrupted and nerve sprouting occurs32,33.
+While the iDISCO protocol was speciﬁcally developed for immunostaining applications, other clearing techniques such as the PAssive Clarity Technique (PACT) are better suited for visualizing endogenous ﬂuorescence in large tissue volumes or whole organs30,34. We demonstrate that PACT preserves the ﬂuorescence of virally labeled cholinergic and endogenously labeled noradrenergic neurons and nerve ﬁbers in the heart (Supplementary Fig. 2 and Supplementary Movies 4–6). Therefore, the application should dictate the choice of clearing technique.
+AAV-based labeling and tracing of cholinergic neurons on the heart. After visualizing global cardiac innervation, we assessed whether we could identify a subset of cholinergic neurons that form an anatomical circuit with the SA node to potentially regulate heart rate. We used an AAV-based system to trace ﬁbers, presumably from cholinergic neurons in intrinsic cardiac ganglia. Multicolor labeling strategies allow individual cells to be distinguished from one another (Fig. 2a) and sparse labeling reduces the fraction of labeled cells to allow individual ﬁbers to be visualized (Fig. 2b)21. To demonstrate this, we systemically co-administered Cre-dependent vectors expressing ﬂuorescent proteins (XFPs) from the tetracycline-responsive element (TRE)-containing promoter at a high dose and the tetracycline transactivator (tTA) from the human synapsin I promoter (hSyn1) at a lower dose in ChAT-IRES-Cre transgenic mice (Fig. 2b)21. Compared to dense multicolor labeling (Fig. 2a), sparse multicolor labeling resulted in a labeling density in intrinsic cardiac ganglia that was lower and that would more easily allow for tracing (Fig. 2b)21. To trace cholinergic ﬁber, we utilized sparse single-color labeling with tdTomato. Three weeks after viral delivery, hearts were collected and stained with an antibody for hyperpolarization-activated cyclic nucleotide-gated potassium channel 4 (HCN4). HCN4 staining along with anatomical landmarks were used to identify the SA node, the AV node, and the conduction system35,36. We observed cholinergic ﬁbers, presumably from cardiac ganglia, coursing along the SA node, AV node, and ventricles (Fig. 2c), identifying cholinergic neurons that are potentially involved in chronotropic, dromotropic, and ventricular control, respectively.
+Optogenetic stimulation of cholinergic neurons in the inferior pulmonary vein-ganglionated plexus. Next, to functionally assess whether cholinergic neurons in the inferior pulmonary veinganglionated plexus (IPV-GP) regulate heart rate and AV conduction, we used an optogenetic approach. We expressed ChR2 in
+
+2
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+a
+Perfusion and fixation
+
+b
+
+iDISCO
+
+c
+
+Ventral
+
+PGP9.5
+
+Before
+
+Staining
+
+Dorsal 1
+2
+
+ARTICLE
+
+After
+
+Clearing
+
+Cardiac ganglion
+
+1
+
+2
+
+Ventricle
+
+Imaging using confocal or lightsheet
+microscopy
+d Nerve diameter
+Automated nerve fiber detection and 3D visualization
+
+y
+
+z
+
+x
+
+y
+
+zx
+
+e Nerve orientation
+
+Diameter (μm)
+
+Derivation of microanatomical data on nerve fibers
+
+30 Orientation
+
+0
+Fig. 1 Tissue clearing and computational pipeline to assess cardiac innervation. a Schematic of the clearing-imaging-analysis pipeline for assessing cardiac innervation. b A whole heart (top) was rendered transparent (bottom) using the iDISCO protocol. c 3D confocal projections of the ventral (1500 µm zstack) and dorsal side of a cleared heart (1200 µm z-stack) with PGP9.5 staining (gray). Inset 1 shows a maximum intensity projection (MIP) confocal image of a cardiac ganglion. Inset 2 shows 785 µm-thick 3D projections of the entire left ventricular wall. d, e A semiautomated computational pipeline was used to detect nerve ﬁbers in the dorsal heart image from (c) and derive their diameter (d) and orientation (e). Insets show higher magniﬁcation images. Scale bars are 2 mm (b), 1 mm (c (top), d (left), e (left)), and 100 µm (c (bottom), d (right), e (right))
+
+cholinergic neurons by crossing transgenic ChAT-IRES-Cre mice
+with reporter mice containing a Cre-dependent ChR2-enhanced yellow ﬂuorescent protein allele (ChR2-eYFP; offspring from this
+cross are subsequently referred to as ChAT-ChR2-eYFP mice). ChR2-eYFP expression in intrinsic cardiac neurons was conﬁrmed
+by staining hearts for GFP (to amplify ChR2-eYFP detection) and PGP9.5 (Fig. 3a). All GFP+ neurons were PGP9.5+ (100.0 ± 0.0%) and the majority of PGP9.5+ neurons were GFP+ (96.4 ± 1.2%) (Fig. 3b). GFP staining was also present in PGP9.5+ nerve ﬁbers in
+the atria and ventricles (Fig. 3a). These data are consistent with previous studies reporting that the majority of intrinsic cardiac neurons are cholinergic37 and that the ventricles as well as atria receive cholinergic innervation37–39.
+After verifying ChR2 expression, we next assessed whether selective stimulation of cholinergic neurons in the IPV-GP
+modulated heart rate and AV nodal conduction using optogenetics in ex vivo Langendorff-perfused hearts. A blue lasercoupled optical ﬁber was positioned for focal illumination of the IPV-GP while cardiac electrical activity was simultaneously
+recorded (Fig. 3c, d). Optogenetic stimulation resulted in a decrease in heart rate that was dependent on light pulse power, frequency, and pulse width (Fig. 3e–g and Supplementary Table 1)
+
+but did not change the AV interval (35.7 ± 1.2 ms before stimulation versus 35.9 ± 1.0 ms during stimulation) (Fig. 3h). The lack of change in AV nodal conduction suggests that ﬁbers from this ganglion may pass through the AV node without synapsing. In addition, stimulation prolonged the P wave duration (9.3 ± 1.0 ms before stimulation versus 12.3 ± 2.4 ms during stimulation) and caused P wave fractionation (Fig. 3i, j). P wave fractionation has been reported in humans following administration of adenosine40, which mimics the effects of acetylcholine released from cholinergic nerve terminals41,42. During stimulations at higher frequencies, we occasionally observed ectopic atrial rhythms (n = 3/6 mice) and even asystole (n = 1/6 mice) (Fig. 3d), demonstrating the profound effect of the IPV-GP on the SA node and atrial function. The response to stimulation was abolished by administration of the muscarinic receptor antagonist atropine (−33.5 ± 11.0% with stimulation before atropine versus −0.3 ± 0.2% with stimulation after atropine) (Fig. 3k and Supplementary Table 1), indicating that the bradycardic response was indeed mediated by selective stimulation of cholinergic neurons.
+Since ChR2 is expressed in both preganglionic cholinergic inputs to and postganglionic cholinergic neurons in the IPV-GP
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+3
+
+ARTICLE
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+a
+
+One-component expression system for
+
+cell type-specific dense labeling
+
+High dose RGB
+
+Cre transgenic mice
+
+b
+
+Two-component expression system for
+
+cell type-specific sparse labeling
+
+High dose
+RGB +
+Variable dose tTA
+
+Cre transgenic mice
+
+Dense labeling in ChAT-IRES-Cre mouse ssAAV-PHP.S:CAG-DIO-XFPs (3 × 1012 vg total)
+
+Sparse labeling in ChAT-IRES-Cre mouse ssAAV-PHP.S:TRE-DIO-XFPs (3 × 1012 vg total)
+ssAAV-PHP.S:ihSyn1-DIO-tTA (1 × 1010 vg)
+
+Cardiac ganglion
+
+Cardiac ganglion
+
+c
+Dorsal heart
+
+Sparse labeling in ChAT-IRES-Cre mouse ssAAV-PHP.S:TRE-DIO-tdTomato (1 × 1012 vg)
+ssAAV-PHP.S:ihSyn1-DIO-tTA (1 × 1010 vg)
+
+SVC SA node
+
+tdTom HCN4
+
+SVC SA node
+
+tdTom HCN4
+
+PVs
+
+LA
+
+IVC
+
+RA
+
+IPV-GP AV node
+
+LV
+
+RV
+
+Dorsal atrium
+
+PV RA
+
+IPV-GP
+
+AV node
+
+IPV-GP
+
+Tract-tracing SA node
+AV node
+
+RV
+
+Fig. 2 AAV-based labeling and tracing of cholinergic neurons on the heart. a Schematic of the one-component expression system for cell type-speciﬁc, dense multicolor labeling (top). To densely label cholinergic neurons in cardiac ganglia, ChAT-IRES-Cre mice were systemically co-administered 3 Credependent vectors expressing either mRuby2, mNeonGreen, or mTurquoise2 from the ubiquitous CAG promoter (ssAAV-PHP.S:CAG-DIO-XFPs) (1 × 1012 vector genomes (vg) each; 3 × 1012 vg total). A MIP image of a densely labeled cardiac ganglion (bottom left). Inset shows a higher magniﬁcation image (bottom right). b Schematic of the two-component expression system for cell type-speciﬁc, sparse multicolor labeling (top). Expression of XFPs is dependent on cotransduction of an inducer in Cre-expressing cells. The dose of the inducer vector can be titrated to control extent of XFP labeling. To
+sparsely label cholinergic neurons in cardiac ganglia, ChAT-IRES-Cre mice were systemically co-administered 3 Cre-dependent vectors expressing XFPs from the TRE-containing promoter (ssAAV-PHP.S:TRE-DIO-XFPs) (1 × 1012 vg each; 3 × 1012 vg total) and a Cre-dependent inducer vector expressing the tTA from the ihSyn1 promoter (ssAAV-PHP.S:ihSyn1-tTA) (1 × 1010 vg). A MIP image of a sparsely labeled cardiac ganglion (bottom left). Inset shows a higher magniﬁcation image (bottom right). c To trace cholinergic ﬁbers, presumably from cardiac ganglia, sparse labeling was performed by systemically co-administering ssAAV-PHP.S:TRE-DIO-tdTomato at a high dose (1 × 1012 vg) and ssAAV-PHP.S:ihSyn1-DIO-tTA at a lower dose (1 × 1010 vg). Cartoon of the dorsal heart depicting the orientation of images (left). A MIP image of the dorsal atrium with native tdTomato ﬂuorescence (red) and HCN4 staining (green) (middle). Fibers were traced with neuTube and overlaid on a grayscale MIP image (right). Orange ﬁbers coursed along the right atrium (RA) including the sinoatrial (SA) and atrioventricular (AV) nodes and blue ﬁbers along the ventricles. Scale bars are 50 µm (a, b) and 200 µm (c). All images were acquired on tissue collected 3 weeks after intravenous injection. IPV-GP inferior pulmonary vein-ganglionated plexus, IVC inferior vena cava, LA left
+atrium, LV left ventricle, PV pulmonary vein, RV right ventricle, SVC superior vena cava
+
+in ChAT-ChR2-eYFP mice, we assessed whether we could stimulate only postganglionic cholinergic neurons in the IPVGP using optogenetics and still modulate heart rate. We ﬁrst evaluated whether we could preferentially deliver transgenes to peripheral cholinergic neurons in intrinsic cardiac ganglia rather than central cholinergic neurons in the medulla using systemic AAVs. We used AAV-PHP.S, a capsid variant that more efﬁciently transduces the PNS and many visceral organs including the heart, as compared to AAV921. We packaged a Credependent genome that expresses eYFP from the ubiquitous CAG promoter into AAV-PHP.S and systemically administered the virus to ChAT-IRES-Cre transgenic mice. Three weeks later, we evaluated eYFP expression in the medulla, vagus nerve, and cardiac ganglia with GFP staining. Central cholinergic neurons in the dorsal motor nucleus of the vagus nerve (DMV) (1.5 ± 0.9%
+
+expressed GFP) and ﬁbers in the vagus nerve were weakly transduced (Supplementary Fig. 3a–c). In contrast, we observed robust transduction of peripheral cholinergic neurons in cardiac ganglia (91.0 ± 1.5%) (Supplementary Fig. 3d and e), likely due to the strong tropism AAV-PHP.S displays for the PNS over the CNS. Further, GFP expression was highly speciﬁc for ChAT+ neurons in cardiac ganglia (100.0 ± 0.0%) (Supplementary Fig. 3e). For functional studies, we packaged a Cre-dependent genome that expresses ChR2-eYFP from the ubiquitous CAG promoter in AAV-PHP.S, systemically administered the virus to ChAT-IRESCre transgenic mice, and evaluated expression 5 weeks later. In Langendorff-perfused hearts, we were able to optogenetically stimulate postganglionic cholinergic neurons in the IPV-GP and decrease heart rate (Supplementary Fig. 4). Taken together, our anatomical and functional data establish an IPV-GP-SA node
+
+4
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+a
+
+Dorsal heart
+
+1 1
+
+ChAT-ChR2-eYFP
+
+Cardiac ganglion
+
+2 2
+GFP PGP9.5
+c Langendorff preparation d
+EP catheter
+
+Ventricle
+
+PGP9.5
+
+GFP
+
+10 Hz
+
+ARTICLE
+
+b
+GFP PGP9.5
+
+Cardiac ganglion neurons (%)
+
+100
+
+80
+
+60
+
+40
+
+20
+
+0
+
+GFP+
+
+&
+
+PGP9.G5+F/P+ GFP+ &
+
+PGPP9G.P5+9/.5+
+
+IPV-GP
+
+Optical fiber
+
+ECG
+
+20 Hz
+
+1 s
+
+100 ms
+
+Δ Heart rate (%)
+
+e0
+–20 –40 –60 –80
+0
+
+50 100 150 200 250 Power (mW)
+
+Δ Heart rate (%)
+
+f0
+–20 –40 –60 –80
+0
+
+g0
+
+Δ Heart rate (%)
+
+–20
+
+–40
+
+–60
+
+5 10 15 20 Frequency (Hz)
+
+–80 0
+
+5
+
+10
+
+Pulse width (ms)
+
+h 45
+
+i
+
+AV interval (ms)
+
+40
+
+35
+
+30
+
+25 Pre- Stimulation
+stimulation
+
+10 Hz
+
+QRS P
+1 s
+
+10 ms
+
+P wave duration (ms)
+
+j 20 *
+15
+10
+5
+0 Pre- Stimulation
+stimulation
+
+k 20
+
+*
+
+0
+
+Δ Heart rate (%)
+
+–20
+
+–40
+
+–60
+
+–80 Pre-asttirmopuilnaetion Post-asttirmopuilnaetion
+
+l
+
+Dorsal heart
+
+SVC
+
+SA node
+
+PVs
+
+LA
+
+IPV-GP IVC
+
+RA
+
+circuit involved in heart rate regulation (Fig. 3l). Furthermore, the engineered AAV, AAV-PHP.S21, can be a powerful tool to dissect out the roles of peripheral versus central circuits on organ control.
+Optogenetic versus electrical stimulation of the vagus nerve. Electrical vagus nerve stimulation (VNS) has been used in numerous preclinical and clinical studies for the treatment of cardiovascular diseases43 and other conditions (e.g., rheumatoid
+
+arthritis44). However, the relative contributions of vagal efferent and afferent ﬁbers on cardiac function are not well understood because conventional techniques do not allow for ﬁber typespeciﬁc stimulation. To address this limitation, we examined whether we could selectively stimulate efferent ﬁbers in the vagus
+nerve using optogenetics. We also assessed whether there was a
+difference between optogenetic and electrical VNS on heart rate
+(Fig. 4a), as a previous study showed that electrical stimulation of
+motor nerves results in a non-orderly, non-physiological recruitment of ﬁbers, with larger ﬁbers activated ﬁrst45. The
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+5
+
+ARTICLE
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+Fig. 3 Ex vivo optogenetic stimulation of cholinergic neurons in the IPV-GP. a A 3D projection (1200 µm z-stack) of the dorsal side of a heart from a ChATChR2-eYFP mouse whole-mount stained with PGP9.5 (red) and GFP (green). Insets 1 and 2 show MIP images of a cardiac ganglion and the ventricle, respectively. Blue dashed boxes indicate location of higher magniﬁcation images in blue boxes. b Percentage of cardiac ganglion neurons expressing GFP and PGP9.5 over those expressing GFP or PGP9.5. c Langendorff-perfused hearts were used for optogenetic stimulation of cholinergic neurons in a cardiac ganglion. A blue laser-coupled optical ﬁber was positioned for focal illumination of the IPV-GP (circle). A surface electrocardiogram (ECG) was recorded with bath electrodes and intracardiac electrograms with an electrophysiology (EP) catheter. d Representative ECGs during stimulation (blue shading) at 10 Hz, 10 ms, and 221 mW (top) and 20 Hz, 10 ms, and 221 mW (bottom). Insets show the ECGs before and during stimulation. e–g Dose response curves summarizing the effects of altering light pulse power (e), frequency (f), and pulse width (g) on heart rate. h Summary of the AV interval before and during stimulation at 10 Hz and 10 ms (t4 = 0.1656, P = 0.8765). i Representative ECG during stimulation (blue shading) at 10 Hz, 10 ms, and 221 mW. Insets show a single beat before and during stimulation, with gray boxes showing a higher magniﬁcation of the P wave. j The P wave duration before versus during stimulation (t5 = 2.920, *P = 0.0330). k Summary of the heart rate response to stimulation before versus after atropine administration (t4 = 2.993, *P = 0.0402). l Cartoon of the dorsal heart depicting the IPV-GP-SA node circuit. n = 6 mice (b, e–g, j) and 5 mice (h, k); mean ± s.e.m.; paired, two-tailed t-test. Scale bars are 1 mm (a (left), c) and 100 µm (a (right))
+
+a In vivo optical versus electrical
+vagus nerve stimulation
+Vagus nerve
+
+ChAT-ChR2-eYFP
+
+b
+
+Nodose/jugular complex
+
+PGP9.5
+
+GFP
+
+PGP9.5 GFP
+
+c
+700 600 500
+
+20 Hz intact RVNS
+
+Heart rate (bpm)
+
+400
+
+300
+
+1 s
+
+Optical
+
+Electrical
+
+Trachea
+
+Δ Heart rate (%)
+
+d
+0
+–20
+–40
+–60
+–80 0
+
+Intact RVNS
+
+e
+0
+
+RVNx caudal RVNS
+
+f
+
+BVNx caudal RVNS
+
+0
+
+Δ Heart rate (%)
+
+Δ Heart rate (%)
+
+–20
+
+–20
+
+–40
+
+–40
+
+–60
+
+–60
+
+5 10 15 20 Frequency (Hz)
+
+–80 0
+
+5 10 15 20 Frequency (Hz)
+
+–80 0
+
+5 10 15 20 Frequency (Hz)
+
+g
+5
+
+RVNx cranial RVNS
+
+h
+5
+
+BVNx cranial RVNS
+
+i
+15
+
+Time to peak heart rate response (s)
+
+Δ Heart rate (%)
+
+Δ Heart rate (%)
+
+0
+
+0
+
+–5
+
+–5
+
+–10
+
+*
+
+–10
+
+–15
+
+**
+
+–15
+
+10
+**
+5
+
+–20
+
+–20
+
+0
+
+0
+
+5 10 15 20
+
+0
+
+5 10 15 20
+
+Frequency (Hz)
+
+Frequency (Hz)
+
+Electrical RVNS
+**
+Intact BVNx rostral
+
+Fig. 4 In vivo optogenetic versus electrical stimulation of the vagus nerve. a Cartoon depicting optogenetic and electrical vagus nerve stimulation strategy in ChAT-ChR2-eYFP mice. The right vagus nerve was surgically exposed in anesthetized mice and either light or electricity was used for stimulation. b MIP images of the right nodose/jugular ganglion complex and vagus nerve whole-mount stained with PGP9.5 (red) and GFP (green). c Representative heart rate responses during optogenetic versus electrical right vagus nerve stimulation (RVNS; magenta shading) at identical frequencies (20 Hz) and pulse widths (10 ms) in the intact state. The light pulse power for optogenetic stimulation was 57 mW and the current for electrical stimulation was 5 µA. d Frequency response curves summarizing the effects of optogenetic versus electrical RVNS on heart rate in the intact state. e, f Frequency response curves summarizing the effects of optogenetic versus electrical RVNS of the caudal end on heart rate following right vagotomy (RVNx) (e) and bilateral vagotomy (BVNx) (f). g, h Frequency response curves summarizing the effects of optogenetic versus electrical RVNS of the cranial end on heart rate following RVNx (t4 = 3.576, *P = 0.0232 at 10 Hz; t4 = 5.229, **P = 0.0064 at 20 Hz) (g) and BVNx (t4 = 8.588, **P = 0.0010 at 20 Hz) (h). In d–h insets show a schematic of the stimulation protocol. i The time to peak heart rate response during electrical RVNS in the intact state versus of the cranial end following BVNx (t4 = 6.335, **P = 0.0032). n = 8 mice (d), three mice (e, f), and ﬁve mice (g, h, i); mean ± s.e.m.; paired, two-tailed t-test. Scale bar is 200 µm (b)
+
+vagus and other autonomic nerves contain both motor and sensory ﬁbers that vary in diameter and myelination28 and nonelectrical techniques such as optogenetics are needed to study their physiological role.
+
+To conﬁrm that ChR2-eYFP expression was limited to vagal efferents in ChAT-ChR2-eYFP mice, we stained for GFP and PGP9.5 in the nodose/jugular ganglion complex, which contains the cell bodies of vagal sensory neurons, and the cervical vagus
+
+6
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+ARTICLE
+
+nerve (Fig. 4b). eYFP was not detected in PGP9.5+ cell bodies in the nodose/jugular ganglion complex and was only present in a subset of PGP9.5+ vagal ﬁbers (n = 5 mice). After verifying expression, we next performed functional studies in anesthetized mice in which we positioned a laser-coupled optical ﬁber for focal illumination above and a hook electrode underneath the right vagus nerve. In this context, optogenetic VNS activates only efferent ﬁbers (GFP+), whereas electrical VNS presumably activates subsets of efferent and afferent ﬁbers (PGP9.5+) in the vagus nerve (Fig. 4b). With both vagi intact, optogenetic and electrical right VNS resulted in a similar decrease in heart rate (Fig. 4c and d); however, the slopes of the responses were dramatically different (n = 6/8 mice) (Fig. 4c), likely due to differential ﬁber recruitment45. The heart rate response to optogenetic versus electrical stimulation of the caudal end of the right vagus nerve was also similar following either right or bilateral vagotomy (Fig. 4e, f and Supplementary Table 2). In contrast, optogenetic stimulation of the cranial end of the right vagus nerve following either right or bilateral vagotomy did not affect heart rate, whereas electrical stimulation surprisingly resulted in a decrease in heart rate at 10 Hz (−6.5 ± 1.8% versus −0.1 ± 0.1% following right vagotomy for electrical versus optogenetic stimulation) and 20 Hz (−9.9 ± 1.8% versus −0.1 ± 0.1% following right vagotomy and −3.2 ± 0.4% versus −0.2 ± 0.1% following bilateral vagotomy for electrical versus optogenetic stimulation) (Fig. 4g, h and Supplementary Table 2). The decrease in heart rate to electrical stimulation of the cranial end of the right vagus nerve following right vagotomy was also greater than that following bilateral vagotomy at 20 Hz (t4 = 3.123, P = 0.0354, paired, two-tailed t-test) (Fig. 4g, h, red line and Supplementary Table 2), suggesting that the response following
+
+ipsilateral vagotomy was in part due to a vagal afferent-mediated increase in parasympathetic efferent outﬂow through the intact contralateral vagus nerve. Furthermore, the decrease in heart rate to electrical stimulation of the cranial end of the right vagus nerve following bilateral vagotomy (Fig. 4h, red line and Supplementary Table 2) indicates that vagal-afferents mediate a decrease in sympathetic efferent outﬂow, since both vagi were transected. In addition, there was an increased latency to peak heart rate response with electrical stimulation of the cranial end of the right vagus nerve following bilateral vagotomy compared to that of the intact right vagus nerve (8.7 ± 0.4 ms versus 3.9 ± 0.5 ms) (Fig. 4i), which further supports that vagal afferents cause withdrawal of sympathetic tone46. Taken together, our data suggest that optogenetic stimulation selectively activates vagal efferents in ChAT-ChR2-eYFP mice and that vagal afferents act centrally to (1) increase parasympathetic efferent outﬂow and (2) decrease sympathetic efferent outﬂow to the heart.
+Location and optogenetic stimulation of cardiac-projecting noradrenergic neurons in the stellate ganglia. The sympathetic nervous system, along with the parasympathetic nervous system, precisely regulates heart rate in normal physiology. To anatomically and functionally dissect noradrenergic neurons that form a circuit with the SA node, we used a retrograde neuronal tracer and an optogenetic approach. Noradrenergic nerve ﬁbers densely innervate the heart as shown by staining for tyrosine hydroxylase (TH), the rate-limiting enzyme in norepinephrine synthesis (Fig. 5a). To identify the location of cardiac-projecting sympathetic neurons, we injected the retrograde neuronal tracer CTB conjugated to Alexa Fluor 488 into the heart (Fig. 5b). The
+
+a
+TH
+
+Dorsal heart
+
+b
+
+Paravertebral
+
+chain
+
+SG
+
+Heart
+
+T2G
+
+RV LV
+
+c Left paravertebral chain ganglia
+
+CTB-488
+
+MCG
+
+Ansa
+
+CTB-488 SG
+
+d
+2.0
+
+RSG
+
+LSG 2.5
+2.0
+
+y (mm) y (mm) CTB+ cells/μm2
+
+1.5
+
+1.5
+
+1.0
+
+1.0
+
+0.5
+
+0.5
+
+×10–3 1.5
+1.0
+0.5
+
+0
+
+0
+
+0
+
+T2G
+
+0 0.5 1.0
+
+0 0.5 1.0 1.5
+
+x (mm)
+
+x (mm)
+
+Fig. 5 Cardiac-projecting neurons in stellate ganglia (SG) are clustered craniomedially. a A 3D projection (1200 µm z-stack) of the dorsal side of a C57BL/6J mouse heart whole-mount stained with TH (green). b Cartoon depicting cholera toxin subunit B (CTB)-Alexa Fluor 488 (CTB-488) injections into the heart to retrogradely trace neurons in the paravertebral chain ganglia that project to the heart. c A MIP image of the left paravertebral chain from the middle cervical ganglion (MCG) to the second thoracic ganglion (T2G) showing the location of CTB-488+ neurons that project to the heart. d Summary heat map of the right stellate ganglion (RSG) and the left stellate ganglion (LSG). n = 5 mice (d). Scale bars are 1 mm (a, c). CTB injections were performed in C57BL/6J mice
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+7
+
+ARTICLE
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+a
+In vivo optical stimulation of paravertebral ganglia
+
+b
+TH GFP
+
+TH-ChR2-eYFP TH
+
+Right paravertebral chain ganglia
+
+Heart
+
+SG T2G
+
+GFP SG
+
+TH GFP
+T2G
+
+c
+
+Stellate ganglion neurons (%)
+
+100
+
+80
+
+60
+
+40
+
+20
+
+0
+
+GFP+
+
+&THG+F/P+ TH+
+
+&
+
+GFP+T/H+
+
+Heart rate (bpm)
+
+d
+600 550 500 450 400
+
+RSGS 1 s
+
+Δ Heart rate (%)
+
+g
+20 15 10
+5 0 –5
+
+**
+RSGS RT2GS
+
+Δ Heart rate (%)
+
+Δ Heart rate (%)
+
+e
+20
+15
+10
+5
+0 0
+
+5 10 15 20 Frequency (Hz)
+
+Δ Heart rate (%)
+
+f
+20
+
+15
+
+10
+
+5
+
+0
+
+0
+
+5
+
+10
+
+Pulse width (ms)
+
+h 20
+
+15
+
+*
+
+10
+
+5
+
+0
+
+–5 Pre-propranRolSoPGl oSst-propranRolSoGl S
+
+i
+RSG
+
+Ventral heart SVC
+
+RA SA node
+
+Fig. 6 In vivo optogenetic stimulation of noradrenergic neurons in the RSG. a Cartoon depicting optogenetic SG and T2G stimulation strategy in TH-ChR2eYFP mice. The right paravertebral chain was surgically exposed in anesthetized mice and light was used for stimulation. b A MIP image of the right paravertebral chain whole-mounted stained with TH (red) and GFP (green) and showing the SG and the T2G. Inset shows single-plane images of the SG. Blue dashed boxes indicate location of higher magniﬁcation images in blue boxes. c Percentage of stellate ganglion neurons expressing GFP and TH over those expressing GFP or TH. d Representative heart rate response during 10 Hz, 10 ms, and 126 mW craniomedial RSG stimulation (RSGS). e, f Dose response curves summarizing the effects of altering craniomedial RSGS frequency (e) and pulse width (f) on heart rate. g Summary of the heart rate response to craniomedial RSGS versus right T2G stimulation (RT2GS) (t6 = 5.435, **P = 0.0016). h Summary of the heart rate response to craniomedial RSGS before versus after propranolol administration (t3 = 3.951, *P = 0.0289). i Cartoon of the ventral heart depicting the craniomedial RSG-SA node circuit. n = 6 mice (c), seven mice (e, g), ﬁve mice (f), and four mice (h); mean ± s.e.m.; paired, two-tailed t-test. Scale bars are 200 µm (b (left) and 50 µm (b (right)
+
+majority of CTB+ neurons were located in the stellate ganglia of the paravertebral chain, with fewer labeled neurons in the middle cervical and second thoracic (T2) ganglia (Fig. 5c and Supplementary Movie 7). On average, 236 ± 39 neurons were labeled in the right and 261 ± 34 neurons labeled in the left stellate ganglion (n = 5 mice). Heat maps of the right stellate ganglion (RSG) and left stellate ganglion show that cardiac-projecting sympathetic neurons are clustered in the craniomedial aspect (Fig. 5d) and suggest that these ganglia may have a viscerotopic organization.
+Next, we assessed whether we could selectively stimulate noradrenergic neurons in the paravertebral chain using optogenetics and modulate heart rate (Fig. 6a). We expressed ChR2 in noradrenergic neurons by crossing transgenic TH-IRES-Cre mice with reporter mice containing a Cre-dependent ChR2-eYFP allele (offspring from this cross are subsequently referred to as THChR2-eYFP mice). ChR2-eYFP expression in stellate ganglion neurons was conﬁrmed by staining for GFP and TH (Fig. 6b). The majority of GFP+ neurons were TH+ (98.7 ± 0.4%) and all TH+
+
+neurons were GFP+ (100.0 ± 0.0%) (Fig. 6c). After verifying expression, we performed functional studies in open-chest anesthetized mice in which we positioned a laser-coupled optical ﬁber for focal illumination above the craniomedial RSG or right T2 ganglion (Fig. 6a). Optogenetic stimulation of the craniomedial RSG resulted in a frequency- and pulse width-dependent increase in heart rate (Fig. 6d–f and Supplementary Table 3). Although a small number of cardiac-projecting neurons were located in the T2 ganglion (Fig. 5c), there was no heart rate response to stimulation of this ganglion and/or preganglionic sympathetic ﬁbers coursing through this region (0.1 ± 0.1% with right T2 ganglion stimulation versus 9.5 ± 1.8% with RSG stimulation) (Fig. 6g and Supplementary Table 3). The response to craniomedial RSG stimulation was abolished by administration of the βadrenergic receptor antagonist propranolol (5.6 ± 1.4% with stimulation before propranolol versus 0.1 ± 0.1% with stimulation after propranolol) (Fig. 6h and Supplementary Table 3), indicating that the tachycardic response was indeed mediated by selective
+
+8
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+ARTICLE
+
+stimulation of noradrenergic neurons. Taken together, our anatomical and functional data establish a craniomedial RSG-SA node circuit involved in heart rate regulation (Fig. 6i).
+Discussion
+We developed a clearing-imaging-analysis pipeline to visualize innervation of whole hearts and employed a multi-technique approach to dissect fundamental parasympathetic and sympathetic neural circuits involved in heart rate regulation. We report several novel ﬁndings: (1) cholinergic neurons in the IPV-GP and noradrenergic neurons in the craniomedial RSG project to the SA node and modulate its function; (2) the evoked cardiac response to optogenetic versus electrical stimulation of the vagus nerve displays different temporal characteristics; and (3) vagal afferents enhance parasympathetic and reduce sympathetic efferent outﬂow to the heart via central mechanisms.
+Despite advances in tissue clearing33,47 and imaging techniques30,31, high-resolution, 3D datasets of global cardiac innervation do not exist. We show, for the ﬁrst time, innervation of entire cleared mouse hearts with cardiac ganglia located around the pulmonary veins and a dense network of nerve ﬁbers throughout the myocardium. To analyze these data, we developed a semiautomated computational pipeline to detect nerve ﬁbers and to measure microanatomical features such as diameter and orientation. These analytical tools and resulting measurements are needed to build a reference atlas of cardiac innervation and for quantitative descriptions of innervation in healthy versus diseased states such as MI. Following MI, innervation around the infarct scar and of remote regions of the heart is altered32,33,48, and this neural remodeling can modulate the arrhythmia substrate49. Understanding changes in innervation post-MI can provide new insights into arrhythmia mechanisms. Furthermore, our clearing-imaging-analysis pipeline can be readily applied to assess innervation of other visceral organs including endogenously and virally labeled tissues.
+It is well known that the parasympathetic and sympathetic nervous systems are critical for heart rate regulation. The SA node and conduction system are densely innervated7,8, and stimulation of the vagus nerve9, stellate ganglia10, and noradrenergic ﬁbers11,12 modulates heart rate. However, the precise wiring of the underlying neural circuits has not been delineated. We used a novel sparse AAV labeling system21 and an optogenetic approach to anatomically and functionally characterize cholinergic neurons that regulate heart rate. Although we were unable to directly visualize synapses, we identiﬁed cholinergic ﬁbers, presumably from cardiac ganglia, that coursed along the SA node, the AV node, and the ventricles. Selective optogenetic stimulation of cholinergic neurons in the IPV-GP modulated heart rate, consistent with a recent study that stimulated cholinergic ﬁbers in the right atrium also using optogenetics13. Previous studies showed that electrical stimulation of pulmonary vein ganglia results in biphasic heart rate responses (initial bradycardia followed by tachycardia)23,24. However, since electrical stimulation is nonspeciﬁc, it is difﬁcult to interpret whether the biphasic response was due to activation of a mixed population of neurons contained in cardiac ganglia (i.e., parasympathetic, sympathetic, and sensory)15 and/or pass through ﬁbers. Our ﬁndings demonstrate an IPV-GP-SA node circuit and highlight the importance of using techniques such as optogenetics, which confer cell type-speciﬁcity, to dissect cardiac neural circuity. Furthermore, electrical and optogenetic techniques (using traditional transgenic and AAVbased approaches for ChR2 delivery) stimulate both central preganglionic inputs to and postganglionic neurons in cardiac ganglia. Therefore, we used a novel engineered AAV, AAV-PHP.
+
+S21, that has a strong tropism for the PNS to preferentially deliver
+ChR2 to postganglionic cholinergic neurons on the heart rather
+than preganglionic cholinergic neurons in the medulla. Future
+studies of peripheral neural circuits should use AAV-PHP.S and other engineered AAVs20,22 to dissect the role of central versus
+peripheral neuronal populations on organ function.
+To map noradrenergic neurons that regulate heart rate, we
+used a retrograde neuronal tracer and optogenetic approach. A
+previous study in canines using horseradish peroxidase showed
+that sympathetic postganglionic neurons that innervate the heart
+are primarily located in the middle cervical ganglia of the paravertebral chain50. However, we report, using CTB and conﬁrm
+with optogenetic stimulation, that the stellate ganglia have a
+viscerotopic organization with cardiac-projecting neurons clustered in the craniomedial aspect, consistent with a study in cats51.
+In addition to the heart, the stellate ganglia project to many other thoracic structures, including the sweat glands in the forepaw52, the lung and trachea53, the esophagus51, and brown fat54. Char-
+acterizing stellate ganglia target innervation and cell-type speciﬁcation is an area of ongoing investigation55,56 that is of interest
+from a developmental, physiological, and therapeutic perspective.
+Current understanding of the role of vagal efferent and afferent ﬁbers on cardiac function is largely based on studies using electrical stimulation, which is non-speciﬁc and results in nonorderly, non-physiological recruitment of ﬁbers45. Electrical sti-
+mulation of the vagus nerve typically activates large-diameter myelinated A ﬁbers, followed by medium-diameter myelinated B ﬁbers and then small-diameter unmyelinated C ﬁbers28. In vivo we report that optogenetic stimulation of motor ﬁbers in the
+vagus nerve results in a heart rate response that has a slower onset than electrical stimulation of motor and sensory ﬁbers, likely due to differential ﬁber recruitment45. Our ﬁndings suggest that non-
+electrical techniques such as optogenetics are needed to char-
+acterize neural control of cardiac physiology. Although there was robust expression of ChR2-eYFP as conﬁrmed by immunohis-
+tochemistry, we cannot rule out that incomplete expression or
+optical capture affected our results. We also show that activation
+of vagal afferents decreases heart rate by enhancing parasympathetic efferent outﬂow and reducing sympathetic efferent outﬂow centrally, consistent with a prior study showing that
+global activation of vagal afferents in Vglut2-ChR2 mice and
+selective activation of Npy2r-ChR2 vagal afferents causes a profound bradycardia57. In support of our functional data, anato-
+mical tracing studies have previously shown that cardiac vagal
+afferent neurons in the nodose/jugular ganglion complex project to neurons in the nucleus tractus solitarii of the medulla58. These
+neurons then project to the nucleus ambiguus and the DMV in the medulla to modulate parasympathetic efferent outﬂow58 and
+to the paraventricular nucleus of the hypothalamus to modulate sympathetic efferent outﬂow59. Future studies aimed at identifying cardiac-speciﬁc vagal efferent and afferent ﬁbers, similar to those performed in the lungs57 and the gastrointestinal system60,
+are needed to better understand vagal control of cardiac phy-
+siology and to design next-generation VNS therapies.
+Overall, our data highlight the complexity of cardiac neural
+circuitry and demonstrate that a multi-technique approach is
+needed to delineate circuit wiring. Understanding the neural
+control of organ function in greater detail is critical as neuro-
+modulation therapies are emerging as promising approaches to
+treat a wide range of diseases. Tools such as optogenetics and AAVs are already providing new scientiﬁc insights into the structure and function of peripheral neural circuits57,60. A com-
+bination of these approaches will help disentangle neural control
+of autonomic physiology and enable a new era of targeted neu-
+romodulation approaches.
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+9
+
+ARTICLE
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+Methods
+Animals. Animal experiments complied with all relevant ethical regulations and were approved by the UCLA and California Institute of Technology Institutional Animal Care and Use Committee. ChAT-IRES-Cre (028861)61, Ai32 (024109)62, C57BL/6J (000664), and Ai14 (007914) mice63 were purchased from the Jackson Laboratory. TH-IRES-Cre mice (254)64 were purchased from the European Mutant Mouse Archive. ChAT-ChR2-eYFP and TH-ChR2-eYFP mice were created by crossing Ai32 mice with ChAT-IRES-Cre or TH-IRES-Cre mice, respectively. THtdTomato mice were created by crossing Ai14 mice with TH-IRES-Cre mice. All animals were kept on a 12 h light/dark cycle with ad libitum access to food and water. Data for all experiments were collected from male and female adult mice (>8 weeks old).
+Plasmids. Plasmids used for AAV production include pUCmini-iCAP-PHP.S (Addgene, 103006), pAAV-CAG-DIO-mRuby2 (Addgene, 104058), pAAV-CAGDIO-mNeonGreen21, pAAV-CAG-DIO-mTurquoise2 (Addgene, 104059), pAAVihSyn1-DIO-tTA (Addgene, 99121), pAAV-TRE-DIO-mRuby2 (Addgene, 99117), pAAV-TRE-DIO-mNeonGreen21, pAAV-TRE-DIO-mTurquoise2 (Addgene, 99115), pAAV-TRE-DIO-tdTomato (Addgene, 99116), and pAAV-CAG-DIOeYFP (Addgene, 104052). pAAV-CAG-DIO-ChR2(H134R)-eYFP was generated by replacing the Ef1a promoter in pAAV-Ef1a-DIO-ChR2(H134R)-eYFP (a gift from Karl Deisseroth, Addgene, 20298) with the CAG promoter from pAAVCAG-mNeonGreen21. pAAV-CAG-DIO-tTA was generated by replacing the ihSyn1 promoter in pAAV-ihSyn1-DIO-tTA with the CAG promoter from pAAVCAG-mNeonGreen. pAAV-TRE-DIO-tdTomato-f has a farnesylation sequence attached by overhang PCR65. The pHelper plasmid was obtained from Agilent’s AAV helper-free kit (Agilent, 240071). CAG, Cytomegalovirus early enhancer element chicken β-actin promoter; DIO = double-ﬂoxed inverted open reading frame.
+Virus production and puriﬁcation. AAVs were generated by triple transient transfection of HEK293T cells (ATTC, CRL-3216) using polyethylenimine (Polysciences, 23966-2)67. Viral particles were harvested from the media at 72 h posttransfection and from the cells and media at 120 h post-transfection. Virus from the media was precipitated at 4 °C with 40% polyethylene glycol (Sigma-Aldrich, 89510)68 in 2.5 M NaCl and combined with cell pellets suspended at 37 °C in 500 mM NaCl, 40 mM Tris, 10 mM MgCl2, and 100 U ml−1 of salt-active nuclease (ArcticZymes, 70910-202). Clariﬁed lysates were puriﬁed over iodixanol (Cosmo Bio USA, OptiPrep, AXS-1114542) step gradients (15, 25, 40, and 60%)69. Puriﬁed viruses were concentrated, washed in sterile phosphate buffered saline (PBS), sterile ﬁltered, and titered using quantitative PCR70. A detailed protocol for AAV production and puriﬁcation is available66.
+Systemic delivery of viruses. Intravenous administration of AAV vectors was performed by retro-orbital injection with a 31-gauge needle in 6–8 week old mice66. Following injection, 1–2 drops of proparacaine (Akorn Pharmaceuticals, 17478-263-12) were applied to the cornea to provide local analgesia.
+Langendorff-perfusion of heart and cardiac ganglion stimulation. Mice were given heparin (100U, i.p.) to prevent blood clotting and euthanized with sodium pentobarbital (150 mg kg−1, i.p.). Once all reﬂexes subsided and following a midsternal incision, hearts were rapidly excised and Langendorff-perfused at 37 °C modiﬁed Tyrode’s solution containing the following (in mM): 112 NaCl, 1.8 CaCl2, 5 KCl, 1.2 MgSO4, 1 KH2PO4, 25 NaHCO3, and 50 D-glucose at pH 7.4. The solution was continuously bubbled with 95% O2 and 5% CO2. Flow rate was adjusted to maintain a perfusion pressure of 60–80 mmHg. An optical ﬁber (400 µm core, Doric Lens) coupled to a diode-pumped solid-state laser light source (473 nm, 400 mW, Optic Engine) was positioned for focal illumination of the IPV-GP under the guidance of a ﬂuorescent stereomicroscope (Leica, M205 FA) ﬁtted with a 1x Plan-Apochromat. An octapolar electrophysiology catheter (1.1F, Transonic) was inserted into the left atrium and ventricle via a small incision in the left atrium and 2 platinum electrodes were positioned in the bath to obtain intracardiac electrograms and a bath electrocardiogram, respectively. Intracardiac electrograms and electrocardiogram were ampliﬁed with a differential alternating current ampliﬁer (A-M Systems, Model 1700 and Grass, P511, respectively) and continuously acquired (AD Instruments, PowerLab 8/35). Dose response curves were performed to evaluate the effects of altering light pulse power (at 10 Hz and 10 ms), frequency (at 10 ms and 221 mW), and pulse width (at 10 Hz and 221 mW) on heart rate and AV interval. At the end of the experiment, atropine (10 uM) was administered into the perfusate and stimulation (10 Hz, 10 ms, and 221 mW) was repeated. All stimulations were performed for 10 s with 5 min between stimulations for heart rate to return to baseline values.
+In vivo vagus nerve and paravertebral ganglia stimulation. Mice were anesthetized with isoﬂurane (induction at 3–5%, maintenance at 1–3% vol/vol, inhalation), intubated, and mechanically ventilated (CWE, SAR-830). Core body temperature was measured and maintained at 37 °C. For VNS, a midline neck incision was performed and the left and right cervical vagus nerves were exposed. A laser-coupled optical ﬁber was positioned above and bipolar platinum hook
+
+electrodes coupled to a constant current stimulator (Grass, PSIU6 and Model S88) below the right vagus nerve for focal optical or electrical stimulation, respectively. Irradiance and current were titrated to achieve a 10% decrease in heart rate with both vagi intact at 10 Hz and 10 ms, which was deﬁned as threshold intensity. Threshold intensity for optogenetic stimulation was 77 ± 6 mW and for electrical stimulation was 33 ± 13 µA. Frequency response curves were performed at threshold intensity and 10 ms. All stimulations were performed for 5 s with 5 min between stimulations for heart rate to return to baseline values. For paravertebral ganglia stimulation, a right lateral thoracotomy was performed at the second intercostal space and the paravertebral chain from the stellate to T2 ganglion was exposed. A laser-coupled optical ﬁber was positioned for focal illumination above the craniomedial RSG or right T2 ganglion. Dose response curves were performed to evaluate the effect of altering RSG stimulation frequency (at 10 ms and 126 mW) and pulse width (at 10 Hz and 126 mW) on heart rate. The effect of RSG versus right T2 ganglion stimulation (10 Hz, 10 ms, and 126 mW) on heart rate was also evaluated. At the end of the experiment, propranolol (2 mg kg−1, i.v.) was administered via a femoral vein and craniomedial RSG stimulation (10 Hz, 10 ms, and 126 mW) was repeated. All stimulations were performed for 10 s with 5 min between stimulations for heart rate to return to baseline values. For vagus nerve and paravertebral ganglia stimulation experiments, a lead II electrocardiogram was obtained by two needle electrodes inserted subcutaneously into the right forepaw and the left hindpaw.
+Electrophysiology data analysis. The heart rate was averaged over 0.5 s before and during stimulation. A minimum of three beats were averaged before and during stimulation for P wave duration.
+CTB heart injections. Mice were given carprofen (5 mg kg−1, s.c.) and buprenorphine (0.05 mg kg−1, s.c.) 1 h before surgery. Animals were anesthetized with isoﬂurane (induction at 5%, maintenance at 1–3%, inhalation), intubated, and mechanically ventilated. Core body temperature was measured and maintained at 37 °C. The surgical incision site was cleaned 3 times with 10% povidone iodine and 70% ethanol in H2O (vol/vol). A left lateral thoracotomy was performed at the fourth intercostal space, the pericardium opened, and the heart was exposed. Ten microliters of CTB conjugated to Alexa Fluor 488 (0.1% in 0.01 M PBS (vol/vol), ThermoFischer Scientiﬁc, C22841) was subepicardially injected in the heart with a 31-gauge needle. The surgical wounds were closed with 6–0 sutures. Buprenorphine (0.05 mg kg−1, s.c.) was administered once daily for up to 2 d after surgery. Animals were sacriﬁced 6 d later for tissue harvest.
+Transcardial perfusion. Mice were given heparin (100U, i.p.) to prevent blood clotting and euthanized with sodium pentobarbital (150 mg kg−1, i.p.). Once all reﬂexes subsided, a midsternal incision was made and animals were transcardially perfused with 50 mL ice-cold 0.01 M PBS containing 100U heparin followed by 50 mL freshly prepared, ice-cold 4% paraformaldehyde (PFA; EMS, RT 15714) in PBS. Tissues were postﬁxed in 4% PFA overnight at 4 °C, washed, and stored in PBS with 0.01% sodium azide. Langendorff-perfused hearts were immersion ﬁxed in 4% PFA overnight at 4 °C at the end of the functional experiments
+iDISCO heart clearing. Whole mouse hearts were stained and cleared using a modiﬁed iDISCO protocol29. Fixed hearts were dehydrated with a graded methanol series (20, 40, 60, and 80% methanol in H2O (vol/vol), each for 1 h at room temperature), washed twice with 100% methanol for 1 h at room temperature, and chilled at 4 °C. Hearts were then incubated in 66% dichloromethane/33% methanol overnight at room temperature with agitation, washed twice in 100% methanol for 1 h at room temperature, and chilled to 4 °C. Next, hearts were bleached with 5% H2O2 in methanol (vol/vol) overnight at 4 °C. After bleaching, hearts were rehydrated with a graded methanol series, followed by one wash with 0.01 M PBS and two washes with 0.01 M PBS with 0.2% Triton X-100, each for 1 h at room temperature. For staining, hearts were permeabilized with 0.01 M PBS with 0.2% Triton X-100, 20% DMSO, and 0.3 M glycine and blocked with 0.01 M PBS with 0.2% Triton X-100, 10% DMSO, and 5% normal donkey serum (NDS), each for 2 d at 37 °C with agitation. Hearts were incubated in primary antibody rabbit antiPGP9.5 (Abcam, ab108986, 1:200) diluted in 0.01 M PBS with 0.2% Tween-20 and 10 mg ml−1 heparin (PTwH) for 1 week at 37 °C with agitation. Hearts were then washed several times in PTwH overnight at room temperature before secondary antibody donkey anti-sheep Cy3 (Jackson ImmunoResearch, 713-165-003, 1:300) incubation in PTwH for 1 week at 37 °C with agitation. Primary and secondary antibodies were replenished half way through staining. Hearts were then washed several times in PTwH overnight at room temperature. For clearing, stained hearts were dehydrated with a graded methanol series and incubated in 66% dichloromethane/33% methanol for 3 h at room temperature with agitation. Hearts were then washed twice in 100% dichloromethane for 15 min at room temperature. Hearts were stored and imaged in benzyl ether (Millipore Sigma, 108014 ALDRICH; refractive index: 1.55).
+PACT heart clearing. Whole and half mouse hearts were cleared using the PACT protocol30. Fixed hearts were incubated in 4% acrylamide (Bio-Rad, 161-0140) and 0% PFA (A4P0) (wt/vol) overnight at 4 °C with agitation. Hearts were vacuum
+
+10
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+ARTICLE
+
+degassed and bubbled with N2 for 10 min each and then polymerized in fresh A4P0 solution with 0.25% VA-044 thermal initiator (Wako) (wt/vol) for 3 h at 37 ° C. Hearts were cleared with 8% sodium dodecyl sulfate (Sigma-Aldrich, L3771)PBS (wt/vol) at pH 8.5 for 5 d (whole hearts) or 52 h (half hearts) at room temperature with agitation. Hearts were then washed several times in PBS over 2 d at room temperature. Hearts were stored and imaged in a refractive imaging matching solution (RIMS) (refractive index = 1.46)30,34.
+Immunohistochemistry. For whole-mount staining, ﬁxed hearts and ganglia were blocked in 0.01 M PBS with 10% NDS and 0.2% Triton X-100 PBS for 6 h at room temperature with agitation. Tissues were then incubated in primary antibody diluted in 0.01 M PBS with 0.2% Triton X-100 and 0.01% sodium azide for 3 nights at room temperature with agitation. The following primary antibodies were used: rabbit anti-PGP9.5 (Abcam, ab108986, 1:500), rabbit anti-HCN4 (Alomone Labs, APC-052, 1:100), chicken anti-GFP (Aves, GFP-1020, 1:1000), sheep anti-TH (Millipore Sigma, AB1542, 1:200), and goat anti-ChAT (Millipore Sigma, AB144P, 1:50). Tissues were washed several times in 0.01 M PBS overnight before incubation in secondary antibodies diluted in 0.01 M PBS with 0.2% Triton X-100 and 0.01% sodium azide for 2 nights at room temperature with agitation. The following secondary antibodies were used: donkey anti-rabbit Cy3 (Jackson ImmunoResearch, 711-165-152, 1:400), donkey anti-chicken 647 (Jackson ImmunoResearch, 703-605-155, 1:400), donkey anti-sheep Cy3 (Jackson ImmunoResearch, 713-165003, 1:400), and donkey anti-goat Cy3 (Jackson ImmunoResearch, 705-165-003, 1:400). Tissues were washed several times in 0.01 M PBS overnight before being mounted on microscope slides in RIMS.
+Fixed brains were cryopreserved in a 30% sucrose PBS solution for at least 48 h at 4 °C. Brains were then embedded in OCT (Tissue-Tek), frozen on dry ice, and stored in −80 °C until sectioning. For cryosectioning, 40 µm coronal sections were cut using a cryostat microtome (Leica). Sections of the medulla containing the DMV (Allen Mouse Brain Reference Atlas) were blocked in 0.01 M PBS with 10% NDS and 0.2% Triton X-100 for 1 h at room temperature with agitation. Sections were then incubated in primary antibody diluted in 0.01 M PBS with 10% NDS, 0.2% Triton X-100, and 0.01% sodium azide for 1 night at room temperature with agitation. The following primary antibodies were used: rabbit anti-ChAT (Millipore Sigma, AB143, 1:200) and chicken anti-GFP (Aves Labs, 1:1000). Tissues were washed several times in 0.01 M PBS with 0.2% Triton X-100 before incubation with secondary antibody diluted in 0.01 M PBS with 10% NDS, 0.2% Triton X-100, and 0.01% sodium azide for 2 h at room temperature with agitation. The following secondary antibodies were used: donkey anti-rabbit Cy3 (Jackson ImmunoResearch, 711-165-152, 1:1000) and donkey anti-chicken 647 (Jackson ImmunoResearch, 703-605-155, 1:400). Tissues were washed several times in 0.01 M PBS with 0.2% Triton X-100 before being mounted on microscope slides in Fluoromount-G (Thermo Fisher Scientiﬁc, 00-4958-02).
+Imaging, image processing, and imaging data analysis. Images were acquired on a confocal laser scanning microscope (Zeiss, LSM 880) ﬁtted with the following objectives: Fluar 5×/0.25 M27 Plan-Apochromat, 10×/0.45 M27 (working distance 2.0 mm), Plan-Apochromat 25×/0.8 Imm Corr DIC M27 multi-immersion, and LD C-Apochromat 40×/1.1 W Korr. Cleared heart in Supplementary Video 3 was imaged on a custom-built lightsheet ﬂuorescence microscope ﬁtted with a 10×/0.6 CLARITY objective (Olympus, XLPLN10XSVMP)31.
+All image processing was performed using Zeiss Zen 2.1 v11, Adobe Photoshop and Illustrator, NIH ImageJ, Bitplane Imaris 8.3, and custom Matlab scripts.
+Computational tracing of nerve ﬁbers to establish global innervation patterns was performed using a customized version of the open-source software neuTube71 to perform initial batch tracing of image tiles. The resulting tracings were stitched, ﬁltered, and visualized using custom Matlab scripts. Tracing of cholinergic neurons from a cardiac ganglion to the SA node was performed semi-automatically using neuTube.
+Quantiﬁcation of cell transduction in cardiac ganglia (Fig. 3b and Supplementary Fig. 3e), stellate ganglia (Fig. 6c), and medulla sections (Supplementary Fig. 3b) was performed by manual cell counting using NIH ImageJ Cell Counter.
+For the stellate ganglion heat maps in Figs. 5d, 3d locations of CTB-labeled cell bodies in each stellate ganglion were marked using NIH ImageJ Cell Counter. Maximum intensity projection images were manually annotated with 2D polygonal regions of interest demarcating the extent of the stellate ganglion. Marked cell bodies outside the stellate ganglion were excluded from subsequent analysis. Landmark point locations were selected along the stellate ganglion boundary (e.g., ansa). One right and one left stellate ganglion image were selected to serve as reference shapes (white dashed outline in Fig. 5d). To align the landmarks for each sample with the selected reference sample, a non-rigid warping was estimated by ﬁtting a 2D thin plate spline warp72 with a regularization parameter of 1e−6. The density of labeled cell bodies was estimated by binning the x,y-image coordinates of each marked cell into 50 × 50 µm bins and counting the number of cells falling in each bin in order to compute the number of cells per square µm in projection. These density maps from each individual sample were then warped using the thin plate spline warp estimated from the spatial landmark correspondences to align them all with the reference sample. Finally, the densities were averaged point-wise across samples. One could, in principle, perform warping and density estimation in
+
+3D. However, we observed little variation in the densities labeled of cells along the optical z-axis, presumably due to the consistent orientation of samples on slides.
+Statistics. Microsoft Excel 16.21.1 and GraphPad Prism 8.0.1 were used for data analysis and graph generation. The animal group sizes were chosen based on preliminary data that suggested a large effect size. Two animals in which optogenetic stimulation of the IPV-GP was attempted were excluded from data analysis owing to failed Langendorff-perfusion of the heart. Sample sizes are indicated in ﬁgure legends or text. In Fig. 3b, 153 ± 27 cardiac ganglion neurons were counted per animal. In Fig. 6c, 291 ± 62 stellate ganglion neurons were counted per animal. In Supplementary Fig. 3b and e, 65 ± 17 DMV neurons and 202 ± 31 cardiac ganglion neurons were counted per animal, respectively. Data distribution was assumed to be normal, but this was not formally tested. Data are presented as mean +/− s.e.m. Comparisons for all pairs were conducted with a two-tailed Student’s t-test. P < 0.05 was considered statistically signiﬁcant.
+Reporting summary. Further information on research design is available in the Nature Research Reporting Summary linked to this article.
+Data availability
+The data that support the ﬁndings of this study are available from the corresponding authors upon reasonable request. Viral vectors and protocols are available through Addgene or Beckman Institute for CLARITY, Optogenetics, and Vector Engineering Research for technology development and broad dissemination: http://www. beckmaninstitute.caltech.edu/clover.shtml.
+Code availability
+Nerve ﬁber visualization and analysis algorithms used in this study are available are available at: https://www.ics.uci.edu/~fowlkes/SPARC/volume/.
+Received: 9 October 2018 Accepted: 27 March 2019
+References
+1. Jänig, W. The Integrative Action of the Autonomic Nervous System: Neurobiology of Homeostasis. (Cambridge University Press, Cambridge, UK, 2006).
+2. Baust, W. & Bohnert, B. The regulation of heart rate during sleep. Exp. Brain Res 7, 169–180 (1969).
+3. Robinson, B. F., Epstein, S. E., Beiser, G. D. & Braunwald, E. Control of heart rate by the autonomic nervous system. Studies in man on the interrelation between baroreceptor mechanisms and exercise. Circ. Res. 19, 400–411 (1966).
+4. Akselrod, S. et al. Power spectrum analysis of heart rate ﬂuctuation: a quantitative probe of beat-to-beat cardiovascular control. Science 213, 220–222 (1981).
+5. Pomeranz, B. et al. Assessment of autonomic function in humans by heart rate spectral analysis. Am. J. Physiol. 248, H151–H153 (1985).
+6. Pagani, M. et al. Power spectral analysis of heart rate and arterial pressure variabilities as a marker of sympatho-vagal interaction in man and conscious dog. Circ. Res. 59, 178–193 (1986).
+7. Crick, S. J. et al. Innervation of the human cardiac conduction system. A quantitative immunohistochemical and histochemical study. Circulation 89, 1697–1708 (1994).
+8. Crick, S. J., Sheppard, M. N., Ho, S. Y. & Anderson, R. H. Localisation and quantitation of autonomic innervation in the porcine heart I: conduction system. J. Anat. 195, 341–357 (1999).
+9. Ardell, J. L. & Randall, W. C. Selective vagal innervation of sinoatrial and atrioventricular nodes in canine heart. Am. J. Physiol. 251, H764–H773 (1986).
+10. Levy, M. N. & Zieske, H. Autonomic control of cardiac pacemaker activity and atrioventricular transmission. J. Appl Physiol. 27, 465–470 (1969).
+11. Prando, V. et al. Dynamics of neuroeffector coupling at cardiac sympathetic synapses. J. Physiol. 596, 2055–2075 (2018).
+12. Wengrowski, A. M. et al. Optogenetic release of norepinephrine from cardiac sympathetic neurons alters mechanical and electrical function. Cardiovasc. Res. 105, 143–150 (2015).
+13. Moreno, A. et al. Sudden heart rate reduction upon optogenetic release of acetylcholine from cardiac parasympathetic neurons in perfused hearts. Front. Physiol. 10, 16 (2019).
+14. Jordan, J. L., Yamaguchi, I. & Mandel, W. J. Studies on the mechanism of sinus node dysfunction in the sick sinus syndrome. Circulation 57, 217–223 (1978).
+15. Hoard, J. L. et al. Cholinergic neurons of mouse intrinsic cardiac ganglia contain noradrenergic enzymes, norepinephrine transporters, and the
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+11
+
+ARTICLE
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+neurotrophin receptors tropomyosin-related kinase A and p75. Neuroscience 156, 129–142 (2008). 16. Rysevaite, K. et al. Immunohistochemical characterization of the intrinsic cardiac neural plexus in whole-mount mouse heart preparations. Heart Rhythm 8, 731–738 (2011). 17. Treweek, J. B. & Gradinaru, V. Extracting structural and functional features of widely distributed biological circuits with single cell resolution via tissue clearing and delivery vectors. Curr. Opin. Biotechnol. 40, 193–207 (2016). 18. Richardson, D. S. & Lichtman, J. W. Clarifying tissue clearing. Cell 162, 246–257 (2015). 19. Lerner, T. N., Ye, L. & Deisseroth, K. Communication in neural circuits: tools, opportunities, and challenges. Cell 164, 1136–1150 (2016). 20. Deverman, B. E. et al. Cre-dependent selection yields AAV variants for widespread gene transfer to the adult brain. Nat. Biotechnol. 34, 204–209 (2016). 21. Chan, K. Y. et al. Engineered AAVs for efﬁcient noninvasive gene delivery to the central and peripheral nervous systems. Nat. Neurosci. 20, 1172–1179 (2017). 22. Bedbrook, C. N., Deverman, B. E. & Gradinaru, V. Viral strategies for targeting the central and peripheral nervous systems. Annu. Rev. Neurosci. 41, 323–348 (2018). 23. Allen, E. et al. Electrophysiological effects of nicotinic and electrical stimulation of intrinsic cardiac ganglia in the absence of extrinsic autonomic nerves in the rabbit heart. Heart Rhythm 15, 1698–1707 (2018). 24. Zarzoso, M. et al. Nerves projecting from the intrinsic cardiac ganglia of the pulmonary veins modulate sinoatrial node pacemaker function. Cardiovasc. Res. 99, 566–575 (2013). 25. Foley, J. O. & Dubois, F. S. Quantitative studies of the vagus nerve in the cat. J. Comp. Neurol. 67, 49–67 (1937). 26. Ardell, J. L., Rajendran, P. S., Nier, H. A., KenKnight, B. H. & Armour, J. A. Central-peripheral neural network interactions evoked by vagus nerve stimulation: functional consequences on control of cardiac function. Am. J. Physiol. Heart Circ. Physiol. 309, H1740–H1752 (2015). 27. Yamakawa, K. et al. Vagal nerve stimulation activates vagal afferent ﬁbers that reduce cardiac efferent parasympathetic effects. Am. J. Physiol. Heart Circ. Physiol. 309, H1579–H1590 (2015). 28. Yoo, P. B. et al. High-resolution measurement of electrically-evoked vagus nerve activity in the anesthetized dog. J. Neural Eng. 10, 026003 (2013). 29. Renier, N. et al. iDISCO: a simple, rapid method to immunolabel large tissue samples for volume imaging. Cell 159, 896–910 (2014). 30. Treweek, J. B. et al. Whole-body tissue stabilization and selective extractions via tissue-hydrogel hybrids for high-resolution intact circuit mapping and phenotyping. Nat. Protoc. 10, 1860–1896 (2015). 31. Greenbaum, A. et al. Bone CLARITY: Clearing, imaging, and computational analysis of osteoprogenitors within intact bone marrow. Sci. Transl. Med. 9, eaah6518 (2017). 32. Oh, Y. S. et al. Spatial distribution of nerve sprouting after myocardial infarction in mice. Heart Rhythm 3, 728–736 (2006). 33. Yokoyama, T. et al. Quantiﬁcation of sympathetic hyperinnervation and denervation after myocardial infarction by three-dimensional assessment of the cardiac sympathetic network in cleared transparent murine hearts. PLoS ONE 12, e0182072 (2017). 34. Yang, B. et al. Single-cell phenotyping within transparent intact tissue through whole-body clearing. Cell 158, 945–958 (2014). 35. Shi, W. et al. Distribution and prevalence of hyperpolarization-activated cation channel (HCN) mRNA expression in cardiac tissues. Circ. Res. 85, e1–e6 (1999). 36. Anderson, R. H., Yanni, J., Boyett, M. R., Chandler, N. J. & Dobrzynski, H. The anatomy of the cardiac conduction system. Clin. Anat. 22, 99–113 (2009). 37. Hoover, D. B., Ganote, C. E., Ferguson, S. M., Blakely, R. D. & Parsons, R. L. Localization of cholinergic innervation in guinea pig heart by immunohistochemistry for high-afﬁnity choline transporters. Cardiovasc. Res. 62, 112–121 (2004). 38. Ulphani, J. S. et al. Quantitative analysis of parasympathetic innervation of the porcine heart. Heart Rhythm 7, 1113–1119 (2010). 39. Kawano, H., Okada, R. & Yano, K. Histological study on the distribution of autonomic nerves in the human heart. Heart Vessels 18, 32–39 (2003). 40. Lellouche, N. et al. Functional characterization of atrial electrograms in sinus rhythm delineates sites of parasympathetic innervation in patients with paroxysmal atrial ﬁbrillation. J. Am. Coll. Cardiol. 50, 1324–1331 (2007). 41. Belardinelli, L. & Isenberg, G. Isolated atrial myocytes: adenosine and acetylcholine increase potassium conductance. Am. J. Physiol. 244, H734–H737 (1983). 42. Belardinelli, L., Giles, W. R. & West, A. Ionic mechanisms of adenosine actions in pacemaker cells from rabbit heart. J. Physiol. 405, 615–633 (1988). 43. Buckley, U., Shivkumar, K. & Ardell, J. L. Autonomic regulation therapy in heart failure. Curr. Heart Fail Rep. 12, 284–293 (2015). 44. Koopman, F. A. et al. Vagus nerve stimulation inhibits cytokine production and attenuates disease severity in rheumatoid arthritis. Proc. Natl Acad. Sci. USA 113, 8284–8289 (2016).
+
+45. Llewellyn, M. E., Thompson, K. R., Deisseroth, K. & Delp, S. L. Orderly recruitment of motor units under optical control in vivo. Nat. Med. 16, 1161–1165 (2010).
+46. Hill-Smith, I. & Purves, R. D. Synaptic delay in the heart: an ionophoretic study. J. Physiol. 279, 31–54 (1978).
+47. Nehrhoff, I. et al. 3D imaging in CUBIC-cleared mouse heart tissue: going deeper. Biomed. Opt. Express 7, 3716–3720 (2016).
+48. Ajijola, O. A. et al. Focal myocardial infarction induces global remodeling of cardiac sympathetic innervation: neural remodeling in a spatial context. Am. J. Physiol. Heart Circ. Physiol. 305, H1031–H1040 (2013).
+49. Ajijola, O. A. et al. Sympathetic modulation of electrical activation in normal and infarcted myocardium: implications for arrhythmogenesis. Am. J. Physiol. Heart Circ. Physiol. 312, H608–H621 (2017).
+50. Hopkins, D. A. & Armour, J. A. Localization of sympathetic postganglionic and parasympathetic preganglionic neurons which innervate different regions of the dog heart. J. Comp. Neurol. 229, 186–198 (1984).
+51. Nozdrachev, A. D., Jimenez, B., Morales, M. A. & Fateev, M. M. Neuronal organization and cell interactions of the cat stellate ganglion. Auton. Neurosci. 95, 43–56 (2002).
+52. Schafer, M. K., Schutz, B., Weihe, E. & Eiden, L. E. Target-independent cholinergic differentiation in the rat sympathetic nervous system. Proc. Natl Acad. Sci. USA 94, 4149–4154 (1997).
+53. Kummer, W., Fischer, A., Kurkowski, R. & Heym, C. The sensory and sympathetic innervation of guinea-pig lung and trachea as studied by retrograde neuronal tracing and double-labelling immunohistochemistry. Neuroscience 49, 715–737 (1992).
+54. Hull, D. & Segall, M. M. Sympathetic nervous control of brown adipose tissue and heat production in the new-born rabbit. J. Physiol. 181, 458–467 (1965).
+55. Furlan, A. et al. Visceral motor neuron diversity delineates a cellular basis for nipple- and pilo-erection muscle control. Nat. Neurosci. 19, 1331–1340 (2016).
+56. Bayles, R. G. et al. Transcriptomic and neurochemical analysis of the stellate ganglia in mice highlights sex differences. Sci. Rep. 8, 8963 (2018).
+57. Chang, R. B., Strochlic, D. E., Williams, E. K., Umans, B. D. & Liberles, S. D. Vagal sensory neuron subtypes that differentially control breathing. Cell 161, 622–633 (2015).
+58. Standish, A., Enquist, L. W., Escardo, J. A. & Schwaber, J. S. Central neuronal circuit innervating the rat heart deﬁned by transneuronal transport of pseudorabies virus. J. Neurosci. 15, 1998–2012 (1995).
+59. Strack, A. M., Sawyer, W. B., Hughes, J. H., Platt, K. B. & Loewy, A. D. A general pattern of CNS innervation of the sympathetic outﬂow demonstrated by transneuronal pseudorabies viral infections. Brain Res. 491, 156–162 (1989).
+60. Williams, E. K. et al. Sensory neurons that detect stretch and nutrients in the digestive system. Cell 166, 209–221 (2016).
+61. Rossi, J. et al. Melanocortin-4 receptors expressed by cholinergic neurons regulate energy balance and glucose homeostasis. Cell Metab. 13, 195–204 (2011).
+62. Madisen, L. et al. A toolbox of Cre-dependent optogenetic transgenic mice for light-induced activation and silencing. Nat. Neurosci. 15, 793–802 (2012).
+63. Madisen, L. et al. A robust and high-throughput Cre reporting and characterization system for the whole mouse brain. Nat. Neurosci. 13, 133–140 (2010).
+64. Lindeberg, J. et al. Transgenic expression of Cre recombinase from the tyrosine hydroxylase locus. Genesis 40, 67–73 (2004).
+65. Hancock, J. F., Cadwallader, K., Paterson, H. & Marshall, C. J. A CAAX or a CAAL motif and a second signal are sufﬁcient for plasma membrane targeting of ras proteins. EMBO J. 10, 4033–4039 (1991).
+66. Challis, R. C. et al. Systemic AAV vectors for widespread and targeted gene delivery in rodents. Nat. Protoc. 14, 379–414 (2019).
+67. Reed, S. E., Staley, E. M., Mayginnes, J. P., Pintel, D. J. & Tullis, G. E. Transfection of mammalian cells using linear polyethylenimine is a simple and effective means of producing recombinant adeno-associated virus vectors. J. Virol. Methods 138, 85–98 (2006).
+68. Ayuso, E. et al. High AAV vector purity results in serotype- and tissueindependent enhancement of transduction efﬁciency. Gene Ther. 17, 503–510 (2010).
+69. Zolotukhin, S. et al. Recombinant adeno-associated virus puriﬁcation using novel methods improves infectious titer and yield. Gene Ther. 6, 973–985 (1999).
+70. Gray, S. J. et al. Production of recombinant adeno-associated viral vectors and use in in vitro and in vivo administration. Curr. Protoc. Neurosci. Chapter 4, Unit 4 17 (2011).
+71. Feng, L., Zhao, T. & Kim, J. neuTube 1.0: a New design for efﬁcient neuron reconstruction software based on the SWC format. eNeuro 2, ENEURO.004914.2014 (2015).
+72. Bookstein, F. L. Principal warps - thin-plate splines and the decomposition of deformations. Ieee Trans. Pattern Anal. Mach. Intell. 11, 567–585 (1989).
+
+12
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-019-09770-1
+
+ARTICLE
+
+Acknowledgements
+We thank the entire Shivkumar and Gradinaru group for discussions. This work was supported by a NIH Stimulating Peripheral Activity to Relieve Conditions (SPARC) awards (OT2OD023848 to K.S. and V.G.; OT2OD23864 to H.M.). The K.S. laboratory is also supported by a NIH National Heart, Lung, and Blood Institute (NHLBI) grant (R01HL084261) and a NIH SPARC award (U01EB025138-01 to K.S. and J.L.A.). The V.G. laboratory is also supported by a NIH Director’s New Innovator Award (DP2NS087949), a NIH Presidential Early Career Award for Scientists and Engineers, a NIH National Institute on Aging grant (R01AG047664), a NIH BRAIN Initiative award (U01NS090577), the Defense Advanced Research Projects Agency (DARPA) Biological Technologies Ofﬁce, the National Science Foundation NeuroNex Technology Hub (1707316), the Curci Foundation, the Beckman Institute, and the Rosen Bioengineering Center at Caltech. V.G. is a Heritage Principal Investigator supported by the Heritage Medical Research Institute. P.S.R. was supported by a NIH NHLBI F31 Predoctoral Fellowship (F31HL127974). R.C.C. was supported by an American Heart Association Postdoctoral Fellowship (17POST33410404). P.S.R. is a part of the UCLA-Caltech Medical Scientist Training Program. We thank Drs. Marmar Vaseghi (UCLA), Olujimi A. Ajijola (UCLA), and Ching Zhu (UCLA) for their comments on the manuscript.
+Author contributions
+P.S.R., R.C.C., J.L.A., V.G., and K.S. designed the study. P.S.R, S.H., and R.C.C. performed heart clearing. A.G. and P.S.R. performed lightsheet imaging of cleared hearts. K.Y.C., B.E.D., R.C.C., and V.G. designed viral constructs. R.C.C. and K.Y.C. produced viruses. R.C.C. and P.S.R. performed retro-orbital injections. C.C.F. developed computational pipeline, performed ﬁber tracing, and analyzed stellate ganglia CTB data. P.S.R. and R.C.C. performed immunohistochemistry. P.S.R. performed optogenetic experiments. J.D.T. helped with optogenetic experiments. M.C.J. performed cardiac CTB injections. P.S.R., P.H., S.H., B.A.G-.W., and G.S. analyzed data. H.M. provided guidance on TH mouse line selection. P.S.R. and R.C.C. prepared the ﬁgures. P.S.R. and K.S. wrote the manuscript. All coauthors contributed to the ﬁnal version of the manuscript.
+
+Additional information
+Supplementary Information accompanies this paper at https://doi.org/10.1038/s41467019-09770-1.
+Competing interests: The authors declare no competing interests.
+Reprints and permission information is available online at http://npg.nature.com/ reprintsandpermissions/
+Journal Peer Review Information: Nature Communications thanks Matthew Kay, and other anonymous reviewer(s) for their contribution to the peer review of this work. Peer reviewer reports are available.
+Publisher’s note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/ licenses/by/4.0/.
+© The Author(s) 2019
+
+NATURE COMMUNICATIONS | (2019)10:1944 | https://doi.org/10.1038/s41467-019-09770-1 | www.nature.com/naturecommunications
+
+13
+

@@ -1,0 +1,351 @@
+Home Search Collections Journals About Contact us My IOPscience
+Statistical analysis of the DIAMOND MI study by the multipole method
+This content has been downloaded from IOPscience. Please scroll down to see the full text. 2005 Physiol. Meas. 26 591 (http://iopscience.iop.org/0967-3334/26/5/002) View the table of contents for this issue, or go to the journal homepage for more
+Download details:
+IP Address: 170.140.142.252 This content was downloaded on 24/08/2017 at 02:53 Please note that terms and conditions apply.
+You may also be interested in:
+Ischemic risk stratification by means of multivariate analysis of the heart rate variability José F Valencia, Montserrat Vallverdú, Alberto Porta et al. Repeatability of HRV in CH as analysed by DFA J C Echeverría, L I Solís, J E Pérez et al. Recording duration and short-term reproducibility of heart rate and QT interval variability in patients with myocardial infarction Safa Yaghini Bonabi, Fatima El-Hamad, Alexander Müller et al. Relationship between DFA and spectral analysis Keith Willson, Darrel P Francis, Roland Wensel et al. Short-term heart rate variability---age dependence in healthy subjects A Voss, A Heitmann, R Schroeder et al. Variations of heart rate variability parameters prior to the onset of ventricular tachyarrhythmia and sinus tachycardia in ICD patients. Results from the heart rate variability analysis with automated ICDs (HAWAI) registry C G Wollmann, R Gradaus, D Böcker et al. Multifractal and nonlinear assessment of autonomous nervous system response R Magrans, P Gomis, P Caminal et al. The altered complexity of cardiovascular regulation in depressed patients Steffen Schulz, Mandy Koschke, Karl-Jürgen Bär et al.
+
+INSTITUTE OF PHYSICS PUBLISHING Physiol. Meas. 26 (2005) 591–598
+
+PHYSIOLOGICAL MEASUREMENT doi:10.1088/0967-3334/26/5/002
+
+Statistical analysis of the DIAMOND MI study by the multipole method
+R M Olesen1, P E Bloch Thomsen1, K Saermark2, M Glikson3, S Feldman3, M Lewkowicz4 and J Levitan4
+1 Department of Cardiology, Amtssygehuset i Gentofte, Copenhagen University Hospital, Denmark 2 Department of Physics, The Technical University of Denmark, Lyngby, Denmark 3 Department of Cardiology, Chaim Sheba Medical Center, Tel Hashomer, Israel 4 Department of Physics, The College of Judea and Samaria, Ariel, Israel
+Received 5 December 2004, accepted for publication 6 May 2005 Published 31 May 2005 Online at stacks.iop.org/PM/26/591
+Abstract We present a new method to describe the dynamics of the beat-to-beat RR time series. The classiﬁcation of the phase-space plots obtained from RR time series is performed by a calculation of parameters which describe the features of the two-dimensional plot. We demonstrate that every parameter has its speciﬁc consequence on the evaluation of the state of the cardiac function. By applying the method to the DIAMOND MI study we demonstrate that these parameters have more prognostic power than previously suggested risk markers. The results suggest that the RR intervals constitute a highly complex time series which necessitates the use of reﬁned mathematical–statistical methods in order to reveal pathologies in the heart rate.
+Keywords: heart rate variability, recurrence plot, multipoles, DIAMOND MI study
+
+1. Introduction
+
+Reduced heart rate variability (HRV) is an important prognostic factor predicting sudden arrhythmic death after acute myocardial infarction (AMI) (Task force of The European Society of Cardiology 1996, Tapanainen et al 2002, Wessel et al 2000b, Kleiger et al 1987, Schwartz et al 1992, Meyerburg et al 1992, Malik et al 1990, Makikallio et al 1999). Several studies have demonstrated increased arrhythmic as well as non-arrhythmic mortality in AMI populations with low HRV. Those studies included traditional methods based on time- or frequency-domain analysis and newer fractal analysis techniques which are based on time-domain analysis (Thurner et al 1998a, 1998b, Peng et al 1995, Ma¨kikallio et al 2001, Saermark et al 2000,
+
+0967-3334/05/050591+08$30.00 © 2005 IOP Publishing Ltd Printed in the UK
+
+591
+
+592
+
+R M Olesen et al
+
+Ashkenazy et al 2001, Wilson et al 2002, Voss et al 1996, Schmidt et al 1999, Wessel et al 2000a).
+Two methods have separated themselves exhibiting more prognostic power than the others in comparative studies. One is the short-term fractal scaling exponent α1 which evolved as a powerful predictor of death in the survivors of AMI (Peng et al 1995). In a comparative study it was shown that α1 is a better predictor of death than the traditional measures of HRV among patients with AMI and a low wall motion index. It also predicted independently arrhythmic death which neither of the traditional HRV measures did after adjustment for clinical risk factors (Huikuri et al 2000).
+The other is the multipole method, a recently developed method to describe time series with a highly complex time evolution computing various parameters (the multipoles) descriptive of the time series (Lewkowicz et al 2002, Bloch Thomsen et al 2001). In clinical medicine, the dynamics of the RR time series is commonly represented by the so-called recurrence plot (Huikuri et al 1996, Kamen et al 1995, 1996, Brennan et al 2002), where each RR interval is plotted against the previous one. The method replaces the classiﬁcation of the recurrence plot by visual inspection with the computation of the various multipoles. The two-dimensional recurrence plot is interpreted as a two-dimensional body where each data point is assigned a unit mass; the origin of the coordinate system is chosen in the centre of mass. Therefore one does not ignore the varying density of data points in the recurrence plots which might lead to similar contours for different heart dynamics, which has been the major obstacle for bedside application (Malik 1998). Each of these multipoles constitutes a measure exhibiting its particular facet for assessing the heart function. It includes, but also extends beyond, the integrative measures of HRV.
+
+1.1. The DIAMOND MI study
+The DIAMOND MI was a randomized double-blind-controlled study of Dofetilide in post-MI patients (The DIAMOND Study Group 1997). The study included screening of consecutive patients with left ventricular dysfunction in association with recent myocardial infarction. It included patients with an acute MI and a left ventricular wall motion index (WMI) < 1.2. A substudy of the DIAMOND MI was designed in order to determine and compare the prognostic power of traditional HRV measures with those of new fractal measures (Huikuri et al 2000). HRV was obtained from consecutive RR intervals from 24 h ECG recordings 5–10 days after AMI. Results were reported on 446 patients who fulﬁlled the criteria for meaningful RR interval variability analysis. The mortality was 25.6% after a follow-up of 685 + 360 days (114 died). 75 deaths (17%) were classiﬁed as arrhythmic and 28 (6.3%) were classiﬁed as non-arrhythmic cardiac deaths.
+
+2. Methods
+The present study makes use of four different multipoles: one of the quadrupole moments, two of the octupole moments and a hexadecapole-related moment.
+The quadrupole moment Qyy describes the overall distribution of the data points along and vertical to the diagon√al of the recurrence plot. It vanishes for an elliptically shaped distribution with an axis ratio of 2/1, where the data points are Gaussian distributed along the principal axes.
+One of the octupole moments (Txxx) expresses the skewness of the two-dimensional body along the x-axis and the other (Tyyy) on the y-axis.
+
+Statistical analysis of the DIAMOND MI study
+
+593
+
+Table 1. Predictive accuracies of the various HRV measures.
+
+Variable High risk values Sensitivity Speciﬁcity PPA NPA OPA
+
+Qyy
+
+Qyy −750
+
+64
+
+62
+
+36 83 60
+
+κyx
+
+κyx < 1.96
+
+69
+
+63
+
+39 86 64
+
+Txxx
+
+Txxx −25
+
+70
+
+54
+
+35 84 60
+
+Tyyy
+
+Tyyy −3.567 69
+
+43
+
+29 80 55
+
+SDNN SDNN < 65
+
+39
+
+75
+
+34 78 56
+
+LF
+
+(ln) < 5.5
+
+58
+
+60
+
+36 79 58
+
+HF
+
+(ln) > 5.5
+
+58
+
+58
+
+35 79 57
+
+LF/HF <1.6
+
+59
+
+59
+
+34 78 56
+
+CMP3 CMP3 > −2.5 79.8
+
+55.4
+
+38.1 88.9 65
+
+CMP4 CMP4 > −1.4 73
+
+64
+
+43 90 67
+
+α1
+
+α1 < 0.75
+
+62
+
+73
+
+46 84 65
+
+PPA: positive predictive accuracy, NPA: negative predictive accuracy, OPA: overall predictive accuracy.
+
+The hexadecapole-related moment we employ is the ratio of the kurtosis along the y-axis and the kurtosis along the x-axis, κyx. The kurtosis vanishes for a Gaussian distribution and is increasingly positive for progressively more peaked distributions.
+2.1. Univariate analysis
+The outcome variable was death within the follow-up period (685 + 360 days). For each of the four variables (multipoles) the cut-point which maximizes the sum of
+sensitivity and speciﬁcity was chosen.
+2.2. Multivariate analysis
+After ﬁxing the cut-points each variable was considered as a binary one. We used the multiple logistic regression. The appropriate model assumed that log(p/(1 − p)), where p is the probability of death, is the linear combination of the four multipole variables and their paired interactions (products). We used the backward elimination approach, which started with the model with all four multipole variables and all six interactions and step by step excluded one of the variables or interactions, which did not signiﬁcantly improve the goodness-of-ﬁt (the agreement between the model and the data).
+The ﬁnal model included only effects signiﬁcant on the standard level of 0.05. In section 3 we show the odds ratio (i.e. the ratio of the odds of the death in patients with highrisk values versus low-risk values) and the 95% conﬁdence limits for all the variables in the ﬁnal model.
+All calculations were performed using SAS 8.12. (SAS Institute, Cary, NC).
+3. Results
+The dichotomized variables for bad prognosis, i.e. death within the follow-up period, were deﬁned as Qyy −750, Txxx −25, Tyyy −3.567 and κyx < 1.96.
+Table 1 compares the sensitivity, speciﬁcity and predictive accuracy values of the various measures: the quadrupole moment Qyy, the hexadecapole moment ratio κyx, the two octupole moments Txxx and Tyyy, the combination of the three multipole parameters Txxx, Tyyy and κyx (CMP3) as derived by the multivariate analysis and the combination of all four multipole
+
+594
+
+R M Olesen et al
+
+Table 2. Ten patients from the DIAMOND MI study with low-risk Qyy values and elevated risk kurtosis ratio (<2.5).
+
+Patient Patient status Qyy κyx
+
+1
+
+Deceased
+
+−1828 1.97
+
+2
+
+Deceased
+
+−1560 2.01
+
+3
+
+Deceased
+
+−1797 2.25
+
+4
+
+Deceased
+
+−1856 2.27
+
+5
+
+Deceased
+
+−2101 2.31
+
+6
+
+Deceased
+
+−2637 2.36
+
+7
+
+Alive
+
+−1635 2.37
+
+8
+
+Deceased
+
+−1525 2.38
+
+9
+
+Deceased
+
+−1926 2.40
+
+10
+
+Deceased
+
+−1702 2.43
+
+11
+
+Deceased
+
+−1426 2.48
+
+parameters (CMP4). The predictive power of these measures is compared with those of the other, more traditional HRV measures (α1, SDNN, HF, LF and LF/HF) (Huikuri et al 2000).
+The ﬁnal model of the multiple logistic regression included the dichotomized variables:
+κyx (OR = 3.255, 95% CI = (2.020, 5.243)) Tyyy (OR = 1.936, 95% CI = (1.196, 3.136)) Txxx (OR = 2.168, 95% CI = (−1.333, −3.525)) (OR: odds ratio, CI: conﬁdence interval).
+This combined model of three multipole parameters (CMP3) achieves the sensitivity of 79.8%, the speciﬁcity of 55.4% and an overall predictive accuracy of 65%.
+By combining all of the four multipole parameters (CMP4) one obtains an overall predictive accuracy of 67%.
+Table 2 lists ten patients from the DIAMOND MI study which have low-risk Qyy values but an elevated risk kurtosis ratio (<2.5). The mortality in this group was 90%, remarkably high relative to the overall mortality of 25.6%.
+Figure 1 shows Kaplan–Meier survival curves for the scaling exponent α1, the SDNN and the combined parameter CMP4.
+In order to demonstrate the relevance of the octupoles we include ﬁgure 2 which shows recurrence plots for two of the recordings from the DIAMOND MI study with similar quadrupoles. Figure 2(a) shows a survivor with the highest concentration of data points on the positive part of the x-axis (negative octupole), whereas ﬁgure 2(b) shows the plot of a deceased individual with the major part of data points concentrated on the negative part of the x-axis (positive octupole).
+4. Discussion
+The series of RR intervals is an excellent example of a non-stationary and non-linear time series with a very complex behaviour. It seems reasonable to expect that the regulation of the heart rhythm, which is a very complex mechanism due to its dependence on many subsystems in the body, can be described optimally only by a method which has a diversity of different parameters describing partly different behaviours of those subsystems.
+The quadrupole moment, although resembling a standard deviation for the twodimensional distribution, differs fundamentally from the one-dimensional standard deviation
+
+Statistical analysis of the DIAMOND MI study
+
+595
+
+DFA 200 400 600 800 1000 1200 1400
+0.9
+
+0.8
+
+0.7
+
+0.6
+
+0.5
+
+0.4
+
+SDNN
+
+500
+
+1000
+
+1500
+
+2000
+
+0.9
+
+0.8
+
+0.7
+
+0.6
+
+0.5 CMP-4
+200 400 600 800 1000 1200 1400 0.9
+
+0.8
+
+0.7
+
+0.6
+
+Figure 1. Kaplan–Meier survival curves for the DIAMOND MI study: (a) by the fractal scaling exponent α1 (upper branch α1 0.75; lower branch α1 < 0.75), (b) by the SDNN (upper branch SDNN 65 ms; lower branch SDNN < 65 ms) and (c) by the CMP4 (upper branch CMP4 −1.4; lower branch CMP4 > −1.4).
+of the RR interval time series, the SDNN, which does not include any time ordering (shufﬂing the RR intervals will result in the same value for SDNN). The various multipoles due to the very construction of the recurrence plot bear intrinsic time dependence and thus convey a quantiﬁcation of the cardiac system’s dynamical properties. This explains why Qyy is superior to SDNN as a prognostic indicator.
+
+596
+RR (msec)
+
+R M Olesen et al
+
+RR (msec)
+
+RR (msec)
+(a)
+
+RR (msec)
+(b)
+Figure 2. Phase-space plots for survivor (a) and non-survivor (b). They have approximately the same quadrupole moments but different octupole moments. (a) is an example of positive x-skewness, and (b) is an example of a negative x-skewness. (This ﬁgure is in colour only in the electronic version)
+Nevertheless, a low-risk quadrupole, indicating a considerable spread of data points, might also be obtained by large concentration of data points near the average value (the heart beats for extended periods with a low variability) together with spots of high density of points far away from the average (the heart beating some periods with a very high variability, as typical
+
+Statistical analysis of the DIAMOND MI study
+
+597
+
+for arrhythmia). This conﬁguration results in a high-risk kurtosis ratio. This combination of low-risk quadrupole with a high-risk kurtosis ratio appears in the DIAMOND MI study in ten individuals, listed in table 2.
+A similar analysis can be applied to the octupole moments. Two different distributions with the same mean and the same variance may differ with respect to the position of their maxima relative to their common mean. Skewness is a quantitative measure of this lack of symmetry. A distribution with the position of its maximum below the mean is said to be positively skewed, and vice versa. For a two-dimensional distribution as the RR recurrence plot, the octupole moments in respect with a principal axis can be connected to the skewness of the projection of the distribution along this axis. A negative octupole/skewness along the x-axis implies that the heart beats for extended periods with a low pulse rate (large RR intervals), while a positive octupole/skewness along the x-axis implies that the heart beats with a high pulse rate for extended periods.
+A high concentration of data points on the negative y-axis (positive y-skewness) indicates a slow decrease and a fast increase in the heart rate which is a sign of an impaired sympathetic and/or parasympathetic nervous system. Negative skewness on the y-axis, implying a slowly increasing and a fast decreasing pulse, is hence one of the indications for a well-functioning heart function.
+The ﬁrst relevant multipole moment, the quadrupole (the dipole vanishes due to the choice of the origin), turns out to be a stronger risk indicator than SDNN (overall predictive accuracy 60 versus 56). Combining the other multipoles that were used in this study into a single measure by a multivariate analysis results in a measure which is a much more potent predictor than SDNN (65 versus 56) and similar to α1. Combining all four measures results in a predictor (CMP4) superior to all other predictors used in the DIAMOND MI study (Huikuri et al 2000).
+
+5. Conclusion
+The study shows that the multipole method provides more prognostic information on patients after acute myocardial infarction than previously suggested risk markers.
+The method includes all the integrative measures of heart rate variability, but exceeds the predictive ability of traditional HRV due to the additional dynamic information gained by the individual moments obtained by expanding the RR recurrence plot.
+
+Acknowledgment
+We are grateful to the Danish–Israeli Study Fund in memory of Josef and Regine Nachemson for support.
+
+References
+Ashkenazy Y, Lewkowicz M, Levitan J, Havlin S, Saermark K, Moelgaard H, Thomsen P E B, Moller M, Hintze U and Huikuri H V 2001 Scale-speciﬁc and scale-independent measures of heart rate variability as risk indicators Europhys. Lett. 53 709–15
+Bloch Thomsen P E, Saermark K, Huikuri H V, Ma¨kikallio T H, Levitan J, Køber L, Lewkowicz M and Feldman S 2001 Multipole analysis predicts mortality after acute myocardial infarction Europace 2 (suppl. B) 633
+Brennan M, Palaniswami M and Kamen P 2002 Poincare´ plot interpretation using a physiological model of HRV based on a network of oscillators Am. J. Physiol. Heart Circ. Physiol. 283 H 1873–86
+Huikuri H V, Ma¨kikallio T H, Peng C K, Goldberger A L, Hintze U and Moller M 2000 Fractal correlation properties of R-R interval dynamics and mortality in patients with depressed left ventricular function after an acute myocardial infarction Circulation 101 47–54
+
+598
+
+R M Olesen et al
+
+Huikuri H V, Seppanen T, Koistinen M J, Airaksinen K E J, Ikaheimo M J, Castellanos A and Myerburg R J 1996 Abnormalities in beat-to-beat dynamics of heart rate before onset of life-threatening ventricular tachyarrhythmias in patients with prior myocardial infarction Circulation 93 1836–44
+Kamen P W, Krum H and Tomkin A M 1996 Poincare´ plot of heart rate variability allows quantitative display of parasympathetic nervous activity in humans Clin. Sci. 91 201–8
+Kamen P W and Tomkin A M 1995 Application of the Poincare´ plot to heart-rate-variability—a new measure of functional status in heart-failure Aust. NZ. J. Med. 25 18–26
+Kleiger R E, Miller J P, Bigger J T and Moss A 1987 Decreased heart rate variability and its association with increased mortality after acute myocardial nfarction Am. J. Cardiol. 59 256–62
+Lewkowicz M, Levitan J, Puzanov N, Shnerb N and Saermark K 2002 Description of complex time series by multipoles Physica A 311 260–4
+Ma¨kikallio T H, Huikuri H V, Hintze U, Videbaek J, Mitrani R D, Castellanos A, Myerburg R J and Moller M 2001 Fractal analysis and time- and frequency-domain measures of heart rate variability as predictors of mortality in patients with heart failure Am. J. Cardiol. 87 178–82
+Ma¨kikallio T H, Koistinen J and Jordaens L 1999 Heart rate dynamics before spontaneous onset of ventricular ﬁbrillation in patients with healed myocardial infarcts Am. J. Cardiol. 83 880–4
+Malik M 1998 Heart rate variability Curr. Opin. Cardiol. 13 36–44 Malik M, Farrel T and Camm A J 1990 Circadian rhythm of heart rate variability after acute myocardial infarction
+and its inﬂuence on the prognostic value of heart rate variability Am. J. Cardiol. 66 1049–54 Meyerburg R J, Kessler K M and Castellanos A 1992 Sudden cardiac death: structure, function and time dependence
+of risk Circulation 85 12–110 Peng C K, Havlin S, Stanley H E and Goldberger A L 1995 Quantiﬁcation of scaling exponents and crossover
+phenomena in nonstationary heartbeat time-series Chaos 5 82–7 Saermark K, Moeller M, Hintze U, Moelgaard H, Thomsen P E B, Huikuri H, Ma¨kikallio T, Levitan J and
+Lewkowicz M 2000 Comparison of recent methods of analyzing heart rate variability Fractals 8 315–22 Schmidt G, Malik M and Barthel P 1999 Heart-rate turbulence after ventricular premature beats as a predictor of
+mortality after acute myocardial infarction Lancet 353 1390–6 Schwartz P J, La Rovere M T and Vanoli E 1992 Autonomic nervous system and sudden cardiac death Circulation
+61 177–91 Tapanainen J, Thomsen P E B, Koeber L, Pedersen C T, Ma¨kikallio T H, Still A M, Lindgrenm K and Huikuri H V
+2002 Fractal analysis of heart rate variability and mortality after an acute myocardial infarction Am. J. Cardiol. 90 347–52 Task Force of The European Society of Cardiology and The North American Society of Pacing and Electrophysiology 1996 Heart rate variability: standard of measurement, physiological interpretation and clinical use Circulation 93 1043–65 The DIAMOND Study Group 1997 Dofetilide in patients with left ventricular dysfunction and either heart failure or acute myocardial infarction: rationale, design and patient characteristics of the DIAMOND studies Clin. Cardiol. 20 704–10 Thurner S, Feurstein M C, Lowen S B and Teich M C 1998a Receiver-operating-characteristic analysis reveals superiority of scale-dependent wavelet and spectral measures for assessing cardiac dysfunction Phys. Rev. Lett. 81 5688–91 Thurner S, Feurstein M C and Teich M C 1998b Multiresolution wavelet analysis of heartbeat intervals discriminates healthy patients from those with cardiac pathology Phys. Rev. Lett. 80 1544–7 Voss A, Kurths J and Kleiner H J 1996 The application of methods of non-linear dynamics for the improved and predictive recognition of patients threatened by sudden cardiac death Cardiovasc. Res. 31 419–33 Wessel N, Voss A and Malberg H 2000a Nonlinear analysis of complex phenomena in cardiological data Herzschr. Electrophys. 11 159–73 Wessel N, Ziehmann C and Kurths J 2000b Short term forecasting of life-threatening arrhytmias based on symbolic dynamics and ﬁnite-time growth rates Phys. Rev. E 61 733–9 Wilson K, Francis D P, Wensel R, Coats A J and Parker K H 2002 Relationship between detrended ﬂuctuation analysis and spectral analysis of heart rate variability Physiol. Meas. 23 385–401
+

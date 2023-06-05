@@ -1,0 +1,870 @@
+
+/* ::::: https://img.medscape.com/medcss/reg/tba2loginprofile.css ::::: */
+
+#regpracticesetting { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regpracticesetting a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regpracticesettinglayer { position: relative; z-index: 100; }
+#regpracticesettinglayer div.inactive { visibility: hidden; position: absolute; }
+#regpracticesettinglayer div.active { width: 256px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regpracticesettingscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 510px; height: 200px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regpracticesettinglayer table { background-color: rgb(243, 243, 243); }
+#regpracticesettinglayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regoccupation { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regoccupation a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regoccupationlayer { display: inline; position: absolute; z-index: 100; }
+#regoccupationlayer table.inactive { visibility: hidden; position: absolute; }
+#regoccupationlayer table.active { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; width: 208px; }
+#regoccupationlayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+networklinkstbd { text-align: center; padding: 3px 5px 4px; background-color: rgb(243, 243, 243); border-top: 1px solid rgb(179, 179, 179); border-right: 1px solid rgb(179, 179, 179); border-left: 1px solid rgb(179, 179, 179); width: 50px; }
+#regmedschoolcountry { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regmedschoolcountry a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regmedschoolcountrylayer { position: relative; z-index: 100; }
+#regmedschoolcountrylayer div.inactive { visibility: hidden; position: absolute; }
+#regmedschoolcountrylayer div.active { width: 512px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regmedschoolcountryscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 512px; height: 200px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regmedschoolcountrylayer table { background-color: rgb(243, 243, 243); }
+#regmedschoolcountrylayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#medmailacceptdisabled { font-size: 12px; color: rgb(128, 128, 128); }
+#licensenum { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+
+/* ::::: https://img.medscape.com/medcss/reg/loginprofile.css ::::: */
+
+#shadowright { background-image: url('bg_shadow_right.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(179, 179, 179); padding: 0pt 4px 1px 0pt; }
+#shadowbtm { background-image: url('bg_shadow_btm.gif@22'); background-position: right bottom; background-repeat: no-repeat; padding: 0pt 0pt 4px; margin: 11px 33px; }
+#registrationbody { padding: 11px 22px; border-top: 1px solid rgb(179, 179, 179); border-right: 1px solid rgb(179, 179, 179); border-left: 1px solid rgb(179, 179, 179); background-color: rgb(249, 249, 249); }
+#registrationbody h1 { font-weight: bold; font-family: Verdana,sans-serif; font-size: 15px; color: rgb(59, 59, 59); padding: 0pt; margin: 0pt 0pt 11px; }
+#registrationbody h2 { font-family: Verdana,sans-serif; color: rgb(0, 51, 102); font-size: 14px; border-top: 2px solid rgb(179, 179, 179); padding: 3px 0pt 0pt 7px; margin: 0pt 0pt 7px; }
+.h2small { font-size: 12px; }
+#registrationbody h3 { font-family: Verdana,sans-serif; color: rgb(0, 51, 102); font-size: 14px; padding: 0pt; margin: 0pt 0pt 7px; }
+#registrationbody h4 { font-family: Verdana,sans-serif; color: rgb(59, 59, 59); font-size: 12px; padding: 0pt; margin: 0pt; }
+#registrationbody p { padding: 0pt; margin: 0pt 0pt 11px; }
+#helplinks { margin: 0pt 0pt 11px; list-style: none outside none; padding: 2px 5px 3px; border: 1px dashed rgb(179, 179, 179); font-size: 11px; background-color: rgb(255, 255, 255); text-align: center; position: relative; }
+#helplinks li { display: inline; padding: 0pt 21px; position: relative; }
+#helplinks2 { position: absolute; list-style: none outside none; margin: 0pt 0pt 0pt 475px; padding: 2px 5px 3px; border: 1px dashed rgb(179, 179, 179); font-size: 12px; text-align: left; width: 165px; background-color: rgb(255, 255, 255); }
+#codemessage { width: 100%; margin: 0pt 0pt 15px; }
+#codemessage p { margin: 0pt 4%; text-align: left; padding: 9px 7px; border: 1px solid rgb(255, 102, 0); background-color: rgb(255, 255, 238); color: rgb(187, 34, 0); }
+#codemessage a { text-decoration: underline; }
+#codemessage a:link { text-decoration: underline; }
+#codemessage a:visited { text-decoration: underline; }
+#codemessage a:active { text-decoration: underline; }
+#regheader { margin: 0pt; width: 100%; }
+#regheadlogo { padding: 4px 9px 0pt 0pt; }
+#logo1, #logo8 { height: 27px; background-image: url('logo_medscapewebmd102x25.png@22'); background-position: right top; background-repeat: no-repeat; }
+#logo4 { height: 27px; background-image: url('logo_emedicine94x25.png@22'); background-position: right top; background-repeat: no-repeat; }
+#logo2, #logo6 { height: 37px; background-image: url('logo_webmdpro98x35.png@22'); background-position: right top; background-repeat: no-repeat; }
+#logo7 { height: 27px; background-image: url('logo_medscapecme171x25.png@22'); background-position: right top; background-repeat: no-repeat; }
+#logo3 { height: 37px; background-image: url('logo_heartorg106x35.png@22'); background-position: right top; background-repeat: no-repeat; }
+#logo0 { height: 37px; background-image: url('logo_webmdpronet112x35.png@22'); background-position: right top; background-repeat: no-repeat; }
+#logo5 { height: 27px; background-image: url('logo_tlbb200x25.png@22'); background-position: right top; background-repeat: no-repeat; }
+#regheader h1 { font-weight: normal; font-family: Georgia,serif; font-size: 29px; color: rgb(59, 59, 59); padding: 0pt; margin: -5px 0pt 0pt; }
+.inactive { display: none; }
+.active { display: block; }
+.hiddenreglist { list-style: none outside none; margin: 0px; padding: 3px 5px 4px; font-size: 11px; }
+.hiddenreglist li { display: block; margin: 0px; padding: 0px 0px 4px; }
+.hiddenreglist a { font-size: 11px; font-weight: normal; text-decoration: none; }
+.hiddenreglist a:hover { font-weight: normal; text-decoration: underline; }
+form { margin: 0px; padding: 0px; }
+input { color: rgb(59, 59, 59); }
+.formlabel { color: rgb(3, 3, 3); font-size: 12px; margin: 2px 3px 0pt 0pt; }
+.formlabel2 { color: rgb(3, 3, 3); font-size: 12px; margin: 2px 3px 11px 0pt; }
+.formfield { color: rgb(3, 3, 3); font-size: 12px; margin: 0pt 0pt 11px; }
+.formfield2 { color: rgb(3, 3, 3); font-size: 12px; margin: 2px 0pt 11px 5px; }
+.hinttext { border: 1px solid rgb(255, 102, 0); background-color: rgb(255, 255, 238); color: rgb(204, 51, 0); font-size: 12px; padding: 4px 8px; }
+.hinttext2 { font-size: 11px; color: rgb(102, 102, 102); margin-bottom: 11px; }
+#regfname { padding: 0pt 147px 0pt 0pt; }
+#regminame { padding: 0pt 21px 0pt 0pt; }
+#reglname { padding: 0pt; }
+#regfnamefield { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#regminamefield { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 25px; padding: 1px 3px; }
+#reglnamefield { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#regusername { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#usernamehint { width: 244px; position: absolute; margin: 1px 0pt 0pt 211px; }
+#regemailaddress { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#regemailaddressconfirm { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#regpassword { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#passwordhint { width: 244px; position: absolute; margin: 1px 0pt 0pt 211px; }
+#regpasswordconfirm { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#regprofession { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regprofession a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regprofessionlayer { display: inline; position: absolute; z-index: 100; }
+#regprofessionlayer table.inactive { visibility: hidden; position: absolute; }
+#regprofessionlayer table.active { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; }
+#regprofessionlayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#professionbg { border: 1px solid rgb(191, 210, 225); background-color: rgb(234, 241, 255); padding: 7px 7px 0pt; margin-bottom: 11px; }
+#professionhinttext { border: 1px solid rgb(255, 102, 0); background-color: rgb(255, 255, 238); color: rgb(204, 51, 0); font-size: 12px; padding: 4px 8px; float: right; text-align: left; width: 200px; }
+#regdegree { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regdegree a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regdegreelayer { display: inline; position: absolute; z-index: 100; }
+#regdegreelayer table.inactive { visibility: hidden; position: absolute; }
+#regdegreelayer table.active { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; width: 208px; }
+#regdegreelayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regdegreecert { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#degreecerthint { width: 244px; position: absolute; margin: 1px 0pt 0pt 211px; }
+#regspecialty { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regspecialty a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regspecialtylayer { position: relative; z-index: 100; }
+#regspecialtylayer div.inactive { visibility: hidden; position: absolute; }
+#regspecialtylayer div.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regspecialtyscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regspecialtylayer table { background-color: rgb(243, 243, 243); }
+#regspecialtylayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regspecialization { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regspecialization a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regspecializationlayer { position: relative; z-index: 100; }
+#regspecializationlayer div.inactive { visibility: hidden; position: absolute; }
+#regspecializationlayer div.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regspecializationscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regspecializationlayer table { background-color: rgb(243, 243, 243); }
+#regspecializationlayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regmedschoolstate { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regmedschoolstate a.fieldlink { color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regattendmedlayer { position: absolute; z-index: 100; }
+#regattendmedlayer div#regattendmedlayerscrolllayer.inactive { visibility: hidden; position: absolute; }
+#regattendmedlayer div#regattendmedlayerscrolllayer.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regattendmedlayer table.active, #regattendmedlayer table.inactive { visibility: visible; position: absolute; display: block; }
+#regattendmedlayerscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regattendmedlayer table { background-color: rgb(243, 243, 243); }
+#regattendmedlayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regmedschool { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regmedschool a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regmedschoollayer { position: absolute; z-index: 100; }
+#regmedschoollayer div#regmedschoollayerscrolllayer.inactive { visibility: hidden; position: absolute; }
+#regmedschoollayer div#regmedschoollayerscrolllayer.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regmedschoollayer table.active, #regmedschoollayer table.inactive { visibility: visible; position: absolute; display: block; }
+#regmedschoollayerscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regmedschoollayer table { background-color: rgb(243, 243, 243); }
+#regmedschoollayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regmedschoollayer table#regmedschoolhint.active, #regmedschoollayer table#regmedschoolhint.inactive { background-color: rgb(243, 243, 243); color: rgb(204, 51, 0); font-size: 13px; margin: 0pt; padding: 10px 2px; }
+#regyeargrad { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#birthdatetable td { padding: 0pt 3px 0pt 0pt; }
+#regday { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 30px; padding: 1px 3px; }
+#regmonth { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 90px; background-color: rgb(255, 255, 255); }
+#regmonth a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 85px; padding: 0pt 0pt 0pt 5px; }
+#regmonthlayer { display: inline; position: absolute; z-index: 100; }
+#regmonthlayer table.inactive { visibility: hidden; position: absolute; }
+#regmonthlayer table.active { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; width: 208px; }
+#regmonthlayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regyear { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 64px; padding: 1px 3px; }
+#regcountrypractice { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regcountrypractice a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regcountrypracticelayer { position: relative; z-index: 100; }
+#regcountrypracticelayer div.inactive { visibility: hidden; position: absolute; }
+#regcountrypracticelayer div.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regcountrypracticescrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regcountrypracticelayer table { background-color: rgb(243, 243, 243); }
+#regcountrypracticelayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#regzippractice { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#reghintquestion { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#reghintquestion a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regsecurityQlayer { display: inline; position: absolute; z-index: 100; }
+#regsecurityQlayer table.inactive { visibility: hidden; position: absolute; }
+#regsecurityQlayer table.active { visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; }
+#regsecurityQlayer table { width: 540px; }
+#regsecurityQlayer table td.listtext { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); }
+#regsecurityQlayer table td.hinttext { border: 1px solid rgb(255, 102, 0); background-color: rgb(255, 255, 238); color: rgb(204, 51, 0); font-size: 12px; padding: 4px 8px; }
+#reghintanswer { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#submitreg { color: rgb(0, 0, 0); margin: 0pt 3px 11px 0pt; }
+#regerroralertcover { background-color: rgb(255, 255, 255); opacity: 0.4; width: 100%; position: absolute; z-index: 200; margin: 0pt auto; min-height: 100%; height: auto; top: 0px; right: 0px; bottom: 0px; left: 0px; }
+* html #regerroralertcover { height: 100%; }
+#regerroralert { position: absolute; z-index: 300; border: 1px solid rgb(255, 102, 0); background-color: rgb(255, 255, 238); color: rgb(255, 102, 0); margin-left: 20%; margin-top: 20%; width: 440px; padding: 15px; font-size: 14px; }
+#regerroralert p { padding: 0pt; margin: 0pt 0pt 10px; color: rgb(255, 102, 0); font-size: 14px; }
+#regerroralert ul { padding: 0pt; margin: 0pt; color: rgb(255, 102, 0); font-size: 14px; list-style: none outside none; }
+#regerroralert ul li { padding-bottom: 10px; }
+#closeregalert { text-align: center; padding: 5px 0pt; font-size: 13px; font-weight: bold; }
+#closeregalert b { border-left: 1px solid rgb(179, 179, 179); }
+#closeregalert a { border-width: 1px; border-style: solid; border-color: rgb(179, 179, 179) rgb(102, 102, 102) rgb(102, 102, 102) rgb(179, 179, 179); background-color: rgb(243, 243, 243); padding: 3px 5px; color: rgb(0, 0, 0); text-decoration: none; }
+#closeregalert a:hover { border-width: 1px; border-style: solid; border-color: rgb(102, 102, 102) rgb(243, 243, 243) rgb(243, 243, 243) rgb(102, 102, 102); background-color: rgb(211, 211, 211); padding: 3px 5px; }
+#medmailoffer, #mednewsletteroffer, #lbboffer { margin: 0pt 0pt 17px; background-color: rgb(255, 255, 255); }
+#medmailsignupalert { position: absolute; z-index: 300; border: 2px solid rgb(0, 51, 102); background-color: rgb(255, 255, 255); margin-left: 20%; margin-top: 20%; width: 440px; padding: 15px; }
+#medmailsignupalert p { margin: 0pt 0pt 15px; padding: 0pt; }
+#medmailsignupalert ul { margin: 0pt; padding: 0pt 0pt 10px 21px; list-style: none outside none; }
+#medmailsignupalert ul li { padding: 0pt 0pt 5px; }
+#newsletterdeliverybtn { color: rgb(0, 0, 0); font-size: 12px; }
+#subnewsletters { font-size: 12px; color: rgb(0, 0, 0); }
+#regsuccessful { font-family: Verdana,sans-serif; margin: 0pt 0pt 17px; font-size: 16px; color: rgb(0, 153, 51); font-weight: bold; }
+#medmailform { margin: 0pt 0pt 0pt 15px; }
+#medmailoffer h4.successtext { color: rgb(0, 153, 51); font-family: Verdana,sans-serif; font-size: 12px; padding: 0pt; margin: 0pt 0pt 7px 15px; }
+#medmailoffer p { padding: 0pt; margin: 0pt 9px 13px 15px; }
+#mednewslettersignupform { margin: 0pt; padding: 0pt; }
+#mednewsletteroffer { border-right: 1px dashed rgb(179, 179, 179); border-bottom: 1px dashed rgb(179, 179, 179); border-left: 1px dashed rgb(179, 179, 179); padding-bottom: 4px; }
+#mednewsletteroffer h4.successtext { color: rgb(0, 153, 51); font-family: Verdana,sans-serif; font-size: 12px; padding: 0pt; margin: 0pt 0pt 7px 15px; }
+#mednewsletteroffer table { padding: 0pt; margin: 0pt 9px 0pt 15px; list-style: none outside none; }
+#mednewsletteroffer td { padding: 0pt 0pt 7px; }
+#mednewsletteroffer table b { color: rgb(34, 34, 34); }
+.newsletterinfo { font-size: 11px; color: rgb(59, 59, 59); }
+#mednewsletteroffer p { padding: 0pt; margin: 0pt 5px 9px 15px; }
+#medmailaccept { font-size: 12px; color: rgb(0, 0, 0); }
+#medmailaddress { font-size: 12px; border: 1px solid rgb(179, 179, 179); }
+#lbboffer { border-right: 1px dashed rgb(179, 179, 179); border-bottom: 1px dashed rgb(179, 179, 179); border-left: 1px dashed rgb(179, 179, 179); padding-bottom: 11px; }
+#lbbupdateform { margin: 0pt; padding: 0pt; }
+#lbboffer h4.successtext { color: rgb(0, 153, 51); font-family: Verdana,sans-serif; font-size: 12px; padding: 0pt; margin: 0pt 0pt 7px 15px; }
+#lbboffer table { padding: 0pt; margin: 0pt 9px 0pt 15px; list-style: none outside none; }
+#lbboffer p { padding: 0pt; margin: 2px 0pt 9px 15px; }
+#lbbphone { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#lbbfax { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#regphone { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#regfax { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#updatelbb { font-size: 12px; color: rgb(0, 0, 0); }
+#continuetopagetop { clear: both; text-align: center; font-size: 14px; font-weight: bold; margin: 5px 0pt 15px; }
+#continuetopagetop a { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#continuetopagetop a:link { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#continuetopagetop a:visited { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#continuetopagetop a:hover { border: 1px solid rgb(64, 121, 166); padding: 3px 5px; background-color: rgb(230, 238, 244); }
+#continuetopagetop a:active { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#continuetopagebtm { text-align: center; font-size: 14px; font-weight: bold; margin: 0pt 0pt 9px; }
+#continuetopagebtm a { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#continuetopagebtm a:link { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#continuetopagebtm a:visited { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#continuetopagebtm a:hover { border: 1px solid rgb(64, 121, 166); padding: 3px 5px; background-color: rgb(230, 238, 244); }
+#continuetopagebtm a:active { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#contentcustombg { border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 7px 0pt; margin-bottom: 11px; background-color: rgb(255, 255, 255); }
+#profileinfobg { border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 7px 0pt; margin-bottom: 11px; background-color: rgb(255, 255, 255); }
+#addressesbg { border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 7px 0pt; margin-bottom: 11px; background-color: rgb(255, 255, 255); }
+#professionbg2 { border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 7px 0pt; margin-bottom: 11px; background-color: rgb(255, 255, 255); }
+#currentregemailaddress { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#addressline1, #addressline2 { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#officeaddressline1, #officeaddressline2 { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#mailingcity { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#officecity { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#mailingstate { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#mailingstate a.fieldlink { color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#mailingstatelayer { display: inline; position: absolute; z-index: 100; }
+#mailingstatelayer table.inactive { visibility: hidden; position: absolute; }
+#mailingstatelayer table.active { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; }
+#mailingstatelayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#officestate { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#officestate a.fieldlink { color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#officestatelayer { display: inline; position: absolute; z-index: 100; }
+#officestatelayer table.inactive { visibility: hidden; position: absolute; }
+#officestatelayer table.active { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; }
+#officestatelayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#mailingzip { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#officezip { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#mailingcountry { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#mailingcountry a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#mailingcountrylayer { position: relative; z-index: 100; }
+#mailingcountrylayer div.inactive { visibility: hidden; position: absolute; }
+#mailingcountrylayer div.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#mailingcountryscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#mailingcountrylayer table { background-color: rgb(243, 243, 243); }
+#mailingcountrylayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#specialtytopic { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#specialtytopic a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#specialtytopiclayer { position: relative; z-index: 100; }
+#specialtytopiclayer table.inactive { visibility: hidden; position: absolute; }
+#specialtytopiclayer table.active { visibility: visible; position: absolute; padding: 0px; margin: 0pt 0pt 10px -1px; }
+#specialtytopicscrolllayer { border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#topichinttext { width: 170px; border: 1px solid rgb(255, 102, 0); background-color: rgb(255, 255, 238); color: rgb(204, 51, 0); font-size: 12px; padding: 4px 8px; margin-left: 5px; }
+#officecountry { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#officecountry a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#officecountrylayer { position: relative; z-index: 100; }
+#officecountrylayer div.inactive { visibility: hidden; position: absolute; }
+#officecountrylayer div.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#officecountryscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#officecountrylayer table { background-color: rgb(243, 243, 243); }
+#officecountrylayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#login { text-align: left; width: 100%; margin: 10px 0pt 15px; background-color: rgb(249, 249, 249); border: 1px solid rgb(179, 179, 179); }
+#login td { text-align: left; font-size: 12px; }
+#regtd { padding: 6px 10px 25px 20px; width: 53%; }
+#logintd { padding: 20px 10px 25px 20px; width: 47%; }
+ul#loginlogos { list-style: none outside none; margin: 10px 0pt 0pt; padding: 0pt; }
+#loginlogos { list-style: none outside none; margin: 10px 0pt 0pt; padding: 0pt; }
+#loginlogos li { display: inline; padding: 0pt 5px; margin: 0pt; border-right: 1px dashed rgb(179, 179, 179); }
+#loginbox { background-color: rgb(255, 255, 255); border: 1px solid rgb(179, 179, 179); width: 100%; }
+#loginpadding { padding: 10px; }
+#login form { margin: 0pt; padding: 0pt; }
+#regtd ul { font-size: 13px; padding: 10px 50px 10px 35px; margin: 0pt; list-style: square outside none; }
+#login h3 { font-family: Verdana,sans-serif; font-size: 17px; color: rgb(0, 51, 102); margin: 0pt 0pt 5px; padding: 0pt; font-weight: bold; }
+#userId, #password { border: 1px solid rgb(131, 131, 131); width: 90%; }
+#loginbtn, #regbtn { font-size: 13px; font-weight: bold; color: rgb(0, 0, 0); }
+.inputrow { margin: 0pt 0pt 7px; }
+#rememberrow { margin: 0pt 0pt 7px; }
+.submitrow { margin: 0pt 0pt 10px; }
+a.oragne { color: rgb(255, 135, 0); }
+a.oragne:link { color: rgb(255, 135, 0); }
+a.oragne:visited { color: rgb(255, 135, 0); }
+a.oragne:hover { color: rgb(255, 135, 0); }
+a.oragne:active { color: rgb(255, 135, 0); }
+.forgotlink { font-size: 11px; }
+#loginbody {  }
+#specsitepop { position: absolute; z-index: 300; margin-left: 370px; margin-top: 154px; }
+#splashspecialties { background-color: rgb(255, 255, 255); border: 1px solid rgb(174, 198, 212); }
+#splashspecialties td { padding: 5px 0pt; }
+#splashspecialties h3 { font-size: 1em; color: rgb(5, 54, 102); font-weight: bold; padding: 2px 0pt 3px; margin: 0pt 0pt 0pt 5px; border-bottom: 1px dashed rgb(85, 85, 85); display: block; }
+#splashspecialties ul { margin: 0pt 0pt 6px; padding: 0pt 10px 0pt 22px; font-size: 0.95em; color: rgb(179, 179, 179); clear: both; position: relative; }
+#splashspecialties li { color: rgb(0, 0, 0); margin: 0pt; padding: 0pt 0pt 4px; list-style-type: square; clear: both; position: relative; }
+#closespeclist { text-align: right; font-size: 10px; font-weight: bold; padding: 2px 0pt 7px; margin: 0pt 10px 0pt 0pt; border-bottom: 1px dashed rgb(85, 85, 85); }
+#closespeclist b { border-left: 1px solid rgb(179, 179, 179); }
+#closespeclist a { border-width: 1px; border-style: solid; border-color: rgb(179, 179, 179) rgb(102, 102, 102) rgb(102, 102, 102) rgb(179, 179, 179); background-color: rgb(243, 243, 243); padding: 2px 4px; color: rgb(0, 0, 0); text-decoration: none; }
+#closespeclist a:hover { border-width: 1px; border-style: solid; border-color: rgb(102, 102, 102) rgb(243, 243, 243) rgb(243, 243, 243) rgb(102, 102, 102); background-color: rgb(211, 211, 211); padding: 2px 4px; }
+#updateemail { border-right: 1px dashed rgb(179, 179, 179); border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 7px 7px 15px; margin: 0pt 0pt 17px; background-color: rgb(255, 255, 255); }
+#updateemail p { margin: 0pt 0pt 9px; padding: 0pt; }
+#updateemailbtn { color: rgb(0, 0, 0); font-size: 12px; }
+#emailAddress { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#useremails { border-right: 1px dashed rgb(179, 179, 179); border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 7px 7px 15px; margin: 0pt 0pt 17px; background-color: rgb(255, 255, 255); }
+#useremails h2 { font-family: Verdana,sans-serif; color: rgb(0, 51, 102); font-size: 14px; border-top: 0px none; padding: 0pt; margin: 0pt 0pt 7px; }
+#useremails p { margin: 0pt 0pt 9px; padding: 0pt; }
+#useremails ul { list-style: none outside none; margin: 0pt; padding: 0pt 0pt 7px; }
+#specialtynewsletters { border-right: 1px dashed rgb(179, 179, 179); border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 15px; margin: 0pt 0pt 17px; background-color: rgb(255, 255, 255); }
+#specialtynewsletters h2 { font-family: Verdana,sans-serif; color: rgb(0, 51, 102); font-size: 14px; border-top: 0px none; padding: 0pt; margin: 0pt 0pt 7px; }
+#specialtynewsletters td { border-top: 1px dashed rgb(211, 211, 211); padding: 2px 7px 7px 0pt; }
+#specialtynewsletters p { margin: 0pt 0pt 9px; }
+.specialtyul { list-style: none outside none; margin: 0pt; padding: 0pt; }
+.specialtyul li { padding: 0pt 0pt 0pt 1px; margin: 0pt; }
+#fournewsletters { margin: 0pt 0pt 17px; }
+#dailynews, #healthheadlines, #drugdevicedigest, #medgenmednewsletter { border-right: 1px dashed rgb(179, 179, 179); border-bottom: 1px dashed rgb(179, 179, 179); border-left: 1px dashed rgb(179, 179, 179); padding-bottom: 5px; background-color: rgb(255, 255, 255); }
+#srnewsletters { border-right: 1px dashed rgb(179, 179, 179); border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 7px 7px 7px 15px; margin: 0pt 0pt 17px; background-color: rgb(255, 255, 255); }
+#srnewsletters table td { padding: 0pt 0pt 2px; }
+#srnewsletters h2 { font-family: Verdana,sans-serif; color: rgb(0, 51, 102); font-size: 14px; border-top: 0px none; padding: 0pt; margin: 0pt 0pt 7px; }
+#srnewsletters table {  }
+#srnewsletters p { margin: 0pt 0pt 9px; }
+#submitlostpass { font-size: 12px; color: rgb(0, 0, 0); margin-bottom: 11px; }
+#lostpassfirstn, #lostpasslastn, #lostpassemail { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#lostpasshint { width: 200px; position: absolute; margin: 1px 0pt 0pt 211px; }
+#passcheck { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#submitpass { font-size: 12px; color: rgb(0, 0, 0); margin-bottom: 11px; }
+#notaccount { font-size: 11px; }
+#submitcmeprofile { font-size: 12px; color: rgb(0, 0, 0); margin-bottom: 11px; }
+h1#medmailtitle { font-weight: normal; font-family: Georgia,serif; font-size: 25px; color: rgb(59, 59, 59); padding: 0pt; margin: 0pt 0pt 7px; }
+#medmailoffer2 { border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 13px 15px 15px 0pt; margin: 0pt 0pt 17px; background-color: rgb(255, 255, 255); }
+#medmailoffer2 h2 { font-family: Verdana,sans-serif; color: rgb(0, 51, 102); font-size: 14px; border-top: 0px none; padding: 0pt; margin: 0pt 0pt 7px; }
+#medmailoffer2 h4 { font-family: Verdana,sans-serif; color: rgb(59, 59, 59); font-size: 12px; padding: 0pt; margin: 0pt 0pt 3px; }
+#medmailoffer2 p { padding: 0pt; margin: 0pt 0pt 11px 15px; }
+#medmailform p { margin: 0pt 0pt 3px; padding: 0pt; }
+#medmailoffer2 h4.successtext { color: rgb(0, 153, 51); font-family: Verdana,sans-serif; font-size: 12px; padding: 0pt; margin: 0pt 0pt 7px; }
+#medmailform ul { margin: 0pt; padding: 0pt 0pt 5px 15px; list-style: none outside none; }
+#medmailform ul li { padding: 0pt 0pt 5px; }
+#medmailinput { margin: 0pt 0pt 11px; }
+#medmailbenefits { text-align: left; width: 265px; padding: 5px 7px 7px; margin: 4px 0pt 0pt 15px; border: 1px solid rgb(191, 210, 225); background-color: rgb(234, 241, 255); }
+#medmailbenefits ul { font-size: 13px; padding: 0pt 0pt 7px 29px; margin: 0pt; list-style: square outside none; }
+#medmailbenefits li { padding: 0pt 0pt 4px; }
+#gotomedmail { text-align: center; font-size: 12px; font-weight: bold; margin: 15px 0pt 0pt; }
+#gotomedmail a { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#gotomedmail a:link { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#gotomedmail a:visited { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#gotomedmail a:hover { border: 1px solid rgb(64, 121, 166); padding: 3px 5px; background-color: rgb(230, 238, 244); }
+#gotomedmail a:active { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+h1#profileindextitle { font-weight: normal; font-family: Georgia,serif; font-size: 25px; color: rgb(59, 59, 59); padding: 0pt; margin: 0pt 0pt 7px; }
+#profileindex { border-width: 2px 1px 1px; border-style: solid dashed dashed; border-color: rgb(179, 179, 179); padding: 13px 15px 21px; margin: 0pt 0pt 17px; background-color: rgb(255, 255, 255); }
+#profileindex ul { list-style: none outside none; padding: 11px 0pt 7px 15px; margin: 0pt; }
+#profileindex ul li { padding: 0pt 0pt 15px; }
+#profileindex ul a { font-size: 14px; font-weight: bold; }
+#profileindex ul a:link { font-size: 14px; font-weight: bold; }
+.profilesecinfo { margin: 0pt 0pt 0pt 15px; }
+#helpfullinks { float: right; text-align: left; border: 1px solid rgb(191, 210, 225); background-color: rgb(234, 241, 255); margin: 11px 0pt 11px 15px; font-size: 12px; width: 200px; }
+#helpfullinks ul { list-style: square outside none; padding: 7px 5px 7px 25px; margin: 0pt; }
+#helpfullinks ul li { padding: 0pt 0pt 7px; }
+#helpfullinks ul a { font-size: 12px; font-weight: normal; }
+#helpfullinks ul a:link { font-size: 12px; font-weight: normal; }
+#exitaccount { text-align: center; font-size: 12px; font-weight: bold; margin: 0pt; }
+#exitaccount a { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#exitaccount a:link { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#exitaccount a:visited { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#exitaccount a:hover { border: 1px solid rgb(64, 121, 166); padding: 3px 5px; background-color: rgb(230, 238, 244); }
+#exitaccount a:active { border: 1px solid rgb(191, 210, 225); padding: 3px 5px; background-color: rgb(255, 255, 255); }
+#submithonorariashipform { font-size: 12px; color: rgb(0, 0, 0); }
+#honorariaoptions td { padding: 0pt 0pt 9px; }
+#addressalert1 { position: absolute; z-index: 300; border: 2px solid rgb(0, 51, 102); background-color: rgb(255, 255, 255); width: 440px; margin-left: 20%; margin-top: 10px; padding: 15px; }
+#addressalert2 { position: absolute; z-index: 300; border: 2px solid rgb(0, 51, 102); background-color: rgb(255, 255, 255); width: 440px; margin-left: 20%; margin-top: 10px; padding: 15px; }
+#honorariaaddsub1, #honorariaaddsub2 { font-size: 12px; color: rgb(0, 0, 0); }
+#addressalert1 h4, #addressalert2 h4 { font-family: Verdana,sans-serif; color: rgb(59, 59, 59); font-size: 12px; padding: 0pt; margin: 0pt; }
+.asterisktext { display: none; }
+#errortext { color: rgb(153, 0, 0); }
+#errortext p { padding: 0pt; margin: 0pt 0pt 9px; }
+#errortext ul, #errortext ol { margin: 0pt; padding: 0pt 0pt 9px 35px; }
+#errortext li { padding: 0pt 0pt 5px; }
+.largefontinstructions { font-size: 14px; }
+p#keepinstructions { font-size: 11px; padding: 0pt; margin: 0pt; }
+#keepnewsletter { border: 1px solid rgb(179, 179, 179); padding: 12px; background-color: rgb(255, 255, 255); }
+#optoutall { border: 1px solid rgb(179, 179, 179); padding: 12px; text-align: center; background-color: rgb(255, 255, 255); }
+.lightshadow { border-right: 3px solid rgb(233, 233, 233); border-bottom: 3px solid rgb(233, 233, 233); margin-bottom: 12px; }
+p#keeplink { width: 286px; margin: 0pt 0pt 12px 210px; background-color: rgb(255, 255, 255); border: medium none; font-weight: bold; }
+#userselection td { padding: 2px 65px 10px 0pt; }
+#userselection a { display: block; text-align: center; font-size: 13px; font-weight: bold; background-color: rgb(243, 247, 255); border: 1px solid rgb(204, 204, 221); text-decoration: underline; padding: 4px 9px 3px; margin: 3px 0pt 1px; }
+#userselection a:link { display: block; text-align: center; font-size: 13px; font-weight: bold; background-color: rgb(243, 247, 255); border: 1px solid rgb(204, 204, 221); text-decoration: underline; padding: 4px 9px 3px; margin: 3px 0pt 1px; }
+#userselection a:visited { display: block; text-align: center; font-size: 13px; font-weight: bold; background-color: rgb(243, 247, 255); border: 1px solid rgb(204, 204, 221); text-decoration: underline; padding: 4px 9px 3px; margin: 3px 0pt 1px; }
+#userselection a:hover { display: block; text-align: center; font-size: 13px; font-weight: bold; background-color: rgb(255, 206, 135); border: 1px solid rgb(204, 204, 221); text-decoration: underline; padding: 4px 9px 3px; margin: 3px 0pt 1px; }
+#userselection a:active { display: block; text-align: center; font-size: 13px; font-weight: bold; background-color: rgb(243, 247, 255); border: 1px solid rgb(204, 204, 221); text-decoration: underline; padding: 4px 9px 3px; margin: 3px 0pt 1px; }
+.useractioninfo { display: block; font-size: 11px; margin: 3px 0pt 5px; text-decoration: none; }
+#userselection a span { text-decoration: none; }
+#userselection a:link span { text-decoration: none; }
+#userselection a:visited span { text-decoration: none; }
+#userselection a:hover span { text-decoration: none; }
+#userselection a:active span { text-decoration: none; }
+#invitecode { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 200px; padding: 1px 3px; }
+#submitinvitecode { font-size: 12px; color: rgb(0, 0, 0); margin-bottom: 11px; }
+#licensestate { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#licensestate a.fieldlink { color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#licensestatelayer { display: inline; position: absolute; z-index: 100; }
+#licensestatelayer table.inactive { visibility: hidden; position: absolute; }
+#licensestatelayer table.active { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); visibility: visible; position: absolute; margin: 0pt 0pt 10px -1px; padding: 0px; }
+#licensestatelayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#medmailoffer h4.errortext { color: rgb(153, 0, 0); font-family: Verdana,sans-serif; font-size: 12px; padding: 0pt; margin: 0pt 0pt 7px 15px; }
+#medmailoffer { border-right: 1px dashed rgb(179, 179, 179); border-bottom: 1px dashed rgb(179, 179, 179); border-left: 1px dashed rgb(179, 179, 179); padding-bottom: 11px; display: none; }
+#networklinks { text-align: center; padding: 3px 5px 4px; background-color: rgb(243, 243, 243); border-top: 1px solid rgb(179, 179, 179); border-right: 1px solid rgb(179, 179, 179); border-left: 1px solid rgb(179, 179, 179); width: 50px; }
+#regmedschoolcountry { font-size: 12px; border: 1px solid rgb(179, 179, 179); width: 206px; background-color: rgb(255, 255, 255); }
+#regmedschoolcountry a.fieldlink { color: rgb(0, 0, 0); background-image: url('bg_select.gif@22'); background-position: right top; background-repeat: no-repeat; background-color: rgb(255, 255, 255); text-decoration: none; display: block; width: 201px; padding: 0pt 0pt 0pt 5px; }
+#regmedschoolcountrylayer { position: relative; z-index: 100; }
+#regmedschoolcountrylayer div.inactive { visibility: hidden; position: absolute; }
+#regmedschoolcountrylayer div.active { width: 250px; background-color: rgb(243, 243, 243); visibility: visible; position: absolute; padding: 0px; }
+#regmedschoolcountryscrolllayer { margin: 0pt 0pt 10px -1px; border: 1px solid rgb(179, 179, 179); width: 250px; height: 275px; overflow: auto; background-color: rgb(243, 243, 243); }
+#regmedschoolcountrylayer table { background-color: rgb(243, 243, 243); }
+#regmedschoolcountrylayer table td { background-color: rgb(243, 243, 243); padding: 3px 5px 4px; }
+#medmailinfo { float: right; width: 260px; padding-right: 20px; }
+#networkoflogos { text-align: right; }
+#networkoflogosreg { clear: both; float: right; margin: 0pt 0pt 5px 15px; height: 35px; width: 385px; background-image: url('webmd_netlogos.gif@22'); background-position: right top; background-repeat: no-repeat; }
+#mpcreglogo { text-align: right; }
+#medscapenetworklogo { padding-right: 16px; border-right: 1px solid rgb(179, 179, 179); }
+#emednetworklogo { padding-left: 16px; }
+#registrationbody .spacer { width: 1px; }
+
+/* ::::: https://img.medscape.com/medcss/medscape-main-secure.css ::::: */
+
+html, body { height: 100%; }
+body { margin: 0pt; padding: 0pt; background-color: rgb(255, 255, 255); font-family: arial,sans-serif; font-size: 76%; }
+#bodypadding { width: 760px; font-family: arial,sans-serif; font-size: 1.05em; padding: 8px 0pt 0pt 8px; }
+#maincontainer {  }
+#maincontainerborder { background-image: url('bg-main.gif@22'); background-position: right top; background-repeat: repeat; }
+#maincontainernarrowborder { background-image: url('bg-main-narrow.gif@22'); background-position: right top; background-repeat: repeat; }
+#maincontainerwideborder { background-image: url('bg-main-wide.gif@22'); background-position: right top; background-repeat: repeat; }
+#towercolumn { float: left; text-align: left; width: 130px; padding: 5px 0pt 0pt; }
+#rightcontentcolumn { float: right; text-align: left; width: 630px; padding: 10px 0pt 0pt; }
+#leftcolumnnarrow { float: left; text-align: left; width: 541px; }
+#leftcolumnwide { float: left; text-align: left; width: 620px; }
+#rightcolumnnarrow { float: right; text-align: left; width: 140px; }
+#rightcolumnwide { float: right; text-align: left; width: 204px; }
+.towerad { text-align: center; margin: 15px 0pt; }
+.toweradleft { margin: 0pt 0pt 15px; }
+.boxad { width: 300px; padding: 0pt 0pt 10px 10px; float: right; }
+.emptytextlink { cursor: pointer; color: rgb(0, 76, 136); text-decoration: underline; }
+.emptytextlink2 { cursor: pointer; color: rgb(0, 76, 136); }
+.emptyimagelink { cursor: pointer; }
+a:link { color: rgb(0, 76, 136); text-decoration: none; }
+a:visited { color: rgb(0, 76, 136); text-decoration: none; }
+a:hover { color: rgb(0, 76, 136); text-decoration: underline; }
+a:active { color: rgb(0, 76, 136); text-decoration: none; }
+form { margin: 0pt; padding: 0pt; }
+.spacer { clear: both; font-size: 1px; line-height: 1px; }
+.row { clear: both; }
+sup { font-size: 0.85em; }
+.cmered { color: rgb(204, 0, 0); }
+.cmetag { font-family: arial,sans-serif; font-size: 11px; color: rgb(204, 0, 0); font-weight: bold; }
+.newstag { font-family: arial,sans-serif; font-size: 0.9em; color: rgb(255, 102, 0); font-weight: bold; }
+.byline { display: block; font-family: arial,sans-serif; font-size: 0.9em; color: rgb(102, 102, 102); }
+.byline a:link { color: rgb(102, 102, 102); }
+.byline a:hover { color: rgb(102, 102, 102); }
+.byline a:visited { color: rgb(102, 102, 102); }
+.byline a:active { color: rgb(102, 102, 102); }
+.teaser { display: block; }
+.navlist { padding: 0pt; margin: 0pt; font-size: 0.9em; font-weight: bold; }
+.navlist li { list-style: none outside none; padding: 5px 0pt 4px; }
+.navlist li a:link { text-decoration: none; }
+.navlist li a:visited { text-decoration: none; }
+.navlist li a:hover { text-decoration: underline; }
+.navlist li a:active { text-decoration: none; }
+li.more a:link { text-decoration: underline; }
+li.more a:visited { text-decoration: underline; }
+li.more a:hover { text-decoration: none; }
+li.more a:active { text-decoration: underline; }
+.error { font-size: 15px; color: rgb(255, 0, 0); font-weight: bold; }
+.error a:link { font-size: 15px; color: rgb(255, 0, 0); font-weight: bold; }
+.error a:visited { font-size: 15px; color: rgb(255, 0, 0); font-weight: bold; }
+.error a:hover { font-size: 15px; color: rgb(255, 0, 0); font-weight: bold; }
+.error a:active { font-size: 15px; color: rgb(255, 0, 0); font-weight: bold; }
+#osun { margin: 0pt; padding: 0pt; position: absolute; z-index: 350; top: 23%; left: 23%; }
+#osunbox { width: 450px; margin: 0pt; padding: 0pt; border: 3px solid rgb(51, 102, 153); background-image: url('bg-osun-1.jpg@22'); background-position: left bottom; background-repeat: no-repeat; }
+.osuncontent { margin: 0pt; padding: 0pt; font-family: arial,sans-serif; font-size: 14px; }
+.osunclosebutton { text-align: right; font-size: 10px; margin: 0pt; padding: 3px; }
+.closebuttontext { cursor: pointer; color: rgb(0, 51, 153); background-color: rgb(255, 255, 255); text-decoration: underline; }
+.osunclosebutton a:hover { color: rgb(17, 17, 17); font-weight: normal; text-decoration: none; }
+.osuntext { margin: 0pt; padding: 3px 10px 10px; font-weight: bold; }
+.osuntext a:link { color: rgb(204, 0, 0); font-weight: bold; }
+.osuntext a:visited { color: rgb(204, 0, 0); font-weight: bold; }
+.osuntext a:hover { color: rgb(0, 153, 255); font-weight: bold; text-decoration: none; }
+.osuntext a:active { color: rgb(204, 0, 0); font-weight: bold; }
+#pollbox { width: 380px; margin: 0pt 0pt 10px; }
+#pollboxtitle { position: relative; width: 90px; margin: 0pt 0pt -9px 14px; padding: 5px 0pt 3px; background-color: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); text-align: center; }
+#pollboxtitle h2 { margin: 0pt; padding: 0px 7px 3px; font-family: Palatino,serif; font-size: 1.1em; color: rgb(0, 51, 102); font-weight: bold; }
+#pollboxbg { width: 380px; padding: 7px 14px; background-color: rgb(238, 238, 238); border: 1px solid rgb(187, 187, 187); }
+.pollquery { padding: 10px 0pt; }
+.pollanswer { padding: 0pt 0pt 5px; }
+.pollbuttons { padding: 0pt 0pt 5px; text-align: right; }
+.pollrelatedlink { font-weight: normal; }
+#pollpagecontent { margin: 0pt; padding: 0pt 15px 0pt 0pt; font-size: 1em; }
+#pollpagecontent p { margin: 0pt; padding: 0pt 0pt 15px; }
+#pollpagecontent ul { margin: 0pt 0pt 0pt 35px; padding: 0pt 0pt 15px; list-style-type: square; }
+.pollpagemain { float: left; width: 385px; }
+.pollresultstype { float: right; margin: 5px 10px 10px 0pt; }
+#pollpagecontent .pollquery { padding: 5px 0pt 0pt; }
+.pollfragment { padding: 0pt 0pt 15px; }
+#pollpagecontent .pollanswer { padding: 0pt 0pt 5px 15px; font-weight: bold; }
+.pollresults { padding: 2px 0pt 0pt 35px; }
+.pollsubmit { margin: 6px 0pt 0pt 15px; }
+.polldata { padding: 20px 0pt 15px; color: rgb(51, 51, 51); font-size: 0.95em; }
+.pollother { border: 1px solid rgb(222, 222, 222); margin: 0pt; padding: 5px 8px; background-color: rgb(252, 252, 222); }
+.archivedpolls { margin: 5px 0pt 15px; }
+.archivedpolls ul { list-style-type: square; margin: 0pt; padding: 0pt 0pt 0pt 20px; }
+.archivedpolls li { margin-bottom: 5px; }
+.pollback { margin: 0pt; padding: 0pt 0pt 15px 10px; font-weight: bold; }
+#generalpagetitle { margin: 5px 15px 10px 0pt; }
+#generalpagetitlewide { padding: 15px 15px 5px 0pt; }
+.divider { line-height: 1px; font-size: 1px; border-bottom: 1px dashed rgb(179, 179, 179); margin: 0pt 15px 10px 0pt; }
+.generalpagecontent { padding: 0pt 15px 0pt 0pt; font-size: 1em; }
+#generalpage h1 { font-family: Palatino,serif; font-size: 1.6em; color: rgb(0, 51, 102); font-weight: bold; display: inline; }
+#generalpage h2 { font-family: Verdana,sans-serif; font-size: 1.25em; color: rgb(0, 51, 102); font-weight: bold; display: inline; }
+#generalpage h3 { margin: 0pt; padding: 0pt; font-family: Verdana,sans-serif; font-size: 1em; color: rgb(48, 48, 48); font-weight: bold; display: inline; }
+.generalpagecontent p { margin: 0pt; padding: 0pt 0pt 15px; }
+.generalpagecontent ul { margin: 0pt 0pt 0pt 35px; padding: 0pt 0pt 15px; list-style-type: square; }
+.generalpagerightfloat { margin: 5px 0pt 0pt; padding: 0pt 15px; float: right; }
+.generalpagerightbox { text-align: left; margin: 10px 5px 15px; border: 1px solid rgb(153, 153, 153); }
+.generalpagerightboxheader { background-color: rgb(228, 228, 228); border-bottom: 1px solid rgb(153, 153, 153); padding: 3px 3px 3px 5px; font-weight: bold; font-size: 0.9em; }
+.generalpagerightboxcontent { padding: 5px 0pt 3px 5px; font-size: 0.9em; }
+.generalpagerightboxcontent ul { margin: 0pt 0pt 0pt 3px; padding: 0pt; list-style-type: none; }
+.generalpagerightboxcontent li { padding: 0pt 0pt 5px; }
+.generalpagetools { width: 280px; margin: 0pt 0pt 15px; padding: 0pt; }
+.generalpagetoolsbox { margin: 0pt; padding: 8px 10px; border: 1px solid rgb(179, 179, 179); background-color: rgb(234, 241, 255); }
+.generalpagetools ul { list-style-type: square; color: rgb(0, 51, 102); margin: 5px 0pt -5px; padding: 0pt 0pt 0pt 17px; font-size: 0.95em; }
+.generalpagetools li { margin-bottom: 5px; }
+.generalpagetools li a:link { text-decoration: none; }
+.generalpagetools li a:visited { text-decoration: none; }
+.generalpagetools li a:hover { text-decoration: underline; }
+.generalpagetools li a:active { text-decoration: none; }
+.generalpagetools p { display: block; font-family: arial,sans-serif; font-size: 0.9em; color: rgb(51, 51, 51); margin: 0pt; padding: 2px 0pt 3px; }
+.generalpagetools .byline { font-weight: normal; font-size: 0.85em; display: inline; }
+#generalpagefeature { width: 280px; margin: 0pt 0pt 15px; padding: 0pt; }
+.generalpagefeaturebox { border: 1px solid rgb(0, 51, 102); padding: 8px 10px 5px; }
+#generalpagefeature h3 { color: rgb(5, 54, 102); font-weight: bold; padding: 0pt 0pt 2px; margin: 0pt 0pt 5px; border-bottom: 1px dashed rgb(85, 85, 85); display: block; }
+#generalpagefeature .title { font-weight: bold; }
+.generalpagefeaturebox ul { margin: 6px 0pt 0pt; padding: 0pt; list-style: none outside none; clear: both; position: relative; }
+.generalpagefeaturebox li { margin: 0pt 0pt 10px; padding: 0pt; clear: both; position: relative; }
+#relatedlinksborder { margin: 5px 0pt; padding: 0pt 0pt 10px 10px; float: right; width: 200px; }
+#relatedlinks { background-color: rgb(255, 254, 233); padding: 8px; border: 1px solid rgb(191, 191, 175); }
+#relatedlinks h3 { font-family: arial,sans-serif; font-size: 1.1em; color: rgb(0, 51, 102); font-weight: bold; margin: 0pt 0pt 8px; padding: 0pt 0pt 2px; border-bottom: 1px solid rgb(102, 102, 102); }
+#relatedlinks ul { padding: 0pt; margin: 3px 0pt 3px 17px; list-style: square outside none; font-size: 0.95em; }
+.publicationscontent { padding: 0pt 15px 0pt 0pt; font-size: 0.95em; }
+.publicationslist { margin: 13px 0pt 15px; }
+#publications h1 { font-family: arial,sans-serif; font-size: 1.6em; color: rgb(255, 102, 0); font-weight: bold; margin: 10px 0pt 0pt; }
+#publications h2 { font-family: arial,sans-serif; font-size: 1.35em; color: rgb(0, 51, 102); font-weight: bold; display: inline; }
+#publications h3 { font-family: arial,sans-serif; font-size: 1.15em; color: rgb(0, 0, 0); font-weight: bold; margin: 0pt; padding: 5px 0pt 2px; }
+.publicationscontent ul { list-style-type: square; margin: 0pt; padding: 0pt 0pt 0pt 22px; }
+.publicationscontent li { margin-bottom: 5px; }
+.publicationscontent li .byline { display: inline; }
+#pubcircletitle { margin: 5px 15px 10px 0pt; }
+.pubcircleimage { float: left; padding: 0pt 10px 0pt 0pt; }
+#pubcircletitle h1 { font-family: arial,sans-serif; font-size: 1.6em; color: rgb(255, 102, 0); font-weight: bold; margin: 0pt 0pt 35px 20px; padding: 30px 0pt 0pt; }
+
+/* ::::: https://img.medscape.com/medcss/footer/footer-basic.css ::::: */
+
+#medscapefooter { padding: 0pt; }
+#footerbar { font-size: 11px; margin: 0px 0px 8px; padding: 4px 8px; color: rgb(243, 243, 243); background-color: rgb(219, 235, 243); border: 1px solid rgb(179, 179, 179); }
+#footerbar ul { font-size: 11px; color: rgb(243, 243, 243); }
+#footerbar ul li { font-size: 11px; color: rgb(243, 243, 243); }
+#footerbar li { font-size: 11px; color: rgb(243, 243, 243); }
+.footerlink1 { display: inline; padding: 0px 9px 0px 0px; width: 98px; }
+.footerlink2 { display: inline; padding: 0px 9px 0px 0px; width: 94px; }
+.footerlink3 { display: inline; padding: 0px 9px 0px 0px; width: 81px; }
+.footerlink4 { display: inline; padding: 0px 9px 0px 0px; width: 54px; }
+.footerlink5 { display: inline; padding: 0px 9px 0px 0px; width: 37px; }
+.footerlink6 { display: inline; padding: 0px 9px 0px 0px; }
+.footerlink7 { display: inline; padding: 0px 9px 0px 0px; }
+.footerlink8 { display: inline; padding: 0px 6px 0px 0px; }
+.legaltext { font-size: 11px; color: rgb(51, 51, 51); }
+
+/* ::::: https://img.medscape.com/medcss/iphone/medscape-iphone.css ::::: */
+
+body { max-width: 480px; min-width: 320px; background-color: rgb(255, 255, 255); }
+#bodypadding { padding: 0pt; margin: 0pt; width: auto; max-width: 480px; min-width: 320px; font-size: 1.25em; background-color: rgb(255, 255, 255); }
+#leftcol { width: auto; float: none; }
+.ms_contain #leftcol { width: auto; float: none; }
+#rightcol { width: auto; float: none; }
+.ms_contain #rightcol { margin: 0pt; }
+.maincolrow { width: auto; }
+.farleftcol { width: auto; float: none; }
+#homemidcol, .midcol { width: auto; float: none; }
+#maincontainer1024 { margin: 0pt; }
+#main1col { margin: 0pt; padding: 0pt; background-image: none; }
+#main3col { margin: 0pt; padding: 0pt; background-image: none; }
+#main1colwide { margin: 0pt; padding: 0pt; background-image: none; background-color: rgb(255, 255, 255); }
+#centercol { width: auto; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); }
+#cmetracker { width: auto; margin: 0pt; background-color: rgb(255, 255, 255); padding: 0pt; }
+#cmeform { margin: 0pt; border-bottom: medium none; background-color: rgb(255, 255, 255); }
+.centercol { margin: 0pt; padding: 0pt; }
+#centercolalert { width: auto; }
+.footerspacer, #footersearch, #adtagfooter { display: none; }
+#footercontents { margin: 0pt; padding: 0pt; }
+#footerbar { margin: 0pt; padding: 5px; }
+ul li.footernavstart, ul li.footernav, ul li.footernavend { float: none; border: medium none; display: block; padding: 0pt 0pt 12px; margin: 0pt; }
+#medscapefooter { margin: 0pt; padding: 0pt; }
+#medscapefooter .legaltext { padding: 5px; }
+#medscapeheadercontainer { margin: 0pt; padding: 0pt; }
+#headertop, #adtagheader, #supernav, #headersearch, #userinfo, #medscapeheaderright, #sitelinks, #medscapenavbar, #cmeheaderrightmid, #browsebyspecialty, #cmeheaderfarright, #cmetrackerheader, #cmeheaderright, #headerright { display: none; }
+#cmesiteheaderid { display: none; }
+#medscapeheader { width: auto; padding: 0pt; margin: 0pt; }
+#medscapeheaderleft { width: auto; padding: 0pt; margin: 0pt; }
+#cmelogotitle { width: auto; padding: 0pt; margin: 0pt; }
+#cmeheader { width: auto; padding: 0pt; margin: 0pt; }
+h1#headerh1 { width: auto; padding: 0pt; margin: 0pt; font-size: 0.1em; max-width: 478px; min-width: 318px; }
+h1#headerh1 a { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+h1#headerh1 a:link { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+h1#headerh1 a:visited { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+h1#headerh1 a:active { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+h1#cmeheaderh1 { width: auto; padding: 0pt; margin: 0pt; font-size: 0.1em; max-width: 480px; min-width: 320px; }
+h1#cmeheaderh1 a { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+h1#cmeheaderh1 a:link { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+h1#cmeheaderh1 a:visited { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+h1#cmeheaderh1 a:active { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+div#headerh1 { width: auto; padding: 0pt; margin: 0pt; font-size: 0.1em; max-width: 478px; min-width: 318px; }
+div#headerh1 a { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+div#headerh1 a:link { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+div#headerh1 a:visited { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+div#headerh1 a:active { width: auto; padding: 0pt; margin: 0pt; max-width: 478px; min-width: 318px; }
+div#cmeheaderh1 { width: auto; padding: 0pt; margin: 0pt; font-size: 0.1em; max-width: 480px; min-width: 320px; }
+div#cmeheaderh1 a { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+div#cmeheaderh1 a:link { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+div#cmeheaderh1 a:visited { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+div#cmeheaderh1 a:active { width: auto; padding: 0pt; margin: 0pt; max-width: 480px; min-width: 320px; }
+#contentbody { width: auto; max-width: 480px; min-width: 320px; float: none; }
+#fixedrightcolumn { width: auto; float: none; max-width: 480px; min-width: 320px; margin: 8px 0pt 0pt; }
+.midcolleftitem { width: auto; float: none; }
+.midcolrightitem { width: auto; text-align: left; float: none; }
+.midcolrightitemleft { width: auto; text-align: left; float: none; }
+.maincolleftitem { width: auto; float: none; }
+.maincolrightitem { width: auto; text-align: left; float: none; }
+.maincolrightitemleft { width: auto; text-align: left; float: none; }
+#titleblock h1 { font-size: 1.35em; }
+a { text-decoration: underline; }
+a:link { text-decoration: underline; }
+a:visited { text-decoration: underline; }
+a:active { text-decoration: underline; }
+.byline, .version { font-size: 0.95em; }
+.version { margin-top: 8px; margin-left: 0px; display: block; }
+.earncreditlink { margin-top: 12px; text-align: center; }
+.earncreditlink a { display: block; width: 60%; line-height: 40px; font-size: 1.15em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+.earncreditlink a:link { display: block; width: 60%; line-height: 40px; font-size: 1.15em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+div .earncreditlink img { display: none; }
+#continuetocmetest a { display: block; width: 70%; line-height: 40px; font-size: 1em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+#continuetocmetest a:link { display: block; width: 70%; line-height: 40px; font-size: 1em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+#multiarticletoclist li a { font-size: 1.1em; font-weight: bold; }
+#multiarticletoclist li a:link { font-size: 1.1em; font-weight: bold; }
+#multiarticletoclist li a:visited { font-size: 1.1em; font-weight: bold; }
+#multiarticletoclist li a:active { font-size: 1.1em; font-weight: bold; }
+#cmeinfo .cmeinfonavlist a { display: block; line-height: 36px; font-size: 1.15em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+a.posttest { color: rgb(255, 255, 255); text-decoration: none; }
+a.posttest:link { color: rgb(255, 255, 255); text-decoration: none; }
+a.posttest:visited { color: rgb(255, 255, 255); text-decoration: none; }
+a.posttest:active { color: rgb(255, 255, 255); text-decoration: none; }
+#multiarticletoclist li .version a { font-size: 1.05em; font-weight: normal; color: rgb(0, 102, 153); text-decoration: underline; }
+#multiarticletoclist li .version:link a { font-size: 1.05em; color: rgb(0, 102, 153); text-decoration: underline; font-weight: normal; }
+#multiarticletoclist li .version:visited a { font-size: 1.05em; color: rgb(0, 102, 153); text-decoration: underline; font-weight: normal; }
+#multiarticletoclist li .version:active a { font-size: 1.05em; color: rgb(0, 102, 153); text-decoration: underline; font-weight: normal; }
+#multiarticletoc { border: medium none; background-color: rgb(255, 255, 255); padding: 0pt; margin: 0pt; }
+ol#multiarticletoclist { border-top: 1px solid rgb(179, 179, 179); background-color: rgb(255, 255, 255); padding: 0pt; margin: 0pt; }
+#multiarticletoc .requiredstatement { padding: 0pt 0pt 10px; }
+ol#multiarticletoclist li { background-color: rgb(255, 255, 255); padding: 4px 24px 4px 0pt; margin: 0pt; border-bottom: 1px solid rgb(179, 179, 179); }
+#supporterbadge, div .rightcolad { text-align: center; }
+#ratethis, #averagerating, #articleprint, #printwith, #printwithout, #articleemail, #submitquestion, #articlediscussion, #articledownload, #abstractordertext, #abstractviewonline, #removeabstract, #articlerating { display: none; }
+.articleprint, .articleemail, .articlediscussion, .articledownload, .abstractordertext, .abstractviewonline, .articlerating { display: none; }
+#versionlist { text-align: left; }
+p.pullquote-left, p.pullquote-right { float: none; }
+#toccolumnright { float: none; width: 100%; border-right: medium none; border-left: medium none; }
+#toccolumnright #sponsorad { margin-top: 0pt; }
+#relatedlinkswin, #cmeinformation, #authordisclosures, #synonymskeywords { top: auto; margin-top: -50px; width: auto; margin-left: -5px; left: auto; max-width: 480px; min-width: 320px; }
+#references { margin-top: -50px; width: auto; margin-left: -5px; left: auto; max-width: 480px; min-width: 320px; }
+#accmealert .active { position: relative; }
+#accmealert { visibility: visible; position: relative; margin-left: 0pt; top: 0pt; margin-top: 0pt; left: 0pt; width: auto; }
+.closewindow { text-align: left; padding-left: 8px; font-size: 1.2em; }
+.closewindow2 { text-align: left; padding-left: 8px; font-size: 1.2em; }
+#accmealert .closewindow2 { padding: 0pt; margin: 0pt; border: medium none; text-align: left; }
+#accmealert .closewindow2 a { display: block; width: 227px; line-height: 29px; font-size: 1em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 0pt auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border: medium none; background-image: url('btn-close-cme.png@22'); background-position: center center; background-repeat: no-repeat; background-color: rgb(243, 243, 243); }
+#accmealert .closewindow2 a:link { display: block; width: 227px; line-height: 29px; font-size: 1em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 0pt auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border: medium none; background-image: url('btn-close-cme.png@22'); background-position: center center; background-repeat: no-repeat; background-color: rgb(243, 243, 243); }
+#accmealertbtn .closewindow2 { padding: 0pt; margin: 0pt; border: medium none; text-align: left; }
+#accmealertbtn .closewindow2 a { display: block; width: 227px; line-height: 29px; font-size: 1em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 0pt auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border: medium none; background-image: url('btn-open-cme.png@22'); background-position: center center; background-repeat: no-repeat; background-color: rgb(243, 243, 243); }
+#accmealertbtn .closewindow2 a:link { display: block; width: 227px; line-height: 29px; font-size: 1em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 0pt auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border: medium none; background-image: url('btn-open-cme.png@22'); background-position: center center; background-repeat: no-repeat; background-color: rgb(243, 243, 243); }
+.scrolllayer { height: auto; overflow: visible; }
+#references .scrolllayer { height: auto; overflow: visible; }
+#accmealert .layerbg2 { border: medium none; }
+#accmealert .scrolllayer { height: auto; overflow: visible; font-size: 0.9em; }
+#articlecontent .layerbg p { width: 300px; }
+.layerbg { width: auto; }
+.layerbg2 { width: auto; }
+.layertext { width: 300px; }
+#accmealert img { max-width: 270px; }
+#hiddeninvitelayer, #inviteslayer, #relatedlinksright, #relatedinfoindustry, #articletoolbox, #collectioninfo, #emailadexcontainer, #submitadexcontainer, #idetailiframewrapper, .dircontentlist, #trackerintro, #trackerlinks, #trackernav, #trackersectiontop, #relatedcmelinks { display: none; }
+.qacontainer { width: 93%; }
+p.incorrectqacme { padding-bottom: 5px; font-size: 1.05em; }
+.incorrectanswer, .incorrectquestion { font-size: 1.05em; }
+#centercol .divider { display: none; }
+#cmeform input[type="submit"] { margin-top: 24px; font-size: 1.15em; }
+#cmeform input[type="radio"] { width: 25px; height: 25px; margin-right: 5px; }
+.qacontainer input[type="radio"] { width: 25px; height: 25px; margin-right: 5px; }
+form p select { font-size: 1.15em; }
+form .questiontext12, form .answertext12 { font-size: 1.1em; }
+.answertext12 { margin-bottom: 12px; }
+#cmeform div.centercol a { display: none; }
+#cmeform div.centercol a:link { display: none; }
+#cmeform div.centercol a:visited { display: none; }
+#cmeform div.centercol a:hover { display: none; }
+#cmeform div.centercol a:active { display: none; }
+#cmeform h1 { font-size: 1.55em; margin-bottom: 4px; padding-bottom: 0pt; }
+div.centercol { font-size: 1.1em; }
+form #learningobj { width: auto; float: none; margin: 0pt; padding: 5px; }
+#cmeform textarea.text12 { width: 250px; }
+#centercol #cmeform { border-bottom: medium none; }
+#cmeform h3 a { width: auto; display: none; }
+#cmeform h3 a:link { width: auto; display: none; }
+#cmeform h3 a:visited { width: auto; display: none; }
+#cmeform h3 a:hover { width: auto; display: none; }
+#cmeform h3 a:active { width: auto; display: none; }
+#cmeform h3 a:first-child { display: none; }
+#cmeform h3 br { display: none; }
+#cmetracker h1 { padding-bottom: 0pt; margin-bottom: 0pt; }
+#cmetracker .divider { display: none; }
+.inprogresstable, #inprogressactivity, .completedtable, #physicianactivity, #nurseactivity, #pharmacistactivity, #medlabactivity, #psychologistactivity, #locactivity, #manualactivity, #maintotaltable, #totalrow { width: auto; }
+#inprogressactivity div, #physicianactivity div, #nurseactivity div, #pharmacistactivity div, #medlabactivity div, #psychologistactivity div, #locactivity div, #manualactivity div { display: none; }
+#physicianactivity td, #nurseactivity td, #pharmacistactivity td, #medlabactivity td, #psychologistactivity td, #locactivity td, #manualactivity td { border: 1px solid rgb(202, 213, 234); }
+#totalrow { font-size: 0.7em; }
+div.trackersectionbtm { font-size: 0.6em; padding-top: 16px; background-color: rgb(255, 255, 255); }
+table#totalrow td { white-space: normal; }
+.completedtable { background-color: rgb(255, 255, 255); }
+tr.completedtable { background-color: rgb(202, 213, 234); }
+p#additionalcontentlinks { text-align: left; font-size: 1px; color: rgb(255, 255, 255); }
+p#additionalcontentlinks a { display: block; width: 40%; line-height: 32px; font-size: 13px; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+p#additionalcontentlinks a:link { display: block; width: 40%; line-height: 32px; font-size: 13px; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+#relatedlinksbottom { display: none; }
+#cmeinfo #multiarticlelist a { display: inline; line-height: normal; font-size: 1em; font-weight: normal; font-family: arial,sans-serif; color: rgb(0, 66, 118); text-decoration: underline; text-align: left; margin: 0pt; text-shadow: none; border-width: 0pt; }
+#cmeinfo #multiarticlelist a:link { display: inline; line-height: normal; font-size: 1em; font-weight: normal; font-family: arial,sans-serif; color: rgb(0, 66, 118); text-decoration: underline; text-align: left; margin: 0pt; text-shadow: none; border-width: 0pt; }
+#multiarticlelist { display: block; position: absolute; z-index: 200; }
+#multiarticlelist div.inactive { visibility: hidden; position: absolute; }
+#multiarticlelist div.active { width: auto; min-width: 296px; visibility: visible; position: absolute; padding: 5px 5px 0pt; background-color: rgb(229, 241, 246); background-image: url('multiarticle_top.gif@22'); background-position: left top; background-repeat: no-repeat; border-right: 2px solid rgb(201, 222, 231); border-bottom: 2px solid rgb(201, 222, 231); border-left: 2px solid rgb(201, 222, 231); margin: auto; }
+#multiarticlelist ol { margin: 0pt 0pt 0pt 30px; padding: 0pt; list-style-type: decimal; list-style-position: outside; }
+#multiarticlelist li { margin: 0pt; padding: 0pt 0pt 9px; color: rgb(102, 102, 102); }
+#multiarticlelist a { line-height: normal; display: inline; font-size: 1em; background-image: none; background-color: rgb(229, 241, 246); border: medium none; padding: 0pt; }
+#multiarticlelist a:link { line-height: normal; display: inline; font-size: 1em; background-image: none; background-color: rgb(229, 241, 246); border: medium none; padding: 0pt; }
+#cmeinfo #multiarticlelist div.earncreditlink a { display: block; width: 75%; line-height: 40px; font-size: 1.15em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+#cmeinfo #multiarticlelist div.earncreditlink a:link { display: block; width: 75%; line-height: 40px; font-size: 1.15em; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+#supporterbadge, #cmeinfo, #cmeproviders { display: none; }
+#people { width: auto; }
+#xmldroplet { width: auto; }
+.farleftcolscrollbox .farleftcolscrollboxheader, .farleftcolscrollbox #rccolscrollbox, #farleftcolcallout, .farleftcol .farleftcolscrollboxheader, .farleftcol .scrollbox, .farleftcolbox, #pollboxtitle, #pollboxbg, #rightcol #pulldown2, #featurewidget, #infositesright, .rightcolboxsponsor { display: none; }
+.rightcolbox { width: auto; }
+.farleftcolscrollbox .farleftcolfooter img { display: none; }
+.farleftcolscrollbox .farleftcolfooter a { display: block; width: 90%; line-height: 32px; font-size: 19px; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+.farleftcolscrollbox .farleftcolfooter a:link { display: block; width: 90%; line-height: 32px; font-size: 19px; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+.midcolboxfooter .morelink img { display: none; }
+.midcolboxfooter .morelink a { display: block; width: 85%; line-height: 32px; font-size: 14px; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto 12px; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+.midcolboxfooter .morelink a:link { display: block; width: 85%; line-height: 32px; font-size: 14px; font-weight: bold; font-family: Helvetica,sans-serif; text-decoration: none; text-align: center; margin: 3px auto 12px; color: rgb(255, 255, 255); text-shadow: 0px 1px 1px rgb(0, 0, 0); border-width: 0px 14px; }
+#searchcontainer { background-color: rgb(255, 255, 255); margin: 0pt; padding: 8px; width: auto; }
+ul#footerbar { background-color: rgb(255, 255, 255); border: medium none; color: rgb(255, 255, 255); margin: 0pt; padding: 5px; text-align: left; list-style: none outside none; }
+ul#footerbar li { color: rgb(255, 255, 255); float: none; border: medium none; display: block; padding: 0pt 0pt 12px; margin: 0pt; font-weight: bold; width: auto; font-size: 1.2em; }
+#shadowbtm { background-image: none; margin: 0pt; padding: 0pt; }
+#shadowright { background-color: rgb(255, 255, 255); background-image: none; padding: 0pt; margin: 0pt; }
+#registrationbody { background-color: rgb(243, 243, 243); border: 1px solid rgb(179, 179, 179); padding: 8px; margin: 0pt; }
+#headerleft { margin-left: 8px; }
+#registrationbody table td { display: block; width: auto; padding: 0pt; margin: 0pt; text-align: left; }
+.formlabel { font-size: 1.05em; margin: 0pt 0pt 2px; }
+.formfield { font-size: 1.05em; margin: 0pt 0pt 8px; }
+.formfield2 { font-size: 1.05em; margin: 0pt 0pt 8px; }
+#registrationbody div { margin: 0pt; padding: 0pt; }
+#registrationbody h4 { font-family: Arial,sans-serif; font-size: 1.05em; margin: 0pt; padding: 0pt; }
+#regdegreecert, #addressline1, #addressline2, #mailingcity, #mailingzip { font-size: 1.05em; width: 280px; }
+#mailingstate, #mailingcountry { font-size: 1.05em; width: 286px; }
+#registrationbody input[type="submit"] { font-size: 1.2em; }
+#mailingcountry a.fieldlink, #mailingstate a.fieldlink { width: 281px; }
+#registrationbody #mailingstatelayer table td, #registrationbody #mailingcountryscrolllayer table td { font-size: 1.15em; padding: 0pt; }
+#mailingstatelayer table, #mailingcountryscrolllayer table { width: 286px; font-size: 1.15em; }
+ul.hiddenreglist { margin: 0pt; padding: 4px 8px 0pt; }
+ul.hiddenreglist li { margin: 0pt; padding: 4px 0pt 8px; }
+ul.hiddenreglist a { font-size: 1.4em; }
+#mailingcountrylayer div.active { width: 286px; border: 1px solid rgb(179, 179, 179); margin: 0pt 0pt 0pt -1px; padding: 0pt; }
+#mailingcountryscrolllayer { height: auto; border: medium none; overflow: visible; width: 284px; margin: 0pt; padding: 0pt; }
+#degreecerthint { display: none; }
+#networkoflogosreg { float: left; margin: 0pt 0pt 5px; padding: 0pt; height: 25px; width: 305px; }
+#registrationbody input#submitlostpass { font-size: 1.05em; }
+#lostpassemail { width: 295px; border: 1px solid rgb(179, 179, 179); font-size: 1.3em; margin: 8px 0pt; }
+#lostpasshint { display: none; }
+#helplinks { padding: 6px 5px 0pt; background-color: rgb(255, 255, 255); text-align: left; }
+#helplinks li { display: block; padding: 0pt 0pt 8px; font-size: 1.2em; }
+#professionbg { padding: 4px; }
+#professionPanel { padding-top: 16px; margin-top: 16px; }
+#regsecurityQlayer table td.hinttext { display: none; }
+#professionhinttext { padding: 8px; float: none; position: relative; top: 8px; left: 8px; font-size: 1em; text-align: left; width: 280px; }
+#professionbg table { width: auto; }
+#professionbg table td { padding: 0pt 4px; }
+#professionbg p.legaltext { padding: 8px; font-size: 1.1em; }
+#remembermecheck { margin-top: 16px; width: 20px; height: 20px; }
+#registerform input[type="text"], #registerform input[type="password"] { font-size: 1.25em; border: 1px solid rgb(179, 179, 179); }
+#regfnamefield { width: 240px; }
+#regminamefield { width: 30px; }
+#reglnamefield, #regemailaddress, #regemailaddressconfirm, #regusername, #regpassword, #regpasswordconfirm, #reghintanswer { width: 282px; }
+#usernamehint, #passwordhint { display: none; }
+#reghintquestion, #regprofession { font-size: 1.25em; width: 287px; }
+#reghintquestion a.fieldlink, #regprofession a.fieldlink { display: block; width: 282px; background-position: right top; }
+#regsecurityQlayer table { width: 289px; font-size: 1.1em; }
+#regprofessionlayer table { width: 287px; font-size: 1.1em; }
+#professionbg input[type="text"] { width: 272px; }
+#birthdatetable td { padding: 0pt; }
+#regdegree, #regspecialty, #regspecialization, #regmedschoolstate, #regmedschoolcountry, #regmedschool, #regmonth, #regcountrypractice, #regoccupation, #regpracticesetting { font-size: 1.25em; width: 277px; }
+#regdegree a.fieldlink, #regspecialty a.fieldlink, #regspecialization a.fieldlink, #regmedschoolstate a.fieldlink, #regmedschoolcountry a.fieldlink, #regmedschool a.fieldlink, #regmonth a.fieldlink, #regcountrypractice a.fieldlink, #regoccupation a.fieldlink, #regpracticesetting a.fieldlink { display: block; width: 272px; background-position: right top; }
+#regdegreelayer table.active, #regspecialtylayer div.active, #regspecializationlayer div.active, table#regspecializationhint, #regattendmedlayer table.active, #regmedschoolcountrylayer div.active, #regmedschoollayer table, #regmonthlayer table.active, #regcountrypracticelayer div.active, #regoccupationlayer table.active, #regpracticesettinglayer div.active { width: 277px; font-size: 1.1em; }
+#regspecialtyscrolllayer, #regspecializationscrolllayer, #regmedschoolcountryscrolllayer, #regcountrypracticescrolllayer, #regpracticesettingscrolllayer { width: auto; height: auto; overflow: visible; }
+#regmedschoollayer table#regmedschoolhint.active ul.hiddenreglist { font-size: 1em; }
+#submitreg { font-size: 1.3em; }
+#mednewslettersignupform table td hr { display: none; }
+form#mednewslettersignupform table td { display: inline; font-size: 1.15em; }
+.newsletterinfo { font-size: 0.9em; }
+form#mednewslettersignupform table td input[type="checkbox"] { width: 20px; height: 20px; }
+#continuetopagetop { text-align: left; display: block; position: relative; clear: both; }
+#continuetopagetop a { display: block; }
+#regsuccessful img { display: none; }
+#regsuccessful { display: block; position: relative; clear: both; }
+#lbbphone, #lbbfax { width: 265px; font-size: 1.25em; }
+#mednewsletteroffer, #lbboffer { margin: 16px 0pt; display: block; position: relative; clear: both; }
+table#loginbody { width: auto; }
+table#loginbody td, table#splashspecialties { display: block; }
+#regtd { padding: 8px 0pt; width: auto; }
+#regtd #networkoflogosreg, #regtd h3, #regtd #regbtn { margin-left: 8px; }
+#regtd b { padding: 0pt 8px; display: block; }
+#logintd { padding: 0pt; width: auto; }
+#loginbox { width: auto; }
+#loginbox #userId, #loginbox #password { width: 260px; font-size: 1.4em; }
+.forgotlink { margin-bottom: 16px; font-size: 1.15em; }
+#regerroralert { position: absolute; z-index: 300; border: 1px solid rgb(255, 102, 0); background-color: rgb(255, 255, 238); color: rgb(255, 102, 0); margin-left: 0pt; margin-top: 100px; width: auto; padding: 15px; font-size: 1.35em; }
+#regerroralert ul { margin: 0pt; padding: 0pt; list-style: none outside none; }
+#regerroralert p, #regerroralert #closeregalert { font-size: 1.1em; }
+#login { margin: 0pt; }
+#loginbtn { font-size: 1.3em; }
+#regbtn { font-size: 1.3em; margin-bottom: 16px; }
+#specsitepop { margin-left: 0pt; margin-top: 375px; }
+#splashlogin { text-align: left; padding: 8px 0pt 8px 8px; background-image: none; background-color: rgb(221, 221, 221); }
+#splashlogin input { display: block; font-size: 1.25em; margin: 0pt; }
+#splashlogin input[type="checkbox"] { width: 20px; height: 20px; }
+#splashlogin input[type="text"], #splashlogin input[type="password"] { width: 275px; font-size: 1.15em; margin-bottom: 12px; }
+#splashlogin input[type="submit"] { font-size: 18px; margin: 12px 0pt; }
+#splashlogin a { margin: 0pt; padding: 0pt; font-size: 1.15em; }
+.splashreglink { display: block; margin-top: 12px; }
+.ms_contain #leftcol .ms_main { margin-left: 0px; }
+.nav_contain { display: none; }
+.ms_contain #leftcol .tabbed_top { background-image: none; }
+.multimedia_contain { display: none; }
+.ms_contain #leftcol .ms_main .ms_main_group .ms_main_group_sub { float: none; width: auto; margin: 0pt; }
+.ms_contain #leftcol .ms_main .ms_main_group .ms_main_group_sub .ms_main_group_sub_footer { width: auto; }
+#people .flex { margin-right: 0px; }
+.ms_contain #leftcol .ms_main .ms_main_group .flex { margin-right: 0px; }
+.peoplecolumn { float: none; width: auto; }
+.peopletwocolumn { float: none; width: auto; }
+#people { width: auto; }
+#peopleright { width: auto; }
+.ms_contain #leftcol .tabbed_top .tabbed_top_rt { float: none; margin-left: 0px; width: auto; }
+.ms_contain #leftcol .ms_main .ms_main_group .ms_main_group_sub .ms_main_group_sub_footer .left, .ms_contain #leftcol .ms_main .ms_main_group .ms_main_group_sub .ms_main_group_sub_footer .right { float: none; width: auto; }
+.ms_contain #leftcol .maincallout { margin: 0pt 0pt 10px; }
+.ms_contain #leftcol .maincalloutcontent { background-image: none; background-color: rgb(255, 255, 255); padding-left: 8px; }
+table#equalcols td { display: block; width: auto; }
+#equal2col .midcolboxheader .midcolboxheaderright { float: none; margin-left: 10px; }
+#equalcols td.equalcolsmore { display: none; }
+.ms_contain #leftcol .tabbed_top .tabbed_top_rt { background-color: rgb(255, 255, 255); padding-right: 8px; padding-left: 8px; padding-bottom: 10px; }
+#peoplefull table td { display: block; width: auto; }
+#slideshowcallout { display: none; }
+#collectionbody { width: auto; }
+#collectionbody p#datelocation { margin: 0pt 0pt 3px 5px; }
+#collectionbody p#coveragedisclaimer, #collectionbody h1, #collectionbody #titleblock h3, #collectionbody #titleblock h4, #collectionbody #titleblock h2 { padding: 0pt 0pt 3px 5px; }
+.mobile_adlabelleft { background-image: url('mobile_ad_label.png@22'); background-repeat: no-repeat; background-position: left center; width: 300px; padding-left: 9px; margin-left: -155px; left: 50%; position: relative; margin-top: 8px; }

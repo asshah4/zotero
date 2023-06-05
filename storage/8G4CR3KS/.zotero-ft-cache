@@ -1,0 +1,1192 @@
+BMC Medical Genetics
+
+BioMed Central
+
+Research
+
+Open Access
+
+Genome-wide association study of electrocardiographic and heart
+
+rate variability traits: the Framingham Heart Study
+
+Christopher Newton-Cheh*1,2,3,6, Chao-Yu Guo1,4,6, Thomas J Wang1,3,6,
+
+Christopher J O'Donnell1,3,5,6, Daniel Levy1,5,6 and Martin G Larson1,4,6
+
+Address: 1The National Heart, Lung, and Blood Institute's Framingham Heart Study, Framingham, MA, USA, 2Program in Medical and Population Genetics, Broad Institute of Massachusetts Institute of Technology and Harvard University, Cambridge, MA, USA, 3Cardiology Division, Massachusetts General Hospital, Harvard Medical School, Boston, MA, USA, 4Departments of Mathematics and Statistics, Boston University, Boston, MA, USA, 5National Heart, Lung and Blood Institute, Bethesda, MD, USA and 6On behalf of the Framingham Heart Study 100K Cardiovascular Disease Working Group
+Email: Christopher Newton-Cheh* - cnewtoncheh@partners.org; Chao-Yu Guo - chaoyu@bu.edu; Thomas J Wang - tjwang@partners.org; Christopher J O'Donnell - odonnellc@nhlbi.nih.gov; Daniel Levy - levyd@nih.gov; Martin G Larson - mlarson@bu.edu
+* Corresponding author
+
+Published: 19 September 2007 BMC Medical Genetics 2007, 8(Suppl 1):S7 doi:10.1186/1471-2350-8-S1-S7
+
+<S sVuapspalne<m/endtit>or<>tit<len>ot<ep>>RTehseaFrrcahm</inoghteam> <Hueral>rthtSttpu:d//yw1w0w0,.0b0io0mseindgclennturcal.ecootmid/ecopnotleymnto/prdpfh/1is4m7s1-r2e3s5o0u-r8c-eS<1/-pin>fo<.p/tditfl<e/>ur<l>ed<it/osur>ppElmemeleianJt>Benjamin, Caroline S Fox, Daniel J Gottlieb, Cashell E Jaquish, Daniel Levy, James B Meigs, Christopher Newton-Cheh, Christopher J O'Donnell and Ramachandran
+
+This article is available from: http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+© 2007 Newton-Cheh et al; licensee BioMed Central Ltd. This is an open access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/2.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+
+Abstract
+Background: Heritable electrocardiographic (ECG) and heart rate variability (HRV) measures, reflecting pacemaking, conduction, repolarization and autonomic function in the heart have been associated with risks for cardiac arrhythmias. Whereas several rare monogenic conditions with extreme phenotypes have been noted, few common genetic factors contributing to interindividual variability in ECG and HRV measures have been identified. We report the results of a community-based genomewide association study of six ECG and HRV intermediate traits.
+Methods: Genotyping using Affymetrix 100K GeneChip was conducted on 1345 related Framingham Heart Study Original and Offspring cohort participants. We analyzed 1175 Original and Offspring participants with ECG data (mean age 52 years, 52% women) and 548 Offspring participants with HRV data (mean age 48 years, 51% women), in relation to 70,987 SNPs with minor allele frequency ≥ 0.10, call rate ≥ 80%, Hardy-Weinberg p-value ≥ 0.001. We used generalized estimating equations to test association of SNP alleles with multivariable-adjusted residuals for QT, RR, and PR intervals, the ratio of low frequency to high frequency power (LF/HFP), total power (TP) and the standard deviation of normal RR intervals (SDNN).
+Results: Associations at p < 10-3 were found for 117 (QT), 105 (RR), 111 (PR), 102 (LF/HF), 121 (TP), and 102 (SDNN) SNPs. Several common variants in NOS1AP (4 SNPs with p-values < 10-3; lowest p-value, rs6683968, p = 1 × 10-4) were associated with adjusted QT residuals, consistent with our previously reported finding for NOS1AP in an unrelated sample of FHS Offspring and other cohorts. All results are publicly available at NCBI's dbGaP at http://www.ncbi.nlm.nih.gov/ projects/gap/cgi-bin/study.cgi?id=phs000007.
+Conclusion: In the community-based Framingham Heart Study none of the ECG and HRV results individually attained genomewide significance. However, the presence of bona fide QT-associated SNPs among the top 117 results for QT duration supports the importance of efforts to validate top results from the reported scans. Finding genetic variants associated with ECG and HRV quantitative traits may identify novel genes and pathways implicated in arrhythmogenesis and allow for improved recognition of individuals at high risk for arrhythmias in the general population.
+
+Page 1 of 8
+(page number not for citation purposes)
+
+BMC Medical Genetics 2007, 8(Suppl 1):S7
+
+http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+Background
+Quantitative non-invasive measures of cardiac electrical activity recorded in electrocardiographic (ECG) and heart rate variability (HRV) studies are widely available in community-based samples and have been found to be predictive of cardiovascular events including sudden cardiac death [1-7]. Aggregation of these measures within families suggests a heritable component.
+Prior studies, including our own, have reported the heritability of common indices of myocardial repolarization and HRV measures. The heritability of electrocardiographic QT interval duration, a measure of myocardial repolarization, has been reported to be approximately 35%, indicating that 35% of the variability in adjusted QT interval duration is attributable to heritable factors [8-11]. Electrocardiographic RR interval, or its inverse heart rate, has been observed to have a heritability ranging from 32– 40% in family studies [12,13] and 54–77% in twin studies [11,14,15]. Electrocardiographic PR interval has reported heritability estimated at 34% [15]. We have previously reported the heritability of HRV measures including the ratio of low frequency to high frequency power, total power and the standard deviation of normal RR intervals [16].
+The heritability of ECG and HRV traits suggests there is a significant genetic component to the determination of these measures of myocardial repolarization, sinus node function, atrioventricular conduction, and autonomic function. Rare variants in ion channel genes have been implicated in rare Mendelian Long QT Syndromes. Historically, efforts to identify genetic determinants of common, complex traits have been focused on linkage or association of a small number of such biologic candidate genes with limited success and conflicting results.
+Genome-wide association studies (GWAS) offer the opportunity to test a large fraction of common genetic variation using high-throughput genotyping arrays. Such studies have recently identified genes previously unrecognized to contribute to disease, including complement factor H and age-related macular degeneration [17], INSIG2 and obesity [18], and the IL23R and inflammatory bowel disease [19]. To date the most convincing association with an ECG or HRV trait is that of a common variant in NOS1AP with QT interval variation identified through GWAS, reported by us in collaboration with others [20]. This study, using a fixed genotyping array to survey 100,000 variants, discovered a novel gene involved in myocardial repolarization and demonstrated the power of such unbiased methods to identify previously unrecognized genes or pathways involved in cardiovascular physiology. One such array, the Affymetrix 100K GeneChip has been shown to capture about 30% of common genetic
+
+variants among the European ancestry HapMap CEU sample [21]. We therefore sought to relate 70,987 common genetic variants genotyped on this array to ECG and HRV phenotypes in participants in the Framingham Heart Study as a first step toward identifying genetic variants that influence important cardiovascular traits.
+Methods
+Study sample The Framingham Heart Study is a cohort of predominantly European ancestry; the study sample is more fully described in the Overview Methods section [22]. ECG traits were measured between 1968 and 1975 using the entire sample of FHS Original and Offspring Cohort participants (examination cycles 11 and 1, respectively) with available measures, and free of prevalent coronary heart disease, atrial fibrillation and anti-arrhythmic medication use (n = 7356). The heritability sample for ECG analyses comprised 1951 individuals in 355 pedigrees. HRV traits were measured between 1983 and 1987 using the entire sample of FHS Original (examination cycle 18) and Offspring Cohort participants (examination cycle 3) with available measures, and free of prevalent myocardial infarction, congestive heart failure, atrial fibrillation, diabetes, and antihypertensive or cardioactive medication use (n = 1966). The heritability sample for HRV traits comprised 747 subjects in 307 pedigrees. The sample examined for GWAS included the subset of individuals on the FHS Related plates (n = 1175 for ECG analyses, n = 548 for HRV analyses). Each study participant provided written informed consent for genetic analyses and the study was approved by the Boston University Medical Center Institutional Review Board.
+Phenotype definition Digital caliper measurements were made on scanned paper ECGs recorded at 25 mm/sec, with good reproducibility as previously shown [9]. QT interval duration on the ECG was taken from the onset of the QRS to the end of the T wave or the nadir between the T wave and U wave if present, as previously described [9]. The QT phenotype was defined as the averaged, standardized residuals from sex-, lead-(II, V2, V5) and cohort-specific linear regression on age and RR interval. RR interval duration was measured as the time in msec from one R wave to the next R wave. The RR phenotype was defined as the averaged, standardized residuals from sex-, lead-(II, V2, V5), and cohort-specific linear regression on age. PR interval duration was measured from the onset of the P wave to the onset of the QRS interval on lead II only. The PR phenotype was defined as the standardized residual from sexand cohort-specific linear regression on age and RR interval.
+
+Page 2 of 8
+(page number not for citation purposes)
+
+BMC Medical Genetics 2007, 8(Suppl 1):S7
+
+http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+Heart rate variability measures were extracted from two hour ambulatory ECG recordings as previously described [16,23]. We excluded recordings with nonsinus rhythm, >10% premature beats, <1 hour recording time, or processed time <50% recording time. Fast Fourier transform analysis was performed on 100-second blocks of RR interval data from 32 Hz recordings (Cardiodata Corp) sampled at 180 samples/second (Mortara Instrument Co). Power density spectra were averaged across all 100-second blocks. HRV phenotypes include two frequency domain measures, ratio of low frequency to high frequency power (LF/HF) and total power (TP) and one time domain measure: standard deviation of normal RR intervals (SDNN). The phenotype studied was the standardized, log-transformed residuals from sex and cohort-specific linear regression of HRV trait on age, heart rate, systolic and diastolic blood pressures, coffee intake and alcohol intake [23].
+Genotyping and annotation Affymetrix 100K SNP genotyping is described in the Overview Methods section [22]. Genotype annotation using dbSNP and UCSC Genome Browser [24,25] are described in the Overview Methods section [22].
+Statistical analysis The general statistical methods for linkage and GWA analyses are described in the Overview Methods section [22]. Heritability was estimated using the variance components methods implemented in SOLAR [26]. The primary analysis of SNP associations with the 6 ECG and HRV phenotypes involved use of linear regression of minor allele copy number (additive genetic model) on phenotype using generalized estimating equations (GEE) to account for relatedness among individuals as described in the Overview [22]. Secondary analyses involved family-based association testing using FBAT [27] and linkage using SOLAR [25] after exact identity-by-descent estimation using Merlin [28] on a subset of 11,200 SNPs and STRs. Affymetrix 100K GeneChip SNPs tested for association with phenotypes included the 70,987 autosomal SNPs with minor allele frequency ≥ 10%, call rate ≥ 80% and Hardy-Weinberg equilibrium p-value ≥ 0.001. For all results, nominal p-values are shown, unadjusted for multiple tests. For positive control analyses of rs10494366, we accessed HapMap CEU genotypes at the NOS1AP locus December 11, 2005 (http://www.hapmap.org). Correlation (r2) among HapMap CEU SNPs was determined using HaploView 4.0 beta 11 (http://www.broad.mit.edu/ mpg/haploview).
+Results
+Clinical characteristics of the FHS sample of 1345 subjects are presented in the Overview [22]. Table 1 displays the variables that were studied in our analyses of ECG and
+
+HRV traits. Further information on these traits can be found at http://www.ncbi.nlm.nih.gov/projects/gap/cgibin/study.cgi?id=phs000007.
+ECG and HRV measures are heritable traits We have previously shown in the Framingham Heart Study that electrocardiographic QT interval duration, adjusted for RR interval, age, and sex has substantial heritability. In the current study, including a subset from the original report, heritability was estimated at 0.39 (Table 1) [9]. We have also previously shown that HRV phenotypes show familial aggregation [16]; in the current report, after adjustment for covariates, heritability estimates were 0.36 (LF/HF), 0.41 (TP), and 0.32 (SDNN) (Table 1). For the electrocardiographic RR interval (inverse heart rate), adjusted for age and sex, in the related sample of FHS original and offspring participants, we observed a heritability of 0.29. For the electrocardiographic PR interval, adjusted for age, sex and RR interval, we observed a heritability of 0.34.
+Association tests approximate the null distribution After filtering all autosomal SNPs on call rate ≥ 80%, minor allele frequency ≥ 0.10 and Hardy-Weinberg pvalue ≥ 0.001, we observed a distribution of the 70,987 pvalues that approximated a null distribution. The proportions of p < 0.0001 or p < 0.001 averaged across all six ECG and HRV phenotypes were 0.00018 and 0.0016, respectively (Table 2). The proportion of tests with a p ≥ 0.10 was 0.89. The p-value distributions were stable across increasingly stringent call rate thresholds and showed only a minor trend toward fewer excess p-values with increasing minor allele frequency (data not shown).
+Genome-wide association results Results can be found at http://www.ncbi.nlm.nih.gov/ projects/gap/cgi-bin/study.cgi?id=phs000007. From the primary GEE analyses, the strongest associations for the QT, RR and PR phenotypes were for SNPs rs10507380 (p = 8.4 × 10-6), rs2179896 (p = 1.7 × 10-5), and rs882300 (p = 3.2 × 10-7), respectively (Table 3). From the primary GEE analyses, the strongest associations for LF/HF, TP, SDNN were for SNPs rs1395479 (p = 6.9 × 10-6), rs9315385 (p = 7.7 × 10-6), and rs2966762 (p = 2.0 × 10-5), respectively (Table 3). SNP associations by GEE analysis with nominal p < 10-3 were found for 117 (QT), 105 (RR), 111 (PR), 102 (LFHFP), 121 (TP), and 102 SNPs (SDNN).
+Positive controls in NOS1AP support the promise of GWAS in this sample We have previously reported the association of a common variant rs10494366 (MAF 38%) in the NOS1AP gene with adjusted QT interval variation in 3 independent cohorts, including an unrelated set of Framingham Heart Study
+
+Page 3 of 8
+(page number not for citation purposes)
+
+BMC Medical Genetics 2007, 8(Suppl 1):S7
+
+http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+Table 1: Heritability of electrocardiographic and heart rate variability phenotypes examined in the Framingham 100K project
+
+Phenotype
+
+Acronym Heritability sample Original Exam Offspring Exam
+
+Adjustment*
+
+Heritability† (SE)
+
+Electrocardiographic phenotypes
+
+QT sex-pooled QT men only QT women only RR sex-pooled RR men only RR women only PR sex-pooled
+
+QTPOOL
+
+1951
+
+11
+
+1
+
+Age, RR, sex, cohort
+
+0.39 (0.04)†
+
+QTMEN**
+
+900
+
+11
+
+1
+
+Age, RR, cohort
+
+0.43 (0.08)
+
+QTWOMEN**
+
+1051
+
+11
+
+1
+
+Age, RR, cohort
+
+0.46 (0.04)
+
+RRPOOL
+
+1951
+
+11
+
+1
+
+Age, sex, cohort
+
+0.29 (0.04)
+
+RRMEN**
+
+900
+
+11
+
+1
+
+Age, cohort
+
+0.28 (0.08)
+
+RRWOMEN**
+
+1051
+
+11
+
+1
+
+Age, cohort
+
+0.31 (0.07)
+
+PRAdjRRPOOL
+
+1950
+
+11
+
+1
+
+Age, RR, sex, cohort
+
+0.34 (0.04)
+
+Heart rate variability phenotypes
+
+SDNN sex-pooled
+
+SDNNHRV
+
+747
+
+Total power sex-pooled
+
+TOTPWRHRV
+
+747
+
+Low frequency/high frequency
+
+LFHFHRV
+
+747
+
+power sex-pooled
+
+18
+
+3
+
+Age, heart rate, SBP, DBP,
+
+0.32 (0.09)†
+
+coffee & alcohol intake
+
+18
+
+3
+
+Age, heart rate, SBP, DBP,
+
+0.41 (0.10)†
+
+coffee & alcohol intake
+
+18
+
+3
+
+Age, heart rate, SBP, DBP,
+
+0.36 (0.10)†
+
+coffee & alcohol intake
+
+All phenotypes for ECG and HRV traits are shown (including pre-specified secondary traits not examined for this report), including covariates adjusted for in linear regression models. Heritability estimates were generated in the superset of individuals with phenotype values in families (n ≤ 1951 for ECG traits, n ≤ 747 for HRV traits). For electrocardiographic traits there were 1175 individuals with genotypes and for heart rate variability there were 548 individuals with genotypes in the 100K analyses. All results
+are publicly available at http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?id=phs000007. *Separate regression models were created by cohort and sex for ECG and HRV measures. †All heritability estimates <0.001. **Prespecified secondary results in GWAS pipeline but not analyzed in this report (available at http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?id=phs000007). QT
+and HRV heritability estimates are consistent with previous reports in largely overlapping sample [9,16].
+
+participants (on the Unrelated Plates), as part of a threestage genome-wide association study [20]. In the current report, we have now validated the association of rs10494366, genotyped on the Affymetrix 100K GeneChip array, with QT interval duration in the Related Plate set examined (nominal 2-sided p = 0.0009, rank in 100K analysis #102, call rate 91%). Moreover, among the 117 SNPs on the array associated with QT with p < 0.001 there were three additional associated SNPs that were in or near NOS1AP, all partially correlated with rs10494366: rs6683968 (p = 0.0001, MAF 32%, 100K rank #10, r2 = 0.05 to rs10494366 in HapMap CEU, call rate 93%), rs945713 (p = 0.0002, r2 = 0.35, MAF 42%, rank #23, call rate 99%) and rs1932933 (p = 0.0004, r2 = 0.63, MAF 39%, rank #42, call rate 99%). For illustrative purposes, we further considered a two-staged design in which one genotyped all SNPs associated with the QT phenotype with p < 0.001 (n = 117) found in the Related Plate set 100K analysis in an additional approximately 1500 independent Framingham offspring cohort participants on the
+
+unrelated plate set (the reverse of the order in which this SNP was actually genotyped). In such a design the p-value for SNP rs10494366 of 0.0009 would rise to a combined p-value of 8.9 × 10-6 on joint analysis of the two samples.
+Suggestive linkage results We observed suggestive evidence of linkage to the following phenotypes with LOD scores exceeding 2.2: LOD 2.50 on chromosome 3 (8.72 Mb) for QT interval, which has previously been reported for a largely overlapping sample using microsatellite markers [9]; 2.52 on chromosome 17 (74.21 Mb) for QT interval; 2.98 on chromosome 4 (124.75 Mb) for PR interval; 2.39 on chromosome 15 (75.51 Mb) for LF/HF, and 2.19 on chromosome 11 (4.40 Mb) for TP (Table 4).
+Candidate genes and QT, RR interval traits Because use of a genome-wide p-value threshold may be overly conservative for candidate genes directly implicated in cardiovascular physiology, we conducted a sec-
+
+Table 2: Proportion of association results at different p-value thresholds
+
+QT
+
+RR
+
+PR
+
+LF/HF
+
+Tot Power
+
+SDNN
+
+Average
+
+p < 0.0001 p < 0.001 p > 0.10
+
+0.000127 0.00165 0.891
+
+0.000197 0.00149 0.886
+
+0.000169 0.00156 0.882
+
+0.000281 0.00143 0.895
+
+0.000197 0.00172 0.895
+
+0.000112 0.00145 0.893
+
+0.000180 0.00155 0.890
+
+Shown are the proportion of p-values for single SNP association tests using GEE which are more extreme than 0.0001, 0.001 and less extreme than 0.10 for the six electrocardiographic and heart rate variability traits, after excluding SNPs with call rate <80%, minor allele frequency <10%, HardyWeinberg equilibrium p-value < 0.001. The proportions observed closely approximate the proportions expected for a null distribution – 0.0001, 0.001 and 0.90.
+
+Page 4 of 8
+(page number not for citation purposes)
+
+BMC Medical Genetics 2007, 8(Suppl 1):S7
+Table 3: Top GEE association results for electrocardiographic phenotypes
+
+http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+Trait SNP rank
+
+rs ID
+
+Chromosome
+
+Physical Position
+
+GEE p-value
+
+FBAT p-value
+
+Gene region (within 60 kb)
+
+Top 8 QT interval SNPs
+
+QT
+
+1
+
+rs10507380
+
+13
+
+QT
+
+2
+
+rs2726920
+
+11
+
+QT
+
+3
+
+rs763552
+
+8
+
+QT
+
+4
+
+rs366307
+
+5
+
+QT
+
+5
+
+rs3858646
+
+12
+
+QT
+
+6
+
+rs1558139
+
+19
+
+QT
+
+7
+
+rs1695508
+
+7
+
+QT
+
+8
+
+rs10495588
+
+2
+
+26777526 108252434 31564949 150527337 114038413 15858564 28739796 12153871
+
+8.4 × 10-6 4.2 × 10-5 4.7 × 10-5 4.9 × 10-5 7.7 × 10-5 8.2 × 10-5 8.5 × 10-5 8.7 × 10-5
+
+0.665 0.865 0.033 0.104 1.3 × 10-4 6.0 × 10-5 0.002 0.001
+
+RPL21 DDX10 NRG1 ANXA6
+CYP4F2
+
+Top 8 RR interval SNPs
+
+RR
+
+1
+
+rs2179896
+
+14
+
+RR
+
+2
+
+rs10518674
+
+15
+
+RR
+
+3
+
+rs321967
+
+7
+
+RR
+
+4
+
+rs4319121
+
+8
+
+RR
+
+5
+
+rs844429
+
+10
+
+RR
+
+6
+
+rs4345013
+
+22
+
+RR
+
+7
+
+rs2643191
+
+3
+
+RR
+
+8
+
+rs2932529
+
+1
+
+53945264 50105438 77959200 53668308 80016392 25706391 165861395 112905406
+
+1.7 × 10-5 1.9 × 10-5 2.6 × 10-5 3.6 × 10-5 4.5 × 10-5 4.9 × 10-5 5.2 × 10-5 5.7 × 10-5
+
+0.032 0.033 0.018 0.571 0.032 0.227 2.5 × 10-4 0.232
+
+MAPK6 MAGI2
+CAPZA1
+
+Top 8 PR interval SNPs
+
+PR
+
+1
+
+rs882300
+
+2
+
+PR
+
+2
+
+rs10518795
+
+15
+
+PR
+
+3
+
+rs7201988
+
+16
+
+PR
+
+4
+
+rs2096767
+
+11
+
+PR
+
+5
+
+rs2831936
+
+21
+
+PR
+
+6
+
+rs10516736
+
+4
+
+PR
+
+7
+
+rs4488182
+
+11
+
+PR
+
+8
+
+rs10489798
+
+1
+
+136809987 53131579 9516007 102296609 28922444 82325666 41032137 96957067
+
+3.2 × 10-7 1.1 × 10-5 3.0 × 10-5 3.1 × 10-5 3.1 × 10-5 5.1 × 10-5 5.4 × 10-5 6.2 × 10-5
+
+0.133 0.062 0.001 0.031 0.011 0.014 0.008 0.086
+
+MMP13 BMP3 PTBP2
+
+Top 8 LF/HF SNPs
+
+LF/HF
+
+1
+
+rs1395479
+
+4
+
+LF/HF
+
+2
+
+rs2215456
+
+12
+
+LF/HF
+
+3
+
+rs1336938
+
+13
+
+LF/HF
+
+4
+
+rs796184
+
+13
+
+LF/HF
+
+5
+
+rs4669749
+
+2
+
+LF/HF
+
+6
+
+rs1871841
+
+8
+
+LF/HF
+
+7
+
+rs721691
+
+7
+
+LF/HF
+
+8
+
+rs10509700
+
+10
+
+178693340 40596176 88369006 88515431 11643262 13674417 128485610 97884521
+
+6.9 × 10-6 1.3 × 10-5 1.6 × 10-5 1.9 × 10-5 2.0 × 10-5 2.1 × 10-5 3.0 × 10-5 4.2 × 10-5
+
+0.034 0.002 0.003 0.003 0.113 0.015 0.026 0.864
+
+NEIL3 GREB1
+
+Top 8 Total Power SNPs
+
+TP
+
+1
+
+rs9315385
+
+13
+
+TP
+
+2
+
+rs2276886
+
+4
+
+TP
+
+3
+
+rs726698
+
+2
+
+TP
+
+4
+
+rs1330948
+
+13
+
+TP
+
+5
+
+rs2283064
+
+7
+
+TP
+
+6
+
+rs10515199
+
+5
+
+TP
+
+7
+
+rs1407709
+
+1
+
+TP
+
+8
+
+rs1723482
+
+2
+
+35561302 77285607 35366992 106192232 125719004 74135390 184794336 47318190
+
+7.7 × 10-6 1.5 × 10-5 2.2 × 10-5 2.4 × 10-5 3.0 × 10-5 3.8 × 10-5 4.0 × 10-5 5.5 × 10-5
+
+0.031 0.004 0.001 0.016 0.042 0.113 0.042 0.040
+
+DCAMKL1 CXCL9
+GRM8
+
+Top 8 SDNN SNPs
+
+SDNN
+
+1
+
+rs2966762
+
+5
+
+SDNN
+
+2
+
+rs286751
+
+5
+
+SDNN
+
+3
+
+rs1013621
+
+8
+
+SDNN
+
+4
+
+rs1378506
+
+5
+
+SDNN
+
+5
+
+rs1866559
+
+2
+
+SDNN
+
+6
+
+rs2049161
+
+18
+
+SDNN
+
+7
+
+rs9297393
+
+8
+
+SDNN
+
+8
+
+rs7012655
+
+8
+
+109411118 107430837 52963944 109419129 27247237
+4117583 108356753 52740967
+
+2.0 × 10-5 2.1 × 10-5 4.0 × 10-5 4.5 × 10-5 5.3 × 10-5 5.9 × 10-5 6.4 × 10-5 8.4 × 10-5
+
+0.024 4.1 × 10-5
+0.018 0.110 0.405 0.036 0.587 0.007
+
+FBXL17
+CGREF1 ANGPT1
+
+The top 8 association results for ECG phenotypes QT, RR and PR interval and for HRV phenotypes low frequency to high frequency power (LF/HF), total power (TP) and standard deviation of normal RR intervals (SDNN) are shown from a total 70,987 SNPs tested in additive genetic models using GEE. Chromosome and physical position using NCBI build 35 reference sequence (hg17) are shown. The corresponding FBAT p-value is shown (note: the number of informative families varies substantially). Genes within 60 kb of a SNP are shown.
+Page 5 of 8
+(page number not for citation purposes)
+
+BMC Medical Genetics 2007, 8(Suppl 1):S7
+
+http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+Table 4: Suggestive linkage results for ECG and HRV phenotypes
+
+phenotype
+
+maximum LOD
+
+SNP
+
+chromosome
+
+position (Mb)
+
+1.5 LOD CI
+
+ECG
+
+PR
+
+2.98
+
+rs1011725
+
+4
+
+124.75
+
+113.07 – 138.58
+
+QT
+
+2.52
+
+rs10512617
+
+17
+
+74.21
+
+66.43 – 76.22
+
+QT
+
+2.50
+
+rs164462
+
+3
+
+8.72
+
+5.49 – 13.81
+
+HRV
+
+LF/HF TP
+
+2.39
+
+rs10519165
+
+2.19
+
+rs10500600
+
+15
+
+75.51
+
+67.57 – 79.33
+
+11
+
+4.40
+
+0.80 – 11.77
+
+Shown are the linkage results exceeding a maximum multipoint LOD score of 2.0 for electrocardiographic QT, RR and PR intervals and the ratio of low frequency to high frequency power, total power and the standard deviation of normal RR intervals. The SNP at the maximum LOD score is shown as well as the confidence interval spanning the 1.5 LOD drop from the maximum. Mb = megabase; CI = confidence interval; ECG = electrocardiogram; PR = PR interval adjusted for age, sex, RR interval; QT = QT interval adjusted for age, sex, RR interval; HRV = heart rate variability; LF/HF = ratio of low frequency to high frequency power; TP = total power.
+
+ondary analysis of SNPs within 60 kb of candidate genes for ECG and HRV traits. Among 88 SNPs (MAF ≥ 0.10, call rate ≥ 0.8, HWE p-value ≥ 0.001) in 9 genes implicated in congenital Long QT Syndromes or QT interval duration, only SNPs in NOS1AP had p < 0.05 for association with QT interval duration (Table 5). Among 35 SNPs in 8 adrenergic receptor genes, SNPs with nominal p < 0.05 included two for RR interval, one for PR interval, none for LF/HF power, two for total power and 7 for SDNN (Table 5).
+Discussion
+We confirmed the heritability of electrocardiographic RR interval (inverse heart rate) and PR interval and reproduced our previously demonstrated findings that QT interval and HRV traits are heritable in our communitybased European ancestry sample [9,16]. We have tested 70,987 common genetic variants (MAF ≥ 10%) for association with six heritable electrocardiographic and heart rate variability phenotypes, which have been shown to be associated with adverse cardiovascular outcomes, including sudden cardiac death. No result attained a genomewide significance threshold, such as p < 1 × 10-7 required for Bonferroni correction for six traits and 70,987 SNPs. The failure to achieve a genome-wide p-value threshold reflects the massive penalty incurred by testing so many hypotheses and the limited power to achieve such a pvalue given the modest effects of common variants that contribute to complex traits. However, the presence among the test results with nominal p < 0.001 for association with QT interval duration of common variants at the NOS1AP locus, a recently identified and multiply replicated myocardial repolarization gene [20], supports the presence of some true positive results among the mostly false positive findings.
+
+Strengths of our study include the moderate-sized, wellcharacterized community-based sample, without ascertainment on phenotype, and the precision of the ECG and HRV measurements as supported by their substantial heritability. Some limitations pertain. Our study had limited power to detect modest genetic effects in a single stage. The Affymetrix 100K GeneChip, a first generation genotyping array, has patchy coverage of common genetic variation, leaving many regions untested. Our sample is almost exclusively of European ancestry, potentially limiting extension to other populations with different linkage disequilibrium patterns or environmental exposures.
+Conclusion
+Staged GWAS designs in which a modest number of results from GWAS in the first stage are tested in a second independent sample and the combined statistical evidence considered, are powerful and efficient approaches to identify common variants associated with complex traits [29,30]. Such approaches may be warranted for follow up of findings from this study. Through such approaches we hope to find additional genetic factors that could improve our understanding of human biology, serve as targets for novel therapeutics or contribute to improved identification of individuals at high risk for cardiovascular events. Our report and the web posting of all results from 70,987 SNPs tested for association with ECG and HRV phenotypes in the Framingham Heart Study represents a first step in this endeavor.
+Abbreviations
+ECG = electrocardiogram; FBAT = family-based association test; GEE = generalized estimating equations; GWAS = genome wide association study; HRV = heart rate variability; LF/HF = ratio of low frequency to high frequency power; LOD = log-likelihood ratio; SNP = single nucleotide polymorphism; TP = total power
+
+Page 6 of 8
+(page number not for citation purposes)
+
+BMC Medical Genetics 2007, 8(Suppl 1):S7
+
+http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+Table 5: Candidate gene associations with electrocardiographic and heart rate variability traits
+
+Candidate Gene
+
+SNP
+
+Chrom Physical position
+
+Minor allele frequency
+
+Phenotype GEE P-value
+
+QT interval
+
+NOS1AP NOS1AP NOS1AP NOS1AP NOS1AP NOS1AP
+
+rs10494365
+
+1
+
+rs10494366
+
+1
+
+rs6683968
+
+1
+
+rs347311
+
+1
+
+rs945713
+
+1
+
+rs1932933
+
+1
+
+158815647
+
+0.11
+
+158817343
+
+0.39
+
+158923070
+
+0.32
+
+159035565
+
+0.28
+
+158867328
+
+0.42
+
+158849704
+
+0.39
+
+QT
+
+0.01
+
+QT
+
+9.0 × 10-4
+
+QT
+
+1.0 × 10-4
+
+QT
+
+0.01
+
+QT
+
+2.4 × 10-4
+
+QT
+
+4.3 × 10-4
+
+RR interval
+
+ADRA1A
+
+rs10503797
+
+8
+
+26659190
+
+0.11
+
+RR
+
+0.04
+
+ADRB2
+
+rs10515621
+
+5
+
+148226737
+
+0.14
+
+RR
+
+0.04
+
+PR interval
+
+ADRA1A
+
+rs520180
+
+8
+
+26765839
+
+0.25
+
+PR
+
+0.04
+
+LF/HF power
+
+NA
+
+Total power
+
+ADRA1B
+
+rs2195926
+
+5
+
+159255501
+
+0.31
+
+TP
+
+0.01
+
+ADRB2
+
+rs9325124
+
+5
+
+148229011
+
+0.44
+
+TP
+
+0.03
+
+SDNN
+
+ADRA1A
+
+rs10503791
+
+8
+
+26611431
+
+0.17
+
+SDNN
+
+0.02
+
+ADRA1B
+
+rs2195926
+
+5
+
+159255501
+
+0.31
+
+SDNN
+
+0.03
+
+ADRA1A
+
+rs10503788
+
+8
+
+26611063
+
+0.18
+
+SDNN
+
+0.01
+
+ADRA1A
+
+rs10503789
+
+8
+
+26611248
+
+0.18
+
+SDNN
+
+0.01
+
+ADRA1A
+
+rs10503790
+
+8
+
+26611360
+
+0.18
+
+SDNN
+
+0.01
+
+ADRA1A
+
+rs10503794
+
+8
+
+26612682
+
+0.18
+
+SDNN
+
+0.01
+
+ADRA1A
+
+rs7000280
+
+8
+
+26611857
+
+0.18
+
+SDNN
+
+0.01
+
+Associations with QT interval of SNPs within 60 kb of candidate genes implicated in congenital Long QT Syndrome or QT duration and with RR and PR interval, low frequency to high frequency power (LF/HF), total power, and the standard deviation of normal RR intervals (SDNN) of SNPs within 60 kb of adrenergic receptor genes at a nominal p < 0.05 are shown.* *SNPs with minor allele frequency <10%, call rate <80% or Hardy-Weinberg p-value < 0.001 were excluded. Candidate gene loci tested for association with QT interval duration include 88 SNPs within 60 kb of the following genes: KCNQ1, KCNH2, SCN5A, ANK2, KCNE1, KCNE2, KCNJ2, CACNA1C and NOS1AP. Candidate gene loci tested for association with RR, PR, LF/HF, total power, and SDNN include 35 SNPs within 60 kb of the following genes: ADRB1, ADRB2, ADRA1A, ADRA1B, ADRA1D, ADRA2A, ADRA2B, and ADRA2C.
+
+Competing interests
+The authors declare that they have no competing interests.
+Authors' contributions
+Drs. Larson and Newton-Cheh had full access to all of the data in the study and take responsibility for the integrity of the data and the accuracy of the data analysis.
+
+Study concept and design: Newton-Cheh, Levy, O'Donnell, Larson; Acquisition of data: Levy, O'Donnell, NewtonCheh; Analysis and interpretation of data: Newton-Cheh, Larson, O'Donnell, Levy, Guo; Drafting of the manuscript: Newton-Cheh; Critical revision of the manuscript for important intellectual content: Larson, Levy, O'Donnell, Wang; Statistical expertise: Guo, Larson; Administrative, technical,
+
+Page 7 of 8
+(page number not for citation purposes)
+
+BMC Medical Genetics 2007, 8(Suppl 1):S7
+
+http://www.biomedcentral.com/1471-2350/8/S1/S7
+
+or material support: Levy, O'Donnell; Study supervision:
+
+Newton-Cheh,
+
+Larson,
+
+Levy,
+
+O'Donnell.
+
+Acknowledgements
+The investigators would like to express their gratitude to the FHS partici-
+pants and key collaborators: Emelia J. Benjamin and Ramachandran S. Vasan.
+ECG intervals were measured by eResearchTechnology, Inc. The core
+examinations were funded by N01-HC25195. Dr. Newton-Cheh is sup-
+ported by the NIH (K23) and the Doris Duke Charitable Foundation Clin-
+ical Scientist Development Award. Electrocardiographic measurements
+were supported by an unrestricted grant from Pfizer. A portion of the
+research was conducted using the BU Linux Cluster for Genetic Analysis
+(LinGA) funded by the NIH NCRR (National Center for Research
+Resources) Shared Instrumentation grant (1S10RR163736-01A1).
+This article has been published as part of BMC Medical Genetics Volume 8
+Supplement 1, 2007: The Framingham Heart Study 100,000 single nucle-
+otide polymorphisms resource. The full contents of the supplement are
+available online at http://www.biomedcentral.com/1471-2350/8?issue=S1.
+References
+1. Kannel WB, McGee DL, Schatzkin A: An epidemiological perspective of sudden death. 26-year follow-up in the Framingham Study. Drugs 1984, 28(Suppl 1):1-16.
+2. Algra A, Tijssen JG, Roelandt JR, Pool J, Lubsen J: QTc prolongation measured by standard 12-lead electrocardiography is an independent risk factor for sudden death due to cardiac arrest. Circulation 1991, 83:1888-1894.
+3. Schouten EG, Dekker JM, Meppelink P, Kok FJ, Vandenbroucke JP, Pool J: QT interval prolongation predicts cardiovascular mortality in an apparently healthy population. Circulation 1991, 84:1516-1523.
+4. Gillman MW, Kannel WB, Belanger A, D'Agostino RB: Influence of heart rate on mortality among persons with hypertension: the Framingham Study. Am Heart J 1993, 125:1148-1154.
+5. Jouven X, Zureik M, Desnos M, Guerot C, Ducimetiere P: Resting heart rate as a predictive risk factor for sudden death in middle-aged men. Cardiovasc Res 2001, 50:373-378.
+6. Straus SM, Kors JA, De Bruin ML, van der Hooft CS, Hofman A, Heeringa J, Deckers JW, Kingma JH, Sturkenboom MC, Stricker BH, Witteman JC: Prolonged QTc interval and risk of sudden cardiac death in a population of older adults. J Am Coll Cardiol 2006, 47:362-367.
+7. Tsuji H, Venditti FJ Jr, Manders ES, Evans JC, Larson MG, Feldman CL, Levy D: Reduced heart rate variability and mortality risk in an elderly cohort. The Framingham Heart Study. Circulation 1994, 90:878-883.
+8. Busjahn A, Knoblauch H, Faulhaber HD, Boeckel T, Rosenthal M, Uhlmann R, Hoehe M, Schuster H, Luft FC: QT interval is linked to 2 long-QT syndrome loci in normal subjects. Circulation 1999, 99:3161-3164.
+9. Newton-Cheh C, Larson MG, Corey DC, Benjamin EJ, Herbert AG, Levy D, D'Agostino RB, O'Donnell CJ: QT interval is a heritable quantitative trait with evidence of linkage to chromosome 3 in a genome-wide linkage analysis: The Framingham Heart Study. Heart Rhythm 2005, 2:277-284.
+10. Wise NB, Comequi WJ, White PD: An electrocardiographic study of twins. American Heart Journal 1939, 17:701-710.
+11. Hanson B, Tuna N, Bouchard T, Heston L, Eckert E, Lykken D, Segal N, Rich S: Genetic factors in the electrocardiogram and heart rate of twins reared apart and together. Am J Cardiol 1989, 63:606-609.
+12. An P, Rice T, Gagnon J, Borecki IB, Perusse L, Leon AS, Skinner JS, Wilmore JH, Bouchard C, Rao DC: Familial aggregation of resting blood pressure and heart rate in a sedentary population: the HERITAGE Family Study. Health, Risk Factors, Exercise Training, and Genetics. Am J Hypertens 1999, 12:264-270.
+13. Ranade K, Jorgenson E, Sheu WH, Pei D, Hsiung CA, Chiang FT, Chen YD, Pratt R, Olshen RA, Curb D, Cox DR, Botstein D, Risch N: A polymorphism in the beta1 adrenergic receptor is associated with resting heart rate. Am J Hum Genet 2002, 70:935-942.
+
+14. Russell MW, Law I, Sholinsky P, Fabsitz RR: Heritability of ECG measurements in adult male twins. J Electrocardiol 1998, 30(Suppl):64-68.
+15. Havlik RJ, Garrison RJ, Fabsitz R, Feinleib M: Variability of heart rate, P-R, QRS and Q-T durations in twins. J Electrocardiol 1980, 13:45-48.
+16. Singh JP, Larson MG, O'Donnell CJ, Tsuji H, Evans JC, Levy D: Heritability of heart rate variability: the Framingham Heart Study. Circulation 1999, 99:2251-2254.
+17. Klein RJ, Zeiss C, Chew EY, Tsai JY, Sackler RS, Haynes C, Henning AK, SanGiovanni JP, Mane SM, Mayne ST, Bracken MB, Ferris FL, Ott J, Barnstable C, Hoh J: Complement factor H polymorphism in age-related macular degeneration. Science 2005, 308:385-389.
+18. Herbert AG, Gerry NP, McQueen MB, Heid IM, Pfeufer A, Illig T, Wichmann HE, Meitinger T, Hunter D, Hu FB, Colditz G, Hinney A, Hebebrand J, Koberwitz K, Zhu X, Cooper R, Ardlie K, Lyon HN, Hirschhorn JN, Laird NM, Lenburg ME, Lange C, Christman MF: A Common Genetic Variant is Associated With Adult and Childhood Obesity. Science 2006, 312:279-283.
+19. Duerr RH, Taylor KD, Brant SR, Rioux JD, Silverberg MS, Daly MJ, Steinhart AH, Abraham C, Regueiro M, Griffiths A, Dassopoulos T, Bitton A, Yang H, Targan S, Datta LW, Kistner EO, Schumm LP, Lee AT, Gregersen PK, Barmada MM, Rotter JI, Nicolae DL, Cho JH: A genome-wide association study identifies IL23R as an inflammatory bowel disease gene. Science 2006, 314:1461-1463.
+20. Arking DE, Pfeufer A, Post W, Kao WH, Newton-Cheh C, Ikeda M, West K, Kashuk C, Akyol M, Perz S, Jalilzadeh S, Illig T, Gieger C, Guo CY, Larson MG, Wichmann HE, Marban E, O'Donnell CJ, Hirschhorn JN, Kaab S, Spooner PM, Meitinger T, Chakravarti A: A common genetic variant in the NOS1 regulator NOS1AP modulates cardiac repolarization. Nat Genet 2006, 38:644-651.
+21. Pe'er I, de Bakker PI, Maller J, Yelensky R, Altshuler D, Daly MJ: Evaluating and improving power in whole-genome association studies using fixed marker sets. Nat Genet 2006, 38:663-667.
+22. Cupples LA, Arruda H, Benjamin EJ, D'Agostino RB Sr, Demissie S, DeStefano AL, Dupuis J, Falls K, Fox CS, Gottlieb DJ, Govindaraju DR, Guo CY, Heard-Costa N, Hwang SJ, Kathiresan S, Kiel DP, Laramie JM, Larson MG, Levy D, Liu CY, Lunetta KL, Mailman MD, Manning AK, Meigs JB, Murabito JM, Newton-Cheh C, O'Connor GT, O'Donnell CJ, Pandey MA, Seshadri S, Vasan RS, Wang ZY, Wilk JB, Wolf PA, Yang Q, Atwood LD: The Framingham Heart Study 100K SNP genome-wide association study resource: Overview of 17 phenotype working group reports. BMC Med Genet 2007, 8(Suppl 1):S1.
+23. Tsuji H, Venditti FJ Jr, Manders ES, Evans JC, Larson MG, Feldman CL, Levy D: Determinants of heart rate variability. J Am Coll Cardiol 1996, 28:1539-1546.
+24. Kent WJ, Sugnet CW, Furey TS, Roskin KM, Pringle TH, Zahler AM, Haussler D: The human genome browser at UCSC. Genome Res 2002, 12:996-1006.
+25. Karolchik D, Baertsch R, Diekhans M, Furey TS, Hinrichs A, Lu YT, Roskin KM, Schwartz M, Sugnet CW, Thomas DJ, Weber RJ, Haussler D, Kent WJ: The UCSC Genome Browser Database. Nucleic Acids Res 2003, 31:51-54.
+26. Almasy L, Blangero J: Multipoint quantitative-trait linkage analysis in general pedigrees. Am J Hum Genet 1998, 62:1198-1211.
+27. Horvath S, Xu X, Laird NM: The family based association test method: strategies for studying general genotype – phenotype associations. Eur J Hum Genet 2001, 9:301-306.
+28. Abecasis GR, Cherny SS, Cookson WO, Cardon LR: Merlin – rapid analysis of dense genetic maps using sparse gene flow trees. Nat Genet 2002, 30:97-101.
+29. Skol AD, Scott LJ, Abecasis GR, Boehnke M: Joint analysis is more efficient than replication-based analysis for two-stage genome-wide association studies. Nat Genet 2006, 38:209-213.
+30. Hirschhorn JN, Daly MJ: Genome-wide association studies for common diseases and complex traits. Nat Rev Genet 2005, 6:95-108.
+
+Page 8 of 8
+(page number not for citation purposes)
+

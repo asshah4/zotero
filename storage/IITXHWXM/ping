@@ -1,0 +1,7 @@
+(function() {
+  var script=document.createElement('script');
+  script.async=true;
+  script.type='text/javascript';
+  script.src='https://content-assets.readcube.com/assets/nature_inject-e9d840ff443256d6ce5e43f738d2152a.js';
+  document.getElementsByTagName('head').item(0).appendChild(script);
+})();

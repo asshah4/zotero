@@ -1,0 +1,689 @@
+Original Article
+Healthc Inform Res. 2018 July;24(3):198-206. https://doi.org/10.4258/hir.2018.24.3.198 pISSN 2093-3681 • eISSN 2093-369X
+Electrocardiogram Sampling Frequency Range Acceptable for Heart Rate Variability Analysis
+Ohhwan Kwon, MD1, Jinwoo Jeong, MD, PhD1,2, Hyung Bin Kim, MD, PhD3, In Ho Kwon, MD, MPH1,2,4, Song Yi Park, MD1,2, Ji Eun Kim, MD1, Yuri Choi, MD1
+1Department of Emergency Medicine, Dong-A University Medical Center, Busan, Korea; 2Department of Emergency Medicine, Dong-A University College of Medicine, Busan, Korea; 3Department of Emergency Medicine, Pusan National University Hospital, Busan, Korea; 4Department of Emergency Medicine, Graduate School, Kangwon National University School of Medicine, Chuncheon, Korea
+Objectives: Heart rate variability (HRV) has gained recognition as a noninvasive marker of autonomic activity. HRV is considered a promising tool in various clinical scenarios. The optimal electrocardiogram (ECG) sampling frequency required to ensure sufficient precision of R–R intervals for HRV analysis has not yet been determined. Here, we aimed to determine the acceptable ECG sampling frequency range by analyzing ECG signals from patients who visited an emergency department with the chief complaint of acute intoxication or overdose. Methods: The study included 83 adult patients who visited an emergency department with the chief complaint of acute poisoning. The original 1,000-Hz ECG signals were down-sampled to 500-, 250-, 100-, and 50-Hz sampling frequencies with linear interpolation. R–R interval data were analyzed for time-domain, frequency-domain, and nonlinear HRV parameters. Parameters derived from the data on down-sampled frequencies were compared with those derived from the data on 1,000-Hz signals, and Lin’s concordance correlation coefficients were calculated. Results: Down-sampling to 500 or 250 Hz resulted in excellent concordance. Signals down-sampled to 100 Hz produced acceptable results for time-domain analysis and Poincaré plots, but not for frequency-domain analysis. Down-sampling to 50 Hz proved to be unacceptable for both time- and frequency-domain analyses. At 50 Hz, the root-mean-squared successive differences and the power of high frequency tended to have high values and random errors. Conclusions: A 250Hz sampling frequency would be acceptable for HRV analysis. When frequency-domain analysis is not required, a 100-Hz sampling frequency would also be acceptable.
+Keywords: Electrocardiography, Heart Rate, Computer-Assisted Signal Processing, Poisoning, Emergencies
+
+Submitted: April 29, 2018 Revised: July 3, 2018 Accepted: July 12, 2018
+Corresponding Author Jinwoo Jeong, MD, PhD Department of Emergency Medicine, Dong-A University Hospital, 26 Daesingongwon-ro, Seo-gu, Busan 49201, Korea. Tel: +82-51240-2778, E-mail: advanced@lifesupport.pe.kr
+This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (http://creativecommons.org/licenses/bync/4.0/) which permits unrestricted non-commercial use, distribution, and reproduction in any medium, provided the original work is properly cited.
+ⓒ 2018 The Korean Society of Medical Informatics
+
+I. Introduction
+Heart rate variability (HRV), characterized by fluctuations in the time interval between successive heart beats, was first suggested as a marker of fetal distress in 1965, and it subsequently gained recognition as a noninvasive marker of autonomic activity [1]. HRV is considered a promising tool for predicting mortality in emergency patients transported via ambulance or trauma victims [2,3], predicting sudden cardiac arrests [4], and diagnosing poisoning or overdose [5,6]. The optimal electrocardiogram (ECG) sampling frequency required to ensure sufficient precision of R–R intervals for
+
+ECG Sampling Frequency for HRV Analysis
+
+HRV analysis is yet to be determined. Although some previous physiological studies have recommended a minimum sampling frequency of ≥500 Hz, claiming that a smaller sampling frequency may result in stronger high-frequency components in spectral analysis [1,7], some have argued that lower sampling frequencies, such as 100 Hz or even 50 Hz, might be acceptable with interpolation [8,9]. While modern microprocessors have sufficient calculating power for signals sampled at 1,000 Hz or more, devices specifically designed for research purpose are usually required to acquire data with such high sampling frequencies [2,3,10]. To date, results from studies on sampling frequencies have been derived from healthy subjects, and few such studies have incorporated actual patient populations. Here, we aimed to determine the acceptable ECG sampling frequency range by analyzing ECG signals from patients who visited an emergency department with the chief complaint of acute intoxication or overdose.
+II. Methods
+The study utilized ECG signals collected for previously reported research on the utility of HRV in the diagnosis of acute cholinesterase inhibitor poisoning, which involved 83 adult patients who visited an emergency department with the chief complaint of acute poisoning in the earliest period of the patients’ stay in the emergency department that provided data of appropriate quality. Emergency treatments, including tracheal intubation, intravenous access, and the first dose of an antidote such as atropine, were given prior to signal acquisition [6]. The ECG signals were acquired and digitized at a 1,000-Hz frequency using a custom-built sampling device from the analog ECG output port of a LIFEPAK 20 monitor-defibrillator (Physio-Control, Redmond, WA, USA). The Physio-Toolkit software package was used to process the ECG signals [11]. The original 1,000-Hz ECG signals were down-sampled to 500-, 250-, 100-, and 50-Hz sampling frequencies with the xform command, which applies linear interpolation when altering sampling frequencies. The timing of QRS waves was detected by the gqrs command and subsequently converted into R–R interval data with the ann2rr command. One case was excluded from further analysis because the gqrs function could not reliably detect QRS complexes from the data on 1,000-Hz signals.
+The R–R interval data were analyzed for time-domain, frequency-domain, and nonlinear HRV parameters using Kubios HRV Standard version 3.0 (Kubios Oy Ltd., Kuopio, Finland) from 5-minute sections of the signal tracing [12].
+
+The HRV parameters used for further analysis and their definitions are summarized in Table 1. Parameters derived from data on the 500-, 250-, 100-, and 50-Hz down-sampled frequencies were compared to those derived from data on 1,000-Hz signals, and Lin’s concordance correlation coefficients (CCC) with respective 95% confidence intervals (CI) were calculated. The sampling frequencies were considered unacceptable when the CCCs for the respective parameters were <0.9 [13,14]. Bland–Altman analysis was performed to determine the limits of agreement between results from different frequencies. MedCalc Software version 18.2.1 (MedCalc Software bvba, Ostend, Belgium; http://www.medcalc. org; 2018) was used for statistical analysis.
+III. Results
+The CCCs of HRV parameters derived from the variable sampling frequencies compared with those derived from the 1,000 Hz signals are presented in Table 2. Down-sampling to 500 or 250 Hz resulted in excellent concordance. Signals down-sampled to 100 Hz produced acceptable results for
+
+Table 1. List of heart rate variability parameters used in the analyses
+
+Parameter
+
+Description
+
+Time domain analysis
+
+RMSSD (s)
+
+Root-mean-squared successive
+
+differences between adjacent R–
+
+R intervals
+
+pNN50 (%)
+
+Proportion of NN50 (The num-
+
+ber of pairs of successive R-R in-
+
+tervals that differ by more than
+
+50 ms) to total number of R–R
+
+intervals
+
+Frequency domain analysis
+
+VLF (ms2)
+
+Power in the very low-frequency
+
+LF (ms2)
+
+range (≤0.04 Hz) Power in the low-frequency range
+
+HF (ms2)
+
+(0.04–0.15 Hz) Power in the high-frequency
+
+range (0.15–0.40 Hz)
+
+Poincaré plot analysis
+
+Width
+
+Standard deviation of points per-
+
+pendicular to the line of identity
+
+Length
+
+Standard deviation of points
+
+along the line of identity
+
+Vol. 24 • No. 3 • July 2018
+
+www.e-hir.org 199
+
+Ohhwan Kwon et al
+
+200 www.e-hir.org
+
+Table 2. CCCs of heart rate variability parameters from down-sampled ECGs in comparison with parameters from 1,000-Hz original ECG
+
+Coefficients against data sampled at 1,000 Hz
+
+Parameter
+
+500 Hz
+
+250 Hz
+
+100 Hz
+
+50 Hz
+
+Time domain analysis
+
+CCC (95% CI)
+
+ρa
+
+Cbb
+
+CCC (95% CI)
+
+ρa
+
+Cbb
+
+CCC (95% CI)
+
+ρa
+
+Cbb
+
+CCC (95% CI)
+
+ρa
+
+Cbb
+
+RMSSD (s)
+
+0.996 (0.994–0.998) 0.996 1.000 0.994 (0.992–0.997) 0.995 1.000 0.932 (0.897–0.956) 0.932 1.000 0.432 (0.280–0.563) 0.541 0.798
+
+pNN50 (%)
+
+0.996 (0.994–0.998) 0.996 1.000 0.993 (0.990–0.996) 0.993 1.000 0.974 (0.961–0.983) 0.974 1.000 0.772 (0.676–0.841) 0.832 0.927
+
+Frequency domain analysis VLF (ms2) LF (ms2) HF (ms2)
+
+0.999 (0.998–0.999) 0.999 0.993 (0.987–0.995) 0.993 0.983 (0.974–0.989) 0.993
+
+1.000 1.000 1.000
+
+0.999 (0.999–0.999) 0.999 0.983 (0.974–0.989) 0.984 0.974 (0.961–0.983) 0.975
+
+1.000 0.998 1.000
+
+0.983 (0.973–0.989) 0.846 (0.773–0.897) 0.729 (0.609–0.816)
+
+0.984 0.852 0.730
+
+0.998 0.993 0.998
+
+0.698 (0.573–0.792) 0.719 0.972 0.042 (-0.056–0.138) 0.939 0.445 0.052 (-0.033–0.137) 0.134 0.390
+
+Poincaré plot analysis
+
+Width
+
+0.996 (0.994–0.998) 0.999 1.000 0.995 (0.992–0.997) 0.995 1.000 0.932 (0.897–0.956) 0.932 1.000 0.432 (0.980–0.563) 0.541 0.798
+
+Length
+
+0.994 (0.990–0.996) 0.995 0.999 0.989 (0.984–0.993) 0.990 0.999 0.915 (0.873–0.944) 0.924 0.990 0.522 (0.356–0.656) 0.556 0.939
+
+CCC: concordance correlation coefficient, ECG: electrocardiogram, RMSSD: root-mean-squared successive differences, pNN50: proportion of NN50 to total number of R–R inter-
+
+vals, VLF: power of very low frequency, LF: power of low frequency, HF: power of high frequency, CI: confidence interval. aPearson’s ρ (precision), bbias correction factor Cb (accuracy).
+
+https://doi.org/10.4258/hir.2018.24.3.198
+
+ECG Sampling Frequency for HRV Analysis
+
+time-domain analysis and Poincaré plots, but not for frequency-domain analysis. Down-sampling to 50 Hz proved to be unacceptable for both time- and frequency-domain analyses. Further information about the error pattern is presented as Pearson’s ρ and bias correction factor (Cb). Pearson’s ρ represents deviations of dots from the 45° line
+
+of the scatterplot, indicating precision, and Cb represents how far the best-fit line deviates from the 45° line and can be interpreted as a measure of accuracy [13]. Table 2 shows that the decrease in Cb is insignificant down to 100 Hz, but it becomes significant with the root-mean-squared successive differences (RMSSD), power of low frequency (LF), power of
+
+A
+400
+
+B
+400
+
+C
+400
+
+D
+400
+
+350
+
+350
+
+350
+
+350
+
+500 Hz RMSSD (s) 250 Hz RMSSD (s) 100 Hz RMSSD (s) 50 Hz RMSSD (s)
+
+300
+
+300
+
+300
+
+300
+
+250
+
+250
+
+250
+
+250
+
+200
+
+200
+
+200
+
+200
+
+150
+
+150
+
+150
+
+150
+
+100
+
+100
+
+100
+
+100
+
+50
+
+50
+
+50
+
+50
+
+0 0 50 100 150 200 250 300 350 400 1,000 Hz RMSSD (s)
+
+0 0 50 100 150 200 250 300 350 400 1,000 Hz RMSSD (s)
+
+0 0 50 100 150 200 250 300 350 400 1,000 Hz RMSSD (s)
+
+0
+
+0
+
+100 200 300 400
+
+1,000 Hz RMSSD (s)
+
+Figure 1. Scatterplot of the root-mean-squared successive differences (RMSSD) derived from down-sampled electrocardiography recordings in comparison with those from 1,000-Hz signals: (A) 500 Hz, (B) 250 Hz, (C) 100 Hz, and (D) 50 Hz. Lines of equity and regression lines are also displayed.
+
+A
+
+B
+
+C
+
+D
+
+7,000
+
+7,000
+
+6,000
+
+20,000
+
+500 Hz LF power (ms2) 250 Hz LF power (ms2)
+2
+100 Hz LF power (ms ) 50 Hz LF power (ms2)
+
+6,000 5,000 4,000 3,000 2,000 1,000
+
+6,000 5,000 4,000 3,000 2,000 1,000
+
+5,000 4,000 3,000 2,000 1,000
+
+15,000 10,000
+5,000
+
+0 0 1,000 2,000 3,000 4,000 5,000 6,000 7,000 1,000 Hz LF power (ms2)
+
+0 0 1,000 2,000 3,000 4,000 5,000 6,000 7,000 1,000 Hz LF power (ms2)
+
+0 0 1,000 2,000 3,000 4,000 5,000 6,000 1,000 Hz LF power (ms2)
+
+0
+0 5,000 10,000 15,000 20,000 1,000 Hz LF power (ms2)
+
+Figure 2. Scatterplot of the low-frequency (LF) power spectral density derived from down-sampled electrocardiography recordings in comparison with those from 1,000-Hz signals: (A) 500 Hz, (B) 250 Hz, (C) 100 Hz, and (D) 50 Hz. Lines of equity and regression lines are also displayed.
+
+A
+
+B
+
+C
+
+D
+
+8,000
+
+8,000
+
+8,000
+
+30,000
+
+500 Hz HF power (ms2) 250 Hz HF power (ms2)
+2
+100 Hz HF power (ms ) 50 Hz LF power (ms2)
+
+7,000 6,000 5,000
+
+7,000 6,000 5,000
+
+7,000 6,000 5,000
+
+25,000 20,000
+
+4,000
+
+4,000
+
+4,000
+
+15,000
+
+3,000 2,000 1,000
+
+3,000 2,000 1,000
+
+3,000 2,000 1,000
+
+10,000 5,000
+
+0 0 2,000 4,000 6,000 8,000 1,000 Hz HF power (ms2)
+
+0 0 2,000 4,000 6,000 8,000 1,000 Hz HF power (ms2)
+
+0 0 2,000 4,000 6,000 8,000 1,000 Hz HF power (ms2)
+
+0
+
+0
+
+10,000
+
+20,000
+
+30,000
+
+1,000 Hz LF power (ms2)
+
+Figure 3. Scatterplot of the high-frequency (HF) power spectral density derived from down-sampled electrocardiography recordings in comparison with those from 1,000-Hz signals: (A) 500 Hz, (B) 250 Hz, (C) 100 Hz, and (D) 50 Hz. Lines of equity and regression lines are also displayed.
+
+Vol. 24 • No. 3 • July 2018
+
+www.e-hir.org 201
+
+Ohhwan Kwon et al
+
+high frequency (HF), and Poincaré plot width at 50 Hz. Scatterplots of the RMSSD, LF, and HF power spectral den-
+sity from various frequencies in comparison with those from 1,000 Hz are presented in Figures 1, 2, and 3, respectively. At 50 Hz, the RMSSD and HF power tended to have high values and random errors. The scatterplots graphically represent the correlation as well as the precision and accuracy of the down-sampled data.
+The results from the Bland–Altman plot analysis are summarized in Table 3, and plots comparing parameter values from 100-Hz down-sampled data with those from 1,000-Hz sampled data are presented in Figure 4. Although the agreement limits of the frequency-domain parameters look wide in Table 3, the dots in the Bland–Altman plot are aggregated in a rather narrow range. The larger limits of agreement are due to the larger actual values.
+IV. Discussion
+This study compared the values of HRV parameters calculated from ECG tracings with those calculated from various sampling frequencies acquired from patients from the emergency department. HRV is known to be associated with the interplay of the sympathetic and parasympathetic autonomic nervous systems [15]. As many commercial devices provide automated measurements of HRV, the meaning and significance of HRV parameters from various sources began to create confusion. To solve this problem, the European Society of Cardiology and the North American Society of Pacing and Electrophysiology published standardized meth-
+
+ods of measurement and nomenclature [1]. Because some of the suggested parameters depend on recording length, the durations of recordings need to be standardized for analysis. Usually, short-term 5-minute recordings or 24-hour longterm recordings are used [1]. We used 5-minute recordings because the dataset was collected to evaluate the utility of HRV in the diagnosis of acute poisoning. Parameters used to quantify HRV are categorized into time-domain, frequencydomain, and nonlinear parameters. Time-domain parameters are the simplest to analyze and are derived from statistical summarization of R–R interval variations or differences in consecutive R–R intervals [6]. Frequency-domain analysis incorporates Fourier transformation of R–R time series and calculation of power spectral density [6]. Spectral power in the HF band (0.15–0.4 Hz) of the HRV signal is believed to reflect the cardiac vagal activity influenced by the respiratory cycle, whereas the LF band (0.04–0.15 Hz) is related to the baroreceptor control and is mediated by both vagal and sympathetic systems [10]. Poincaré plot analysis is a nonlinear method of HRV analysis utilizing a scatterplot of the current R–R interval plotted against the preceding R–R interval. The plot provides summary information as well as detailed beatto-beat information on the behavior of the heart [16].
+One of the many important choices faced in designing studies on HRV is the sampling frequency. Earlier recommendations were to use higher sampling frequencies, perhaps ≥500 Hz, and the most common sampling frequencies used in the studies conducted in the period from 1999 to 2002 were 500 and 1,000 Hz [1,15]. However, obtaining ECG signals with such high sampling frequencies in a clinical
+
+Table 3. Results of Bland–Altman plot analysis summarized as percentage differences from 95% limits of agreement of heart rate variability parameters from down-sampled ECGs in comparison with parameters from 1,000-Hz original ECG
+
+Parameter
+
+500 Hz
+
+95% limits of agreement
+
+250 Hz
+
+100 Hz
+
+50 Hz
+
+Time domain analysis
+
+RMSSD (s)
+
+–9.89–8.83
+
+–11.42–9.89
+
+–39.26–39.23
+
+–90.71–170.99
+
+pNN50 (%)
+
+–2.52–2.45
+
+–3.18–3.27
+
+−6.29–6.38
+
+–11.43–22.93
+
+Frequency domain analysis VLF (ms2) LF (ms2) HF (ms2)
+
+–34.84–35.82 –229.38–220.22 –462.45–457.22
+
+–29.19–25.70 –329.23–371.82 –551.57–593.49
+
+–127.99–111.17 –982.42–948.72 –1,903.79–1,949.29
+
+–470.13–611.65 –5,145.52–8,031.11 –7,455.29–12,414.18
+
+Poincaré plot analysis
+
+Width
+
+–7.00–6.25
+
+–8.07–7.00
+
+–27.79–27.77
+
+–64.22–121.03
+
+Length
+
+–11.32–8.38
+
+–14.36–11.75
+
+–39.63–31.21
+
+–74.63–108.90
+
+ECG: electrocardiogram, RMSSD: root-mean-squared successive differences, pNN50: proportion of NN50 to total number of R–R
+
+intervals, VLF: power of very low frequency, LF: power of low frequency, HF: power of high frequency.
+
+202 www.e-hir.org
+
+https://doi.org/10.4258/hir.2018.24.3.198
+
+ECG Sampling Frequency for HRV Analysis
+
+DRMSSD (1,000 Hz - 100 Hz)
+
+A
+60 40 20
+0 20 40 60 80 100 120 140
+0
+
+B
++1.96 SD 39.3
+Mean 0.0
+1.96 SD 39.2
+
+100
+
+200
+
+300
+
+400
+
+1,000 Hz RMSSD
+
+DpNN50 (1,000 Hz - 100 Hz)
+
+10 5 0 5
+10 15 20
+0
+
+20
+
+40
+
+60
+
+1,000 Hz pNN50
+
+C
++1.96 SD 6.3
+Mean 0.0
+1.96 SD 6.4
+80 100
+
+DVLF (1,000 Hz - 100 Hz)
+
+500 400 300 200 100
+0 100 200
+0
+
++1.96 SD 128.0 Mean 8.4
+1.96 SD 111.2
+500 1,000 1,500 2,000 2,500 3,000 3,500
+1,000 Hz VLF
+
+DHF (1,000 Hz - 100 Hz)
+
+DpNN50 (1,000 Hz - 100 Hz)
+
+D
+2,000 1,000
+0 1,000 2,000
+
+E
+
++1.96 SD 982.4
+
+4,000 2,000
+
+Mean 16.9
+1.96 SD 948.7
+
+0 2,000 4,000
+
+6,000
+
+3,000 0
+
+1,000 2,000 3,000 4,000 5,000 6,000 7,000 1,000 Hz LF
+
+8,000 0
+
+2,000
+
+4,000 6,000 1,000 Hz HF
+
+F
++1.96 SD 1,903.8 Mean 22.8 1.96 SD 1,949.3
+8,000 10,000
+
+DPoincare plot width (1,000 Hz - 100 Hz)
+
+40 20
+0 20 40 60 80 100
+0
+
++1.96 SD 27.8
+Mean 0.0
+1.96 SD 27.8
+50 100 150 200 250 300 1,000 Hz Poincare plot width
+
+DPoincare plot length (1,000 Hz - 100 Hz)
+
+G
+80 60 40 20
+0 20 40 60 80 100
+0
+
++1.96 SD 39.6
+Mean 4.2
+1.96 SD 31.2
+
+50
+
+100 150 200 250
+
+1,000 Hz Poincare plot length
+
+Figure 4. Bland–Altman plots of agreement between heart rate variability parameters from 100-Hz down-sampled signals and those from 1,000-Hz signals: (A) root-mean-squared successive differences (RMSSD), (B) proportion of NN50 to total number of R– R intervals (pNN50), (C) power of very low frequency (VLF), (D) power of low frequency (LF), (E) power of high frequency (HF), (F) Poincaré plot width, and (G) Poincaré plot length. Lines and values indicating 95% limits of agreement are presented.
+
+setting is not always practical because the signals that can be obtained are often limited by the technical capability of available medical devices. In studies analyzing the ECG signal data downloaded from defibrillator monitors [3] or Holter recorders [10], the available sampling frequencies were limited to 125 Hz. In the era of telemonitoring and wearable devices, determining lower acceptable sampling frequency ranges has become more important because of limitations imposed by smaller device sizes and lower battery capacities.
+Our results indicate that a 250-Hz sampling frequency would provide excellent results for HRV analysis. If frequency-domain analysis is not required, a 100-Hz sampling frequency would be acceptable. Our results are comparable to those of Ziemssen et al. [8], who reported a good correlation of RMSSD values between ECG sampling frequencies of 500 and 100 Hz. However, the scatterplots from the present study reveal more variation than that from the study of
+
+Ziemssen et al. [8], probably because of more variation in the health conditions of the subjects. Although Mahdiani et al. [9] claimed that a 50-Hz sampling frequency could be acceptable for time-domain analysis, our results indicate that a 50-Hz sampling frequency would be unacceptable, whereas a 100-Hz sampling frequency would be acceptable for timedomain analysis. There are some differences between the methods of the present study and that of Mahdiani et al. [9]. First, the present study included acute emergency patients rather than healthy individuals; therefore, more variations in autonomic status and interference influenced the results. Second, linear interpolation was applied when the ECG signals in our study were down-sampled, whereas Mahdiani et al. [9] used bicubic interpolation. Bicubic interpolation might have produced more accurate R–R intervals and thus resulted in better correlation with signals sampled at higher frequencies. However, this study aimed to evaluate the pos-
+
+Vol. 24 • No. 3 • July 2018
+
+www.e-hir.org 203
+
+Ohhwan Kwon et al
+
+sibility of utilizing clinically available devices, and it cannot be guaranteed that bicubic interpolation is commonly used in available devices. The simpler approach used in our study would be more suitable for the intended application.
+Bland–Altman plot analysis was conducted to assess the agreement between two methods of measurement [17]. Although the Bland–Altman plot is normally a plot of differences against the mean of two measurements, we used the parameters calculated from 1,000-Hz signals as the reference method rather than the mean of values from the two sampling frequencies because sampling with frequencies higher than 500 Hz is the established standard research method in HRV analysis [18]. Table 3 summarizes how much deviation from the standard method is expected when lower sampling frequencies are used, and the limits of agreement should be considered when interpreting such data.
+It appears that HF elements are prone to loss by downsampling. ECG waveforms and the detected points for each corresponding QRS complex are displayed in Figure 5. The
+
+gqrs command of the Physio-Toolkit identifies the beginning points of QRS complexes instead of QRS peak points. The Physio-Toolkit is by far the most trusted and widely used HRV software [19], and the performance of the gqrs command has proved to be excellent [20]. Figure 6 presents the R–R series with 1,000- and 50-Hz sampling frequencies derived from the ECG of a patient poisoned with an organophosphate insecticide. The loss of small details of the R–R intervals is evident at the 50-Hz sampling frequency. This is thought to be attributable to the poor concordance of HF power, especially by exaggeration of the power spectral density at certain frequencies as observed in Figure 2.
+There were some limitations of this study. The study utilized an ECG signal dataset obtained from ED patient with acute poisoning. The data were collected for the purpose of validating the diagnostic utility of HRV parameters in identifying substance intoxication; in this clinical context, obtaining a reliable history is often difficult or impossible, especially in cases of acute poisoning [6,21]. The HRV results
+
+N
+
+N
+
+N
+
+N
+
+A
+
+B
+
+C
+
+D
+
+Figure 5. Electrocardiograms of single cardiac cycle and onset of QRS complexes detected by the gqrs command in Physio-Toolkit from various sampling frequencies. (A) 1,000 Hz, (B) 250 Hz, (C) 100 Hz, and (D) 50 Hz.
+
+A
+1.00
+
+B
+1.00
+
+0.95
+
+0.95
+
+R-R interval (s) R-R interval (s)
+
+0.90
+
+0.90
+
+0.85
+
+0.85
+
+0.80
+
+0.80
+
+0.75 10 20 30 40 50 60 70 80 90 100
+
+0.75 10 20 30 40 50 60 70 80 90 100
+
+QRS count
+
+QRS count
+
+Figure 6. R–R interval series graph from electrocardiography recordings sampled at frequencies of (A) 1,000 Hz and (B) 50 Hz. Loss of detailed information of R–R intervals is noted.
+
+204 www.e-hir.org
+
+https://doi.org/10.4258/hir.2018.24.3.198
+
+ECG Sampling Frequency for HRV Analysis
+
+would reflect the effects of toxic substances as well as therapeutic interventions and anxiety of ED patients. The results cannot be generalized to those in different clinical situations. However, we believe that the results can provide meaningful insight to the scientific community because previous studies on sampling frequency for HRV analysis have been limited to healthy individuals, and data on patient populations have been very rarely considered. Additionally, there are several different algorithms for signal interpolation and QRS detection. Different down-sampling and processing algorithms would produce results different from those of this study.
+In conclusion, a 250-Hz sampling frequency would be acceptable for HRV analysis in cases of acute poisoning. When frequency-domain analysis is not required, a 100-Hz sampling frequency would also be acceptable.
+Conflict of Interest
+No potential conflict of interest relevant to this article was reported.
+Acknowledgments
+The study was supported by Dong-A University Research Fund.
+References
+1. Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology. Heart rate variability: standards of measurement, physiological interpretation and clinical use. Circulation 1996;93(5):1043-65.
+2. Proctor KG, Atapattu SA, Duncan RC. Heart rate variability index in trauma patients. J Trauma 2007;63(1):3343.
+3. Ong ME, Padmanabhan P, Chan YH, Lin Z, Overton J, Ward KR, et al. An observational, prospective study exploring the use of heart rate variability as a predictor of clinical outcomes in pre-hospital ambulance patients. Resuscitation 2008;78(3):289-97.
+4. Liu T, Lin Z, Ong ME, Koh ZX, Pek PP, Yeo YK, et al. Manifold ranking based scoring system with its application to cardiac arrest prediction: a retrospective study in emergency department patients. Comput Biol Med 2015;67:74-82.
+5. Dinleyici EC, Kilic Z, Sahin S, Tutuncu-Toker R, Eren M, Yargic ZA, et al. Heart rate variability in children with
+
+tricyclic antidepressant intoxication. Cardiol Res Pract 2013;2013:196506. 6. Jeong J, Kim Y. Heart rate variability analysis in acute poisoning by cholinesterase inhibitors. Signa Vitae 2017;13(2):33-40. 7. Bolanos M, Nazeran H, Haltiwanger E. Comparison of heart rate variability signal features derived from electrocardiography and photoplethysmography in healthy individuals. Conf Proc IEEE Eng Med Biol Soc 2006;1:4289-94. 8. Ziemssen T, Gasch J, Ruediger H. Influence of ECG sampling frequency on spectral analysis of RR intervals and baroreflex sensitivity using the EUROBAVAR data set. J Clin Monit Comput 2008;22(2):159-68. 9. Mahdiani S, Jeyhani V, Peltokangas M, Vehkaoja A. Is 50 Hz high enough ECG sampling frequency for accurate HRV analysis? Conf Proc IEEE Eng Med Biol Soc 2015;2015:5948-51. 10. Mohebbi M, Ghassemian H. Prediction of paroxysmal atrial fibrillation based on non-linear analysis and spectrum and bispectrum features of the heart rate variability signal. Comput Methods Programs Biomed 2012;105(1):40-9. 11. Goldberger AL, Amaral LA, Glass L, Hausdorff JM, Ivanov PC, Mark RG, et al. PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals. Circulation 2000;101(23):E215-20. 12. Tarvainen MP, Niskanen JP, Lipponen JA, Ranta-Aho PO, Karjalainen PA. Kubios HRV: heart rate variability analysis software. Comput Methods Programs Biomed 2014;113(1):210-20. 13. Lin LI. A concordance correlation coefficient to evaluate reproducibility. Biometrics 1989;45(1):255-68. 14. Lawrence I, Lin K. Assay validation using the concordance correlation coefficient. Biometrics 1992;48(2): 599-604. 15. Ellis RJ, Zhu B, Koenig J, Thayer JF, Wang Y. A careful look at ECG sampling frequency and R-peak interpolation on short-term measures of heart rate variability. Physiol Meas 2015;36(9):1827-52. 16. Brennan M, Palaniswami M, Kamen P. Poincaré plot interpretation using a physiological model of HRV based on a network of oscillators. Am J Physiol Heart Circ Physiol 2002;283(5):H1873-86. 17. Bland JM, Altman DG. Statistical methods for assessing agreement between two methods of clinical measurement. Lancet 1986;1(8476):307-10.
+
+Vol. 24 • No. 3 • July 2018
+
+www.e-hir.org 205
+
+Ohhwan Kwon et al
+
+18. Krouwer JS. Why Bland-Altman plots should use X, not (Y+X)/2 when X is a reference method. Stat Med 2008;27(5):778-80.
+19. Vest AN, Li Q, Liu C, Nemati S, Shah A, Clifford GD. Benchmarking heart rate variability toolboxes. J Electrocardiol 2017;50(6):744-7.
+20. Llamedo M, Martinez JP. QRS detectors performance
+
+comparison in public databases. Proceeding of 2014 Computing in Cardiology Conference (CinC); 2014 Sep 7-10; Cambridge, MA. p. 357-60. 21. Martel ML, Klein LR, Lichtenheld AJ, Kerandi AM, Driver BE, Cole JB. Etiologies of altered mental status in patients with presumed ethanol intoxication. Am J Emerg Med 2018;36(6):1057-9.
+
+206 www.e-hir.org
+
+https://doi.org/10.4258/hir.2018.24.3.198
+

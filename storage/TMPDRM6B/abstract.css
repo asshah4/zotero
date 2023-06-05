@@ -1,0 +1,1378 @@
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/jquery.fancybox-1.3.1.css ::::: */
+
+#fancybox-loading { position: fixed; top: 50%; left: 50%; height: 40px; width: 40px; margin-top: -20px; margin-left: -20px; cursor: pointer; overflow: hidden; z-index: 1104; display: none; }
+* html #fancybox-loading { position: absolute; margin-top: 0pt; }
+#fancybox-loading div { position: absolute; top: 0pt; left: 0pt; width: 40px; height: 480px; background-image: url('fancybox.png@22'); }
+#fancybox-overlay { position: fixed; top: 0pt; left: 0pt; bottom: 0pt; right: 0pt; background: none repeat scroll 0% 0% rgb(0, 0, 0); z-index: 1100; display: none; }
+* html #fancybox-overlay { position: absolute; width: 100%; }
+#fancybox-tmp { padding: 0pt; margin: 0pt; border: 0pt none; overflow: auto; display: none; }
+#fancybox-wrap { position: absolute; top: 0pt; left: 0pt; margin: 0pt; padding: 20px; z-index: 1101; display: none; }
+#fancybox-outer { position: relative; width: 100%; height: 100%; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#fancybox-inner { position: absolute; top: 0pt; left: 0pt; width: 1px; height: 1px; padding: 0pt; margin: 0pt; outline: medium none; overflow: hidden; }
+#fancybox-hide-sel-frame { position: absolute; top: 0pt; left: 0pt; width: 100%; height: 100%; background: none repeat scroll 0% 0% transparent; }
+#fancybox-close { position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; background-image: url('fancybox.png@22'); background-position: -40px 0px; cursor: pointer; z-index: 1103; display: none; }
+#fancybox_error { color: rgb(68, 68, 68); font: 12px/20px Arial; padding: 7px; margin: 0pt; }
+#fancybox-content { height: auto; width: auto; padding: 0pt; margin: 0pt; }
+#fancybox-img { width: 100%; height: 100%; padding: 0pt; margin: 0pt; border: medium none; outline: medium none; line-height: 0pt; vertical-align: top; }
+#fancybox-frame { position: relative; width: 100%; height: 100%; border: medium none; display: block; }
+#fancybox-title { position: absolute; bottom: 0pt; left: 0pt; font-family: Arial; font-size: 12px; z-index: 1102; }
+.fancybox-title-inside { padding: 10px 0pt; text-align: center; color: rgb(51, 51, 51); }
+.fancybox-title-outside { padding-top: 5px; color: rgb(255, 255, 255); text-align: center; font-weight: bold; }
+.fancybox-title-over { color: rgb(255, 255, 255); text-align: left; }
+#fancybox-title-over { padding: 10px; background-image: url('fancy_title_over.png@22'); display: block; }
+#fancybox-title-wrap { display: inline-block; }
+#fancybox-title-wrap span { height: 32px; float: left; }
+#fancybox-title-left { padding-left: 15px; background-image: url('fancybox.png@22'); background-position: -40px -90px; background-repeat: no-repeat; }
+#fancybox-title-main { font-weight: bold; line-height: 29px; background-image: url('fancybox-x.png@22'); background-position: 0px -40px; color: rgb(255, 255, 255); }
+#fancybox-title-right { padding-left: 15px; background-image: url('fancybox.png@22'); background-position: -55px -90px; background-repeat: no-repeat; }
+#fancybox-left, #fancybox-right { position: absolute; bottom: 0px; height: 100%; width: 35%; cursor: pointer; outline: medium none; background-image: url('blank.gif@22'); z-index: 1102; display: none; }
+#fancybox-left { left: 0px; }
+#fancybox-right { right: 0px; }
+#fancybox-left-ico, #fancybox-right-ico { position: absolute; top: 50%; left: -9999px; width: 30px; height: 30px; margin-top: -15px; cursor: pointer; z-index: 1102; display: block; }
+#fancybox-left-ico { background-image: url('fancybox.png@22'); background-position: -40px -30px; }
+#fancybox-right-ico { background-image: url('fancybox.png@22'); background-position: -40px -60px; }
+#fancybox-left:hover, #fancybox-right:hover { visibility: visible; }
+#fancybox-left:hover span { left: 20px; }
+#fancybox-right:hover span { left: auto; right: 20px; }
+.fancy-bg { position: absolute; padding: 0pt; margin: 0pt; border: 0pt none; width: 20px; height: 20px; z-index: 1001; }
+#fancy-bg-n { top: -20px; left: 0pt; width: 100%; background-image: url('fancybox-x.png@22'); }
+#fancy-bg-ne { top: -20px; right: -20px; background-image: url('fancybox.png@22'); background-position: -40px -162px; }
+#fancy-bg-e { top: 0pt; right: -20px; height: 100%; background-image: url('fancybox-y.png@22'); background-position: -20px 0px; }
+#fancy-bg-se { bottom: -20px; right: -20px; background-image: url('fancybox.png@22'); background-position: -40px -182px; }
+#fancy-bg-s { bottom: -20px; left: 0pt; width: 100%; background-image: url('fancybox-x.png@22'); background-position: 0px -20px; }
+#fancy-bg-sw { bottom: -20px; left: -20px; background-image: url('fancybox.png@22'); background-position: -40px -142px; }
+#fancy-bg-w { top: 0pt; left: -20px; height: 100%; background-image: url('fancybox-y.png@22'); }
+#fancy-bg-nw { top: -20px; left: -20px; background-image: url('fancybox.png@22'); background-position: -40px -122px; }
+#fancybox-loading.fancybox-ie div { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie #fancybox-close { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie #fancybox-title-over { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie #fancybox-title-left { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie #fancybox-title-main { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie #fancybox-title-right { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie #fancybox-left-ico { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie #fancybox-right-ico { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie .fancy-bg { background: none repeat scroll 0% 0% transparent ! important; }
+.fancybox-ie #fancy-bg-n {  }
+.fancybox-ie #fancy-bg-ne {  }
+.fancybox-ie #fancy-bg-e {  }
+.fancybox-ie #fancy-bg-se {  }
+.fancybox-ie #fancy-bg-s {  }
+.fancybox-ie #fancy-bg-sw {  }
+.fancybox-ie #fancy-bg-w {  }
+.fancybox-ie #fancy-bg-nw {  }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/wolReset.css ::::: */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0pt; padding: 0pt; border: 0pt none; outline: 0pt none; font-size: 100%; vertical-align: baseline; background: none repeat scroll 0% 0% transparent; }
+input, textarea { margin: 0pt; padding: 0pt; }
+input, textarea, select { font-family: inherit; font-size: inherit; font-weight: inherit; }
+input, textarea, select {  }
+body { line-height: 1; }
+ol, ul { list-style: none outside none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: none; }
+table { border-collapse: collapse; border-spacing: 0pt; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+caption, th { text-align: left; }
+select:focus, input:focus { outline: 0pt none; }
+body h2 *, body h3 *, body b * { font-weight: bold; }
+body em * { font-style: italic; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/pageStructure.css ::::: */
+
+#issuesByYear .issues:after { content: "."; visibility: hidden; display: block; height: 0pt; clear: both; }
+#issuesByYear .issues { display: block; }
+body { font-size: 62.5%; background-color: rgb(255, 255, 255); font-family: Arial,"Lucida Grande",Geneva,Verdana,Helvetica,sans-serif; color: rgb(0, 0, 0); margin-left: -2em; }
+a img { vertical-align: bottom; }
+a { text-decoration: none; outline: medium none; color: rgb(0, 126, 138); }
+a:hover { text-decoration: underline; }
+a:focus { outline: 0.1em dotted gray; }
+a.selected { color: rgb(178, 121, 0); font-weight: bold; }
+p { margin: 0pt 0pt 1em; }
+sub { vertical-align: sub; font-size: 0.8em; white-space: nowrap; }
+sup { line-height: 0.7em; vertical-align: super; white-space: nowrap; font-size: 0.8em; }
+em { font-style: italic; }
+legend, table th, strong, .subSectionHeading p a { font-weight: bold; }
+abbr { border-bottom: 1px dashed rgb(231, 231, 231); cursor: help; }
+legend, dl, label, p, input, textarea, select, table, li { font-size: 1.2em; }
+li li, li p, table li, li h2, li h3, li h4, li h5, li h6, li label, td p, table table, li input, li select, li dl, li table, table label, table input, dl dl { font-size: 1em; }
+dl, p, dt { line-height: 1.3em; }
+dt { clear: left; }
+cite { display: block; }
+label { cursor: pointer; }
+hr { background-color: rgb(216, 216, 214); border: 0pt none; color: rgb(216, 216, 214); height: 0.1em; margin: 0.5em 0pt 1em; width: 100%; }
+h1 { margin: 0pt; font-size: 2em; color: rgb(93, 93, 93); }
+h2 { margin: 0pt 0pt 1em; }
+h2, h3, h4, h5, h6 { color: rgb(93, 93, 93); font-size: 1.2em; }
+#leaderBoard { text-align: center; background-color: rgb(213, 213, 212); }
+#leaderBoard img { border: 1px solid rgb(202, 202, 202); margin: 0.4em; }
+#leaderBoard img[alt=""] { display: none; }
+#leftBorder { background: url('leftborder.gif@22') repeat-y scroll left top transparent; width: 97.9em; margin: 0pt auto; position: relative; }
+#rightBorder { width: 97.9em; background: url('rightborder.gif@22') repeat-y scroll right top transparent; padding: 0pt 1em; }
+#banner { width: 100%; margin: 0pt 0pt 2em; overflow: hidden; }
+#banner img.left, #banner img.center { float: left; width: auto; }
+#banner img.right { float: right; width: auto; }
+#content { width: 77.4em; float: right; margin: 0pt 0pt 1em; }
+#mainContent { width: 54.3em; float: left; }
+#fullWidthContent { margin: 0pt 0pt 1em 0.8em; overflow: hidden; }
+#skip { position: absolute; left: 0pt; top: -50em; }
+#skip a:active, #skip a:focus { position: static; }
+#header { min-height: 11.2em; position: relative; background-image: url('bg.gif@22'); background-repeat: repeat-x; border-top: 1px solid rgb(202, 202, 202); background-position: center top; z-index: 101; }
+#globalMessaging { width: 100%; }
+#globalMessaging ul { border-bottom: 2px solid silver; padding: 1em 1em 0.5em; background-color: rgb(225, 233, 235); color: rgb(0, 0, 0); }
+#globalMessaging li { margin-bottom: 0.5em; padding-left: 2em; line-height: 1.4em; }
+#globalMessaging .globalError { background: url('error.png@22') no-repeat scroll 0pt 0pt transparent; }
+#globalMessaging .globalWarning { background: url('warning.png@22') no-repeat scroll 0pt 0pt transparent; }
+#globalMessaging .globalInformation, #globalMessaging .maintenanceMessage, #globalMenu p a#help { background: url('questionmark.png@22') no-repeat scroll 0pt 0pt transparent; }
+#globalMenu { float: left; margin: 1.9em 0pt 0pt 0.8em; width: 43em; text-align: left; }
+#globalMenu div { background: url('woliconsnew.gif@22') no-repeat scroll 0pt -745px rgb(233, 239, 240); min-width: 36em; position: absolute; bottom: 0pt; left: 6.7em; }
+#globalMenu ul { font-size: 1.05em; background: url('woliconsnew.gif@22') no-repeat scroll 100% -745px transparent; overflow: hidden; }
+#globalMenu ul li { font-size: 1em; float: left; margin-left: -1px; padding: 0.5em 0pt; }
+#globalMenu ul li a { border-left: 1px solid rgb(178, 121, 0); text-decoration: none; padding: 0pt 0.6em; font-weight: bold; color: rgb(50, 50, 50); }
+#globalMenu ul li a:hover { text-decoration: underline; }
+#globalMenu p { position: absolute; bottom: 0pt; left: 0.5em; margin: 0pt 0pt 0pt 0.3em; }
+#globalMenu p a { float: left; width: 1.6em; height: 1.6em; margin: 0.5em 0.8em 0pt 0pt; text-indent: -999em; }
+#globalMenu p a#home { background: url('woliconsnew.gif@22') no-repeat scroll 100% -254px transparent; }
+#globalMenu #resourcesMenu { display: none; }
+#header #coBranding { position: absolute; width: 20.4em; bottom: 0pt; left: 43.3em; text-align: center; }
+#header #coBranding img { margin: 4.6em 0pt 0pt; }
+#login { background: url('wolspritebackgrounds.gif@22') no-repeat scroll 0% 0% transparent; width: 34.2em; float: right; margin-top: 2.5em; min-height: 8.6em; }
+#login form { float: left; position: relative; }
+#login form fieldset { padding: 0.1em 0pt 0pt; }
+#login legend { font-size: 1.2em; color: rgb(46, 45, 45); padding: 0.3em 0pt 0pt 0.8em; font-weight: bold; }
+#login form #loginPassword, #login form #loginEmail { border: 2px solid rgb(225, 233, 235); width: 12em; color: rgb(93, 93, 93); margin: 0pt 0.5em 0.2em 0pt; font-size: 1em; }
+#login form #loginInFormInner { margin: 1em 0pt 0pt; padding: 0pt 0pt 0.1em 0.8em; }
+#login form #loginInFormInner div { margin: 0.3em 0pt; }
+#login form #loginSubmit { vertical-align: middle; }
+#login form label { vertical-align: top; padding: 0pt 0pt 0pt 0.5em; color: rgb(50, 50, 50); font-size: 1em; }
+#login form label#emailLabel, #login form label#passwordLabel { display: none; }
+#login ul#loginOptions { float: right; margin: 2.6em 0.5em 0pt 0pt; width: 17em; text-align: right; }
+#login ul#loginOptions li { margin: 0pt 0pt 0.5em; font-size: 1em; }
+#login ul#loginOptions #athensIndicator { color: rgb(153, 153, 153); font-size: 1.2em; }
+#login ul#loginOptions a { color: rgb(50, 50, 50); }
+#login h2 { color: rgb(46, 45, 45); padding: 0.25em 0.5em 0pt 0.8em; margin: 0pt; }
+#login #loggedIn { padding: 1em 0.5em 0pt 0.8em; }
+#login #loggedIn #userName { font-weight: bold; font-size: 1.2em; display: block; float: left; width: 45%; min-height: 3em; margin: 0pt 0pt 0.5em; }
+#login #loggedIn #athensIndicator { font-size: 0.9em; color: rgb(153, 153, 153); padding-top: 0.2em; }
+#login #loggedIn .options { float: right; text-align: right; }
+#login #loggedIn .options li { margin: 0pt 0pt 0.5em; font-size: 0.9em; }
+#login #loggedIn .profile li { font-size: 0.9em; }
+#login #loggedIn .profile .subMenu li a:hover { background-color: rgb(0, 105, 118); text-decoration: none; color: rgb(255, 255, 255); }
+#login #loggedIn .options a { color: rgb(50, 50, 50); }
+#breadcrumb { margin-bottom: 1em; border-top: 2px solid rgb(15, 79, 91); }
+#breadcrumb ul { padding: 0.5em 0pt 0pt 0.8em; }
+#breadcrumb li { display: inline; padding: 0pt 0.5em 0pt 0pt; font-weight: bold; color: rgb(62, 62, 62); }
+#breadcrumb li a { color: rgb(62, 62, 62); }
+#indexBottomLeftCorner, #indexBottomRightCorner { background: url('woliconsnew.gif@22') no-repeat scroll 0% 0% transparent; position: absolute; width: 24px; height: 23px; }
+#indexBottomLeftCorner { background-position: -353px -363px; bottom: 0pt; left: -1em; }
+#indexBottomRightCorner { background-position: 100% -363px; bottom: 0pt; right: -1em; width: 22px; }
+#footer { clear: both; background: url('bottomborder.gif@22') repeat-x scroll left bottom rgb(225, 233, 235); position: relative; padding: 0.7em 0pt 1.5em 0.3em; }
+#footer ul { margin: 0pt 0pt 0.5em -0.1px; overflow: hidden; text-align: left; }
+#footer li { display: inline; border-left: 0.1em solid rgb(102, 102, 102); font-size: 0.9em; margin-left: -0.2em; line-height: 1.3em; padding: 0pt 1.1em; }
+#footer li a { color: rgb(46, 46, 46); font-weight: bold; }
+#footer p { font-size: 1.1em; color: rgb(16, 84, 97); position: relative; z-index: 100; margin: 0pt 0pt 0pt 0.7em; }
+#footer p a { color: rgb(16, 84, 97); }
+#pageNavAndTools { width: 17.4em; float: left; margin: 0pt 0pt 1em 0.8em; }
+#pageNavAndTools .menuGroup p a { font-weight: bold; color: rgb(61, 61, 61); padding: 0pt; font-size: 0.9em; }
+#pageNavAndTools .topRightRoundCorner { background: url('toprightroundcorner.gif@22') no-repeat scroll right top transparent; margin-left: -0.8em; padding: 1em 1em 0pt; }
+#pageNavAndTools .topRightRoundCorner .bottomRightRoundCorner { background: url('bottomrightroundcorner.gif@22') no-repeat scroll right bottom transparent; margin: 0pt -1em 1em -0.9em; padding: 0pt 0.5em 1em 1em; }
+#pageNavAndTools .advert p a.stText6-a { font-size: 0.9em; }
+#promosAndTools { width: 21.1em; float: right; }
+#promosAndTools .menuGroup { margin-top: 2em; }
+#promosAndTools .resources { margin-bottom: 2em; }
+#promosAndTools .advert, #promosAndTools .logo { margin-top: 2em; overflow: hidden; }
+#promosAndTools .advert h3 { color: rgb(0, 126, 139); font-size: 1.1em; }
+#promosAndTools .advert .adDiv p { margin: 0pt 0.5em 0pt 0pt; }
+#promosAndTools h3.menuGroupSubHeading { background: none repeat scroll 0% 0% rgb(255, 255, 255); margin: 0pt; padding: 0.3em 0pt 0pt 0.5em; }
+#promosAndTools .logo p { font-size: 1.1em; color: rgb(93, 93, 93); margin-right: 0.5em; }
+#pageNavAndTools a img, #promosAndTools a img { display: block; margin: 1em auto; }
+#pageNavAndTools ul li a img { display: inline; margin: 0pt; }
+.menuGroup { margin: 0pt 0pt 0.8em; }
+.menuGroup h2 { -moz-border-radius-topleft: 0.6em; background-color: rgb(225, 233, 235); color: rgb(0, 126, 139); margin: 0pt; padding: 0.3em 0pt 0.3em 0.6em; }
+#pageNavAndTools .menuGroup h2 { -moz-border-radius-topright: 0.6em; }
+.menuGroup h3 { border-left: 2px solid rgb(238, 238, 238); border-top: 2px solid rgb(238, 238, 238); -moz-border-radius-topleft: 0.6em; font-size: 1.1em; color: rgb(0, 126, 139); margin: 0pt; padding: 0.35em 0pt 0pt 0.5em; }
+.menuGroup h2 ~ h3 { -moz-border-radius-topleft: 0pt; border-top-width: 0pt; padding-top: 0.6em; }
+.menuGroup ul, .menuGroup ol { border-left: 2px solid rgb(238, 238, 238); padding: 0pt 0.2em 0.2em 0.5em; }
+.menuGroup li { color: rgb(117, 115, 115); font-size: 1.1em; padding: 0.3em 0pt 0pt; }
+.menuGroup ul ul, .menuGroup ul ol, .menuGroup ol ul, .menuGroup ol ol { background-color: rgb(255, 255, 255); left: 17.4em; top: -1em; width: 15em; z-index: 10; border: 0pt none; }
+.menuGroup li h3 { border: 0pt none; -moz-border-radius: 0pt 0pt 0pt 0pt; font-size: 1.1em; color: rgb(0, 126, 139); padding: 0pt; }
+.menuGroup .subGroup { margin-bottom: 0.6em; }
+.menuGroup .subGroup ul li { font-size: 1em; }
+.menuGroup li ul { margin: 0.3em 0pt 0pt; }
+.menuGroup li ul li { font-size: 1em; text-indent: 0pt; padding: 0pt 0pt 0pt 1em; margin-left: -1em; background: url('woliconsnew.gif@22') no-repeat scroll -379px -205px rgb(255, 255, 255); line-height: 1.3em; }
+.menuGroup li a { color: rgb(61, 61, 61); display: block; line-height: 1.2em; margin-left: 1.2em; text-indent: -1.2em; }
+.menuGroup li.selected { color: rgb(178, 121, 0); font-weight: bold; }
+.menuGroup li a.allOption { font-weight: bold; color: rgb(61, 61, 61); }
+.menuGroup .noWrapIndent li { text-indent: 0pt; padding-left: 0.6em; margin-left: -0.7em; }
+.menuGroup .moreMenu li { text-indent: 0pt; padding-left: 0.6em; margin-left: -0.7em; margin-bottom: 0.5em; }
+.menuGroup .removeFilter { color: rgb(0, 126, 139); margin: 1em 0pt 0.5em; display: block; font-size: 1.1em; }
+#filterLists li { color: rgb(204, 204, 204); }
+#filterLists li.selected { color: rgb(178, 121, 0); }
+.menuGroup .titleTools li a { margin-left: 0pt; text-indent: 0pt; }
+.viewFullArticleAndPdfOptions .pdfLink { padding: 0.1em 1em 0.3em 2em; background: url('woliconsnew.gif@22') no-repeat scroll 0% 0% transparent; }
+.menuGroup .titleTools li a { padding: 0.1em 0pt 0.3em 2em; background: url('woliconsnew.gif@22') no-repeat scroll 0% 0% transparent; }
+.menuGroup .titleTools a.rss { background-position: 0pt -30px; }
+.menuGroup .titleTools .saveToProfile { background-position: 0pt -326px; }
+.menuGroup .titleTools .getEmailAlerts { background-position: 0pt -130px; }
+.menuGroup .titleTools .getSampleCopy { background-position: 0pt -389px; }
+.menuGroup .titleTools .recommendToLibrarian { background-position: 0pt -194px; }
+.viewFullArticleAndPdfOptions .pdfLink, .menuGroup .titleTools .pdf a { background-position: 0pt 1px; }
+.menuGroup .titleTools .save a { background-position: 0pt -328px; }
+.menuGroup .titleTools .email a { background-position: 0pt -98px; }
+.menuGroup .titleTools .citation, .menuGroup .titleTools .citation a { background-position: 0pt -65px; }
+.menuGroup .titleTools .purchasePrintCopy a { background-position: 0pt -226px; }
+.menuGroup .titleTools .requestPermissions a { background-position: 0pt -357px; }
+.menuGroup .titleTools .purchasePrintCopy { background-position: 0pt -227px; }
+.menuGroup .titleTools .getCitationAlert a { background-position: 0pt -456px; }
+.menuGroup .titleTools .purchasePrintCopy a { background-position: 0pt -228px; }
+.menuGroup .titleTools .savedToProfile2 a, .menuGroup .titleTools .savedToProfile { background-position: 0pt -300px; }
+.menuGroup .titleTools .emailAlertsAdded { background-position: 0pt -163px; }
+.menuGroup .titleTools .citationAlertAdded { background-position: 0pt -556px; }
+.menuGroup .titleTools .printCopyPurchased { background-position: 0pt -264px; }
+#searchSite.searchForm { background: url('wolspritebackgrounds.gif@22') no-repeat scroll -601px 0pt transparent; padding-left: 2px; }
+#searchSite.searchForm p.error { padding: 0.5em 0.8em 0pt; margin: 0pt 0pt -0.5em; }
+#searchSite.searchForm fieldset { padding: 0.1em 0pt 0pt; display: block; }
+.searchForm { overflow: hidden; }
+.searchForm h2 { white-space: nowrap; color: rgb(223, 233, 234); margin: 0pt; }
+.searchForm select, .searchForm input[type="text"] { border: 1px solid rgb(131, 157, 182); font-size: 1.1em; color: rgb(0, 0, 0); }
+#searchSite.searchForm h2 { padding: 0.3em 0pt 0pt 0.8em; }
+.searchForm .searchCriteria { margin: 1em 0pt 0pt; padding: 0pt 0pt 0pt 0.8em; overflow: hidden; }
+.searchForm label { position: absolute; left: -1000em; }
+.searchForm p { font-size: 1.1em; }
+.searchForm #scope { width: 15.4em; margin: 0pt 0pt 0.5em; }
+.searchForm .extraSearchOptions { padding: 0pt 0pt 0.5em 0.9em; margin: 0pt; }
+.extraSearchOptions li { float: left; padding-bottom: 0.3em; }
+.extraSearchOptions a { padding: 0pt 1em 0pt 0pt; color: rgb(92, 92, 92); }
+#searchByCitation, #searchDatabase { background: none repeat scroll 0% 0% rgb(225, 233, 235); border-left: 2px solid rgb(16, 84, 97); }
+#searchByCitation h2, #searchDatabase h2 { background: none repeat scroll 0% 0% rgb(16, 84, 97); padding: 0.3em 0pt 0.25em 0.6em; }
+#searchByCitation .searchCriteria, #searchDatabase.searchForm .searchCriteria { padding-bottom: 0.5em; margin: 0.5em 0pt 0pt; }
+#searchDatabase.searchForm .searchCriteria p { margin-bottom: 0.3em; color: rgb(92, 92, 92); }
+#searchDatabase.searchForm #astroDatabaseSearchText, #searchDatabase #qsearch, .searchForm #searchText { float: left; margin: 0pt 0.3em 0pt 0pt; width: 15.2em; }
+#searchByCitation .searchCriteria div { width: 5em; margin-right: 1em; float: left; }
+#searchByCitation .searchCriteria div input { margin: 0.3em 0pt 0pt; width: 4.4em; min-height: 1.5em; }
+#searchByCitation .searchCriteria label { display: block; position: static; font-size: 1.1em; color: rgb(92, 92, 92); }
+#searchByCitation #citationSearchSubmit { margin: 1.3em 0pt 0pt -0.8em; border: medium none; }
+#searchByCitation p.error { padding: 0.5em 0.5em 0pt 0.8em; margin-bottom: 0pt; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/commonComponents.css ::::: */
+
+.hide { display: none; }
+object { padding-left: 1em; }
+.left, dd, dt, #leftColumn, .access, .access input, .sectionHeading h1, .sectionHeading h2, .sectionHeading h3, .selectAll { float: left; }
+.right, #rightColumn { float: right; }
+.clear { clear: both; }
+div.noTopPadding { padding-top: 0pt; }
+.topLeftRoundCorner, .topLeftRoundCornerNew { background: url('topleftroundcorner.gif@22') no-repeat scroll left top transparent; padding: 1em 0pt 0pt 1em; clear: both; }
+.topLeftRoundCornerNew { background: url('topleftroundcornernew.gif@22') no-repeat scroll left top rgb(255, 255, 255); padding: 2.7em 0pt 0pt 2.5em; }
+.bottomLeftRoundCorner { background: url('bottomleftroundcorner.gif@22') no-repeat scroll left bottom transparent; padding: 0pt 0pt 1em 1em; }
+#siteLogo { margin: 1em 0pt; }
+.imgShadow { float: left; background: url('shadowalpha.png@22') no-repeat scroll right bottom transparent ! important; margin: 5px 0pt 0pt 5px; position: relative; }
+.imgShadow img { display: block; position: relative; background: none repeat scroll 0% 0% rgb(255, 255, 255); margin: -5px 6px 6px -5px; }
+.formError, .error { color: rgb(188, 54, 26); font-style: normal; clear: both; }
+.sectionHeading { padding: 0pt 0pt 0.5em; position: relative; clear: both; overflow: hidden; line-height: 1.6em; vertical-align: top; }
+.sectionHeading .heading { float: left; margin-top: 0.6em; }
+.sectionHeading h1 { padding-bottom: 0.1em; }
+.sectionHeading h2 { margin-bottom: 0pt; }
+.sectionHeading p { display: inline; border-left: 2px solid rgb(117, 115, 115); margin: 0pt 0pt 0pt 0.75em; padding: 0pt 0pt 0pt 1em; vertical-align: middle; line-height: 1em; color: rgb(93, 93, 93); }
+.sectionHeading p strong { color: rgb(0, 126, 139); }
+.sectionHeading p a { font-weight: bold; font-size: 0.9em; }
+.sortBy { float: right; padding-right: 0.5em; }
+.sortBy label { display: block; float: left; margin: 0.3em 0.5em 0pt 0pt; }
+.sortBy select { border: 1px solid rgb(130, 157, 184); margin: 0pt 0.4em 0pt 0.3em; width: 12em; font-size: 1.2em; padding: 0pt; height: auto; float: left; }
+.sortBy span.submit { margin-top: 0.18em; }
+.freeAccess, .licensedContent, .openAccess { float: right; text-indent: -999em; width: 16px; height: 23px; margin-top: 0.3em; background: url('woliconsnew.gif@22') no-repeat scroll -385px 5px transparent; }
+.openAccess { background-position: -385px -40px; }
+.licensedContent { background-position: -385px -91px; }
+.access .licensedContent, .access .freeAccess, .access .openAccess { margin-top: 0pt; }
+#titleMeta .freeAccess, #titleMeta .licensedContent, #titleMeta .openAccess { margin-top: 0pt; background-position: -385px 6px; }
+#titleMeta .licensedContent { background-position: -385px -94px; }
+#titleMeta .openAccess { background-position: -385px -43px; }
+.unpublished { float: right; text-indent: -999em; width: 16px; height: 23px; margin-top: 0pt; }
+span.unpublished, #titleMeta span.unpublished, .access span.unpublished { background: url('unpublished.gif@22') no-repeat scroll 0pt 0pt transparent; }
+.articles .access span.unpublished { background: url('unpublished.gif@22') no-repeat scroll 0pt 7px transparent; }
+#publications .access span.unpublished { background: url('unpublished.gif@22') no-repeat scroll 0pt 1px transparent; }
+.subSectionHeading { margin: 0pt 0pt 1em; }
+.subSectionHeading h3 { margin-right: 17.3em; line-height: 1.1em; }
+#bookHome .books .subSectionHeading h3, #relatedArticles .subSectionHeading h3, .subSectionHeading h2 { display: inline; margin-right: 0pt; }
+.subSectionHeading p { display: inline; border-left: 2px solid rgb(117, 115, 115); margin: 0pt 0pt 0pt 0.75em; padding: 0pt 0pt 0pt 1em; font-size: 1.1em; line-height: 1em; }
+.articles .citation p.chapter, .subSectionHeading p a { font-weight: bold; }
+.subSectionHeading select { position: absolute; right: 0pt; border: 1px solid rgb(199, 213, 217); font-size: 1em; width: 17.3em; top: 1em; }
+.subSectionHeading label { position: absolute; left: -999em; }
+.tabbedContent { border-bottom: 2px solid rgb(0, 126, 139); clear: both; padding: 0pt 0pt 0pt 1.2em; overflow: hidden; }
+.tabbedContent li { color: rgb(117, 115, 115); float: left; font-size: 1.1em; font-weight: bold; margin-right: 0.5em; background: url('woliconsnew.gif@22') no-repeat scroll 0pt -714px rgb(228, 233, 235); }
+.tabbedContent li a, .tabbedContent li span { display: block; background: url('woliconsnew.gif@22') no-repeat scroll 100% -714px transparent; padding: 0.6em 0.9em 0.4em; }
+.tabbedContent li.active { background: url('woliconsnew.gif@22') no-repeat scroll 0pt -775px rgb(0, 126, 139); }
+.tabbedContent li.active a, .tabbedContent li.active span { background: url('woliconsnew.gif@22') no-repeat scroll 100% -775px transparent; color: rgb(255, 255, 255); }
+.yearFilter { padding: 0pt 0pt 0.8em; overflow: hidden; margin: 0pt 0pt 0pt -1em; }
+.yearFilter li { display: inline; padding: 0pt 1em; border-left: 2px solid rgb(117, 115, 115); margin-left: -0.2em; font-size: 1.1em; color: rgb(45, 45, 45); font-weight: bold; }
+.yearFilter li.selected { color: rgb(178, 121, 0); }
+.paginationFilter { padding: 0pt 0pt 1em; margin-left: 1em; clear: left; overflow: hidden; }
+.paginationFilter p, .paginationFilter ol { float: left; line-height: 1.1em; font-weight: bold; color: rgb(46, 45, 45); margin-bottom: 0pt; }
+.paginationFilter p { font-size: 1.1em; }
+.paginationFilter ol { overflow: hidden; width: auto; }
+.paginationFilter li { font-size: 1.1em; display: inline; border-left: 2px solid rgb(117, 115, 115); margin-left: -0.2em; padding: 0pt 1em 0.3em; }
+.paginationFilter li.selected { color: rgb(178, 121, 0); }
+.alphabeticalFilter { font-weight: bold; padding: 0pt 0pt 1em 1.2em; clear: left; }
+.alphabeticalFilter li { padding: 0pt 0.55em 0pt 0pt; color: rgb(45, 45, 45); display: inline; }
+.alphabeticalFilter li.selected { color: rgb(178, 121, 0); }
+.productMenu { clear: both; overflow: hidden; padding: 0.2em 0pt 0.4em; margin-left: -0.3em; line-height: 1.3em; }
+.productMenu li, .articles li .productMenu li { border-left: 2px solid rgb(117, 115, 115); margin-left: -0.2em; display: inline-block; padding: 0pt 0.6em 0pt 0.4em; font-weight: bold; }
+.productMenu li a { display: inline-block; color: rgb(0, 0, 0); }
+.articles { padding: 0pt; clear: both; line-height: 1.5em; overflow: hidden; }
+.articles li { padding: 0pt 0pt 1em; overflow: hidden; }
+.articles li h4 { margin-bottom: 0.5em; color: rgb(0, 126, 139); }
+.articles li h5 { color: rgb(0, 126, 139); font-weight: normal; font-style: italic; }
+.articles li h4 span { font-weight: normal; }
+.articles li p, #articleInformation .citation p { color: rgb(117, 115, 115); }
+.articles li .citation { float: right; margin-left: 2em; width: 41.5em; }
+.articles li .citation a, .articles li .citation a em, .articles li .citation a sup, .articles li .citation a sub { color: rgb(0, 0, 0); font-weight: bold; }
+.articles .citation p { margin: 0pt; }
+.articles li .articleAbstract p, .articles .citation p.chapterTitle { color: rgb(0, 0, 0); }
+.articles .citation .errata .erratum a { font-size: 1em; }
+.articles li .articleAbstract { margin: 0.5em 0pt 0.5em 0em; float: left; }
+.articles li .articleAbstract a { font-weight: normal; font-size: inherit; text-decoration: underline; }
+.articles li .articleAbstract a:hover { text-decoration: none; }
+.articles li .articleAbstract img { float: left; margin: 0pt 1.5em 0pt 0pt; }
+.articles li .articleAbstract div.para p img { float: none; margin: 0pt; }
+.articles li .citation h3, .articles li .articleAbstract h5 { color: rgb(117, 115, 115); font-weight: normal; margin: 0pt; text-transform: uppercase; }
+.articles li .number { float: left; font-weight: bold; text-align: center; width: 1.6em; }
+.articles li .accessInfo { width: 19em; float: left; text-align: right; padding: 0pt 1em 0pt 0pt; }
+.articles li .accessInfo p { margin: 0pt 0pt 0.2em; }
+#referenceLinking .articles li .citation { float: none; margin-left: 0pt; width: 100%; }
+#referenceLinking ul.externalReferences li { display: inline; margin-right: 0.5em; padding: 0pt; }
+#referenceLinking .internalReferences a, #referenceLinking .externalReferences a { font-weight: normal; color: rgb(0, 126, 138); }
+.selectAll fieldset { padding-top: 0.1em; }
+.selectAll input { margin-right: 0.3em; }
+.selectAll label { vertical-align: top; }
+#pdf #pdfHeader { overflow: hidden; width: 97.9em; margin: 0pt auto; }
+#pdf #siteLogo { width: 250px; }
+#pdf #pdfHeader #pdfMetaData { width: 550px; padding-left: 1em; float: left; }
+#pdf object { clear: left; }
+#pdf { position: relative; padding: 0pt; margin: 0pt 0pt 0pt 2em; width: auto; }
+#pdfHeader #coBranding { float: right; margin: 1em 0pt; }
+#pdfHeader #siteLogo { margin: 1em 0pt; float: left; }
+#pdfHeader #productTitleAndVolume { clear: left; padding-top: 1em; width: 550px; overflow: hidden; }
+#productTitleAndVolume .openAccess, #productTitleAndVolume .freeAccess, #productTitleAndVolume .licensedContent { float: right; margin-top: -0.6em; }
+#productTitleAndVolume h1 { font-size: 1.5em; margin: 0pt 0pt 0.2em; float: left; }
+#productTitleAndVolume h1 #productTitle { margin-right: 1em; }
+#productTitleAndVolume #publicationDate, #productTitleAndVolume #earlyView, #productTitleAndVolume #acceptedArticle, #productTitleAndVolume #volumeAndIssue { color: rgb(117, 115, 115); font-weight: normal; font-size: 0.8em; padding-top: 0.2em; }
+#pdfHeader .productMenu { margin-bottom: 0.5em; width: 550px; clear: left; }
+#pdfHeader #productTitleAndVolume h1 { width: 530px; }
+.resources h3 { margin: 0pt 0pt 0.3em; }
+.resources li, .resources p { margin: 0pt 0.8em 0.7em 0pt; }
+.resources li { margin-bottom: 0.2em; padding: 0.35em 0pt 0pt 1em; background: url('woliconsnew.gif@22') no-repeat scroll -395px -503px transparent; }
+#pdf .errata { clear: left; width: 800px; }
+.errata { clear: both; }
+.errata span.label { color: rgb(93, 93, 93); font-weight: bold; margin-bottom: 0.2em; display: block; }
+.errata .erratum { clear: left; color: rgb(93, 93, 93); margin-bottom: 0.3em; }
+.errata .erratum p a, .errata .erratum p a em { color: rgb(0, 126, 139); font-weight: normal; }
+#titleMeta .errata .erratum p, .errata .erratum p { margin: 0pt; }
+ul.previousAndNext { overflow: hidden; padding: 0.5em 0pt; margin-left: -1em; }
+ul.previousAndNext li { border-left: 2px solid rgb(117, 115, 115); float: left; margin-left: -2px; display: block; text-indent: 0pt; padding-top: 0pt; padding-left: 1em; }
+ul.previousAndNext li a { padding-right: 1em; }
+.noItemsReturned { margin: 1em; font-weight: bold; }
+table { width: 100%; }
+table th, table td { padding: 0.5em 1em 0.5em 0pt; }
+table .productMenu {  }
+ul.inlineBorder { overflow: hidden; margin-left: 0.5em; }
+ul.inlineBorder li { float: left; padding-right: 0.7em; border-left: 2px solid rgb(117, 115, 115); padding-left: 0.5em; margin-left: -2px; }
+ul.inlineBorder li a { line-height: 1.2em; }
+.bulleted li { margin: 0pt 0pt 0.2em; background: url('woliconsnew.gif@22') no-repeat scroll -395px -514px transparent; padding: 0.2em 0pt 0pt 1em; }
+#stackTrace { height: 10em; overflow-y: auto; }
+ol#sendEmailCitation { padding: 0.3em 0.3em 0.3em 1.5em; list-style-type: decimal; }
+#sendEmailCitation li { margin: 0pt 0pt 0.75em; color: rgb(93, 93, 93); }
+.informationList { position: relative; overflow: hidden; width: 100%; }
+.informationList dt { position: absolute; left: -999em; top: -50em; }
+.informationList dd { margin: 0pt 1em 0pt 0pt; display: inline; float: none; }
+.buttonGroup { padding: 1em 0pt; overflow: hidden; }
+.buttonGroup li { margin: 0pt 0.5em 0pt 0pt; float: left; }
+.action, .submit, .buttonGroup li span { background: url('woliconsnew.gif@22') no-repeat scroll 0pt -804px rgb(0, 105, 118); display: block; width: auto; padding-left: 0.3em; }
+.action input, .submit input, .buttonGroup li span input, .submit a, .action a { border: medium none; display: block; cursor: pointer; font-weight: bold; height: 16px; padding: 0pt 0.2em 0.2em 0pt; background: url('woliconsnew.gif@22') no-repeat scroll 100% -804px transparent; color: rgb(255, 255, 255); font-size: 1.1em; }
+.buttonGroup li span input, li .action input, li .action a { font-size: 0.9em; }
+.submit a { padding: 0.2em 0.4em 0pt 0.3em; height: 14px; }
+.submit input { float: left; }
+.action, .buttonGroup li span { background: url('woliconsnew.gif@22') no-repeat scroll 0pt -839px rgb(226, 234, 237); }
+#saveEditGroup .action a, .action a, .action input, .buttonGroup li span input { background: url('woliconsnew.gif@22') no-repeat scroll 100% -839px rgb(226, 234, 237); color: rgb(51, 49, 50); }
+#saveEditGroup .action a { height: 1.45em; padding: 0pt 0.2em; line-height: 1.45em; }
+#saveEditGroup .action a:hover { text-decoration: none; }
+#saveEditGroup { float: right; margin-right: 3em; }
+#fulltext, #relatedArticles { border-bottom: 2px solid rgb(225, 233, 235); border-left: 2px solid rgb(225, 233, 235); padding: 1em 1em 0pt; }
+#relatedArticles, #fulltext .section { overflow: hidden; }
+#relatedArticles .sectionHeading h3 { color: rgb(0, 0, 0); margin-bottom: 0.5em; }
+.viewFullArticleAndPdf { border-bottom: 2px solid rgb(225, 233, 235); border-left: 2px solid rgb(225, 233, 235); padding: 1em 0pt 1em 1em; overflow: hidden; }
+.viewFullArticleAndPdf .viewFullArticleAndPdfOptions { float: right; padding: 0pt 1em 0pt 0pt; }
+.viewFullArticleAndPdf .viewFullArticleAndPdfOptions a { font-size: 1.2em; font-weight: bold; }
+.viewFullArticleAndPdf .viewFullArticleAndPdfOptions a.viewFullTextLink { border-right: 2px solid rgb(117, 115, 115); padding: 0pt 1.2em 0pt 0pt; margin: 0pt 1em 0pt 0pt; }
+.viewFullArticleAndPdf .viewFullArticleAndPdfOptions a.noBorder { border: medium none; margin: 0pt; padding: 0pt; }
+.viewFullArticleAndPdf .viewFullArticleAndPdfOptions a.openUrl { border-left: 2px solid rgb(117, 115, 115); padding: 0.1em 0pt 0.3em 1em; margin: 0pt 1em 0pt 0pt; }
+#relatedArticles ul { overflow: hidden; margin: 0pt 0pt 0.5em; }
+#relatedArticles ul li { margin: 0pt 0.5em 0.5em -1px; border-left: 1px solid rgb(0, 0, 0); display: inline; border-right: 0pt none; padding: 0pt 0pt 0pt 0.5em; white-space: nowrap; float: left; }
+#seeAlsoHeading, #findTopicsHeading, #findArticlesHeading, #articlesWrittenByHeading, #articleKeywordsHeading { float: left; font-size: 1.2em; color: rgb(93, 93, 93); font-weight: bold; padding: 0pt 0.5em 0pt 0pt; }
+#relatedArticles ul li a { font-weight: bold; text-decoration: none; }
+#relatedArticles ul li a:hover { text-decoration: underline; }
+.decisionTree, .decisionTree ul { clear: both; list-style-type: disc; padding: 0.5em 2em; }
+.tree { line-height: 140%; }
+.tree li a { font-weight: bold; }
+.tree li { clear: both; padding-top: 0.2em; padding-bottom: 0.2em; }
+.tree li a.branchLabel span { margin-left: 1.9em; }
+.tree li span.leaf { float: left; width: 80%; }
+.tree .closed { background: url('plus.gif@22') no-repeat scroll 0pt 3px transparent; }
+.tree .open { background: url('minus.gif@22') no-repeat scroll 0pt 3px transparent; }
+.tree .fetching { background: url('arrows.gif@22') no-repeat scroll 0pt 0pt transparent; }
+.tree ol { margin: 0pt 0pt 0pt 1.9em; }
+.internalReferences { margin: 0pt; clear: both; width: 100%; overflow: hidden; }
+.internalReferences .directLinkLabel { text-indent: -999em; width: 1.5em; background: url('woliconsnew.gif@22') no-repeat scroll 0pt -587px transparent; float: left; margin-right: 0.7em; padding-left: 0.4em; margin-top: 2px; }
+.internalReferences ul { overflow: hidden; margin-left: -0.4em; float: left; margin-bottom: 0.3em; }
+.internalReferences ul li { border-left: 1px solid rgb(117, 115, 115); font-size: 1.1em; margin-left: -0.1em; display: inline; padding: 0pt 0.4em 0pt 0.3em; line-height: 1.2em; }
+.internalReferences ul li a { font-size: 0.9em; }
+.internalReferences a { float: left; margin-top: 2px; }
+.internalReferences li a { float: none; }
+#productContent .plain li .internalReferences ul li, #productContent .custom li .internalReferences ul li { padding: 0pt 0.4em 0pt 0.3em; }
+#referenceLinking .internalReferences .directLinkLabel { background: url('woliconsnew.gif@22') no-repeat scroll 0pt -590px transparent; }
+#productContent .plain li .internalReferences ul { padding-left: 1.6em; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/journal.css ::::: */
+
+#titleMeta { float: left; width: 54.3em; margin: 0pt 0pt 1em; }
+#titleMeta p a { font-size: 1em; }
+#titleMeta cite { display: inline; font-size: 1.3em; }
+#titleMeta #productTitle { border-bottom: 0.1em solid rgb(225, 233, 235); margin: 0pt 0pt 0.23em; padding-bottom: 0.22em; }
+p.copyright { font-size: 1.1em; color: rgb(163, 162, 162); }
+#titleMeta .smallCaps { font-variant: small-caps; }
+#titleMeta h2 { line-height: 1.3em; }
+#titleMeta .issueDetails p span, #titleMeta #issuePages, #titleMeta .earlyView, #titleMeta .acceptedArticle, #titleMeta #issueDate, #titleMeta #volumeNumber, #titleMeta #issueNumber { color: rgb(0, 126, 139); font-weight: bold; }
+#titleMeta #cover { float: left; margin-right: 1em; }
+#titleMeta #cover .coverLink { padding: 0pt 0pt 0pt 0.5em; margin: 10.5em 0pt 0pt -5px; line-height: 2em; }
+#titleMeta p { margin-bottom: 0.5em; }
+#titleMeta #metaData .issueAndVolume { margin: 0pt; }
+#titleMeta #productDescription { padding-top: 1em; clear: left; }
+#titleMeta #issueDetails { margin: 0pt 0pt 1em; }
+#titleMeta #issueDetails p { margin: 0pt; }
+#titleMeta .articleTitle { font-size: 1.4em; color: rgb(0, 0, 0); margin: 0pt 0pt 1em; }
+#titleMeta .subtitle { line-height: 1.8em; }
+#titleMeta #bookSeries, #titleMeta #authors, #titleMeta #editors, #titleMeta #seriesEditors, #articleInformation #authors, #articleInformation #editors { margin: 0pt 0pt 1em; line-height: 1.4em; }
+#titleMeta #bookSeries a { font-size: 1em; }
+#titleMeta #editors li, #titleMeta #seriesEditors li #articleInformation #authors li, #articleInformation #editors li { display: inline; }
+#titleMeta #authors { overflow: hidden; }
+#titleMeta #authors li { display: block; float: left; }
+#titleMeta #authorsAffiliations, #titleMeta #editorsAffiliations { margin: 0pt 0pt 1em; }
+#titleMeta #authorsAffiliations li { text-indent: 1em; }
+#titleMeta #authorsAffiliations li p { text-indent: 0pt; padding-left: 0.5em; width: 41em; }
+#titleMeta #authorsAffiliations sup, #titleMeta #editorsAffiliations sup { float: left; vertical-align: text-bottom; min-width: 1em; font-size: 0.9em; line-height: 1.5em; text-align: right; margin-right: 0.5em; }
+#titleMeta #authorsAffiliations p, #titleMeta #editorsAffiliations p { margin: 0pt; }
+#titleMeta #authorsAffiliations li, #titleMeta #editorsAffiliations li { overflow: hidden; }
+#titleMeta #authorsAffiliations p, #editorsAffiliations .affiliation p { float: left; width: 43em; }
+#titleMeta #publicationHistoryDetails { margin: 0pt 0pt 1em; clear: both; }
+#titleMeta #publicationHistoryDetails li { line-height: 1.3em; }
+#titleMeta #publicationHistoryDetails li span { width: 6em; display: block; float: left; }
+#titleMeta #footnotes { margin: 0pt 0pt 1em; }
+#titleMeta #footnotes li span.bullet { display: block; float: left; min-width: 1em; overflow: visible; text-align: center; }
+#titleMeta #footnotes li div.para { margin: 0pt 0pt 0pt 1.7em; }
+#titleMeta #footnotes li div.para p { margin: 0pt; }
+#titleMeta .fundingInfo span { display: block; font-weight: bold; margin-bottom: 0.5em; }
+#titleMeta .fundingInfo { margin: 0pt 0pt 1em; }
+#titleMeta .fundingInfo ul { list-style-type: disc; margin: 0pt 0pt 0pt 1.1em; }
+#titleMeta .fundingInfo li { line-height: 1.3em; }
+.issueVolumes, #issuesByYear ul.issues { border-left: 2px solid rgb(225, 233, 235); border-top: 2px solid rgb(225, 233, 235); }
+.issueVolumes { padding: 0.8em 0pt 0.1em 0.8em; }
+.issueVolumes li { margin: 0pt 0pt 0.5em; overflow: hidden; clear: both; }
+.issueVolumes li ol { margin: 0pt 0pt 1em 3.8em; padding: 0.5em 0pt 0pt; overflow: hidden; }
+.issueVolumes li p { color: rgb(117, 115, 115); margin-bottom: 0.7em; }
+.issueVolumes li a { font-weight: bold; }
+.issueVolumes li ol li { margin: 0pt 0pt 0.5em 1.2em; line-height: 1.2em; }
+.issueVolumes li a.issuesInYear { line-height: 140%; text-decoration: none; }
+.issueVolumes li span { margin-left: 1.9em; }
+.issueVolumes li a:hover span { text-decoration: underline; }
+.issueVolumes li .closed { background: url('plus.gif@22') no-repeat scroll 0pt 0.35em transparent; }
+.issueVolumes li .open { background: url('minus.gif@22') no-repeat scroll 0pt 0.35em transparent; }
+.issueVolumes li .fetching { background: url('arrows.gif@22') no-repeat scroll 0pt 0pt transparent; }
+#allIssues li.backfileBoundary { border-top: 2px solid rgb(225, 233, 235); padding-top: 0.5em; }
+#allIssues li span.backfileLabel { color: rgb(117, 115, 115); float: right; font-size: 0.9em; }
+.issueVolumes li .freeAccess, .issueVolumes li .openAccess, .issueVolumes li .licensedContent { float: left; padding: 0pt; margin: -5px 0pt 0pt; }
+.issueVolumes li .issue { width: 36.5em; float: right; margin: 5px 0pt 0pt; }
+#siteMapList ol { margin: 0pt 0pt 1.2em 2em; }
+#siteMapList a { margin: 0pt 0pt 0.2em; display: block; }
+#issuesByYear .issue { border-bottom: 2px solid rgb(225, 233, 235); padding: 0.8em 0pt 0.8em 0.8em; overflow: hidden; position: relative; }
+#issuesByYear .details { margin-left: 6.5em; }
+.details p { margin: 0pt; color: rgb(0, 126, 138); font-weight: bold; }
+.details p span { color: rgb(117, 115, 115); font-weight: normal; font-style: italic; }
+.details .issueDetails, .details p.issue-pages, .details p.issue-number, .details p.issue-volume { color: rgb(0, 0, 0); font-weight: normal; }
+#issuesByYear .details p.specialIssue { color: rgb(117, 115, 115); font-weight: normal; }
+#issuesByYear .issue .openAccess { float: left; margin-left: 0.4em; }
+#issueToc { width: 54.3em; }
+#bookHome form, #issueToc form { padding-left: 0pt; }
+#issueToc .listNum { display: none; }
+#issueTocGroups li { padding-left: 1em; border-bottom: 2px solid rgb(228, 238, 240); }
+#issueTocGroups li#Abstracts { overflow: hidden; width: 100%; }
+#issueTocGroups .subSectionHeading { margin: 0pt; padding: 1em 0pt; position: relative; overflow: hidden; }
+#issueTocGroups li ol li { margin-top: 0pt; padding-left: 0pt; border-bottom: medium none; }
+#issueTocGroups li .articles .productMenu li { padding: 0pt 0.6em 0pt 0.4em; }
+#issueToc form .selectAll label { vertical-align: top; }
+#issueToc .buttonGroup.topLeftRoundCorner { border-left: medium none; }
+#issueToc .paginationFilter { margin-left: 0pt; padding-left: 1em; border-left: 2px solid rgb(228, 238, 240); }
+div.graphicalToc .graphicalTocImg { margin: 1em 1.5em 1em 0pt; }
+#issueToc #issueTocGroups { border-top: 2px solid rgb(228, 238, 240); margin-bottom: 1em; }
+#bookHome .resultControls, #issueToc .resultControls { padding-top: 0pt; }
+#exportCitation .citations { min-height: 8em; overflow: auto; }
+#exportCitation .citations li { width: 75%; line-height: 1.3em; }
+#exportCitation #exportOptions { float: none; width: 100%; }
+#subjectLanding #subjectNews, #subjectLanding #newArticles, #journalHome #recentIssues, .moduleFragmentContainer { margin: 0pt 0pt 2em; width: 26em; }
+.customModuleFragmentContainer { margin: 0pt 0pt 2em; }
+.customModuleFragmentContainer img { width: 100%; }
+.moduleFragmentContainer h4 { margin: 0pt 0pt 0.3em; font-size: 1em; }
+.moduleFragmentContainer .imgShadow { margin-bottom: 0pt; margin-right: 1em; }
+.moduleFragmentContainer .sectionHeading h3 { display: inline; float: none; }
+#journalHome #recentArticles { clear: both; }
+#journalHome #recentArticles .topLeftRoundCorner { padding: 0.8em 0pt 0pt 0.8em; }
+#journalHome .issues li { margin: 0pt 0pt 0.5em; }
+#journalHome .issues p.issue, #journalHome .issues p.volumeAndIssue { margin: 0pt; font-size: 0.9em; }
+#noCitationFound p em, #journalHome .issues p.issue { font-weight: bold; }
+#journalHome .issues p.volumeAndIssue { color: rgb(0, 0, 0); }
+#journalHome .currentIssue, #journalHome .virtualIssue { color: rgb(0, 0, 0); font-weight: bold; margin-right: 0.5em; }
+#journalHome .supplimentIssue, #journalHome .specialIssue { color: rgb(117, 115, 115); font-size: 0.9em; font-style: italic; margin-bottom: 0pt; }
+#mostViewdPublications { margin: 0pt 0pt 1em; padding: 1em 0pt 0pt 1em; }
+#mostViewdPublications ul { padding: 0pt 0pt 0pt 1em; overflow: hidden; }
+#mostViewdPublications li { margin: 0pt 2em 0pt -0.8em; float: left; width: 9.6em; }
+#mostViewdPublications li h2 { padding-top: 0.5em; }
+#mostViewdPublications li h2 #mostViewdPublications li p { margin-bottom: 0pt; clear: both; }
+#subjectLanding .articles .access { width: 2em; position: relative; }
+p#viewAllProducts { margin: 1em 0pt 0pt; }
+#browseBySubject { padding: 0.5em 0pt 0pt 0.5em; }
+#browseBySubject li { clear: left; font-size: 1.3em; padding: 0pt; position: relative; width: auto; }
+#browseBySubject li a { padding: 0.4em 1em 0.4em 0.5em; display: block; position: relative; cursor: pointer; }
+#browseBySubject li.hover { background-color: rgb(225, 233, 235); }
+#browseBySubject li.hover a { z-index: 100; background: url('browse_over_noshadow.gif@22') no-repeat scroll 13em -3px transparent; }
+#browseBySubject li.hover li a { background: none repeat scroll 0% 0% transparent; z-index: auto; padding: 0.2em; width: auto; position: static; margin: 0pt; }
+.js_en #browseBySubject li.hover div { display: block; }
+.js_en #browseBySubject li div { display: none; left: 15.5em; top: 0pt; position: absolute; z-index: 10; margin: -2em 0pt 0pt; border: 2px solid rgb(225, 234, 233); padding: 1em; float: left; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#browseBySubject li div ol { float: left; margin: 0pt; padding: 0pt; background: none repeat scroll 0% 0% rgb(255, 255, 255); width: 15em; }
+#browseBySubject li li { font-size: 1em; margin: 0pt; padding: 0.25em 1em; position: relative; z-index: 101; }
+#browseBySubject li li:hover, #browseBySubject li li.hover { background: none repeat scroll 0% 0% rgb(225, 233, 235); color: rgb(194, 50, 15); }
+#mainContent #browseBySubject { width: 19em; }
+.js_en #mainContent #browseBySubject li div { left: 14.4em; }
+#mrwAdvancedSearch #productOptions li, #mrwAdvancedSearch #products li { margin-bottom: 0.5em; }
+#mrwAdvancedSearch #productOptions li label, #mrwAdvancedSearch #products li label { vertical-align: top; margin-left: 0.5em; }
+#mrwAdvancedSearch #products { margin-left: 2.3em; }
+#mrwAdvancedSearch .topLeftRoundCorner, #advancedSearch form.topLeftRoundCorner { padding: 1em 0pt 0pt; }
+#mrwAdvancedSearch .topLeftRoundCorner { clear: both; }
+#advancedSearch .searchCriteria { padding-top: 0pt; }
+#advancedSearch #searchCriteria li { margin: 0pt 0pt 0.5em; clear: both; position: relative; min-height: 1.4em; }
+#searchTips .sectionHeading p, #advancedSearch .sectionHeading p { line-height: 1.8em; }
+#explanationText { clear: both; margin: 0pt 0pt 0.5em; }
+#explanationText p { margin: 0pt; }
+#advancedSearch h3, #mrwAdvancedSearch h3 { margin: 0pt 0pt 0.5em; }
+#advancedSearch select, #mrwAdvancedSearch select { min-height: 1.4em; border: 1px solid rgb(130, 157, 184); }
+#advancedSearch fieldset, #mrwAdvancedSearch fieldset { border-bottom: 2px solid rgb(225, 233, 235); border-left: 2px solid rgb(225, 233, 235); margin: 0pt; padding: 1em 0pt 1em 1em; }
+#advancedSearch #subjects li label, #advancedSearch #searchCriteria li label { display: none; }
+#advancedSearch #searchCriteria .searchText { float: left; width: 20.5em; border: 1px solid rgb(130, 157, 184); margin: 0pt 0.5em 0.5em 5.9em; min-height: 1.4em; }
+#advancedSearch select.searchRestriction { width: 14.2em; float: left; margin-right: 1em; }
+#advancedSearch #searchCriteria li a.deleteRow { background: url('woliconsnew.gif@22') no-repeat scroll 0pt -623px rgb(255, 255, 255); height: 16px; margin: 0.2em 0pt 0pt; text-indent: -999em; width: 16px; float: left; }
+#advancedSearch #searchCriteria li a.deleteRow:focus {  }
+#advancedSearch .searchCriteriaOptions { clear: both; padding-top: 0.5em; }
+#advancedSearch #searchCriteria li select.andOrNot { width: 5.4em; float: left; position: absolute; left: 0pt; }
+#advancedSearch .dateRanges, #mrwAdvancedSearch .dateRanges { width: 19em; float: left; margin: 0pt 1em 0pt 0pt; }
+#advancedSearch .publicationTypes, #mrwAdvancedSearch .publicationTypes { width: 12em; float: left; }
+#advancedSearch .subjectsAndAccess, #mrwAdvancedSearch .subjectsAndAccess { width: 21em; float: right; }
+#dateRange li { margin-bottom: 0.5em; }
+#advancedSearch .publicationTypes label, #mrwAdvancedSearch .publicationTypes label, #mrwAdvancedSearch #topics label { vertical-align: top; margin: 0pt 0pt 0pt 0.3em; }
+#advancedSearch #dateRange li input, #advancedSearch #dateRange li label, #mrwAdvancedSearch #dateRange input, #mrwAdvancedSearch #dateRange label { vertical-align: middle; }
+#advancedSearch #startYear, #advancedSearch #endYear, #mrwAdvancedSearch #startYear, #mrwAdvancedSearch #endYear { width: 3.55em; border: 1px solid rgb(130, 157, 184); min-height: 1.4em; }
+#advancedSearch #startYear, #mrwAdvancedSearch #startYear { margin: 0pt 0.3em 0pt 1.4em; }
+#advancedSearch #inTheLastList, #mrwAdvancedSearch #inTheLastList { width: 8em; margin: 0pt 0pt 0pt 1em; }
+#dateRange p { margin: 0.5em 0pt 0pt 1.5em; font-style: italic; color: rgb(117, 115, 115); }
+#advancedSearch .subjectsAndAccess li, #advancedSearch .publicationTypes li, #mrwAdvancedSearch .subjectsAndAccess li, #mrwAdvancedSearch .publicationTypes li { margin: 0pt 0pt 0.5em; }
+#advancedSearch #subjects li select { width: 14.2em; }
+#advancedSearch .adSearchSubmit, #mrwAdvancedSearch .adSearchSubmit { margin-top: 1em; overflow: hidden; width: 100%; border-bottom: 2px solid rgb(225, 233, 235); padding-bottom: 1em; }
+#advancedSearch .adSearchSubmit .action { margin-left: 1em; display: inline; }
+#advancedSearch #resultsOrder li label, #advancedSearch #access li label { vertical-align: top; margin: 0pt 0pt 0pt 0.3em; }
+#mrwAdvancedSearch #resultsOrder li, #advancedSearch #resultsOrder li { display: inline; margin: 0pt 1em 0pt 0pt; }
+#mrwAdvancedSearch .sectionHeading h2 { font-size: 1.3em; }
+#mrwAdvancedSearch #topics li { overflow: hidden; margin: 0pt 0pt 0.5em; width: 100%; }
+#mrwAdvancedSearch #topics input, #mrwAdvancedSearch #topics label { float: left; }
+#mrwAdvancedSearch #topics label { vertical-align: top; margin: 0pt 0pt 0pt 0.5em; line-height: 1.3em; width: 15em; }
+#mrwSearchText { width: 28.5em; }
+#mrwSearchText label { position: absolute; left: -100em; }
+#mrwSearchText input { border: 1px solid rgb(130, 157, 184); font-size: 1.2em; margin: 0pt 0.5em 0.5em 0pt; min-height: 1.4em; width: 28.5em; }
+#mrwSearchOptions { width: 41em; }
+#mrwSearchOptions li { margin: 0pt 0.5em 0.5em 0pt; float: left; width: 17em; }
+#mrwSearchOptions label { margin: 0pt 0pt 0pt 0.2em; vertical-align: top; }
+#mrwContentSearch .searchCriteriaOptions { overflow: hidden; width: 100%; }
+#mrwAdvancedSearch .action { float: left; margin-left: 1em; }
+#advancedSearch .adSearchSubmit .submit, #mrwAdvancedSearch .submit, #mrwContentSearch .submit { float: right; }
+#mrwAdvancedSearch h3 { margin-bottom: 0.3em; }
+#mrwAdvancedSearch #substanceClasRestriction ul li { margin-bottom: 0.5em; }
+#mrwAdvancedSearch #substanceClasRestriction ul li label { width: 35%; float: left; vertical-align: top; }
+#mrwAdvancedSearch #substanceClasRestriction ul li select { width: 30%; }
+#mrwAdvancedSearch #dbRecordsOnly li, #mrwAdvancedSearch .searchDocumentation li { margin: 0pt 0.5em 0.3em 0pt; }
+#mrwAdvancedSearch #dbRecordsOnly label, #mrwAdvancedSearch .searchDocumentation label { margin: 0pt 0pt 0pt 0.2em; padding-top: 0.2em; vertical-align: top; }
+#mrwAdvancedSearch .publicationTypes #allTypes, #mrwAdvancedSearch .subjectsAndAccess #allTopics { margin-bottom: 0.7em; }
+#searchTips ol { list-style-type: decimal; margin: 0pt 0pt 0.8em 1.7em; font-weight: bold; color: rgb(93, 93, 93); }
+#searchTips h3 { margin-bottom: 0.2em; }
+#searchTips td ol, #searchTips li p, #searchTips li ul, #searchTips dl, #searchTips ol ol li, #searchTips ol li span { font-weight: normal; color: rgb(0, 0, 0); }
+#searchTips ol ol { list-style-type: disc; margin: 0pt 0pt 0.5em 1.2em; }
+#searchTips ul { list-style-type: disc; margin: 0.2em 0pt 1em 1.5em; }
+#searchStemming ol li li, #searchTips li { margin: 0pt 0pt 0.5em; }
+#searchTips li li { margin: 0pt 0pt 0.2em; }
+#searchTips .assistance { font-style: italic; }
+#searchTips ol.mainList p { margin: 0pt; }
+#searchStemming ol li { margin-bottom: 1.5em; }
+#searchTips dl { width: 100%; overflow: hidden; }
+#searchTips dt, #searchTips .mainList dd { width: 48%; }
+#searchTips dt { margin: 0pt 2% 0pt 0pt; }
+#searchTips dl.doubleDefinition dd { width: 24%; }
+#additionalTips ul, #searchTips table { margin-bottom: 2em; line-height: 1.2em; }
+#searchTips td ol { list-style-type: decimal; margin: 1em 0pt 1em 1.5em; }
+#searchTips td span { display: block; margin: 1em 0pt 0pt; }
+#searchTips .tipsProductSpecific dt, #searchTips .tipsProductSpecific dd { display: inline; margin: 0pt; padding: 0pt; width: auto; float: none; }
+#searchTips .tipsProductSpecific dt { display: inline-block; clear: both; font-weight: bold; }
+#trustedProxy .ipAddress input { width: 2em; margin-right: 0.1em; }
+#trustedProxy .ipAddress .inline { margin-left: 22%; }
+#trustedProxy .ipAddress .inline input { margin-bottom: 0.5em; }
+#trustedProxy .ipAddress .fieldAssistance { clear: both; margin-top: 0pt; }
+#trustedProxy form.simple .submit { margin-bottom: 1em; }
+#trustedProxy .ipAddress .error { display: block; margin-bottom: 0.5em; }
+.submitInstructions { clear: both; margin: 0.5em 0pt 0pt; }
+.submitInstructions ol li { color: rgb(93, 93, 93); margin: 0.3em 0pt 0.7em; }
+#contentAlertsSignup form { padding: 1em 0pt 0pt; }
+#contentAlertsSignup #titleFilter { padding: 0pt 1em; margin-bottom: 1em; overflow: auto; }
+#contentAlertsSignup #titleFilter label { padding-top: 0.3em; }
+#contentAlertsSignup #titleFilter label, #contentAlertsSignup #titleFilter select { margin: 0pt 0.5em 0pt 0pt; float: left; }
+#contentAlertsSignup #titleFilter select { font-size: 1.2em; border: 1px solid rgb(131, 157, 182); }
+#contentAlertsSignup #titleFilter .action { margin-top: 0.2em; }
+#pageNotFound a { color: rgb(0, 126, 139); }
+.moduleFragment { margin: 0pt 0pt 1em; line-height: 1.3em; overflow: hidden; }
+.moduleFragment p { overflow: hidden; }
+.moduleFragment ul { list-style-type: disc; margin-left: 1em; }
+.moduleFragment img { margin-right: 1em; }
+#ipAddress #ipExamples { margin: 0pt 0pt 1em; }
+#ipAddress #ipExamples h2 { margin: 0pt 1em 0pt 0pt; }
+#ipAddress #ipExamples p { color: rgb(93, 93, 93); font-style: italic; margin: 0pt; }
+#ipAddress #ipExamples p span { display: block; }
+#passwordDate { margin: 1em 0pt 0pt; }
+#passwordDate .passWordLabelHidden { position: absolute; left: -999em; }
+#passwordMonth, #passwordDay { width: 1.8em; }
+#passwordYear { width: 3.6em; }
+#familyLandingPage #collections ol li { margin-bottom: 0.5em; overflow: hidden; min-height: 2em; clear: both; }
+#familyLandingPage #collections ol a { width: 41.5em; float: right; margin: 0pt; }
+#familyLandingPage #collections ol .freeAccess, #familyLandingPage #collections ol .openAccess, #familyLandingPage #collections ol .licensedContent { width: 2.5em; float: left; margin: 0pt 0pt 0.5em; }
+#bookHome .books { width: 100%; border-top: 2px solid rgb(225, 233, 235); }
+#bookHome .books fieldset { padding: 1em 0pt 0pt 1em; }
+#bookHome .sectionHeading label { display: none; }
+.onlineBooksInSeries li { margin-bottom: 0.5em; overflow: hidden; width: 100%; }
+.onlineBooksInSeries li a { float: left; line-height: 1.2em; margin: 0.85em 0pt 0pt; width: 41em; }
+.onlineBooksInSeries .access { width: 1.3em; margin: 0pt 1em 0pt 0pt; }
+#bookHome .books li .access input { margin-top: 0.4em; }
+#articleDesc { padding-top: 0.5em; clear: left; }
+#articleDesc .articleCategory, #articleDesc #articleType { margin-top: -0.5em; }
+#articleDesc #articleTitle { border-top: 0.2em solid rgb(225, 233, 235); padding-top: 0.5em; }
+#articleDesc #articleTitle .articleTitle { clear: left; margin: 0pt 2em 0pt 0pt; }
+#titleMeta .articleCategory, #titleMeta #articleType { float: left; background: none repeat scroll 0% 0% rgb(255, 255, 255); color: rgb(163, 162, 162); font-weight: bold; padding-right: 0.5em; }
+#articleDesc #articleMeta #productTitle, #articleDesc #articleParent #productTitle { line-height: 1.2em; border: medium none; clear: left; font-size: 1.2em; padding-top: 0.3em; }
+#articleDesc #articleMeta { float: left; width: 24em; margin-top: 0.5em; }
+#articleDesc #authors li { line-height: 1.5em; display: inline; float: none; }
+#articleDesc .publicationDate { margin-top: 1em; }
+#articleDesc #articleParent { width: 29em; float: right; padding-top: 0.5em; border-top: 0.2em solid rgb(225, 233, 235); margin-top: 1.2em; color: rgb(163, 162, 162); }
+#articleDesc #articleParent .articleCategory { margin-top: -1.1em; }
+#articleDesc #articleParent #cover { clear: left; float: left; margin-top: 0.5em; }
+#articleDesc #articleParent #cover .imgShadow { margin-bottom: 1.5em; }
+#articleDesc #articleParent #metaData { margin-top: 0.5em; float: right; width: 17em; }
+#articleDesc #articleParent #metaData .supplement #articleDesc #articleParent #metaData .specialIssue { margin-top: 0.5em; }
+#articleDesc p.copyright { padding-bottom: 1.5em; }
+#titleMeta #additionalInformation { clear: both; border-top: 0.2em solid rgb(225, 233, 235); padding-top: 0.22em; float: left; margin-top: 1em; width: 100%; }
+#titleMeta #additionalInformation .articleCategory { margin-top: -1em; }
+#titleMeta #additionalInfoLinks { clear: left; padding-top: 0.3em; }
+#articleDesc .affiliation { text-indent: 0pt; }
+#licenseAgreement .topLeftRoundCorner { padding-right: 1em; }
+#licenseAgreement ol { list-style: upper-alpha outside none; margin-left: 2.5em; margin-bottom: 1em; line-height: 1.3em; }
+#licenseAgreement ol li > ol { list-style: decimal outside none; }
+#licenseAgreement ol li > ol li > ol { list-style: lower-alpha outside none; }
+#licenseAgreement ol li > ol li > ol li > ol { list-style: lower-roman outside none; }
+#licenseAgreement h2 { margin-bottom: 0pt; }
+#subjectTitles #titles .publication { float: right; }
+.rentalLink { background-image: url('deepdyve.ico@22'); background-repeat: no-repeat; padding-left: 2em; padding-bottom: 0.5em; }
+#recommendToLibrarian #titleMeta { float: none; width: 100%; overflow: hidden; }
+#recommendToLibrarian #recaptcha_image { clear: left; margin-left: 22%; }
+#recommendToLibrarian #titleMeta #metaData { float: left; }
+#recommendToLibrarian #recommendations input { clear: both; vertical-align: top; padding: 0pt; margin: 0pt; width: auto; border: medium none; }
+#recommendToLibrarian #recommendations label { clear: none; width: 80%; padding-bottom: 0.5em; vertical-align: top; margin-left: 1em; line-height: 1.1em; }
+#recommendToLibrarian fieldset p.fieldAssistance { margin-top: 0pt; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/registration.css ::::: */
+
+#editAccountInformation .sectionHeading p, #viewAccountInformation .sectionHeading p { line-height: 2em; }
+#usageReports .bulleted, #registration .bulleted { margin: 0pt 0pt 1em; }
+#usageReports form.simple .submit { margin-right: 3em; }
+#registration .bulleted li { margin-bottom: 0.2em; }
+#registration #errorHead p { margin-bottom: 0.5em; margin-top: 0.5em; }
+#registration .termsOfUse div { float: left; width: 62.5em; }
+#registration .termsOfUse input { margin-right: 0.8em; }
+#registration .termsOfUse label { float: none; position: static; }
+#registration .termsOfUse input { width: 1em; border: medium none; margin-top: -0.1em; }
+#registration .submit { margin: 1em 1em 1em 0pt; }
+#editAccountInformation #accountInfoSubmit { margin: 0pt 1em 1em 0pt; }
+#newSocietyRegistrationLink { clear: both; }
+#editAccountInformation p.formError { margin-bottom: 0.5em; margin-left: 13.2em; width: 15.25em; }
+form.simple .promotionalInfo div { float: left; overflow: hidden; width: 56em; }
+form.simple .promotionalInfo label { line-height: 1.4em; clear: none; width: 46em; margin: 0pt; }
+form.simple .promotionalInfo input { margin: 0.2em 1em 0pt 0pt; width: 20px; }
+form.simple .promotionalInfo p.label { float: left; width: 13em; color: rgb(0, 0, 0); }
+.registrationInfo p, form.simple #contentAlerts p, form.simple .termsOfUse p { color: rgb(0, 0, 0); }
+form.simple .divider .formError { margin: 0.3em 0pt 0.7em 13em; }
+form.simple .termsOfUse .formError { margin-left: 2em; margin-top: -0.5em; }
+#institutionalAndAthensLogin .topLeftRoundCorner { margin-bottom: 1em; border-bottom: 2px solid rgb(228, 238, 240); padding-bottom: 0pt; }
+#shibboleth .submit, #athens .submit { float: right; margin-right: 49%; margin-bottom: 1em; }
+#shibboleth .submit a, #athens .submit a { text-decoration: none; }
+#athens .submit a { height: 13px; }
+#UKInstitution { margin-bottom: 3em; }
+#UKInstitution label { display: none; }
+#UKInstitution .submit { float: left; margin-top: 0pt; }
+#viewAccountInformation dl, #editAccountInformation dl { overflow: hidden; }
+#editAccountInformation .separator { padding-bottom: 0pt; }
+.promotionalInfo dl { margin-bottom: 1em; }
+#viewAccountInformation dt, #editAccountInformation dt { width: 13.2em; padding-bottom: 1em; }
+#viewAccountInformation dd, #editAccountInformation dd { padding-bottom: 1em; }
+.loginDetails dd { margin-right: 2.5em; width: 16.1em; }
+.promotionalInfo dd { margin-right: 0pt; width: 52em; margin-bottom: 1em; overflow: hidden; }
+#termsAndConditions, #privacyPolicy { margin-right: 1em; }
+#termsAndConditions h2, #privacyPolicy h2 { margin-bottom: 0pt; }
+.termsAndConditionsItems { list-style-type: upper-alpha; margin-left: 2em; margin-bottom: 1em; }
+.termsAndConditionsItems li { margin-bottom: 0.5em; line-height: 1.3em; }
+.termsAndConditionsItems li ol { list-style-type: decimal; margin-left: 2em; }
+#registrationConfirmation .topLeftRoundCorner { padding-right: 1em; }
+#accountInfoSubmit .submit { margin-right: 0pt; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/accessDenied.css ::::: */
+
+#accessDenied { overflow: hidden; padding-bottom: 0.5em; }
+.accessDeniedMessage { font-weight: bold; margin: 0pt 0pt 0.5em; color: rgb(188, 54, 26); }
+#accessDenied .access { margin: 0pt 0pt 1em; overflow: hidden; width: 100%; }
+#accessDenied .access h3 { margin: 1em 0pt 0pt; }
+#accessDenied .access .password, #accessDenied .access .email { margin: 0.4em 0pt; width: 12em; border: 1px solid rgb(131, 157, 182); }
+#accessDenied .recommendToLibrarians { margin: 0pt; clear: both; }
+#accessDenied .login, #accessDenied .register, #accessDenied .renewSubscription, #accessDenied .purchaseOnlineAccess { float: left; min-height: 12em; width: 26.5em; margin: 0pt 2em 1em 0pt; }
+#accessDenied .purchaseOnlineAccess { margin: 0pt; }
+#accessDenied .login { margin-bottom: 2em; }
+#accessDenied .login form div { overflow: hidden; width: 100%; }
+#accessDenied .login label { width: 6em; float: left; margin: 0.4em 0pt; }
+#accessDenied #accessPassword { margin-right: 0.5em; }
+#accessDenied #accessDeniedCancel.submit, #accessDenied #accessDeniedConfirm.submit { float: left; margin-right: 0.5em; }
+#accessDenied .keyFeatures { margin-bottom: 1em; }
+#accessDenied .access ul, #accessDenied .keyFeatures ul { padding-bottom: 1em; line-height: 1.8em; }
+.access #accessDeniedOptions ul { padding-bottom: 0pt; }
+#accessDenied .access li, #accessDenied .keyFeatures li { background: url('bulletteal.gif@22') no-repeat scroll 0pt 7px rgb(255, 255, 255); padding: 0pt 0pt 0pt 1em; }
+#accessDenied .access h3, #accessDenied .keyFeatures h3 { margin: 0pt; padding: 0pt 0pt 0.5em; }
+#accessDenied .keyFeatures h3 { margin-top: 0.5em; font-size: 1.2em; }
+#accessDenied .recommendToLibrarians h3 { margin: 1em 0pt; }
+#accessDenied .submit { float: right; margin-top: 0.4em; }
+#pdf #accessDenied { margin: 1.5em auto 0pt; width: 97.9em; }
+#accessDenied .access .purchaseOnlineAccess .submit { float: left; margin-bottom: 1em; }
+#accessDenied .keyFeatures, #accessDenied .recommendToLibrarians, #accessDenied .access .purchaseOnlineAccess p { clear: both; }
+#micrError { margin: 1em 0pt 0pt; }
+#mrwAccessDenied { margin: 1em 0pt 0pt 3em; }
+#mrwAccessDenied #accessDenied { overflow: visible; }
+#accessDenied #deepDyve { float: left; width: 43em; clear: none; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/myProfile.css ::::: */
+
+#myProfileInfo { margin: 0pt 0pt 0.5em -0.5em; }
+#myProfileInfo li { padding: 0pt 0.5em; margin: 0pt 0pt 0.5em; }
+#myProfile li a { font-weight: bold; }
+#myProfileIntro { margin: 1em 0pt 1.5em; }
+#myProfile .topLeftRoundCorner { margin-bottom: 1em; }
+#savedItemsAndAlerts, #authorServicesPromotion { float: left; width: 36.5em; clear: none; }
+#savedItemsAndAlerts li { margin: 0pt 0pt 1em; }
+#authorServicesPromotion { float: right; }
+#myProfile .citation { float: left; width: 38em; }
+#myProfile .accessInfo { padding-top: 0.3em; }
+#myProfile .articles .number { margin: 0.3em 0pt 0pt; }
+#searchResults form, #savedPublications form, .savedItems form { padding: 0pt; overflow: hidden; width: 100%; }
+.savedItems .sectionHeading p { line-height: 1.8em; }
+.savedItemsList { border-top: 2px solid rgb(225, 233, 235); overflow: hidden; }
+.savedItems .articles { padding: 0pt 0pt 0pt 1em; margin: 0pt 0pt 0pt 1px; }
+#publications, #subjectTitles #titles { padding: 1em 0pt 0pt; margin: 0pt 0pt 1em; border-top: 2px solid rgb(225, 233, 235); border-bottom: 2px solid rgb(225, 233, 235); }
+#alertsManager #publications { border: medium none; padding: 0pt; }
+#alertsManager #searchAlerts .articles li, #publications li, #titles li { padding: 0.2em 0pt 0.3em 1em; margin-bottom: 0.5em; overflow: hidden; }
+#publications li, #titles li { clear: both; }
+#publications li { min-height: 2.4em; }
+#alertsManager #searchAlerts .articles li, #alertsManager #publications li { margin-bottom: 0pt; }
+#contentAlertsSignup #publications li { min-height: 1%; }
+#contentAlertsSignup #publications li .publication { position: static; }
+#publications label, #subjectTitles #titles label { position: absolute; left: -1000em; }
+#publications .publication p, #publications a, #publications span .previousTitle, #publications li a, #titles .previousTitle, #publicationTitleSearch .previousTitle, #publicationsAtoZ #publications .previousTitle, #alertsManager .articles li a, #savedSearches .searchString a, #subjectTitles #titles a { font-weight: bold; margin: 0.1em 0pt 0pt; display: block; }
+#alertsManager #publications .publication p { width: 32em; }
+#subjectTitles .access span { margin-top: -5px; }
+.previousTitle { padding-bottom: 0.5em; color: rgb(117, 115, 115); line-height: 1.2em; }
+#publicationsAtoZ #publications .previousTitle { padding-right: 9em; }
+.currentlyKnownAsLabel { margin: 0pt 1em 0pt 0pt; line-height: 1.2em; float: left; }
+#alertsManager #searchAlerts .articles li { width: 100%; }
+#alertsManager .alerts .buttonGroup li, #alertsManager .alerts .buttonGroup { width: auto; }
+.productTitle { background: none repeat scroll 0% 0% rgb(255, 255, 255); color: rgb(117, 115, 115); display: block; text-transform: uppercase; position: absolute; top: 5px; right: 0pt; }
+.resultControls { padding: 1em 0pt 1em 1em; overflow: hidden; clear: both; }
+#publicationTitleSearch form, #publicationsAtoZ form, #subjectTitles form { padding-left: 0pt; }
+#publicationTitleSearch .resultControls, #publicationsAtoZ .resultControls, #subjectTitles .resultControls { padding-top: 0pt; }
+#searchResults #searchResultsList .resultControls { padding: 0pt 0pt 1em; }
+.resultControls .buttonGroup { float: left; padding: 0pt 0pt 0pt 1em; }
+#subjectTitles #subjectTitleInfo { margin: 0pt 0pt 1em 1em; }
+#resultInfo p { padding: 1em 1em 0pt; }
+#searchResults #resultInfo p { width: 40em; float: left; padding: 0pt; }
+#searchResults #resultInfo p em, #searchedForText em { font-weight: bold; }
+.articles .access, #publications .access, #titles .access { width: 3.5em; margin-right: 1em; }
+.articles .access { min-height: 2.4em; }
+#publications .access .openAccess, .articles .access .openAccess { background-position: -385px -45px; }
+#publications .access .freeAccess, .articles .access .freeAccess { background-position: -385px 0pt; }
+#publications .access .licensedContent, .articles .access .licensedContent { background-position: -385px -96px; }
+.articles .citation { padding: 0.3em 0pt 0pt; }
+#titles li .title, #publications .publication { padding: 0.4em 0pt 0pt; }
+#savedPublications .access .number, #publications .access input, .articles .access input { margin: 5px 0pt 0pt; }
+#savedArticles .articles .citation { margin: 0.1em 0pt 0pt; }
+#savedSearches .access input, #savedPublications .licensedContent, #savedPublications .freeAccess, #savedPublications .openAccess { margin-top: 0pt; }
+#savedPublications .access .number { margin: 0.5em 0pt 0pt; }
+#savedArticles .access .number { margin: 0.35em 0pt 0pt; }
+#savedArticlesList .articles .access, #savedPublicationsList #publications .access, #searchResultsList .articles .access { width: 5em; }
+#recentArticles .articles .access { width: 2em; }
+#recentArticles .licensedContent, #recentArticles .freeAccess, #recentArticles .openAccess { width: 1.5em; margin-left: 0.5em; float: left; }
+#savedPublications .number { float: left; font-weight: bold; text-align: center; width: 1.6em; }
+.publication, #titles .title, .searchString, #articlesInUse .citation, #savedArticles .citation { float: left; width: 39.5em; position: relative; margin-left: 0pt; }
+#savedPublicationsList .alerts, #titles .title, #publicationTitleSearch .publication, #publicationsAtoZ .publication { float: right; }
+#titles li .access input { margin-top: 4px; }
+#titles li span.previousTitle { margin-top: 6px; }
+.searchString { position: static; }
+#bookHome .citation { width: 39.5em; margin-left: 0pt; }
+#issueToc .citation { margin-left: 0pt; width: 39.3em; }
+#journalHome #recentArticles .articles .citation { margin-left: 0pt; padding-top: 0.35em; }
+#contentAlertsSignup .publication { width: 32.7em; margin-left: 0pt; }
+#savedArticles .citation { width: 35em; padding-right: 11em; }
+#publications .publication a, #subjectTitles #titles li .title a { padding-right: 7.9em; }
+#savedPublications .publication a { padding-right: 6.8em; }
+#savedArticles .citation .productMenu a { padding-right: 0.2em; }
+.alerts { float: left; width: 10.5em; position: relative; margin-right: 1em; }
+#contentAlertsSignup .alerts { float: right; width: 10.6em; margin: 0pt; position: static; }
+li div.alerts input { margin: 0pt; }
+#searchResultsList { width: 55.2em; float: left; padding: 0pt 0pt 0pt 1em; }
+#searchResultsList .access input { margin-top: 0.3em; }
+#searchResultsList .articles .citation { padding-top: 0.35em; }
+#searchResultsList .access .number { margin-top: 0.3em; }
+#relatedInfo { border-width: 2px medium 2px 2px; border-style: solid none solid solid; border-color: rgb(225, 233, 235) -moz-use-text-color rgb(225, 233, 235) rgb(225, 233, 235); padding: 1em 1em 0pt; }
+#relatedInfo h3 { margin: 0pt 0pt 1em; }
+#relatedInfo h4 { margin: 1em 0pt 0pt; }
+#savedSearches .alerts, #savedPublications .alerts #searchResults #resultInfo .buttonGroup { float: right; }
+#savedSearches .articles .buttonGroup input { float: none; }
+#searchResultsList ol.searchResults { clear: left; padding-top: 1em; }
+#searchResultsList .paginationFilter { margin-left: 0pt; }
+#savedArticles li .accessInfo { text-align: left; }
+#alertsManager .topLeftRoundCorner { margin-bottom: 2.5em; padding-right: 1em; }
+#alertFrequency { margin: 0pt 0pt 1em; }
+#alertFrequency select { border: 1px solid rgb(131, 157, 182); }
+#alertsManager #searchAlerts .articles li, #alertsManager #publications li { padding-left: 0pt; padding-right: 0pt; width: auto; }
+#alertsManager .searchString, #alertsManager .publication { width: 44.8em; padding: 0pt; }
+#alertsManager .articles li .alerts .buttonGroup, #savedSearches .articles li .alerts .buttonGroup { padding: 0pt; width: 18em; overflow: hidden; }
+#savedSearchesList .alerts, #alertsManager .alerts { margin-right: 0pt; width: 18em; }
+#alertsManager #searchAlerts .alerts { right: -1.7em; }
+#alertsPreferences dt { width: 12.2em; margin: 0pt 0pt 1em; }
+#alertsPreferences dd { padding-right: 1em; }
+#messageFormat { clear: both; }
+#messageFormat span { width: 12.2em; font-size: 1.2em; float: left; }
+#messageFormat input { vertical-align: middle; margin-right: 0.5em; }
+#messageFormat label { margin-right: 2em; }
+#alertsManager .alerts .buttonGroup li { margin: 0pt 0.5em 0pt 0pt; }
+#alertsManager .alerts .buttonGroup li input { float: none; }
+#alertsManager #citationAlerts .articles li .citation { float: left; margin-left: 0pt; width: 49.5em; position: relative; }
+#alertsManager #citationAlerts .alerts { width: 10em; float: right; }
+#savedArticles .articles .alerts, #alertsManager #citationAlerts .alerts { margin-top: 0.5em; }
+#alertsManager #citationAlerts .articles li .access { width: 1.5em; }
+#alertsManager #citationAlerts .articles li .citation { width: 31.2em; margin-left: 0pt; padding-right: 11em; }
+#controlOptions { margin: 0pt 1em 1em 0pt; }
+#controlOptions li { background: url('woliconsnew.gif@22') no-repeat scroll -395px -513px transparent; margin-bottom: 0.2em; padding: 0.2em 0pt 0pt 1em; }
+#articleSelectPermissions td form { margin: 0pt; }
+#articleSelectPermissions #editUserPermissions { margin-bottom: 1em; }
+#articleSelectPermissions #editUserPermissions table { width: 50%; }
+#editUserPermissions table thead th { width: 33%; }
+#articleSelectPermissions .topLeftRoundCorner { margin-bottom: 2em; }
+#articleSelectPermissions #userAction { text-indent: -999em; }
+#articleSelectPermissions td .submit input { font-size: 0.9em; }
+#administratorHome .simple { padding: 0.8em 0.8em 0pt; margin-bottom: 1em; overflow: hidden; }
+#administratorHome .sectionHeading p a { line-height: 1.2em; }
+#administratorHome .administratorInfo p { overflow: hidden; }
+#administratorHome span.value { width: 42em; margin-right: 10%; }
+#administratorHome .administratorInfo p span.value, #administratorHome .administratorInfo p span.label { margin-bottom: 0pt; }
+#administratorHome span.value span { display: block; }
+#editAdministratorProfile .sectionHeading p { line-height: 2em; }
+.bookSummaries { margin: 0.3em 0pt; }
+.bookSummaries ul li { padding-bottom: 0pt; }
+.bookSummaries ul li p { color: rgb(0, 0, 0); }
+#articlesInUse .citation { width: 37em; padding-right: 11em; position: static; }
+#articlesInUse .accessExpiryDate { float: left; width: 14.5em; margin-right: 1em; text-align: right; }
+#articlesInUse .accessExpiryDate p { margin: 0pt; }
+#articlesInUse #tokenBalance { width: 100%; overflow: hidden; margin: 0pt 0pt 1em; }
+#articlesInUse #tokenBalance dd { font-weight: bold; padding: 0pt 0pt 0pt 0.3em; }
+#searchResults .articles .citation { margin: 0pt 1em 0pt 0pt; width: 39em; }
+#activationSuccess .options { line-height: 1.3em; }
+#activationSuccess .options li { background: url('woliconsnew.gif@22') no-repeat scroll -395px -506px transparent; padding: 0pt 0pt 0pt 1em; }
+.articles p.savedSearchString { color: rgb(0, 0, 0); font-weight: bold; margin: 0pt; }
+#currentSubscriptions { margin: 0pt 0pt 0pt -1em; }
+#currentSubscriptions h2 { margin: 0pt; }
+#currentSubscriptions th, #currentSubscriptions td { padding: 0.5em 0pt 0.5em 1em; }
+#currentSubscriptions #tabbedViewTitle { padding: 0.5em 1em; border-bottom: 2px solid rgb(225, 233, 235); margin-bottom: 0.5em; }
+#exportOptions { float: right; padding-right: 2em; width: 23em; }
+#exportOptions h2 { margin-left: 0.5em; }
+#exportOptions ul, #availableCustomers h2 { margin: 0pt 0pt 0.5em; }
+#availableCustomers { float: left; margin: 0pt 0pt 1em 1em; width: 51em; display: inline; }
+#availableCustomers ul.inlineBorder { margin-left: -0.5em; width: 45em; font-weight: bold; }
+#currentSubscriptions table { margin-bottom: 1em; border-width: 2px medium; border-style: solid none; border-color: rgb(225, 233, 235) -moz-use-text-color; }
+#ordersAndSubscriptions .topLeftRoundCorner { margin-bottom: 2em; }
+#ordersAndSubscriptions .sectionHeading select { border: 1px solid rgb(130, 157, 184); height: auto; float: left; margin: 0pt 0pt 0pt 1em; }
+#ordersAndSubscriptions .jumpList { font-size: 1.2em; list-style-position: inside; list-style-type: decimal; }
+#accessProvidedBy ul { padding-bottom: 1em; }
+#accessProvidedBy li { line-height: 1.3em; }
+#ordersAndSubscriptions thead th { width: 14%; }
+#ordersAndSubscriptions th.orderedArticle, #ordersAndSubscriptions th.orderedPublication { width: 55%; }
+#ordersAndSubscriptions .citation { position: relative; }
+#personalsubscriptions .publication { width: 35em; }
+.payPerViewForm .total, #ordersAndSubscriptions .citation a, #ordersAndSubscriptions .publication a { font-weight: bold; color: rgb(0, 0, 0); }
+#ordersAndSubscriptions .citation h3 { color: rgb(117, 115, 115); font-size: 1em; font-weight: normal; margin: 0pt; text-transform: uppercase; }
+#ordersAndSubscriptions .citation p { margin: 0pt; color: rgb(117, 115, 115); }
+#roamingAccess #refreshRoamingAccess { margin-right: 1em; }
+#deleteLogo { margin: 0pt 0pt 1.5em; overflow: hidden; }
+#deleteLogo .submit { clear: both; margin-top: 0.5em; }
+#deleteLogo img, #payPerViewOptions .topLeftRoundCorner { float: left; }
+#institutionalNameAndLogo #fileUpload { min-height: 1.8em; }
+.payPerView .topLeftRoundCorner { float: right; margin: 0pt 2em 2em 0pt; min-height: 5em; width: 29.3em; clear: none; }
+.payPerView .articles .citation { width: 24em; margin-left: 0pt; float: none; }
+#payPerViewAccountVerified .options { line-height: 1.2em; }
+#payPerViewPaymentDetails form.simple fieldset .submit input { margin-right: 0pt; }
+.payPerViewForm, #purchaseInfo { float: left; width: 62em; margin-right: 0pt; }
+.payPerViewForm form.simple span.value { margin-right: 38%; text-align: right; }
+.payPerViewForm .discount span { color: rgb(188, 54, 26); }
+#onlineOpen .simple #expiryDateMonth, #fullWidthContent .payPerViewForm .simple #expiryDateMonth { width: 8em; margin-right: 1em; float: left; }
+#fullWidthContent .payPerViewForm .simple #expiryDateMonth { width: 5.8em; }
+#onlineOpen .simple #expiryDateYear, .payPerViewForm .simple #expiryDateYear { width: 8em; float: left; }
+#onlineOpen .simple #securityCode, .payPerViewForm .simple #securityCode { width: 3em; }
+.payPerViewForm .simple #securityCode { margin-right: 12.7em; }
+#payPerViewBillingAddress div.simple { background: none repeat scroll 0% 0% transparent; padding: 0pt; }
+#payPerViewBillingAddress .separator span.value { margin-right: 0pt; }
+#payPerViewConfirmation .articles .citation { width: 24em; }
+#payPerViewConfirmation .articles .productMenu li { margin-left: 0pt; }
+#creditCardInfo { width: 43em; }
+.cardInfo { width: 100%; overflow: hidden; margin: 0pt 0pt 2.5em; }
+.cardInfo img { float: left; margin: 0pt 1em 0pt 0pt; }
+.cardInfo p { float: left; width: 20em; }
+#editAdministratorProfile dt { width: 14em; }
+#editAdministratorProfile dd { width: 17em; }
+#trustedProxyDownload textarea { font-size: 1.2em; width: 53em; }
+#referringUrlDownload .submit { margin-right: 1em; display: inline; }
+#referringUrlInstructions, #trustedProxyInstructions { margin: 1em 1em 0pt 0pt; }
+#referringUrlInstructions li, #trustedProxyInstructions li { overflow: hidden; width: 100%; }
+#referringUrlInstructions .number, #trustedProxyInstructions .number { float: left; width: 2em; margin: 0.2em 0pt 0pt; }
+#referringUrlInstructions .instructions, #trustedProxyInstructions .instructions { float: left; width: 60.5em; }
+#trustedProxyDownladForm div.submit, #trustedProxyDownload div.submit { float: right; margin: 0pt 13em 0pt 0pt; }
+#trustedProxyInstructions .maintainance { width: 65em; }
+.divideText { display: block; margin: 0.5em 0pt; }
+#onlineOpen .simple #purchaseOrderNumber { margin-bottom: 2em; }
+#onlineOpen .mailingOptions { list-style: decimal outside none; margin-left: 20px; }
+#fullWidthContent #onlineOpen .mailingOptions li input { margin-right: 0.5em; }
+#currentHoldingDownloads { width: 100%; margin: 0pt 0pt 1.5em; }
+#currentHoldingDownloads .downloadCsv { font-size: 0.9em; }
+#currentHoldingDownloads #journalCsvDownload, #currentHoldingDownloads #onlineBooksCsvDownload, #currentHoldingDownloads #dbAndPcCsvDownload { width: 13%; text-align: left; vertical-align: bottom; }
+#currentHoldingDownloads #customerName { width: 40%; }
+#currentHoldingDownloads .submit { width: 7.6em; }
+#currentHoldings .bulleted { margin: 1em 1em 1em 0pt; }
+#additionalIps { clear: both; border-top: 2px solid rgb(228, 238, 240); }
+#additionalIps dl { width: 100%; overflow: hidden; }
+#additionalIps dt { width: 22%; margin: 0pt 0pt 0.5em; }
+#additionalIps dd { margin: 0pt 0.7em 0.5em 0pt; width: 36%; }
+#additionalIps dd.assistance { clear: none; color: rgb(93, 93, 93); margin-right: 0pt; width: 40%; }
+.topAligned .access .openAccess { background-position: -385px -42px; }
+.topAligned .access input { margin: 2px 0pt 0pt; }
+.midAligned .access .openAccess { background-position: -385px -45px; }
+.midAligned .access input { margin: 2px 0pt 0pt; }
+.firstAligned .access { min-height: 2.4em; }
+.firstAligned .publication a { margin: 0.6em 0pt 0pt ! important; }
+.firstAligned .access .openAccess { background-position: -385px -45px; }
+.firstAligned .access input { margin: 4px 0pt 0pt; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/simpleForm.css ::::: */
+
+.simple { background: url('topleftroundcorner.gif@22') no-repeat scroll left top transparent; clear: both; }
+form.simple h1, form.simple h2, form.simple h3, form.simple h4, form.simple h5, form.simple h6 { margin-bottom: 0.5em; clear: both; }
+.simple .legend { font-weight: bold; }
+form.simple textarea, form.simple fieldset input, form.simple fieldset select, .simple span.value, .simple p.value { float: left; border: 1px solid rgb(131, 157, 182); margin: 0pt 0pt 0.5em; width: 29%; }
+form.simple select[multiple] { height: 20em; }
+form.simple fieldset input.wide, form.simple fieldset textarea.wide, form.simple fieldset.wide input, form.simple fieldset.wide textarea { width: 76%; margin-right: 0pt; }
+form.simple fieldset.wide input ~ label.error, form.simple fieldset.wide label.error { margin-left: 22%; clear: both; }
+form.simple fieldset fieldset input { width: 1.5em; float: left; margin-right: 0.5em; clear: both; }
+form.simple input.r, form.simple input.cb { border: medium none; width: auto; margin-left: 0pt; }
+form.simple select { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+form.simple fieldset input.withDeleteAction, form.simple fieldset input.withResolveAction { width: 27%; }
+form.simple fieldset input.withDeleteAction.withResolveAction { width: 25%; }
+form.simple .submit { float: right; margin-bottom: 1em; margin-right: 49%; }
+form.simple .submit input, form.simple .action input { border: medium none; margin-bottom: 0pt; width: auto; margin-right: 0pt; }
+form.simple .submit input[disabled] { color: rgb(0, 55, 61); }
+form.simple .action input[disabled] { color: rgb(172, 168, 170); }
+form.simple .submit, form.simple .action { float: right; margin-top: 1em; margin-left: 1em; }
+form.simple fieldset .action { clear: left; float: left; margin: 0pt 0pt 1em 22%; }
+form.simple fieldset .action + .action { margin-left: 1em; clear: none; }
+form.simple .inline input { margin: 0pt 0pt 1em; clear: none; float: none; white-space: nowrap; }
+form.simple .inline .submit input { margin-bottom: 0pt; }
+form.simple p.value, form.simple span.value { border: 0pt none; }
+.simple p.value { clear: none; }
+form.simple p { margin: 0.3em 0pt 0.7em; clear: left; }
+.simple span.value { border: medium none; clear: none; }
+.simple span.label { cursor: auto; color: rgb(0, 0, 0); }
+.simple p span.label, .simple p span.value { font-size: 1em; }
+form.simple .aligned { float: left; }
+form.simple .alignedInputs { overflow: hidden; float: left; width: 29%; }
+form.simple .alignedInputs input { margin-right: 0.5em; }
+form.simple div.separator p.requiredFieldsText {  }
+form.simple p.requiredFieldsText { position: relative; padding-left: 1em; }
+form.simple p.requiredFieldsText em { background: url('star.gif@22') no-repeat scroll 0pt 0pt transparent; color: rgb(188, 54, 26); text-indent: -999em; width: 0.8em; position: absolute; left: 0pt; }
+form.simple p.assistance, form.simple .fieldAssistance { clear: both; font-style: italic; margin: 0.4em 0pt 0.6em; }
+form.simple p.fieldAssistance { margin: -1em 0pt 0.6em 22%; color: rgb(93, 93, 93); }
+form.simple ul.fieldAssistance { margin: 0pt 0pt 0.6em 22%; color: rgb(93, 93, 93); }
+form.simple label, .simple .label { clear: both; float: left; padding: 0.1em 0pt 0pt; width: 22%; margin-bottom: 0.5em; }
+form.simple .error { clear: none; color: rgb(188, 54, 26); margin-left: 3%; width: 45%; }
+form.simple .error span { padding-right: 1em; }
+form.simple .divider label.error { margin-left: 41%; width: 50%; }
+form.simple .advice { clear: none; color: rgb(93, 93, 93); margin: 0pt 0pt 0pt 3%; width: 45%; }
+form.simple .inline label { float: none; margin: 0.2em 0.4em 0pt 0pt; vertical-align: top; white-space: nowrap; }
+form.simple .inline label * { vertical-align: top; }
+form.simple .divider label, div.simple .divider span.label { width: 41%; }
+form.simple fieldset fieldset label { margin-right: 55%; }
+form.simple .inline label { float: none; margin: 0.2em 0.4em 0pt 0pt; vertical-align: top; white-space: nowrap; }
+form.simple label.hidden { position: absolute; left: -999em; }
+form.simple label em { background: url('star.gif@22') no-repeat scroll 0pt 0pt transparent; position: absolute; margin-left: 0.3em; text-indent: -9999px; width: 0.7em; }
+form.simple .aligned { margin-left: 16.3em; }
+form.simple a.fieldAction { float: left; text-indent: -999em; width: 2%; height: 1.4em; }
+form.simple a.fieldAction.delete { background: url('delete.gif@22') no-repeat scroll 0pt 0pt transparent; }
+form.simple a.fieldAction.resolve { background: url('database_go.gif@22') no-repeat scroll 0pt 0pt transparent; }
+form.simple a.fieldAction.resolve.working { background: url('arrows.gif@22') no-repeat scroll 0pt 0pt transparent; }
+form.simple fieldset, .simple div.separator { border-bottom: 2px solid rgb(228, 238, 240); padding: 0.8em 0.8em 0pt; overflow: hidden; }
+form.simple img { display: block; margin-bottom: 1em; }
+form.simple input.smallWidth { width: 4em; }
+div.simple { padding: 0pt 1em; overflow: hidden; margin-bottom: 1em; position: relative; }
+div.simple div.separator { border-bottom: 2px solid rgb(228, 238, 240); overflow: hidden; padding: 0.8em 0pt 0pt 0.8em; margin: 0pt -1em 0pt -0.8em; position: relative; }
+div.simple p { overflow: hidden; width: 100%; }
+div.simple p span.label, div.simple p span.value { margin-bottom: 0pt; }
+div.simple span.label { position: static; }
+.simple .divider { width: 50%; float: left; }
+form.simple .divider textarea, form.simple .divider input, form.simple .divider span.value, form.simple .divider select { width: 50%; margin: 0pt 0pt 0.45em; }
+form.simple .divider .fieldAssistance { margin-left: 41%; }
+.globalFormError { margin: 0pt 0pt 0.5em; clear: both; color: rgb(188, 54, 26); }
+form.simple ul.multiRow li { overflow: hidden; clear: both; }
+form.simple fieldset .repeat { float: left; clear: both; }
+form.simple .repeat { float: left; margin-left: 22%; }
+.simple .tsAndCs input { width: 1.5em; float: left; }
+.simple .tsAndCs label { width: 90%; clear: none; margin-left: 1em; }
+.js_en .simple .dummyFileButton { position: absolute; background: url('woliconsnew.gif@22') no-repeat scroll 100% -804px rgb(0, 105, 118); left: 31.8em; padding-left: 0.1em; height: 16px; width: 5.2em; float: left; }
+.js_en .simple .dummyFileButton input { background: url('woliconsnew.gif@22') no-repeat scroll 0pt -804px transparent; color: rgb(255, 255, 255); cursor: pointer; font-size: 1.1em; font-weight: bold; border: medium none; position: relative; left: 0pt; width: 5.2em; height: 16px; }
+.js_en .simple .fileUpload { position: absolute; top: 0pt; left: 14em; }
+.js_en .simple .uploadContainer { clear: both; position: relative; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/mrwNonDesigned.css ::::: */
+
+#mrwFrame { height: 22.5em; margin: 0pt 0pt 0pt 2em; }
+#mrwFrame #leftBorder, #mrwFrame #rightBorder { width: 99%; overflow: hidden; }
+#mrwFrame #titleMeta { width: 37%; float: left; margin: 0pt 0pt 0pt 1em; }
+#mrwFrame #promosAndTools .searchCriteria #scope { float: left; width: 13em; margin-right: 1em; }
+#mrwFrame #promosAndTools .searchCriteria #searchText { height: 1.4em; }
+#mrwFrame #promosAndTools { width: 364px; }
+#mrwFrame .menuGroup { width: 210px; float: left; margin: 0pt 2em 0pt 1em; }
+#mrwFrame .menuGroup h2 { margin-top: 0pt; }
+#mrwFrame .menuGroup ol { margin: 0.5em 0pt 0pt; padding: 0pt; }
+#mrwFrame .menuGroup ol li { display: inline; margin: 0pt 1em 0pt 0pt; padding: 0pt; line-height: 1.5em; text-indent: 0pt; }
+#mrwFrame #header { min-width: 1000px; }
+#mrwContent { min-width: 1000px; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/society.css ::::: */
+
+.asist ol { margin-left: 0.75em; }
+.asist.tree li a { font-weight: normal; }
+.asist.tree a.viewing { font-weight: bold; }
+.asist .branchLabel { float: left; width: 75%; }
+.asist .search, .asist .exploded, .asist .scope { text-indent: -999em; display: block; width: 16px; height: 16px; float: left; margin-left: 5px; background-repeat: no-repeat; }
+.asist .search { background-image: url('magnifier.gif@22'); }
+.asist .exploded { background-image: url('magnifierandzoom.gif@22'); }
+.asist .scope, #scopeNote h4 { background-image: url('notes.gif@22'); }
+#scopeInfo h4 { margin-bottom: 0.5em; }
+#scopeInfo ul { margin-bottom: 1em; }
+#scopeNote h4 { padding-left: 21px; background-repeat: no-repeat; line-height: 16px; margin-bottom: 0pt; }
+#browseAsist #scopeInfo.topLeftRoundCorner { width: 18em; float: left; }
+#browseAsist { width: 54.3em; overflow: hidden; }
+#browseAsist .topLeftRoundCorner { width: 33em; float: right; clear: none; }
+#browseAsist #termResults { width: 100%; float: none; }
+#browseAsist #terms li { margin: 1em 0pt; }
+#browseAsist #terms div.seeTerm { margin-left: 1em; }
+#asistRestrict li.allAsist { border-bottom: 2px solid rgb(225, 233, 235); margin-bottom: 0.25em; padding-bottom: 0.25em; }
+#asistRestrict li label { margin-left: 0.5em; }
+#asistRestrict li label, #asistRestrict li input { vertical-align: middle; }
+#asistRestrict li { margin-bottom: 0.5em; }
+.searchForm .asistSearchOptions { padding: 0pt 0pt 0.5em 0.9em; margin: -0.5em 0pt 0pt; }
+.searchForm .asistSearchOptions a { display: block; color: rgb(92, 92, 92); }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/js.css ::::: */
+
+.js_en form.simple label { background-color: rgb(255, 255, 255); }
+.js_en .slider { padding-left: 0.3em; font-size: 1em; }
+.js_en ul#overlayList { list-style-type: none; margin: 0.5em; }
+.js_en #overlayList li { text-indent: 0pt; clear: left; }
+.js_en #overlayList li span.bullet { float: left; min-width: 2em; display: block; text-align: right; overflow: visible; }
+.js_en ul#overlayList li { line-height: 1.5em; }
+.js_en #overlayList li cite { display: block; margin: 0pt 0pt 0pt 2.8em; }
+.js_en #overlayList ul.externalReferences { clear: both; margin: 0pt 0pt 0pt 2.8em; }
+.js_en #overlayList .internalReferences { margin: 0pt 0pt 0pt 2.8em; width: auto; }
+.js_en #overlayList ul.externalReferences li { display: inline; margin-right: 0.5em; padding: 0pt; }
+.js_en #overlayList li .internalReferences ul { overflow: hidden; margin-left: -0.4em; float: left; margin-bottom: 0.3em; }
+.js_en #overlayList li .internalReferences ul li { border-left: 1px solid rgb(117, 115, 115); font-size: 1.1em; margin-left: -0.1em; display: inline; padding: 0pt 0.4em 0pt 0.3em; line-height: 1.2em; }
+.js_en #overlayList .internalReferences .directLinkLabel { display: block; padding-left: 0.4em; float: left; margin-right: 0.7em; }
+.js_en #overlayList .internalReferences .directLinkLabel a { display: block; font-weight: bold; padding: 0pt 0.4em 0pt 0pt; background: url('woliconsnew.gif@22') no-repeat scroll 100% -278px rgb(226, 234, 237); color: rgb(0, 0, 0); font-size: 0.9em; text-decoration: none; line-height: 1.4em; }
+.js_en #overlayList .custom li .internalReferences .directLinkLabel { margin-top: 2px; }
+.js_en #overlayList ol#citedByInternal li .internalReferences ul { margin-left: 0pt; }
+.js_en #overlayList div.internalReferences ul li a, .js_en #overlayList ul.externalReferences li a { font-size: 0.9em; color: rgb(0, 126, 139); }
+.js_en #overlayList caption { font-weight: bold; padding: 0pt 0pt 1em; text-align: left; width: 100%; }
+.js_en #overlayList .equation .math, .js_en #overlayList .equation img { float: left; }
+.js_en #overlayList .number { float: right; }
+.js_en #fulltext .headingCont, .js_en #mrwFulltext .headingCont { width: 100%; overflow: auto; }
+.js_en #fulltext .headingCont h3, .js_en #mrwFulltext #article .headingCont h1, .js_en #mrwFulltext #article .headingCont h2, .js_en #mrwFulltext #article .headingCont h3, .js_en #mrwFulltext #article .headingCont h4 { padding: 0pt 0pt 0.1em 0.25em; }
+.js_en #fulltext .headingCont select, .js_en #mrwFulltext .headingCont select { border: 0.1em solid rgb(199, 213, 217); font-size: 1.2em; margin: 0pt 0.3em 0.2em 3em; float: right; }
+.js_en #mrwFulltext .headingCont select { font-size: 1em; }
+.js_en .failureHeading, .js_en .failureMessage { margin: 0pt; width: 490px; }
+.js_en .failureHeading { font-size: 1.4em; font-weight: bold; padding: 0pt; }
+.js_en .failureMessage { padding: 0pt; }
+.js_en #accordion h2 { margin: 0.5em 0pt 0pt; background-color: rgb(225, 233, 235); padding: 0.5em 0.5em 0.5em 1.7em; cursor: pointer; clear: both; }
+.js_en #accordion h2.ui-accordion-header { background: url('wolicons2.gif@22') no-repeat scroll -389px -118px rgb(225, 233, 235); }
+.js_en #accordion h2.selected { background: url('wolicons2.gif@22') no-repeat scroll -389px -133px rgb(225, 233, 235); color: rgb(0, 105, 118); }
+.js_en #trustedProxy #accordion fieldset.topLeftRoundCorner, .js_en #referringUrl #accordion div.topLeftRoundCorner { padding-top: 1.5em ! important; background-position: 0pt 5px; }
+.js_en #login #loggedIn .profile ul { display: none; }
+.js_en .profile { clear: both; }
+.js_en .profile li { color: rgb(117, 115, 115); float: left; font-weight: bold; margin-right: 0.5em; }
+.js_en .profile li span { display: block; background: url('wolicons2.gif@22') no-repeat scroll 100% -462px transparent; padding: 0.4em 0.9em 0.3em; }
+.js_en .profile li a { color: rgb(93, 93, 93); }
+.js_en .profile li.active { background: url('subnav_007e8b_left.gif@22') no-repeat scroll 0% 0% rgb(0, 126, 139); }
+.js_en .profile li.active a { background: url('subnav_007e8b_right.gif@22') no-repeat scroll 100% 0pt transparent; color: rgb(255, 255, 255); }
+.js_en .profile li.active li a { background-image: none; color: rgb(93, 93, 93); }
+.js_en .profile li ul { left: 0pt; position: absolute; z-index: 100; padding-top: 2px; }
+.js_en .profile li ul li { width: 28.1em; background-image: none; background-color: rgb(255, 255, 255); margin: 0pt; border-bottom: 2px solid rgb(225, 233, 235); border-left: 2px solid rgb(225, 233, 235); font-size: 1em; }
+.js_en .profile li ul li a { background-image: none; background-color: rgb(255, 255, 255); padding: 0.5em; display: block; }
+.js_en .profile li ul li a:hover { background: none repeat scroll 0% 0% rgb(225, 233, 235); }
+.js_en #pageNavAndTools #showFullJournalMenu { display: block; font-size: 1.1em; font-weight: bold; margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(61, 61, 61); }
+.js_en #allParagraphs { display: none; }
+.js_en #login form label#emailLabel, .js_en #login form label#passwordLabel { position: absolute; top: 3em; left: 0.6em; cursor: auto; display: block; }
+.js_en #login form label#passwordLabel { top: 5.3em; }
+.js_en #browseMrw li a.branchLabel { text-decoration: none; font-weight: bold; line-height: 140%; }
+.js_en #browseMrw li a.branchLabel:hover span { text-decoration: underline; }
+.js_en .emrw-table .title { padding-left: 6em; }
+.js_en .jumpList, .js_en .emrw-table .table-container, .js_en #searchByCitation { display: none; }
+.js_en #handle { background-color: silver; float: right; font-size: 1.2em; padding: 0.3em; outline: 0pt none; text-decoration: none; color: rgb(255, 255, 255); text-align: center; }
+.js_en #globalMessaging { z-index: 102; }
+.js_en #globalMessaging ul { font-size: 1em; }
+.js_en .decisionTree { display: none; }
+.js_en select#productType, .js_en select#reportOwner, .js_en select#reportType, .js_en select#reportYear, .js_en select#reportMonth, .js_en select#reportFormat { float: left; margin-right: 1em; }
+.js_en select#productType { width: 12em; }
+.js_en select#reportOwner { width: 10em; }
+.js_en select#reportYear { width: 5em; }
+.js_en select#reportMonth { width: 7em; }
+.js_en select#reportFormat { width: 4em; }
+.js_en #additionalInformation .articleCategory a { margin-left: 0.5em; }
+.js_en #authorsDetail, .js_en #editorsDetail, .js_en #publicationHistoryDetails, .js_en #howToCite, .js_en #errata, .js_en #fundingInfo, .js_en #isbnInfo, .js_en #bookSeriesInfo { display: none; }
+.js_en #toggleAddInfo { clear: left; overflow: hidden; margin-left: -5px; width: 100%; }
+.js_en #toggleAddInfo a { float: left; border-left: 2px solid rgb(213, 220, 222); margin-left: -2px; margin-right: 7px; padding-left: 5px; }
+.js_en #globalMenu #resourcesMenu { position: absolute; top: 21px; left: 17em; background: url('resourcesmenupointer.gif@22') no-repeat scroll -4.5em 0pt transparent; padding-top: 1.3em; min-width: 0pt; bottom: inherit; z-index: 105; }
+.js_en #globalMenu #resourcesMenu ul { padding: 1em; background-color: rgb(255, 255, 255); border-left: 3px solid rgb(233, 239, 240); border-right: 2px solid rgb(233, 239, 240); border-bottom: 2px solid rgb(233, 239, 240); background-image: none; margin-top: 0.1em; }
+.js_en #globalMenu #resourcesMenu li { line-height: 1.6em; float: none; background-color: rgb(255, 255, 255); margin-top: 0pt; padding: 0pt; }
+.js_en #globalMenu #resourcesMenu li a { width: 11em; display: block; border-left: medium none; color: rgb(0, 126, 138); font-weight: normal; padding: 0.4em 1em; background-color: rgb(255, 255, 255); font-size: 1.08em; }
+.js_en #globalMenu #resourcesMenu li a:hover { background-color: rgb(233, 239, 240); text-decoration: none; }
+.js_en #issueToc .figZoom img { visibility: hidden; }
+.js_en .ui-autocomplete { background-color: rgb(255, 255, 255); border: 1px solid rgb(131, 157, 182); width: 25%; float: left; margin-top: -1.1em; margin-bottom: 1em; }
+.js_en .ui-menu-item { cursor: pointer; padding: 0.3em; }
+.js_en #ui-active-menuitem { color: rgb(0, 126, 138); }
+.js_en .ui-menu-item a { color: rgb(51, 51, 51); text-decoration: none; }
+
+/* ::::: http://onlinelibrarystatic.wiley.com.proxy.library.emory.edu/css/fullText.css ::::: */
+
+#fulltext .para { clear: both; }
+#fulltext p { line-height: 1.5em; }
+#fulltext sup { vertical-align: super; font-size: 0.8em; padding: 0pt 0pt 0pt 0.2em; white-space: nowrap; line-height: 0.7em; }
+#fulltext sub { vertical-align: sub; font-size: 0.8em; line-height: 0.7em; padding: 0pt 0pt 0pt 0.2em; white-space: nowrap; }
+#fulltext .noteGroup cite { display: inline; }
+#fulltext .smallCaps { font-variant: small-caps; text-transform: lowercase; }
+#fulltext .fixed-roman { font-variant: small-caps; font-style: normal; }
+#fulltext .inlineGraphic { vertical-align: middle; }
+#fulltext h3 { font-size: 1.8em; margin: 0pt; color: rgb(0, 0, 0); padding: 0pt; line-height: 120%; }
+#fulltext h4 { font-size: 1.6em; margin: 0pt 0pt 0.2em; color: rgb(0, 0, 0); line-height: 1.3em; }
+#fulltext h4 * { font-weight: bold; }
+#fulltext h5 { font-size: 1.4em; margin: 0pt 0pt 0.2em; color: rgb(0, 0, 0); }
+#fulltext h6 { font-size: 1.2em; margin: 0pt 0pt 0.2em; color: rgb(0, 0, 0); }
+#fulltext a { text-decoration: underline; }
+#fulltext a:hover { text-decoration: none; }
+#fulltext .definitionList .listPairedTitle { font-weight: bold; font-size: 1.2em; margin: 0pt 0pt 1em; display: block; }
+#fulltext .definitionList dl { margin: 0pt 0pt 1em; overflow: hidden; }
+#fulltext .definitionList dt { width: 10em; margin: 0pt 1em 0pt 0pt; overflow: visible; font-weight: bold; }
+#fulltext .definitionList dd p { font-size: 1em; margin: 0pt; width: 55em; }
+#fulltext div.equation { width: 80%; margin: 0pt auto 1em; }
+#fulltext div.equation li { clear: left; position: relative; font-size: 1.2em; }
+#fulltext div.equation img.equation { margin: 0pt 1em 1em 0pt; float: left; }
+#fulltext div.equation div.math { margin-right: 3em; }
+#fulltext div.equation .number { float: right; top: 0pt; right: 0pt; position: absolute; }
+#fulltext ul li .text .equation li { font-size: 1em; width: 100%; display: block; }
+#fulltext img.equation { vertical-align: middle; }
+#fulltext .chemicalStructure { width: 80%; margin: 1em auto; clear: both; }
+#fulltext .chemicalStructure li { clear: both; }
+#fulltext .chemicalStructure img { margin: 0pt 1em 1em 0pt; float: left; }
+#fulltext .chemicalStructure .content { float: right; }
+#fulltext .chemicalStructure .caption { width: 70%; float: right; }
+#fulltext .figure { width: 80%; margin: 1em auto; overflow: hidden; }
+#fulltext .figure li { clear: both; }
+#fulltext .figure img { margin: 0pt 1em 1em 0pt; float: left; }
+#fulltext .figure .caption { width: 70%; float: right; }
+#fulltext div.figure ul li div.caption span.label, #fulltext div.figure div.caption span.label { font-weight: bold; }
+#fulltext .figure .caption div.table td { font-size: 0.85em; }
+#fulltext .figure .caption div.table table { width: 100%; }
+#fulltext .figure .caption img.inlineGraphic, #fulltext .figure .caption img, #fulltext .p span img.inlineGraphic { float: none; margin: 0pt; }
+#fulltext a.figZoom { clear: left; float: left; }
+#fulltext .biographies { width: 100%; margin: 1em auto; clear: both; }
+#fulltext .biographies li { clear: both; }
+#fulltext .biographies img { margin: 0pt 1em 0.5em 0pt; float: left; }
+#fulltext .headingCont { margin: 0pt -0.5em 1em; position: relative; background-color: rgb(233, 239, 240); padding: 0.3em 0.3em 0pt; }
+#fulltext .headingCont label { display: none; }
+#fulltext .jumpList { font-size: 1.2em; list-style: decimal inside none; margin: 0pt 0pt 1em; clear: both; }
+#fulltext ul li, #fulltext ol li { line-height: 1.5em; }
+#fulltext ul li p, #fulltext ol li p { text-indent: 0pt; margin: 0pt 0pt 0.5em; }
+#fulltext ul li p.indent, #fulltext ol li p.indent { text-indent: 2em; }
+#fulltext ul.plain { list-style-type: none; margin: 1em 0pt 1em 2.8em; overflow: hidden; }
+#fulltext ul.plain li { text-indent: -1.6em; padding-left: 1.6em; margin-bottom: 0.5em; }
+#fulltext ul.compact li { margin-bottom: 0pt; }
+#fulltext ul.plain li p { margin-left: -1.6em; }
+#fulltext ul.bullet, #fulltext ol.numbered, #fulltext ol.upperAlpha, #fulltext ol.lowerAlpha, #fulltext ol.upperRoman, #fulltext ol.lowerRoman { list-style-position: outside; margin: 0pt 0pt 1em 2.7em; }
+#fulltext ul.bullet { list-style-type: disc; margin: 0pt 0pt 1em 2.8em; }
+#fulltext ol.innerNumbered, #fulltext ol.numbered { list-style-type: decimal; }
+#fulltext ol.innerUpperAlpha, #fulltext ol.upperAlpha { list-style-type: upper-alpha; }
+#fulltext ol.innerLowerAlpha, #fulltext ol.lowerAlpha { list-style-type: lower-alpha; }
+#fulltext ol.innerUpperRoman, #fulltext ol.upperRoman { list-style-type: upper-roman; }
+#fulltext ol.innerLowerRoman, #fulltext ol.lowerRoman { list-style-type: lower-roman; }
+#fulltext .custom { list-style-type: none; margin: 0pt 0pt 1em; overflow: hidden; }
+#fulltext ul li ul.bullet { margin-bottom: 0pt; font-size: 1em; }
+#fulltext .custom li { text-indent: 0pt; padding-left: 0pt; clear: left; }
+#fulltext .custom li input, #fulltext .custom li span.bullet { float: left; min-width: 3em; display: block; text-align: right; overflow: visible; }
+#fulltext .custom li input { margin: 0.3em 0pt 0pt 0.5em; }
+#fulltext .custom li img.bullet { margin: 0.4em 0pt 0pt 1em; float: left; display: block; text-align: right; }
+#fulltext .custom li div.text, #fulltext .custom li p.text, #fulltext .custom li span.text { display: block; margin: 0pt 0pt 0pt 3.8em; }
+#fulltext .custom li label { display: block; margin: 0pt 0pt 0pt 2.6em; }
+#fulltext ol.custom li div.text span, #fulltext .custom li div.text label { margin: 0pt; }
+#fulltext div.section div.para ul.custom li ul.custom { font-size: 1em; margin-left: 0.8em; }
+#fulltext div.section div.para ul.custom li ul.custom div.text { width: 62em; float: right; margin-left: 0pt; }
+#fulltext ol.innerNumbered, #fulltext ol.innerUpperAlpha, #fulltext ol.innerLowerAlpha, #fulltext ol.innerUpperRoman, #fulltext ol.innerLowerRoman { list-style-position: outside; margin: 0pt 0pt 0pt 2.7em; }
+#fulltext ul.innerBullet { list-style-type: disc; list-style-position: outside; margin: 0pt 0pt 0pt 2.7em; }
+#fulltext ul.plain li ul.innerBullet { margin: 0pt 0pt 0pt 0.9em; }
+#fulltext ul.plain li ul.innerBullet li { text-indent: 0pt; padding-left: 0pt; margin: 0pt; }
+#fulltext ul.plain li ul.innerBullet li p { padding-left: 1.6em; }
+#fulltext ul.plain li ul.innerCustomList li .text { text-indent: 0pt; }
+#fulltext .innerCustomList { list-style-type: none; }
+#fulltext .innerCustomList li { text-indent: 0pt; padding-left: 0pt; clear: left; }
+#fulltext .innerCustomList li span.bullet { float: left; min-width: 2em; display: block; text-align: right; }
+#fulltext .innerCustomList li img.bullet { margin: 0.4em 0pt 0pt 1em; float: left; display: block; }
+#fulltext .innerCustomList li input { margin: 0.3em 0pt 0pt 0.5em; float: left; min-width: 2em; display: block; }
+#fulltext div.text .innerCustomList li label, #fulltext div.text .innerCustomList li div.text, #fulltext .innerCustomList li label, #fulltext .innerCustomList li div.text { display: block; margin: 0pt 0pt 0pt 2.7em; }
+#fulltext ol#references { list-style-type: decimal; margin: 0pt 0pt 1em; }
+#fulltext ol#references li { margin: 0pt 0pt 0pt 30px; list-style-position: outside; }
+#fulltext .computerCode { width: 80%; margin: 0pt auto 1em; }
+.computerCode .lineatedText { width: 100%; overflow-x: auto; overflow-y: hidden; }
+#fulltext .computerCode .lineatedText .line { line-height: 1.5em; font-family: monospace,Monaco,"Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New"; margin: 0pt; white-space: nowrap; }
+#fulltext .computerCode .lineatedText ul li { font-family: monospace,Monaco,"Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New"; }
+#fulltext .dialogue { width: 80%; margin: 0pt auto 1em; }
+#fulltext .dialogue ol { list-style-type: decimal; margin: 0pt 0pt 0pt 1.5em; }
+#fulltext .dialogue p { margin: 0pt 0pt 1em 2em; }
+#fulltext .dialogue .speaker { font-weight: bold; color: rgb(93, 93, 93); margin: 0pt 1em 0pt -2em; }
+#fulltext .graphic { width: 80%; margin: 0pt auto 1em; }
+#fulltext .poetry { width: 80%; margin: 0pt auto 1em; }
+#fulltext .poetry p { margin: 0pt; text-align: center; }
+#fulltext .poetry ol { list-style-type: decimal; list-style-position: inside; }
+#fulltext .poetry ol li { text-align: center; }
+#fulltext blockquote.quote { width: 80%; margin: 0pt auto 1em; }
+#fulltext blockquote.quote .source { font-style: italic; margin: -1em 0pt 0pt; }
+#fulltext blockquote.quote p .source { font-style: italic; padding: 0pt 0pt 0pt 0.5em; }
+#fulltext .signature .title { font-weight: bold; }
+#fulltext .signature p { margin: 0pt; }
+#fulltext p.standFirstLarge { font-size: 1.3em; }
+#fulltext .journalTitle, #fulltext .bookTitle { font-style: italic; }
+#fulltext .vol { font-weight: bold; }
+#fulltext .imageTable { width: 80%; margin: 0pt auto; overflow: auto; }
+#fulltext .imageTable .title { font-weight: bold; font-size: 1.2em; margin: 0pt 0pt 0.5em; display: block; }
+#fulltext .imageTable img { margin: 0pt 1em 1em 0pt; }
+#fulltext .imageTable .label { padding: 0pt 0.5em 0pt 0pt; }
+#fulltext .imageTable .tTitle { display: block; line-height: 120%; font-size: 1.2em; font-weight: bold ! important; }
+#fulltext .imageTable .tTitle * { font-weight: bold ! important; }
+#fulltext .box { width: 80%; margin: 0pt auto 1em; border: 1px solid rgb(0, 0, 0); }
+#fulltext .box .boxContent { padding: 0.7em 0.7em 0pt; }
+#fulltext .box .title { font-weight: bold; font-size: 1.2em; margin: 0pt 0pt 0.5em; display: block; }
+#fulltext div.table { overflow-x: auto; overflow-y: hidden; }
+#fulltext div.table table { font-size: 1.2em; margin: 0pt auto 1.5em; text-align: left; width: 99.5%; }
+#fulltext div.table table .graphic { margin: 0pt; width: 100%; }
+#fulltext div.table table .graphic img { margin: 0pt auto; display: block; }
+#fulltext ul li div.table table { font-size: 1em; margin-bottom: 0.5em; }
+#fulltext div.table table .vTop { vertical-align: top; }
+#fulltext div.table table .vMiddle { vertical-align: middle; }
+#fulltext div.table table .vBottom { vertical-align: bottom; }
+#fulltext div.table table .hLeft { text-align: left; }
+#fulltext div.table table .hRight { text-align: right; }
+#fulltext div.table table .hCenter, #fulltext div.table table .hChar { text-align: center; }
+#fulltext div.table table .hJustify { text-align: justify; }
+#fulltext thead, #fulltext tbody, #fulltext tfoot, #fulltext tr, #fulltext th, #fulltext td { vertical-align: inherit; text-align: inherit; }
+#fulltext table.hCenter thead, #fulltext table.hChar thead, #fulltext table.hCenter thead tr, #fulltext table.hChar thead tr, #fulltext table.hCenter thead tr td, #fulltext table.hChar thead tr td, #fulltext table.hCenter thead tr th, #fulltext table.hChar thead tr th { text-align: center; }
+#fulltext thead { vertical-align: bottom; }
+#fulltext tbody { vertical-align: top; }
+#fulltext div.table table p { margin: 0pt; }
+#fulltext div.table table caption { font-weight: bold; text-align: left; padding: 0pt 0pt 1em; }
+#fulltext caption .label { padding: 0pt 0.5em 0pt 0pt; }
+#fulltext caption .tTitle { display: block; line-height: 1.5em; }
+#fulltext caption .tTitle * { font-weight: bold ! important; }
+#fulltext div.table table thead, #fulltext div.table table tbody { padding: 0pt; }
+#fulltext div.table table tfoot td { border-top: 1px solid rgb(0, 0, 0); }
+#fulltext div.table table thead th { font-weight: bold; padding: 0.3em 0pt; }
+#fulltext div.table table thead th * { font-weight: bold; }
+#fulltext div.table table thead td img.titleImage { display: block; margin: 0pt auto; }
+#fulltext div.table table tbody th { font-weight: bold; padding: 0.3em 0pt; }
+#fulltext div.table table tfoot td, #fulltext div.table table tbody td { padding: 0.3em 0pt; line-height: 120%; }
+#fulltext div.table table span.smallText { font-size: 10px; }
+#fulltext div.table thead tr.rsep th, #fulltext div.table tbody tr.rsep td, #fulltext div.table tbody td.rsep, #fulltext div.table thead.rsep tr th, #fulltext div.table tbody.rsep tr th, #fulltext div.table tbody.rsep tr td { border-bottom: 1px solid rgb(0, 0, 0); }
+#fulltext div.table thead tr.rsep th.norsep, #fulltext div.table tbody tr.rsep td.norsep, #fulltext div.table thead.rsep tr th.norsep, #fulltext div.table tbody.rsep tr th.norsep, #fulltext div.table tbody.rsep tr td.norsep { border-bottom: medium none; }
+#fulltext div.table thead tr th.rsep { border-bottom: 1px solid rgb(0, 0, 0); }
+#fulltext div.table .eRights p.topR, #fulltext div.table table.topR { border-top: 1px solid rgb(0, 0, 0); }
+#fulltext div.table .eRights p.bottomR, #fulltext div.table table.bottomR { border-bottom: 1px solid rgb(0, 0, 0); }
+#fulltext div.table .eRights p.allR, #fulltext div.table table.allR { border: 1px solid rgb(0, 0, 0); padding: 0pt 0.5em; }
+#fulltext div.table .eRights p.sidesR, #fulltext div.table table.sidesR { border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); padding: 0pt 0.5em; }
+#fulltext div.table .eRights p.topbotR, #fulltext div.table table.topbotR { border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); margin-top: 0.1em; }
+#fulltext div.table .eRights { width: 80%; margin: 0pt auto 1em; }
+#fulltext div.table table thead th, #fulltext div.table table tbody td { padding-right: 1em ! important; }
+#fulltext div.table ol, #fulltext div.table ul { margin-bottom: 0pt; margin-left: 2em; }
+#fulltext div.table ol li, #fulltext div.table ul li { text-indent: -1em; padding-left: 1em; text-align: left; }
+#fulltext div.table tfoot .noteGroup ol, #fulltext div.table tfoot .noteGroup ul { margin-left: 0pt; }
+#fulltext div.table .noteGroup ul li, #fulltext div.table .noteGroup ol li { padding-left: 0pt; }
+#fulltext .keywords { margin: 0pt 0pt 1em; overflow: hidden; }
+#fulltext .keywords h3.keywordsHeading { font-size: 1.2em; float: left; margin: 0.2em 0.5em 0pt 0pt; color: rgb(0, 0, 0); }
+#fulltext .keywords .keywordLists { float: left; }
+#fulltext .keywords .keywordLists ul { width: 72.3em; overflow: hidden; }
+#fulltext .keywords ul.keywordList li { float: left; padding: 0pt 0.3em 0pt 0pt; white-space: nowrap; }
+#fulltext .supportingInformation { margin: 1em 0pt; width: 65em; font-size: 1.2em; }
+#fulltext .supportingInformation th { font-weight: bold; text-align: left; padding: 0pt 0pt 1em; }
+#fulltext .supportingInformation td { padding: 0pt 1em 1em 0pt; vertical-align: top; }
+#fulltext .supportingInformation td a { font-weight: bold; text-decoration: none; }
+#fulltext .supportingInformation td a:hover { text-decoration: underline; }
+#fulltext .supportingInformation #artFileName, #fulltext .supportingInformation #artFormat { width: 15em; }
+#fulltext .supportingInformation #artSize { width: 10em; }
+#fulltext .supportingInformation #artDesc { width: 25em; }
+#fulltext ul.externalReferences { margin: 0pt; clear: both; width: 100%; }
+#fulltext ul.externalReferences li { display: inline; margin-right: 0.5em; padding: 0pt; }
+#fulltext .custom li.citedItem { margin-bottom: 1em; overflow: hidden; width: 100%; }
+#fulltext ol#citedBy li .internalReferences ul { margin-left: 0pt; }
+#fulltext ol#citedBy .bullet { text-align: left; }
+#fulltext ol#citedBy li div.access { overflow: hidden; width: 4.9em; float: left; margin-right: 0.7em; }
+#fulltext ol#citedBy li div.text { width: 54em; float: left; margin-left: 0pt; }
+#fulltext ol#citedBy li div.text cite { width: 57em; }
+#fulltext #footnotes li div.text { width: 62em; }
+#fulltext table #footnotes li div.text { width: auto; }
+#fulltext .noteGroup .notesHeading { font-size: 1.2em; font-weight: bold; }
+#fulltext li li p { font-size: 0.9em ! important; }
+#fulltext .firstPageHeading { font-size: 1.2em; margin-bottom: 1em; color: rgb(0, 0, 0); }
+#fulltext .firstPageContainer { text-align: center; clear: left; }
+#fulltext .firstPageContainer img { margin: 0pt auto 1em 0pt; border: 1px solid rgb(93, 93, 93); }
+#fulltext .noteLink { vertical-align: super; font-size: 0.8em; }

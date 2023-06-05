@@ -1,0 +1,435 @@
+1342
+
+IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING, VOL. 48, NO. 11, NOVEMBER 2001
+
+Communications______________________________________________________________________
+
+Do Existing Measures of Poincaré Plot Geometry Reflect Nonlinear Features of Heart Rate Variability?
+M. Brennan, M. Palaniswami*, and P. Kamen
+Abstract—Heart rate variability (HRV) is concerned with the analysis of the intervals between heartbeats. An emerging analysis technique is the Poincaré plot, which takes a sequence of intervals and plots each interval against the following interval. The geometry of this plot has been shown to distinguish between healthy and unhealthy subjects in clinical settings. The Poincaré plot is a valuable HRV analysis technique due to its ability to display nonlinear aspects of the interval sequence. The problem is, how do we quantitatively characterize the plot to capture useful summary descriptors that are independent of existing HRV measures? Researchers have investigated a number of techniques: converting the two-dimensional plot into various one-dimensional views; the fitting of an ellipse to the plot shape; and measuring the correlation coefficient of the plot. We investigate each of these methods in detail and show that they are all measuring linear aspects of the intervals which existing HRV indexes already specify. The fact that these methods appear insensitive to the nonlinear characteristics of the intervals is an important finding because the Poincaré plot is primarily a nonlinear technique. Therefore, further work is needed to determine if better methods of characterizing Poincaré plot geometry can be found.
+Index Terms—Heart rate variability (HRV), nonlinear analysis, Poincaré plot analysis.
+I. INTRODUCTION
+The field of heart rate variability (HRV) studies the fluctuations in the intervals between heartbeats, known as RR intervals. The Poincaré plot, a technique taken from nonlinear dynamics, portrays the nature of these fluctuations. It is a graph of each RR interval plotted against the next interval. Poincaré plot analysis is an emerging quantitative-visual technique whereby the shape of the plot is categorized into functional classes that indicate the degree of heart failure in a subject [1]. The plot provides summary information as well as detailed beat-to-beat information on the behavior of the heart [2].
+Support is increasing for nonlinear analysis techniques and quantitative descriptors as it has become evident that the cardiac systems are nonlinear in their function [3], [4]. The Poincaré plot is becoming a popular technique due to its simple visual interpretation and its proven clinical ability as a predictor of disease and cardiac dysfunction [5]. The problem regarding Poincaré plot use has been the lack of obvious quantitative measures that characterize the salient features of the plot. Researchers have put forward a number of techniques that attempt to quantitatively summarize the plot’s geometric appearance. For example, Kamen et al.have extended the qualitative, visual classification
+
+system of Woo et al. into a quantitative system by incorporating standard time-domain statistics into the existing Poincaré plot categories [6]. Fitting an ellipse to the Poincaré plot’s shape is another technique, and one that is becoming increasingly popular [7]–[10]. Other studies have employed the Pearson’s correlation coefficient to depict the shape [11]. While it is often suggested that these indexes are able to measure qualities of the variability that are nonlinear and/or independent of the standard linear indexes, we show that this is not actually the case.
+In this study, we consider a number of popular HRV measurements that are based on the Poincaré plot. We provide expressions that connect each measure to existing linear measures of heart rate variability. This accomplishes two things. First, it provides insight into Poincaré plot geometry in terms of the well-understood existing indexes of HRV. Secondly, it shows that these measures are not independent of the existing commonly employed linear statistics. Therefore, the intrinsic ability of the Poincaré plot to identify nonlinear beat-to-beat structure is not being exploited. We conclude with suggestions regarding the potential value of qualitative Poincaré plot examination and also suggest quantitative measures that might successfully reflect the significant features of Poincaré plots.
+
+II. THE LINEAR HRV INDICES
+
+This section describes the standard linear indexes of HRV. In this
+RR paper, the time-course of the RR intervals is denoted by n, with
+
+= 1 1 1 1 n
+
+N . We assume that only a finite number of intervals are avail-
+
+able. Poincaré plots are most often taken of 5–10-min intervals, or of
+
+a 24-h segment [12]. For 5–10-min segments, wide-sense stationarity
+
+[RR ] = [RR ] [RR ] = [RR ] may be assumed,
+purposes, true: E
+
+and
+
+the
+n
+
+foE llowinng+bmasiacnpdroEpertie2ns
+
+are,
+
+for
+E
+
+pran2c+timcal.
+
+The standard time-domain measures of HRV are as follows.
+
+A. Standard Deviation of the RR Interval
+
+SDRR The standard deviation of the RR intervals, denoted by
+
+, is
+
+often employed as a measure of overall HRV. It is defined as the square
+
+root of the variance of the RR intervals
+
+SDRR = E[RRn2 ] 0 RR2
+
+(1)
+
+RR = [RR ] where the mean RR interval is denoted by
+
+E n.
+
+B. Standard Deviation of the Successive Differences
+
+The standard deviation of the successive differences of the RR inter-
+
+SDSD vals, denoted by
+
+, is an important measure of short-term HRV. It
+
+1RR = is defined as the square root of the variance of the sequence
+
+n
+
+RR 0 RR n
+
+n+1 (the delta-RR intervals)
+
+Manuscript received June 19, 2000; revised May 2, 2001. Asterisk indicates corresponding author.
+M. Brennan is with the Department of Electrical and Electronic Engineering, The University of Melbourne, Parkville, Victoria 3052, Australia (mbrennan@ee.mu.oz.au).
+*M. Palaniswami is with the Department of Electrical and Electronic Engineering, The University of Melbourne, Parkville, Victoria 3052, Australia.
+P. Kamen is with the Department of Cardiology, Austin Hospital, Melbourne, Victoria 3052, Australia.
+Publisher Item Identifier S 0018-9294(01)06162-6.
+
+SDSD =
+
+E
+
+[1RRn2 ]
+
+0
+
+1RRn
+
+2 :
+
+(2)
+
+Note that 1RRn = E[RRn] 0 E[RRn+1] = 0 for stationary in-
+tervals. This means that the root-mean square (rms) of the successive
+differences is statistically equivalent to the standard deviation of the
+successive differences
+
+SDSD = rmsSD = E[(RRn 0 RRn+1)2]: (3)
+
+0018–9294/01$10.00 © 2001 IEEE
+
+IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING, VOL. 48, NO. 11, NOVEMBER 2001
+
+1343
+
+C. Autocorrelation and Autocovariance
+The autocorrelation function is an important measure of HRV simply because its Fourier transform is the power spectrum of intervals. The autocorrelation function of the RR intervals is defined as
+
+RR(m) = E[RRnRRn+m]:
+
+(4)
+
+Spectral analysis is normally performed on the mean-removed RR intervals and, therefore, the mean-removed autocorrelation function, called the autocovariance function, is often preferred
+
+0 0 RR(m) = n E[(RR RR)(RRn+m RR)]:
+
+(5)
+
+For stationary RR intervals, the autocovariance function is related to the autocorrelation function
+
+0 RR(m) = RR(m)
+
+2
+RR
+
+:
+
+(6)
+
+0 0 tteerrTvvaahlless,aaSustDoScSDoDvR2aRri=a2nc=2e(fuRnRRcRt(i(0o0)n),isanredRlaRtthe(ed1)vt)oar=tihaen2cve(aroRiafRnt(ch0ee)odfetlhtaeR-RRRRR(1ii)nn)--.
+Accordingly, these indexes are both linear.
+
+III. RR INTERVAL POINCARÉ PLOT DESCRIPTORS
+Statistically, the plot displays the correlation between consecutive intervals in a graphical manner. Nonlinear dynamics considers the Poincaré plot as the two-dimensional (2-D) reconstructed RR interval phase-space, which is a projection of the reconstructed attractor describing the dynamics of the cardiac system [13]. The RR interval Poincaré plot typically appears as an elongated cloud of points oriented along the line-of-identity. The dispersion of points perpendicular to the line-of-identity reflects the level of short-term variability [5]. The dispersion of points along the line-of-identity is thought to indicate the level of long-term variability. Later, we provide a justification of these statements. We now relate the common descriptors of a Poincaré plot’s shape to linear measures of HRV.
+
+A. Ellipse Fitting Technique
+
+To characterize the shape of the plot mathematically, most researchers have adopted the technique of fitting an ellipse to the plot, as Fig. 1 details. A set of axis oriented with the line-of-identity is defined [9]. The axis of the Poincaré plot are related to the new set of axis by a rotation of  = =4 rad
+
+x1
+
+0 cos  sin 
+
+x2 = sin 
+
+cos 
+
+RRn RRn+1
+
+:
+
+(7)
+
+In the reference system of the new axis, the dispersion of the points
+around the x1 axis is measured by the standard deviation denoted by
+SD1 [9]. This quantity measures the width of the Poincaré cloud and,
+therefore, indicates the level of short-term HRV [2], [5], [6], [9]. The
+length of the cloud along the line-of-identity measures the long-term
+HRV and is measured by SD2 which is the standard deviation around
+the x2 axis [2], [5], [6], [9]. These measures are related to the standard
+HRV measures in the following manner:
+
+p 0 p n n SD12 = Var(x1) = Var
+
+1 RR
+
+1 RR +1
+
+2
+
+2
+
+0n = 12 Var(RR RRn+1) = 12 SDSD2:
+
+(8)
+
+Thus, the SD1 measure of Poincaré width is equivalent to the standard deviation of the successive intervals, except that it is scaled by
+
+Fig. 1. An example Poincaré plot detailing the ellipse fitting process. The
+coordinate system x1 and x2 is established at 45 to the normal axis. The
+standard deviation of the distance of the points from each axis determines the width (SD1) and length (SD2) of the ellipse.
+
+p
+1= 2. This means that we can relate SD1 to the autocovariance function
+
+0 SD12 = RR(0) RR(1):
+
+(9)
+
+With a similar argument, it may be shown that the length of the Poincaré cloud is related to the autocovariance function
+
+SD22 = RR(0) + RR(1):
+
+(10)
+
+By adding (9) and (10) together, we obtain the result
+
+SD12 + SD22 = 2SDRR2:
+
+(11)
+
+Finally
+
+0 SD22 = 2SDRR2 12 SDSD2:
+
+(12)
+
+Equation (12) allows us to interpret SD2 in terms of existing indexes of HRV. It can be argued that SD2 reflects the long-term HRV, however, we delay the discussion until later in the section. Fitting an ellipse to the Poincaré plot does not generate indexes that are independent of the standard time domain HRV indexes. In fact, the width of the Poincaré plot is a linear scaling of the most common statistic used to measure short-term HRV, the SDSD index. In other words, the width of the Poincaré plot should correlate extremely highly with other measures of short-term HRV, as indeed it does [2].
+
+B. Histogram Techniques
+Another method to quantify the shape of the Poincaré plot is to measure the statistical properties of various projections of the plot via the histogram distribution [2], [5], [6]. Fig. 2 shows the three main “views” utilized. They are as follows.
+RR Interval Histogram: The histogram of the Poincaré plot points projected onto the x axis (or the y axis). This histogram is usually quantified by the mean and standard deviation, which correspond directly to the standard measures RR and SDRR. This view provides summary information on the overall HRV characteristics.
+
+1344
+
+IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING, VOL. 48, NO. 11, NOVEMBER 2001
+
+Fig. 2. Details the construction of the width (or delta-RR interval) histogram, the RR interval histogram and the length histogram. Each of these histograms is a projection of the points of the Poincaré plot.
+
+“Width” or Delta-RR Interval Histogram: This is the histogram of
+the Poincaré plot points projected along the direction of the line-of-
+p identity. It is not exactly equivalent to the delta-RR interval histogram;
+the abscissa has been scaled by the factor 1= 2. As expected of the
+delta-RR intervals, the histogram has a zero mean. Mathematically, it
+is the distribution of x1. Therefore, the standard deviation of the width
+histogram is equal to SD1, which is a scaling of the SDSD measure as
+discussed previously. This histogram provides summary information
+on the short-term characteristics. “Length” Histogram: This histogram is obtained by projecting
+the Poincaré plot points perpendicular onto the line-of-identity. The
+histogram is described mathematically by the distribution of x2
+and the standard deviation is, therefore, equivalently equal to SD2.
+Consequently, due to its connection with SD2, the length histogram
+portrays the long-term characteristics of HRV. A summary of the various views of the Poincaré plot is illustrated in
+Fig. 2. The dispersion properties of these histograms are characterized
+by SDRR, SD1 and SD2. Hence, they are linked to the standard timedomain measures of HRV.
+
+C. Correlation Coefficient
+Some researchers have employed the correlation coefficient of the Poincaré plot to characterize its shape [11]. This measure is
+
+rRR =
+
+0 0 E RRn RR
+
+0 0 E
+
+RRn
+
+2
+RR
+
+RRn+1 RR
+
+E
+
+RRn+1
+
+2
+RR
+
+:
+
+(13)
+
+For the Poincaré plot, the correlation coefficient can be expressed in terms of the autocovariance function
+
+rRR = RR(1)=RR(0):
+
+(14)
+
+Therefore, in a similar fashion to the other measures of Poincaré plot shape, the correlation coefficient is a linear measure, even though it is based on the Poincaré plot which displays nonlinear features. None of these summary statistics are sensitive to the nonlinear features that the plot displays.
+
+D. Short- and Long-Term Variability
+The length and width of the Poincaré plot have been suggested as indicative of the levels of long- and short-term variability. It is reasonably clear that the standard deviation of the delta-RR intervals, as measured by SDSD, rmsSD, or SD1, is a measure of short-term HRV. In fact, this statement can be made even more precise: these indexes are measures of the variability over a single beat.
+The standard deviation of the RR intervals, as measured by SDRR, is often employed as a measure of long-term HRV. However, there is a problem with this interpretation because this quantity measures all the variability, long-term and short-term, not just the long-term variability.
+For example, take a set of RR intervals that has variability only over a single beat. Such a sequence can be described as alternating between two values, e.g., a, b, a, b, etc. The Poincaré plot of this sequence is depicted in Fig. 3. It is clear that the sequence contains variability only over a single beat: every second beat is equivalent. Another way of clarifying this point is that the sliding two-beat average of the sequence
+
+IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING, VOL. 48, NO. 11, NOVEMBER 2001
+
+1345
+
+Fig. 3. Poincaré plot of the alternating sequence (a, b, a, b, . . .). The zero length of the Poincaré plot indicates that there is no long-term variability in this sequence. The width indicates the short-term variability.
+
+is a constant. If SDRR is taken to be an index of long-term variability, a contradiction arises because SDRR is not zero.
+We propose that Poincaré plot length is a more consistent and appealing measure of long-term variability. Consider the alternating sequence already mentioned. The Poincaré plot width measure states that this sequence has short-term variability, as expected. The length of the plot is zero indicating that the sequence has no long-term variability, as desired.
+With these ideas in hindsight, we can now explain the significance of (11) and (12). Equation (11) states that the sum of the short-term and the long-term variability is the total variability. Equation (12) affirms that the long-term variability is the total variability minus the contribution due to short-term variability.
+
+IV. GENERALIZATIONS OF THE POINCARÉ PLOT
+Two different types of scatter plots that are encountered in the literature can be considered simple generalizations of the Poincaré plot. The first entails altering the “lag” of the plot, while the second modifies the “order” of the plot. We discuss the properties of both.
+
+A. Lagged Poincaré Plots
+
+Instead of plotting RRn against RRn+1, some researchers have in-
+vestigated plotting RRn against RRn+m where m is allowed to vary
+from 1 to some small positive value, say six or eight. In nonlinear dy-
+namics, this is known as plotting the 2-D phase space with the time se-
+ries embedded with lag m. In general, the plot is still clustered around
+the line-of-identity. However, the length and width of the plot are al-
+tered as the lag is increased. It is straightforward to show the width and
+length measures SD1 and SD2 can be generalized for lag m
+
+0 SD1(m)2 = RR(0) RR(m)
+
+SD2(m)2 = RR(0) + RR(m):
+
+(15)
+
+The length and width of the lag-m Poincaré plot is related to the covariance function at lag m. Note also that
+
+0 RR(m) = 12 (SD2(m)2 SD1(m)2):
+
+(16)
+
+This result is very interesting, as it states that the set of lagged
+Poincaré plots are a complete description of the autocovariance
+function and, hence, also the power spectrum of the intervals. Equa-
+tion (16) provides us with a geometrical relationship between the
+autocovariance function and the Poincaré plot’s shape. If RR(m) =
+0, then SD1 = SD2 and the length and width of the plot are equal.
+If RR(m) > 0 then SD1 < SD2. Accordingly the plot is longer
+than it is wide, i.e., dominated by short-term activity. Inversely, if
+RR(m) < 0 then SD1 > SD2 and the plot is shorter than it is wide.
+
+Fig. 4. A diagram of the third-order Poincaré plot. The projection of the 3-D cloud of points onto any of the three planes formed by the axes corresponds to either the standard Poincaré plot, or a lag-2 Poincaré plot.
+
+This concept is similar to the concept of the sign of the correlation coefficient as it relates to a scatter-plot. In fact the series of correlation coefficients of the lagged Poincaré plots are simply
+
+rRR(m) = RR(m)=RR(0):
+
+(17)
+
+This is just a scaled version of the autocovariance function.
+
+B. Higher Order Poincaré Plots
+The standard Poincaré plot is a scatter-plot of the pairs
+(RRn; RRn+1), and is considered to be of first order. The second
+order Poincaré plot is a three-dimensional (3-D) scatter-plot of the
+triples (RRn; RRn+1; RRn+2). There are three common views of
+the 3-D shape of this plot, each being a view along one of the axis.
+These views result in 2-D projections of the 3-D cloud onto each
+of the coordinate planes (RRn; RRn+1), (RRn+1; RRn+2) and (RRn; RRn+2). Fig. 4 displays this idea graphically. The first two
+views are equivalent to the standard Poincaré plot. The third is the
+lag-2 Poincaré plot.
+This idea can be generalized into higher dimensions, with the pro-
+jections of the plot onto the coordinate planes being lagged Poincaré
+plots. So, an order m Poincaré plot is geometrically described by the set of lagged Poincaré plots up to and including lag m. The properties
+of lagged Poincaré plots have already been discussed and the results
+carry over to higher order Poincaré plots.
+
+V. SUMMARY VERSUS BEAT-TO-BEAT FEATURES
+All the measures we have discussed so far have been time domain summary statistics, such as means and standard deviations. The Poincaré plot is shown to be capable of showing these quantities in a visual manner. It is, however, also capable of displaying the detailed beat-to-beat dynamics of the heart’s behavior. An example of beat-to-beat structure in the RR intervals is small islands of points surrounding the main cloud. See Fig. 5.
+These islands of points are often being generated by ectopic rhythms that are separate from the sinus rhythm. Accordingly, these points should be removed from the RR interval record before calculating standard statistics otherwise the quantities of interest will suffer serious distortion. The removal process is a tedious beat-to-beat analysis that can only be partially automated and is, therefore, prone to human error. After removal of ectopic intervals, the Poincaré plot can be examined for the presence of islands to determine how successful the ectopy detection process was, and also to check if the removal interpolation process has introduced serious distortion to the data. In
+
+1346
+
+IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING, VOL. 48, NO. 11, NOVEMBER 2001
+
+Fig. 5. A subject who has intermittent ventricular premature contractions. The Poincaré plot clearly separates the activity caused by the ectopic and the activity caused by sinus rhythm.
+
+the Poincaré plot corresponds to the level of short-term HRV, while the length of the plot corresponds to the level of long-term variability.
+The methods of quantifying the Poincaré plot that we have investigated herein are not capable of depicting the additional beat-to-beat variability information shown on a Poincaré plot. However, the additional information is of considerable value. The fact that the width and length of a Poincaré plot corresponds so conveniently to time domain summary statistics is a very nice feature. However, simply treating the Poincaré plot as a tool for graphically representing the summary statistics is to ignore some of its most potent abilities. The problem with the summary methods of quantifying the Poincaré plot is that they ignore powerful beat-to-beat structure displayed by the plot. Techniques do exist that characterize the dispersion of the points. An interesting study by Hnatkova et al. has employed a unique density based approach that has met with considerable success for risk stratification after myocardial infarction [14]. Cohen et al. have applied the central tendency measure to second-order difference plots, and this technique could be applied to Poincaré plots also [15]. Addio et al. have used 3-D techniques based on the number of peaks and the distance of peaks from the line of identity to extract information from the Poincaré plot [7]. These techniques are likely to be measuring independent, nonlinear information on the intervals. Unfortunately, however, they are not nearly as popular as the “linear” Poincaré plot measures in the literature. Further investigations need to concentrate on techniques that can characterize the dispersion of the points displayed by the Poincaré plot.
+
+Fig. 6. A subject with prominent RSA. The oscillation caused by respiration causes a gradual increase in heart rate during inspiration, followed by a rapid decrease during expiration. This causes the plot to appear asymmetrical.
+addition, the Poincaré plot can identify the points likely to result from ectopic origin beforehand, facilitating the removal process.
+Another source of beat-to-beat structure is respiratory sinus arrhythmia (RSA), which is the influence of breathing modulating the RR intervals. Fig. 6 is an example of this condition. The decrease in RR interval length is usually much more rapid than the increase in interval length. Therefore, strong RSA typically appears as a spur above the line of identity, indicating the rapid slowing of the heart rate. The appearance of this feature makes the Poincaré plot a useful tool in the evaluation of RSA.
+VI. CONCLUSION
+We have shown that several popular techniques that characterize the geometry of a Poincaré plot are related to linear indexes of HRV. In addition, we provide arguments supporting the claim that the width of
+
+REFERENCES
+[1] M. A. Woo, W. G. Stevenson, D. K. Moser, R. B. Trelease, and R. H. Harper, “Patterns of beat-to-beat heart rate variability in advanced heart failure,” Amer. Heart J., vol. 123, pp. 704–710, 1992.
+[2] P. W. Kamen, H. Krum, and A. M. Tonkin, “Poincaré plot of heart rate variability allows quantitative display of parasympathetic nervous activity,” Clin. Sci., vol. 91, pp. 201–208, 1996.
+[3] M. R. Guevara, L. Glass, and A. Shrier, “Phase locking, period-doubling bifurcations, and irregular dynamics in periodically stimulated cardiac cells,” Science, vol. 214, pp. 1350–1354, 1981.
+[4] D. C. Michaels, D. R. Chialvo, E. P. Matyas, and J. Jalife, “Chaotic activity in a mathematical model of the vagally driven sinoatrial node,” Circ. Res., vol. 65, pp. 1350–1360, 1989.
+[5] P. W. Kamen, “Heart rate variability,” Aust. Family Physician, vol. 25, pp. 1087–1094, 1996.
+[6] P. W. Kamen and A. M. Tonkin, “Application of the Poincaré plot to heart rate variability: A new measure of functional status in heart failure,” Aust. NZ J. Med, vol. 25, pp. 18–26, 1995.
+[7] G. D’Addio, D. Acanfora, G. D. Pinna, R. Maestri, G. Furgi, C. Picone, and F. Rengo, “Reproducibility of short- and long-term poincare plot parameters compared with frequency-domain HRV indexes in congestive heart failure,” Comput. Cardiol., 1998.
+[8] H. V. Huikuri, T. Seppanen, M. Koistinen, A. Juhani, M. J. Ikaheimo, A. Castellanos, and R. J. Myerburg, “Abnormalities in beat-to-beat dynamics of heart rate before spontaneous onset of life-threatening ventricular tachyarrhythmias in patients with prior myocardial infarction,” Circulation, vol. 93, pp. 1836–1844, 1996.
+[9] M. Tulppo, T. H. Makikallio, T. E. S. Takala, T. Seppanen, and H. Kuikuri, “Quantitative beat-to-beat analysis of heart rate dynamics during exercise,” Amer. J. Physiol., vol. 71, pp. H244–252, 1996.
+[10] F. Marciano, M. L. Migaux, D. Acanfora, G. Furgi, and F. Rengo, “Quantification of Poincare maps for the evaluation of heart rate variability,” Comput. Cardiol., pp. 557–580, 1994.
+[11] H. Otzenberger, C. Gronfier, C. Simon, A. Charloux, J. Ehrhart, F. Piquard, and G. Brandenberger, “Dynamic heart rate variability: A tool for exploring sympathovagal balance continuously during sleep in men,” Amer. J. Physiol., vol. 257, pp. H946–950, 1998.
+[12] Task Force of ESC and NASPE, “Heart rate variability, standards of measurement, physiological interpretation, and clinical use,” Circulation, vol. 93, pp. 1043–1065, 1996.
+[13] F. Takens, “Detecting strange attractors in turbulence,” in Dynamical Systems and Turbulance. ser. Lecture notes in Mathematics, D. A. Rand and L. S. Young, Eds. Berlin, Germany: Springer-Verlag, 1981, vol. 898, pp. 366–381.
+
+IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING, VOL. 48, NO. 11, NOVEMBER 2001
+
+1347
+
+[14] K. Hnatkova, X. Copie, A. Staunton, and M. Malik, “Numeric processing of Lorenz plots of R–R intervals from long-term ECG’s. Comparison with time-domain measures of heart rate variability for risk stratification after myocardial infarction,” J. Electrocardiol., vol. 28, pp. 74–80, 1995.
+[15] M. E. Cohen, D. L. Hudson, and P. C. Deedwania, “Applying continuous chaotic modeling to cardiac signal analysis,” IEEE Eng. Med. Biol. Mag., vol. 15, pp. 97–102, 1996.
+Parametric Modeling of Somatosensory Evoked Potentials Using Discrete Cosine Transform
+Ou Bai*, Masatoshi Nakamura, Takashi Nagamine, and Hiroshi Shibasaki
+Abstract—This paper introduces a parametric method for identifying the somatosensory evoked potentials (SEPs). The identification was carried out by using pole-zero modeling of the SEPs in the discrete cosine transform (DCT) domain. It was found that the DCT coefficients of a monophasic signal can be sufficiently approximated by a second-order transfer function with a conjugate pole pair. The averaged SEP signal was modeled by the sum of several second-order transfer functions with appropriate zeros and poles estimated using the least square method in the DCT domain. Results of the estimation demonstrated that the model output was in an excellent agreement with the raw SEPs both qualitatively and quantitatively. Comparing with the common autoregressive model with exogenous input modeling in the time domain, the DCT domain modeling achieves a high goodness of fitting with a very low model order. Applications of the proposed method are possible in clinical practice for feature extraction, noise cancellation and individual component decomposition of the SEPs as well as other evoked potentials.
+Index Terms—Decomposition, discrete cosine transform, identification, pole-zero model, somatosensory evoked potentials.
+
+we wish to create an accurate mathematical model that simulates the responses of the nervous system to stimuli, which is benefit for the evaluation of the latencies as well as the component intervals of the SEPs.
+The noise reduction for identifying the SEPs have been widely investigated in the previous studies [1]. One of the common methods is to estimate the SEPs by using parametric models, such as autoregressive model with exogenous input (ARX) model [2]. However, those parametric models introduce a very high model order as well as a complicated model structure, which are not efficient and convenient for practical SEP analysis. Further, for achieving a good fitting, data preprocessing is required, such as removing trends, etc. For the purpose of the reduction of the number of parameters, a second-order model with time lag was developed to represent the SEPs in our previous study [3]. But, difference between the time signal of the model output and that of the raw SEPs was not satisfactorily small.
+A new method for modeling SEPs was proposed in the current study. The model was constructed based on the transformed signal of the SEPs. By using discrete cosine transform (DCT) of the raw SEPs, the DCT coefficients of a component wave of the SEPs were sufficiently represented by a second-order transfer function with a conjugate pole pair. The effectiveness of the proposed method was evaluated both qualitatively and quantitatively.
+II. METHODS
+A. Subjects and Data Acquisition
+Eleven healthy subjects, aged from 18 to 38 years, volunteered for the present study. The pain-stimulation method can be found in [3]. The analog electroencephalogram (EEG) signals referenced to the linked F3–F4 were amplified and filtered with the bandpass of 10–200 Hz, and then converted to digital data with the sampling rate of 500 Hz and stored into the disk. In the current study, the EEG data from Cz (international 10–20 system), which were unassociated with any artifact in the period of 0.6 s after the stimulus, were adopted for analysis.
+
+I. INTRODUCTION
+Somatosensory evoked potentials (SEPs) are generated by surface excitation of peripheral nerves with an electrical stimulus, and are measured by placing electrodes on several well-defined positions on the spine and scalp. In clinical practice, the SEP records are commonly used to assess conduction in the somatosensory pathway. Since there are various kinds of neural and nonneural artifacts in the SEP signals, many of them must be averaged to produce a curve that is adequate for analysis.
+The purpose of the present study is twofold; first, by using the postprocessing technique, we wish to develop a noise reduction method, which allows the clinician to significantly reduce testing time. This is desirable since many of the patients subjected to the testing are unable to withstand the lengthy process of averaging many waveforms. Second,
+Manuscript received January 4, 2000; revised June 27, 2001. Asterisk indicates corresponding author.
+*O. Bai is with the Department of Advanced Systems Control Engineering, Graduate School of Science and Engineering, Saga University, Honjomachi, Saga 840-8502, Japan (e-mail: baiou@cntl.ee.saga-u.ac.jp).
+M. Nakamura is with the Department of Advanced Systems Control Engineering, Graduate School of Science and Engineering, Saga University, Honjomachi, Saga 840-8502, Japan.
+T. Nagamine and H. Shibasaki are with the Department of Neurology and Human Brain Research Center, Kyoto University Graduate School of Medicine, Kyoto 606-8501, Japan.
+Publisher Item Identifier S 0018-9294(01)09147-9.
+
+B. Analysis of SEP Time Signal
+1) Waveform of SEP Time Signal: The waveform of a SEP signal in the time domain is the basis for developing an appropriate mathematical model. Fig. 1(a) illustrates a typical SEP waveform obtained by averaging 40 trials with time locked to the stimulus, in which the stimulating time was added at the beginning. The major components in the SEPs include; a negative response (N2) and a positive response (P2). After the positive response, the electrical potentials move upwards resulting a small negative kink. The triphasic waveform of the SEPs consists of three monophasic component waves. The shape of a monophasic component wave in SEPs is similar to a bell, and it has three important factors for physiological analysis; the latency to the stimulus, the response amplitude, and the rising and falling slope.
+2) Contributions in the SEPs : After averaging, the generated SEP signal is still noise contaminated. The averaged signal has two major contributions; one is a deterministic signal of the real somatosensory responses and the other is a stochastic signal that is mainly from the background activity. Therefore, the raw averaged SEPs can be described by the summation as
+
+x(n) = s(n) + v(n)
+
+(1)
+
+where
+x(n) s(n) v(n)
+
+averaged SEPs; real somatosensory responses; superimposed noise of an independent stochastic process.
+
+0018–9294/01$10.00 © 2001 IEEE
+

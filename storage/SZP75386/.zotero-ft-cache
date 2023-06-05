@@ -1,0 +1,136 @@
+Letter to the Editor
+Mean Heart Rate Level Does Not Affect All Heart Rate Variability Indices
+Luiz Eduardo Virgilio Silva, Helio Cesar Salgado, Rubens Fazan Jr
+
+To the Editor: Monfredi et al1 have put forward an important discussion in
+Hypertension about an old debate: how basal heart rate (HR) or cardiac interval (CI) levels affect heart rate variability (HRV) indices. The authors elegantly demonstrate, using a biophysical model of sinoatrial node cells, that the higher the HR, the lower the SD of normal to normal beats (SDNN; see Figure 5 of Monfredi et al1). Then, they propose that HRV, represented by SDNN, should be normalized by an exponential decay function, whose parameters were found after fitting the exponential to data from many different studies.
+Recently, van Roon et al2 have made a worthwhile comment on Monfredi’s articles, highlighting 2 key points: (1) the ceiling effect of mean HR on HRV is recognized since a long time, as can be seen in a study from Akselrod et al3 and (2) a much simpler normalization procedure is suggested (division of SDNN by the mean CI) which has the same effect as the normalization procedure proposed by Monfredi.
+We have no doubt that the mean HR (or CI) level determines the range of variation of the CI. Stauss4 has given an illustrative example about that (see Figure 2 of Stauss4). However, we cannot dismiss the influence of other factors promoting variability, so that the best approach to disentangle the dependence between mean HR and HRV is still in debate. The simplest method used by Akselrod et al3 and supported by van Roon et al2 and others5 seems to be more appropriate indeed. The method proposed by Monfredi, adjusting an exponential function to a lot of data under different conditions, may account for other influences on HRV, such as the autonomic modulation, and therefore, might not be modeling only the mean HR dependence.
+Equivalently to normalizing the SDNN itself, Sacha5 proposed the normalization of the tachogram. In this case, all CI values must be divided by the mean CI. The normalized tachogram will average one, and the absolute variability could be considered corrected. Thus, all HRV measurements calculated over normalized tachograms will be normalized by nature.
+Scale-Free HRV Measurements
+Despite the recent discussions on how the mean HR can affect HRV indices, most researchers still address HRV as time-domain indices only, such as SDNN or RMSSD. However, HRV analysis encompasses many time- and frequency-domain and nonlinear indices, and it should be emphasized that many of these measurements will not be affected by the different levels of HR. In other words, there are scale-free HRV indices, in which those normalization procedures are not necessary.
+To illustrate, we took the tachograms from 18 healthy young Wistar rats obtained from ECG recordings under conscious
+
+conditions during ≈1 hour. From time-domain indices, we calculate SDNN and RMSSD. From frequency-domain indices, we calculate the power of CI spectra in low-frequency (0.2–0.8 Hz) and high-frequency (0.8–3.0 Hz) bands, as well as low-frequency/highfrequency ratio, using the modified periodogram (50% overlap, Hanning window of 512 samples) after interpolating the original series (cubic spline at 10 Hz). Low-frequency and high-frequency power were calculated in both absolute and normalized units. Finally, we calculated some of the most important nonlinear indices: multiscale entropy6 (MSE), detrended fluctuation analysis7, and symbolic dynamics8. MSE parameters were set to m=2, r=15% of tachogram’s SD, and τ=20 (maximum scale). Two indices were extracted from MSE curves, namely MSEshort, representing the sum of entropy over scales 1 to 5, and MSElong, representing the sum of entropy over scales 6 to 20. For detrended fluctuation analysis, 2 scaling exponents were obtained, namely, α1 (short term, n<15) and α2 (long term, n>15).
+All HRV indices were calculated from both the original (in ms) and the normalized tachograms. Table shows mean values±SE.
+As can be seen, normalized spectral indices, MSE, detrended fluctuation analysis, and symbolic dynamics showed the same values when calculated from original or normalized tachograms. We also calculated, individually, differences of those indexes, obtained between original and normalized tachograms, and results were consistently zero (not shown). Therefore, those HRV measurements are completely insensitive to the normalization procedure.
+The normalization of the tachogram does not change its intrinsic variability signature, only the magnitude of the variability. Therefore, as normalized spectral indexes represent a proportion of the spectrum, they do not change with the normalization. In MSE, the tolerance factor r plays the role of normalization procedure, as it is recommended that r should be chosen as a factor of the time series SD. However, it is worth noting that, if r is not chosen as a fraction of the SD, MSE ceases to be variance independent. The same holds for sample entropy9 (SampEn). Detrended fluctuation analysis is normalized by nature, as it measures the slope of the log–log curve between fluctuations within a given window size and the window size. Increasing or decreasing the magnitude of variability will shift this curve up or down, but the slope will not change. In symbolic dynamics, normalization occurs in the quantization step, where the full range of variability is divided into 6 equal levels.
+In summary, the influence of the basal HR level ceiling the range of HRV is recognized, and the ongoing discussion about the best approach to correct this influence is relevant. However, one should have in mind that HRV analysis is not based only on SDNN, and many of the important approaches to evaluate HRV do not account for the total absolute variability, so as the normalization procedures will produce no effect in these indices.
+
+Downloaded from http://ahajournals.org by on March 31, 2020
+
+From the Department of Physiology, Ribeirão Preto Medical School, University of São Paulo, Brazil. Correspondence to Rubens Fazan Jr, Department of Physiology, Ribeirão Preto Medical School, University of São Paulo, Av Bandeirantes, 3900, 14049–900, Ribeirão Preto, São Paulo, Brazil. E-mail rfazan@usp.br (Hypertension. 2017;69:e21-e22. DOI: 10.1161/HYPERTENSIONAHA.117.09060.) © 2017 American Heart Association, Inc.
+
+Hypertension is available at http://hyper.ahajournals.org
+
+DOI: 10.1161/HYPERTENSIONAHA.117.09060
+
+e21
+
+e22  Hypertension  May 2017
+
+Table.  HRV Measurements Obtained From Original and Normalized Tachograms of 18 Healthy Young Wistar Rats Under Normal Conditions
+
+Measurement
+
+Original Series
+
+Normalized Series
+
+Mean CI
+
+159.5±2.6 ms
+
+1.000±0.000
+
+SDNN
+
+7.1±0.3 ms
+
+0.044±0.002
+
+RMSSD
+
+4.0±0.2 ms
+
+0.025±0.001
+
+LF abs
+
+3.9±0.4 ms2
+
+(1.5±0.2)×10–4
+
+HF abs
+
+5.4±0.6 ms2
+
+(2.1±0.2)×10–4
+
+LF nu
+
+41.3±2.2
+
+41.3±2.2
+
+HF nu
+
+58.7±2.2
+
+58.7±2.2
+
+LF/HF
+
+0.7±0.1
+
+0.7±0.1
+
+MSEshort MSElong α1 (n<15) α2 (n>15) 0V
+
+5.0±0.2 17.2±0.7 0.96±0.03 1.09±0.02
+31±2%
+
+5.0±0.2 17.2±0.7 0.96±0.03 1.09±0.02
+31±2
+
+1V
+
+42±1%
+
+42±1
+
+2LV
+
+3±0%
+
+3±0
+
+2UV
+
+24±2%
+
+24±2
+
+α1 indicates DFA short-term scaling exponent; α2, DFA long-term scaling exponent; CI indicates cardiac interval; HF, power in the high-frequency band;
+HRV, heart rate variability; LF, power in the low-frequency band; MSElong, sum of entropy over scales 6 to 20; MSEshort, sum of entropy over scales 1 to 5; 0V, percentage of occurrence of zero variation pattern of symbolic dynamics; 1V,
+percentage of occurrence of one variation pattern of symbolic dynamics; 2LV,
+percentage of occurrence of 2 like variation patterns of symbolic dynamics; 2UV,
+percentage of occurrence of 2 unlike variation patterns of symbolic dynamics;
+nu, normalized units; RMSSD, root mean square of successive differences; and
+SDNN, SD of normal to normal beats.
+
+Disclosures
+None.
+References
+1. Monfredi O, Lyashkov AE, Johnsen AB, Inada S, Schneider H, Wang R, Nirmalan M, Wisloff U, Maltsev VA, Lakatta EG, Zhang H, Boyett MR. Biophysical characterization of the underappreciated and important relationship between heart rate variability and heart rate. Hypertension. 2014;64:1334–1343. doi: 10.1161/HYPERTENSIONAHA.114.03782.
+2. van Roon AM, Snieder H, Lefrandt JD, Geus EJC de, Riese H. Parsimonious correction of heart rate variability for its dependency on heart rate. Hypertension. 2016; 68: e63–e65.
+3. Akselrod S, Gordon D, Madwed JB, Snidman NC, Shannon DC, Cohen RJ. Hemodynamic regulation: investigation by spectral analysis. Am J Physiol. 1985;249(4 pt 2):H867–H875.
+4. Stauss HM. Heart rate variability: just a surrogate for mean heart rate? Hypertension. 2014;64:1184–1186. doi: 10.1161/HYPERTENSIONAHA. 114.03949.
+5. Sacha J. Interaction between heart rate and heart rate variability. Ann Noninvasive Electrocardiol. 2014;19:207–216. doi: 10.1111/anec.12148.
+6. Costa M, Goldberger AL, Peng CK. Multiscale entropy analysis of biological signals. Phys Rev E Stat Nonlin Soft Matter Phys. 2005;71(2 pt 1):021906. doi: 10.1103/PhysRevE.71.021906.
+7. Peng CK, Havlin S, Stanley HE, Goldberger AL. Quantification of scaling exponents and crossover phenomena in nonstationary heartbeat time series. Chaos. 1995;5:82–87. doi: 10.1063/1.166141.
+8. Porta A, Guzzetti S, Montano N, Furlan R, Pagani M, Malliani A, Cerutti S. Entropy, entropy rate, and pattern classification as tools to typify complexity in short heart period variability series. IEEE Trans Biomed Eng. 2001;48:1282–1291. doi: 10.1109/10.959324.
+9. Richman JS, Moorman JR. Physiological time-series analysis using approximate entropy and sample entropy. Am J Physiol Heart Circ Physiol. 2000;278:H2039–H2049.
+
+Downloaded from http://ahajournals.org by on March 31, 2020
+

@@ -1,0 +1,268 @@
+www.nature.com/scientificdata
+
+OPEN High resolution optical mapping of
+Data Descriptor cardiac electrophysiology in
+pre-clinical models
+Christopher O’Shea   1 ✉, James Winter1, S. Nashitha Kabir1, Molly O’Reilly1,2, Simon P Wells1,3, Olivia Baines1, Laura C. Sommerfeld1,7, Joao Correia1, Ming Lei   4, Paulus Kirchhof1,5,7, Andrew P. Holmes1,6, Larissa Fabritz1,5,7, Kashif Rajpoot8 & Davor Pavlovic   1
+Optical mapping of animal models is a widely used technique in pre-clinical cardiac research. It has several advantages over other methods, including higher spatial resolution, contactless recording and direct visualisation of action potentials and calcium transients. Optical mapping enables simultaneous study of action potential and calcium transient morphology, conduction dynamics, regional heterogeneity, restitution and arrhythmogenesis. In this dataset, we have optically mapped Langendorff perfused isolated whole hearts (mouse and guinea pig) and superfused isolated atria (mouse). Raw datasets (consisting of over 400 files) can be combined with open-source software for processing and analysis. We have generated a comprehensive post-processed dataset characterising the baseline cardiac electrophysiology in these widely used pre-clinical models. This dataset also provides reference information detailing the effect of heart rate, clinically used anti-arrhythmic drugs, ischaemia-reperfusion and sympathetic nervous stimulation on cardiac electrophysiology. The effects of these interventions can be studied in a global or regional manner, enabling new insights into the prevention and initiation of arrhythmia.
+
+Background & Summary
+Organised depolarisation, propagation, and repolarisation of the cardiac action potential is key to coordinated contraction and relaxation of the heart. Local, regional, or global abnormalities in action potential generation, propagation and repolarisation can disturb the normal rhythm or beating rate of the heart, known as cardiac arrhythmia. Arrhythmias are common and contribute to several cardiovascular complications including sudden cardiac death, heart failure and stroke1. The mechanisms underpinning complex arrhythmias, and how to best treat these conditions, remain incompletely understood2. This has fuelled a substantial and ongoing global research effort.
+Cardiac optical mapping is a fluorescence-based technique which offers unparalleled spatial resolution to study the dynamics of cardiac electrophysiology3,4. Using potentiometric dyes, action potential propagation and morphology in multi-cellular cardiac preparations, including ex-vivo animal hearts, are visualised. Optical mapping has several advantages over traditional electrode measurements5. High spatial resolution enables local and/or regional alterations in cardiac electrophysiology to be observed (e.g. different chambers of the heart, apico-basal gradients)6,7. Furthermore, optical mapping enables direct contactless recording of optical action potentials, whereas multi electrode array techniques make indirect recordings of extracellular field potentials which require direct or close electrode-tissue contact8,9. By using calcium indicators, optical mapping can also
+
+1Institute of Cardiovascular Sciences, University of Birmingham, Birmingham, UK. 2Heart Center, Department of Clinical and Experimental Cardiology, Amsterdam UMC, location AMC, Amsterdam, The Netherlands. 3William Harvey Research Institute, Queen Mary University of London, London, UK. 4Department of Pharmacology, University of Oxford, Oxford, UK. 5Department of Cardiology, University Heart and Vascular Centre, University
+Medical Center Hamburg-Eppendorf, Germany and German Center for Cardiovascular Research (DZHK) partner site Hamburg/Kiel/Lubeck, Lubeck, Germany. 6Institute of Clinical Sciences, University of Birmingham, Birmingham, UK. 7University Center of Cardiovascular Science, UKE, Hamburg, Germany. 8School of Computer Science, University of Birmingham, Birmingham, UK. ✉e-mail: c.oshea@bham.ac.uk
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+1
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+be used to directly image calcium transients, the rise and fall of intracellular calcium concentration that initiates the contraction and relaxation of cardiac muscle cells10,11. These features make optical mapping an extremely powerful pre-clinical technique for studying arrhythmogenesis and the electrophysiological effects of physiological, pathophysiological, and pharmacological stimuli.
+Here, we provide a large database of cardiac optical mapping data from intact mouse and guinea pig whole hearts, and isolated mouse left atria. In total, 45 optical mapping datasets and over 400 individual files are provided. The dataset contains high resolution data obtained at multiple physiologically relevant pacing frequencies, both at baseline and in response to pharmacological agents (flecainide, carbenoxolone, ibutilide, cyclopiazonic acid, HMR 1556, and noradrenaline) or physiological interventions (ischaemia-reperfusion and sympathetic nervous stimulation). The data provided map cardiac electrophysiology both in sinus (intrinsic) rhythm and epicardial pacing, and during arrhythmic phenomena such as alternans and ventricular fibrillation.
+Due to their high spatio-temporal nature, the datasets produced by optical mapping are large and complex. The data can also be limited by poor signal quality or corruption by motion artefacts5,12. Therefore, the database described here, as well as providing an ideal tool for high-resolution regional integration of the interventions applied, will act as a resource to understanding of optical mapping data, detailed mapping analysis and potential limitations of the technique. Our group has previously designed, validated and released an open-source software ElectroMap for analysis of optical mapping13. Several other open-source tools are also available14–17, including specialised software to analyse fibrillation dynamics18 and alternans behaviour19. These tools allow effective exploration of the optical mapping data provided, without significant prior expertise. Furthermore, the database we provide represents a freely available resource for development, testing and validation of novel mapping algorithms to further improve analysis capabilities.
+Methods Animal welfare ethics declarations.  All experiments were undertaken in accordance with ethical guide-
+lines set out by the United Kingdom Animals (Scientific Procedures) Act 1986 and Directive 2010/63/EU of the European Parliament on the protection of animals used for scientific purposes. Studies conformed to the Guide for the Care and Use of Laboratory Animals published by the U.S. National Institutes of Health under assurance number A5634-01. Studies were approved by the UK Home Office and relevant ethical committees at King’s College London (guinea pig, PPL: PF75E5F7F) and University of Birmingham (mouse, PPL: PPL 30/2967 and PFDAAF77F) respectively.
+Guinea pig whole heart optical mapping.  Optical mapping of the innervated guinea pig whole heart was conducted as previously described (n = 23), where the entire rib cage is resected rather than just the heart11,20,21. This approach leaves intact the cardiac autonomic innervation, enabling stimulation of the sympathetic nervous system via the spinal cord as described below.
+Adult male guinea pigs were anesthetised using sodium pentobarbitone (160 mg/kg, intraperitoneal injection). Following confirmation of deep anaesthesia, an incision was made below the diaphragm. The rib cage was then removed, allowing isolation and cannulation of the descending aorta, and ligation of subclavian and carotid vessels. The preparation was then transferred to the optical mapping setup (Fig. 1a) where the heart was Langendorff perfused via the descending aorta. Hearts were perfused with warmed and oxygenation (37 °C, 95% O2/5% CO2) buffer solution at a pressure of 65–75 mmHg. Buffer solution contained in mM: NaCl 114, KCl 4.0, CaCl2 1.6, NaHCO3 24.0, MgSO4 1.0, NaH2PO4 1.1, glucose 11, sodium pyruvate 1 and decamethonium bromide 0.01. Hearts were mechanically uncoupled with blebbistatin (15 µM) to prevent motion artefacts. Where appropriate, pharmacological agents (see data records), were added directly into the perfusate following baseline recordings. Sympathetic nervous stimulation (SNS) was achieved by bi-lateral stimulation of efferent sympathetic nerves by a decapolar 5- French catheter in the spinal column. The catheter was inserted up to the 5–7th cervical vertebrae. The distal poles of the catheter were excited by pulse stimulation (40 V, duration 2 ms). Electrical stimulation frequency was varied between 3–8 Hz following testing at the beginning of each experiment to achieve a steady state heart rate of 320–340 bpm during SNS.
+Langendorff perfused hearts were loaded with potentiometric (transmembrane voltage) dye di-8-anepps (1 mg/ml in DMSO; 200–300 μL) or rh-237 (2.5 mg/ml in DMSO; 25–50 μL) for action potential recording, Fig. 1a–c. For dual recording of action potentials and calcium transience, rh-237 was combined with intracellular calcium indicator rhod-2AM (200 μg dissolved in 200 μL DMSO + 20 μL 20% pluronic F-127). Hearts were excited by LED illumination at 530/50 nm, and emission light collected at >610 nm for di-8-anepps, >710 nm for rh-237 and 585/40 nm for rhod-2. Emission photons were imaged by Evolve Delta 512 × 512 pixel EMCCD cameras (500 Hz sampling rate, 64 × 64 pixels, 320 µm/pixel). During recordings, hearts were paced from left ventricular epicardial apex through silver bipolar pacing wires. Hearts were paced with a ramp protocol, starting at 160 ms pacing cycle length (PCL). PCL was then reduced by 10 ms every 10 beats until induction of ventricular fibrillation (VF).
+Murine whole heart optical mapping.  Optical mapping of the mouse whole heart was conducted using a modified version of the above protocol as previously described (n = 12)22. Adult male mice were terminally anesthetized with isoflurane (4–5% in 100% O2, 1.5 L/min). Hearts were Langendorff perfused with warmed and oxygenated carbonated (37 °C, 95% O2/5% CO2) buffer solution at a pressure of 70–80 mmHg. Buffer solution contained in mM: NaCl 114, KCl 4, CaCl2 1.4, NaHCO3 24, NaH2PO4 1.1, glucose 11 and sodium pyruvate 1. Hearts were mechanically uncoupled with blebbistatin (15 µM) to prevent motion artefacts. Where appropriate, pharmacological agents (see data records), were added directly into the perfusate following baseline recordings. For ischaemia-reperfusion experiments, global low-flow ischaemia was induced by reduction of flow rate by 75% for 3 minutes, with flow rate returned to original levels for reperfusion.
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+2
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Fig. 1  Optical mapping experimental setups. (a) Schematic diagram of optical mapping setup used for guinea pig and mouse whole heart optical mapping data in this dataset. (b) Fluorescent image of mouse whole heart loaded with di-4-anepps. (c) Example signals from marked locations collected from di-4-anepps loaded heart. (d) Schematic diagram of optical mapping setup used for mouse atrial optical mapping data in this dataset. (e) Fluorescent image of mouse atria loaded with di-4-anepps. (f) Example signals from marked locations collected from di-4-anepps loaded atria. LP = Long pass, T = Transmission, EMCCD = Electron multiplied charged coupled device, sCMOS = Scientific complementary metal oxide semiconductor.
+
+Hearts were loaded by injection of rh-237 (1.25 mg/mL in DMSO) into the perfusion line over a 5-minute period. Hearts were illuminated at 530/50 nm and emitted light collected at >710 nm. Emission photons were imaged by Evolve Delta 512 × 512 pixel EMCCD cameras (1000 Hz sampling rate, 51 × 51 pixels, 156 µm/pixel). During recordings, hearts were paced from the left ventricular epicardial surface through silver bipolar pacing wires at a PCL of 110 ms. Recording time was 5 seconds.
+Murine left atrial optical mapping.  Murine left atrial optical mapping experiments were conducted as previously reported (n = 10, 6 Male, 4 Female)13,23,24. Adult mouse hearts were excised under deep terminal isoflurane-induced anesthesia (4–5% in O2, 1.5 L min−1). Whole hearts were isolated and Langendorff perfused via the ascending aorta at a flow rate of 2–4 mL/minute with standard bicarbonate buffered Krebs–Henseleit solution containing in mM: NaCl 118; NaHCO3 24.88; KH2PO4 1.18; Glucose 11.0; MgSO4 0.83; CaCl2 1.80; KCl 3.52 (37 °C, 95% O2/5% CO2). Potentiometric dye, di-4-anepps (0.125 mg/mL), was loaded over 5–10 minutes via bolus injection into the perfusion line. The left atrium was then removed, pinned in the superfusion chamber, and transferred to the optical mapping setup (Fig. 1d). In the optical mapping setup, atria were superfused with oxygenated Krebs–Henseleit solution (37 °C, 95% O2/5% CO2), and blebbistatin (42.75 µM) was added to the superfusate for mechanical uncoupling. Where appropriate, pharmacological agents (see data records), were added
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+3
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Datatype
+
+Number of experiments
+
+Mouse whole heart
+
+12
+
+Mouse Atria 10
+
+Guinea Pig Whole heart
+
+23
+
+Pixel Size Sampling
+
+(µM)
+
+Rate (kHz)
+
+Pacing cycle Recording lengths (ms) duration (s)
+
+156
+
+1
+
+110
+
+5
+
+71.4
+
+0.987
+
+120-80
+
+30–60
+
+320
+
+0.5
+
+170-80
+
+60
+
+Pixel count (x,y) 51 × 51
+45 × 45*
+64 × 64
+
+Intervention(s)
+Ischemia-Reperfusion (n = 12)
+Flecainide, 1,2,3 µM (n = 6)
+Carbenoxolone, 10,30,50 µM (n = 6)
+Time control, 35 minutes (n = 5)
+Flecainide 1,5 µM (n = 5)
+Sympathetic Nervous Stimulation (n = 23)
+Ibutilide 100 nM (n = 5)
+Cyclopiazonic acid 10 µM (n = 4)
+HMR 1556 2 µM (n = 4)
+Noradrenaline 200 nM (n = 4)
+
+Table 1.  Summary of data records available at figshare29. *For mouse atrial files, pixel count varies between experiments.
+
+directly into the superfusate following baseline recordings. Atria were paced using platinum bipolar electrodes, initially at 1000 ms or 330 ms PCL for 10 minutes in dark conditions to allow equilibration.
+For recordings, four LEDs at 530/50 nm illuminated the atria and filtered fluorescence (>630 nm) was collected using ORCA flash 4.0 sCMOS camera. Images were collected at 1000 Hz sampling rate with a maximal resolution of 200 × 2048 pixels (71 µm/pixel). Atria were paced with one of two ‘ramp’ protocols. Atria were paced at either 150 ms or 120 ms, and PCL was reduced by 10 ms every 20 stimuli down respectively. Recording time was between 30 seconds and 1 minute.
+Data analysis.  All data analysis performed herein used the ElectroMap software. ElectroMap configuration files are provided with all datasets to recreate analysis outlined, and detailed analysis instructions are available within our previous publications13,25. Raw data were pre-processed by application of a 3 × 3 Gaussian spatial filter (standard deviation σ = 1.5). When required, baseline correction was performed using a top-hat kernel (200 ms length for guinea pig data, 100 ms for mouse)26. Automated PCL identification was applied, and the last 10 beats at respective PCLs were ensemble averaged to improve signal quality (other than for alternans and optical wave similarity (OWS) analysis, where single beat analysis is required).
+Action potential duration to 80% (APD80) was calculated as the time from maximum upstroke velocity to 80% repolarisation. Activation time was defined as the midpoint of depolarisation. Conduction velocity (CV) was derived from activation maps using an implementation of the multi-vector method of Bayly et al. with a 5 × 5 window size27. Heterogeneity in APD and CV was calculated as the difference between the 95th and 5th percentiles, divided by the median. APD80 alternans magnitude (ΔAPD80) was calculated as the absolute difference between APD80 of one action potential compared to the previous. OWS, as a measure of temporal regularity, was calculated as described previously in detail21. Briefly, OWS was calculated by measuring the cosine similarity between individual amplitude normalised optical action potentials at a given pacing cycle length. OWS was then defined as the weighted sum of the similarity between all optical action potentials in the sequence. The result is OWS approaches 1 for temporally stable signals, and 0 for temporally irregular signals21.
+For dominant frequency mapping, the frequency spectrum of the signal was computed using fast Fourier transform, with a Hann window applied. Zero padding was applied to achieve a frequency resolution of 0.05 Hz, and the frequency range studied was from 0.5 to 50 Hz28.
+Statistical methods.  All data are presented as mean ± standard error of the mean. Group differences or effects of interventions such as changes in pacing cycle length were studied using one-way or two-way ANOVA as appropriate, with Tukey or Sidak’s correction respectively. Significance was defined as an adjusted P value < 0.05. Specific statistical tests used for each analysis presented are given in the figure legend. All statistics were performed using Prism 9 (GraphPad Software, San Diego, California).
+Data Records
+The data associated with this database are summarised in Table 1 and available from figshare29. All data are provided in.mat format, and organised so that each folder contains an individual experiment (i.e. whole heart or isolated atrium). All PCLs are within single experimental files. .txt are also provided that contain suggested settings for use in ElectroMap.
+Technical Validation
+To validate the optical mapping data presented in this dataset, we performed baseline recordings, pharmacological and physiological interventions with known effects on cardiac electrophysiology and time control experiments to ensure signal stability over time in absence of intervention.
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+4
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Fig. 2  Restitution dynamics of guinea pig heart. (a) Example action potential duration 80 (APD80) images
+from guinea pig whole heart at decreasing pacing cycle lengths (PCL). (b) Grouped data of APD80 as a
+function of PCL. (c) Example activation images from guinea pig whole heart at decreasing PCLs. (d) Grouped
+data of conduction velocity as a function of decreasing PCLs. (e) Example activation images from guinea pig
+whole heart at decreasing PCLs with analysis area restricted to an area at the apex of the heart. (f) Grouped data of conduction velocity as a function of decreasing PCLs with restricted analysis area. n = 20. One-way ANOVA. ***P < 0.001, ****P < 0.0001 for overall interaction of APD80/CV with PCL, shown above x-axis. Multiple comparisons are for each PCL against the slowest PCL (160 ms). Significance (*P < 0.05, **P < 0.01, ***P < 0.001, ****P < 0.0001) are shown above respective PCL where a significant difference versus 160 ms pacing was identified.
+
+Guinea pig whole heart validation: cardiac restitution.  To validate the data collected in the innervated guinea pig heart, we first quantified APD and CV as a function of PCL. As heart rate increases, (e.g. PCL decreases), the action potential duration in larger mammals such as the guinea pig shortens by modulation of several ionic mechanisms to enable a sufficient diastolic interval30. A further response to a decreased PCL is a reduced conduction velocity, primarily caused by a reduced availability of sodium channels which remain inactive following the previous excitation31,32. Collectively, the response of the cardiac tissue to heart rate/PCL is termed cardiac restitution.
+Figure 2 demonstrates these expected restitution dynamics in the guinea pig data presented here. As PCL is decreased during the ramp protocol, APD80 decreases, Fig. 2a,b. For example, at a PCL of 160 ms, mean APD80 is 108.2 ± 0.63 ms, which decreases to 89.1 ± 0.57 ms when PCL is 110 ms (P < 0.0001). Equally, CV decreases as a function of decreased PCL, both when measured from the whole heart surface (Fig. 2c,d) and from a defined area near the apical pacing site (Fig. 2e,f). At a PCL of 160 ms, mean CV across the ventricular is 89.3 ± 2.4 cm/s, which decreases to 84.9 ± 2.1 cm/s when PCL is 110 ms (P < 0.0001). Similarly, when analysis is restricted to an area near the pacing site, CV slows from 68.0 ± 2.1 cm/s at 160 ms PCL to 65.6 ± 1.8 cm/s at 110 ms PCL (P = 0.0002). The changes in measured CV values depending on analysis area are discussed below (see Usage notes). Collectively, these data validate the pacing frequency response of the guinea pig data in this dataset.
+Guinea pig whole heart validation: ibutilide-induced action potential prolongation and sympathetic nervous stimulation -induced shortening.  Ibutilide is a class III anti-arrhythmic drug that’s primary mechanism of action is blockade of the rapid component of the delayed rectifier potassium current, IKr33. As such, it is expected to prolong action potential duration. To validate pharmacological modulation of action potential morphology in these data, we mapped APD80 in the guinea pig whole heart before and after administration of ibutilide (100 nM), Fig. 3a. As further validation, we also repeated these measurements with application of sympathetic nervous stimulation (SNS), which is known to shorten rather than prolong APD11,34.
+Figure 3a,b demonstrates that, as expected, ibutilide prolonged APD in both control conditions and during application of SNS. In control conditions, ibutilide prolonged APD80 from 110.1 ± 1.1 ms to
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+5
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Fig. 3  Effects of ibutilide and sympathetic nervous stimulation (SNS) in guinea pig heart. (a) Example optical action potential recordings (i) and action potential duration 80 (APD80) maps (ii) in control conditions and following ibutilide treatment. (b) Grouped data of APD80 (i) and APD80 heterogeneity (ii) before and after ibutilide treatment, both without (black) and with (blue) SNS. (c) Grouped data of conduction velocity (i) and conduction velocity heterogeneity (ii) before and after ibutilide treatment, both without (black) and with (blue) SNS. n = 5 for control, 4 for SNS. Two-way ANOVA. *P < 0.05, **P < 0.01. Multiple comparisons are made between all Baseline and ibutilide treated groups, and between control and SNS. Pacing cycle length = 160 ms.
+
+121.1 ± 1.8 ms (P = 0.0008). Similarly, with application of SNS, ibutilide prolonged APD80 from 100.2 ± 2.2 ms to 109.7 ± 3.6 ms (P = 0.0055). Furthermore, SNS significantly shortened APD80 from 110.1 ± 1.1 ms to 100.2 ± 2.2 ms (P = 0.026). Ibutilide-induced effects were homogeneous across the ventricular surface (Fig. 3bii), however SNS did significantly increase APD heterogeneity from 0.0722 ± 0.006 to 0.145 ± 0.016 (P = 0.0007). Again, these results are expected owing to the heterogenous distribution of cardiac neurons34. Figure 3c reveals neither ibutilide nor SNS significantly altered conduction dynamics. These results validate pharmacological and physiological induced perturbations of action potential morphology within these data.
+Guinea pig whole heart validation: pacing induced arrhythmia.  Rapid pacing of ex-vivo cardiac perpetrations is a common approach for induction of pro-arrhythmic phenomena such as cardiac alternans, and indeed arrhythmias such as atrial and ventricular fibrillation (AF/VF). To validate the use of these data for studying arrhythmogenesis, we applied dominant frequency, alternans (ΔAPD80) and optical wave similarity (OWS) analysis before and during onset of VF induced by the ‘ramp’ pacing protocol (Fig. 4a). Figure 4b demonstrates that during physiological pacing, the dominant frequency of the action potential signal is homogenous across the tissue and dictated by the pacing frequency. In contrast, during VF, the dominant frequency is greater and extremely heterogenous, as has been demonstrated in several previous studies12,18.
+Figure 4c–e demonstrates the onset of temporal irregularity in the action potential signal at faster PCLs preceding (and during) VF onset. OWS (a measure of the morphological similarity of one action potential with all others at the same pacing frequency based on the whole waveform21) decreases at shorter PCLs, Fig. 4ci,d (P < 0.0001). For example, at a PCL of 160 ms, OWS = 0.98 ± 0.007 which decreases to 0.78 ± 0.021 when PCL decreases to 90 ms (P = 0.0066). During VF, OWS further reduces to 0.37 ± 0.02. Concurrently, APD alternans magnitude (a comparison of APD of successive action potentials) increases with decreased PCL, Fig. 4cii,e (P < 0.0001). At a PCL of 160 ms, ΔAPD80 = 0.53 ± 0.043 ms, which increases to 10.2 ± 1.50 ms at a PCL of 90 ms (P = 0.0108). ΔAPD80 could not be measured during VF due to the impracticality of defining APD during fibrillation. Taken together, these results validate the induction of temporal irregularity, alternans, and VF in the data provided in this dataset.
+Mouse whole heart validation: flecainide and carbenoxolone induced conduction slowing.  Flecainide and carbenoxolone are two pharmacological agents known to slow cardiac CV by different mechanisms. Flecainide is an antiarrhythmic drug that primarily blocks sodium channels, which whilst prolonging the refractory period also leads to slowing conduction35,36. Carbenoxolone reduces gap junction coupling, and hence reduces the conductance between
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+6
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Fig. 4  Ramp protocol induced arrhythmia in guinea pig whole hearts. (a) Example trace from guinea pig heart during ramp pacing protocol (initial pacing cycle length of 170 ms, which is decreased by 10 m every 20 stimuli until onset of fibrillation) inducing alternans and ventricular fibrillation (VF). (b) Example dominant frequency (DF) maps during physiological pacing and VF. (c) Example optical wave similarity (OWS, i) and action potential duration 80 alternans (ΔAPD80, ii) maps at decreasing PCLs. Note: blue areas in alternans maps denote areas where ΔAPD80 could not be calculated. (d) Grouped data showing OWS as a function of PCL and during VF. (e) Grouped data showing ΔAPD80 as a function of PCL. n = 6. One-way ANOVA. ****P < 0.0001 for overall interaction of OWS/ΔAPD80 with PCL, shown above x-axis. Multiple comparisons are for each PCL against the slowest PCL (160 ms). Significance (*P < 0.05, **P < 0.01) are shown above respective PCL were a significant difference versus 160 ms pacing was identified.
+neighbouring cells, resulting in slowed action potential propagation37. To validate the provided data in the mouse whole heart, we therefore measured CV at increasing concentrations of flecainide and carbenoxolone.
+Figure 5 demonstrates, as expected, both agents slowed cardiac CV in a dose-dependent manner. In the case of flecainide, CV slowed from 53.86 ± 1.4 cm/s to 40.36 ± 1.3 cm/s (1 µM, P = 0.0016), 32.01 ± 1.8 cm/s (2 µM, P = 0.005) and 30.86 ± 2.4 cm/s (3 µM, P = 0012) respectively, Fig. 5a,b. 10 µM carbenoxolone did not significantly reduce CV. However, higher doses of carbenoxolone slowed CV from 55.75 ± 2.0 cm/s to 43.07 ± 1.1 cm/s (30 µM, P < 0.0001) and 40.07 ± 0.75 cm/s (50 µM, P < 0.0001) respectively, Fig. 5c,d. These results validate the pharmacological response of the mouse whole heart data presented herein.
+Mouse whole heart validation: acute ischaemia-reperfusion-induced conduction slowing and action potential shortening.  Ischaemia-reperfusion injury exerts several effects on cardiac electrophysiology. Ischaemia (restriction of blood flow) results in metabolic stress, cell acidification and increased concentration of potassium in the extracellular space38. This can increase the resting membrane potential which reduces sodium channel availability, thereby leading to slowing of CV. Strong activation of KATP channels also causes severe APD shortening. Therefore, we measured CV and APD following acute (3 minutes) ischaemia in
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+7
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Fig. 5  Flecainide and carbenoxolone induced conduction slowing in mouse whole hearts. (a) Example activation maps from mouse whole heart at increasing concentrations of flecainide. (b) Grouped conduction velocity data from mouse whole heart at increasing concentrations of flecainide. (c) Example activation maps from mouse whole heart at increasing concentrations of carbenoxolone. (d) Grouped conduction velocity data from mouse whole heart at increasing concentrations of carbenoxolone. n = 6 for both experiments. One-way ANOVA, **P < 0.01, ***P < 0.001, ****P < 0.0001 against 0 µM flecainide/carbenoxolone respectively. Pacing cycle length = 110 ms.
+
+our mouse whole heart data, and following 3 minutes reperfusion, to validate the physiological response of the cardiac tissue in the data presented here.
+Figure 6a,b demonstrates that, as expected, ischaemia reduced cardiac CV. CV reduced from 56.72 ± 1.7 cm/s in control conditions to 38.59 ± 1.24 cm/s following ischaemia (P < 0.0001). 3 minutes reperfusion restored CV to 55.04 ± 1.5 cm/s (P = 0.14 vs control, P < 0.0001 vs ischaemia). Furthermore, Fig. 6c,d demonstrates that ischaemia reduced APD80 from 42.68 ± 1.07 ms to 38.83 ± 1.15 ms (P = 0.0294). Unlike CV, reperfusion did not restore APD80 which further reduced to 34.28 ± 0.8 ms (P < 0.0001 vs control, P = 0.009 vs ischaemia). These results validate the physiological response to ischaemia-reperfusion of the mouse whole heart data presented here.
+Mouse isolated left atria validation: flecainide induced conduction slowing and time control data.  As stated above, flecainide is an antiarrhythmic drug that blocks sodium channels, slowing the onset of the action potential and thus slowing conduction35. Therefore, to validate our data generated in isolated mouse left atria, we measured CV at baseline and following 1 µM flecainide treatment. Figure 7a,b. As expected, flecainide significantly slowed CV at all PCLs tested (P = 0.0009). For example, at 100 ms PCL, flecainide slowed CV from 43.70 ± 2.3 cm/s to 33.73 ± 3.1 cm/s (P < 0.0001). Furthermore, as observed in the guinea pig data, decreased PCL slowed CV (P = 0.0195).
+To validate the temporal stability of these preparations and drug-induced effects, we concurrently performed time control experiments. These were identical to the flecainide experiments in terms of experimental setup, recording time, pacing frequency, dye concentration and blebbistatin concentration, but did not include addition of 1 µM flecainide to the superfusate. Figure 7c demonstrates that over the experimental time (20 minutes) there is a small but non-significant reduction in CV (P = 0.3105). For example, at 100 ms PCL, 20 minutes on the experimental setup slowed CV from 43.39 ± 1.5 cm/s to 42.82 ± 1.4 cm/s (P = 0.927). These results validate the pharmacological response to flecainide of the mouse atrial data presented here.
+Usage Notes
+As stated in the Methods, all data analysis provided here has been undertaken using ElectroMap software (https://github.com/CXO531/ElectroMap). For help with use of this data within ElectroMap, example setting configuration files are provided will all datasets than can easily be loaded into ElectroMap. For further instruction on use of this software, the reader is directed towards our previous publications13,25.
+Furthermore, several other open software packages are also available which can be used with the provided data14–19,39.
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+8
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Fig. 6  Ischaemia induced conduction slowing and action potential shortening in mouse whole hearts. (a) Example activation maps from mouse whole heart in before (black), during (blue, ischaemia) and after (red, reperfusion) low-flow ischaemia. (b) Grouped conduction velocity data from mouse whole heart in control, ischaemia and reperfusion conditions. (c) Example action potential duration 80 (APD80) maps from mouse whole heart at baseline (black), during (blue, ischaemia) and after (red, reperfusion) low-flow ischaemia. (d) Grouped APD80 data from mouse whole heart in control, ischaemia, and reperfusion conditions. n = 12. One-way ANOVA, *P < 0.05, **P < 0.01. ****P < 0.0001. Multiple comparisons are made between all groups (Baseline, Ischaemia, Reperfusion). Pacing cycle length = 110 ms.
+
+Limitations and considerations in optical mapping.  There are several aspects of optical mapping experiments, and the data produced, that should be considered when using and interpreting these data and others. Firstly, effective recording of the action potential (or calcium transient) morphology requires uncoupling of the mechanical contraction of the heart (although progress is being made to realise optical mapping in the freely beating heart12,40,41). Commonly, this is achieved using excitation-contraction uncouplers, such as Blebbistatin in the data presented herein. The uncoupled heart lacks bidirectional interaction between mechanical and electrical activity (e.g. stretch activated ion channels42), and has reduced oxygen and energy demand40. There are also reports that Blebbistatin exerts direct effects on cardiac electrical activity43, although there are several reports to the contrary12,44. Nevertheless, the potential effects of mechanical uncoupling should be considered when interpreting optical mapping data. Further, there is evidence other compounds required for optical mapping, such as the voltage dye di-4-anepps, may exert effects on cardiac electrophysiology such as conduction slowing45.
+Optically recording signals in intact tissue can alter signal morphology due to the interaction of tissue and light22,46–48. Although minimal, excitation light will propagate into the tissue, and excite fluorophores away from the imaged surface, typically the epicardium. Therefore, the recorded signals will be a sum of optically recorded action potentials/calcium transients from surface cells, but also to some extent from cells below in the myocardium (or opposite atrial wall in the isolated mouse atria preparations).
+Another important aspect is the effect data analysis methods can have on data interpretation. For example, in these data we have applied the ‘depolarisation midpoint’ method to define activation time. The reason for this is that other methods, such as commonly used ‘maximum upstroke velocity’, are limited by sampling rate49. This reduces the tissue proportion in which effective CV analysis can take place, as large areas of the tissue will be measured to have simultaneous activation times (making effective CV infinity)13. This is particularly problematic in the murine atrial data presented herein, where the entire tissue activates in ca. 5 ms. However, previous work suggests the ‘time of maximum upstroke velocity’ of the optical action potential is the best measure of local activation time50, despite the issue of sampling rate. Furthermore, several studies demonstrate the recorded optical amplitude and upstroke morphology, from which the ‘depolarisation midpoint’ and ‘time of maximum
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+9
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Fig. 7  Flecainide-induced conduction slowing in mouse left atria. (a) Example activation maps at baseline and following 1 µM flecainide treatment of mouse left atria. (b) Group data of conduction velocity before and following 1 µM flecainide treatment of mouse left atria at a range of pacing cycle lengths (PCLs). c) Grouped data of conduction velocity at baseline and 20 minutes later from mouse left atria at a range of PCLs. n = 5. Two-way ANOVA, *P < 0.05, ***P < 0.001, ****P < 0.00001 between baseline and flecainide/time control respectively. Overall interaction of CV with PCL and flecainide/time is shown to the bottom right of the figures *P < 0.05, ***P < 0.001.
+upstroke velocity’ are derived, is altered by asynchronous activation times, transmural propagation direction, optical scattering and pixel integration from several cells22,47,48. Within the ElectroMap software, we therefore include both these methods for activation time calculation (and more) for use with these data and others.
+Finally, it is also important to consider underlying conduction dynamics of intact tissue when quantifying parameters such as CV in optical mapping datasets. For example, when conduction analysis is applied across the entire imaged surface, the baseline (defined as slowest PCL measured without intervention) ventricular CV of the mouse heart (e.g., 55.04 ± 1.5 cm/s, Fig. 6) is measured to be markedly slower than that of the guinea pig (89.3 ± 2.4 cm/s, Fig. 2c,d). However, a potential explanation for the increased CV observed in the guinea pig heart here is the increased size of the guinea tissue and pacing from the apex of the heart. The further from the pacing site, the more likely that propagation is no longer parallel to the epicardial surface due to fibre orientation in the heart and potential activation of conduction pathways such as the Purkinje network. This phenomenon, often termed ‘epicardial breakthrough’, can distort activation patterns as observed at the epicardial surface, artificially increasing measured CV values22,46. Indeed, in Fig. 2c the isochronal lines spread as the activation wave moves away from the pacing site suggesting epicardial breakthrough. In contrast, in the smaller mouse tissue paced from the centre, this phenomenon is not observed (Fig. 5a,c). In support of the vastly increased CV of the guinea pig heart compared to the mouse being an artefact of transmural conduction patterns, when analysis area is restricted to near the apical pacing site (where conduction is assumed to be more parallel to the epicardial surface), guinea pig CV is more closely matched to the mouse at 68.0 ± 2.1 cm/s, (Fig. 2e,f), although remains quicker.
+Code availability
+All code used for analysis of the data are freely available at: https://github.com/CXO531/ElectroMap.
+Received: 15 December 2021; Accepted: 7 March 2022; Published: xx xx xxxx
+References
+1. Roth, G. A. et al. Global, Regional, and National Burden of Cardiovascular Diseases for 10 Causes, 1990 to 2015. J. Am. Coll. Cardiol. 70, 1–25 (2017).
+2. Atienza, F., Martins, R. P. & Jalife, J. Translational research in atrial fibrillation: A quest for mechanistically based diagnosis and therapy. Circ. Arrhythmia Electrophysiol. 5, 1207–1215 (2012).
+3. Salama, G. & Morad, M. Merocyanine 540 as an optical probe of transmembrane electrical activity in the heart. Science (80-.). 191, 485–487 (1976).
+4. Berenfeld, O. & Efimov, I. Optical Mapping. Cardiac Electrophysiology Clinics 11, 495–510 (2019). 5. O’Shea, C. et al. Cardiac optical mapping – State-of-the-art and future challenges. Int. J. Biochem. Cell Biol. 126, 105804 (2020). 6. Wen, Q. et al. Transverse cardiac slicing and optical imaging for analysis of transmural gradients in membrane potential and Ca2+
+transients in murine heart. J. Physiol. 596, 3951–3965 (2018).
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+10
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+7. Chen, S. et al. A conductive cell-delivery construct as a bioengineered patch that can improve electrical propagation and synchronize cardiomyocyte contraction for heart repair. J. Control. Release 320, 73–82 (2020).
+8. Mendonca Costa, C. et al. The amplitude-normalised area of a bipolar electrograms as a measure of local conduction delay in the heart. Front. Physiol. 11 (2020).
+9. Boukens, B. J. & Efimov, I. R. A century of optocardiography. IEEE Rev. Biomed. Eng. 7, 115–125 (2014). 10. Wang, L., Myles, R. C., Lee, I.-J., Bers, D. M. & Ripplinger, C. M. Role of Reduced Sarco-Endoplasmic Reticulum Ca2+-ATPase
+Function on Sarcoplasmic Reticulum Ca2+ Alternans in the Intact Rabbit Heart. Front. Physiol. 12, 656516 (2021). 11. Winter, J. et al. Sympathetic nervous regulation of cardiac alternans in the intact heart. Front. Physiol. 9, 1–12 (2018). 12. Kappadan, V., Telele, S., Uzelac, I., Fenton, F. & Parlitz, U. High-Resolution Optical Measurement of Cardiac Restitution,
+Contraction, and Fibrillation Dynamics in Beating vs. Blebbistatin-Uncoupled Isolated Rabbit Hearts. Front. Physiol. 11, 1–18 (2020). 13. O’Shea, C. et al. ElectroMap: High-throughput open-source software for analysis and mapping of cardiac electrophysiology. Sci. Rep. 9, 1–13 (2019). 14. Gloschat, C. et al. RHYTHM: An Open Source Imaging Toolkit for Cardiac Panoramic Optical Mapping. Sci. Rep. 8, 1–12 (2018). 15. Tomek, J., Burton, R. A. B. & Bub, G. Ccoffinn: Automated Wave Tracking in Cultured Cardiac Monolayers. Biophys. J. 111, 1595–1599 (2016). 16. Laughner, J. I., Ng, F. S. F. S., Sulkin, M. S., Arthur, R. M. & Efimov, I. R. Processing and analysis of cardiac optical mapping data obtained with potentiometric dyes. AJP Hear. Circ. Physiol. 303, H753–65 (2012). 17. Doshi, A. N. et al. Feasibility of a semi-automated method for cardiac conduction velocity analysis of high-resolution activation maps. Comput. Biol. Med. 65, 177–183 (2015). 18. Li, X. et al. Standardised Framework for Quantitative Analysis of Fibrillation Dynamics. Sci. Rep. 9, 1–10 (2019). 19. Tomek, J., Wang, Z. J., Burton, R. A. B., Herring, N. & Bub, G. COSMAS: a lightweight toolbox for cardiac optical mapping analysis. Sci. Rep. 11, 1–17 (2021). 20. Ng, G. A., Brack, K. E. & Coote, J. H. Effects of direct sympathetic and vagus nerve stimulation on the physiology of the whole heart - A novel model of isolated Langendorff perfused rabbit heart with intact dual autonomic innervation. Exp. Physiol. 86, 319–329 (2001). 21. O’Shea, C. et al. Temporal irregularity quantification and mapping of optical action potentials using wave morphology similarity. Prog. Biophys. Mol. Biol. 157, 84–93 (2020). 22. O’Shea, C., Pavlovic, D., Rajpoot, K. & Winter, J. Examination of the effects of conduction slowing on the upstroke of the opticallyrecorded action potentials. Front. Physiol. 10, 1–11 (2019). 23. Holmes, A. P. et al. A Regional Reduction in Ito and IKACh in the Murine Posterior Left Atrial Myocardium Is Associated with Action Potential Prolongation and Increased Ectopic Activity. PLoS One 11, e0154077 (2016). 24. Syeda, F. et al. PITX2 Modulates Atrial Membrane Potential and the Antiarrhythmic Effects of Sodium-Channel Blockers. J. Am. Coll. Cardiol. 68, 1881–1894 (2016). 25. O’Shea, C. et al. High-Throughput Analysis of Optical Mapping Data Using ElectroMap. J. Vis. Exp. 1–10 https://doi. org/10.3791/59663 (2019). 26. Yu, T. Y. et al. An automated system using spatial oversampling for optical mapping in murine atria. Development and validation with monophasic and transmembrane action potentials. Prog. Biophys. Mol. Biol. 115, 340–348 (2014). 27. Bayly, P. V et al. Estimation of Conduction Velocity Vector Fields from Epicardial Mapping Data. 45, 563–571 (1998). 28. Li, X. et al. An interactive platform to guide catheter ablation in human persistent atrial fibrillation using dominant frequency, organization and phase mapping. Comput. Methods Programs Biomed. 141, 83–92 (2017). 29. O’Shea, C. et al. High resolution optical mapping of cardiac electrophysiology in pre-clinical models. figshare https://figshare.com/ s/9b7ddd01cb76dc56d341 (2022). 30. Shattock, M. J. et al. Restitution slope is principally determined by steady-state action potential duration. Cardiovasc. Res. 113, 817–828 (2017). 31. Weber, F. M. et al. Conduction velocity restitution of the human atriuman-An efficient measurement protocol for clinical electrophysiological studies. IEEE Trans. Biomed. Eng. 58, 2648–2655 (2011). 32. Mironov, S., Jalife, J. & Tolkacheva, E. G. Role of conduction velocity restitution and short-term memory in the development of action potential duration alternans in isolated rabbit hearts. Circulation 118, 17–25 (2008). 33. Murray, K. T. Ibutilide. Circulation 97, 493–497 (1998). 34. Tapa, S. et al. Adrenergic supersensitivity and impaired neural control of cardiac electrophysiology following regional cardiac sympathetic nerve loss. Sci. Rep. 10, 1–12 (2020). 35. Echt, D. S. & Ruskin, J. N. Use of Flecainide for the Treatment of Atrial Fibrillation. Am. J. Cardiol. 125, 1123–1133 (2020). 36. Kirchhof, P. et al. Early Rhythm-Control Therapy in Patients with Atrial Fibrillation. N. Engl. J. Med. 383, 1305–1316 (2020). 37. Dhillon, P. S. et al. Relationship between gap-junctional conductance and conduction velocity in mammalian myocardium. Circ. Arrhythmia Electrophysiol. 6, 1208–1214 (2013). 38. Klabunde, R. E. Cardiac electrophysiology: Normal and ischemic ionic currents and the ECG. Adv. Physiol. Educ. 41, 29–37 (2017). 39. Cooper, B. L. et al. KairoSight: Open-Source Software for the Analysis of Cardiac Optical Data Collected From Multiple Species. Front. Physiol. 12, 1–13 (2021). 40. Garrott, K. et al. KATP channel inhibition blunts electromechanical decline during hypoxia in left ventricular working rabbit hearts. J. Physiol. 595, 3799–3813 (2017). 41. Christoph, J. et al. Electromechanical vortex filaments during cardiac fibrillation. Nature 555, 667–672 (2018). 42. Reed, A., Kohl, P. & Peyronnet, R. Molecular candidates for cardiac stretch-activated ion channels. Glob. Cardiol. Sci. Pract. 2014, 19 (2014). 43. Brack, K. E., Narang, R., Winter, J. & Andr, G. The mechanical uncoupler blebbistatin is associated with significant electrophysiological effects in the isolated rabbit heart. 5, 1009–1027 (2013). 44. Fedorov, V. V. et al. Application of blebbistatin as an excitation-contraction uncoupler for electrophysiologic study of rat and rabbit hearts. Hear. Rhythm 4, 619–626 (2007). 45. Larsen, A. P., Sciuto, K. J., Moreno, A. P. & Poelzing, S. The voltage-sensitive dye di-4-ANEPPS slows conduction velocity in isolated guinea pig hearts. Heart Rhythm 9, 1493–500 (2012). 46. Bishop, M. J., Gavaghan, D. J., Trayanova, N. A. & Rodriguez, B. Photon Scattering Effects in Optical Mapping of Propagation and Arrhythmogenesis in the Heart. J. Electrocardiol. 40, 75–80 (2007). 47. Hyatt, C. J., Mironov, S. F., Vetter, F. J., Zemlin, C. W. & Pertsov, A. M. Optical action potential upstroke morphology reveals nearsurface transmural propagation direction. Circ. Res. 97, 277–284 (2005). 48. Zemlin, C. W., Bernus, O., Matiukas, A., Hyatt, C. J. & Pertsov, A. M. Extracting intramural wavefront orientation from optical upstroke shapes in whole hearts. Biophys. J. 95, 942–950 (2008). 49. Glukhov, A. V. et al. Transmural dispersion of repolarization in failing and nonfailing human ventricle. Circ. Res. 106, 981–991 (2010). 50. Walton, R. D. et al. Extracting surface activation time from the optically recorded action potential in three-dimensional myocardium. Biophys. J. 102, 30–38 (2012).
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+11
+
+www.nature.com/scientificdata/
+
+www.nature.com/scientificdata
+
+Acknowledgements
+This work was funded by the Wellcome Trust (Sir Henry Wellcome Fellowship 221650/Z/20/Z to COS, Seed Award Grant 109604/Z/15/Z to DP), EPSRC (Sci-Phy-4-Health Centre for Doctoral Training studentship L016346 to DP, KR and LF), the British Heart Foundation (PG/17/55/33087, RG/17/15/33106 to DP, PG/17/30/32961 to AH, Accelerator Award AA/18/2/34218 to Institute of Cardiovascular Sciences, FS/13/43/30324 to PK and LF ), EU CATCH ME (633196 to PK and LF), MAESTRIA (965286 to LF), and the Leducq Foundation (PK).
+Author contributions
+C.O.S., J.W., S.N.K., M.O.R., S.W., L.S. collected experimental data. C.O.S., J.C., A.P.H., L.F., K.R. and D.P. designed and developed analysis software. C.O.S. and O.B. analysed data for validation studies. C.O.S. collected, organised, and uploaded data. C.O.S. and D.P. produced figures. J.W., M.L., P.K., A.P.H., L.F., K.R. and D.P. designed the research projects for which these data were collected. All authors contributed to the final manuscript.
+Competing interests
+The authors declare no competing interests.
+Additional information
+Correspondence and requests for materials should be addressed to C.O.
+Reprints and permissions information is available at www.nature.com/reprints.
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
+© The Author(s) 2022
+
+Scientific Data | (2022) 9:135 | https://doi.org/10.1038/s41597-022-01253-1
+
+12
+

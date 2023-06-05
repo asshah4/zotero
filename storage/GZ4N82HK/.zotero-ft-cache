@@ -1,0 +1,283 @@
+Depression, HRV, and CAD Pilot Study
+Southeast Regional CTSA Conference
+Anish Shah, MD1 Amit Shah, MD/MSCR2 Alvaro Alonso, MD/PhD3 February 28, 2020
+1Department of Medicine, School of Medicine, Emory University 2Divison of Cardiology, Department of Medicine, Emory University 3Department of Epidemiology, Rollins School of Public Health, Emory University
+1
+
+Introduction
+
+Background
+• Depression is the leading cause of disability in the world [Friedrich, 2017] • CAD remains leading cause of death [McAloon et al., 2016] • Up to 20% of patients with CAD have depression, and cardiovascular
+mortality is 3 times higher in patients with comorbid CAD and depression. [Meijer et al., 2011, Lichtman et al., 2014, Jha et al., 2019] • No contemporary interventions, such as antidepressant medications, improve future adverse CAD-related outcomes [Kronish et al., 2019]
+2
+
+The autonomic nervous system connects the brain and the heart. This presents a “neurocardiac perspective” on a common mechanistic pathway in both depression and CAD. [Taggart et al., 2011, Carney and Freedland, 2017] 1
+
+Figure 1: Representation of the brain-heart connection
+
+1Figure by OpenStax College
+
+3
+
+Heart Rate Variability (HRV)
+Heart rate variability can represent the current state of the ANS as a potential “biomarker” of neurocardiac health. Heart Rate Fluctuations
+• Fluctuations in the HR are mediated by sympathetic (SNS) and parasympathetic (PNS) inputs to the sinoatrial node
+• Rapid fluctuations in HR reflect vagal/PNS control • Slower fluctuations in HR reflect SNS and PNS integartion, along with other
+influences
+HRV
+• External influences such as activity, mental stress, etc • Internal period rhythms also exist: RSA, baroreceptor reflexes, circadian
+rhythm, RAAS/neuroendocrine secretions, etc
+4
+
+We are studying the novel non-linear HRV metric, Dyx, in both CAD and depression. Dyx is generated from the Poincare plot using the multipole method, which characterizes the scatter of variability of subsequent heart beats.2
+Figure 2: Poincare plot of normal MPI (left) and abnormal MPI (right) 2Lewkowicz et al. [2002]; Shah et al. [2020]
+5
+
+We have shown using the non-linear HRV metric, Dyx, is a powerful predictor of CAD,3 and can also be a useful marker for depression.
+Figure 3: Differences in diurnal HRV with abnormal MPI 3? et al. International Journal of Cardiology, 2020
+6
+
+Study Aims
+• Dyx has not been prospectively evaluated as a biomarker of CAD (by angiography) and depression
+• Pilot study (below) examines this relationship in a prospective clinical cohort
+Figure 4: Overview of relationship to ANS dysfunction
+7
+
+Hypothesis
+In participants at high risk for CAD: 1. We hypothesize that elevated PHQ-9 scores will associate with abnormal HRV 2. We hypothesize that abnormal HRV will associate with obstructive CAD (stenosis > 70%).
+8
+
+Methods
+
+Study overview
+• Emory Biobank [Ko et al., 2017] • Prospective clinical cohort undergoing cardiac catherization • Indications: pre-op, heart transplant, UA, NSTEMI, STEMI, positive stress test • Angiographic severity indices measured by CASS / Gensini scores [Gensini,
+1983]
+• Psychological questionnaires: depression by PHQ9 (≥ 10 considered
+moderate-to-severe depression)
+9
+
+ECG and HRV collection
+• ECG data is collected using the VivaLNK patch (6-24 hours of data per patient), starting AM of angioggraphy
+• HRV was generated through signal processing in Matlab (PhysioNet Cardiovascular Signal Toolbox)
+• HRV was blocked into averaged 1-hour segments for analysis • Dyx was also generated, which summarizes a Poincare plot by the ratio of
+the kurtoses of the y-axis and x-axis
+Figure 5: VivaLNK ECG Patch
+10
+
+Statistical analysis
+• For this pilot study, the first hour of HRV was used (to control for procedural sedation, the effects of catherization, etc)
+• Linear/logistic regression models were used to predict depression by HRV • Linear/logistic regression models were used to predict CAD plaque burden
+by HRV
+Figure 6: Overview of relationship to ANS dysfunction
+11
+
+Results
+
+Study Population
+
+Table 1: Population
+
+[ALL]
+
+N
+
+N=30
+
+age
+
+62.4 (13.2) 30
+
+gend: Male
+
+28 (93.3%) 30
+
+race:
+
+30
+
+African American Black
+
+5 (16.7%)
+
+Asian
+
+2 (6.67%)
+
+Caucasian White
+
+23 (76.7%)
+
+blbmi
+
+30.3 (7.09) 29
+
+setting:
+
+30
+
+Inpatient
+
+11 (36.7%)
+
+Outpatient
+
+19 (63.3%)
+
+sad:
+
+27
+
+0
+
+21 (77.8%)
+
+1
+
+6 (22.2%)
+
+cad:
+
+27
+
+0
+
+10 (37.0%)
+
+1
+
+17 (63.0%)
+
+12
+
+Indications for Catherization
+
+Table 2: Admission Reason by Obstructive CAD Status
+
+0 N=10
+
+1 N=17
+
+adm_reason: Heart Failure Heart Transplant Non-ST Elevation Myocardial Non-ST Elevation Myocardial,Unstable Angina Other Positive Stress Test Positive Stress Test,Unstable Angina PreOp Cardiac Clearance Unstable Angina
+
+2 (20.0%) 2 (20.0%) 1 (10.0%) 0 (0.00%) 0 (0.00%) 2 (20.0%) 1 (10.0%) 2 (20.0%) 0 (0.00%)
+
+0 (0.00%) 0 (0.00%) 1 (5.88%) 2 (11.8%) 2 (11.8%) 3 (17.6%) 6 (35.3%) 2 (11.8%) 1 (5.88%)
+
+• The indications for catherization are broad • Different reasons or types of ANS dysfunction for each indication
+13
+
+HRV by Depressive Sx Burden Status
+
+Table 3: HRV by Depressive Sx Burden
+
+Mean HF (SD) Mean LF (SD) Mean VLF (SD) Mean SDNN (SD) Mean RMSSD (SD) Mean PNN50 (SD) Mean AC (SD) Mean DC (SD) Mean SampEn (SD) Mean ApEn (SD) Mean DYX (SD)
+
+PHQ <= 9 N=17
+6.09 (1.41) 6.13 (1.24) 6.63 (0.99) 55.3 (33.0) 51.2 (46.9) 15.2 (22.0) -10.86 (8.20) 9.34 (5.35) 1.56 (0.35) 0.91 (0.11) 2.55 (0.75)
+
+PHQ > 9 N=6
+4.44 (1.11) 4.47 (1.49) 5.47 (1.35) 27.0 (12.9) 21.7 (12.4) 3.12 (4.44) -4.17 (2.11) 4.74 (2.16) 1.39 (0.34) 1.03 (0.15) 2.16 (0.83)
+
+p.overall
+0.014 0.041 0.093 0.008 0.027 0.045 0.006 0.008 0.323 0.109 0.344
+
+14
+
+Visualizing impact of HRV on depression score
+15
+
+Depression ~ HRV Regression Models
+
+Table 4: Association of HRV with Depression
+
+Dependent variable:
+
+PHQ > 9
+
+HF
+
+0.14∗∗ (0.01, 0.61)
+
+LF
+
+0.34∗ (0.07, 0.89)
+
+AC
+
+2.47 (1.18, 11.50)
+
+Note:
+
+∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01
+
+16
+
+HRV by Obstructive Coronary Artery Disease
+
+Table 5: HRV by Obstructive CAD by CASS-70
+
+Mean HF (SD) Mean LF (SD) Mean VLF (SD) Mean SDNN (SD) Mean RMSSD (SD) Mean PNN50 (SD) Mean AC (SD) Mean DC (SD) Mean SampEn (SD) Mean ApEn (SD) Mean DYX (SD)
+
+Nonobstructive N=8
+5.79 (1.99) 5.42 (1.94) 6.14 (1.47) 51.3 (45.2) 55.7 (69.3) 17.2 (30.3) -10.48 (11.6) 8.36 (6.85) 1.28 (0.24) 0.96 (0.13) 2.31 (0.88)
+
+Obstructive > 70% N=16
+5.95 (1.48) 6.10 (1.40) 6.55 (1.21) 54.1 (30.2) 46.9 (26.7) 12.9 (13.2) -9.04 (4.93) 8.44 (4.49) 1.51 (0.34) 0.95 (0.12) 2.53 (0.75)
+
+p.overall
+0.840 0.395 0.504 0.878 0.738 0.715 0.744 0.975 0.070 0.783 0.550
+
+17
+
+Effect of HRV on CAD
+18
+
+Discussion
+
+Interpretion of Findings
+• Depression is associated with ANS dysfunction, particularly decreases in HF HRV
+• CAD is not associated with HRV • Other manifestations of CAD (e.g. ischemica and no obstructive CAD) are worth exploring • More low risk controls (no heart failure, normal stress tests) needed
+• HRV reflects depression, but do not have evidence that it predicts CAD in this very high risk group (based on limited sample) • Need to evaluate interaction between CAD and depression
+19
+
+Thank you! Questions?
+19
+
+References i
+References
+Robert M. Carney and Kenneth E. Freedland. Depression and coronary heart disease, mar 2017. ISSN 17595010. URL http://www.ncbi.nlm.nih.gov/pubmed/27853162http: //www.nature.com/articles/nrcardio.2016.181.
+M. J. Friedrich. Depression Is the Leading Cause of Disability Around the World.
+JAMA, 317(15):1517, apr 2017. ISSN 15383598. doi: 10.1001/jama.2017.3826.
+Goffredo G Gensini. A more meaningful scoring system for determining the severity of coronary heart disease, feb 1983. ISSN 00029149. URL http://www.ncbi.nlm.nih.gov/pubmed/6823874.
+20
+
+References ii
+Manish K Jha, Arman Qamar, Muthiah Vaduganathan, Dennis S Charney, and James W Murrough. Screening and Management of Depression in Patients With Cardiovascular Disease: JACC State-of-the-Art Review, apr 2019. ISSN 15583597. URL http://www.ncbi.nlm.nih.gov/pubmed/30975301.
+Yi An Ko, Salim Hayek, Pratik Sandesara, Ayman Samman Tahhan, and Arshed Quyyumi. Cohort profile: The Emory Cardiovascular Biobank (EmCAB). BMJ Open, 7(12):e018753, 2017. ISSN 20446055. doi:
+10.1136/bmjopen-2017-018753. URL
+http://www.ncbi.nlm.nih.gov/pubmed/29288185http: //www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC5778297.
+21
+
+References iii
+Ian M. Kronish, Nathalie Moise, Ying Kuen Cheung, Gregory N. Clarke, Rowena J. Dolor, Joan Duer-Hefele, Karen L. Margolis, Tara St Onge, Faith Parsons, Jessica Retuerto, Anusorn Thanataveerat, and Karina W. Davidson. Effect of Depression Screening after Acute Coronary Syndromes on Quality of Life: The CODIACS-QoL Randomized Clinical Trial. JAMA Internal Medicine, 2019. ISSN 21686106. doi:
+10.1001/jamainternmed.2019.4518.
+M. Lewkowicz, J. Levitan, N. Puzanov, N. Shnerb, and K. Saermark. Description of complex time series by multipoles. Physica A: Statistical Mechanics and its Applications, 311(1-2):260–274, 2002. ISSN 03784371. doi:
+10.1016/S0378-4371(02)00831-2.
+22
+
+References iv
+Judith H. Lichtman, Erika S. Froelicher, James A. Blumenthal, Robert M. Carney, Lynn V. Doering, Nancy Frasure-Smith, Kenneth E. Freedland, Allan S. Jaffe, Erica C. Leifheit-Limson, David S. Sheps, Viola Vaccarino, and Lawson Wulsin. Depression as a risk factor for poor prognosis among patients with acute coronary syndrome: Systematic review and recommendations: A scientific statement from the american heart association, mar 2014. ISSN 15244539.
+Christopher J. McAloon, Luke M. Boylan, Thomas Hamborg, Nigel Stallard, Faizel Osman, Phang B. Lim, and Sajad A. Hayat. The changing face of cardiovascular disease 2000–2012: An analysis of the world health organisation global health estimates data, dec 2016. ISSN 18741754.
+Anna Meijer, Henk Jan Conradi, Elisabeth H. Bos, Brett D. Thombs, Joost P. van Melle, and Peter de Jonge. Prognostic association of depression following myocardial infarction with mortality and cardiovascular events: A meta-analysis of 25 years of research. General Hospital Psychiatry, 33(3):203–216, may 2011.
+ISSN 01638343. doi: 10.1016/j.genhosppsych.2011.02.007.
+23
+
+References v
+Anish S. Shah, Rachel Lampert, Jack Goldberg, J. Douglas Bremner, Lian Li, Marc D. Thames, Viola Vaccarino, and Amit J. Shah. Alterations in heart rate variability are associated with abnormal myocardial perfusion. International Journal of Cardiology, XXX(XXX):XXX, jan 2020. ISSN 01675273. doi:
+10.1016/j.ijcard.2020.01.069. URL
+https://linkinghub.elsevier.com/retrieve/pii/S0167527319355214. P Taggart, H Critchley, and P D Lambiase. Heart-brain interactions in cardiac
+arrhythmia. Heart, 97(9):698–708, may 2011. ISSN 1355-6037. doi:
+10.1136/hrt.2010.209304. URL
+http://heart.bmj.com/http://heart.bmj.com/cgi/doi/10.1136/hrt.2010.209304.
+24
+

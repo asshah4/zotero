@@ -1,0 +1,360 @@
+
+/* ::::: null ::::: */
+
+.nojs { display: none; }
+
+/* ::::: http://www.sciencedirect.com.proxy.library.emory.edu/science/page/static/stylesheets/css_art_v01.css ::::: */
+
+.articleText dl dd dl { margin-top: 2px; margin-left: 10px; }
+.articleText dl dd dl dt { display: block; line-height: 14pt; padding: 0pt; margin-left: 45px; }
+.articleText dl dd { margin-left: 12px; }
+.featuresRow ul { width: 100%; margin: 0pt; padding: 0pt 0pt 3px; list-style: none outside none; line-height: 0px; background: url('features_border.gif@22') repeat scroll 0pt bottom transparent; }
+.featuresRow ul li { padding: 0pt 0pt 0pt 7px; display: inline; position: relative; background: url('divider_login.gif@22') no-repeat scroll right center transparent; height: 30px; font-family: arial; font-size: 11px; line-height: 30px; margin: 0pt; }
+.featuresRow ul li a { line-height: 30px; white-space: nowrap; margin: 0pt; }
+.featuresRow ul li a.big { font-size: 14px; font-weight: bold; }
+.featuresRow ul li a.last { border-right: medium none; background: none repeat scroll 0% 0% transparent; }
+.clearfloat { clear: both; height: 1px; overflow: hidden; }
+.articleLeftCol { margin-right: 361px; padding: 0pt 0px 8px; }
+* html .articleLeftCol { height: 1%; }
+.articleRightCol { width: 346px; padding: 1px 0px; float: right; margin: 0pt; }
+.rightFmDivider { height: 20px ! important; width: 100%; margin: 0px; padding: 0px; }
+a.articleHeaderInner:hover { text-decoration: underline; }
+p { line-height: 150%; }
+.articleTitle { font-family: Arial,Helvetica,sans-serif; font-weight: bold; font-size: 1.75em; display: inline; }
+#articleContent a img { margin-bottom: 0px; }
+#articleContent img { margin-bottom: 5px; }
+.articleText { display: inline; line-height: 150%; }
+#articleFade { position: absolute; display: none; opacity: 0; left: 0%; top: 0%; width: 100%; height: 100%; z-index: 100; color: rgb(204, 204, 204); background: none repeat scroll 0pt 0pt rgb(204, 204, 204); border: 0pt none; margin: 0pt; padding: 0pt; }
+.articleNoFade { position: relative; z-index: 999; }
+.graphText { display: inline; line-height: 150%; }
+.graphTextOnly { display: inline; line-height: 150%; }
+.refText { display: inline; line-height: 150%; }
+.articleToc { line-height: 150%; }
+* { -moz-box-sizing: border-box; }
+.infobubble-container { position: relative; z-index: 60; }
+.infobubble_top { position: relative; width: 308px; height: 15px; }
+.infobubble_mid { background-image: url('ra_top.gif@22'); background-repeat: no-repeat; padding: 3px 0pt 0pt; position: relative; z-index: 60; width: 308px; }
+.infobubble_border { border-left: 1px solid rgb(155, 155, 155); border-right: 1px solid rgb(155, 155, 155); padding-bottom: 2px; padding-top: 7px; width: 308px; }
+.infobubble_doclinks { padding: 0pt 11px; }
+.infobubble_bottom { background-image: url('ra_bottom.gif@22'); background-repeat: no-repeat; background-position: center top; position: relative; z-index: 60; overflow: hidden; height: 3px; width: 308px; }
+.infobubble { display: none; text-indent: 0px; position: absolute; z-index: 60; top: 0px; left: -315px; width: 315px; background-color: rgb(255, 255, 255); }
+.mlktScroll { border: 1px solid rgb(204, 204, 204); height: 100px; overflow: auto; background-color: rgb(255, 255, 255); }
+.mlktLink { padding: 2px 0px 0px; background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); margin: 3px 5px; }
+.mlktEmpty { padding: 5px; background: url('rc_box_mid.gif@22') repeat-y scroll 0pt 0pt transparent; }
+.mlktContentBody { background: url('rc_box_mid.gif@22') repeat-y scroll 0pt 0pt transparent; }
+#raViewMore_Art tr td, #raViewMore_Ref tr td { padding: 10px 0px 3px 10px; }
+#raViewMore_Cite tr td { padding: 1px 10px 3px; }
+.outerPage { padding: 5px 0px 0px; }
+.sci_dirBackgroundColor { background: none repeat scroll 0% 0% transparent; width: 100%; padding: 0pt; margin: 0pt; border-top: 4px solid rgb(232, 232, 232); }
+.blueBackgroundColor, .greenBackgroundColor, .greyBackgroundColor, .redBackgroundColor, .orangeBackgroundColor { width: 100%; border-top: 4px solid rgb(232, 232, 232); }
+#articleBox { padding: 0pt; border-top: 1px solid rgb(155, 155, 155); margin: -2px 0pt 0pt; }
+.articleBox { border-top: 1px solid rgb(255, 255, 255); margin-bottom: -5px; }
+#articleBody { position: relative; margin: 0pt; left: -1px; top: -6px ! important; padding: 0pt; clear: left; }
+.articleBoxBorderHide { position: relative; margin: 0pt; padding: 0pt; top: 36px; display: block; }
+.articleHeaderInner { position: relative; left: 1px; margin: 0pt 5px 0pt 3px; }
+.FATTABInner { display: block; background-color: rgb(246, 246, 246); padding-left: 0px; padding-right: 0px; font-size: 0.9em; float: right; height: 100%; width: 350px; }
+.refersTable { background-color: rgb(255, 255, 255); font-family: arial,helvetica,sans-serif; font-size: 1em; line-height: 16px; }
+.refersLeftColumn { vertical-align: top; text-align: right; font-weight: bold; width: 55px; padding-left: 5px; }
+.refersDivider { background-color: rgb(255, 255, 255); height: 10px; width: 100%; margin: 0px; padding: 0px; }
+.refPreview { background-color: rgb(238, 238, 238); z-index: 1000; display: none; padding: 8px; width: 300px; }
+.greyTable { background-color: rgb(255, 255, 255); padding: 0px; }
+.greyTab { background-color: rgb(255, 255, 255); border-color: rgb(194, 194, 194); border-style: solid solid none; border-width: 0px 1px; font-size: 0.9em; padding: 0px; }
+.greyHeader { background-image: url('rc_header_mid.gif@22'); background-repeat: repeat-x; float: left; height: 32px; position: relative; width: 332px; padding: 8px 8px 0px; font-family: Arial; font-size: 1.35em; font-weight: bold; color: rgb(0, 0, 0); }
+.articleTabs { display: inline; padding-top: 6px; margin: 0pt; text-align: left; position: relative; z-index: 50; float: left; white-space: nowrap; height: 40px; }
+.articleTabsNoFade, .imgToogleNoFade { position: relative; z-index: 1000; }
+.tabSelectedOuter { height: 31px; white-space: nowrap; display: inline; position: relative; }
+.tabUnselectedOuter { height: 31px; white-space: nowrap; display: inline; position: relative; }
+.tabSelectedInner { color: rgb(0, 0, 0); float: left; font-family: arial; font-weight: bold; font-size: 16px; height: 31px; padding: 8px 6px 0px; position: relative; }
+.tabUnselectedInner { padding: 9px 6px 0px; height: 31px; position: relative; font-size: 1em; font-family: arial,verdana,helvetica,sans-serif; color: rgb(0, 0, 0); float: left; }
+.tabUnselectedOuter:hover { cursor: pointer; }
+.tabUnselectedInner:hover { cursor: pointer; }
+.disabledTabLink { color: rgb(188, 188, 188); }
+.bottomArticle { background-color: rgb(255, 255, 255); }
+.footerArticle { background-color: rgb(255, 255, 255); }
+.ppvMSG { float: right; display: block; padding: 5px; z-index: 1000; }
+.ppvMSG img { border: 0pt none; padding: 5px; }
+.authorsNoEnt p { margin: 2px; }
+.authorVitaeLink { font-style: italic; font-size: 0.84em; }
+.figTblUpiOuter { margin-left: 15px; border: 0px none; padding: 0px; }
+.tblScroll { width: 100%; padding: 0px 0px 17px; overflow-x: auto; overflow-y: visible; }
+.tblScrollBox {  }
+.tblScrollLink { display: inline; }
+.eqImgScroll { width: auto; padding: 0px 0px 17px; overflow-x: auto; vertical-align: middle; text-align: left; overflow-y: visible; }
+.eqImgScroll img, .eqImgScroll a, .eqImgScroll a:hover { border: 0pt none; }
+.inlMMLBox { display: inline; padding: 0px; margin: 0px; border: 0pt none; }
+.fdBox { padding: 0px; margin: 0px; border: 0pt none; display: block; width: auto; position: static; }
+.fdNoLabel { text-align: center; vertical-align: middle; }
+.fdWithLabel { margin-right: 10%; text-align: center; vertical-align: middle; }
+.fdLabel { width: 10%; text-align: right; position: static; float: right; top: 45%; right: 0px; margin-top: 10px; margin-right: 50%; }
+.fdLabelTxt { vertical-align: super; }
+.sizeImg { max-width: 100%; height: auto; }
+.sizeImgBox {  }
+.sizeImgLink { display: inline; }
+.viewWithinBtn:hover, .viewWithinBtn { text-decoration: none; display: inline; padding: 1px 10px; margin: 0px; background-color: rgb(238, 238, 238); border: 1px solid rgb(102, 102, 102); color: rgb(102, 102, 102); font-size: 11px; font-weight: bold; height: 19px; width: auto; }
+.graphTextOnly a:hover { text-decoration: none; }
+.outwardBox { background: url('rc_box_mid.gif@22') repeat-y scroll 0pt 0pt transparent; font-size: 0.9em; margin: 0px; padding: 7px 10px; text-align: left; }
+.outwardBox td { padding: 3px; }
+.outward a { color: rgb(1, 86, 170); }
+#BookMarkBoxContent a { color: rgb(1, 86, 170); cursor: pointer; }
+.collabBox { background-color: rgb(255, 255, 255); border-left: 1px solid rgb(194, 194, 194); border-right: 1px solid rgb(194, 194, 194); text-align: center; width: 340px; }
+.NextBiovRow { margin: 0px; border: 0px none; padding: 0px; }
+.MMCvRow { margin: 0px; padding-left: 5px; background: url('rc_box_mid.gif@22') repeat-y scroll 0pt 0pt transparent; float: right; width: 343px; z-index: 3; position: relative; }
+.MMCvOuter { z-index: 3; display: block; width: 332px; margin: 0px; border: 0px none; padding: 5px 0px 0px; background-color: rgb(255, 255, 255); font-size: 0.9em; overflow: hidden; }
+.MMCvTitleBox { font-weight: bold; margin: 2px 2px 12px; border-width: 0px 0px 1px; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(204, 204, 204); padding: 0px; }
+.MMCvRefHovs { margin: 0px; border: 0px none; padding: 0px; }
+.MMCvTabs { margin: 0px; border-bottom: 1px solid rgb(204, 204, 204); padding: 2px 0px; }
+.MMCvNoTabs { border-top: 1px solid rgb(204, 204, 204); margin-top: -1px; }
+.MMCvTab { text-align: center; margin: 0px 5px 0px 0px; border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(204, 204, 204) rgb(204, 204, 204) -moz-use-text-color; padding: 2px 9px; color: rgb(1, 86, 170); background-color: rgb(255, 255, 255); font-weight: bold; cursor: pointer; }
+.MMCvTab:hover { text-decoration: underline; }
+.MMCvTabActive { text-align: center; margin: 0px 5px 0px 0px; border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(204, 204, 204) rgb(204, 204, 204) -moz-use-text-color; padding: 2px 9px 3px; font-weight: bold; background-color: rgb(242, 242, 242); }
+.MMCvTabActive a:hover { text-decoration: none; }
+.MMCvSelector { width: 332px; text-align: right; background-color: rgb(242, 242, 242); margin: 0px; border-width: 0px 1px; border-style: none solid; border-color: -moz-use-text-color rgb(204, 204, 204); padding: 0px 5px 0px 0px; }
+.MMCvSelectDiv { margin: 0px; border: 0px none; padding: 3px; }
+.MMCvSelectorItem { cursor: pointer; margin: 0px; border: 0px none; padding: 0px; color: rgb(1, 86, 170); }
+.MMCvSelectorCollapseItem { cursor: pointer; }
+.MMCvSelRover { display: inline; padding: 0px; margin: 0px; border: 0px none; font-size: 145%; }
+.MMCvSelRover img { border: 0px none; margin: 0px; padding: 0px; vertical-align: -4px; }
+.MMCvViewBacking { width: 332px; margin: 0px; background-color: rgb(242, 242, 242); padding-left: 8px; padding-right: 8px; padding-bottom: 0px; border-right: 1px solid rgb(204, 204, 204); border-width: medium 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204); }
+.MMCvViewer { position: absolute; width: 320px; margin: 0px; padding: 0px; border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); overflow: hidden; border-bottom: medium none; }
+.MMCvVideoComponent, .MMCvAudioComponent, .MMCvOtherComponent { position: absolute; top: 0pt; left: 345px; width: 320px; margin: 0px 195px 0px 0px; padding: 0px; display: block; }
+.MMCvCaptionArea { display: block; float: right; width: 245px; margin: 0px; overflow: hidden; }
+.MMCvAudioOtherWrapper { display: block; width: 320px; margin: 0px; overflow: hidden; border-right: 1px solid rgb(204, 204, 204); border-width: medium 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204); }
+.MMCvCaptionWrapper { display: block; width: 245px; margin: 0px; border: 0px none; padding: 0px 4px 4px; overflow: hidden; }
+.MMCvCaption { display: block; width: 245px; margin: 0px; border: 0px none; padding: 6px; }
+.MMCvVideoCaptionArea { display: block; width: 320px; margin: 0px; padding: 0px; overflow: hidden; }
+.MMCvVideoCaptionWrapper { display: block; width: 320px; margin: 0px; border: 0px none; padding: 0px 4px 4px; overflow: hidden; }
+.MMCvVideoCaption { display: block; width: 320px; margin: 0px; border: 0px none; padding: 6px; }
+.MMCvVideoPlayerArea { display: block; width: 320px; margin: 0px; padding: 0px; overflow: hidden; height: 265px; }
+.MMCvVideoPlayerWrapper { display: block; width: 320px; margin: 0px; border: 0px none; padding: 0px; overflow: hidden; position: relative; height: 265px; }
+.MMCvVideoPlayer { display: block; width: 320px; margin: 0px; border-bottom: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204); border-right: 1px solid rgb(204, 204, 204); vertical-align: middle; height: 265px; }
+.MMCvAudioPlayerWrapper { display: block; width: 320px; margin: 0px; padding: 0px; height: 28px; overflow: hidden; }
+.MMCvAudioPlayer { display: block; width: 320px; margin: 0px; border: 0px none; text-align: center; height: 28px; }
+.MMCvErrorArea { display: block; width: 300px; height: 260px; margin: 0px; border: 0px none; padding: 0px; overflow: hidden; vertical-align: middle; }
+.MMCvError { position: absolute; text-align: center; top: 50px; width: 320px; font-size: 1.1em; }
+.MMCvAudioError { text-align: center; width: 320px; padding: 10px; font-size: 1.1em; border-bottom: 1px dotted rgb(204, 204, 204); }
+.MMCvAudioErrorNoCaption { text-align: center; width: 320px; padding: 8px; font-size: 1.1em; border-right: 1px solid rgb(204, 204, 204); border-width: medium 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204); }
+.MMCvMoreSpacer { margin: 0px; padding: 0px 0px 2px; border-width: 0px 0px 1px; border-style: none none dashed; border-color: -moz-use-text-color -moz-use-text-color rgb(0, 0, 0); }
+.MMCvMoreWrapper { display: none; width: 195px; margin: 0px; border: 0px none; padding: 0px 9px; color: rgb(1, 86, 170); cursor: pointer; }
+.MMCvLessWrapper { display: none; width: 195px; margin: 0px; border: 0px none; padding: 0px 9px; color: rgb(1, 86, 170); cursor: pointer; }
+.MMCvImageArea { width: 58px; margin: 0px; padding: 8px; }
+.MMCvDownload { display: block; margin: 0px; float: right; }
+.MMCvViewWithin { display: block; margin: 0px; }
+.MMCvViewDownloadWrapper { display: block; width: 320px; background-color: rgb(242, 242, 242); padding: 5px 0px; }
+.MMCvImage { width: 50px; margin: 0px; border: 0px none; padding: 0px; height: 50px; }
+#shadow-container { position: relative; top: 3px; left: 3px; margin-right: 3px; margin-bottom: 3px; float: left; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; }
+.shadow1, .shadow2, .shadow3, .container { position: relative; left: -1px; top: -1px; width: 220px; }
+.shadow1 { background: none repeat scroll 0% 0% rgb(241, 241, 241); width: 220px; }
+.shadow2 { background: none repeat scroll 0% 0% rgb(219, 218, 219); }
+.shadow3 { background: none repeat scroll 0% 0% rgb(184, 182, 184); }
+.container { background-color: rgb(242, 242, 242); padding: 8px; font-size: 1.1em; font-family: Geneva,Arial,Helvetica,sans-serif; color: rgb(85, 85, 85); width: 220px; }
+.MMCvVideoImageArea { display: table; height: 180px; width: 320px; border-right: 1px solid rgb(204, 204, 204); border-width: medium 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204); text-align: center; }
+.MMCvInstallFP { display: block; padding: 4px; }
+.MMCvVideoImageWrapper { display: table-cell; vertical-align: middle; }
+.MMCvInstallFP { display: block; padding: 4px; }
+.MMCvVideoImageWrapper { height: auto; position: relative; top: 50%; }
+.MMCvVideoImage { position: relative; top: -50%; height: auto; }
+ul.artAlphaNavBar { display: block; }
+ul.artAlphaNavBar li { list-style: none outside none; padding-left: 3px; padding-right: 3px; border-left: 1px solid rgb(153, 153, 153); display: inline; }
+dl dl dl { margin: 0pt; padding: 0pt; line-height: 100%; }
+dl { margin-top: 10px; line-height: 100%; }
+dt { padding: 0pt; line-height: 14pt; display: inline; }
+dd dl dt { padding: 0pt; line-height: 14pt; display: block; }
+dd { padding: 0pt; line-height: 150%; }
+dl p { margin-left: 0px; line-height: 100%; }
+dt p { margin-left: 0px; line-height: 100%; }
+dd p { margin-left: 0px; line-height: 100%; }
+#pdfArea object { display: block; border: 1px solid rgb(102, 102, 102); }
+#pdfPage { display: block; width: 100%; overflow: auto; height: 820px; }
+.loadWindow { border: 1px solid grey; padding: 5px; width: 600px; height: 820px; }
+.reRunStyle { border: 1px solid rgb(108, 157, 49); padding: 4px; background-color: rgb(229, 243, 204); float: left; position: relative; margin-bottom: 2px; }
+.artiHead { font-size: 0.9em; }
+.referenceText { margin-left: 15px; display: block; }
+.articleText_indent { padding-left: 15px; }
+.articleText_indent h3 { margin: 15px 0px 0px -15px; }
+.articleText_indent h4, .articleText_indent h5 { margin: 15px 0px 0px -15px; }
+.articleText_indent p, .articleText_indent dl, .articleText_indent dt { margin: 0px; }
+.imgToggle { float: right; padding: 0.85em 0.1em; }
+.articleInnerPage { margin-right: -100em; width: 100%; padding: 15px 15px 15px 10px; }
+html > body .articleInnerPage { padding-right: 10px; }
+#figevent, #figSelect, #refevent { display: none; }
+#absTabOn, #fullTabOn, #graphTabOn, #refTabOn, #absTabOff, #fullTabOff, #graphTabOff, #refTabOff, #TabOff { display: inline; }
+html > body #absTabOn, html > body #fullTabOn, html > body #graphTabOn, html > body #refTabOn, html > body #absTabOff, html > body #fullTabOff, html > body #graphTabOff, html > body #refTabOff, html > body #TabOff { display: inline-block; }
+.On { left: 0px; top: 0px; visibility: visible; overflow: auto; }
+.Off { position: absolute; left: -2000px; top: -2000px; visibility: hidden ! important; overflow: hidden; }
+.multiMediaBottom { position: relative; top: -1px; z-index: 2; }
+#embedAPCModule { padding-top: 15px; padding-bottom: 15px; }
+#embedAPBModule { width: 340px; padding-bottom: 20px; }
+#embedAPAModule { width: 340px; padding-bottom: 20px; }
+.articleTabs:after, .articleTabsNoFade:after, .articlePage:after, .articleLeftCol:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; margin: 0pt; }
+html > body #articleBody, x:-moz-any-link { top: -3px ! important; }
+html > body #articleBody, x:-moz-any-link, x:default { top: -6px ! important; }
+html > body .articleTabs, x:-moz-any-link {  }
+html > body .articleTabs, x:-moz-any-link, x:default { height: 40px; }
+html > body #articleBox { background: none repeat scroll 0% 0% transparent; margin-top: 0pt; border: medium none; }
+html > body .articleBox { background: none repeat scroll 0% 0% transparent; margin-top: 0pt; border: medium none; }
+html > body .articleBoxBorderHide { border-bottom: 1px solid rgb(155, 155, 155); width: 99%; margin-left: 2px; }
+.rdivImg { position: relative; padding: 0pt; background: url('container_right.png@22') repeat-y scroll 100% 100% transparent; right: -2px; }
+.ldivImg { background: url('container_left.png@22') repeat-y scroll 0pt 0pt transparent; padding: 0pt; position: relative; left: -2px; }
+.tdivImg { background: url('container_top.png@22') repeat-x scroll 0% 0% transparent; width: 100%; }
+.bdivImg { background: url('container_bottom.png@22') repeat-x scroll 0% 0% transparent; width: 100%; }
+#toppagination { padding: 18px 26px 8px 14px; text-align: left; vertical-align: bottom; }
+#fontsize { padding: 0px 0px 8px 14px; text-align: right; vertical-align: top; }
+#bottompagination { text-align: left; vertical-align: top; padding: 8px 26px 18px 14px; }
+.seperatorline { margin: 0px 26px 0px 14px; background-color: rgb(232, 232, 232); color: rgb(232, 232, 232); height: 4px; }
+#articlePage { padding: 10px 0pt 0pt; }
+embed.hidden, object.hidden { height: 1px; width: 1px; position: absolute; top: -1000px; left: -1000px; }
+.seperatorlineReflect { margin: 8px 0px 4px; color: rgb(221, 221, 221); width: 213px; }
+li.highLight_attach { display: block; text-decoration: none; font-family: arial; font-size: 1.17em; color: rgb(1, 86, 170); background-color: rgb(255, 255, 255); }
+a.highLight_attach, a.highLight_attach:visited { display: block; line-height: 15px; height: 20px; text-decoration: none; font-family: arial; font-size: 1.17em; color: rgb(1, 86, 170); }
+a.highLight_attach, a.highLight_attach:visited { border: medium none; }
+#nohiglink {  }
+#reflink { line-height: 40px; }
+#nextbiolink { font-weight: bold; }
+a.subText, a.subText:visited { text-decoration: none; font-family: arial; font-size: 1em; color: rgb(1, 86, 170); }
+#subpadding1 { padding-left: 26px; line-height: 25px; }
+#subpadding2 { padding-left: 26px; line-height: 17px; }
+li#highLight_attach_menu_parent { padding-top: 8px; background: none repeat scroll 0% 0% transparent; height: 29px; position: relative; white-space: nowrap; }
+ul#highLight_attach_menu_child { position: absolute; visibility: hidden; left: -1px; top: 23px; background: none repeat scroll 0% 0% white; width: 223px; height: 126px; opacity: 1; border-left: 1px solid rgb(155, 155, 155); border-right: 1px solid rgb(155, 155, 155); border-bottom: 1px solid rgb(155, 155, 155); line-height: 15px; padding: 0pt 0pt 0pt 5px; margin-top: -2px; }
+ul#highLight_attach_menu_child_no_nextBio { position: absolute; visibility: hidden; left: -1px; top: 23px; background: none repeat scroll 0% 0% white; width: 223px; height: 85px; opacity: 1; border-left: 1px solid rgb(155, 155, 155); border-right: 1px solid rgb(155, 155, 155); border-bottom: 1px solid rgb(155, 155, 155); line-height: 15px; padding: 0pt 0pt 0pt 5px; margin-top: -2px; }
+#menulist { line-height: 0px; padding: 0px; margin: 0px; background: none repeat scroll 0% 0% transparent; position: absolute; }
+#highlightKwds { display: inline; padding: 0px 0px 0px 2px; font-family: arial; font-size: 11px; position: relative; z-index: 10; }
+.noul { text-decoration: none ! important; }
+
+/* ::::: http://www.sciencedirect.com.proxy.library.emory.edu/science/page/static/stylesheets/css_textbox_v01.css ::::: */
+
+.textboxe-extra { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxpull-quote { background: none repeat scroll 0pt 0pt rgb(251, 247, 184); border: 3px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxcollaboration { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt0 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt1 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt2 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt3 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt4 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt5 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt6 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt7 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt8 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt9 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt10 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt11 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt12 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt13 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt14 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt15 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt16 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt17 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt18 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt19 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt20 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt21 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt22 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt23 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt24 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxalt25 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm0 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm1 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm2 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm3 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm4 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm5 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm6 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm7 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm8 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm9 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm10 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm11 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm12 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm13 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm14 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm15 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm16 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm17 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm18 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm19 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm20 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm21 { background: none repeat scroll 0pt 0pt rgb(250, 253, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm22 { background: none repeat scroll 0pt 0pt rgb(229, 245, 215); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm23 { background: none repeat scroll 0pt 0pt rgb(198, 217, 240); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm24 { background: none repeat scroll 0pt 0pt rgb(249, 204, 202); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxaltm25 { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxdefault { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxDefaultRole { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.textboxdefaultfig { background: none repeat scroll 0pt 0pt rgb(245, 245, 245); border: 1px solid rgb(223, 223, 223); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+.figbox { position: relative; background: none repeat scroll 0pt 0pt rgb(221, 231, 167); border: 1px solid rgb(109, 42, 11); margin-bottom: 10px; margin-top: 10px; padding: 10px; }
+
+/* ::::: http://www.sciencedirect.com.proxy.library.emory.edu/gadgetcontext/gadgets/css/toolbar.css ::::: */
+
+controlsbody { font-family: Arial,verdana,helvetica,sans-serif; margin: 0pt; font-size: 75%; }
+h1, h2, h3, h4, p { margin: 0pt; }
+a, a:link { color: rgb(1, 86, 170); text-decoration: none; }
+a:visited { color: rgb(132, 0, 132); }
+a:hover, a:focus { color: rgb(1, 86, 170); text-decoration: underline; }
+a:active { color: rgb(51, 51, 51); text-decoration: underline; }
+a.disabled, a.diabled:link, .disabled, a.disabled:visited, a.disabled:hover, a.disabled:focus, a.disabled:active { color: rgb(155, 155, 155); }
+img { border: 0pt none; }
+.boxYellow { -moz-border-radius: 2px 2px 2px 2px; background-color: rgb(254, 255, 187); border: 1px solid rgb(254, 199, 108); }
+.boxGrey { -moz-border-radius: 2px 2px 2px 2px; background-color: rgb(247, 247, 247); border: 1px solid rgb(205, 205, 203); }
+.toolbarHead { float: left; width: 100%; }
+.toolbarBody { float: left; padding: 0pt 0pt 5px; border: 1px solid rgb(186, 186, 186); width: 100%; background: none repeat scroll 0% 0% white; }
+.toolbarHoriShowHide { margin: 0pt; padding: 0pt; border: 1px solid rgb(186, 186, 186); width: 100%; text-align: center; height: 18px; font-size: 12px; cursor: pointer; font-weight: normal; color: rgb(1, 86, 170); text-decoration: none; clear: both; background: none repeat scroll 0% 0% rgb(235, 235, 235); }
+#toolbar { position: relative; }
+.toolbarfoot { position: relative; padding-bottom: 0px; margin: 0pt; float: left; width: 100%; }
+.toggleImg { background: none repeat-y scroll 0pt 0pt transparent; float: left; padding: 0pt 0pt 5px; width: 15px; cursor: pointer; }
+.toolbarHead h2 { font-size: 1.17em; padding: 3px 0pt 3px 6px; background: none repeat scroll 0% 0% rgb(235, 235, 235); border-bottom: 1px solid rgb(186, 186, 186); }
+.toolbarHead a { font-size: 1em; }
+.containerAddManage { border-bottom: 1px solid rgb(155, 155, 155); width: 100%; background: none repeat scroll 0% 0% rgb(235, 235, 235); }
+.toolbarHeadFull { float: left; width: 100%; }
+.toolbarfootFull { padding-bottom: 0px; margin: 0pt 0pt 5px; float: left; width: 100%; }
+.toolbarBodyFull { float: left; padding: 0pt 0pt 5px; border: 1px solid rgb(186, 186, 186); width: 100%; }
+.toolbarHeadFull h2 { font-size: 1.17em; padding: 6px 0pt 0pt 6px; background: none repeat scroll 0% 0% rgb(235, 235, 235); }
+.toolbarHeadFull a { font-size: 1em; }
+.containerAddManageFull { border-bottom: 1px solid rgb(155, 155, 155); float: left; width: 100%; }
+.containerApplOver { margin: 5px 0pt 0pt; padding: 0pt 2px; }
+.containerApplOver img.heading { float: left; margin: 2px 0pt 0pt 4px; height: 20px; width: 20px; }
+.col1 { float: left; width: 33.3%; }
+.col2 { float: left; width: 33.3%; }
+.col3 { float: left; width: 33.3%; }
+.addManage { padding: 8px 0pt 5px; float: left; background: none repeat scroll 0% 0% rgb(235, 235, 235); }
+a.iconadd { background: url('@22@22') no-repeat scroll 0pt 1px transparent; padding: 0pt 0pt 0pt 15px; margin: 0pt 0pt 0pt 5px; }
+.help { margin: 6px 2px 5px 0pt; float: right; }
+.help_horizontal { margin: 6px 2px 5px 0pt; float: right; }
+.addManageHome { padding: 7px 0pt 0pt 1px; float: right; background: none repeat scroll 0% 0% rgb(235, 235, 235); margin-right: 6px; }
+.helpHome { margin: 6px 2px 5px 0pt; float: right; }
+.containerAppl { margin: 5px 0pt 0pt; padding: 0pt 0pt 0pt 4px; width: 240px; float: left; }
+.containerAppl:hover { cursor: move; }
+.containerAppl img.heading { float: left; padding: 0pt 0pt 0pt 5px; }
+h3.elsevierTimeL { float: left; text-align: left; padding: 2px 0pt 3px 0px; font-weight: normal; font-size: 12px; margin: 4px 0pt 0pt 5px; width: 54%; }
+h3.elsevierTimeLOver { float: left; font-size: 12px; font-weight: bold; margin: 3px 2px 0pt 5px; padding: 2px 0pt 3px; width: 54%; text-align: left; }
+.Controls { float: right; width: 60px; position: relative; z-index: 1; margin-top: 0px; }
+.Controls ul { margin: 0pt; padding: 5px 0pt 0pt; z-index: 1; }
+.Controls ul li { margin: 0pt 5px 0pt 0pt; float: left; list-style-type: none; z-index: 1; }
+.containerAppDetails { border-right: 1px solid rgb(254, 199, 109); border-style: solid; border-color: rgb(254, 199, 109); border-width: 0px 1px 1px; }
+.containerAppDetails p { margin: 4px 0pt 0pt; }
+.containerAppDetailsCanvas { padding-bottom: 3px; margin-bottom: 5px; border-right: 1px solid rgb(254, 199, 108); border-width: 0px 1px 1px; border-style: solid; border-color: rgb(254, 199, 108); width: 99.8%; }
+.curveBoxleftCanvas { height: 25px; padding: 0pt 0pt 0pt 4px; }
+.Controls ul .submenu { border: 1px solid rgb(204, 204, 204); background: none repeat scroll 0% 0% rgb(249, 249, 249); position: absolute; top: 10px; left: -105px; width: 100px; padding: 2px 0pt; clear: both; z-index: 2; display: none; text-align: left; }
+.Controls ul .submenu li { background: none repeat scroll 0% 0% rgb(249, 249, 249); display: block; float: none; margin: 0pt 2px 2px; border: 0pt none; height: 18px; line-height: normal; z-index: 1000; }
+.Controls .submenu li a { background: none repeat scroll 0% 0% rgb(249, 249, 249); display: block; float: none; padding: 3px; margin: 0pt; border: 0pt none; height: auto; color: rgb(16, 92, 190); line-height: normal; }
+.Controls .submenu li a:hover { background: none repeat scroll 0% 0% rgb(227, 237, 239); }
+iframe.selectOverlap { position: absolute; z-index: -1; border: 0pt none; margin: 0pt; padding: 0pt; top: 0pt; left: 0pt; overflow: hidden; }
+.curveBoxleft { height: 25px; padding: 0pt 0pt 0pt 4px; width: 92%; }
+.curveBoxBody { height: 25px; }
+.curveBoxRight { height: 25px; }
+.curveBoxRight img.heading { float: left; margin: 2px 0pt 0pt 4px; height: 20px; width: 20px; }
+.CanvasControls { float: right; width: 65px; position: relative; z-index: 1; margin-top: 2px; }
+.CanvasControls ul { margin: 0pt; z-index: 1; list-style-type: none; }
+.CanvasControls ul li { margin: 4px 0pt 0pt; list-style-type: none; z-index: 1; }
+.CanvasControls ul .submenu { border: 1px solid rgb(204, 204, 204); background: none repeat scroll 0% 0% rgb(249, 249, 249); position: absolute; top: 10px; left: -145px; width: 140px; padding: 2px 0pt; clear: both; z-index: 2; display: none; }
+.CanvasControls ul .submenu li { background: none repeat scroll 0% 0% rgb(249, 249, 249); display: block; float: none; margin: 0pt 2px 2px; border: 0pt none; height: 18px; line-height: normal; z-index: 1000; }
+.CanvasControls .submenu li a { background: none repeat scroll 0% 0% rgb(249, 249, 249); display: block; float: none; padding: 3px; margin: 0pt; border: 0pt none; height: auto; color: rgb(16, 92, 190); line-height: normal; }
+.CanvasControls .submenu li a:hover { background: none repeat scroll 0% 0% rgb(227, 237, 239); }
+.containerAppDetailsRes { border: 0px solid rgb(226, 205, 162); width: 99%; float: left; }
+.curveBoxleftOver { height: 25px; padding: 0pt 0pt 0pt 0px; margin: 0pt; width: 99%; }
+.curveBoxBodyOver { height: 25px; margin: 0pt; padding: 0pt; }
+.curveBoxRightOver { height: 25px; margin: 0pt; padding: 0pt; }
+.space { padding: 5px 0pt 0pt 0px; }
+.curveBoxleftNormal { height: 25px; padding: 0pt 0pt 0pt 0px; margin: 0pt; }
+.curveBoxBodyNormal { height: 25px; margin: 0pt; padding: 0pt; }
+.curveBoxRightNormal { height: 25px; margin: 0pt; padding: 0pt; }
+#canvas { background-color: rgb(255, 255, 255); height: 99%; left: 0pt; margin-top: 5px; padding-bottom: 25px; padding-left: 4px; position: absolute; text-align: center; top: 178px; width: 99.7%; z-index: 100; }
+.truncateTitle { width: 58%; overflow: hidden; }

@@ -1,0 +1,165 @@
+
+/* ::::: http://cat.inist.fr.proxy.library.emory.edu/css/NK/screen.css ::::: */
+
+body { margin: 0pt; background-color: rgb(255, 255, 255); font-family: "trebuchet ms",Arial,Verdana; }
+table { border-collapse: collapse; }
+ul { list-style: none outside none; }
+p { margin-top: 5px; margin-bottom: 5px; }
+ul { margin-top: 5px; margin-bottom: 5px; }
+a, a:link, a:visited { color: rgb(0, 0, 0); font-size: 12px; text-decoration: none; }
+a:active, a:hover { color: rgb(64, 63, 61); font-weight: bold; font-size: 12px; text-decoration: none; }
+#logo { position: absolute; top: 20px; left: 750px; padding: 0px; margin: 0px; }
+#titre { position: absolute; top: 3px; left: 20px; padding: 0px; margin: 0px; font-family: "trebuchet ms",Arial,Verdana; color: rgb(127, 26, 66); font-size: 16px; font-weight: bold; }
+td, p { font-family: "trebuchet ms",Arial,Verdana; font-size: 12px; color: rgb(64, 63, 61); vertical-align: top; text-align: justify; margin-left: 10px; }
+p.titre { font-size: 14px; color: rgb(217, 217, 217); font-weight: bold; }
+p.titre a:link, p.titre a:visited { color: black; font-weight: bold; font-size: 14px; text-decoration: none; }
+p.titre a:hover, p.titre a:active { color: black; font-weight: bold; font-size: 14px; text-decoration: none; }
+p.intertitre a:link, p.intertitre a:visited, p.intertitre a:hover { font-weight: bold; font-size: 12px; text-decoration: none; }
+span.petit, ul ul, p.petit { font-size: 10px; color: rgb(40, 40, 40); }
+p.intertitre, td.intertitre { color: rgb(165, 184, 201); font-weight: bold; font-size: 12px; }
+td a:hover, td a:active { font-weight: bold; text-decoration: none; }
+td a:link, td a:visited { font-weight: bold; text-decoration: none; color: rgb(64, 63, 61); }
+ul.liste-liens a:link { text-decoration: none; font-weight: bold; }
+ul.liste-liens a:visited { text-decoration: none; font-weight: bold; }
+ul.liste-liens a:hover { text-decoration: underline; font-weight: bold; }
+table.table-avec-bordures, table.table-avec-bordures td, table.table-avec-bordures th { border: 1px solid rgb(93, 139, 162); border-collapse: collapse; }
+table.table-sans-bordures, table.table-sans-bordures td, table.table-sans-bordures th { border-width: 0px; }
+td.separateur { background-color: rgb(93, 139, 162); }
+td.Xnavhaut, td.Xnavhaut p { font-size: 12px; color: rgb(93, 139, 162); text-align: left; font-weight: bold; }
+td.Xnavhaut a:link, td.Xnavhaut a:visited { text-decoration: none; }
+td.Xnavhaut a:hover { text-decoration: none; }
+#divnavhaut-nom-labo { position: absolute; left: 5px; top: 5px; z-index: 1; width: 484px; height: 64px; visibility: visible; }
+td.Xnavgauche, td.Xnavgauche p, td.XnavgaucheIcones { font-size: 11px; }
+td.Xnavgauche p { margin-top: 0px; margin-bottom: 0px; }
+td.Xnavgauche p.intertitre { color: rgb(165, 184, 201); font-weight: bold; font-size: 12px; }
+td.Xnavgauche p.intertitre a:link, td.Xnavgauche p.intertitre a:visited { font-weight: bold; text-decoration: none; }
+td.Xnavgauche p.intertitre a:hover { font-weight: bold; text-decoration: none; }
+td.XnavgaucheIcones { vertical-align: bottom; }
+#divpartenaires { position: absolute; width: 150px; height: 115px; z-index: 1; left: 0px; top: 66px; visibility: visible; }
+#divnavgauche-spec { position: absolute; left: 0px; top: 465px; z-index: 1; width: 150px; visibility: visible; }
+#divnavgauche-searchLabo { position: absolute; left: 11px; top: 560px; z-index: 1; width: 100px; visibility: visible; }
+#divnavgauche-search { position: absolute; left: 11px; top: 602px; z-index: 1; width: 100px; visibility: visible; }
+input.BoiteRechercher { font-size: 10px; width: 80px; }
+#boiterechercher { position: absolute; left: 230px; top: 8px; height: 20px; width: 150px; z-index: 0; border-width: 1pt; }
+#Xnavdroite { float: right; margin-left: 10px; margin-bottom: 10px; width: 150px; }
+td.Xnavdroite { border-bottom: 1px solid rgb(93, 139, 162); border-width: 1px 1px 1px 0px; }
+td.Xnavdroite, td.Xnavdroite p { font-size: 11px; }
+td.Xnavdroite p { margin-top: 0px; margin-bottom: 0px; }
+td.Xnavdroite p.titre { font-size: 14px; color: rgb(85, 98, 104); font-weight: bold; margin-bottom: 0px; }
+td.Xscde-navdroite, td.Xscde-navdroite p { font-size: 11px; font-weight: bold; color: rgb(165, 184, 201); }
+td.Xscde-navdroite { background-color: rgb(255, 255, 255); vertical-align: top; text-align: left; border-bottom: 1px solid rgb(93, 139, 162); border-left: 1px solid rgb(93, 139, 162); }
+td.Xscde-navdroite p { margin: 0pt; }
+td.Xscde-navdroite a:link, td.Xscde-navdroite a:visited { color: rgb(93, 139, 162); text-decoration: none; }
+td.Xscde-navdroite a:hover { color: rgb(40, 101, 131); text-decoration: none; }
+td.Xchemin { color: rgb(85, 98, 104); vertical-align: middle; }
+td.Xchemin a:link, td.Xchemin a:visited { color: rgb(85, 98, 104); text-decoration: none; }
+td.Xchemin a:hover { color: rgb(40, 101, 131); text-decoration: none; }
+div.XContenu { margin: 10px; }
+#menu { padding-left: 10px; }
+#menu a:link, #menu a:visited { color: rgb(255, 255, 255); font-family: "trebuchet ms",Arial,Verdana; font-weight: bold; text-decoration: none; font-size: 14px; }
+#menu a:hover, #menu a:active { font-family: "trebuchet ms",Arial,Verdana; font-weight: bold; text-decoration: underline; }
+.chemin { color: rgb(85, 98, 104); }
+.chemin a:link, .chemin a:visited { color: rgb(85, 98, 104); font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 22px; }
+.chemin a:hover, .chemin a:active { color: rgb(40, 101, 131); font-family: "trebuchet ms",Arial,Verdana; font-weight: bold; text-decoration: none; font-size: 12px; line-height: 22px; }
+#contenu {  }
+#contenu ul, li { list-style: none outside none; }
+#contenu a.lien { text-decoration: none; color: rgb(127, 26, 66); background-color: rgb(229, 209, 206); padding: 1px; }
+#contenu a.lien:hover { color: rgb(255, 255, 255); background-color: rgb(127, 26, 66); }
+#notice { color: rgb(64, 63, 61); border: 0px solid rgb(165, 184, 201); list-style: none outside none; text-decoration: none; font-family: "trebuchet ms",Arial,Verdana; margin: 0px 15px; background-color: rgb(255, 255, 255); }
+#notice h1 { font-size: 12px; font-weight: normal; margin-top: 5px; margin-left: 1px; margin-bottom: 0px; }
+#notice h2 { font-size: 12px; font-weight: normal; display: inline; line-height: 22px; }
+#notice h3 { color: rgb(64, 63, 61); font-size: 14px; font-weight: bold; line-height: 18px; margin-top: 5px; margin-bottom: 5px; }
+#notice ul { border: 0px none; margin: 0px; padding: 0px; }
+.saisiebtn { color: black; font-weight: bold; background-color: rgb(153, 153, 153); cursor: pointer; border: 0pt none; padding: 0px; margin: 0px; text-align: center; }
+a.saisiebtn:hover, a.saisiebtn:active {  }
+.saisieREF { color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; background-color: rgb(127, 26, 66); cursor: pointer; border: 0pt none; padding: 0px; margin: 0px; text-align: center; }
+.lienNav { color: rgb(70, 122, 148); text-decoration: none; font-family: Arial,Helvetica,sans-serif; font-size: 14px; }
+a.lienNav:hover { text-decoration: none; color: rgb(40, 101, 131); }
+a.lienNav:active, a.lienNav:link { text-decoration: none; color: rgb(40, 101, 131); }
+.lienrech { color: rgb(70, 122, 148); text-decoration: underline; font-family: Arial,Helvetica,sans-serif; font-size: 14px; }
+a.lienrech:hover { text-decoration: underline; color: rgb(40, 101, 131); }
+a.lienrech:active { text-decoration: underline; color: rgb(40, 101, 131); }
+div.copy { text-align: right; font-weight: bold; }
+div.minicopy { text-align: right; font-size: 90%; }
+div.num { text-align: left; font-size: 80%; }
+#pub { position: absolute; left: 13px; top: 520px; }
+.bande_detail_centre { color: rgb(255, 255, 255); float: left; padding: 2px; font-size: 18px; line-height: 19px; font-family: "trebuchet ms",Arial,Verdana; text-align: center; background-color: rgb(153, 153, 153); width: 100%; }
+.bande_detail_gauche { background-image: url('bandegauche.png@22'); background-repeat: no-repeat; float: left; margin-left: 10px; font-size: 0pt; height: 23px; width: 8px; }
+.bande_detail_droite { background-image: url('bandedroite.png@22'); background-repeat: no-repeat; float: left; font-size: 0pt; height: 23px; width: 8px; }
+.coin_haut_gauche_detail_blanc { background-image: url('coinhautgauche.gif@22'); background-repeat: no-repeat; line-height: 1px; border: medium none; }
+.coin_haut_droite_detail_blanc { background-image: url('coinhautdroit.gif@22'); background-repeat: no-repeat; }
+.coin_bas_gauche_detail_blanc { background-image: url('coinbasgauche.gif@22'); background-repeat: no-repeat; }
+.coin_bas_droite_detail_blanc { background-image: url('coinbasdroit.gif@22'); background-repeat: no-repeat; }
+.hautblanc { background-image: url('hautblanc.jpg@22'); background-repeat: no-repeat; height: 10px; }
+.basblanc { background-image: url('basblanc.jpg@22'); background-repeat: no-repeat; height: 10px; }
+.white { background-color: rgb(255, 255, 255); float: left; height: 7px; line-height: 1px; border: medium none; margin-left: 0px; margin-bottom: -1px; margin-top: -1px; }
+.grisclair { background-color: rgb(64, 63, 61); height: 18px; }
+.grisclair1 { background-color: rgb(217, 217, 217); }
+.libRetour { float: left; font-size: 11px; font-weight: bold; font-family: "trebuchet ms",Arial,Verdana; color: black; background-color: rgb(153, 153, 153); line-height: 19px; padding: 2px; }
+.imgRetour { float: left; background-color: rgb(153, 153, 153); padding: 2px; }
+a.imgRetour { text-decoration: none; }
+.titre { color: black; float: left; padding: 5px 200px 5px 5px; font-size: 46px; font-family: "trebuchet ms",Arial,Verdana; }
+.bande_rose_gauche { background-image: url('rosegauche.png@22'); background-repeat: no-repeat; float: left; margin-left: 10px; font-size: 0pt; height: 22px; width: 8px; }
+.bande_rose_droite { background-image: url('rosedroite.png@22'); background-repeat: no-repeat; float: left; font-size: 0pt; height: 22px; width: 8px; }
+.ouverturecompte { float: left; color: rgb(255, 255, 255); background-color: rgb(160, 13, 89); padding: 2px; width: 610px; font-family: "trebuchet ms",Arial,Verdana; font-size: 12px; font-weight: bold; }
+.fond_bandeau { background-color: rgb(246, 246, 246) ! important; }
+.bandeau_recherche_outer { margin-left: 10px; height: 60px; }
+.bandeau_recherche { width: 700px; height: 60px; background-image: url('fond-grey.gif@22'); background-color: rgb(64, 63, 61); background-repeat: no-repeat; }
+.bandeau_recherche_inner { float: left; width: 630px; padding: 5px 0px 0px; }
+.bandeau_recherche_libelle { float: left; text-align: left; font-size: 16px; color: rgb(255, 255, 255); width: 230px; margin-left: 8px; margin-top: 5px; line-height: 18px; font-weight: bold; }
+.bandeau_recherche_champs { width: 300px; float: left; padding-top: 10px; }
+.bandeau_recherche_champ_arrondi { width: 440px; margin: 0px 5px 3px 0px; padding-top: 5px; }
+.bandeau_recherche_champ_arrondi_inner_gauche { float: left; height: 21px; width: 8px; }
+.bandeau_recherche_champ_arrondi_inner_droite { float: left; height: 21px; width: 8px; }
+.bandeau_recherche_champ_arrondi_inner_centre { float: left; height: 21px; padding-top: 5px; }
+.bandeau_recherche_inner form .champ { font-family: "trebuchet ms",Arial; float: left; position: relative; top: 3px; left: 0px; border: 0px none; line-height: 16px ! important; height: 18px ! important; font-size: 12px; background: none repeat scroll 0% 0% transparent; }
+.bandeau_recherche_bouton { position: relative; margin-top: 15px; }
+.bandeau_recherche_bloc_trier_outer { padding-left: 26px; }
+.bandeau_recherche_bloc_trier { float: left; width: 222px; color: rgb(255, 255, 255); font-size: 11px; position: relative; }
+.bandeau_recherche_bloc_trier img { position: relative; top: 3px; }
+.bandeau_recherche_bloc_filtrer { float: left; color: rgb(255, 255, 255); font-size: 11px; width: 340px; position: relative; }
+.bandeau_recherche_bloc_filtrer img { position: relative; top: 3px; }
+.checkbox { margin: 0px; padding: 0px; position: relative; top: 0px; }
+.legende { float: right; width: 180px; padding: 10px 10px 0px 0px; }
+.legende_libelle { float: right; font-size: 11px; color: rgb(102, 102, 102); width: 150px; }
+.legende_items { float: right; font-size: 11px; color: rgb(102, 102, 102); width: 150px; }
+.legende_item { float: right; margin: 0px 5px; }
+.ligne_blanche_gauche { background-image: url('ligne_blanche_gauche.png@22'); background-repeat: no-repeat; width: 10px; }
+.ligne_blanche_droite { background-image: url('ligne_blanche_droite.png@22'); background-repeat: no-repeat; width: 10px; }
+.coin_blanc_haut_gauche { background-image: url('coin_blanc_haut_gauche.png@22'); background-repeat: no-repeat; border: medium none; }
+.coin_blanc_haut_droite { background-image: url('coin_blanc_haut_droite.png@22'); background-repeat: no-repeat; }
+.coin_blanc_bas_droite { background-image: url('coin_blanc_bas_droite.png@22'); background-repeat: no-repeat; }
+.coin_blanc_bas_gauche { background-image: url('coin_blanc_bas_gauche.png@22'); background-repeat: no-repeat; }
+.tab_coin td { width: 7px; }
+table td span.texte_tableau { font-size: 12px; line-height: 14px; font-weight: bold; color: rgb(0, 0, 0); }
+table td div.texte_tableau_petit { font-size: 12px; line-height: 12px; color: rgb(0, 0, 0); font-weight: normal; padding-top: 5px; }
+table td span.texte_tableau_violet { font-size: 13px; line-height: 13px; font-weight: bold; color: rgb(161, 13, 89); }
+td.nav_blanc { background-color: rgb(255, 255, 255); }
+table.fond_navigation { background-image: url('fond_navigation.jpg@22'); background-repeat: repeat-y; }
+table.fond_navigation td { font-size: 11px; }
+.menu_bas { width: 800px; text-align: center; }
+.menu_bas_inner { width: 400px; border: 1px solid rgb(0, 0, 0); text-align: center; }
+a.liens_tarifs:link, a.liens_tarifs:active, a.liens_tarifs:visited, a.liens_tarifs:hover { font-size: 12px; font-weight: bold; color: rgb(0, 0, 0); text-decoration: underline; }
+#colonne_droite_detail { float: right; width: 145px; height: 500px; position: relative; padding-top: 10px; }
+.tableau_parenthese { position: relative; top: 3px; }
+.espacement_menu { padding-top: 3px; padding-right: 8px; }
+.espacement_top_menu { padding-top: 3px; }
+.fond_deroulant { background-color: rgb(136, 136, 136); }
+.tab_deroulant a:link, .tab_deroulant a:active, .tab_deroulant a:visited { color: rgb(255, 255, 255); text-decoration: none; font-size: 11px; }
+.tab_deroulant a:hover { color: rgb(255, 255, 255); }
+table.tab_deroulant td { margin: 0px; padding: 0px; }
+.tab_deroulant img { position: relative; top: 0px; }
+.lien_res { text-decoration: none; }
+.auteur { padding-top: 5px; }
+.normal { font-weight: normal; }
+.espacement_tableau_res { height: 15px; }
+.logo { padding-top: 10px; padding-left: 10px; }
+.coin_haut_gauche_detail_blanc { background-image: url('coin_haut_gauche_detail_blanc.gif@22'); background-repeat: no-repeat; }
+.coin_bas_gauche_detail_blanc { background-image: url('coin_bas_gauche_detail_blanc.gif@22'); background-repeat: no-repeat; }
+.coin_haut_droite_detail_blanc { background-image: url('coin_haut_droite_detail_blanc.gif@22'); background-repeat: no-repeat; }
+.coin_bas_droite_detail_blanc { background-image: url('coin_bas_droite_detail_blanc.gif@22'); background-repeat: no-repeat; }
+#Txt_Recherche_id { background: none repeat scroll 0pt 0pt transparent; border: 0pt none; height: 18px; left: 0pt; margin: 0pt; padding: 0pt; position: relative; top: 0pt; width: 390px; }
+.bouton_rose { width: 220px; height: 40px; background-image: url('bouton_lba.gif@22'); background-repeat: no-repeat; padding-top: 1px; }
+.bouton_rose a:hover { color: rgb(64, 63, 61); }
+.bouton_partage { width: 140px; height: 90px; background-image: url('bouton_partage_p.gif@22'); background-repeat: no-repeat; padding-top: 7px; }
+.bouton_decouvrir { width: 140px; height: 60px; background-image: url('bouton_decouvrir.gif@22'); background-repeat: no-repeat; color: rgb(255, 255, 255); font-size: 14px; padding-top: 10px; }

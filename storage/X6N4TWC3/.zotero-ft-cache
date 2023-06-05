@@ -1,0 +1,1001 @@
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH Public Access
+Author Manuscript
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+Published in final edited form as: Stat Med. 2013 June 30; 32(14): 2430–2442. doi:10.1002/sim.5647.
+A unified inference procedure for a class of measures to assess improvement in risk prediction systems with survival data
+Hajime Unoa,b,*,†, Lu Tianc, Tianxi Caib, Isaac S. Kohaned, and L. J. Weib aDepartment of Biostatistics and Computational Biology, Dana Farber Cancer Institute, Boston, MA, U.S.A. bDepartment of Biostatistics, Harvard University, Boston, MA, U.S.A. cDepartment of Health Research and Policy, Stanford University School of Medicine, Stanford, CA, U.S.A. dDivision of Health Sciences and Technology, Harvard University and Massachusetts Institute of Technology, Cambridge, MA, U.S.A.
+Abstract
+Risk prediction procedures can be quite useful for the patient’s treatment selection, prevention strategy, or disease management in evidence-based medicine. Often, potentially important new predictors are available in addition to the conventional markers. The question is how to quantify the improvement from the new markers for prediction of the patient’s risk in order to aid cost– benefit decisions. The standard method, using the area under the receiver operating characteristic curve, to measure the added value may not be sensitive enough to capture incremental improvements from the new markers. Recently, some novel alternatives to area under the receiver operating characteristic curve, such as integrated discrimination improvement and net reclassification improvement, were proposed. In this paper, we consider a class of measures for evaluating the incremental values of new markers, which includes the preceding two as special cases. We present a unified procedure for making inferences about measures in the class with censored event time data. The large sample properties of our procedures are theoretically justified. We illustrate the new proposal with data from a cancer study to evaluate a new gene score for prediction of the patient’s survival.
+Keywords area under the receiver operating characteristic curve; C-statistic; Cox’s regression; integrated discrimination improvement; net reclassification improvement; risk prediction
+1. Introduction
+Consider the case that the response variable T is the time to a specific event of interest, which is possibly censored. Also let Z be its corresponding vector of baseline covariates or predictors. Suppose that we are interested in predicting the risk p(Z; t0) = pr(T ≤ t0 | Z), where t0 is a pre-specified time point. Let Z(1) be a function of Z that consists of the ‘conventional’ predictor values and Z(2) be a function of Z that contains Z(1) and also new
+Copyright © 2012 John Wiley & Sons, Ltd. * Correspondence to: Hajime Uno, Department of Biostatistics and Computational Biology, Dana Farber Cancer Institute, 450 Brookline Avenue, Boston, MA 02115, U.S.A. †huno@jimmy.harvard.edu
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 2
+
+predictor values. The question is whether a prediction model with Z(2) can improve the predictive ability over a model with Z(1). The next question would be how to quantify the added value from the new markers for cost–benefit purposes over the entire study population.
+A commonly used statistical method to answer the first question is to fit the data with a working survival model (e.g., the Cox proportional hazards model) with Z(2) and then utilize statistical significance tests for association of the new markers with the risk to identify important new predictors. Unfortunately, this approach sheds little light on the degree of improvement resulting from new markers. To answer the second question, a popular procedure is to use the improvement in the area under the receiver operating characteristic (ROC) curve (i.e., compute the difference between two areas under the ROC curves based on Z(1) and Z(2)) [1–3]. Recently, the time-specific ROC curve methods have been modified to deal with censored event time data [4, 5]. Various C-statistics type summary measures have also been proposed to quantify the overall adequacy of risk prediction [6–8]. However, it has been shown that these metrics are not sensitive enough to capture a meaningful improvement from the new markers over the conventional counterparts [9–11].
+Recently, a number of new measures for quantifying the added value from the new markers were proposed [12, 13]. For example, the integrated discrimination improvement index (IDI) and the net classification improvement (NRI) studied by Pencina et al. [13]. These two measures have drawn much attention in medical research, especially in evaluation of markers for cardiovascular disease progression or burden. For example, as of August 2011, more than 200 publications in clinical studies had utilized or cited these new measures (see PubMed.gov: http://www.ncbi.nlm.nih.gov/pubmed), indicating that there is a real need for alternatives to the ROC-related measures. Further insightful comments about these two metrics can be found in [14, 15].
+The original estimate for the IDI could not handle cases in the presence of censoring. More recently, Chambless et al. [16] and Pencina et al. [17] provided modified estimators to account for censoring in survival data. To obtain the corresponding standard error estimates, the standard bootstrap method was utilized. It is not clear, however, that such a resampling method can be justified under a general random censorship model. In this paper, we present a class of measures that quantify the added values from the new markers. This class includes the popular IDI and NRI [17] metrics as special cases. We then apply a novel resamplingperturbation inference procedure to obtain the confidence interval estimates with theoretical justification.
+
+For a random independent subject that is not in the study sample, let Z = Z0,
+
+, and
+
+denote its covariate vectors, and let T = T0 denote event time. Assume that we are interested in estimated risk probabilities at a particular time point, t0. We define subjects who have events by t0 as cases (i.e., T0 ≤ t0) and those who are event-free as controls (i.e.,
+
+T0 > t0). Let
+
+and
+
+be two approximations to p (Z0; t0) via two working
+
+survival models. Define
+
+, which denotes the change in
+
+eesxtpimecateteddthriastkDsĉ (oZr0e;.
+
+Heuristically, t0) tends to be
+
+if gives positive for
+
+a a
+
+better prediction than case and negative for
+
+a
+
+, it can be control. The
+
+class
+
+otwf omdeiassturirbeustwioenscoonfsDid̂ (eZr 0h;etr0e).isTaheseatfoorfegmloebnatilomneedasIuDreIs[1fo3r],thfoer‘edxisatmanpclee’,
+
+between these belongs to this
+
+cvlaalsuse.sTohfeDlî m(Zi0t;Mt0()1)f(ot0r)thfoerctahsiessinanddexc,oanstrnoglso.eTshtaot
+
+∞, is,
+
+is
+
+simply
+
+the
+
+difference
+
+of
+
+the
+
+mean
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 3
+
+(1)
+
+where the expectation is with respect to (Z0, T0). Note that the individual average values for the cases and controls in (1) are also quite informative. Pencina et al. [13] and Pepe et al.
+
+[14] discussed
+
+extensively and connected it to other quantitative discrimination
+
+measures between the cases and controls. Another measure in this class is M(2)(t0), the limit
+
+of
+
+(2)
+
+proposed by Pencina et al. [17] as an extension of NRI discussed in [13].
+
+Estimators for M(1)(t0) and M(2)(t0) to account for censoring have been proposed by Chambless et al. [16] and Pencina et al. [17], respectively. In particular, Chambless et al.
+
+[16] utilized the fact that
+
+can be written as
+
+(3)
+
+when respect to
+
+and
+
+are well calibrated [14], that is, they are consistent with
+
+and
+
+, respectively. Chambless et al. [16] then used
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+to estimate (3). It is not clear whether this would estimate M(1)(t0) well when
+are not well calibrated. Recently, Pencina et al. [17] showed that rewritten as
+
+and can be
+
+(4)
+Note that, because of the association between T0 and Z0, the probabilities in the preceding Equation (4) should be estimated by estimating conditional probabilities given Z0 firstly and integrating them with respect to the distribution of Z0. Unless the covariate vector can be discretized, the implementation may not be easy. Note that Chambless et al. [16] and Pencina et al. [17] utilized the standard bootstrap method to construct interval estimates for M(1)(t0) and M(2). It is not clear, however, if such a resampling method can be justified for the current case.
+In this article, we consider a class of measures for evaluating the added values of the new markers, which includes the preceding two as special cases. Moreover, we utilize a theoretically justifiable perturbation-resampling method to make inferences about those Dm(̂e·a;stu0)r:es. Specifically, we consider two distribution functions based on the paired difference
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 4
+
+(5)
+
+and
+
+(6)
+
+where (s, u) ∈ [−1, 1] × [−1, 1] and the probabilities are with respect to the data and (T0, Z0). A plot of these two functions jointly can be quite informative, with an example shown in Figure 1. If there is no difference between two competing working models, Fn(·; t0) ≈ Gn(·; t0), and we expect that Fn(·; t0) − Gn(·; t0) would be symmetric around 0. The larger the separation between these two curves, the larger the improvement in performance of the new
+markers with respect to the conventional ones. Any metric that quantifies the distance
+between these two curves would be a reasonable measure of the added value. Note that
+
+is the difference between two areas under the curves, and
+
+is the vertical
+
+distance between these two functions evaluated at s = u = 0, the distance between the two
+
+black dots in Figure 1. Another measure of improvement from the new markers is the
+
+difference of two medians of two distributions,
+
+, which is the distance between the
+
+two gray dots in Figure 1. In this paper, in the presence of censoring, we propose consistent
+
+estimators for the limits of (5) and (6). Furthermore, we show that, under mild regularity
+
+conditions, as a process of (s, u), the joint distribution of the standardized estimators for (5)
+
+and (6) is asymptotically Gaussian. We then show that this limiting distribution can be
+
+approximated easily via a perturbation-resampling method, which is similar to wild
+
+bootstrapping [18]. With this approximation, one can then make inferences about any
+
+smooth functionals of (5) and (6), for example, constructing confidence interval estimates for M(l)(t0), l = 1, 2, 3. We illustrate the new proposal with the data from a breast cancer study to evaluate the degree of improvement from a new gene-expression score over the
+
+conventional clinical markers for predicting the event rates for metastasis or mortality. We
+
+examine the performance of the new proposal extensively via a simulation study under
+
+various practical settings.
+
+2. Estimating the distribution of the difference between two competing risk
+
+scores
+
+Consider the case that the event time T may be censored by a random variable C, which is independent of T and Z. One can observe X = min(T, C) and a binary indicator function Δ, which is 1 if T is observed. Let {(Ti, Ci, Zi), i = 1, …, n}, be n independent copies of (T, C, Z). Let (Xi, Δi, Z(1i), Z(2i)) be the i th counterpart of (X, Δ, Z(1), Z(2)) in the sample. Also, let p̂k(Z(k); t0) be an estimator for p(Z; t0) with the data {(Xi, Δi, Z(ki)), i = 1, …, n}, k = 1, 2.
+
+To obtain estimates pk̂ (Z(k); t0), k = 1, 2, one may use the conventional Cox regression models [19]. Specifically, at time point t, we model the cumulative hazard function Λ(t;
+
+Z(k)) of T given Z(k) as
+
+, where Λk0(·) is the underlying cumulative hazard
+
+function, and βk is an unknown vector of parameters, for k = 1, 2. It is important to note that
+
+these models are unlikely to be correctly specified. Even so, under a mild regularity condition, the standard maximum partial likelihood estimator β̂k for βk converges to a constant vector, as n → ∞ [20]. This stability feature is essential for developing the large sample properties of estimators for Fn and Gn. Using the standard Breslow estimator Λ̂k0(t) for Λk0(t) [21], one may estimate the risk p(Z0; t0) by
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 5
+(7)
+FwfurhnoecmrteiothnealnadrgYe is(at)m=pIle(Xstia≥bitl)i.tyThperodpieffretyreonfceβ̂kD, ̂(itZf0o;,lNtl0o)iw(ct)sa=nthtIah(tXeDni ̂(≤b·;ett)d0Δ)eifc,ionIn(e·vd)eiarscgtcehosertdionindagifcliyant.ioter deterministic function D(·; t0) as n → ∞ [22]. Now, let F and G denote the limits of Fn and Gn, respectively. To estimate F and G in the presence of censoring, one may use the technique employed by Cheng et al. [23]. Specifically, let
+(8)
+and
+
+NIH-PA Author Manuscript
+
+where Ĥ(·) is the Kaplan–Meier estimator for the censoring distribution, H(t) = pr(C > t).
+
+THheeurpisrotiocfalolyf ,utnhiefoerxmpeccotnedsisvtaelnuceyooffnt−h1e×pnreucmeedriantgoresotfimF̂(a·t;otr0s)
+
+is given in the Appendix. is approximately equal to
+
+Similarly, the expected value of the standardized denominator of F̂ is approximately equal to pr(T ≤ t0).
+
+To make further inferences about F(·; t0) and G(·; t0), or functions thereof, in the Appendix
+
+w= en1s/h2o{wF̂(tsh;att0u) n−dFer(sm; ti0ld)}reagnudlWariGty(uc;otn0d) i=tionn1/s2a{sĜn(u→; t0∞) −, tGhe(ujo; itn0)t}dcisotnrivbeurtgioens
+
+of to
+
+WF(s; t0) a mean-
+
+zero Gaussian process indexed by (s, u) ∈ [−1, 1] × [−1, 1]. However, with the conventional
+
+method, we cannot estimate well the covariance functions of these limiting processes, which
+
+involve the unknown density functions. On the other hand, we can utilize a perturbation-
+
+resampling method, which is similar to a wild bootstrapping procedure, to generate
+
+ΔiGna,duZesp)s,einFand̂(·e;pntrt0o)rc,eeaasnlsid.zaSĜtpi(oe·nc; istf0io)c,faralelyspp,roeleccttei(svxse,ltδyh.,atLz)he,atFs{̃(Vt·h;iet,0is)a,=ma1ne,dd…Gis,(̃ t·rnit}b0)ubtbeioeanthraaesnodthboesmeprrsveaecmdepdvliaenlgufrelosimmoiftthi(nXeg, standard exponential distribution. We can approximate the joint distribution of WF(s; t0) and
+
+WG(u; t0) by using
+
+and
+
+where
+
+(9)
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+Uno et al.
+
+Page 6
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+(10)
+
+where H*(·) and D*(·; t0) are perturbed counterparts of Ĥ(·) and D̂(·; t0) by the same set of {Vi}, respectively. We give the details in the Appendix. We can show that when n is large, we can approximate well the joint unconditional distribution of the process {WF(·; t0), WG(·;
+
+t0)} by the conditional distribution of the process
+
+given the data. In
+
+practice, we can approximate the distribution of {WF(·; t0), WG(·; t0)} by a large number of
+
+realizations from
+
+via realized {Vi, i = 1, …, n}. It is interesting to note
+
+that F*(·; t0) and G*(·; t0) are non-decreasing functions.
+
+Nt0)o,wW, tGo(·m; ta0k)}e,iwnfeerceannceapapbroouxtima adtiefftehreendtiisatbrilbeuftuinocntioofnna1l/[22[ℋ4],{ℋF̂({·;Ft(0·;),t0Ĝ),(·G; t(0·;)}t0−)}ℋof{{FW(·;F(·;
+
+tℋ0){, FG̃((·;·;tt00)),}G] ̃(b·;ytt0h)}e]d. iOstnriebcuatinonu,secothnidsitaipopnraol xoinmtahteiodnattoa,
+
+of n1/2[ℋ {F*(·; t0), construct confidence
+
+G*(·; t0)} − intervals for
+
+M(l)(t0), l = 1, 2, 3, via the standard percentile method using the preceding approximation.
+
+3. Numerical studies
+3.1. Example
+We illustrate the proposed method with the data from a breast cancer study [25–27]. This retrospective study consists of gene-expression data and various conventional clinical markers from 295 women who had fresh-frozen tissues collected at the Netherlands Cancer Institute. The study patients were relatively young (≤52 years) and were diagnosed between 1984 and 1995. These patients were treated by either modified radical mastectomy or breastconserving surgery, including dissection of the axillary lymph nodes, followed by radiotherapy, if indicated. The patients’ follow-up information was extracted from the medical registry of the Netherlands Cancer Institute. For illustrating our new procedure, each patient’s gene-expression data are summarized with a single gene signature [27]. Our data set consists of 295 breast cancer patient files. Each file is composed of a patient’s clinical outcomes (metastasis/death or censoring time), the gene score, and conventional markers collected at time of surgery, including age, tumor diameter, number of positive lymph nodes, tumor grade, vascular invasion, estrogen receptor status, chemo/hormonal therapy or not, and mastectomy or breast-conserving surgery. The median follow-up time for study patients is 6.7 years, and the range is from 0.05 to 18.3 years. The data are available at http://microarray-pubs.stanford.edu/wound_NKI/explore.html. Note that the gene score proposed by Chang et al. [27] is different from the Dutch 70 scoring system [25, 26].
+
+Because the gene score is expensive to obtain, it is important to quantify the incremental
+value of the gene score over the conventional clinical markers for cost–benefit decisions. Here, T is the time from surgery to either the first metastasis or death. For illustration, we choose 5 and 10 years as t0 to evaluate the added value of the gene score over the conventional clinical markers for the short-term and long-term predictions. The 5-year and 10-year event-free rates are 72.6% and 61.5%, respectively. Let Z be the vector of all the aforementioned baseline covariate values. Furthermore, let Z(2) = Z, and Z(1) be the vector without the gene score. We fit the data with two additive Cox proportional hazards models described in Section 2 with Z(1) and Z(2), respectively. We report the regression coefficient estimates, with the corresponding standard error estimates, in Table I. Although some
+regression parameters are not statistically significantly different from 0, we include all the covariates in our analysis. For the i th patient with covariate vector Zi, we obtain a pair of
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 7
+
+risk scores {p̂1(Z(1i); t0), p̂2(Z(2i); t0)} for estimating p(Zi; t0) under our two models. A conventional way to evaluate the added value from Z(2) over Z(1) is to compare the corresponding time-specific area under the ROC curve at t0 [4]. For t0 = 10 years, the area under the ROC curve is improved from 0.71 to 0.74 by adding the gene score. With the
+standard bootstrapping method, a 0.95 confidence interval for the difference between these
+two areas under the curve is (−0.01, 0.06).
+
+Before versus
+
+presenting p̂2(·; t0) for
+
+the results t0 = 5 and
+
+of 10
+
+our new years in
+
+procedure, we show scatter diagrams of p̂1(·; t0) Figure 2. The dots in (a) and (c) represent the
+
+subjects who had events by t0, and the open circles denote the subjects who were censored
+
+before t0. The dots in (b) and (d) are those who were event-free at t0. If there are no censored
+
+observations, these plots are quite informative to examine the added value of the gene score.
+
+If the gene score has very little added value, one would expect that the dots are
+
+symmetrically distributed around the 45° line. The plots in Figure 2 show that the dots tend
+
+to be above the 45° line for cases but below the line for controls. These suggest that the gene
+
+signature may have some nontrivial incremental value.
+
+Because there are quite a few censored observations in inference on the basis of Figure 2. In Figure 1, we plot
+
+the the
+
+study, one cannot make valid estimated distribution functions
+
+F̂
+
+(·; t0), the thin curve, and Ĝ(·; t0), the thick curve. Graphically, the gene score appears to
+
+provide extra information regarding the prediction of both 5-year and 10-year event rates.
+
+The estimate for the integrated discrimination improvement, M(1)(t0), is the difference
+
+between the areas under the thin and thick curves. With 1000 perturbation samples, as
+
+discussed in Section 2, the resulting 0.95 confidence interval for the integrated discrimination improvement, M(1)(t0), is (0.01, 0.10) with t0 = 10 years. Note that we used the unit exponential as the resampler for the perturbation method in the analysis. Moreover,
+
+we obtained all the confidence interval estimates via the standard percentile method.
+
+The point estimate and 0.95 confidence interval for M(2)(t0), with t0 = 10 years, are 0.27 and (0.09, 0.43). That is, on average, the improvement from Z(2) over Z(1) is about 27%. Note
+
+that these estimates were constructed using the pairing information of
+
+and
+
+, which may be more sensitive than the conventional area under the ROC curvebased method.
+
+For the difference of medians for the two curves in Figure 1(b) (the distance between two gray dots), the point and 0.95 confidence interval for M(3)(t0), with t0 = 10 years, are 0.07 and (0.01, 0.12), respectively. As in other cases, generally the difference of two medians is difficult to estimate well, and the corresponding confidence interval tends to be rather large.
+The point estimates for M(l)(t0), l = 1, 2, 3, with t0 = 5 years, are 0.03, 0.27, and 0.03, and the corresponding 0.95 confidence intervals are (0.00, 0.08), (0.03, 0.38), and (0.00, 0.08), respectively. As Figure 1 also shows graphically, the magnitude of improvement with t0 = 5 years is similar to that with t0 = 10 years for this breast cancer example.
+It is interesting to note that the estimates for M(1) and M(3) provide us the average magnitudes of the incremental values of the gene score, which are modest. On the other hand, the improvement based on the estimate for M(2) is quite impressive. In practice, we recommend to utilize all three measures with Figure 1 to obtain a global assessment of the added value from the new markers.
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 8
+
+3.2. Simulation studies
+To examine the performance of the new inference procedure in practice, we conducted a simulation study under practical settings. Mimicking the gene-expression breast cancer study, we generated the event and censoring times with the aforementioned clinical markers and gene score. Specifically, we first fitted the breast cancer data with a parametric survival model, for instance, a Weibull or log-normal regression model, to create the true model for each simulation scenario. We repeatedly drew the clinical markers and gene score, Z, from the empirical distribution constructed from the observed Z of the breast cancer study. Then, we generated T from the true model with each Z being drawn. For each regression model for T, we considered three different types of censoring: (a) type I censoring, that is, every subject has the same follow-up time; (b) random censoring that is independent of survival time and covariates; and (c) random censoring that is dependent on covariates but independent of survival time conditional on the covariates. Specifically, for (a), we chose a constant, 15 years, as C; that is, we truncated all subjects at 15 years. For (b), we generated C, for each subject, as the minimum of 15 years and a realization from a Weibull distribution, the parameters of which were derived by fitting the breast cancer data. For (c), using the same set of covariates for generating T, we derived a Weibull regression model for censoring time by fitting the breast cancer data. Then, C was generated, for each subject, as the minimum of 15 years and a realization from the resulting Weibull regression model with a given Z. Note that our inference proposals are valid under (a) or (b) but not generally true under (c). Investigating the performance of the new inference procedure under (c) will thus shed light on the robustness of the proposed methods with respect to the violation of independent censoring assumption.
+We numerically obtained the true values for M(1), M(2), and M(3) by aMonte Carlo method with one million data points of (T, C, Z). We used two Cox working models, one with Z(1) and the other with Z(2) regardless of whether the true model was Weibull or log-normal. Note that, for each configuration, we used C only for estimating parameters in the working Cox models and the difference of the risk scores associated with each realization of Z.
+Now, for each realized sample (Ti, Zi, Ci), we fitted these simulated data with two Cox working models. For each simulation data set, we used the resampling method described in Section 2 with 1000 perturbation samples to construct 0.95 confidence intervals for M(l), l = 1, 2, 3, via the percentile method. We computed the empirical coverage levels for each case with 1000 realized data sets. In Table II, we present such empirical coverage probabilities with various censoring assumptions, sample sizes, and survival models. The interval estimation procedures are satisfactory, even when the censoring distribution depends on the covariates. For M(2), the coverage levels tend to be higher than their nominal values. This may be due to the fact that the estimator for M(2) involves the indicator functions and is not smooth. We may utilize some smoothing techniques for this case [28], but the choice of a proper smoothing parameter needs further research.
+
+4. Remarks
+If there are very few censored observations before t0, the scatter diagram like Figure 2 is quite informative to evaluate the added value of the new markers. For each subject, one can easily see the incremental value of the risk score with the new markers as well as the corresponding conventional score. For example, in Figure 2, for the subjects who had events, it appears that the addition of the gene score does help when the conventional score is, say, more than 0.4. Unfortunately, however, for the cancer example, the censoring proportion at year 10 is about 40%. Figure 2 by itself is not particularly useful. The distribution function plot in Figure 1 is informative for the contrast of two scoring systems, where censoring can be handled as we propose. On the other hand, it is not clear how to add
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 9
+
+the information of the conventional score to such plots to explore where the gain would be from the new markers. A specific procedure recently proposed by Uno et al. [29] may provide a partial solution to this problem. Further research is needed along this line in the presence of censoring.
+
+For the analysis of the data from the cancer study presented in Section 3, we discretized the event time using 5-year and 10-year cutoff time points to define cases and controls. In practice, the choice of t0 will depend on the disease of interest.
+We use an inverse probability weighting scheme to estimate the two distribution functions (5) and (6). Note that we can also rewrite (5) and (6) in the form similar to (4) so that one can utilize the Kaplan–Meier estimates for the event time to estimate (5) and (6) as Pencina et al. [17] did. However, it is not clear whether the resulting estimates for the distribution functions would be monotone non-decreasing.
+
+In this paper, our proposed procedure assumes that the censoring distribution is independent
+
+of both the event time and covariates. This assumption on censoring is not unreasonable in a
+
+well-executed clinical study, especially when the censoring is primarily due to
+
+administrative reasons. When the covariate vector can be discretized, we can modify easily
+
+our proposed procedure using stratified Kaplan–Meier estimates for the censoring by
+
+replacing construct
+
+aĤc(Xoni)diitnio(n8a)lweistthimĤa(tXe iĤ| (ZXi)i.|IZni)gennoenrpaal,raitmisetdriicffailcluylwt, hifennotthiemdpimosesnibsiloe,ntoof
+
+Zi
+
+is
+
+more than 1. Therefore, one needs to assume a parametric model for censoring, with
+
+covariates, to estimate M(l), l = 1, 2, 3. Any model assumption for censoring is subject to the
+
+potential inadequacy of the final evaluation. We may justify the validity of the resulting
+
+estimation procedure via a simulation study. On the basis of our numerical study, it appears
+
+that our assumption about censoring is not that crucial in practice.
+
+It is important to note that measures in the class we have discussed in this article share the
+
+issue on the null behavior of nested models recently investigated by Kerr et al. [30] and
+
+Demler et al. [31]. Heuristically, when nested models are fitted and the regression
+
+coefficients associated ≡ 0 for all Z and D (Z;
+
+wθ̂1i,thθâ2)llcnoenwveprrgeedsictotoarsdaergeezneerroatuendddeirsttrhiebubtiigognewr mithodaepl,oDin(tZm, aθs1s,
+
+θ2) at
+
+0. The large sample theories given in the Appendix will not be valid for this degenerated
+
+case, and tools such as Edgeworth expansion [32] might be needed to derive higher order
+
+inference for this case. As Kerr et al. [30] or Demler et al. [31] suggested, for nested models,
+
+the interval estimation should be performed only when the regression coefficients for the
+
+added predictors are significantly different from 0, and those measures will not be used for
+
+testing against the null.
+
+An R package (SURVIDINRI) for implementing the new inference procedure is available from the R website (http://cran.r-project.org/web/packages/survIDINRI/index.html).
+
+Appendix A
+
+Let
+
+be a vector of parameters for k = 1, 2. Note that throughout the
+
+Appendix, all arguments involving θk contain a fixed time point t0, although t0 does not
+
+explicitly appear in the arguments. Let
+
+and D(Z; θ1, θ2) =
+
+p2(Z(2); θ2) θk0, as n →
+
+−∞p,1a(Znd(1)t;hθen1)p. ̂kS(uZp(kp)o)s=e
+
+that the pk(Z(k);
+
+eθsk̂ t)imanadtoDr (̂ Z)
+
+=
+
+p2(Z(2);
+
+θ̂2)
+
+−
+
+converges p1(Z(1); θ̂1).
+
+to
+
+Furthermore, we denote the parameter space for θk by Bk, k = 1, 2. To derive the asymptotic
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 10
+properties, we assume that Bk is a compact set containing θk0, and Z(k) has bounded support. We also assume that D(Z; θ1, θ2) is a continuous random variable with a non-degenerated density function continuous in θ1 ∈ B1 and θ2 ∈ B2. Firstly, we will show the uniform consistency of F̂(s) and Ĝ(u). To this end, let
+
+It follows, from the uniform consistency of Ĥ(·) [21] and a uniform law of large numbers [33], that
+
+where
+Coupled with the convergence of θ̂k → θk0, this implies that F(̂ s, θ̂1, θ̂2) is uniformly ccoonnssiisstteenntcyfoorfFĜ(s(,·)θ.10, θ20) = F(s). We show with the same argument the uniform Secondly, to derive the limiting distribution of WF(s) = n1/2 {F(̂ s) − F(s)}, let
+and
+
+Note that
+
+(A1)
+
+we θ1,
+
+will and
+
+first show the stochastic equicontinuity of θ2. To this end, it is adequate to show that
+
+the
+
+process
+
+WFa(s,
+
+θ1,
+
+θ2)
+
+indexed
+
+by
+
+s,
+
+(A2)
+
+is tight. From the standard asymptotic theory for the Kaplan–Meier estimator [21],
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 11
+
+where πX(t) = pr(Xi ≥ t),
+
+,
+
+and ΛC(·) is the cumulative hazard function for the common censoring variable. Using the
+
+aforementioned relationship, we can rewrite (A2) as
+
+(A3)
+
+where
+
+To prove that (A2) is tight in θ1, θ2, and s, one only needs to show that ℱ = {D(z, θ1, θ2) − s : θ1, θ2, s} is Donsker as the last term in (A3) only involves a smooth deterministic function in (θ1, θ2, s). Because Bk is bounded, it can be covered by Nk = ε−dk) balls centered at θk[j] ∈ Bk with a radius of ε, where j = 1, …, Nk, and dk is the dimension of θk, k = 1, 2. Coupled with the fact that Z has a bounded support, it implies that for any θk ∈ Bk,
+
+one can find 1 ≤ jk ≤ Nk such that
+
+for a positive constant C1k, where
+
+and zk ∈ support of Z(k). Furthermore, we can select N3 = ε−1) points in the
+
+interval [−1, 1] such that θ2, and s, we can find j1,
+
+−1 j2,
+
+= s1 < and j3,
+
+s2 < ⋯ < sN3 such that
+
+=
+
+1
+
+and
+
+si
+
+−
+
+si−1
+
+≤
+
+ε.
+
+Therefore,
+
+for
+
+any
+
+θ1,
+
+estimate the bracketing number of ℱ. Let
+
+. In the following, we will
+
+NIH-PA Author Manuscript
+
+and
+
+NIH-PA Author Manuscript
+
+where 1 ≤ i ≤ N1, 1 ≤ j ≤ N2, 1 ≤ k ≤ N3. The brackets [lijk(z), uijk(z)], 1 ≤ i ≤ N1, 1 ≤ j ≤ N2, 1 ≤ k ≤ N3 covers ℱ and
+
+as the density function of D(Z, θ1, θ2) is uniformly bounded. Therefore, the bracketing
+
+number of ℱ is asymptotically,
+
+(ε−2(d1+d2+1)), and thus ℱ WFa (·, θ̂1, θ̂2) is equivalent
+
+is to
+
+Donsker. Thus, WFa(·, θ1, θ2) WFa(·, θ10, θ20), uniformly in
+
+is s.
+
+tight,
+
+and
+
+Next, by a Taylor series expansion,
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 12
+
+(A4)
+
+where
+
+. Because regardless of model adequacy, the maximum partial likelihood
+
+estimator θk̂ is a regular estimator, that is,
+
+where ψk1, ⋯, ψkn are n i.i.d mean-zero random variables. Coupled with (A1), (A3), and (A4),
+
+where
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+where ST(t0) = pr(T > t0). Similarly, one may show that
+uniformly in u. Therefore,
+Following the similar arguments as earlier, one may show that the class of functions {πF(s; z, x, δ), πG(u; z, x, δ)}′ indexed by s and u is Donsker, and thus {WF(s), WG(u)}′ converges to a mean-zero- two-dimensional Gaussian process on [−1, 1] × [−1, 1]. The perturbed version of Ĥ in (7) is given by
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+Uno et al.
+
+Page 13
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+where H̃(·) is the observed Ĥ(·),
+
+and ΛC̃ (·) is the
+
+observed Nelson–Aalan estimator of the cumulative hazard function for the censoring
+
+variable C. D*(·) in (9) and (10) is given by
+
+where and
+
+are the same ones as given in [22]; that is,
+
+and
+
+are
+
+and
+
+respectively, where β̃k is the observed βk̂ , Λk̃ 0(t) is the observed Λk̂ 0(t), ,
+
+and for any vector x, x⊗0 = 1, x⊗1 = x, x⊗2 = x′x.
+
+Now, let conditional
+
+on
+
+data
+
+and
+
+n1/2
+
+and (θk̂ −
+
+θk̃ 0 be the observed θ̂k0; it can be shown that θk0) converges to the same limiting normal distribution
+
+[22]. Furthermore, using similar expressions given as (A1), (A3), and (A4), it is also
+
+straightforward to show that
+
+can be approximated by
+
+(Vi − 1), where πF̃ (s; z, x, δ) and π̃G(u; z, x, δ) are
+
+observed counterparts of functional delta method,
+
+πF(s; z, d, δ) and πG(u; we can approximate the
+
+dzi,sdtr,iδb)u,tiroenspoefctWivHely=.nT1h/2er[eℋfo{reF,̂(b·)y,
+
+Ĝ(·)}
+
+−
+
+ℋ{F(·), G(·)}] by that of
+
+conditional on the
+
+observed data in the sense that probability for any ε > 0.
+
+converges to 0 in
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 14
+
+References
+1. Bamber D. The area above the ordinal dominance graph and the area below the receiver operating characteristic graph. Journal of Mathematical Psychology. 1975; 12:387–415.
+2. Hanley JA, McNeil BJ. The meaning and use of the area under a receiver operating characteristic (ROC) curve. Radiology. 1982; 143(1):29–36. [PubMed: 7063747]
+3. D’Agostino, RB.; Griffith, JL.; Schmidt, CH.; Terrin, N. Proceedings of the Biometrics Section. Alexandria, VA, U.S.A: American Statistical Association; 1997. Measures for evaluating model performance; p. 253-258.
+4. Heagerty PJ, Zheng Y. Survival model predictive accuracy and ROC curves. Biometrics. 2005; 61(1):92–105. [PubMed: 15737082]
+5. Cai T, Cheng S. Robust combination of multiple diagnostic tests for classifying censored event times. Biostatistics. 2008; 9(2):216–233. [PubMed: 18056687]
+6. Harrell FE, Lee KL, Mark DB. Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors. Statistics in Medicine. 1996; 15(4):361–387. [PubMed: 8668867]
+7. Pencina MJ, D’Agostino RB. Overall C as a measure of discrimination in survival analysis: model specific population value and confidence interval estimation. Statistics in Medicine. 2004; 23(13): 2109–2123. [PubMed: 15211606]
+8. Uno H, Cai T, Pencina MJ, D’Agostino RB, Wei LJ. On the C-statistics for evaluating overall adequacy of risk prediction procedures with censored survival data. Statistics in Medicine. 2011; 30:1105–1116. [PubMed: 21484848]
+9. Pepe MS, Janes H, Longton G, Leisenring W, Newcomb P. Limitations of the odds ratio in gauging the performance of a diagnostic, prognostic, or screening marker. American Journal of Epidemiology. 2004; 159(9):882–890. [PubMed: 15105181]
+10. Greenland P, O’Malley PG. When is a new prediction marker useful? A consideration of lipoprotein-associated phospholipase A2 and C-reactive protein for stroke risk. Archives of Internal Medicine. 2005; 165(21):2454–2456. [PubMed: 16314539]
+11. Ware JH. The limitations of risk factors as prognostic tools. The New England Journal of Medicine. 2006; 355(25):2615–2617. [PubMed: 17182986]
+12. Cook NR, Buring JE, Ridker PM. The effect of including C-reactive protein in cardiovascular risk prediction models for women. Annals of Internal Medicine. 2006; 145:21–29. [PubMed: 16818925]
+13. Pencina M, D’Agostino RB Sr, D’Agostino RB Jr, Vasan R. Comments on ’integrated discrimination and net reclassification improvements—practical advice’. Statistics in Medicine. 2008; 27(2):207–212.
+14. Pepe MS, Feng Z, Gu JW. Comments on ‘Evaluating the added predictive ability of a new marker: from area under the ROC curve to reclassification and beyond’ by Pencina et al. Statistics in Medicine. 2008; 27:173–181. [PubMed: 17671958]
+15. Cook N, Ridker PM. Advances in measuring the effect of individual predictors of cardiovascular risk: the role of reclassification measures. Annals of Internal Medicine. 2009; 150:795–802. [PubMed: 19487714]
+16. Chambless LE, Cummiskey CP, Cui G. Several methods to assess improvement in risk prediction models: extension to survival analysis. Statistics in Medicine. 2011; 30(1):22–38. [PubMed: 20827726]
+17. Pencina M, D’Agostino RB, Steyerberg EW. Extensions of net reclassification improvement calculations to measure usefulness of new biomarkers. Statistics in Medicine. 2011; 30(1):11–21. [PubMed: 21204120]
+18. Wu C. Jackknife, bootstrap and other resampling methods in regression analysis. The Annals of Statistics. 1986; 14(4):1261–1295.
+19. Cox DR. Regression models and life-tables. Journal of the Royal Statistical Society. Series B (Methodological). 1972; 34(2):187–220.
+20. Hjort N. On inference in parametric survival data models. International Statistical Review / Revue Internationale de Statistique. 1992; 60(3):355–387.
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 15
+21. Kalbfleisch, JD.; Prentice, RL. The Statistical Analysis of Failure Time Data. 2nd ed.. New York: John Wiley & Sons, Inc.; 2002.
+22. Cai T, Tian L, Uno H, Solomon SD, Wei LJ. Calibrating parametric subject-specific risk estimation. Biometrika. 2010; 97(2):389–404. [PubMed: 23049123]
+23. Cheng S, Wei LJ, Ying Z. Analysis of transformation models with censored data. Biometrika. 1995; 82(4):835–845.
+24. van der Vaart, A. Asymptotic Statistics. Cambridge: Cambridge University Press; 2000. 25. van de Vijver MJ, He YD, van’t Veer LJ, Dai H, Hart AAM, Voskuil DW, Schreiber GJ, Peterse
+JL, Roberts C, Marton MJ, Parrish M, Atsma D, Witteveen A, Glas A, Delahaye L, van der Velde T, Bartelink H, Rodenhuis S, Rutgers ET, Friend SH, Bernards R. A gene-expression signature as a predictor of survival in breast cancer. The New England Journal of Medicine. 2002; 347(25): 1999–2009. [PubMed: 12490681] 26. van’t Veer LJ, Dai H, van de Vijver MJ, He YD, Hart AAM, Mao M, Peterse HL, van der Kooy K, Marton MJ, Witteveen AT, Schreiber GJ, Kerkhoven RM, Roberts C, Linsley PS, Bernards R, Friend SH. Gene expression profiling predicts clinical outcome of breast cancer. Nature. 2002; 415(6871):530–536. [PubMed: 11823860] 27. Chang HY, Nuyten DSA, Sneddon JB, Hastie T, Tibshirani R, Sørlie T, Dai H, He YD, van’t Veer LJ, Bartelink H, van de Rijn M, Brown PO, van de Vijver MJ. Robustness, scalability, and integration of a wound-response gene expression signature in predicting breast cancer survival. Proceedings of the National Academy of Sciences of the United States of America. 2005; 102(10): 3738–3743. [PubMed: 15701700] 28. van der Vaart A. Weak convergence of smoothed empirical processes. Scandinavian Journal of Statistics. 1994; 21(4):501–504. 29. Uno H, Cai T, Tian L, Wei LJ. Graphical procedure for evaluating overall and subject-specific incremental values from new predictors with censored event time data. Biometrics. 2011; 67:1389–1395. [PubMed: 21504421] 30. Kerr KF, McClelladm RL, Brown ER, Lumley T. Evaluating the incremental value of new biomarkers with integrated discrimination improvement. American Journal of Epidemiology. 2011; 174(3):364–374. [PubMed: 21673124] 31. Demler OV, Pencina MJ, D’gostino RB. Misuse of DeLong test to compare AUCs for nested models. Statistics in Medicine. 2012; 31(23):2577–2587. [PubMed: 22415937] 32. Hall, P. The Bootstrap and Edgeworth Expansion. New York: Springer-Verlag; 1997. 33. Pollard, D. Empirical Processes: Theory and Applications. Hayward, CA: Institute of Mathematical Statistics; 1990.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+Uno et al.
+
+Page 16
+
+Figure 1. Empirical
+
+distribution
+
+function
+
+of
+
+D̂
+
+for
+
+T0
+
+≤
+
+t0
+
+(thick
+
+solid
+
+line)
+
+and
+
+T0
+
+>
+
+t0
+
+(thin
+
+solid
+
+line).
+
+The difference between areas under two curves is
+
+, and the distances between two
+
+black dots and between two gray dots are
+
+and
+
+, respectively.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+Uno et al.
+
+Page 17
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Figure 2.
+Scatter diagram of p̂1 (x-axis) versus p̂2 (y-axis) with the breast cancer data: (a) subjects with event (black dot) and censored (white circle) by 5 years; (b) subjects without event by 5 years; (c) subjects with event (black dot) and censored (white circle) by 10 years; and (d) subjects without event by10 years.
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Table I Estimates of regression parameters for Cox’s models with breast cancer data.
+
+Uno et al.
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+Model without gene score Model with gene score
+
+Est.(1) SE(2) p(3)
+
+Est. SE
+
+p
+
+Age/10 (years)
+
+−0.47 0.17 0.01 −0.57 0.18 0.00
+
+Diameter of tumor (cm)
+
+0.19 0.11 0.10 0.18 0.12 0.12
+
+Lymph nodes
+
+0.00 0.08 0.98 −0.01 0.08 0.90
+
+Grade = 2 vs. 1
+
+1.00 0.35 0.00 0.74 0.35 0.04
+
+Grade = 3 vs. 1
+
+1.11 0.35 0.00 0.66 0.37 0.08
+
+Vascular invasion 1–3 vs. 0
+
+0.08 0.37 0.83 −0.10 0.37 0.78
+
+Vascular invasion > 3 vs. 0
+
+0.81 0.62 0.19 0.64 0.63 0.30
+
+Estrogen status=positive
+
+−0.39 0.23 0.09 −0.16 0.24 0.51
+
+Chemo or hormonal=Yes
+
+−0.54 0.33 0.11 −0.49 0.33 0.14
+
+Mastectomy=Yes
+
+0.13 0.21 0.54 0.21 0.22 0.34
+
+Gene score
+
+––
+
+–
+
+2.43 0.67 0.00
+
+(1)Estimate (2)
+Standard (3)p-value
+
+Page 18
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+
+Table II
+Empirical coverage probabilities of 0.95 confidence intervals for M(1)(10), M(2)(10) and M(3)(10) based on 1000 iterations.
+
+Uno et al.
+
+Stat Med. Author manuscript; available in PMC 2013 August 06.
+
+True model Censoring
+
+N M(1)(10) M(2)(10) M(3)(10)
+
+Weibull
+
+(a) Type I
+
+200 0.935 0.975 0.934
+
+300 0.941 0.976 0.949
+
+(b) Independent
+
+200 0.938 0.988 0.935
+
+300 0.943 0.985 0.945
+
+(c) Cond. independent 200 0.945 0.988 0.955
+
+300 0.941 0.990 0.971
+
+Log-normal (a) Type I
+
+200 0.939 0.988 0.954
+
+300 0.934 0.973 0.950
+
+(b) Independent
+
+200 0.938 0.996 0.946
+
+300 0.924 0.983 0.950
+
+(c) Cond. independent 200 0.943 0.992 0.969
+
+300 0.920 0.982 0.955
+
+Page 19
+

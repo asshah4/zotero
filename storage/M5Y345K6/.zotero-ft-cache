@@ -1,0 +1,1540 @@
+| | Received: 23 June 2018    Revised: 14 August 2018    Accepted: 14 August 2018
+DOI: 10.1111/psyp.13287
+REVIEW
+Should heart rate variability be “corrected” for heart rate? Biological, quantitative, and interpretive considerations
+
+Eco J. C. de Geus1  |  Peter J. Gianaros2  |  Ryan C. Brindle3  |  J. Richard Jennings2  |  Gary G. Berntson4
+
+1Department of Biological Psychology, Vrije Universiteit, Amsterdam, The Netherlands
+2Departments of Psychology and Psychiatry, University of Pittsburgh, Pittsburgh, Pennsylvania
+3Department of Psychology & Neuroscience Program, Washington and Lee University, Lexington, Virginia
+4Department of Psychology, The Ohio State University, Columbus, Ohio
+Correspondence
+Eco J. C. de Geus, Department of Biological Psychology, VU, Van der Boechorststraat 7, 1081 HV, Amsterdam, The Netherlands. Email: eco.de.geus@vu.nl
+Funding information
+NIH grant (HL089850) (to P.J.G.), NIH grant (HL101959) (to J.R.J.), NIH grant (F32 HL137227) to R.C.B., Ohio State University Emeritus Academy grant (to G.G.B.), John D. and Catherine T. MacArthur Foundation Research Network National Institute on Aging (P01‐ AG020166), National Institute on Aging (U19‐AG051426), NIH National Center for Advancing Translational Sciences (NCATS) Clinical and Translational Science Award (CTSA) program (UL1TR001409) (Georgetown), (UL1TR001881) (UCLA), (1UL1RR025011) (UW), Netherlands Organization for Scientific Research (NWO), The Netherlands Organization for Health Research and Development (ZonMW), Biobanking and Biomolecular Resources Research Infrastructure (BBMRI–NL), Vrije Universiteit’s VU‐ AMS research fund.
+
+Abstract
+Metrics of heart period variability are widely used in the behavioral and biomedical sciences, although somewhat confusingly labeled as heart rate variability (HRV). Despite their wide use, HRV metrics are usually analyzed and interpreted without reference to prevailing levels of cardiac chronotropic state (i.e., mean heart rate or mean heart period). This isolated treatment of HRV metrics is nontrivial. All HRV metrics routinely used in the literature exhibit a known and positive relationship with the mean duration of the interval between two beats (heart period): as the heart period increases, so does its variability. This raises the question of whether HRV metrics should be “corrected” for the mean heart period (or its inverse, the heart rate). Here, we outline biological, quantitative, and interpretive issues engendered by this question. We provide arguments that HRV is neither uniformly nor simply a surrogate for heart period. We also identify knowledge gaps that remain to be satisfactorily addressed with respect to assumptions underlying existing HRV correction approaches. In doing so, we aim to stimulate further progress toward the rigorous use and disciplined interpretation of HRV. We close with provisional guidance on HRV reporting that acknowledges the complex interplay between the mean and variability of the heart period.
+KEYWORDS
+autonomic, behavioral medicine, heart rate, heart rate variability
+
+© 2018 The Authors Psychophysiology published by Wiley Periodicals, Inc. on behalf of Society for Psychophysiological Research This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.
+
+Psychophysiology. 2019;56:e13287. https://doi.org/10.1111/psyp.13287
+
+| wileyonlinelibrary.com/journal/psyp     1 of 26
+
+| 2 of 26      
+1  | INTRODUCTION
+Heart rate variability (HRV) constitutes a parameter of physiology of long‐standing interest to behavioral and biomedical scientists. In the biomedical setting, HRV metrics are often used for risk stratification, where clinical end points (e.g., myocardial infarction) across a range of chronic health conditions may be forecasted by earlier measurements of HRV. Low HRV, for example, is associated with mortality in patients with coronary artery disease (Huikuri & Stein, 2013; Martin et al., 1987), chronic heart failure (Nolan et al., 1998), and among those with a history of myocardial infarction (Bigger, Fleiss, Rolnitzky, & Steinman, 1993; Bigger et al., 1988, 1992; Buccelletti et al., 2009; Camm et al., 2004; Kleiger, Miller, Bigger, & Moss, 1987b). Beyond mortality, hypertension (Singh et al., 1998), end‐stage renal disease (Brotman et al., 2010), and diabetes (Schroeder et al., 2005) are also associated with low HRV. Although such clinical associations may partly reflect impaired autonomic or vagal control caused by disease pathology, lowered HRV does not simply indicate disease severity, as it also predicts all‐cause mortality (Dekker et al., 1997; Zulfiqar, Jurivich, Gao, & Singer, 2010) and risk of cardiac morbidity and mortality (de Bruyne et al., 1999; Dekker et al., 2000; Hillebrand et al., 2013; Liao et al., 1997; Molgaard, Sorensen, & Bjerregaard, 1991; Tsuji et al., 1994) in apparently healthy subjects. The latter may be attributed in part to vagal inhibition of ventricular fibrillation (Schwartz, Billman, & Stone, 1984; Schwartz, La Rovere, & Vanoli, 1992; Schwartz et al., 1988). Notably, higher HRV does not always signal apparent protection, as high HRV confers risk for atrioventricular (AV) block, sick sinus syndrome, and atrial fibrillation (Fu, Huang, Piao, Lopatin, & Neubig, 2007; Vikman et al., 2003).
+In addition to clinical applications, HRV metrics are often employed to better understand the peripheral physiological correlates of complex brain and behavioral processes, such as emotion and its regulation (Graziano & Derefinko, 2013; Rottenberg, Clift, Bolden, & Salomon, 2007) and executive cognitive functioning (Thayer & Lane, 2000; Thayer, Hansen, Saus‐Rose, & Johnsen, 2009), possibly by reflecting the functionality of higher brain systems, such as the prefrontal cortex (Beauchaine & Thayer, 2015). The main goal of the use of HRV metrics in these behavioral applications is to draw more specific inferences about autonomic nervous system (ANS) activity than are enabled by end‐organ metrics, such as the heart period. The long‐held perspective on the ANS as a “reciprocal system” reflected in the concept of sympathovagal balance is meaningful during strong manipulations like postural tilting and exercise (Goldberger, 1999), but this perspective has proven untenable in other contexts (Eckberg, 2000). It is now well established that the two arms of the ANS do not function reciprocally across many behavioral states and indeed may show coactivation in many contexts, including orienting reactions (Berntson, Cacioppo, & Quigley, 1991; Berntson,
+
+DE GEUS et al.
+BOX 1 What are the neurophysiological drivers
+of HRV?
+Both the parasympathetic and sympathetic arms of the ANS act on the cardiac pacemaker cells of the SA node. SA cells exhibit a special capacity for self‐ excitation, which is characterized by spontaneous membrane depolarization and the consequent generation of rhythmic action potentials by the voltage clock and Ca++ mechanisms (Bartos, Grandi, & Ripplinger, 2015) that establish the intrinsic HR (HR in the absence of autonomic or hormonal influences). Several ion channels play a critical role in setting the rhythmic excitation of SA cells. Subsets of these ion channels are influenced by the release of acetylcholine (ACh) by the parasympathetic vagi onto muscarinic M2 receptors and by the release of norepinephrine (NE) by sympathetic motor neurons onto beta‐1 adrenergic receptors. ACh release strongly slows the spontaneous diastolic depolarization and may also increase the depth of repolarization of the SA cells (see Figure 1). This basic autonomic influence on SA activity leads to the well‐known observation that increases in the mean activity of the vagal nerve lead to increases in the heart period. In parallel, increases in mean activity in the vagal nerve are accompanied by an increase in HRV through the principle of vagal gating (Eckberg, 1983, 2003). Vagal gating is based on two fundamental processes. First, tonic efferent vagal activity arising in the structures of the so‐called central autonomic network (Saper, 2002) is subject to phasic (frequency) modulation by other neurophysiological processes at the brain stem level, including cardiorespiratory coupling and the baroreflex (Berntson, Cacioppo, & Quigley, 1993). To elaborate, cardiorespiratory coupling exerts inhibitory influences during inspiration on vagal motor neurons in the nucleus ambiguus (NA), the predominant brainstem source of cardio‐inhibition by the vagal nerve in mammals (Chapleau & Abboud, 2001). This causes a periodic waxing and waning of the tonic vagal influence on SA node cells in phase with the respiratory cycle. This vagal influence translates into a decrease in heart period during inspiration relative to expiration, which is a chief source of high‐frequency HRV within normative rates of breathing. Figure 2a provides a schematic representation of this process. We hasten to note that RSA neither implies a complete absence of vagal inhibition during expiration
+
+DE GEUS et al.
+
+|       3 of 26
+
+nor a complete vagal inhibition during inspiration,1 but rather relative changes in responsiveness of vagal motor neurons across the respiratory cycle, with less responsiveness during inspiration and more responsiveness during expiration. The ensuing modulation of central vagal activity by cardiorespiratory coupling and other neurophysiological sources of influence on RSA alter only a small fraction of the total influence of the vagus nerve on the SA node (Craft & Schwartz, 1995; Eckberg, 2003). For example, Craft and Schwartz performed full vagal blockade studies in 20 young (mean age 30) and 19 older (mean age 69) participants. In this study, the heart period shortened from 1,090 ms to 506 ms (Δ584 ms) in young participants, and from 1,053 ms to 718 ms (Δ335 ms) in older participants. These changes dwarf the typical modulation of heart period by phasic (respiratory‐related) inhibition that amounts to an average pvRSA of ~50 ms, with an approximate range of 0–200 ms. It is critical to note here that respiratory influences also entrain sympathetic nervous system (SNS) outflow to SA node cells. The SNS outflow‐induced increase in NE release depolarizes and enhances the excitability of SA cells via metabotropic, cAMP‐mediated, second‐messenger processes. The latter processes not only accelerate the spontaneous depolarization of the SA cells, but also accelerate the speed of neural conduction in cardiac tissue. Compared to the fast (~400 ms) vagal influences, these sympathetic influences on HRV are strongly attenuated by the low‐pass filtering characteristics of slow (i.e., 2–3 s) G‐protein coupled metabotropic cascades that are initiated by NE binding at beta‐1 adrenergic receptors (Berntson et al., 1993; Mark & Herlitze, 2000). Thus, although both steady state and phasic increases in sympathetic SA node activity can shorten basal heart period, high frequency sympathetic fluctuations (e.g., in the respiratory frequency range) do not translate into phasic heart period fluctuations. Accordingly, most HRV metrics that are usually employed in psychophysiology and behavioral medicine (i.e., RMSSD, HF, pvRSA) can be largely ascribed to modulation of the vagal nerve outflow to SA cells.
+1Two additional metrics can be extracted by spectral analysis, the verylow (VLF) and low frequency (LF) powers. Because these metrics, like the SDNN, have a less clear autonomic interpretation than RMSSD, HF, and pvRSA (Reyes Del Paso, Langewitz, Mulder, van Roon, & Duschek, 2013), we here focus on RMSSD, HF, and pvRSA, making an exception for SDNN. The latter metric plays a key role in the arguments presented by Monfredi et al. (2014).
+
+A second fundamental principle in vagal gating is that the amplitude of the phasic modulation of activity in the autonomic motor neurons at the brainstem level (e.g., the NA) is a function of the absolute tonic level of firing of these autonomic motor neurons (Eckberg, 2003). The amplitude of the final modulated vagal signal traveling to the SA node therefore scales with the frequency of the tonic vagal pulse train presumptively arising in brain systems and cell groups comprising the so‐called central autonomic network. This means that the modulation of a pulse train of 12 Hz to vagal motor neurons will yield a larger peak‐to‐trough difference in the vagal signal to the SA node than the modulation of a 6 Hz pulse train. This is illustrated in Figure 2b. Here, we depict a person with lower centrally generated tonic vagal activity than in Figure 2a, which leads to a smaller difference between the shortest and longest beats in inspiration and expiration (50 ms compared to 100 ms). This principle is attributable to the fact that, at high levels of neural activity, there is a larger “carrier signal” to be subjected to phasic (respiratory‐related) inhibition.
+BOX 2 RSA and cardiac vagal activity
+The observation that RSA scales with levels of tonic vagal activity is the source of the widespread use of RSA as an index of vagal tone, a vague concept variably used to denote parasympathetic activity generated by the central autonomic network, the baroreflex circuitry, or simply the net effect of ACh on the SA node. However, inferring absolute levels of vagal activity at cortical, limbic, brainstem, or even SA node levels from any particular quantitative value of RSA is neither simple nor straightforward for many reasons. First, depth and rate of breathing strongly impact HRV metrics, especially those that index RSA (Eckberg, 2003; Grossman & Kollai, 1993; Grossman & Taylor, 2007; Grossman, Karemaker, & Wieling, 1991; Kollai & Mizsei, 1990; Taylor, Myers, Halliwill, Seidel, & Eckberg, 2001). Within individuals, RSA is inversely related to respiration rate and directly related to tidal volume. Hence, rapid and shallow breathing yields low RSA. The important observation here, which has been demonstrated many times over, is that an increase in RSA by slowing respiratory rate and increasing volume may be seen in the absence of any change in tonic vagal activity, as reflected in unchanged or even slightly decreasing mean heart period (Chapleau &
+
+| 4 of 26      
+
+DE GEUS et al.
+
+Abboud, 2001). The impact of differences in breathing behavior on between‐individual comparisons of RSA is somewhat harder to gauge, but cannot be ignored. Given the importance of respiratory rate and tidal volume as critical determinants of RSA values independent of cardiac vagal activity, RSA measures are often obtained under controlled breathing conditions or they are statistically corrected for spontaneous variation within and between individuals, albeit with varying degrees of rigor (Ritz & Dahme, 2006). A second reason not to equate RSA with tonic vagal activity is that the translation of fluctuations in vagal activity at the SA node into the actual slowing/speeding of the pacemaker potential is dependent on a complex interplay of postsynaptic signal transducers in the SA cells. Between‐individual differences and within‐individual changes in the efficiency of these transducers will distort any simple one‐to‐one mapping of vagal activity on HRV metrics. A classic example is the paradoxical reduction in HRV metrics at high levels of cardiac vagal activity induced in within‐individual designs by infusing pressor agents (Goldberger, Ahmed, Parker, & Kadish, 1994; Goldberger, Challapalli, Tung, Parker, & Kadish, 2001; Goldberger, Kim, Ahmed, & Kadish, 1996). Here, a saturation of a core element of postsynaptic ACh signal transduction, the SA muscarinic M2 receptors, causes low HRV in the presence of high vagal activity. A similar ceiling effect in the M2‐receptor signaling cascade may occur in regular vigorous exercisers with strong bradycardia. During nighttime, when their heart periods are much longer compared to daytime, these individuals exhibit a paradoxical lowering of RSA (van Lien et al., 2011). Notwithstanding the many pitfalls highlighted thus far, RSA offers our best opportunity for estimating cardiac vagal activity noninvasively, most notably in larger‐ scaled research in humans. We lack means for directly recording efferent vagal nerve activity to the heart, and pharmacological blockade suffers from its own disadvantages apart from being only feasible in small sample size studies. Various findings suggest that, in general, we can expect higher RSA with higher average levels of cardiac vagal activity. Within individuals, this is illustrated by gradual pharmacological blockade of ACh effects on the SA cells, which exerts no effects on respiratory behavior but is loyally tracked by parallel changes in RSA (Grossman & Taylor, 2007). Various studies have addressed this issue by administering a parasympathetic antagonist during a resting baseline condition and inferring vagal activity from the resultant decrease in heart period (Fouad, Tarazi, Ferrario,
+
+Fighaly, & Alicandri, 1984; Grossman & Kollai, 1993; Hayano et al., 1991; Kollai & Mizsei, 1990). RSA was estimated in parallel (e.g., with the peak‐to‐valley method). If pvRSA was completely proportional to cardiac vagal activity, then a perfect between‐individual correlation of the increases in heart period and pvRSA would have been observed. The actual correlations were quite appreciable but not perfect, even under controlled breathing conditions and incompletely saturated M2 receptors, varying between 0.5 and 0.9.
+Cacioppo, Quigley, & Fabro, 1994; Gianaros & Quigley, 2001) or passive coping tasks (Bosch et al., 2001). Changes in heart period, therefore, cannot be necessarily interpreted as reflecting symmetric, but opposite, changes in cardiac sympathetic and parasympathetic (i.e., vagal) control. Instead, heart period and evoked changes in heart period are ambiguous with respect to their autonomic origins.
+The autonomic space model provides a conceptual framework in which to understand reciprocal, independent, and coactive patterns of sympathetic and parasympathetic cardiac control, both in the context of within‐individual and between‐individual study designs (Berntson, Cacioppo, Binkley et al., 1994; Berntson, Cacioppo, & Quigley, 1994; Berntson, Norman, Hawkley, & Cacioppo, 2008). However, to be useful in empirical studies, the model requires separate measures of cardiac sympathetic and cardiac vagal activity. Although these measures could be obtained by pharmaceutical blockage of sympathetic and vagal activation, to do so is labor intensive, not without risk, hard to justify in children, and of limited practicality in larger‐scaled studies. Noninvasive metrics that predominantly capture either sympathetic or vagal activity are better suited for such studies. This has been a major driver for the development and use of HRV metrics in psychophysiology.
+As explained in detail in Box 1, specific measures of HRV, such as peak‐to‐valley respiratory sinus arrhythmia (pvRSA) and related metrics of heart period oscillations within common breathing frequencies, capture the inspiratory shortening and expiratory lengthening of heart periods across the respiratory cycle that is predominantly due to variations in cardiac vagal activity. In combination with measures that predominantly capture cardiac sympathetic activity, such as the pre‐ejection period (PEP), metrics of RSA may be interpreted and treated to meaningfully understand autonomic cardiac regulation within a two‐dimensional autonomic space model beyond ambiguous end‐organ activity provided by cardiac chronotropic metrics like heart period (Berntson, Cacioppo, Binkley et al., 1994; Bosch, de Geus, Veerman, Hoogstraten, & Nieuw Amerongen, 2003; Cacioppo et al., 1994). A 2007 special issue of Biological Psychology on cardiac vagal control illustrated its widespread use and highlighted issues pertaining to the use and abuse of various HRV
+
+DE GEUS et al.
+
+|       5 of 26
+
+F I G U R E 1   Spontaneous depolarization in the pacemaker cells in the SA node is prolonged by ACh, which, in turn, prolongs the heart period. Main ionic currents related to vagal activity are depicted only; complete rendering would add various sodium currents, the potassium delayed rectifying current, and sodium‐potassium and sodium‐calcium exchangers [Colour figure can be viewed at wileyonlinelibrary.com]
+
+metrics (Allen & Chambers, 2007). A recurrent concern has been the sometimes uncritical use of RSA as an index of vagal tone (see Box 2). In the decade since the publication of that special issue, interest in RSA and other HRV metrics has only expanded and deepened. This interest, however, has partly revived debate over a key and still open question addressed in this paper: Should HRV be “corrected” for heart rate (HR)? Based on a seminal paper by Monfredi and colleagues in 2014 (Monfredi et al., 2014), a rather strong viewpoint has been advocated that HRV is “just a nonlinear surrogate for HR” (Boyett, 2017; Boyett et al., 2017). Clearly, if HRV is confounded by a direct effect of the cardiac chronotropic state itself, this would fundamentally complicate its use to specifically capture one branch of the ANS.
+2  |  RELATIONSHIP BETWEEN
+HEART RATE, HEART PERIOD, AND HRV METRICS
+A sometimes confusing use of nomenclature in the HRV literature merits careful consideration prior to raising the main issue of correcting HRV for HR. In practice, it is the variability in the time between heart beats—the interbeat interval (IBI) or the heart period in milliseconds—and not the HR in beats per minute that is the computational focus and source unit of measurement inherent to most HRV metrics. It is thus technically incorrect (or at least imprecise) to employ the term heart rate variability rather than heart period variability. Because the familiar abbreviation HRV actually already refers to heart period variability, we maintain this common usage. For the chronotropic state of the heart, however, heart period will be our preferred term rather than HR.
+
+An obvious or at least intuitive reason to ask whether HRV should be corrected for HR is that all conventional metrics of HRV exhibit predictable relationships with prevailing (concurrent) levels of chronotropic state. These relationships have been appreciated for many decades, and they are evident both within and across individuals. Indeed, these relationships are evident with all standard HRV metrics derived from time and frequency domain analyses of human and nonhuman animal electrocardiogram data. Among others, these HRV metrics include those that capture the total variability of the heart period within an epoch (e.g., standard deviation of N‐N interval: SDNN), as well as the more popular root mean square of successive differences (RMSSD), spectral and autoregressive estimates of high‐frequency HRV (HF) and the canonical metric of RSA: pvRSA.2 When plotted against HR, the HRV metrics show a negative exponential relationship that is illustrated in two large human data sets in the left panels of Figure 3 (Dienberg Love, Seeman, Weinstein, & Ryff, 2010; Neijts et al., 2015; Sloan et al., 2017).
+As can be seen in the right panels of Figure 3, the negative nonlinear relationship between HRV and HR predictably turns into a positive more linear one once we use intervals (in ms) versus rates (in bpm). This is because the conversion from rate to interval itself is a nonlinear inverse (i.e., HR = 60,000/heart period). Linearity is not perfect, however, and a power function often provides a slightly better fit between HRV and heart period (see online supporting information Figures S1 to S6 for complete data). Regardless, HRV metrics still exhibit a strong relationship
+2With the possible exception of the dog, where inspiratory vagal inhibition may be complete or nearly complete (Anrep, Pascual, & Roessler, 1936).
+
+| 6 of 26      
+
+DE GEUS et al.
+
+F I G U R E 2   Vagal gating giving rise to respiratory sinus arrhythmia. This is a higher‐order conceptual representation only. In reality, cardiac effector responses to respiration‐related, episodic ACh release do not solely depend on quantity, but also on the timing of its release and clearance, and the ongoing kinetics of the multiple other signal transduction pathways involved in sinoatrial depolarization. (a) High tonic vagal firing (~12 Hz) is reduced during inspiration compared to expiration giving rise to differential amounts of ACh release at the SA effector junction. (b) Gating of lower tonic vagal firing (~6 Hz) will also produce inspiration/expiration differences in the amounts of ACh release, but they are less pronounced as those in (a) where tonic vagal firing is higher [Colour figure can be viewed at wileyonlinelibrary.com]
+
+with prevailing (concurrent) levels of cardiac chronotropic state—even when expressed as intervals (i.e., HRV tends to increase whenever heart period increases). The core problem that we address here is the nature of this relationship. Does it reflect a shared effect of autonomic (i.e., vagal) activity on both chronotropic state and its variability? Does it reflect a direct effect of chronotropic state on its variability? Do both of these effects coexist? Answers to these questions merit disciplined consideration by those using HRV across a range of basic and applied contexts, and they are critically relevant to the broader question of whether HRV should be corrected for HR across these contexts.
+
+3  PE
+
+R|  I
+
+WHY ARE OD CORRE
+
+HRV AN LATED?
+
+D
+
+HEART
+
+From a neurophysiological perspective, a relationship between the prevailing chronotropic state—the heart period— and its variability is understandable (see Box 1). We reiterate essential points from Box 1 that higher tonic levels of vagal activity will act in parallel to.
+
+1. increase HRV through the vagal gating mechanisms by respiratory and baroreflex input to vagal motor neurons, and
+
+DE GEUS et al.
+
+|       7 of 26
+
+F I G U R E 3   HRV metrics expressed as an exponential function of HR (bpm) and a linear function of IBI (ms). Data sources for SDNN and pvRSA are sleep (N = 1,320), leisure time (N = 1,277), and workday (N = 958) averages obtained from ambulatory recordings on participants from the Netherlands Twin Register (NTR). Data sources for RMSSD and HF are the baseline (N = 1,874), and math (N = 1,778) and Stroop (N = 1,794) condition averages from participants in the MIDUS II and Refresher Biomarker Studies. Left: Exponential fit (+ 95% CIs) of the HRV metrics against HR. Right: Linear fit (+ 95% CIs) of the HRV metrics against IBI [Colour figure can be viewed at wileyonlinelibrary.com]
+
+2. increase the mean heart period by slowing the spontaneous diastolic depolarization of the sinoatrial (SA) pacemaker cells.
+Thus, the mean heart period is neurophysiologically “hard‐ wired” to its variability. The idea is depicted in the model in Figure 4a. In this depiction, a latent variable of (centrally generated tonic) vagal activity independently influences both heart period and HRV. These, in turn, are influenced by other latent variables that include processes influencing (a) the intrinsic chronotropic state, (b) cardiac sympathetic activity, (c) respiratory activity, as well as (d) sensitivity to lung‐stretch reflexes, the baroreflex, and other phenomena impacting HRV.
+If the model in Figure 4a is the true model, adjusting HRV for its observed relationship with the prevailing chronotropic
+
+state will lead to an underestimation of the association between vagal activity and HRV. This is quite different if the second model depicted in Figure 4b is the true model. Here, the heart period is the sole driver of HRV, which acts as “just a nonlinear surrogate for HR”—a viewpoint that has been advocated with vigor by some (Boyett, 2017; Boyett et al., 2017; Monfredi et al., 2014). According to the strong version of this latter viewpoint, no added value is provided by HRV over that contained in the prevailing heart period. Hence, HRV is a poorer marker of vagal activity than heart period itself because we just add noise from nonvagal sources. However, Model 4b is arguably incompatible with an explanation of HRV that is based on the neurophysiological coupling mechanisms discussed above. It could not, for instance, satisfactorily explain the clear uncoupling of RSA and heart
+
+| 8 of 26      
+
+DE GEUS et al.
+
+F I G U R E 4   Models relating observable heart rate variability (HRV) and heart period to unobserved cardiac vagal activity
+
+period induced by respiratory manipulation. Such uncoupling counters the notion that changes in heart period are invariably a necessary condition (causal) for changes in RSA.
+A final model to consider is the hybrid model depicted in Figure 4c with a latent variable influencing both mean heart period and HRV, but still allowing for some direct effect of heart period on HRV that is independent of vagal activity. If this model is correct, adjusting HRV for its observed relationship with heart period would still lead to an underestimation of its association with vagal activity. However, not correcting for heart period could lead HRV to overestimate vagal activity, with the severity of this imprecision depending on the effect size of the direct path. If this Model 4c is the true model, we would want to correct HRV only for the direct effect of heart period. The latter is nontrivial, as we typically do not know the values of bV_HP, bV_HRV or bdirect.
+From the above, we deduce that the necessity to correct RSA and other HRV metrics for the heart period is closely tied to the core question of the presence and size of a direct effect of heart period on its variability. Put differently, apart from
+
+the understood neurophysiological link through the respiratory vagal gating outlined above, is there some intrinsic heteroscedasticity—a quantitative “dependency” of the variability in heart period on its mean? Or, even more simply, should we adopt the model in Figure 4c over that in Figure 4a?
+4  |  IS HEART PERIOD A DRIVER
+OF HRV, INDEPENDENT OF VAGAL ACTIVITY?
+For RSA, heteroscedasticity would be in play when the ongoing mean level of the heart period would determine the effect of phasic respiratory‐coupled changes in vagal activity on the difference in the longest and shortest heart period in a respiratory cycle. In such a scenario, a reduction in vagal activity from 12 to 10 spike trains per second during inspiration could lead to a phasic shortening of the heart period that would scale, for instance, linearly with the mean heart period. As a
+
+DE GEUS et al.
+
+|       9 of 26
+
+F I G U R E 5   Effects of ACh release on the diastolic depolarization rate of the pacemaker cells in the SA. (a) Fixed angle scenario. The same amount of ACh release decreases the slope of diastolic depolarization by a fixed angle (α) at shorter (400 ms, left column) and longer (850 ms, middle column) diastolic depolarization intervals. This change prolongs the heart period less when the mean heart period is shorter (with faster mean diastolic depolarization of the pacemaker cells) than when mean heart period is longer (+50 ms vs. +250 ms). The graph on the right provides an illustration of this strong accumulative vagal prolongation effect across a heart period range of 600 to 1,200 ms. (b) Relative angle scenario. The same amount of ACh release decreases the slope of diastolic depolarization of the pacemaker cells by angles (α) or (β) that scale with the mean ongoing slope of diastolic depolarization. Hence, the effect on heart period is rather similar across shorter (400 ms, left column) and longer (850 ms, middle column) durations of the diastolic depolarization interval (+50 ms vs. +70 ms). The graph on the right provides an illustration of this weak vagal prolongation effect across a heart period range of 600 to 1,200 ms [Colour figure can be viewed at wileyonlinelibrary.com]
+
+result, identical changes in vagal activity will yield a larger respiratory‐induced variance in heart period if the mean heart period is longer. A possible biophysical mechanism for a direct causal dependency of heart period variance on the mean heart period was proposed by Monfredi et al. (2014) based on the original work by Rocchetti et al. (Rocchetti, Malfatto, Lombardi, & Zaza, 2000). The proposed mechanism is nicely illustrated in an editorial by Stauss (see Stauss, 2014, figure 2, p. 1185), of which we capture the geometric essence in Figure 5a. This proposed mechanism critically assumes that the effects of ACh (acetylcholine) on the steepness of the diastolic depolarization rate of pacemaker cells are independent of the mean heart period (“Iper will change the slope of the pacemaker potential by roughly the same amount regardless of rate,” Monfredi et al., 2014, p. 1339).
+Based on simple geometric principles, phasic vagal effects on heart period will scale, in this “fixed angle” scenario, with the mean heart period. In the example provided in the upper panel of Figure 5, a change in one unit of vagal activity across a respiratory cycle leads to a change in diastolic
+
+depolarization duration of 50 ms at a mean heart period of 560 ms (taken an action potential duration of 160 ms). By contrast, at a mean heart period of 1,010 ms, the same change in vagal activity yields a much larger effect of 250 ms. The graph at left of Figure 5 shows the near‐linear prolongation of the heart period by vagal activity as a function of the mean heart period under a fixed angle scenario. Put simply: for the exact same phasic change in vagal activity, the induced variance in mean heart period captured by RSA (or other HRV metrics) is higher at longer mean heart periods than at shorter mean heart periods (i.e., strong heteroscedasticity).
+Again, this fixed angle scenario builds on the critical assumption that the effects of ACh on the diastolic depolarization rate are independent of the currently ongoing diastolic depolarization rate. An alternative scenario for the effects of changes in vagal firing is the “relative angle” scenario in Figure 5b. Here, across most of the normal physiological heart period range, changes in vagal activity cause an absolute change in heart period that is nearly independent of its mean level. This scenario critically assumes that the effects of ACh on the diastolic depolarization rate of pacemaker cells scale
+
+| 10 of 26      
+as a function of that same rate. Hence, at slower diastolic depolarization rates and thus a longer mean heart period, further reductions in this rate induced by ACh are smaller than at faster diastolic depolarization rates with shorter mean heart periods. Apart from receptor binding kinetics, a major source for this scaling effect could be the increased opposition of osmotic drive on potassium ions by the electrostatic driving force, which is larger if repolarization/hyperpolarization is more profound. Also, slower diastolic depolarization rates allow more breakdown of ACh by ACh‐esterase (Dexter, Levy, & Rudy, 1989). In the relative angle scenario, a change of one unit vagal activity would, for instance, induce an absolute change in heart period of 50 ms when the mean heart period is 560 and an absolute change of 70 ms when the mean heart period is 1,010. Put simply: for the exact same phasic change in vagal activity, the induced variance in heart period captured by HRV metrics is nearly identical at longer and shorter mean heart periods (i.e., weak heteroscedasticity).
+The above restates the original question: Is the phasic prolongation of the heart period by a fixed amount of vagal activity dependent on the mean heart period? as a new one: Is the phasic effect of a fixed amount of vagal activity on heart period dependent on the ongoing diastolic depolarization
+
+DE GEUS et al.
+rate? To address this question, we first turn to studies that manipulated vagal activity by direct stimulation of the vagal nerve (Berntson, Quigley, Fabro, & Cacioppo, 1992; Carlson et al., 1992; de Neef, Versprille, Wise, & Jansen, 1983; Ford & McWilliam, 1986; Furukawa, Wallick, Carlson, & Martin, 1990; Levy & Zieske, 1969a, 1969b ; Parker, Celler, Potter, & McCloskey, 1984; Randall et al., 2003; Shimizu et al., 2009; Stramba‐Badiale et al., 1991; Urthaler et al., 1986). We start by noting that these stimulation procedures and associated findings again prove sensitive to the use of HR versus heart period as the chronotropic metric. When expressed as HR, for instance, the relation between vagal nerve firing rates and cardiac chronotropy is a nonlinear (hyperbolic) function (e.g., see classic study of Levy & Zieske, 1969a). However, as noted before (Quigley & Berntson, 1996), when expressed as heart period there is an approximately linear relation between the frequency of vagal stimulation and cardiac chronotropic state, and this linearity is a very robust finding across studies (see Table 1, upper). Moreover, an approximate linear relationship has also been reported between spontaneous variations in vagal activity and the ongoing heart period (Jewett, 1964; Katona, Poitras, Barnett, & Terry, 1970; Koizumi, Terui, & Kollai, 1985).
+
+F I G U R E 6   Structural equation model using HRV and heart period as observable indicators (facets) of a latent factor representing vagal nerve
+activity to test the association of vagal activity with BMI. Parameters bV_BMI and ƐNV_BMI are set to values that cause vagal activity to explain 10% of the variance in BMI. As in Figure 4, bV_HRV and bV_HP capture the vagal effects on HRV and heart period, and bdirect the (putative) direct effect of heart period on HRV. Nonvagal (NV) and error (Ɛ) terms capture all other sources of variance in heart period and HRV
+
+DE GEUS et al.
+The relative linearity between vagal activity and heart period may be attributable, in part, to a negatively accelerating accumulation of ACh at SA synapses with increasing vagal activity, as well as a positively accelerating effect of synaptic ACh concentration on cardiac chronotropy (Dexter, Levy, & Rudy, 1989; Dexter, Saidel, Levy, & Rudy, 1989). Evidence from microdialysis work on sinoatrial ACh is generally consistent with this model (Shimizu et al., 2010; Zhan et al., 2013). Notably, while an approximate linearity has been observed between vagal activity and heart period across species, there are apparent species differences in the slope of these functions (see Table 1). These disparate values can be attributed in part to differences in surgical and anesthesia procedures, subspecies used (e.g., in dog), artificial ventilation versus spontaneous breathing, use of stellate ganglia dissection versus beta‐blockade to remove sympathetic activity, and the site and characteristics of electrical stimulation. However, across (sub)species, they also reflect the different basal heart period of these (sub)species in keeping with the exponential (0.249* BW0.25) relationship of basal heart period and body weight (Opthof, 2000).
+When organized by reference to basal heart period levels, shorter basal heart period appears generally associated with flatter vagal activity‐chronotropic response slopes and longer basal heart period with steeper slopes (r = 0.72). Between species, differences in phasic prolongation of the heart period by a fixed amount of vagal activity therefore indeed seem to depend on the species differences in mean heart period. This would support the desire to correct for the relationship between chronotropic state and HRV metrics when comparing different species. Indeed, Monfredi and colleagues (Monfredi, Zhang, & Boyett, 2015) largely base their proposition that HRV is “just a nonlinear surrogate of HR” (they did not use heart period) largely on a comparison between species including human, rat, rabbit, and experimental preparations of the SA node in rat and rabbit. However, the most striking species difference in their data (Monfredi et al., 2014) was that the HR was lower and HRV metrics larger in humans than they were in the four animal models (figure 1, p. 1336). The covariation of HRV and HR levels between the four animal models is far less conclusive, if not absent. This raises concerns about motivating a uniform or universal correction of HRV for HR based on the observed covariation of mean HRV and HR levels across rather diverse species and the mixture of conscious animals and experimental SA cell preparations.
+The universal linear scaling of the effects of vagal activity on heart period in Table 1 appears more congruent with the relative angle scenario than the fixed angle scenario in Figure 5. It suggests that, at any level of heart period, a fixed increase in vagal firing induces a (nearly) similar prolongation of the heart period, as in the scatterplot in Figure 5b. Some caution is needed as there are a number of caveats in interpreting vagal stimulation studies, and there are also empirical findings in support of Figure 5a. We critically review these nuances in more detail in Box 3. Nonetheless, a conservative
+
+|       11 of 26
+BOX 3 A more in‐depth look at vagal stimulation
+studies
+Most of the vagal stimulation studies presented in Table 1 use a design in which the heart period attained during a steady state phase of vagal stimulation at a fixed frequency is compared to the heart period at prestimulation baseline. This procedure is repeated across a number of different vagal stimulation frequencies. The change in the heart period over the baseline heart period is computed for each frequency and, when plotted against stimulation frequency, typically yields a near‐ perfect linear relation. The essence is that each stimulation event starts at the same baseline heart period, typically in the denervated heart (i.e., in the presence of bilateral vagal sectioning with sympathetic ganglia sectioning and/or sympathetic blockade). One could argue that this only indirectly answers the core question of dependency of vagal effects on the ongoing mean heart period. This potential limitation can be addressed by experimental manipulation of the baseline heart period before vagal stimulation commences, by changing cardiac sympathetic activity, or by changing nonautonomic effects on the diastolic depolarization rate, for example, by ivabradine or other blockers of the funny channel (decreasing If). Testing the effects of vagal stimulation under different levels of concurrent cardiac sympathetic nerve stimulation (and hence baseline heart period) has been repeatedly done in the context of testing for accentuated antagonism (Quigley & Berntson, 1996). In mongrel dogs, the relative angle scenario in Figure 5b seemed to best fit the observed relationship between changes in vagal firing and chronotropic effects across different baseline values of heart period (Levy & Zieske, 1969a; Randall et al., 2003; Urthaler, Neely, Hageman, & Smith, 1986). When mean heart period levels were shortened by 30% to 35% through sympathetic stimulation at 4 Hz (S‐ stim), a linear relation between vagal stimulation and heart period was again found in all studies, with comparable slopes between the S‐stim and no S‐stim conditions in two of the three studies (Table 1, lower). Combined manipulation of sympathetic and vagal tone by exercise in a conscious animal was used to manipulate basal mean heart period in another study (Stramba‐ Badiale et al., 1991). When dogs (with a vagal stimulator) walked on a treadmill, their heart period changed from a resting value of 500 to 299 ms. In spite of this strong decrease in mean heart period, the slope obtained with vagal stimulation was comparable at rest (33.2 ms/Hz) and during exercise (28.8 ms/Hz). We can conclude from these studies that, within a species, there is a relatively linear translation of phasic
+
+| 12 of 26      
+
+DE GEUS et al.
+
+changes in vagal activity into changes in heart period across a wide range of baseline heart period levels with a reasonably stable slope. This is, again, what would have been predicted by the relative angle scenario in Figure 5b. However, in a dog model where central autonomic outflow was blocked, vagal pacing at 12 Hz produced lower increases in RSA when parallel sympathetic stimulation was applied (Hedman, Tahvanainen, Hartikainen, & Hakumaki, 1995). Pharmacological blockade in humans confirms that RSA is sensitive to moderate‐to‐large changes in cardiac sympathetic activity. As reviewed by Grossman and Taylor (2007), beta‐blockade in parallel increases heart period and RSA, even when vagal activity is not changed. This might be taken to suggest that there is indeed some direct effect of the mean heart period on RSA as would have been predicted by the fixed angle scenario in Figure 5a. Similarly, sympathetic agonists raising blood pressure like dobutamine cause a shortening of the mean heart period with a parallel decrease in HRV, when a baroreflex‐induced increase in vagal activity would be expected (Monfredi et al., 2014). Unfortunately, such effects on HRV could also occur independently of mediation by heart period, because sympathetic antagonists and agonists can interact directly with vagal activity at the brainstem level, and pre‐ and postjunctionally in the SA node (e.g., by the inhibitory action of the NE coreleased and the neuromodulator neuropeptide Y on ACh release (Quigley & Berntson, 1996). A final class of relevant studies are those that used funny channel blockade to increase mean heart period (e.g., zetabradine or ivabradine). Funny channel blockade prolongs heart period, and many studies show that this bradycardia is coupled to a parallel increase in HRV (Borer & Le Heuzey, 2008; Kurtoglu et al., 2014). Vagal activity is still widely regarded to be the primary driver of HRV under ivabradine because atropine completely prevents the increase in HRV (Kozasa et al., 2018; Mangin et al., 1998). Nonetheless, the increase in HRV is counterintuitive, as ivabradine‐evoked bradycardia causes a parallel decrease in blood pressure. The latter causes a reflex increase in sympathetic nerve activity (Dias da Silva et al., 2015) and, one assumes, a reflex decrease in vagal activity in accord with baroreflex action. The observed increase in HRV was therefore explained as reflecting an “intrinsic dependency of HRV on pacemaker cycle length” (Dias da Silva at al.,
+
+2015, p. 32). This appears at first sight to be most compatible with the fixed angle scenario of Figure 5b. However, using a murine genetic knockdown of HCN4, Kozasa et al. (2018) reported findings that were at odds with a fixed angle scenario. HCN4 is a main component of the funny channel, and this knockdown model mimics the bradycardic effects of ivabradine, as well as its positive, increasing effects on HRV. In the context of this model, they showed that funny channel action can directly impact the strength of vagal effects in the SA node. By counteracting K+ GIRK channels (reducing K+ efflux), the funny channel protects the SA cells against complete sinus pause under high vagal stimulation. Because the funny channel has a “limiter function” for the bradycardic effects induced by vagal activity, blocking it by ivabradine would act to amplify the effectiveness of phasic—for example, baroreflex or respiration‐induced—increases in vagal activity to induce phasic changes in heart period. The latter changes would serve to boost HRV. In keeping with this notion, amplifying funny channel action by HCN4 overexpression strongly reduced HRV, whereas mean heart period was unchanged. These results can all be explained by the funny channel counteracting the effectiveness of vagal activity without invoking an intrinsic dependency of HRV on heart period. Kozasa et al. (2018) also provide direct support for the relative angle scenario of Figure 5b. In isolated pacemaker cells, the basal diastolic depolarization rate in HCN4 knockdown mice was much slower than in the wild type animals (Kozasa et al., 2018, their figure D, p. 821). When exposed to increasing concentrations of ACh [0 to 30 nmol], the additional decrease in the depolarization rate induced by the same dose of ACh was much lower in the HCN4 knockdown (~35 mV/s) than in the wild type mice (~80 mV/s).
+summary is that the current evidence is more favorable to the relative angle scenario in Figure 5b. The idea that vagal activity has a direct neurophysiological influence on both heart period and HRV seems uncontested by the vast majority of evidence across species and experimental designs and preparations. The existence of an additional direct nonvagal related effect of mean heart period on HRV is less certain, but cannot currently be dismissed. Different dependencies of vagal‐induced changes in heart period on the mean heart period may arise when the mean heart period is governed by the different relative contributions of intrinsic HR, vagal activity, or sympathetic activity encountered in the typical (human) psychophysiological or behavioral medicine measurement context.
+
+DE GEUS et al.
+
+T A B L E 1   Linear effects of vagal stimulation on heart period across species and conditions
+
+Vagal effect on IBI as % of baseline IBI
+
+Study
+
+Species
+
+Baseline IBI
+
+Effect of right cardiac vagus stimulation on IBI (ms/Hz)
+
+Study specific
+
+Average for species
+
+Carlson et al., 1992
+
+Human
+
+740
+
+75
+
+Furukawa et al., 1990
+
+Dog
+
+520
+
+24.2
+
+Levy & Zieske, 1969a
+
+Dog
+
+395
+
+42
+
+Levy & Zieske, 1969b
+
+Dog
+
+456
+
+47.4
+
+Parker et al., 1984
+
+Dog
+
+258
+
+38
+
+Randall et al., 2003
+
+Dog
+
+508
+
+86.6
+
+Stramba‐badiale et al., 1991
+
+Dog
+
+500
+
+33.2
+
+Urthaler et al., 1986
+
+Dog
+
+408
+
+16.2
+
+Berntson et al., 1992
+
+Rat
+
+240
+
+7.4
+
+de Neef et al., 1983
+
+Rabbit
+
+208
+
+17.9
+
+Ford & McWilliam, 1986
+
+Rabbit
+
+225
+
+14.6
+
+Shimizu et al., 2009
+
+Rabbit
+
+205
+
+12.5
+
+de Neef et al., 1983
+
+Cat
+
+256
+
+27.8
+
+de Neef et al., 1983
+
+Guinea pig
+
+218
+
+26.5
+
+These experiments repeated vagal stimulation without and with concurrent stimulation of the cardiac sympathetic nerve at 4 Hz:
+
+Levy & Zieske, 1969a
+
+Mongrel dogs
+
+without
+
+395
+
+42
+
+Levy & Zieske, 1969a
+
+Mongrel dogs
+
+with
+
+284
+
+39.2
+
+Randall et al., 2003
+
+Mongrel dogs
+
+without
+
+508
+
+86.6
+
+Randall et al., 2003
+
+Mongrel dogs
+
+with
+
+316
+
+42.2
+
+Urthaler et al., 1986
+
+Beagle puppies
+
+without
+
+408
+
+16.2
+
+Urthaler et al., 1986
+
+Beagle puppies
+
+with
+
+317
+
+15.8
+
+This experiment repeated vagal stimulation with the dogs standing quietly at the treadmill or forced to run until a heart rate of 200 bpm was reached:
+
+Stramba‐Badiale et al., 1991
+
+Dog
+
+Standing quiet
+
+500
+
+33.2
+
+Stramba‐Badiale et al., 1991
+
+Dog
+
+Running (200 bpm)
+
+299
+
+28.8
+
+10.1% 4.7% 10.6% 10.4% 14.7% 17.0% 6.6% 4.0% 3.1% 8.6% 6.5% 6.1% 10.9% 12.2%
+10.6% 13.8% 17.0% 13.4% 4.0% 5.0%
+6.6% 9.6%
+
+10.1%
+11.4% 3.1% 7.5% 10.9% 12.2%
+
+Note. Upper half of the table depicts results of studies that use vagal stimulation to decrease heart period from its baseline level achieved at compete autonomic denervation The (mostly right) vagal nerve was stimulated at various frequencies, and the increases in heart period from a baseline heart period are regressed on the vagal firing frequency to obtain the slope, which can be expressed in absolute units (ms/Hz) or as a percentage of the basal heart period. Lower half of the table depicts results of studies that repeated vagal stimulation at different levels of baseline heart period level, which were induced by sympathetic stimulation or exercise. IBI = interbeat interval.
+
+|       13 of 26
+
+| 14 of 26      
+
+DE GEUS et al.
+
+T A B L E 2   Effects of adjustment for heart period as a covariate or adding it as a second predictor on the association between HRV and BMI under various settings for the parameters in Figure 6
+
+Parameter Setting 1, no direct effect (Figure 4a): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.632), HRV (bV_IBI = 0.632); no direct effect of IBI on HRV (bdirect = 0.0): IBI and HRV are equally influenced by vagal activity
+
+TRUE βHRV & βIBI
+
+Observed in regression analysis
+
+BMI = μ + 0.200*HRV BMI = μ + 0.200*IBI
+
+Model 1: HRV sole predictor
+Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.201
+βIBI = 0.203 βHRV = 0.124 βHRV = 0.148 βIBI = 0.150
+
+R2: 0.044
+R2: 0.041 R2: 0.015 R2: 0.058
+
+Parameter Setting 2, no direct effect (Figure 4a): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.632), HRV (bV_IBI = 0.316); no direct effect of IBI on HRV (bdirect = 0.0): HRV is more influenced by vagal activity than IBI
+
+TRUE βHRV & βIBI BMI = μ + 0.200*HRV BMI = μ + 0.100*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.196 βIBI = 0.101 βHRV = 0.176 βHRV = 0.183 βIBI = 0.066
+
+R2: 0.038 R2: 0.010 R2: 0.031 R2: 0.042
+
+Parameter Setting 3, no direct effect (Figure 4a): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.316), HRV (bV_IBI = 0. 632); no direct effect of IBI on HRV (bdirect = 0.0): IBI is more influenced by vagal activity than HRV
+
+TRUE βHRV & βIBI BMI = μ + 0.100*HRV BMI = μ + 0.200*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.095 βIBI = 0.201 βHRV = 0.055 βHRV = 0.057 βIBI = 0.190
+
+R2: 0.009 R2: 0.040 R2: 0.003 R2: 0.043
+
+Parameter Setting 4, small direct effect (Figure 4c): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.632), HRV (bV_IBI = 0.632); a small direct effect of IBI on HRV (bdirect = 0.1): IBI and HRV are equally influenced by vagal activity
+
+TRUE βHRV & βIBI BMI = μ + 0.220*HRV BMI = μ + 0.200*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.218 βIBI = 0.199 βHRV = 0.119 βHRV = 0.158 βIBI = 0.121
+
+R2: 0.047 R2: 0.040 R2: 0.015 R2: 0.058
+
+Parameter Setting 5, small direct effect (Figure 4c): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.632), HRV (bV_IBI = 0.316); a small direct effect of IBI on HRV (bdirect = 0.1): HRV is more influenced by vagal activity than IBI
+
+TRUE βHRV & βIBI BMI = μ + 0.210*HRV BMI = μ + 0.100*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.208 βIBI = 0.097 βHRV = 0.179 βHRV = 0.196 βIBI = 0.038
+
+R2: 0.043 R2: 0.009 R2: 0.032 R2: 0.044
+
+Parameter Setting 6, small direct effect (Figure 4c): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.316), HRV (bV_IBI = 0.632); a small direct effect of IBI on HRV (bdirect = 0.1): IBI is more influenced by vagal activity than HRV
+
+TRUE βHRV & βIBI BMI = μ + 0.120*HRV BMI = μ + 0.200*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate
+
+βHRV = 0.115 βIBI = 0.196 βHRV = 0.056
+
+R2: 0.013 R2: 0.038 R2: 0.003
+
+(Continues)
+
+DE GEUS et al.
+
+|       15 of 26
+
+T A B L E 2   (Continued)
+
+Model 4: HRV & IBI joint predictors
+
+βHRV = 0.062 βIBI = 0.178
+
+R2: 0.042
+
+Parameter Setting 7, moderate direct effect (Figure 4c): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.632), HRV (bV_IBI = 0.632); a larger direct effect of IBI on HRV (bdirect = 0.3): IBI and HRV are equally influenced by vagal activity
+
+TRUE βHRV & βIBI BMI = μ + 0.260*HRV BMI = μ + 0.200*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.250 βIBI = 0.192 βHRV = 0.116 βHRV = 0.227 βIBI = 0.032
+
+R2: 0.062 R2: 0.037 R2: 0.014 R2: 0.063
+
+Parameter Setting 8, moderate direct effect (Figure 4c): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.632), HRV (bV_IBI = 0.316); a larger direct effect of IBI on HRV (bdirect = 0.3): HRV is more influenced by vagal activity than IBI
+
+TRUE βHRV & βIBI BMI = μ + 0.230*HRV BMI = μ + 0.100*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.222 βIBI = 0.100 βHRV = 0.152 βHRV = 0.230 βIBI = −0.015
+
+R2: 0.049 R2: 0.010 R2: 0.030 R2: 0.049
+
+Parameter Setting 9, moderate direct effect (Figure 4c): Vagal activity influences BMI (bV_BMI = 0.316), IBI (bV_IBI = 0.632), HRV (bV_IBI = 0.316); a larger direct effect of IBI on HRV (bdirect = 0.3): IBI is more influenced by vagal activity than HRV
+
+TRUE βHRV & βIBI BMI = μ + 0.160*HRV BMI = μ + 0.200*IBI
+
+Observed in regression analysis Model 1: HRV sole predictor Model 2: IBI sole predictor Model 3: IBI as a covariate Model 4: HRV & IBI joint predictors
+
+βHRV = 0.158 βIBI = 0.193 βHRV = 0.061 βHRV = 0.153 βIBI = 0.042
+
+R2: 0.025 R2: 0.037 R2: 0.004 R2: 0.042
+
+5  |  WHAT ARE THE MOST
+COMMON HRV CORRECTION APPROACHES, AND WHAT ARE THEIR IMPLICATIONS?
+At this point, we cannot decisively determine whether the model in Figure 4a or in 4c is the true model for humans, and under what conditions. Correction for heart period would make sense only if Figure 4c is the applicable model in that specific context. We will therefore avoid the term correction because we are not yet sure there is anything wrong, in need of correction. Hereafter, we thus employ the term adjustment as the more appropriate term. We next review and compare commonly employed methods for adjusting HRV and demonstrate how they impact the HRV metrics used and potential inferences we can draw after their application.
+Most between‐individual applications of HRV use it as an indicator of a latent vagal activity construct that cannot be assessed directly. For instance, a research question could be whether vagal activity at baseline is associated with adiposity, as reflected by body mass index (BMI), as the outcome measure at follow‐up. We take BMI as a placeholder
+
+or illustrative outcome here, but the principle applies to any outcome (e.g., depressive symptoms, interleukin‐6 levels, hypertension, myocardial infarction, etc.). A first adjustment approach to account for the interrelationships between the prevailing heart period and its variability is to use linear regression analysis, either by using an HRV score adjusted by its covariance with heart period or by using HRV and heart period as simultaneous predictors. To illustrate what happens during adjustment by such an approach, we take the structural equation model in Figure 6 and use it to simulate data sets using the nine different parameter settings displayed in Table 2 (for details, see the R script in supporting information Appendix S1). These parameter settings vary the reliability of HRV and heart period as indicators of the latent vagal activity factor and also vary the bdirect path between heart period and HRV to reflect no effect of heart period on HRV, a small effect of heart period on HRV, or a moderate effect of heart period. In the simulated data obtained using these different parameter settings, we test the ability of linear regression to estimate the effects of HRV and heart period on BMI in (a) models that use either HRV or heart period alone, (b)
+
+| 16 of 26      
+
+T A B L E 3   Effects of adjustment of the HRV metric by the approach proposed by Monfredi et al. (2014) on its correlation to HR, the unadjusted HRV, BMI, and age
+
+Slope of exponential relationship between HRV metric and HR
+
+Correlation of HRV metric to HR before adjustment
+
+Correlation of HRV metric to HR after adjustment
+
+Correlation between unadjusted HRV and adjusted HRV metric
+
+Correlation between BMI and HRV metric before adjustment
+
+Correlation between BMI and HRV metric after adjustment
+
+Correlation between age and HRV metric before adjustment
+
+Correlation between age and HRV metric after adjustment
+
+NTR
+
+SDNN
+
+During sleep
+
+–0.027
+
+–0.69
+
+0.02
+
+0.68
+
+During work
+
+–0.021
+
+–0.52
+
+0.02
+
+0.82
+
+During leisure time –0.017
+
+–0.62
+
+0.02
+
+0.75
+
+RMSSD
+
+During sleep
+
+–0.039
+
+–0.55
+
+0.04
+
+0.76
+
+During work
+
+–0.035
+
+–0.53
+
+0.03
+
+0.79
+
+During leisure time –0.025
+
+–0.52
+
+0.02
+
+0.81
+
+RSA
+
+During sleep
+
+–0.020
+
+–0.30
+
+0.03
+
+0.92
+
+During work
+
+–0.021
+
+–0.36
+
+0.03
+
+0.88
+
+During leisure time –0.016
+
+–0.39
+
+0.02
+
+0.89
+
+MIDUS
+
+SDNN
+
+During baseline
+
+–0.020
+
+–0.40
+
+0.01
+
+0.89
+
+During math
+
+–0.019
+
+–0.39
+
+0.02
+
+0.89
+
+During Stroop
+
+–0.017
+
+–0.36
+
+–0.01
+
+0.91
+
+RMSSD
+
+During baseline
+
+–0.032
+
+–0.44
+
+–0.01
+
+0.85
+
+During math
+
+–0.032
+
+–0.47
+
+–0.03
+
+0.85
+
+During Stroop
+
+–0.031
+
+–0.45
+
+–0.03
+
+0.86
+
+HF
+
+During baseline
+
+–0.057
+
+–0.24
+
+–0.02
+
+0.88
+
+During math
+
+–0.058
+
+–0.29
+
+–0.02
+
+0.86
+
+During Stroop
+
+–0.064
+
+–0.26
+
+–0.02
+
+0.82
+
+−0.15 −0.15 −0.22
+–0.12 –0.14 –0.18
+–0.08 –0.18 –0.26
+–0.08 –0.11 –0.12
+0.03 0.01 0.00
+0.05 0.01 0.00
+
+Note. Mean age was 34.1 (± 9.6) in NTR and 54.7 (± 12.3) in MIDUS. Mean BMI was 24.0 (± 4.1) in NTR and 30.0 (± 7.0) in MIDUS.
+
+−0.08 –0.18 −0.26
+–0.06 –0.17 –0.20
+–0.03 –0.20 –0.29
+–0.06 –0.12 –0.13
+0.05 0.01 –0.01
+0.05 –0.01 –0.02
+
+−0.35 −0.31 –0.30
+–0.35 –0.29 –0.21
+–0.37 –0.34 –0.41
+
+−0.42 −0.45 −0.49
+–0.37 –0.42 –0.33
+–0.37 –0.42 –0.49
+
+–0.29 –0.27 –0.23
+–0.18 –0.18 –0.15
+–0.15 –0.13 –0.07
+
+–0.39 –0.37 –0.31
+–0.27 –0.32 –0.24
+–0.23 –0.24 –0.14
+
+DE GEUS et al.
+
+DE GEUS et al.
+
+T A B L E 4   Effects of adjustment of the HRV metric by the approach proposed by van Roon et al. (2016) on its correlation to heart period, the unadjusted HRV, BMI, and age
+
+Correlation of HRV metric to heart period before adjustment
+
+Correlation of HRV metric to heart period after adjustment
+
+Correlation between unadjusted HRV and adjusted HRV metric
+
+Correlation between BMI and HRV metric before adjustment
+
+Correlation between BMI and HRV metric after adjustment
+
+Correlation between age and HRV metric before adjustment
+
+Correlation between age and HRV metric after adjustment
+
+NTR
+
+SDNN
+
+During sleep
+
+0.58
+
+During work
+
+0.57
+
+During leisure time
+
+0.55
+
+RMSSD
+
+During sleep
+
+0.73
+
+During work
+
+0.59
+
+During leisure time
+
+0.67
+
+RSA
+
+During sleep
+
+0.30
+
+During work
+
+0.36
+
+During leisure time
+
+0.43
+
+MIDUS
+
+SDNN
+
+During baseline
+
+0.44
+
+During math
+
+0.47
+
+During Stroop
+
+0.45
+
+RMSSD
+
+During baseline
+
+0.39
+
+During math
+
+0.38
+
+During Stroop
+
+0.36
+
+HF
+
+During baseline
+
+0.25
+
+During math
+
+0.30
+
+During Stroop
+
+0.27
+
+0.36
+
+0.90
+
+0.37
+
+0.92
+
+0.31
+
+0.87
+
+0.37
+
+0.96
+
+0.25
+
+0.97
+
+0.24
+
+0.95
+
+0.03
+
+0.95
+
+0.10
+
+0.96
+
+0.10
+
+0.94
+
+0.27
+
+0.95
+
+0.30
+
+0.95
+
+0.29
+
+0.95
+
+0.11
+
+0.97
+
+0.10
+
+0.98
+
+0.08
+
+0.97
+
+0.20
+
+0.99
+
+0.24
+
+0.99
+
+0.23
+
+0.99
+
+–0.15 –0.15 –0.22
+–0.12 –0.14 –0.18
+–0.08 –0.18 –0.26
+–0.08 –0.11 –0.12
+0.03 0.01 0.00
+0.05 0.01 0.00
+
+–0.12 –0.17 –0.26
+–0.10 –0.15 –0.19
+–0.04 –0.20 –0.28
+–0.07 –0.12 –0.13
+0.04 0.01 –0.01
+0.05 0.00 0.00
+
+–0.35 –0.31 –0.30
+–0.35 –0.29 –0.21
+–0.37 –0.34 –0.41
+–0.29 –0.27 –0.23
+–0.18 –0.18 –0.15
+–0.15 –0.13 –0.07
+
+–0.41 –0.42 –0.45
+–0.37 –0.35 –0.27
+–0.37 –0.39 –0.48
+–0.37 –0.35 –0.30
+–0.23 –0.24 –0.19
+–0.17 –0.16 –0.09
+
+|       17 of 26
+
+| 18 of 26      
+
+T A B L E 5   Impact of HRV adjustment on the effect sizes in repeated measures analyses
+
+Mean
+
+SD
+
+HR
+
+Mean
+
+SD
+
+Heart period
+
+NTR
+
+Sleep Leisure Work
+
+63.2
+
+8.3
+
+70.8
+
+10.0
+
+84.9
+
+10.7
+
+SDNN
+
+979.9 878.9 747.7 cSDNN
+
+134.3 128.2 103.2
+
+Mean
+
+SD
+
+cvSDNN
+
+Sleep Leisure Work
+
+91.8
+
+28.0
+
+76.0
+
+28.4
+
+76.6
+
+21.4
+
+RMSSD
+
+503.8 324.6 317.0 cRMSSD
+
+114.6 103.7 69.7
+
+9.3
+
+2.1
+
+8.6
+
+2.7
+
+10.2
+
+2.2
+
+cvRMSSD
+
+Sleep Leisure Work
+
+52.9
+
+26.5
+
+45.5
+
+25.6
+
+32.8
+
+15.6
+
+pvRSA
+
+604.3 497.4 257.0 cpvRSA
+
+263.6 241.6 104.5
+
+5.3
+
+2.3
+
+5.0
+
+2.5
+
+4.3
+
+1.8
+
+cvpvRSA
+
+Sleep
+
+54.8
+
+24.7
+
+195.1
+
+85.2
+
+5.6
+
+2.4
+
+Leisure
+
+51.5
+
+24.9
+
+218.9
+
+99.8
+
+5.8
+
+2.6
+
+Work
+
+40.3
+
+15.8
+
+153.4
+
+55.7
+
+5.4
+
+1.9
+
+Δ (from sleep level)
+
+SDNN
+
+cSDNN
+
+–15.7 –16.3 RMSSD
+
+–180.5 –191.9 cRMSSD
+
+–7.3 –20.9 pvRSA
+
+–110.7 –355.9 cpvRSA
+
+–3.3 –14.5
+
++23.4 –41.6
+
+cvSDNN
+–0.71 +0.81 cvRMSSD
+–0.24 –1.06 cvpvRSA
++0.23 –0.22
+
+Effect size SDNN
+
+cSDNN
+
+–0.56 –0.58 RMSSD
+
+–1.57 –1.67 cRMSSD
+
+–0.28 –0.79 pvRSA
+
+–0.42 –1.35 cpvRSA
+
+–0.13 –0.59
+
++0.27 –0.49
+
+cvSDNN
+–0.33 +0.38 cvRMSSD
+–0.10 –0.45 cvpvRSA
++0.10 –0.09
+
+Mean
+
+SD
+
+HR
+
+Mean
+
+SD
+
+Heart period
+
+MIDUS
+
+Baseline Math Stroop
+Baseline Math Stroop
+Baseline Math Stroop
+
+72.2
+
+10.8
+
+75.4
+
+11.2
+
+76.3
+
+11.4
+
+SDNN
+
+36.2
+
+17.8
+
+30.6
+
+15.0
+
+29.8
+
+15.6
+
+RMSSD
+
+23.8
+
+17.9
+
+21.4
+
+15.8
+
+19.5
+
+15.1
+
+HF
+
+850.5 814.2 804.2 cSDNN
+145.0 125.5 107.1 cRMSSD
+225.7 224.0 194.0 cHF
+
+129.9 124.5 123.3
+65.6 56.0 50.6
+148.9 133.1 128.7
+
+Mean
+
+SD
+
+cvSDNN
+
+4.2
+
+1.9
+
+3.7
+
+1.7
+
+3.7
+
+1.7
+
+cvRMSSD
+
+2.7
+
+1.9
+
+2.6
+
+1.7
+
+2.4
+
+1.6
+
+cvHF
+
+Δ (from baseline level)
+
+SDNN
+
+cSDNN
+
+–5.4 –6.2 RMSSD
+
+–24.3 –42.6 cRMSSD
+
+–2.4
+
+–3.3
+
+–4.3
+
+–32.9
+
+HF
+
+cHF
+
+cvSDNN
+–0.49 –0.53 cvRMSSD
+–0.18 –0.38 cvHF
+
+Effect size SDNN
+
+cSDNN
+
+–0.31 –0.35 RMSSD
+
+–0.37 –0.65 cRMSSD
+
+–0.13 –0.24 HF
+
+–0.02 –0.22 cHF
+
+cvSDNN
+–0.26 –0.28 cvRMSSD
+–0.10 –0.20 cvHF
+
+Baseline
+
+344.4
+
+760.4
+
+17,607
+
+32,784
+
+38.1
+
+Math
+
+269.0
+
+525.5
+
+17,406
+
+27,536
+
+30.9
+
+Stroop
+
+203.7
+
+500.3
+
+20,903
+
+42,557
+
+23.5
+
+79.8
+
+56.9
+
+–68.8
+
+54.4
+
+–130.8
+
+137 3,423
+
+–6.50 –13.68
+
+–0.09 –0.17
+
++0.001 +0.10
+
+–0.08 –0.17
+
+Note. Δ denotes the within‐individual change from sleep level (NTR) or baseline level (MIDUS). It can differ slightly from the subtraction of the condition means, because only subjects with complete data were used for the change scores. Effect size denotes the average size of the within‐individual change expressed as proportion of the standard deviation during the sleep (NTR) or baseline condition. c[HRV] adjustment by Monfredi method; cv[HRV] adjustment by van Roon method. Unadjusted effect sizes, effect size on c[HRV] adjustment, effect size on cv[HRV] adjustment.
+
+DE GEUS et al.
+
+DE GEUS et al.
+
+|       19 of 26
+
+a covariate model that first corrects BMI for heart period and regresses the residual BMI on HRV, and (c) a model that uses heart period and HRV as joint predictors of BMI.
+As shown in Table 2, regression models that use heart period and HRV as separate predictors recapture the contribution of HRV and heart period to BMI very well, independent of whether Figure 4a or 4c is the true data generating process. In all regression models, the combination of HRV and heart period yields the highest amount of variance explained in BMI, although, as may be expected from any semipartial correlation, the regression coefficients βHRV and βHP in the combined models underestimate the contribution of HRV and heart period compared to models using them as sole predictors. Importantly, a covariate analysis that first adjusts HRV for heart period will strongly underestimate the contribution of HRV to BMI, not just by underestimating the regression coefficient of HRV on BMI (βHRV), but also by a corresponding reduction in the amount of explained variance in BMI (R2). The situation is most bleak in the parameter settings where heart period is a better indicator of vagal activity than HRV.
+In real data, we of course only have access to the estimated βHRV and βHP. Our interpretation of these estimates can be quite different depending on whether we expect Figure 4a or 4c to be the true data generating process. For instance, when we find the estimate βHRV of 0.225 in the parameter settings #7 (generated under Figure 4c and a substantial direct effect of heart period on HRV), but believe the estimate to be generated under parameter settings #1 (generated under Figure 4a and a negligible direct effect of heart period on HRV), we would overestimate the contribution of HRV to BMI. Most dramatically, when we use HRV and heart period as dual predictors of BMI when the parameter settings #7 to #9 are true, but we instead assume the parameter settings #1 to #3 to be true, we would estimate the added predictive value of heart period to be small or even zero.
+From these simulations, we conclude that adjustment for the HRV–heart period correlation through covariate adjustment is generally not to be recommended. Given the results in Table 2, it may not be surprising that studies that used a regression approach “competitively” combining heart period (or HR) with HRV metrics to test their relative prognostic importance for disease outcomes produced quite different conclusions (Abildstrom et al., 2003; Copie et al., 1996; Fleiss, Bigger, & Rolnitzky, 1992; Kleiger, Miller, Bigger, & Moss, 1987a; Tsuji et al., 1994). In most of the parameter settings in Table 2, adding heart period provides additional nonredundant information on cardiac vagal activity over that provided by HRV. Therefore, as has been suggested before, using both HRV and heart period as indicators of cardiac vagal activity may be the wisest course of action (Grossman & Taylor, 2007), but we should then interpret the R2 as the best measure of explained variance by vagal activity and restrain from
+
+interpreting the magnitude of βHRV and βHP separately (e.g., as signaling that either HRV or heart period are the better predictors.).
+A second adjustment approach is to create a new “corrected” HRV measure that expresses HRV as a function of the mean heart period (or HR). We discuss two methods for such corrected HRV measures, although many more have been suggested (Sacha & Pluta, 2005; Sacha et al., 2013). A general procedure to create an HRV metric that is independent of chronotropic state was proposed by Monfredi et al. (2014) based on the exponential relationship between HRV metrics and HR. The core idea is to compare the HRV between individuals only after recasting it to a fixed reference HR. The procedure exploits the linear relationship between HR and the natural logarithm transformation of the HRV (LnHRV). A “corrected (c)” HRV (cHRV) is computed as the HRV that would have been obtained at a fixed reference HR. The latter is computed by transforming the observed HRV to LnHRV and then subtracting/adding the change in LnHRV that would occur if HR changed from the observed HR to the reference HR. This change can be derived from the slope of the linear relation between LnHRV and HR. If LnHRV = intercept + β*HR, then
+LnHRVreference − LnHRVobserved = ∗ HRreference − HRobserved (1)
+which, after exponentiation of both sides of the equation and some further algebra, gives
+HRVreference∕HRVobserved = e ∗(HRreference − HRobserved) (2)
+Based on their empirical data, Monfredi et al. (2014) estimate the slope (β) between LnSDNN and HR to be −0.017 (−1/58.8), yielding
+SDNNreference = SDNNobserved∕e ((HRreference − HRobserved)∕58.8) (3)
+Notwithstanding a reasonable comparability across different samples, the slope of LnSDNN and HR appears to be age dependent (van den Berg et al., 2018). It is also sensitive to the condition/situation in which HRV is measured. The latter is illustrated in the Netherlands Twin Register (NTR) and (Midlife in the United States) MIDUS data depicted in Figure 3. This suggests that the correction formula cannot use a single fixed slope of −0.017, but needs this slope to be based on the specific data set and measurement conditions of interest. We computed the “corrected” SDNN (cSDNN) as well as the corrected version for the other HRV metrics in the NTR and MIDUS samples using the condition specific slopes (see Table 3, 2nd column, e.g., cRMSSD during leisure time in NTR = RMSSD * e−0,025*HR). We then correlated the cHRV metrics with HR and the untransformed HRV. We first note that before adjustment pvRSA and HF measures are
+
+| 20 of 26      
+
+less strongly correlated with HR than SDNN and RMSSD. Second, the original relationship between HR and all four HRV metrics is completely removed by the Monfredi method. Third, the HR‐adjusted cHRV values preserve the rank ordering of individuals quite well, as shown by the high correlations between adjusted and unadjusted values.
+A second method to create an HRV measure that is adjusted for chronotropic state uses the coefficient of variation (CV) of the HRV metrics, which for SDNN has the form
+
+cvSDNN = 100 ∗ SDNN IBI
+
+(4)
+
+but can be generalized to other HRV metrics as follows:
+
+cvRMSSD = 100 ∗ RMSSD IBI
+
+(5)
+
+longest IBI during expiration − shortest IBI during inspiration cvpvRSA = 100 ∗
+mean IBI during breath
+(6)
+
+cvHF = 100 ∗ HF (IBI)2
+
+(7)
+
+The more parsimonious and easy to compute cvSDNN metric was shown to closely approximate the cSDNN obtained by the adjustment proposed by Monfredi and colleagues (van Roon, Snieder, Lefrandt, de Geus, & Riese, 2016). After log transformation, the adjusted SDNN values from each transformation were highly correlated and only differed by a constant. We applied this CV adjustment of van Roon et al. (2016) to the HRV metrics in the MIDUS and NTR samples and correlated the cvHRV metrics with heart period and the untransformed HRV (see Table 4). A number of differences between the van Roon and the Monfredi adjustment methods are seen. First, the relationship between heart period and HRV metrics is attenuated, but not entirely removed, by the CV transformation. Second, the adjusted HRV values preserve the rank ordering of individuals on HRV almost perfectly, as shown by the very high correlations between unadjusted and adjusted values.
+We next investigate how these two adjustment methods affect typical between‐ and within‐individual designs used in the behavioral sciences. In the rightmost part of Tables 3 and 4, we correlate the unadjusted and adjusted HRV measures to the individuals’ BMI (known small effect size) and age (known moderate effect size). It can be easily observed that the adjustment creates no alarming discrepancies with results obtained using the unadjusted HRV for BMI. In contrast, the correlation with age of both the Monfredi cHRV metrics and the van Roon adjusted cvHRV metrics is systematically higher than for the unadjusted HRV metrics (confirmed by
+
+DE GEUS et al.
+Fisher Z transform of the correlations). In short, the impact of adjustment on between‐individual designs may not be very large when the correlations between HRV and the predicted variables are small (like BMI), but for moderate correlations (like age) meaningfully different results may arise for adjusted and unadjusted HRV metrics.
+The impact of the HRV adjustments on within‐individual study designs was more profound. This is illustrated in Table 5, where we exploit the repeated measures structure of HRV data from MIDUS (lab‐based within‐individual observations) and the NTR (ambulatory within‐individual values across a 24‐hr recording). Inspection of the changes in HRV over the baseline condition expressed in standard deviations of the baseline level (as a measure of the effect size) demonstrates that adjusting HRV for heart period can substantially influence the observed effects of (a) acute psychological stress on “vagal withdrawal,” as assessed by HRV suppression, and (b) expected decreases in vagal activity from sleep to leisure‐time activities and from leisure‐time to work‐related activities. The general pattern is that the adjusted HRV measures underestimate the effect sizes of the unadjusted HRV measures when heart period changes are modest. Moreover, contradictory conclusions can result from adjusted and unadjusted measures if heart period changes are larger. This is especially so for the Monfredi adjustment.
+The above serves as a demonstration that adjustment for heart period (or HR) is not interpretively neutral: it can profoundly affect the conclusions drawn about correlations to external variables and the effects of acute behavioral states (e.g., psychological stress) on cardiac autonomic activity or the variation in cardiac autonomic activity across a 24‐hr naturalistic recording. Pending resolution of the core question of the existence of a direct effect of heart period on HRV, we cannot tell which of these adjustment methods best captures the ground truth, or whether any adjustment is needed at all.
+
+6  RE
+
+C|  OPMRMOEVNI SDIAOTNIAOLN
+
+S
+
+In view of the preceding biological, quantitative, and interpretive considerations, we close by offering several provisional recommendations on the handling and reporting of HRV metrics. First, when attempting to quantify cardiac vagal activity noninvasively, we advocate the use of pvRSA and HF, as they are based on the well‐understood neurophysiological mechanism of respiratory gating of vagal activity. The metric of RMSSD is also widely used, and it is highly correlated with pvRSA and HF (Goedhart, van der Sluis, Houtveen, Willemsen, & de Geus, 2007; Grossman, van Beek, & Wientjes, 1990). The former, however, does have somewhat different transfer functions across the respiratory frequency band, which are dependent on basal heart period
+
+DE GEUS et al.
+(Berntson, Lozano, & Chen, 2005). Nevertheless, RMSSD has been well validated as a metric of HRV and may be preferable with records having ectopic beats that reset the cardiac rhythm.
+With regard to adjustment for heart period, our second recommendation is to always formally examine and report the relationship(s) between the prevailing heart period
+and the primary HRV metrics under study. Depending on study designs and data sampling structures, such relationships should be tested within or across individuals and within or across conditions. “Full disclosure” type figures like Figures S1 to S6 are informative and could be routinely provided with publications as data supplements. At the very least, we recommend the reporting of zero‐order, and when relevant, partial correlations. Inherent to this recommendation is the corollary recommendation to routinely report descriptive statistics for mean or prevailing heart period (and optionally HR) values in each condition and relevant subgroup alongside reports of HRV metrics. Collectively, following these suggestions will strengthen transparency in reporting, and they may provide for cumulative insights into the magnitude of observable HRV–heart period dependencies across a range of empirical contexts in future research.
+A third recommendation is to test and report on how adjusting HRV metrics for chronotropic state affects pri-
+mary study outcomes, whether it is a cross‐sectional correlation analysis across individuals or an analysis of how an experimental intervention alters some (adjusted) HRV parameter. Hence, a conservative approach is to report main effects and associations of interest in both adjusted and unadjusted metrics. As a fourth recommendation, we favor the parsimonious CV transformation over all other types
+of adjusted HRV measures. It does not depend on a condition and population‐specific slope, such as the Monfredi adjustment. In keeping with our first recommendation, the cvpvRSA and cvHF would be our measures of first choice. Fifth, we recommend to avoid adjustment approaches that involve “regressing out” heart period effects in covariate
+analyses and assessing HRV in terms of residuals. Any adjustment of HRV metrics for prevailing chrono-
+tropic states measured in terms of heart period still leaves intact the prior recommendations regarding the control for other sources of influence on HRV (e.g., respiratory rate, depth, cycle time effects). For example, the proposed adjustment for heart period is compatible (and can be done) with simultaneous correction for respiratory behaviors. A review of the optimal adjustment strategies in that realm is outside our scope, but we note that some of the issues introduced in the analyses in Figure 4 may also apply to dual correction for tidal volume and respiration rate (Ritz & Dahme, 2006) if these parameters, which are highly correlated under physiological conditions, reflect a shared latent generator of respiratory‐frequency autonomic rhythms (Eckberg, 2003).
+
+|       21 of 26
+A sixth recommendation is to avoid mixing units of measurement (e.g., ms vs. bpm; ms vs. spectral density units) when examining HRV and chronotropic state relationships or adjusting for them. Failure to do so can have serious consequences that will not only mislead readers, but also undermine inferences. Although less familiar to the broader readership, using heart period in the context of HRV is more appropriate than using HR. Any transformations, including transformation to normality, should be done on the final metrics, not in between. For instance, computing the coefficient of variation of HF spectral power by dividing the (natural) log‐transformed HF power in ms2 by HR in bpm is a recipe for double trouble: mixing (a) units and (b) transformed and untransformed values.
+A final recommendation is to be explicit about the theoretical model for the relationships between vagal activity,
+heart period, and HRV and to use an analytic strategy that is in line with that model. This can be taken as a plea for approaches, such as structural equation models of the type shown in Figure 6. Such models can be readily expanded by a latent variable for cardiac sympathetic activity that can be indexed by the PEP. Moreover, they can additionally accommodate indicators of nonvagal effects, like respiration rate and depth, and even, provided it is known from blockade, the intrinsic HR.
+7  |  WHERE DO WE GO FROM
+HERE?
+At present, there are no easy answers to the question of whether HRV should be corrected for heart rate. It is not even clear that anything is in need of correction per se, leading to our preferred term, adjustment. In this regard, we maintain that there are many knowledge gaps in our understanding of the meaning of HRV metrics that have undergone adjustment. We specifically caution that adjustment approaches may in fact remove meaningful variance in outcomes of interest that can be attributable to autonomic and neurophysiological phenomena. If an adjustment for cardiac chronotropic state (heart period or rate) is employed, it is incumbent on the author(s) to justify the specific adjustment within the given context. We suggest that the most straightforward path ahead is for researchers to report HRV metrics in parallel with chronotropic measures (heart period always, HR optionally), to choose the CV adjustment method over other adjustment procedures, and if adjustment is used to always report (untransformed) unadjusted as well as adjusted outcomes.
+We also advocate for continued work focused on developing HRV metrics possessing the highest reliability and construct and predictive validity with respect to autonomic control and disease risk. There are both theoretical and
+
+| 22 of 26      
+empirical avenues to bolster future inferences on autonomic cardiovascular control from HRV metrics. Quantitative simulations and biophysical modeling of the sinoatrial cell function (Dexter, Levy, & Rudy, 1989; Dokos, Celler, & Lovell, 1996; Pyetan, Toledo, Zoran, & Akselrod, 2003; Zhang et al., 2000) are key tools to address open questions about the consequences for various adjustment strategies considered here and those yet to be proposed (see, for instance, https://models. cellml.org/e/fb). The theoretical approach should be mirrored by empirical studies using experimental manipulation of autonomic cardiovascular control to detect effects on adjusted and unadjusted HRV metrics. Pursuing these future avenues should likely not be confined to isolating influences on HRV. Other parameters of cardiovascular physiology (e.g., mean arterial pressure, sensitivity of the baroreflex) exhibit chronotropic dependencies (Abrahamsson, Ahlund, Nordlander, & Lind, 2003; Zaza & Lombardi, 2001) that should similarly be examined.
+Finally, adjusted and unadjusted HRV metrics should be subjected to rigorous comparisons as reliable predictors or correlates of behavioral states (e.g., psychological stress), individual differences in symptomatology (e.g., depressive symptoms), and health outcomes (e.g., infarction) that are likely related to vagal activity. The argument “that the higher morbidity and mortality associated with a decrease in HRV is likely to be the result of the concurrent increase in HR” (Monfredi et al., 2014, p. 1342) is empirically falsifiable and can be tested by confirming superior prediction of adjusted metrics over unadjusted metrics, which now still make up the majority of current HRV research.
+We thus close by reiterating the famous expression, “If it ain’t broke, don’t fix it.” In this regard, we do not view metrics of HRV as inherently broken or in need of fixing. Rather, we view HRV metrics as in need of continued empirical and inferential refinement based on firm biological grounding.
+ACKNOWLEDGMENTS
+This work was supported by NIH grant HL089850 to P.J.G., NIH grant HL101959 to J.R.J., NIH grant F32 HL137227 to R.C.B., and an Ohio State University Emeritus Academy grant to G.G.B. Since 1995, the MIDUS study has been funded by the following: John D. and Catherine T. MacArthur Foundation Research Network National Institute on Aging (P01‐AG020166), National Institute on Aging (U19‐AG051426). Biomarker data collection was further supported by the NIH National Center for Advancing Translational Sciences (NCATS) Clinical and Translational Science Award (CTSA) program as follows: UL1TR001409 (Georgetown), UL1TR001881 (UCLA), 1UL1RR025011 (UW). Data collection on the autonomic nervous system in the Netherlands Twin Register
+
+DE GEUS et al.
+(NTR) was supported by the Netherlands Organization for Scientific Research (NWO) and The Netherlands Organization for Health Research and Development (ZonMW), the Biobanking and Biomolecular Resources Research Infrastructure (BBMRI–NL), and the Vrije Universiteit’s VU‐AMS research fund. Data management and access was supported by the Netherlands Organization for Scientific Research (NWO) grant 480‐15‐001/674 (NWO‐Groot). The authors declare no conflicts of interest with respect to their authorship or the publication of this article.
+REFERENCES
+Abildstrom, S. Z., Jensen, B. T., Agner, E., Torp‐Pedersen, C., Nyvad, O., Wachtell, K., … Kanters, J. K. (2003). Heart rate versus heart rate variability in risk prediction after myocardial infarction. Journal of Cardiovascular Electrophysiology, 14(2), 168–173. https://doi. org/10.1046/j.1540-8167.2003.02367.x
+Abrahamsson, C., Ahlund, C., Nordlander, M., & Lind, L. (2003). A method for heart rate‐corrected estimation of baroreflex sensitivity. Journal of Hypertension, 21(11), 2133–2140. https://doi. org/10.1097/01.hjh.0000098136.70956.c5
+Allen, J. J. B., & Chambers, A. S. (2007). Special issue of biological psychology on cardiac vagal control, emotion, psychopathology, and health. Biological Psychology, 74(2), 113–115.
+Anrep, G. V., Pascual, F. R. S. W., & Roessler, R. (1936). Respiratory variations of the heart rate. Proceedings of the Royal Society B Biological Sciences, 119(813), 191–217. https://doi.org/10.1098/ rspb.1936.0005
+Bartos, D. C., Grandi, E., & Ripplinger, C. M. (2015). Ion channels in the heart. Comprehensive Phsyiology, 5(3), 1423–1464. https://doi. org/10.1002/cphy.c140069
+Beauchaine, T. P., & Thayer, J. F. (2015). Heart rate variability as a transdiagnostic biomarker of psychopathology. International Journal of Psychophysiology, 98(2 Pt 2), 338–350. https://doi.org/10.1016/j. ijpsycho.2015.08.004
+Berntson, G. G., Cacioppo, J. T., Binkley, P. F., Uchino, B. N., Quigley, K. S., & Fieldstone, A. (1994). Autonomic cardiac control. III. Psychological stress and cardiac response in autonomic space as revealed by pharmacological blockades. Psychophysiology, 31(6), 599–608. https://doi.org/10.1111/j.1469-8986.1994.tb02352.x
+Berntson, G. G., Cacioppo, J. T., & Quigley, K. S. (1991). Autonomic determinism: The modes of autonomic control, the doctrine of autonomic space, and the laws of autonomic constraint. Psychological Review, 98(4), 459–487. https://doi.org/10.1037/0033-295X.98.4.459
+Berntson, G. G., Cacioppo, J. T., & Quigley, K. S. (1993). Respiratory sinus arrhythmia: Autonomic origins, physiological mechanisms, and psychophysiological implications. Psychophysiology, 30(2), 183–196. https://doi.org/10.1111/j.1469-8986.1993.tb01731.x
+Berntson, G. G., Cacioppo, J. T., & Quigley, K. S. (1994). Autonomic cardiac control. I. Estimation and validation from pharmacological blockades. Psychophysiology, 31(6), 572–585. https://doi. org/10.1111/j.1469-8986.1994.tb02350.x
+Berntson, G. G., Cacioppo, J. T., Quigley, K. S., & Fabro, V. T. (1994). Autonomic space and psychophysiological response. Psychophysiology, 31(1), 44–61. https://doi.org/10.1111/j. 1469-8986.1994.tb01024.x
+
+DE GEUS et al.
+Berntson, G. G., Lozano, D. L., & Chen, Y. J. (2005). Filter properties of root mean square successive difference (RMSSD) for heart rate. Psychophysiology, 42(2), 246–252. https://doi. org/10.1111/j.1469-8986.2005.00277.x
+Berntson, G. G., Norman, G. J., Hawkley, L. C., & Cacioppo, J. T. (2008). Cardiac autonomic balance versus cardiac regulatory capacity. Psychophysiology, 45(4), 643–652. https://doi. org/10.1111/j.1469-8986.2008.00652.x
+Berntson, G. G., Quigley, K. S., Fabro, V. J., & Cacioppo, J. T. (1992). Vagal stimulation and cardiac chronotropy in rats. Journal of the Autonomic Nervous System, 41(3), 221–226. https://doi. org/10.1016/0165-1838(92)90062-L
+Bigger, J. T., Fleiss, J. L., Rolnitzky, L. M., & Steinman, R. C. (1993). The ability of several short‐term measures of RR variability to predict mortality after myocardial infarction. Circulation, 88(3), 927– 934. https://doi.org/10.1161/01.CIR.88.3.927
+Bigger, J. T., Jr., Fleiss, J. L., Steinman, R. C., Rolnitzky, L. M., Kleiger, R. E., & Rottman, J. N. (1992). Frequency domain measures of heart period variability and mortality after myocardial infarction. Circulation, 85(1), 164–171. https://doi.org/10.1161/01. CIR.85.1.164
+Bigger, J. T., Kleiger, R. E., Fleiss, J. L., Rolnitzky, L. M., Steinman, R. C., Miller, P., & Multicenter Post‐infarction Research Group. (1988). Components of heart rate variability measured during healing of acute myocardial infarction. American Journal of Cardiology, 61, 208–215. https://doi.org/10.1016/0002-9149(88)90917-4
+Borer, J. S., & Le Heuzey, J. Y. (2008). Characterization of the heart rate‐lowering action of ivabradine, a selective I(f) current inhibitor. American Journal of Therapeutics, 15(5), 461–473. https://doi. org/10.1097/MJT.0b013e3181758855
+Bosch, J. A., de Geus, E. J., Kelder, A., Veerman, E. C., Hoogstraten, J., & Amerongen, A. V. (2001). Differential effects of active versus passive coping on secretory immunity. Psychophysiology, 38(5), 836–846. https://doi.org/10.1111/1469-8986.3850836
+Bosch, J. A., de Geus, E. J., Veerman, E. C., Hoogstraten, J., & Nieuw Amerongen, A. V. (2003). Innate secretory immunity in response to laboratory stressors that evoke distinct patterns of cardiac autonomic activity. Psychosomatic Medicine, 65(2), 245–258. https:// doi.org/10.1097/01.PSY.0000058376.50240.2D
+Boyett, M. R. (2017). Last word on point:counterpoint. Journal of Applied Physiology, 123(3), 694. https://doi.org/10.1152/ japplphysiol.00542.2017
+Boyett, M. R., Wang, Y., Nakao, S., Ariyaratnam, J., Hart, G., Monfredi, O., & D’Souza, A. (2017). Rebuttal from Boyett et al. Journal of Applied Physiology, 123(3), 689. https://doi.org/10.1152/ japplphysiol.00606.2017
+Brotman, D. J., Bash, L. D., Qayyum, R., Crews, D., Whitsel, E. A., Astor, B. C., & Coresh, J. (2010). Heart rate variability predicts ESRD and CKD‐related hospitalization. Journal of the American Society of Nephrology, 21, 1560–1570. https://doi.org/10.1681/ ASN.2009111112
+Buccelletti, F., Gilardi, E., Scaini, E., Galiuto, L., Persiani, R., Biondi, A., … Silveri, N. G. (2009). Heart rate variability and myocardial infarction: Systematic literature review and metanalysis. European Review for Medical and Pharmacological Sciences, 13(4), 299–307.
+Cacioppo, J. T., Berntson, G. G., Binkley, P. F., Quigley, K. S., Uchino, B. N., & Fieldstone, A. (1994). Autonomic cardiac control. II. Noninvasive indices and basal response as revealed by autonomic blockades. Psychophysiology, 31(6), 586–598. https://doi. org/10.1111/j.1469-8986.1994.tb02351.x
+
+|       23 of 26
+Camm, A. J., Pratt, C. M., Schwartz, P. J., Al‐Khalidi, H. R., Spyt, M. J., Holroyde, M. J., … Brum, J. M. (2004). Mortality in patients after a recent myocardial infarction: A randomized, placebo‐controlled trial of azimilide using heart rate variability for risk stratification. Circulation, 109(8), 990–996. https://doi.org/10.1161/01. CIR.0000117090.01718.2A
+Carlson, M. D., Geha, A. S., Hsu, J., Martin, P. J., Levy, M. N., Jacobs, G., & Waldo, A. L. (1992). Selective stimulation of parasympathetic nerve fibers to the human sinoatrial node. Circulation, 85(4), 1311– 1317. https://doi.org/10.1161/01.CIR.85.4.1311
+Chapleau, M. W., & Abboud, F. M. (2001). Neuro‐cardiovascular regulation: From molecules to man. Introduction. Annals of the New York Academy of Sciences, 940, xiii–xxii. https://doi. org/10.1111/j.1749-6632.2001.tb03661.x
+Copie, X., Hnatkova, K., Staunton, A., Fei, L., Camm, A. J., & Malik, M. (1996). Predictive power of increased heart rate versus depressed left ventricular ejection fraction and heart rate variability for risk stratification after myocardial infarction. Results of a two‐year follow‐up study. Journal of the American College of Cardiology, 27(2), 270–276. https://doi.org/10.1016/0735-1097(95)00454-8
+Craft, N., & Schwartz, J. B. (1995). Effects of age on intrinsic heart rate, heart rate variability, and AV conduction in healthy humans. American Journal of Physiology, 268(4 Pt 2), H1441–H1452. https://doi.org/10.1152/ajpheart.1995.268.4.H1441
+de Bruyne, M. C., Kors, J. A., Hoes, A. W., Klootwijk, P., Dekker, J. M., Hofman, A., … Grobbee, D. E. (1999). Both decreased and increased heart rate variability on the standard 10‐second electrocardiogram predict cardiac mortality in the elderly: The Rotterdam Study. American Heart Journal, 150, 1282–1288. https://doi. org/10.1093/oxfordjournals.aje.a009959
+de Neef, K. J., Versprille, A., Wise, M. E., & Jansen, J. R. (1983). Functional development of the parasympathetic innervation of the sino‐auricular node in newborn rabbits, cats and guinea pigs. Pflugers Archives, 398(1), 73–77. https://doi.org/10.1007/ BF00584717
+Dekker, J. M., Crow, R. S., Folsom, A. R., Hannan, P. J., Liao, D., Swenne, C. A., & Schouten, E. G. (2000). Low heart rate variability in a 2‐minute rhythm strip predicts risk of coronary heart disease and mortality from several causes: The ARIC Study. Circulation, 102(11), 1239–1244. https://doi.org/10.1161/01.CIR.102.11.1239
+Dekker, J. M., Schouten, E. G., Klootwijk, P., Pool, J., Swenne, C. A., & Kromhout, D. (1997). Heart rate variability from short electrocardiographic recordings predicts mortality from all causes in middle‐aged and elderly men. The Zutphen Study. American Journal of Epidemiology, 145(10), 899–908. https://doi.org/10.1093/oxfordjournals.aje.a009049
+Dexter, F., Levy, M. N., & Rudy, Y. (1989). Mathematical model of the changes in heart rate elicited by vagal stimulation. Circulation Research, 65(5), 1330–1339. https://doi.org/10.1161/01. RES.65.5.1330
+Dexter, F., Saidel, G. M., Levy, M. N., & Rudy, Y. (1989). Mathematical model of dependence of heart rate on tissue concentration of acetylcholine. American Journal of Physiology, 256(2 Pt 2), H520–H526. https://doi.org/10.1152/ajpheart.1989.256.2.H520
+Dias da Silva, V. J., Tobaldini, E., Rocchetti, M., Wu, M. A., Malfatto, G., Montano, N., & Zaza, A. (2015). Modulation of sympathetic activity and heart rate variability by ivabradine. Cardiovascular Research, 108(1), 31–38. https://doi.org/10.1093/cvr/cvv180
+Dienberg Love, G., Seeman, T. E., Weinstein, M., & Ryff, C. D. (2010). Bioindicators in the MIDUS national study: Protocol, measures,
+
+| 24 of 26      
+sample, and comparative context. Journal of Aging and Health, 22(8), 1059–1080. https://doi.org/10.1177/0898264310374355 Dokos, S., Celler, B., & Lovell, N. (1996). Ion currents underlying sinoatrial node pacemaker activity: A new single cell mathematical model. Journal of Theoretical Biology, 181(3), 245–272. https://doi. org/10.1006/jtbi.1996.0129 Eckberg, D. L. (1983). Human sinus arrhythmia as an index of vagal cardiac outflow. Journal of Applied Physiology, 54, 961–966. https:// doi.org/10.1152/jappl.1983.54.4.961 Eckberg, D. L. (2000). Physiological basis for human autonomic rhythms. Annals of Medicine, 32(5), 341–349. https://doi. org/10.3109/07853890008995937 Eckberg, D. L. (2003). The human respiratory gate. Journal of Physiology, 548(Pt 2), 339–352. https://doi.org/10.1113/jphysiol.2002.037192 Fleiss, J. L., Bigger, J. T., Jr., & Rolnitzky, L. M. (1992). The correlation between heart period variability and mean period length. Statistics in Medicine, 11(1), 125–129. https://doi.org/10.1002/sim.4780110111 Ford, T. W., & McWilliam, P. N. (1986). The effects of electrical stimulation of myelinated and non‐myelinated vagal fibres on heart rate in the rabbit. Journal of Physiology, 380, 341–347. https://doi. org/10.1113/jphysiol.1986.sp016289 Fouad, F. M., Tarazi, R. C., Ferrario, C. M., Fighaly, S., & Alicandri, C. (1984). Assessment of parasympathetic control of heart rate by a noninvasive method. American Journal of Physiology, 246(6 Pt 2), H838–H842. https://doi.org/10.1152/ajpheart.1984.246.6.H838 Fu, Y., Huang, X., Piao, L., Lopatin, A. N., & Neubig, R. R. (2007). Endogenous RGS proteins modulate SA and AV nodal functions in isolated heart: Implications for sick sinus syndrome and AV block. American Journal of Physiology‐Heart and Circulatory Physiology, 292(5), H2532–H2539. https://doi.org/10.1152/ ajpheart.01391.2006 Furukawa, Y., Wallick, D. W., Carlson, M. D., & Martin, P. J. (1990). Cardiac electrical responses to vagal stimulation of fibers to discrete cardiac regions. American Journal of Physiology, 258(4 Pt 2), H1112–H1118. https://doi.org/10.1152/ ajpheart.1990.258.4.H1112 Gianaros, P. J., & Quigley, K. S. (2001). Autonomic origins of a nonsignal stimulus‐elicited bradycardia and its habituation in humans. Psychophysiology, 38(3), 540–547. https://doi.org/10.1017/ S004857720100004X Goedhart, A. D., van der Sluis, S., Houtveen, J. H., Willemsen, G., & de Geus, E. J. (2007). Comparison of time and frequency domain measures of RSA in ambulatory recordings. Psychophysiology, 44(2), 203–215. https://doi.org/10.1111/j.1469-8986.2006.00490.x Goldberger, J. J. (1999). Sympathovagal balance: How should we measure it? American Journal of Physiology, 276(4 Pt 2), H1273–H1280. https://doi.org/10.1152/ajpheart.1999.276.4.H1273 Goldberger, J. J., Ahmed, M. W., Parker, M. A., & Kadish, A. H. (1994). Dissociation of heart rate variability from parasympathetic tone. American Journal of Physiology, 266(5 Pt 2), H2152–H2157. https://doi.org/10.1152/ajpheart.1994.266.5.H2152 Goldberger, J. J., Challapalli, S., Tung, R., Parker, M. A., & Kadish, A. H. (2001). Relationship of heart rate variability to parasympathetic effect. Circulation, 103(15), 1977–1983. https://doi.org/10.1161/01. CIR.103.15.1977 Goldberger, J. J., Kim, Y. H., Ahmed, M. W., & Kadish, A. H. (1996). Effect of graded increases in parasympathetic tone on heart rate variability. Journal of Cardiovascular Electrophysiology, 7(7), 594–602. https://doi.org/10.1111/j.1540-8167.1996.tb00567.x
+
+DE GEUS et al.
+Graziano, P., & Derefinko, K. (2013). Cardiac vagal control and children’s adaptive functioning: A meta‐analysis. Biological Psychology, 94(1), 22–37. https://doi.org/10.1016/j.biopsycho.2013.04.011
+Grossman, P., Karemaker, J., & Wieling, W. (1991). Prediction of tonic parasympathetic cardiac control using respiratory sinus arrhythmia: The need for respiratory control. Psychophysiology, 28, 201–216. https://doi.org/10.1111/j.1469-8986.1991.tb00412.x
+Grossman, P., & Kollai, M. (1993). Respiratory sinus arrhythmia, cardiac vagal tone, and respiration: Within‐ and between‐individual relations. Psychophysiology, 30, 486–495. https://doi. org/10.1111/j.1469-8986.1993.tb02072.x
+Grossman, P., & Taylor, E. W. (2007). Toward understanding respiratory sinus arrhythmia: Relations to cardiac vagal tone, evolution and biobehavioral functions. Biological Psychology, 74(2), 263–285. https://doi.org/10.1016/j.biopsycho.2005.11.014
+Grossman, P., van Beek, J., & Wientjes, C. (1990). A comparison of three quantification methods for estimation of respiratory sinus arrhythmia. Psychophysiology, 27(6), 702–714. https://doi. org/10.1111/j.1469-8986.1990.tb03198.x
+Hayano, J., Sakakibara, Y., Yamada, A., Yamada, M., Mukai, S., Fujinami, T., … Takata, K. (1991). Accuracy of assessment of cardiac vagal tone by heart rate variability in normal subjects. American Journal of Cardiology, 67(2), 199–204. https://doi. org/10.1016/0002-9149(91)90445-Q
+Hedman, A. E., Tahvanainen, K. U., Hartikainen, J. E., & Hakumaki, M. O. (1995). Effect of sympathetic modulation and sympatho‐ vagal interaction on heart rate variability in anaesthetized dogs. Acta Physiologica Scandinavica, 155(2), 205–214. https://doi. org/10.1111/j.1748-1716.1995.tb09965.x
+Hillebrand, S., Gast, K. B., de Mutsert, R., Swenne, C. A., Jukema, J. W., Middeldorp, S., … Dekkers, O. M. (2013). Heart rate variability and first cardiovascular event in populations without known cardiovascular disease: Meta‐analysis and dose‐response meta‐regression. Europace, 15(5), 742–749. https://doi.org/10.1093/europace/eus341
+Huikuri, H. V., & Stein, P. K. (2013). Heart rate variability in risk stratification of cardiac patients. Progress in Cardiovascular Diseases, 56(2), 153–159. https://doi.org/10.1016/j.pcad.2013.07.003
+Jewett, D. L. (1964). Activity of single efferent fibers in the cervical vagus nerve of the dog, with special reference to possible cardio‐ inhibitory fibres. Journal of Physiology, 175, 321–357. https://doi. org/10.1113/jphysiol.1964.sp007520
+Katona, P. G., Poitras, J. W., Barnett, G. O., & Terry, B. S. (1970). Cardiac vagal efferent activity and heart period in carotid sinus reflex. American Journal of Physiology, 218(4), 1030–1037. https:// doi.org/10.1152/ajplegacy.1970.218.4.1030
+Kleiger, R. E., Miller, J. P., Bigger, J. T., & Moss, A. J. (1987a). Decreased heart rate variability and its association with increased mortality after acute myocardial infarction. American Journal of Cardiology, 59, 256–262. https://doi.org/10.1016/0002-9149(87)90795-8
+Kleiger, R. E., Miller, J. P., Bigger, J. T., & Moss, A. J. (1987b). Decreased heart rate variability and its association with mortality after myocardial infarction. American Journal of Cardiology, 59, 256–262. https://doi.org/10.1016/0002-9149(87)90795-8
+Koizumi, K., Terui, N., & Kollai, M. (1985). Effect of cardiac vagal and sympathetic nerve activity on heart rate in rhythmic fluctuations. Journal of the Autonomic Nervous System, 12(2–3), 251–259. https://doi.org/10.1016/0165-1838(85)90065-7
+Kollai, M., & Mizsei, G. (1990). Respiratory sinus arrhythmia is a limited measure of cardiac parasympathetic control in man. Journal of
+
+DE GEUS et al.
+Physiology, 424, 329–342. https://doi.org/10.1113/jphysiol.1990. sp018070 Kozasa, Y., Nakashima, N., Ito, M., Ishikawa, T., Kimoto, H., Ushijima, K., … Takano, M. (2018). HCN4 pacemaker channels attenuate the parasympathetic response and stabilize the spontaneous firing of the sinoatrial node. Journal of Physiology, 596(5), 809–825. https://doi. org/10.1113/JP275303 Kurtoglu, E., Balta, S., Karakus, Y., Yasar, E., Cuglan, B., Kaplan, O., & Gozubuyuk, G. (2014). Ivabradine improves heart rate variability in patients with nonischemic dilated cardiomyopathy. Arquivos Brasileiros De Cardiologia, 103(4), 308–314. https://doi. org/10.5935/abc.20140109 Levy, M. N., & Zieske, H. (1969a). Autonomic control of cardiac pacemaker activity and atrioventricular transmission. Journal of Applied Physiology, 27, 465–470. https://doi.org/10.1152/ jappl.1969.27.4.465 Levy, M. N., & Zieske, H. (1969b). Comparison of the cardiac effects of vagus nerve stimulation and of acetylcholine infusions. American Journal of Physiology, 216(4), 890–897. https://doi.org/10.1152/ ajplegacy.1969.216.4.890 Liao, D., Cai, J., Rosamond, W. D., Barnes, R. W., Hutchinson, R. G., Whitsel, E. A., … Heiss, G. (1997). Cardiac autonomic function and incident coronary heart disease: A population‐based case‐cohort study. The Atherosclerosis Risk in Communities Study. American Journal of Epidemiology, 145(8), 696–706. https://doi.org/10.1093/aje/145.8.696 Mangin, L., Swynghedauw, B., Benis, A., Thibault, N., Lerebours, G., & Carre, F. (1998). Relationships between heart rate and heart rate variability: Study in conscious rats. Journal of Cardiovascular Pharmacology, 32(4), 601–607. https://doi.org/10.1097/00005344-199810000-00012 Mark, M. D., & Herlitze, S. (2000). G‐protein mediated gating of inward‐ rectifier K(+) channels. European Journal of Biochemistry, 267(19), 5830–5836. https://doi.org/10.1046/j.1432-1327.2000.01670.x Martin, G. J., Magid, N., Myers, G., Barnett, P. S., Schaad, J. W., Weiss, J. S., … Singer, D. H. (1987). Heart rate variability and sudden cardiac death secondary to coronary disease during ambulatory electrocardiographic monitoring. American Journal of Cardiology, 60, 86–89. https://doi.org/10.1016/0002-9149(87)90990-8 Molgaard, H., Sorensen, K. E., & Bjerregaard, P. (1991). Attenuated 24‐h heart rate variability in apparently healthy subjects, subsequently suffering sudden cardiac death. Clinical Autonomic Research, 1(3), 233–237. https://doi.org/10.1007/BF01824992 Monfredi, O., Lyashkov, A. E., Johnsen, A. B., Inada, S., Schneider, H., Wang, R. X., … Boyett, M. R. (2014). Biophysical characterization of the underappreciated and important relationship between heart rate variability and heart rate. Hypertension, 64(6), U1334–U1386. https://doi.org/10.1161/HYPERTENSIONAHA.114.03782 Monfredi, O., Zhang, H., & Boyett, M. R. (2015). Letter by Monfredi et al regarding article, "Physical activity and heart rate variability in older adults: The cardiovascular health study”. Circulation, 131(7), e348. https://doi.org/10.1161/ CIRCULATIONAHA.114.011515 Neijts, M., van Lien, R., Kupper, N., Boomsma, D., Willemsen, G., & de Geus, E. J. (2015). Heritability and temporal stability of ambulatory autonomic stress reactivity in unstructured 24‐hour recordings. Psychosomatic Medicine, 77(8), 870–881. https://doi.org/10.1097/ PSY.0000000000000227 Nolan, J., Batin, P. D., Andrews, R., Lindsay, S. J., Brooksby, P., Mullen, M., … Fox, K. A. (1998). Prospective study of heart rate variability and mortality in chronic heart failure: Results of the United Kingdom heart
+
+|       25 of 26
+failure evaluation and assessment of risk trial (UK‐heart). Circulation, 98(15), 1510–1516. https://doi.org/10.1161/01.CIR.98.15.1510 Opthof, T. (2000). The normal range and determinants of the intrinsic heart rate in man. Cardiovascular Research, 45(1), 173–176. https:// doi.org/10.1016/S0008-6363(99)00322-3 Parker, P., Celler, B. G., Potter, E. K., & McCloskey, D. I. (1984). Vagal stimulation and cardiac slowing. Journal of the Autonomic Nervous System, 11(2), 226–231. https://doi. org/10.1016/0165-1838(84)90080-8 Pyetan, E., Toledo, E., Zoran, O., & Akselrod, S. (2003). Parametric description of cardiac vagal control. Autonomic Neuroscience, 109(1– 2), 42–52. https://doi.org/10.1016/j.autneu.2003.08.001 Quigley, K. S., & Berntson, G. G. (1996). Autonomic interactions and chronotropic control of the heart: Heart period versus heart rate. Psychophysiology, 33(5), 605–611. https://doi. org/10.1111/j.1469-8986.1996.tb02438.x Randall, D. C., Brown, D. R., McGuirt, A. S., Thompson, G. W., Armour, J. A., & Ardell, J. L. (2003). Interactions within the intrinsic cardiac nervous system contribute to chronotropic regulation. American Journal of Physiology‐Regulatory, Integrative and Comparative Physiology, 285(5), R1066–R1075. https://doi. org/10.1152/ajpregu.00167.2003 Reyes Del Paso, G. A., Langewitz, W., Mulder, L. J., van Roon, A., & Duschek, S. (2013). The utility of low frequency heart rate variability as an index of sympathetic cardiac tone: A review with emphasis on a reanalysis of previous studies. Psychophysiology, 50(5), 477–487. https://doi.org/10.1111/psyp.12027 Ritz, T., & Dahme, B. (2006). Implementation and interpretation of respiratory sinus arrhythmia measures in psychosomatic medicine: Practice against better evidence? Psychosomatic Medicine, 68(4), 617–627. https://doi.org/10.1097/01.psy.0000228010.96408.ed Rocchetti, M., Malfatto, G., Lombardi, F., & Zaza, A. (2000). Role of the input/output relation of sinoatrial myocytes in cholinergic modulation of heart rate variability. Journal of Cardiovascular Electrophysiology, 11(5), 522–530. https://doi. org/10.1111/j.1540-8167.2000.tb00005.x Rottenberg, J., Clift, A., Bolden, S., & Salomon, K. (2007). RSA fluctuation in major depressive disorder. Psychophysiology, 44(3), 450– 458. https://doi.org/10.1111/j.1469-8986.2007.00509.x Sacha, J., Barabach, S., Statkiewicz‐Barabach, G., Sacha, K., Muller, A., Piskorski, J., … Schmidt, G. (2013). How to strengthen or weaken the HRV dependence on heart rate—Description of the method and its perspectives. International Journal of Cardiology, 168(2), 1660– 1663. https://doi.org/10.1016/j.ijcard.2013.03.038 Sacha, J., & Pluta, W. (2005). Different methods of heart rate variability analysis reveal different correlations of heart rate variability spectrum with average heart rate. Journal of Electrocardiology, 38(1), 47–53. https://doi.org/10.1016/j.jelectrocard.2004.09.015 Saper, C. B. (2002). The central autonomic nervous system: Conscious visceral perception and autonomic pattern generation. Annual Reviews of Neuroscience, 25, 433–469. https://doi.org/10.1146/annurev.neuro.25.032502.111311 Schroeder, E. B., Chambless, L. E., Liao, D., Prineas, R. J., Evans, G. W., Rosamond, W. D., & Heiss, G. (2005). Diabetes, glucose, insulin, and heart rate variability. Diabetes Care, 28, 668–674. https:// doi.org/10.2337/diacare.28.3.668 Schwartz, P. J., Billman, G. E., & Stone, H. L. (1984). Autonomic mechanisms in ventricular fibrillation induced by myocardial ischemia during exercise in dogs with healed myocardial infarction. An
+
+| 26 of 26      
+experimental preparation for sudden cardiac death. Circulation, 69(4), 790–800. https://doi.org/10.1161/01.CIR.69.4.790 Schwartz, P. J., La Rovere, M. T., & Vanoli, E. (1992). Autonomic nervous system and sudden cardiac death. Experimental basis and clinical observations for post‐myocardial infarction risk stratification. Circulation, 85(1 Suppl), 177–191. Schwartz, P. J., Vanoli, E., Stramba‐Badiale, M., De Ferrari, G. M., Billman, G. E., & Foreman, R. D. (1988). Autonomic mechanisms and sudden death. New insights from analysis of baroreceptor reflexes in conscious dogs with and without a myocardial infarction. Circulation, 78(4), 969–979. https://doi.org/10.1161/01.CIR.78.4.969 Shimizu, S., Akiyama, T., Kawada, T., Shishido, T., Mizuno, M., Kamiya, A., … Sugimachi, M. (2010). In vivo direct monitoring of interstitial norepinephrine levels at the sinoatrial node. Autonomic Neuroscience, 152(1–2), 115–118. https://doi.org/10.1016/j.autneu.2009.08.017 Shimizu, S., Akiyama, T., Kawada, T., Shishido, T., Yamazaki, T., Kamiya, A., … Sugimachi, M. (2009). In vivo direct monitoring of vagal acetylcholine release to the sinoatrial node. Autonomic Neuroscience, 148(1–2), 44–49. https://doi.org/10.1016/j. autneu.2009.02.006 Singh, J. P., Larson, M. G., Tsuji, H., Evans, J. C., O’Donnell, C. J., & Levy, D. (1998). Reduced heart rate variability and new‐onset hypertension: Insights into pathogenesis of hypertension: The Framingham Heart Study. Hypertension, 32(2), 293–297. https:// doi.org/10.1161/01.HYP.32.2.293 Sloan, R. P., Schwarz, E., McKinley, P. S., Weinstein, M., Love, G., Ryff, C., … Seeman, T. (2017). Vagally‐mediated heart rate variability and indices of well‐being: Results of a nationally representative study. Health Psychology, 36(1), 73–81. https://doi.org/10.1037/hea0000397 Stauss, H. M. (2014). Heart rate variability just a surrogate for mean heart rate? Hypertension, 64(6), 1184–1186. https://doi.org/10.1161/ HYPERTENSIONAHA.114.03949 Stramba‐Badiale, M., Vanoli, E., De Ferrari, G. M., Cerati, D., Foreman, R. D., & Schwartz, P. J. (1991). Sympathetic‐parasympathetic interaction and accentuated antagonism in conscious dogs. American Journal of Physiology, 260(2 Pt 2), H335–H340. https:// doi.org/10.1152/ajpheart.1991.260.2.H335 Taylor, J. A., Myers, C. W., Halliwill, J. R., Seidel, H., & Eckberg, D. L. (2001). Sympathetic restraint of respiratory sinus arrhythmia: Implications for vagal‐cardiac tone assessment in humans. American Journal of Physiology‐Heart and Circulatory Physiology, 280(6), H2804–H2814. https://doi.org/10.1152/ajpheart.2001.280.6.H2804 Thayer, J. F., Hansen, A. L., Saus‐Rose, E., & Johnsen, B. H. (2009). Heart rate variability, prefrontal neural function, and cognitive performance: The neurovisceral integration perspective on self‐regulation, adaptation, and health. Annals of Behavioral Medicine, 37, 141–153. https://doi.org/10.1007/s12160-009-9101-z Thayer, J. F., & Lane, R. D. (2000). A model of neurovisceral integration in emotion regulation and dysregulation. Journal of Affective Disorders, 61(3), 201–216. Tsuji, H., Venditti, F. J., Jr., Manders, E. S., Evans, J. C., Larson, M. G., Feldman, C. L., & Levy, D. (1994). Reduced heart rate variability and mortality risk in an elderly cohort. The Framingham Heart Study. Circulation, 90(2), 878–883. https://doi.org/10.1161/01. CIR.90.2.878 Urthaler, F., Neely, B. H., Hageman, G. R., & Smith, L. R. (1986). Differential sympathetic‐parasympathetic interactions in sinus node and AV junction. American Journal of Physiology, 250(1 Pt 2), H43–H51. https://doi.org/10.1152/ajpheart.1986.250.1.H43
+
+DE GEUS et al.
+van den Berg, M. E., Rijnbeek, P. R., Niemeijer, M. N., Hofman, A., van Herpen, G., Bots, M. L., … Kors, J. A. (2018). Normal values of corrected heart‐rate variability in 10‐second electrocardiograms for all ages. Frontiers in Physiology, 9(424), 1–9. https://doi. org/10.3389/fphys.2018.00424
+van Lien, R., Goedhart, A., Kupper, N., Boomsma, D., Willemsen, G., & de Geus, E. J. (2011). Underestimation of cardiac vagal control in regular exercisers by 24‐hour heart rate variability recordings. International Journal of Psychophysiology, 81(3), 169–176. https:// doi.org/10.1016/j.ijpsycho.2011.06.007
+van Roon, A. M., Snieder, H., Lefrandt, J. D., de Geus, E. J., & Riese, H. (2016). Parsimonious correction of heart rate variability for its dependency on heart rate. Hypertension, 68(5), e63–e65. https://doi. org/10.1161/HYPERTENSIONAHA.116.08053
+Vikman, S., Makikallio, T. H., Yli‐Mayry, S., Nurmi, M., Airaksinen, K. E., & Huikuri, H. V. (2003). Heart rate variability and recurrence of atrial fibrillation after electrical cardioversion. Annals of Medicine, 35(1), 36–42. https://doi.org/10.1080/07853890310004110
+Zaza, A., & Lombardi, F. (2001). Autonomic indexes based on the analysis of heart rate variability: A view from the sinus node. Cardiovascular Research, 50(3), 434–442. https://doi.org/10.1016/ S0008-6363(01)00240-1
+Zhan, D. Y., Du, C. K., Akiyama, T., Sonobe, T., Tsuchimochi, H., Shimizu, S., … Shirai, M. (2013). In vivo monitoring of acetylcholine release from cardiac vagal nerve endings in anesthetized mice. Autonomic Neuroscience, 176(1–2), 91–94. https://doi. org/10.1016/j.autneu.2013.02.014
+Zhang, H., Holden, A. V., Kodama, I., Honjo, H., Lei, M., Varghese, T., & Boyett, M. R. (2000). Mathematical models of action potentials in the periphery and center of the rabbit sinoatrial node. American Journal of Physiology‐Heart and Circulatory Physiology, 279(1), H397–H421. https://doi.org/10.1152/ajpheart.2000.279.1.H397
+Zulfiqar, U., Jurivich, D. A., Gao, W., & Singer, D. H. (2010). Relation of high heart rate variability to healthy longevity. American Journal of Cardiology, 105, 1181–1185. https://doi.org/10.1016/j. amjcard.2009.12.022
+SUPPORTING INFORMATION
+Additional supporting information may be found online in the Supporting Information section at the end of the article. Appendix S1 Figure S1 Figure S2 Figure S3 Figure S4 Figure S5 Figure S6
+How to cite this article: de Geus EJC, Gianaros PJ, Brindle RC, Jennings JR, Berntson GG. Should heart rate variability be “corrected” for heart rate? Biological, quantitative, and interpretive considerations. Psychophysiology. 2019;56:e13287. https://doi.org/10.1111/psyp.13287
+

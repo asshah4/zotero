@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>ingentaconnect</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				background-color: #fff;
+				color: #000;
+				font-size: 13px;
+			}
+			h1 {
+				font-size: 2em;
+			}
+			#logo {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 204px;
+				height: 35px;
+			}
+			#top-mosaic {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 290px;
+				height: 35px;
+			}
+			#top-bar {
+				position: absolute;
+				width: 100%;
+				right: 0;
+				top: 35px;
+				height: 28px;
+				background-color: #99c1ca;
+			}
+			#bottom-bar {
+				position: absolute;
+				width: 50%;
+				top: 63px;
+				right: 0;
+				background: url(/images/gnav2_tile_end.gif) left no-repeat #f2f2d7;
+				height: 27px;
+
+			}
+			#main-content-container {
+				position: relative;
+				margin-top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="logo">
+			<img src="/images/ingenta_connect_logo.gif" alt="ingentaconnect logo"/>
+		</div>
+		<div id="top-mosaic">
+			<img src="/images/header_tiles_right.gif" alt="ingentaconnect mosaic logo"/>
+		</div>
+		<div id="top-bar">&nbsp;</div>
+		<div id="bottom-bar">&nbsp;</div>
+		<div id="main-content-container">
+			<h1>We apologize</h1>
+			<p>We were unable to locate the page you asked for. We suggest one of the following courses of action:</p>
+			<ul>
+				<li>If you typed in the url, check for obvious typographical mistakes and try requesting the page again with a corrected URL.</li>
+				<li>If you had bookmarked this page, or arrived via a link from another website, try <a href="http://www.ingentaconnect.com.proxy.library.emory.edu/content" title="browse ingentaconnect">browsing</a> or <a href="http://www.ingentaconnect.com.proxy.library.emory.edu/search/advanced" title="Search ingentaconnect">searching</a> for the content you were seeking, or go <a href="javascript:history[-1]">back</a> to the page you came from.</li>
+				<li>If you remain unable to locate the content you were seeking, please contact us via <a href="mailto:help@ingentaconnect.com" title="Email ingentaconnect help desk">help@ingentaconnect.com</a>.</li>
+				<li>Alternatively visit our <a href="http://www.ingentaconnect.com.proxy.library.emory.edu" title="ingentaconnect home page">home page</a> or <a href="http://www.ingentaconnect.com.proxy.library.emory.edu/about/help/index" title="ingentaconnect FAQ's">help FAQs</a>.</li>
+			</ul>
+		</div>
+	</body>
+</html>
