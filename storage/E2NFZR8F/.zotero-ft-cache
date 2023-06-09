@@ -1,0 +1,930 @@
+Spectral balance as an acoustic correlate of linguistic stress
+Agaath M. C. Sluijtera) and Vincent J. van Heuvenb) Holland Institute of Generative Linguistics, Phonetics Laboratory, Leiden University, Cleveringaplaats 1, P.O. Box 9515, 2300 RA Leiden, The Netherlands
+͑Received 20 December 1994; revised 16 April 1996; accepted 29 April 1996͒
+Although intensity has been reported as a reliable acoustical correlate of stress, it is generally considered a weak cue in the perception of linguistic stress. In natural speech stressed syllables are produced with more vocal effort. It is known that, if a speaker produces more vocal effort, higher frequencies increase more than lower frequencies. In this study, the effects of lexical stress on intensity are examined in the abstraction from the confounding accent variation. A production study was carried out in which ten speakers produced Dutch lexical and reiterant disyllabic minimal stress pairs spoken with and without an accent in a ﬁxed carrier sentence. Duration, overall intensity, formant frequencies, and spectral levels in four contiguous frequency bands were measured. Results revealed that intensity differences as a function of stress are mainly located above 0.5 kHz, i.e., a change in spectral balance emphasizing higher frequencies for stressed vowels. Furthermore, we showed that the intensity differences in the higher regions are caused by an increase in physiological effort rather than by shifting formant frequencies due to stress. The potential of each acoustic correlate of stress to differentiate between initial- and ﬁnal-stressed words was examined by linear discriminant analysis. Duration proved the most reliable correlate of stress. Overall intensity and vowel quality are the poorest cues. Spectral balance, however, turned out to be a reliable cue, close in strength to duration. © 1996 Acoustical Society of America.
+PACS numbers: 43.71.Es, 43.70.Fq ͓RAF͔
+
+INTRODUCTION
+A fair number of the languages of the world employ a structural parameter called stress. Stress is a structural, linguistic property of a word that speciﬁes which syllable in the word is, in some sense, stronger than any of the others. An important topic of phonetic research has always been the acoustical and perceptual characterization of the properties by which the stressed syllable distinguishes itself from the unstressed syllables surrounding it ͑syntagmatic comparison͒ or, in a more controlled approach, how a stressed realization of a syllable differs from an unstressed realization of the same syllable ͑paradigmatic comparison͒.
+In this article we will be concerned with the characterization of linguistic stress in Dutch, a ‘‘stress-accent’’ language, as is English ͑Beckman, 1986͒. Stress-accent differ from nonstress-accent languages such as Japanese, in that pitch accents are not only characterized by a pitch movement but also by other phonetic correlates such as greater duration and loudness ͑Beckman, 1986͒.
+In stress-accent languages, a speaker may present a word as communicatively important by realizing a pitch accent on the prosodic head of that word by executing a prominencelending pitch movement ͑a rise, fall, or combination of the two͒. The prosodic head within the word is the stressed syllable. For this reason pitch movement has always been advanced as the most important phonetic correlate of linguistic stress. In line with other theoretical and empirical work, i.e., Vanderslice and Ladefoged ͑1972͒, Huss ͑1978͒, Pierrehumbert ͑1980͒, Beckman and Edwards ͑1994͒, and others, we take the view, however, that this is not necessarily the most
+a͒Now at KPN Research, P.O. Box 421, 2260 AK Leidschendam, The Netherlands. Electronic mail: a.m.c.sluijter@research.kpn.com
+b͒Electronic mail: heuven@rullet.leidenuniv.nl
+
+insightful analysis of the phenomenon. Pitch movement is the correlate of accent, rather than of lexical stress:
+‘‘In short utterances, however, pitch excursions are more likely to be interpreted in terms of the sequence at a nuclear accent, as in Fry’s 1958 experiment showing the salience of the F0 contour in cueing stress in pairs as pe´rmit versus perm´ıt. This is probably the major source of the common misunderstanding in the experimental literature that F0 excursion is a direct acoustic correlate of the feature ‘‘stress,’’ a misunderstanding that has been incorporated into several standard textbooks, ͑...͒’’ ͑Beckman and Edwards, 1994, p. 13͒.
+Beckman and Edwards ͑1994͒ present English prominence as a unidimensional system with four qualitative levels: the highest stress occurs on a syllable with a full vowel bearing a nuclear pitch accent, the second highest stressed syllables contain a full vowel with a nonnuclear pitch movement, the next highest stressed syllables contain a full vowel with no pitch movement, and the lowest level ͑i.e., unstressed͒ syllables are reduced.
+We, however, argue that stress and accent are distinct ͑though nonorthogonal͒ dimensions: syllables in a word are either stressed or unstressed. Accentuation is used to focus and is determined by the communicative intentions of the speaker, i.e., accentuation is dependent on language behavior. Stress is a structural, linguistic property of a word that speciﬁes which syllable in the word is the strongest. In our view ‘‘stressed’’ refers to syllables which are the potential docking sites for accent placement. They have an accentlending pitch movement associated with them when they occur within a single word in a narrow focus. In our view, stress is therefore determined by the language system, and accent by language behavior. The positions of stressed syllables in Dutch ͑and English͒ are to a certain extent predict-
+
+2471 J. Acoust. Soc. Am. 100 (4), Pt. 1, October 1996 0001-4966/96/100(4)/2471/15/$10.00 © 1996 Acoustical Society of America 2471
+
+able by quantity-sensitive rules, any remaining exceptions are marked in the lexicon ͑dictionary͒ as receiving lexical stress ͑Langeweg, 1988; Kager, 1989͒.
+Stressed vowels always have full vowel quality. Unstressed vowels in Beckman and Edwards’ system are always reduced. The amount of reduction, however, depends on the context in which the vowel is uttered ͑van Bergem, 1993͒ and probably also on the language: ͑American͒ English is claimed to be more sensitive to vowel reduction than Dutch.
+Any syllable can be accented so as to express focus by placing a pitch movement on it ͑Sluijter and van Heuven, 1995͒. Moreover all the syllables in a word containing an accented syllable are linearly expanded in time ͑Nooteboom, 1972; Eefting, 1991͒; expansion of nonaccented syllables is even found when a pitch accent is executed on a lexically nonstressed syllable in narrow focus ͑Sluijter and van Heuven, 1995͒. Whether these effects are language speciﬁc or not is not a topic of this article. The crucial fact is that we agree with Beckman and Edwards that studies of phonetic correlates of stress in both English and Dutch may yield contradictory results if there is no systematic control for the levels of stress hierarchy involved.
+If a word in a stress accent language remains unaccented, the stressed syllable can still be distinguished, both perceptually ͑van Heuven, 1988͒ and acoustically ͑van Heuven, 1987; Sluijter et al., 1995͒, by a combination of longer duration, greater loudness, and full phonetic quality ͑i.e., absence of spectral reduction͒. In the older literature ͑Sweet, 1906; Bloomﬁeld, 1993͒, stress in languages such as Dutch and English was often referred to as dynamic stress, as opposed to melodic stress, indicating that its primary phonetic correlate was greater loudness. Indeed, greater acoustical intensity has been consistently reported as a reliable correlate of stress ͑cf. Lea, 1977; Rietveld, 1984; Beckman, 1986; Slootweg, 1987͒. In all these studies, however, stressed syllables were also accented, so that the greater intensity is caused by the larger amplitude of voicing ͑cf. Sluijter et al., 1995͒. When overall intensity was varied in artiﬁcial speech, it inevitably proved a weak stress cue, much weaker than duration ͑Fry, 1955; van Katwijk, 1974͒, and only marginally stronger than vowel quality ͑Fry, 1965͒.
+We asked ourselves whether overall intensity would still provide a reliable acoustic correlate of stress if the target word/syllable were not pronounced with an accent-lending pitch movement. Of course, we need not be surprised if intensity variations should turn out to provide only a marginal stress cue. In fact, it would seem to us that intensity variation will never have communicative signiﬁcance for the simple reason that intensity is too susceptible to noise. If the speaker accidentally turns his head, or passes a hand before his mouth, intensity drops of greater magnitude than those caused by the difference between stressed and unstressed syllables will easily occur. For this reason, manipulating intensity in stress perception experiments seems ill-advised. The reason why it was used in the classical studies by Fry ͑1958, 1965͒ must have been that there were simply no alternatives available for investigating the role of loudness in stress perception.
+We would like to defend the view that the older litera-
+
+ture was essentially correct when it suggested loudness as a correlate of stress. Loudness is a subjective property of a sound that allows a listener to rank sounds along a weak– strong scale running from faint ͑barely audible͒ to blaring ͑nearly deafening͒ ͑Green, 1976, p. 278͒. The subjective impression of loudness corresponds with greater acoustic intensity as well as with distribution of intensity over the spectrum.
+Crucially, intensity in the mid-frequency range contributes more to perceived loudness than intensity above 5 kHz and, especially, below 0.5 kHz ͑Handel, 1989, pp. 66–67͒. We also know that perceived loudness of a speech sound corresponds with the amount of effort that a speaker spends in producing it ͑Brandt et al., 1969; Glave and Rietveld, 1975͒. There is little debate, even today, that stress is produced by expending more effort in the production of a syllable, whether at the pulmonic, glottal, or articulatory stage ͑Ladefoged, 1967, 1971͒. Effort was suggested as a physiological correlate of linguistic stress almost a hundred years ago by Sweet ͑1906, pp. 47, 49͒. Essentially the same view was expressed later by Bloomﬁeld ͑1933, pp. 110–111͒.
+Although these views are largely correct, they were wrong in one important respect. When more effort is expended in speech production, the result is not just greater amplitude of the ͑glottal͒ waveform, although this is certainly part of it. As we know from more recent studies, increased vocal effort generates a more strongly asymmetrical glottal pulse: the closing phase is shortened, such that the trailing ﬂank of the glottal pulse is steep. As a result of this, there is a shift of intensity over the spectrum so that low frequency components are hardly affected that the intensity increase is concentrated in the higher harmonics only. Such differential effects of effort were reported by Glave and Rietveld ͑1975͒ and Gaufﬁn and Sundberg ͑1989͒, who all noticed that intensity below 500 Hz was not affected by effort ͑or even reduced͒, and that all extra intensity was located in the frequency region between 500 and 4000 Hz.
+We also know, from the work by Zwicker and Feldtkeller ͑1967͒, that overall intensity is certainly not the only acoustic correlate of loudness. These authors show, quite elegantly, that perceived loudness can be predicted by integrating intensity within speciﬁc frequency bands ͑critical bands͒, and then calculating a weighted sum across the critical bands. Crucially, the energies in the low frequency bands add little to perceived loudness, while the contribution of the higher bands is much stronger.
+Simplifying this to some extent, we suggest that the acoustical correlate of greater physiological effort is a decrease of negative spectral tilt, or even a positive tilt. A relatively rising spectrum, in turn, is associated with greater loudness, so that the traditional claim of loudness as a perceptual cue for stress seems justiﬁed. If this line of reasoning is accepted, it follows that measuring overall intensity is not the only valid operationalization of increased physiological effort; we should at least consider intensity distribution, or spectral tilt, as well. Spectral tilt, in contradistinction to overall intensity, is not easily obscured by environmental factors, so that this operationalization of greater vocal effort seems communicatively more robust than overall intensity.
+
+2472 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2472
+
+In a production experiment we therefore examine the intensity distribution of stressed and unstressed vowels in four contiguous frequency bands. We expect that the intensity in the higher frequencies of the spectrum of a stressed syllable increases more than the intensity in the lower frequencies as the stressed syllable is produced with greater vocal effort than its unstressed counterpart.
+However, before concluding that differences in intensity in the higher regions are caused by increased physiological effort due to stress, we have to take alternative explanations into account. It is often possible to attribute intensity shifts to the effect of stress on formant frequencies. In order to disentangle the possibly confounded effects of stress on vowel quality, i.e., formants shifting to more extreme positions along their respective continua ͑Rietveld and Koopmans, 1987͒, and that on spectral slope, we will measure both types of parameter, and proceed by showing that the intensity increase in the upper frequency bands cannot reasonably be the result of formant frequency shifts.
+In the past decades a great deal of research has been directed towards the acoustical realization of stress ͑e.g., Fry, 1955, 1965; Lehiste and Peterson, 1959; Lehto, 1969; Adams and Munro, 1978; Berinstein, 1979͒ and the relative strength of these parameters in separating stressed from unstressed tokens ͑Rietveld, 1984; Beckman, 1986͒. However, at the moment it seems that much of this research suffers from covariation of accent and stress.1 Moreover, no one seems to have compared all the acoustical correlates of linguistic stress including spectral tilt and vowel quality. In this article we will therefore study the already known acoustic correlates of linguistic stress as well as the proposed new correlate: spectral balance. We predict that a combination of the higher octave ﬁlter levels should yield a more successful separation of stressed and unstressed tokens than overall intensity and vowel quality. Whether spectral balance should be a better correlate of linguistic stress than duration will be answered on the basis of our results.
+In this study, we ask the following concrete research questions: ͑1͒ Is overall intensity still a reliable acoustic correlate of linguistic stress when possible confounding with high F0 due to accent is undone? ͑2͒ Are intensity differences as a function of stress mainly located in the higher regions of the spectrum? ͑3͒ Are the intensity differences in the higher regions caused by an increase in physiological effort rather than by shifting formant frequencies due to stress? Finally, the last speciﬁc question is: ͑4͒ To what extent can each acoustic correlate of stress be used to differentiate between initial-stressed and ﬁnal-stressed words?
+In order to answer these questions, a production study was carried out in which we examined syllable duration, overall intensity, intensity distribution ͑as a measure of spectral balance͒, and formant frequencies ͑as an acoustic correlate of vowel quality͒ of stressed and unstressed vowels spoken by four males and six females with and without an accent, using a single Dutch minimal stress pair and its reiterant-speech copy.
+We will not be concerned with the measurement of fundamental frequency since we take the view that pitch movements are the correlate of accent rather than of stress. It is
+
+possible that stress ͑in the sense of force of articulation͒ might induce some minor and unreliable F0 changes; however such F0 changes can and should be distinguished from deliberate ͑macrointonational͒ uses of pitch.
+I. METHOD
+A. Material
+We selected the Dutch minimal stress pair canon-kanon /kabnÅn/-/kabnnÅn/ ‘‘cannon’’—‘‘canon’’ differing in stress position only. We also used the reiterant version of this word pair ͑repetition of the same syllable͒ where each syllable was replaced by the syllable na yielding nonsense words: /nnabnab/-/nabnnab/. Reiterant speech allows us to study prosodic phenomena while abstracting from segmental inﬂuences ͑Liberman and Streeter, 1978; Nakatani and Schaffer, 1978͒. The vowel /a:/ was chosen because it is the most open, longest vowel in Dutch. This vowel has the highest F1 value of all Dutch vowels, resulting in the largest distance between F0 and F1 ͑Pols et al., 1973͒.
+The target words were embedded in preﬁnal position in a carrier sentence: Wil je ͓target͔ zeggen /v(l j. ͓target͔ z}␹.͑n͒/ ‘‘Will you ͓target͔ say.’’ Targets were spoken with and without a pitch movement on the stressed syllable.
+B. Subjects and procedure
+The resulting four stimulus types ͑2 stress positions * 2 accent conditions͒ with their reiterant versions were read eight times each by six male and six female speakers. The speakers were individually recorded on audio tape in a sound insulated booth, using a Sennheiser MKH-416 directional condenser microphone and a Revox B77 MKII tape recorder. The subject’s head was strapped to a headrest to ensure a constant distance between mouth and microphone.
+Stimulus sentences were presented in Dutch orthography ͑i.e., not in phonetic symbols͒ in two different counterbalanced random orders on a computer monitor that was placed inside the booth in front of the subject. The condition with the target outside focus ͑henceforth ͓ϪF͔͒ was realized by placing a single ͑contrastive͒ accent on the last word of the sentence: zeggen. In the other focus condition ͑henceforth ͓ϩF͔͒ a single accent was placed on the stressed syllable of the target, placing the target in focus. The syllable to be accented appeared in capitals on the monitor. When without an accent on the target, the intended stress pattern was indicated in bold face. In the instructions it had been pointed out to the speakers that the word containing the capitalized ͑accented͒ syllable was to be interpreted as expressing a narrow focus contrast with another word within the same semantic domain, as follows:
+condition with an accent on the target Wil je KAnon zeggen ͑en niet liedje͒ ‘‘Will you canon say ͑rather than song͒’’ Wil je kaNON zeggen ͑en niet geweer͒ ‘‘Will you cannon say ͑rather than riﬂe͒’’
+
+2473 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2473
+
+condition without an accent on the target Wil je kanon ZEGgen ͑en niet opschrijven͒ ‘‘Will you canon say ͑rather than write down͒’’ Wil je kanon ZEGgen ͑en niet opschrijven͒ ‘‘Will you cannon say ͑rather than write down͒.’’
+Each lexical stimulus was followed by a reiterant stimulus with exactly the same accent and stress pattern. Subjects always produced lexical and reiterant versions of each stimulus in immediate succession before going on to the next stimulus.
+Each stimulus type was presented four times ͑orders 1, 2, 3, and 4͒ in the ﬁrst part of the reading session and four more times ͑orders 5, 6, 7, and 8͒ in the second part of the reading session. After each stimulus, whether lexical or reiterant, a 5-s pause was observed, during which interval the subject inhaled prior to initiating the next utterance.
+Accents were realized as prominence-lending rise–fall pitch movements on the appropriate syllable ͑conﬁguration 1 & A in ’t Hart et al., 1990͒. Two phonetically trained listeners ͑i.e., the present authors͒ veriﬁed the location and the realization of the accents. There was no disagreement on this point. One of the male speakers realized accents on all the target words in the ͓ϪF͔ condition. Another male speaker could not read aloud in a satisfactory way. These speakers were excluded from further analysis, leaving four male and six female speakers.
+C. Data analysis
+The 640 utterances ͑2 stress positions * 2 focus conditions * 2 versions ͓i.e., lexical versus reiterant͔ * 10 speakers * 8 repetitions͒ were digitized ͑10 kHz sampling frequency, 4.8 kHz low-pass ﬁltering, 12-bit amplitude resolution͒ on a VAX/VMS computer. The maximum amplitude range was utilized by normalizing the output levels for each individual speaker.
+We selected four repetitions ͑orders 2, 3, 6, and 7͒ yielding 320 utterances for further research. This was done to remove item initial and ﬁnal effects, since the eight repetitions were presented in blocks of four stimuli. Only if one of these realizations were affected by hesitation, mispronunciation, or incorrect accentuation, was it replaced by one of the other realizations ͑orders 1, 4, 5, or 8͒.
+1. Vowel quality
+Formant frequencies were determined by analyzing the digital waveform of male speakers into 10 LPC coefﬁcients ͑25.6-ms analysis window, 10-ms time shift͒. The ﬁlter was calculated in coefﬁcients of a cascade of second-order ﬁlters. These coefﬁcients were sorted and forced to be complex conjugate ͑resonating͒ pairs, yielding ﬁve spectral peaks ͑arguably formants͒. All vowel quality and intensity measurements for both stressed and unstressed vowels were determined at the point in the vowel where the F1 reached its maximum. It was sometimes difﬁcult to determine this maximum adequately in the syllable non, in which case we used the temporal midpoint of the syllables. The same procedure was followed for female speakers, this time analyzing the waveform into eight LPC coefﬁcients, yielding four spectral peaks. In addition, formant frequencies were estimated
+
+by locating the strongest harmonic of the formants in a fast Fourier transform ͑FFT͒ spectrum. Both values for each formant were compared, and if they were within Ϯ1 interharmonic distance, the value determined by the former method was used; if they did not agree, the value taken from the FFT spectrum was used. In some cases it was impossible to determine a reliable value for F1, mostly for female speakers because of interference of F1 with F0. Unreliable F1 measurements were excluded from further data processing.
+2. Spectral level
+Intensity was measured in four contiguous frequency bands B1–B4: 0–0.5, 0.5–1.0, 1.0–2.0, and 2.0–4.0 kHz. The spectrum level of a frequency band was deﬁned as the base-10 logarithm of the summed power ͑squared amplitude͒ Fourier coefﬁcients in that frequency band relative to the maximum output level of the VAX/VMS analog-digital ͑AD͒ converter ͑12 bits, 10 kHz͒ which we deﬁned as 60 dB. Following Gaufﬁn and Sundberg ͑1989͒, the lowest band was chosen such that it included the fundamental frequency. The second, third, and fourth bands were chosen such that these bands included F1, F2, and F3, respectively. The mean fundamental frequency of male and female speakers varied between 100 and 400 Hz. The frequency value of the ﬁrst three formants of /ab/ are F1: 750 Hz, F2: 1300 Hz, and F3: 2500 Hz for male speakers ͑Pols et al., 1973͒ and 986, 1443, and 2778 Hz, respectively, for female speakers ͑van Nierop et al., 1973͒. However, we have to be aware of the fact that F1 and F2 of the vowel /Å/ both fall within B2 ͑400 and 900 Hz, respectively, for male speakers and 578 and 933 Hz for female speakers͒. When it was not possible to base our conclusions on the ﬁndings of the lexical data, we based them on the ﬁndings of the reiterant word pair.
+3. Duration
+Syllable durations of the target words were measured using the high resolution waveform editor SESAM ͑Broeder, 1990͒. Segmentation boundaries were determined in a straightforward fashion by the visual criteria described by Van Zanten et al. ͑1991͒.
+4. Overall intensity
+The overall intensity of the stressed and unstressed vowels of each word was deﬁned as the base-10 logarithm of the summed power ͑squared amplitude͒ Fourier coefﬁcients between 0 and 5 kHz relative to the maximum output level of the VAX/VMS AD converter ͑12 bits, 10 kHz͒.
+D. Statistical analysis
+To examine the signiﬁcance of the effects of stress and focus condition ͑accent͒ on syllable duration, overall intensity and spectrum levels ͑reiterant speech only͒, we ran three-way analyses of variance for both lexical and reiterant speech data with focus condition, syllable position, and stress as ﬁxed effects and with repetition and speaker as repeated measures. We ran two more analyses of variance on the spectrum levels of ka and non with focus condition and stress as ﬁxed effects. We did not include the sex of the
+
+2474 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2474
+
+TABLE I. Mean syllable duration ͑in ms͒ of the ﬁrst ͑␴1͒ and second ͑␴2͒ syllables of initial and ﬁnal stressed kanon ͑lexical͒ and nana ͑reiterant͒. Standard deviations are presented in parentheses. The differences in duration between the stressed and unstressed syllables are presented syntagmatically ͑⌬S͒ and paradigmatically ͑⌬P͒. The data are presented per focus condition ͑in focus: ͓ϩF͔, outside focus: ͓ϪF͔; stressed syllables are in bold face͒.
+
+Lexical
+
+Reiterant
+
+Focus Stress ␴1
+
+␴2 ⌬S ␴1
+
+␴2 ⌬S
+
+͓ϩF͔
+
+Initial Final ⌬P
+
+254 ͑33͒ 233 ͑40͒ 21 261 ͑37͒ 209 ͑43͒ 52
+
+151 ͑24͒ 278 ͑37͒ 127 162 ͑26͒ 289 ͑40͒ 127
+
+103
+
+45
+
+99
+
+80
+
+͓ϪF͔
+
+Initial Final ⌬P
+
+227 ͑30͒ 214 ͑41͒ 13 235 ͑28͒ 190 ͑37͒ 45
+
+142 ͑22͒ 262 ͑41͒ 120 157 ͑25͒ 260 ͑37͒ 103
+
+85
+
+48
+
+78
+
+70
+
+TABLE II. Mean overall intensity ͑in dB͒ of the ﬁrst ͑␴1͒ and second ͑␴2͒ syllables of initial and ﬁnal stressed kanon ͑lexical͒ and nana ͑reiterant͒. Standard deviations are presented in parentheses. The differences in dB between the stressed and unstressed syllables are presented syntagmatically ͑⌬S͒ and paradigmatically ͑⌬P͒. The data are presented per focus condition ͑in focus: ͓ϩF͔, outside focus: ͓ϪF͔; stressed syllables are in bold face͒.
+
+Lexical
+
+Reiterant
+
+Focus Stress ␴1
+
+␴2
+
+⌬S
+
+␴1
+
+␴2 ⌬S
+
+͓ϩF͔ Initial 47.8 ͑3.9͒ 43.9 ͑4.4͒ 3.9 46.5 ͑3.6͒ 43.1 ͑3.4͒ 3.4
+
+Final 41.4 ͑4.9͒ 47.5 ͑3.3͒ 6.1 44.3 ͑3.8͒ 46.0 ͑3.1͒ 1.7
+
+⌬ P 5.4
+
+4.6
+
+2.2
+
+2.9
+
+͓ϪF͔ Initial 44.9 ͑3.2͒ 43.1 ͑4.1͒ 1.8 44.6 ͑3.2͒ 42.5 ͑3.9͒ 2.1
+
+Final 42.7 ͑3.5͒ 44.6 ͑4.1͒ 1.9 44.4 ͑3.3͒ 43.5 ͑3.7͒ 0.9
+
+⌬ P 2.2
+
+1.5
+
+0.2
+
+1.0
+
+speakers in the design of the analyses; although the spectral slopes of our male speakers were slightly more level than those of the female speakers, preliminary analyses revealed no interaction between the sex of the speaker and any of the linguistic factors ͑i.e., stress, focus, and lexicality͒. The effects of sex are only tangential to this study, but they will be dealt with brieﬂy in Appendix A.
+We ran three-way analyses of variance on formant frequencies for each syllable position and speech type separately with focus, stress, and sex as ﬁxed effects and with repetition, syllable position, and speaker as repeated measures. Missing cases were excluded from the analyses. For all analyses included in this article we use an ␣ of .05.
+To determine how well these acoustic measures can be applied to determine the stress position of a word, we carried out linear discriminant analyses ͑LDA͒ for nnana/nanna and for ncanon/kannon for each focus condition separately. Discriminant analysis is primarily a data reduction method in which parameters are collapsed onto orthogonal discriminant functions so that the functions maximally separate the groups. Discriminant functions are linear combinations of weighted variables in which the standardized weights reﬂect the importance of the associated variables. In all analyses the stress positions functioned as groups: ncanon versus kannon, with 40 data points ͑10 speakers * 4 repetitions͒ per group.
+The results are presented below in separate subsections for duration ͑Sec. II A͒, overall intensity ͑Sec. II B͒, formant frequencies ͑Sec. II C͒, and the intensity in the four separate ﬁlter bands ͑Sec. II E͒.
+II. RESULTS
+A. Duration
+In Table I mean absolute syllable durations are broken down by speech type, focus condition, and stress position. The differences in duration between stressed and unstressed syllables were determined syntagmatically ͑differences within words͒ as well as paradigmatically ͑differences across words͒.
+As can be seen in Table I, stressed syllables are longer than unstressed syllables ͓lexical: F͑1,318͒ϭ337.2, pϽ0.001; reiterant: F͑1,318͒ϭ440.6 pϽ0.001͔. The pres-
+
+ence or absence of an accent affects the duration of both stressed and unstressed syllables. Accented words ͓ϩF͔ have longer syllables than unaccented words ͓ϪF͔, in accordance with earlier ﬁndings of Eefting ͑1991͒, Sluijter ͑1992͒, and Sluijter and van Heuven ͑1995͒ ͓lexical: F͑1,318͒ϭ22.0, pϽ0.001; reiterant: F͑1,318͒ϭ26.3, pϽ0.001͔; there were no signiﬁcant interactions between focus and stress ͓lexical: F͑1,316͒Ͻ1; reiterant: F͑1,316͒ϭ3.7, ns͔.
+The differences between stressed and unstressed syllables in the initial stressed words are relatively small compared to the differences in ﬁnal stressed words. Final syllables are longer than initial syllables due to preboundary lengthening ͑Klatt, 1976; Wightman et al., 1992͒ ͓lexical: F͑1,318͒ϭ192.0, pϽ0.001; reiterant: F͑1,318͒ϭ74.3 pϽ0.001͔. Due to the effect of stress and preboundary lengthening, the longest duration is found for a stressed ﬁnal syllable, whereas the shortest duration is found for initial unstressed syllables. However, there is a ͑almost͒ signiﬁcant interaction between syllable position and stress ͓lexical: F͑1,316͒ϭ39.0, pϽ0.001; reiterant: F͑1,316͒ϭ3.3, pϭ0.072͔, indicating that combined effects of stress and ﬁnal lengthening are not completely additive. It has been suggested by others ͑e.g., Nooteboom, 1972; Klatt, 1976͒ that the effects of stress and preboundary lengthening are nonadditive, arguing that additive effects would lengthen a syllable beyond its ceiling duration.2 There were no signiﬁcant interactions between focus and syllable position ͓lexical: FϽ1; reiterant: F͑1,316͒ϭ1.2, ns͔.
+We examined the effectiveness of duration as an acoustic separator between initial and ﬁnal stressed words for each focus condition separately. In a LDA in which the duration of syllables 1 and 2 were used as the predictors to separate nkanon from kannon, 98% and 100% correct discrimination were reached for lexical and reiterant speech, respectively, in the ͓ϩF͔ condition. The results in the ͓ϪF͔ condition were almost identical, 99% correct grouping for both lexical and reiterant speech. This means that duration is a very robust acoustic correlate of stress, which remains stable despite the potential confounding inﬂuence of accent.
+B. Overall intensity
+In Table II means and standard deviations of the overall intensity data are summarized. The differences ͑in dB͒ be-
+
+2475 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2475
+
+FIG. 1. Mean overall intensity ͑in dB͒ broken down by focus condition and stress ͑Ϫstress is indicated by dashed lines, ϩstress by solid lines͒ for lexical speech data ͓left-hand panel͔ and reiterant speech data ͓right-hand panel͔.
+
+tween stressed and unstressed vowels were determined syntagmatically and paradigmatically ͑cf. Sec. II A͒.
+The initial syllables in the reiterant speech condition are somewhat louder than the ﬁnal syllables in this condition ͓F͑1,318͒ϭ8.8, pϭ0.003͔. There were no other statistically signiﬁcant main effects or interactions involving the factor syllable position ͓lexical F͑1,318͒ϭ1.7, ns; all interactions F Ͻ1͔.
+A difference of about 5 dB, determined both syntagmatically and paradigmatically, is found between stressed and unstressed vowels of ncanon and kannon in the ͓ϩF͔ condition. The differences between the stressed and unstressed vowels of nnana and nanna in this focus condition are about 3 dB. Outside the focus, there was only a slight difference of about 2 dB between stressed and unstressed vowels of ncanon and kannon, and an even smaller difference of about 1 dB between the stressed and unstressed vowels of nnana and nanna. Stress appeared to be signiﬁcant for both lexical and reiterant speech ͓lexical: F͑1,318͒ϭ59.3 pϽ0.001; reiterant: F͑1,318͒ϭ15.7, pϽ0.001͔. Focus only caused a signiﬁcant effect for the reiterant speech data ͓lexical: F͑1,318͒ϭ3.1, ns; reiterant: F͑1,318͒ϭ9.4 pϭ0.002. Crucially, the interaction between focus and stress for both lexical and reiterant speech data is signiﬁcant ͓lexical: F͑1,316͒ϭ12.9, pϽ0.001; reiterant: F͑1,318͒ϭ5.9, pϭ0.015͔. The effects of stress on overall intensity in the ͓ϩF͔ condition are stronger than the effects in the ͓ϪF͔ condition. Figure 1 displays the relation between the factors stress and focus for overall intensity.
+As can be seen in the right-hand part of Fig. 1, which shows reiterant speech data, only stressed syllables in the ͓ϩF͔ condition have a higher overall intensity. There is hardly any difference between stressed and unstressed vowels in the ͓ϪF͔ condition. Moreover, the intensity values for unstressed syllables are similar in the ͓ϩF͔ and ͓ϪF͔ conditions. The lexical speech data show a similar effect: there is only a slight difference between stressed and unstressed vowels in the ͓ϪF͔ condition, whereas there is a considerable difference between stressed and unstressed syllables in the ͓ϩF͔ condition. The overall intensity of unstressed vowels in the ͓ϪF͔ and ͓ϩF͔ conditions is virtually identical. We assume that this effect can be explained by the fact that in the ͓ϩF͔ condition a rise–fall conﬁguration, marking the accent on the stressed syllable, is realized on the stressed vowel.
+
+This leads to a higher overall intensity of this syllable. One explanation can be given for this effect: each glottal pulse has a larger amplitude of voicing due to more speaker effort.
+In a LDA in which the overall intensity of syllables 1 and 2 was used as the predictor to separate ncanon from kannon, 88% correct discrimination was reached in the ͓ϩF͔ condition, whereas only 69% correct discrimination was reached in the ͓ϪF͔ condition. The separation is even less clear for the reiterant speech data: 80% correct discrimination in the ͓ϩF͔ condition and only 63% correct discrimination in the ͓ϪF͔ condition. The effects are fully corroborated by the acoustical analysis, i.e., in the latter condition, where the effects of lexical stress were examined in the abstraction from the confounding accent variable, there is hardly any difference between the overall intensity of stressed and unstressed vowels. Overall intensity is therefore more likely to be an acoustic correlate of accent than of stress.
+On the basis of these data, we should expect that there would be a high degree of uncertainty in listeners’ judgments for the different stress positions in the ͓ϪF͔ condition if they have to infer the stress position of a word from overall intensity alone. In the ͓ϪF͔ condition, intensity is one of the remaining cues to determine the lexical stress position of the words since the accent marking pitch movement is absent from that syllable. Therefore, we expect other cues such as duration and possibly spectral balance to be more helpful in determining stress position.
+C. Vowel quality
+We performed three-way analyses of variance on each formant value for each syllable position and each speech type separately, with focus condition, stress, and sex as ﬁxed factors, and with repetition and speaker as repeated measures.
+Focus never had a signiﬁcant main effect on any of the dependent variables F1 – F4 ͓lexical: all cases FϽ1͔. Moreover, there was no signiﬁcant interaction involving the factor focus. We therefore decided to collapse the results over focus conditions.
+In Table III the means ͑and standard deviations͒ of F1 – F4 are summarized for each sex separately. The results are broken down for speech type and syllable position. As can be
+
+2476 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2476
+
+TABLE III. Mean formant frequencies F1 – F4 ͑in Hz͒ for stressed and unstressed vowels of the ﬁrst ͑␴1͒ and second ͑␴2͒ syllables of lexical ͑kanon͒ and reiterant ͑nana͒ speech produced by four male ͑IIIa͒ and six female ͑IIIb͒ speakers.
+
+a. Male
+
+Vowel
+
+kanon
+
+␴1 F1
+
+F2 F3
+
+/ab/
+
+F4
+
+␴2 F1
+
+F2
+
+F3
+
+Å
+
+F4
+
+nana
+
+␴1 F1
+
+F2 F3
+
+/ab/
+
+F4
+
+␴2 F1
+
+F2 F3
+
+/ab/
+
+F4
+
+b. Female
+
+Vowel
+
+kanon
+
+␴1 F1
+
+F2 F3
+
+/ab/
+
+F4
+
+␴2 F1
+
+F2
+
+F3
+
+Å
+
+F4
+
+nana
+
+␴1 F1
+
+F2 F3
+
+/ab/
+
+F4
+
+␴2 F1
+
+F2 /ab/
+
+F3
+
+F4
+
+ϪStress
+
+570 1276 2238 3366
+326 829 2491 3375
+
+͑49͒ ͑61͒ ͑133͒ ͑324͒ ͑74͒ ͑115͒ ͑315͒ ͑309͒
+
+655 1390 2617 3711 665 1367 2578 3750
+
+͑59͒ ͑124͒ ͑116͒ ͑138͒
+͑68͒ ͑82͒ ͑155͒ ͑202͒
+
+ϪStress
+
+655 1632 2657 4028
+476 1151 2941 4017
+
+͑68͒ ͑140͒ ͑193͒ ͑183͒ ͑110͒ ͑107͒ ͑304͒ ͑217͒
+
+743 1664 2768 4088 767 1618 2733 3976
+
+͑90͒ ͑109͒ ͑237͒ ͑235͒
+͑91͒ ͑99͒ ͑259͒ ͑201͒
+
+ϩStress
+
+668 1382 2269 3453
+361 811 2496 3322
+
+͑44͒ ͑82͒ ͑110͒ ͑253͒ ͑64͒ ͑75͒ ͑244͒ ͑203͒
+
+717 1457 2544 3676
+702 1440 2556 3708
+
+͑60͒ ͑128͒ ͑125͒ ͑162͒ ͑63͒ ͑143͒ ͑155͒ ͑274͒
+
+ϩStress
+
+685 1693 2514 3933
+488 1117 3016 4086
+
+͑67͒ ͑120͒ ͑253͒ ͑216͒ ͑110͒ ͑143͒ ͑316͒ ͑209͒
+
+741 1647 2723 3934
+765 1636 2722 3974
+
+͑90͒ ͑102͒ ͑208͒ ͑194͒ ͑110͒ ͑91͒ ͑243͒ ͑235͒
+
+seen in Table III, the formant frequencies of the female speakers are always higher than those of the male speakers. Sex causes a signiﬁcant effect for all dependent variables in all analyses ͓all cases: pр0.001͔. F1 – F3 of /ab/ in our data for male speakers roughly correspond to the values reported in the literature ͑Pols et al., 1973͒. However, F1 of female speakers is somewhat lower than the value of 986 Hz reported by van Nierop et al. ͑1973͒, whereas F2 is somewhat higher than the reported value of 1443 Hz. These differences may well be caused by the fact that the consonantal context, /h ͑vowel͒ t/, used by van Nierop et al. ͑1973͒ differs from the consonantal context used in our experiment. F3 corresponds to the reported value.
+Stress does not have a signiﬁcant effect on the formant values of the /Å/ ͓all cases: F͑1,124͒Ͻ1͔. There was also no signiﬁcant interaction between the factors stress and sex for this particular vowel ͓all cases: F͑1,122͒Ͻ1͔.
+Different results are obtained for the vowel of the initial syllable ka in that speakers tend to lower F1 and F2 in unstressed ka and to raise F3 ͓F1: F͑1,156͒ϭ33.3, pр0.001; F2: F͑1,156͒ϭ19.8, pр0.001; F3: F͑1,156͒ϭ5.6 pϭ0.020; F4: F͑1,156͒Ͻ1͔. This means that this vowel in
+
+TABLE IV. Percentage correct discrimination reached in a linear discrimi-
+nant analysis, with each formant separately (F1 – F4) used as a predictor variable, and with all formant values together used as predictor variables ͑all͒. The results are presented for each speech type ͑lexical and reiterant͒ and for each focus condition ͓͑ϩF͔ and ͓ϪF͔͒ separately.
+
+Focus ͓ϩF͔
+͓ϪF͔
+
+Formant
+F1 F2 F3 F4 F1 – F4 ͑all͒
+F1 F2 F3 F4 F1 – F4 ͑all͒
+
+Lexical ͑%͒
+63 60 57 47 84
+65 65 56 61 77
+
+Reiterant ͑%͒
+56 56 56 59 68
+58 56 55 58 71
+
+Dutch, when unstressed, changes to an ͓Ä͔-like quality ͑van Bergem, 1993͒. We found signiﬁcant interaction between stress and sex for F1 ͓F͑1,153͒ϭ12.1, pϭ0.001͔, F3 ͓F͑1,153͒ϭ7.5, pϭ0.007͔, and F4 ͓F͑1,153͒ϭ5.4, pϭ0.021͔. Male speakers lower F1 more when producing unstressed syllables than female speakers do, which indicates that male speakers tend to open their mouth less producing unstressed vowels than producing stressed vowels, whereas females do not. Male speakers lower F3 and F4 when a syllable is unstressed, whereas female speakers raise these formants.
+The effect of stress on the formant values of the vowels in nana in the initial syllable was only signiﬁcant for F4 ͓F1: F͑1,156͒ϭ3.4, ns; F2: FϽ1; F3: F͑1,156͒ϭ3.5, ns; F4: F͑1,156͒ϭ11.5, pϭ0.001͔ and for the second syllable only for F2 ͓F͑1,156͒ϭ5.7, pϭ0.018; all other formants: FϽ1͔. We found two signiﬁcant cases of interaction between stress and sex for F1 and F2 of the initial syllables ͓F1: F͑1,154͒ϭ6.1, pϭ0.014; F2: F͑1,154͒ϭ5.1, pϭ0.025͔. As can be seen in Table III male speakers tend to lower the F1 and F2 of an unstressed syllable, whereas female speakers realize virtually the same formant values for stressed and unstressed vowels.
+The results of the LDA were used to determine how well each formant performed as a predictor of stress position. Table IV summarizes the results for both word pairs. The percentage correct discrimination is presented for each focus condition separately.
+As can be seen in Table IV, single formant values are poor indicators of stress position in all conditions. Results improve if we use them in a multiple prediction; the lexical tokens in particular can be separated reasonably well ͑84% and 77%, respectively͒. This result can easily be explained by the fact that the vowel quality of the /ab/ in the initial stressed ncanon shifted towards ͓Ä͔ in the ﬁnal stressed kannon ͑cf. van Bergem, 1993͒.
+D. Covariation of voice intensity and articulation
+There is a possible covariation of voice intensity and properties of the ﬁlter. This is related to the ﬁnding that speakers, when talking louder, tend to use more open articu-
+
+2477 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2477
+
+FIG. 2. An overview of the distribution of F1, F2, F3, and F4 of the 80 ͑2 focus conditions * 10 speakers* 4 repetitions͒ unstressed realizations ͑dashed line͒ and the stressed realizations ͑solid line͒ of the vowel /a:/ in the syllable /ka:/. The boundaries of frequency bands are indicated by arrows.
+
+lation ͑van Son and Pols, 1990͒. These changes will also affect the spectral balance. We measured formant frequencies not only to determine the strength of vowel quality as an acoustic correlate of stress but also to determine their inﬂuence on the spectral balance. As described in Sec. II C, spectral levels were determined by measuring the intensity in four nonoverlapping contiguous frequency bands B1–B4: 0–0.5, 0.5–1.0, 1.0–2.0, and 2.0–4.0 kHz. Following Gaufﬁn and Sundberg ͑1989͒, the lowest band was chosen so that it included the fundamental. The second, third, and fourth bands were chosen so that these bands included F1, F2, and F3ϩF4, respectively. We wanted to determine to what extent our speakers realized formant frequencies that fall within these four frequency bands. Figures 2, 3, and 4 present an overview of the distribution of the formant data for stressed and unstressed syllables collapsed over sex and focus condition. Ka and non are presented in Figs. 2 and 3, respectively. The reiterant speech data, collapsed over syllable positions, are presented in Fig. 4. The boundaries between the different frequency bands are marked in Figs. 2–4 by arrows.
+As can be seen in Fig. 2, the peaks of the formant distributions remain well within the designated ﬁlters, but there is a considerable shift of the gravitational point of stressed tokens relative to unstressed tokens for both F1 and F2 and a slight spillover of F1 into the base band. In Fig. 3, showing non data, there is a considerable spillover of F1 into the base band and of F2 into B1. The distribution of F1 of stressed tokens shifts upwards, whereas the distribution of F2 shifts downwards. In Fig. 4, we only observe a very slight shift
+
+upwards for both F1 and F2. The only shift in distribution of F3 is found for the ka data. In all other cases, the distribution of both F3 and F4 does not shift. The F1, F2, and F3 data of both stressed and unstressed vowels in ka in kanon and na in nana do indeed largely fall within the designated frequency bands. However, as can be seen in Fig. 3, a part of the distribution of both F1 and F2 of the vowel /Å/ falls within B2. Due to the shift of F1 and F2 towards higher frequencies, possible differences in the spectral level are caused partly by differences in formant frequencies. We determined the inﬂuence of the shift of F1 on the amplitude of F2 ͑A2͒ using Eq. ͑1͒ and the inﬂuence of the shift of both F1 and F2 on the amplitude of F3 ͑A3͒ using Eq. ͑2͒ ͑Fant, 1960; Stevens, 1994͒:
+
+⌬ A2 ͑ in
+
+dB͒ ϭ 40
+
+log
+
+F 1 Ϫstress F 1 ϩstress
+
+ͱͱ Ϫ40 log
+
+F
+
+2
+
+2 Ϫ stress
+
+Ϫ
+
+F
+
+1
+
+2 Ϫ stress
+
+,
+
+F
+
+2
+
+2 ϩ stress
+
+Ϫ
+
+F
+
+1
+
+2 ϩ stress
+
+͑1͒
+
+⌬ A3 ͑ in
+
+dB͒ ϭ 40
+
+log
+
+F F
+
+1 1
+
+Ϫ stress* F ϩ stress* F
+
+2 2
+
+Ϫ ϩ
+
+stress stress
+
+.
+
+͑2͒
+
+This allowed us to determine how much of the difference in spectral balance between stressed and unstressed syllables can be explained by the formant frequency shifts. Table V presents the mean differences in spectrum amplitude of F2 and F3 ͑A2 and A3, respectively͒ caused by the shift of
+
+2478 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2478
+
+FIG. 3. An overview of the distribution of F1, F2, F3 and F4 of the 80 ͑2 focus conditions * 10 speakers * 4 repetitions͒ unstressed realizations ͑dashed line͒ and the stressed realizations ͑solid line͒ of the vowel /Å/ in the syllable /nÅn/. The boundaries of frequency bands are indicated by arrows.
+
+either F1 or by both F1 and F2. The differences will be used to correct the raw ﬁlter levels in B1–B4 that inﬂuence formant shifts in F1 and F2.
+As expected, the inﬂuence of the formant frequency shifts on the amplitude of F2 and F3 is negligible for the reiterant speech data. They are also negligible for the non data, as far as the inﬂuence of F1 and F2 on A3 is concerned. However, as mentioned above, the quality of the /ab/ in ka changed from /Ä/ in the unstressed syllables to an /ab/ in the stressed syllables; this upward shift of F1 and F2 had considerable inﬂuence on the amplitudes of F2 and F3. In Sec. II E, we will correct the measured spectral level of stressed vowels for the inﬂuence of the vocal tract changes using Eqs. ͑1͒ and ͑2͒. In Eqs. ͑1͒ and ͑2͒ we used mean F1 and F2 values of the unstressed vowels in ka, non, and na, respectively, to correct the spectral levels of each individual stressed vowel. If formant values of a particular stressed syllable were missing, its spectral level was corrected by replacing the missing formant values by the mean value of the remaining three stressed realizations of that particular speaker and vowel in the same focus and speech condition.
+E. Intensity differences in four contiguous ﬁlter bands
+We hypothesized that the spectral level of a stressed syllable differs from its unstressed counterpart. We expected that the intensity in the higher part of the spectrum increases more than the intensity in the lower part when a syllable is
+
+stressed. We ran three-way analyses of variance on the ͑corrected͒ intensity levels in each ﬁlter band separately, henceforth B1–B4, with focus condition, stress, and syllable position as ﬁxed effects, and with repetition and speaker as repeated measures for reiterant speech. For ka and non, we ran two-way analyses of variance for each syllable separately with focus and stress as ﬁxed effects, and with repetition and speaker as repeated measures. Although we found a signiﬁcant main effect of syllable position on the spectral levels of all the frequency bands ͓B1: F͑1,318͒ϭ7.9, pϭ0.005; B2: F͑1,318͒ϭ6.8, pϭ0.009; B3: F͑1,318͒ϭ4.9, pϭ0.027; B4: F͑1,318͒ϭ23.5, pϽ0.001͔, we did not ﬁnd any signiﬁcant interactions with the factor syllable position ͓focus * syllable position: all cases F͑1,316͒Ͻ1; stress * syllable position: B1 and B2: F͑1,316͒Ͻ1; B3: F͑1,316͒ϭ1.8, ns; B4: F͑1,136͒ ϭ3.1, ns͔. We therefore decided to collapse the reiterant speech data over syllable position in the following presentation of the data.
+The spectral slopes of the stressed and unstressed vowels in our data are presented in Fig. 5, showing the spectra of the stressed and unstressed vowels in the reiterant and lexical speech data, on the basis of the mean intensity values ͑corrected and uncorrected for formant frequency shifts͒ in the four contiguous frequency bands: 0–0.5 kHz, 0.5–1 kHz, 1–2 kHz, and 2–4 kHz. The left-hand ﬁgures present the data in the ͓ϩF͔ condition; the right-hand ﬁgures present the ͓ϪF͔ data. In Appendix B the uncorrected means ͑and standard deviations͒ are summarized for both lexical and reiter-
+
+2479 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2479
+
+FIG. 4. An overview of the distribution of F1, F2, F3, and F4 of the 160 ͑2 focus conditions * 10 speakers * 4 repetitions * 2 syllable positions͒ unstressed realizations ͑dashed line͒ and the stressed realizations ͑solid line͒ of the vowel /a:/ in the syllable /na:/. The boundaries of frequency bands are indicated by arrows.
+
+ant speech data for each ﬁlter band separately in Tables B I– B IV.
+As can be seen in Fig. 5, the negative spectral tilt of unstressed vowels is steeper than that of stressed vowels. Accented, stressed vowels have a gentler negative spectral tilt than unaccented stressed vowels. The intensity in the lowest ﬁlter band is hardly affected by stress, whereas there are considerable intensity differences in the other three ﬁlter bands in both focus conditions.
+Stress did not cause a signiﬁcant effect on the intensity in the lowest frequency band of the reiterant speech data ͓F͑1,318͒ϭ2.9, ns͔, but did exert a signiﬁcant effect on the intensity in all the other frequency bands, with stressed syllables having more intensity in the higher frequency bands than unstressed syllables ͓all cases: pр0.001͔. For the lexi-
+
+TABLE V. Changes in dB of the spectrum amplitude of F2 and F3 ͑A2 and A3, respectively͒ caused by the shift of formant frequencies from unstressed to stressed vowels.
+
+ka non na, ␴1 na, ␴2
+
+Inﬂuence ͑dB͒
+F1 on A2
+
+͓ϩF͔
+
+͓ϪF͔
+
+0.9
+
+0.9
+
+2.5
+
+1.4
+
+Ϫ0.3
+
+0.2
+
+0.2
+
+0.5
+
+Inﬂuence ͑dB͒
+F1 and F2 on A3
+
+͓ϩF͔
+
+͓ϪF͔
+
+2.5
+
+2.0
+
+Ϫ0.4
+
+0.2
+
+0.8
+
+0.4
+
+0.5
+
+0.5
+
+cal speech data, both ka and non, stressed syllables have more intensity in all the frequency bands, including the base band ͓ka B1: F͑1,158͒ϭ8.3, pϭ0.004; B2: F͑1,158͒ϭ45.6, pϽ0.001; B3: F͑1,158͒ϭ29.0, pϽ0.001; B4: F͑1,158͒ ϭ62.0, pϽ0.001; non: B1: F͑1,158͒ϭ19.6, pϽ0.001; B2: F͑1,158͒ϭ6.2, pϭ0.014; B3: F͑1,158͒ϭ9.2, pϭ0.003; B4: F͑1,158͒ϭ18.2, pϽ0.001͔. However, the ka data are comparable to the reiterant data, as can be seen in Fig. 5, by having the largest intensity differences in the highest three frequency bands. We explain the elevation of B1 of the non data by the fact that the F1 of the vowel in this syllable is located in the base band, whereas the F1 of the vowel in the other syllables with /ab/ is located in B2.
+There is no difference in the intensity distribution over the four frequency bands between unstressed tokens in the ͓ϩF͔ and ͓ϪF͔ conditions ͑which makes sense, because focus affects only stressed syllables͒. It should be noted that the effects of stress on the ﬁlter levels ͑B2, B3, and B4͒ are clearly larger in ͓ϩF͔ tokens than in ͓ϪF͔ tokens. We found signiﬁcant interaction between focus and stress in these bands for the non and the na data and in B3 for the ka data ͓ka: B2: F͑1,156͒ϭ3.4, ns; B3: F͑1,156͒ϭ4.4, pϭ0.037; B4: F͑1,156͒ϭ1.4, pϭ0.235; non: B2: F͑1,156͒ϭ10.8, pϭ0.001; B3: F͑1,156͒ϭ6.9, pϭ0.009; B4: F͑1,156͒ϭ7.0, pϭ0.009; na: B2: F͑1,316͒ϭ13.9, pр0.001; B3: F͑1,316͒ ϭ20.4, pр0.001; B4: F͑1,316͒ϭ6.2, pϭ0.013͔. Therefore, these differences in spectral level due to stress are largely caused by the presence of a pitch movement. However, non-
+
+2480 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2480
+
+TABLE VI. Percentage correct discrimination by linear discriminant analy-
+sis, with the intensity in each band separately used as predictor variables, and with the all intensity values together used as predictor variables ͑all͒. The results are presented for each speech type ͑lexical and reiterant͒, for each focus condition ͓͑ϩF͔ and ͓ϪF͔͒, and for corrected ͑C͒ and uncorrected ͑U͒ values separately.
+
+Focus ͓ϩF͔
+͓ϪF͔
+
+Frequency band
+B1 B2 B3 B4 all
+B1 B2 B3 B4 all
+
+Lexical ͑%͒
+
+U
+
+C
+
+74
+
+74
+
+97
+
+89
+
+88
+
+85
+
+88
+
+88
+
+99
+
+94
+
+61
+
+61
+
+73
+
+61
+
+74
+
+58
+
+78
+
+78
+
+81
+
+83
+
+Reiterant ͑%͒
+
+U
+
+C
+
+70
+
+70
+
+93
+
+90
+
+98
+
+91
+
+85
+
+85
+
+100
+
+96
+
+58
+
+58
+
+79
+
+66
+
+83
+
+66
+
+73
+
+73
+
+86
+
+71
+
+FIG. 5. Mean intensity ͑dB͒ of unstressed vowels ͑dashed lines͒ and stressed vowels ͑corrected values: dotted lines; uncorrected values: solid lines͒ in /na:/, /ka:/ and /nÅn/, respectively, for each focus condition separately: ͓ϩF͔ ͑left-hand side͒ and ͓ϪF͔ ͑right-hand side͒.
+negligible effects of stress on spectral levels remain even in ͓ϪF͔ tokens for syllables containing /ab/. No effect of stress can be observed when the vowel is /Å/.
+We conclude that, although there is an inﬂuence of the transfer function of the vocal tract on the spectral balance, voice source differences led to a difference in spectral balance.
+To determine the capacity of intensity in different frequency bands as a predictor of stress position, we performed LDAs in which we used spectral levels in each frequency band as predictor variables, one by one, as well as simultaneously. We performed analyses on both the corrected and uncorrected values. We also ran analyses on the uncorrected values, because of the fact that these results could be of interest for applications in the ﬁeld of speech recognition, whereas the results of corrected measures are of interest to those who are interested in the exact contribution of the voice source in the production of stress. Table VI summarizes the results for both word pairs. The percentage correct discriminations is presented for each focus condition separately.
+As can be seen in Table VI the intensity in the lowest ﬁlter band, below 500 Hz, is the poorest indicator of stress position in all conditions. Results improve considerably if we use the intensity in the second, third, or fourth ﬁlter band.
+
+When we performed a LDA with four separate bands simultaneously as predictors, 100% correct grouping was reached in the ͓ϩF͔ condition, separating nnana from nanna ͑96% for corrected values͒. A 99% and a 94% correct grouping were reached by separating nkanon from kannon in the same focus condition for uncorrected and corrected values, respectively. The same result is obtained if we omit the intensity in the base band as a predictor. This means that adding the base band does not lead to a signiﬁcant improvement of the LDA.
+The percentages of correct stress assignment for the tokens produced outside focus with uncorrected spectrum levels were 86% for nana and 81% for kanon, and 71% and 83% for the corrected values of nana and kanon, respectively. We conclude from these results that spectral balance is a clear acoustic correlate of stress and is even more reliable than overall intensity.
+F. Comparing the strength of the four acoustic correlates of lexical stress
+In Fig. 6 we compare the percentage correct discriminations by LDA for the four acoustic correlates of stress examined in the preceding sections.
+It can be observed that in the ͓ϩF͔ condition vowel quality is the poorest correlate of stress. Spectral balance, operationalized as the intensity differences in different frequency bands after factoring out the effect of formant frequency shift, is a reliable correlate of stress, close in strength to duration. Overall intensity performs reasonably well in the ͓ϩF͔ condition. However, as was mentioned above, the higher overall intensity can be explained by the fact that in the ͓ϩF͔ condition a rise–fall conﬁguration, marking the accent on the stressed syllable, is realized on the stressed vowel. Therefore, overall intensity is more likely to be an acoustic correlate of accent. Since this is in contrast to much earlier research on the acoustic realization of stress, we therefore examined the true correlates of stress without the confounding inﬂuence of accent by using speech data spoken without a pitch accent on the stressed syllable. Our results
+
+2481 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2481
+
+FIG. 6. An overview of the percentage correct discriminations for each acoustic correlate of stress. The upper parts present the results separating the lexical speech tokens; the lower parts present the results separating the reiterant speech tokens. Results are given for each focus condition separately: ͓ϩF͔ and ͓ϪF͔. The percentages correct for the corrected spectral levels are presented by hatched bars; the uncorrected data by black bars.
+
+show that the older literature was not correct in regarding overall intensity as a reliable acoustic correlate for stress. Overall intensity turned out to be the poorest correlate of stress position, even poorer than vowel quality. Duration remains the most stable acoustic correlate of stress position, but spectral balance also performs well in this condition and turned out to be the second best cue in stress assignment.
+III. GENERAL DISCUSSION AND CONCLUSIONS
+This study examined the acoustical correlates of stress and accent ͑other than pitch͒. Unlike earlier research on this topic, we measured the acoustical correlates of stress with and without the confounding effect of accent. We assumed that a pitch movement is a correlate of accent but not of stress. In this study, therefore, we investigated the acoustic correlates of stress in two conditions: with a pitch movement on the stressed syllable ͑condition ͓ϩF͔͒ and without a pitch movement on the stressed syllable ͑condition ͓-F͔͒.
+The measurements of overall intensity supported our hypothesis that overall intensity is not a reliable correlate of stress. In the ͓-F͔ condition, in which no pitch accent was realized on the stressed syllable, there was hardly any difference between the overall intensity of stressed and unstressed vowels, whereas in the ͓ϩF͔ condition there was a considerable difference in overall intensity between stressed and unstressed vowels. A part of the rise of the rise–fall conﬁguration marking the accent on the stressed syllable is realized on the stressed vowel, leading to a higher overall intensity of this syllable because of the fact that the pulses have a larger amplitude. Our ﬁnding limits the validity of earlier conclusions drawn by, e.g., Rietveld ͑1984͒ and Beckman ͑1986͒,
+
+who reported overall intensity as one of the most reliable acoustical means of stress to distinguish stressed from unstressed syllables. In these studies, however, stressed syllables were invariably accented so that the greater intensity is probably caused by the larger amplitude of the pulses. Our ﬁrst research question ͑Is overall intensity still a reliable acoustic correlate of linguistic stress even without the possible confound of high F0?͒, therefore, has to be answered negatively.
+Furthermore, we investigated spectral differences between stressed and unstressed vowels in order to answer our second research question ͑Are intensity differences due to stress mainly located in the higher regions of the spectrum?͒. As predicted, the results show that intensity differences between stressed and unstressed vowels are mainly concentrated in the three highest ﬁlter bands, above 0.5 kHz. Intensity in the higher bands ͑0.5–1, 1–2, and 2–4 kHz͒ was increased in stressed syllables by 5–10 dB, whereas the intensity in the lowest band was hardly affected at all.
+These results are comparable to earlier ﬁndings by Glave and Rietveld ͑1975͒ on the effects of varying effort on spectral intensity distribution. They measured spectra of the vowel ͓}͔ spoken with greater or lesser effort. The spectra of the vowel spoken with greater effort have more intensity in the higher-frequency region above 0.5 kHz and even show a decrease in intensity at the lower end of the frequency scale. With Glave and Rietveld ͑1975͒, we assume that the most important factor is probably the change of the source spectrum. We would argue that the increase in the higher part of the spectrum is caused by the more pulselike shape of the glottal source signal as the speaker expends more effort, nec-
+
+2482 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2482
+
+essary to produce a stressed syllable. The glottal pulses of stressed and unstressed syllables may differ. These differences can arise because of the way the vocal folds and the glottis are conﬁgured during phonation. At a reduction of voice intensity, with a ﬁxed location of all formants, the level of the harmonics situated at higher frequencies will decrease more than the level of harmonics at lower frequencies due to an increase in the negative slope of the source spectrum envelope. The relation between higher harmonics and the lowest ones strongly depends on the speed of glottal closure. The faster the glottis is closed, the more pulselike the excitation signal will be, resulting in a relatively ﬂat harmonic spectrum. A more gradual pattern of glottal closure, as we assume to be the case for unstressed syllables, on the other hand, yields a steeper negative spectral slope, probably exceeding the 12-dB per octave rolloff that is often mentioned for the harmonic source spectrum ͑Fant, 1960; Childers and Lee, 1991͒.
+However, the spectrum of a speech wave is not only inﬂuenced by the differences in voice source signal, since the intensity variations of a single harmonic or of a group of harmonics at a certain place along the frequency scale depends on both the source and the ﬁlter. There is a possible covariation of voice intensity and properties of the ﬁlter. This is related to the ﬁnding that speakers, when talking louder, tend to use more open articulations ͑van Son and Pols, 1990͒. These changes will also affect the spectral balance. The spectral peaks of a sound spectrum, i.e., the formants, reﬂect the resonances of the vocal tract. Formant frequencies and therefore the transfer function can change as a result of articulatory change, which affects the dimensions of the pharyngeal and the oral cavities ͑or as a result of nasal coupling͒. As a means of control for differences in the shape of the vocal tract between stressed and unstressed syllables and the inﬂuence of these differences on the spectrum, we compared formant frequencies of identical vowels in stressed and unstressed syllables. It is conceivable that speakers open their mouths more when producing stressed syllables than when producing unstressed syllables. The amount of mouth opening is reﬂected in the spectral tilt but counter to glottal sharpening it also directly inﬂuences the frequency of F1.
+Our results show a difference in spectral balance between stressed and unstressed vowels, stressed vowels having more high-frequency emphasis than unstressed vowels. This difference is certainly not only due to differences in the shape of the vocal tract. The fact that open vowels tend to have higher formant frequencies when stressed can explain only part of the intensity increase in the higher-frequency bands. However, it was found that the effects of an upward shift of F1 and F2 on the spectral intensity levels are negligible for the reiterant speech data and quite small for the lexical speech data. We therefore conclude in answer to our third research question ͑Are the intensity differences in the higher regions caused by an increase in physiological effort in the laryngeal system rather than by shifting formant frequencies due to stress?͒, that the intensity differences in the higher-frequency bands between stressed and unstressed syllables are mainly caused by an increase in physiological effort rather than by differences in articulation.
+
+Finally, we examined the potential of each acoustic correlate of stress to discriminate between initial-stressed words and ﬁnal-stressed words. It turned out that duration is still the most effective correlate of stress, relatively unaffected by accent. Overall intensity and vowel quality are the poorest indicators of stress position. Spectral balance, however, seems to be a reliable cue even in the unaccented condition, close in strength to duration.
+The following limitations should be considered in the interpretation of the results. First, the words that were investigated did not form a representative set of all words of Dutch. Only one disyllabic minimal stress pair was used. In further studies we will study multiple pairs of words and extend the scope of our study to other languages ͑Sluijter et al., 1995͒. It is unclear at the moment to what extent vowel reduction plays a more important role to determine stress level in words with more than two syllables. Moreover, other languages, e.g., English, may be more sensitive to vowel reduction than Dutch.
+In summary, the most important ﬁnding of this study is that spectral balance is an acoustic correlate of stress and that it can quite reliably distinguish stressed from unstressed tokens, irrespective of accent. Furthermore, as was mentioned in the Introduction, Zwicker and Feldtkeller ͑1967͒ showed that the energies in the low-frequency bands add little to perceived loudness, while the contribution of the higher bands is much stronger. Our results therefore suggest that the older literature, mentioned in the Introduction, was essentially correct when it referred to stress in languages such as Dutch and English as dynamic stress, as opposed to melodic stress, indicating that its primary phonetic correlate was greater loudness. A stressed syllable might be perceived as louder, and therefore more prominent, than an unstressed one due to the increased intensity levels in the higher part of the spectrum. Stress is not just a weaker degree of accent. One would expect to observe lower values along all measured correlates in stressed syllables of unaccented words. However, what we do observe is weakening along only those correlates that are related to the omission of the accentlending pitch movement.
+In subsequent research we have examined the perceptual relevance of the ﬁndings of the present study in an experiment in which we investigated the perception of stress position by manipulating vowel duration and intensity, the latter both in the classic way ͑i.e., uniform intensity differences͒ and in the more realistic way suggested by our production data ͑i.e., differences in higher bands only͒. These results will be presented in a separate article.
+ACKNOWLEDGMENTS
+Portions of this research were presented at the ESCA workshop on Prosody, Lund ͑September 1993͒ and at the 127th meeting of the Acoustical Society of America, Cambridge, MA ͑June 1994͒. The authors would like to thank K. N. Stevens, J. W. de Vries, S. G. Nooteboom, S. ShattuckHufnagel, G. Fant, D. R. Ladd, A. E. Turk, G. de Krom, R. Goedemans, J. Caspers, and one anonymous reviewer for ideas, discussion, and comments on earlier versions of this
+
+2483 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2483
+
+article. Finally, thanks are due to J. Pacilly for the necessary programming and technical assistance.
+APPENDIX A: EFFECT OF SEX ON SPECTRAL DISTRIBUTION OF INTENSITY
+Speakers were normalized for overall intensity, since absolute differences in overall intensity across speakers were not controlled for in the recording procedures. Four-way analyses of variance were run on the intensity effects per ﬁlter band for lexical and reiterant speech data separately with focus ͑accent͒, stress, and sex as ﬁxed factors. Speaker was nested as a random factor under sex, after randomly eliminating two female speakers from the data set in order to get the same number of speakers across sexes, as full orthogonality is required by this type of analysis. Female voices have a 1-dB greater intensity in the 0–0.5 kHz band, and a 2–3-dB weaker intensity in the higher frequency bands. These tendencies are in line with results reported for American English male versus female speakers ͑Holmberg et al. 1988; Sluijter et al., 1995͒. However, in our data the main effects of sex are not signiﬁcant for lexical nor for reiterant speech ͓lexical: B1: F͑1,6͒ϭ2.0, pϭ0.210; B2: F͑1,6͒Ͻ1; B3: F͑1,6͒ϭ1.44, pϭ0.28; B4: F͑1,6͒ϭ1.70, pϭ0.240; reiterant: B1: F͑1,6͒Ͻ1; B2: F͑1,6͒ϭ1.38, pϭ0.285; B3 and B4: F͑1,6͒Ͻ1͔. Moreover, in the reiterant speech condition there were no signiﬁcant interactions ͑second or higher order͒ involving sex. In the lexical speech condition out of all possible interactions involving the factor sex, only one ͑stress by sex͒ reached signiﬁcance in one single frequency band ͓B3: F͑1,6͒ϭ21.3, pϭ0.004͔.
+On the basis of these results there was no need to incorporate sex as a factor in the ﬁnal analysis of variance reported in Sec. II. By omitting sex there, we had the advantage that the data of all sex female speakers could be included in the analysis.
+APPENDIX B
+
+TABLE BII. Mean intensity ͑in dB͒ between 0.5 and 1.0 kHz of the ﬁrst ͑␴1͒ and second ͑␴2͒ syllables of initial and ﬁnal stressed kanon ͑lexical͒ and nana ͑reiterant͒. Standard deviations are in parentheses. The differences in dB between the stressed and unstressed syllables are presented syntagmatically ͑⌬S͒ and paradigmatically ͑⌬P͒. The data are presented per focus condition ͑in focus: ͓ϩF͔; outside focus: ͓ϪF͔͒.
+
+Focus condition
+͓ϩF͔
+
+Stress position
+Initial
+
+Final
+
+͓ϪF͔
+
+⌬P Initial
+
+Final
+
+⌬P
+
+Lexical
+
+␴1
+
+␴2 ⌬S
+
+51.7 38.6 13.1 ͑5.7͒ ͑5.7͒ 43.3 46.4 3.1 ͑5.7͒ ͑4.2͒ 8.4 7.8
+
+48.6 39.5 9.1 ͑5.4͒ ͑5.8͒ 43.5 40.2 3.3 ͑5.9͒ ͑5.7͒ 5.1 0.7
+
+Reiterant
+
+␴1
+
+␴2 ⌬S
+
+49.7 41.5 8.2 ͑6.5͒ ͑5.0͒ 43.5 49.2 5.7 ͑4.8͒ ͑6.5͒ 6.2 7.7
+
+45.6 41.5 4.1 ͑5.7͒ ͑6.5͒ 44.2 44.7 0.5 ͑4.4͒ ͑5.0͒ 1.4 3.2
+
+TABLE BIII. Mean intensity ͑in dB͒ between 1.0 and 2.0 kHz of the ﬁrst ͑␴1͒ and second ͑␴2͒ syllables of initial and ﬁnal stressed kanon ͑lexical͒ and nana ͑reiterant͒. Standard deviations are in parentheses. The differences in dB between the stressed and unstressed syllables are presented syntagmatically ͑⌬S͒ and paradigmatically ͑⌬P͒. The data are presented per focus condition ͑in focus: ͓ϩF͔; outside focus: ͓ϪF͔͒.
+
+Focus condition
+͓ϩF͔
+
+Stress position
+Initial
+
+Final
+
+͓ϪF͔
+
+⌬P Initial
+
+Final
+
+⌬P
+
+Lexical
+
+Reiterant
+
+␴1 ␴2 ⌬S ␴1 ␴2 ⌬S
+
+45.3 25.6 19.7 42.6 33.6 9.0
+
+͑4.5͒ ͑4.7͒
+
+͑3.9͒ ͑4.3͒
+
+36.1 31.7 Ϫ4.4 36.3 42.3 6.0
+
+͑5.8͒ ͑5.0͒
+
+͑4.1͒ ͑4.6͒
+
+9.2 6.1
+
+6.3 8.7
+
+41.2 27.3 13.9 39.3 35.1 4.2
+
+͑4.5͒ ͑3.9͒
+
+͑4.1͒ ͑5.2͒
+
+36.3 28.0 Ϫ8.3 36.5 38.5 2.0
+
+͑5.2͒ ͑5.4͒
+
+͑3.9͒ ͑4.4͒
+
+4.9 0.3
+
+2.8 3.4
+
+TABLE BI. Mean intensity ͑in dB͒ between 0 and 0.5 kHz of the ﬁrst ͑␴1͒ and second ͑␴2͒ syllables of initial and ﬁnal stressed kanon ͑lexical͒ and nana ͑reiterant͒. Standard deviations are in parentheses. The differences in dB between the stressed and unstressed syllables are presented syntagmatically ͑⌬S͒ and paradigmatically ͑⌬P͒. The data are presented per focus condition ͑in focus: ͓ϩF͔; outside focus: ͓ϪF͔͒.
+
+Focus condition
+͓ϩF͔
+
+Stress position
+Initial
+
+Final
+
+͓ϪF͔
+
+⌬P Initial
+
+Final
+
+⌬P
+
+Lexical
+
+Reiterant
+
+␴1
+
+␴2 ⌬S ␴1
+
+␴2 ⌬S
+
+52.7 52.4 0.3 54.4 52.3 2.1
+
+͑3.5͒ ͑4.5͒
+
+͑3.5͒ ͑3.7͒
+
+49.7 56.8 7.1 53.2 53.8 0.6
+
+͑5.3͒ ͑3.7͒
+
+͑4.2͒ ͑3.1͒
+
+3.0 4.2
+
+1.2 1.5
+
+52.1 52.6 0.5 52.9 51.3 1.6
+
+͑3.1͒ ͑4.2͒
+
+͑3.4͒ ͑4.3͒
+
+51.4 54.1 2.7 53.3 51.8 1.5
+
+͑3.5͒ ͑4.2͒
+
+͑3.7͒ ͑4.2͒
+
+0.7 1.5
+
+0.4 0.5
+
+TABLE BIV. Mean intensity ͑in dB͒ between 2.0 and 4.0 kHz of the ﬁrst ͑␴1͒ and second ͑␴2͒ syllables of initial and ﬁnal stressed kanon ͑lexical͒ and nana ͑reiterant͒. Standard deviations are in parentheses. The differences in dB between the stressed and unstressed syllables are presented syntagmatically ͑⌬S͒ and paradigmatically ͑⌬P͒. The data are presented per focus condition ͑in focus: ͓ϩF͔; outside focus: ͓ϪF͔͒.
+
+Focus condition
+͓ϩF͔
+
+Stress position
+Initial
+
+Final
+
+͓ϪF͔
+
+⌬P Initial
+
+Final
+
+⌬P
+
+Lexical
+
+Reiterant
+
+␴1 ␴2 ⌬S ␴1 ␴2 ⌬S
+
+32.5 19.2 16.3 29.1 21.6 7.5
+
+͑5.9͒ ͑6.1͒
+
+͑4.7͒ ͑3.9͒
+
+24.8 25.6
+
+0.8 25.4 28.0 2.6
+
+͑5.5͒ ͑5.4͒
+
+͑5.3͒ ͑5.6͒
+
+7.7 6.4
+
+3.7 6.4
+
+30.0 19.6 11.4 27.0 21.9 5.1
+
+͑5.1͒ ͑5.8͒
+
+͑4.4͒ ͑5.4͒
+
+24.3 21.1 Ϫ3.2 25.3 24.8 0.5
+
+͑4.8͒ ͑6.1͒
+
+͑3.7͒ ͑5.2͒
+
+5.7 1.5
+
+1.7 2.9
+
+2484 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2484
+
+1A notable exception is the research reported by Huss ͑1977͒. 2Beckman and Edwards ͑1988͒ show that preboundary lengthening and the presence versus absence of an accent have different inﬂuences on the syllable-internal organization. For preboundary lengthening the longer acoustic durations are associated with a disproportionate lengthening of the latter part of the vocalic gesture, whereas the presence of an accent is associated with a more even distribution of lengthening throughout the syllable. This means that the effects of preboundary lengthening and stress could be disentangled when the syllable-internal articulatory organization is studied in more detail.
+Adams, C., and Munro, R. R. ͑1978͒. ‘‘In search of the acoustic correlates of stress: Fundamental frequency, amplitude, and duration in the connected utterance of some native and non-native speakers of English,’’ Phonetica 35, 125–156.
+Beckman, M. E. ͑1986͒. Stress and Non-stress Accent ͑Foris, Dordrecht͒. Beckman, M. E., and Edwards, J. ͑1988͒. ‘‘Articulatory timing and the
+prosodic interpretation of syllable duration,’’ Phonetica 45, 156–174. Beckman, M. E., and Edwards, J. ͑1994͒. ‘‘Articulatory evidence for differ-
+entiating stress categories,’’ in Phonological Structure and Phonetic Form. Papers in Laboratory Phonology III, edited by P. A. Keating ͑Cambridge, U.P., Cambridge͒, pp. 1–33. Bergem, D. van ͑1993͒. ‘‘Acoustic vowel reduction as a function of sentence accent, word stress, and word class on the quality of vowels,’’ Speech Commun. 12, 1–23. Berinstein, A. E. ͑1979͒. ‘‘A cross-linguistic study on the perception and production of stress,’’ University of California, Los Angeles Working Papers in Phonetics 47. Bloomﬁeld, L. ͑1993͒. Language ͑Holt, Rinehart and Winston, New York͒. Brandt, J. F., Ruder, K. P., and Shipp, I., Jr. ͑1969͒. ‘‘Vocal loudness and effort in continuous speech,’’ J. Acoust. Soc. Am. 46, 1543–1548. Broeder, D. G. ͑1990͒. ‘‘Sesam handleiding; analyse en synthese van spraak,’’ SPIN/ASSP report 24 ͑Speech Technology Foundation, Utrecht͒. Childers, D. G., and Lee, C. K. ͑1991͒. ‘‘Vocal quality factors: analysis, synthesis and perception,’’ J. Acoust. Soc. Am. 90, 2394–2410. Eefting, W. Z. F. ͑1991͒. ‘‘The effect of information value and accentuation on the duration of Dutch words, syllables, and segments,’’ J. Acoust. Soc. Am. 89, 412–424. Fant, G. ͑1960͒. Acoustic Theory of Speech Production ͑Mouton, The Hague͒. Fry, D. B. ͑1955͒. ‘‘Duration and intensity as physical correlates of linguistic stress,’’ J. Acoust. Soc. Am. 27, 765–768. Fry, D. B. ͑1958͒. ‘‘Experiments in the perception of stress,’’ Language and Speech 1, 126–152. Fry, D. B. ͑1965͒. ‘‘The dependence of stress judgments on vowel formant structure,’’ Proceedings of the 5th International Congress on Phonetic Science, Mu¨nster, 1964 ͑Karger, Basel͒, pp. 306–311. Gaufﬁn, J., and Sundberg, J. ͑1989͒. ‘‘Spectral correlates of glottal voice source waveform characteristics,’’ J. Speech Hearing Res. 32, 556–565. Glave, R. D., and Rietveld, A. C. M. ͑1975͒. ‘‘Is the effort dependence of speech loudness explicable on the basis of acoustical cues,’’ J. Acoust. Soc. Am. 58, 875–879. Green, D. M. ͑1976͒. An Introduction to Hearing ͑Erlbaum, Hillsdale, NJ͒. Handel, S. ͑1989͒. Listening: An Introduction to the Perception of Auditory Events ͑MIT, Cambridge, MA͒. Hart, J. ’t, Collier, R., and Cohen, A. ͑1990͒. A Perceptual Study of Intonation; An Experimental-phonetic Approach to Speech Melody ͑Cambridge, U.P., Cambridge͒. Heuven, V. J. van ͑1987͒. ‘‘Stress patterns in Dutch ͑compound͒ adjectives: Acoustic measurements and perception data,’’ Phonetica 44, 1–12. Heuven, V. J. van ͑1988͒. ‘‘Effects of stress and accent on the human recognition of word fragments in spoken context: gating and shadowing,’’ in Proceedings of the 7th FASE Symposium, Speech ’88 ͑Institute of Acoustics, Edinburgh͒, pp. 811–818. Huss, V. ͑1977͒. ‘‘English word stress in the post-nuclear position,’’ Phonetica 35, 86–105. Kager, R. W. J. ͑1989͒. A Metrical Theory of Stress and Destressing in English and Dutch ͑Foris, Dordrecht͒. Katwijk, A. van ͑1974͒. Accentuation in Dutch: An Experimental Linguistic Study ͑Van Gorcum, Amsterdam͒.
+
+Klatt, D. H. ͑1976͒. ‘‘Linguistic uses of segmental duration in English: Acoustic and perceptual evidence,’’ J. Acoust. Soc. Am. 59, 1208–1221.
+Ladefoged, P. ͑1967͒. ‘‘Stress and respiratory activity,’’ in Three Areas of Experimental Phonetics ͑Oxford U.P., London͒, pp. 1–49.
+Ladefoged, P. ͑1971͒. Preliminaries to Linguistic Phonetics ͑Univ. of Chicago, Chicago͒.
+Langeweg, S. J. ͑1988͒. ‘‘The stress system of Dutch,’’ doctoral dissertation, Leiden University.
+Lea, W. A. ͑1977͒. ‘‘Acoustic correlates of stress and juncture,’’ in Studies in Stress and Accent, edited by L. M. Hyman, Southern California Occasional Papers in Linguistics 4, pp. 83–119.
+Lehiste, I., and Peterson, G. E. ͑1959͒. ‘‘Vowel amplitude and phonemic stress in American English,’’ J. Acoust. Soc. Am. 31, 428–435.
+Lehto, L. ͑1969͒. English Stress and its Modiﬁcation by Intonation: An Analytic and Synthetic Study of Acoustic Parameters ͑Suomalainen Tiedeakatemia, Helsinki͒.
+Liberman, M. Y., and Streeter, L. A. ͑1978͒. ‘‘Use of nonsense-syllable mimicry in the study of prosodic phenomena,’’ J. Acoust. Soc. Am. 63, 231–233.
+Nakatani, L. H., and Schaffer, J. A. ͑1978͒. ‘‘Hearing ‘words’ without words: Prosodic cues for word perception,’’ J. Acoust. Soc. Am. 63, 234– 245.
+Nierop, D. J. P. J van, Pols, L. C. W, and Plomp, R. ͑1973͒. ‘‘Frequency analysis of 25 female speakers,’’ Acustica 29, 110–118.
+Nooteboom, S. G. ͑1972͒. ‘‘Production and perception of vowel duration,’’ doctoral dissertation, Utrecht University.
+Pierrehumbert, J. B. ͑1980͒. ‘‘The phonology and phonetics of English intonation,’’ Ph.D. dissertation, Massachusetts Institute of Technology.
+Pols, L. C. W., Tromp, H. R. C., and Plomp, R. ͑1973͒. ‘‘Frequency analysis of Dutch vowels from 50 male speakers,’’ J. Acoust. Soc. Am. 53, 1093– 1101.
+Rietveld, A. C. M. ͑1984͒. ‘‘Syllaben, klemtonen en de automatische detectie van beklemtoonde syllaben in het Nederlands,’’ doctoral dissertation, Catholic University of Nijmegen.
+Rietveld, A. C. M., and Koopmans-van Beinum, F. J. ͑1987͒. ‘‘Vowel reduction and stress,’’ Speech Commun. 6, 217–229.
+Slootweg, A. ͑1987͒. ‘‘Word stress and higher level prosodics,’’ in Linguistics in the Netherlands 1987, edited by F. Beukema and P. Coopmans ͑Foris, Dordrecht͒, pp. 195–203.
+Sluijter, A. M. C. ͑1992͒. ‘‘Lexical stress and focus distribution as determinants of temporal structure,’’ in Linguistics in the Netherlands 1992, edited by R. Bok-Bennema and R. van Hout ͑Foris, Dordrecht͒, pp. 247– 259.
+Sluijter, A. M. C. ͑1995͒. Phonetic Correlates of Stress and Accent ͑Holland Academic Graphics, The Hague͒.
+Sluijter, A. M. C., and Heuven, V. J. van ͑1995͒. ‘‘Effects of focus distribution, pitch accent and lexical stress on the temporal organization of syllables in Dutch,’’ Phonetica 52, 71–89.
+Sluijter, A. M. C., Shattuck-Hufnagel, S., Stevens, K., and Heuven, V. J. van ͑1995͒. ‘‘Supralaryngeal resonance and glottal pulse shape as correlates of prosodic stress and accent in American English,’’ Proceedings of the 13th International Conference of Phonetic Sciences, Stockholm, 2, 630–633.
+Son, R. J. J. H. van, and Pols, L. C. W. ͑1990͒. ‘‘Formant frequencies of Dutch vowels in a text, read at normal and fast rate,’’ J. Acoust. Soc. Am. 88, 1683–1693.
+Stevens. ͑1994͒. Private communication. Sweet, H. ͑1906͒. A Primer of Phonetics ͑Clarendon, Oxford͒. Vanderslice, R., and Ladefoged, P. ͑1972͒. ‘‘Binary suprasegmental features
+and transformational word accentuation rules,’’ Language 48, 819–838. Wightman, C. W., Shattuck-Hufnagel, S., Ostendorf, M., and Price, P. J.
+͑1992͒. ‘‘Segmental durations in the vicinity of prosodic phrase boundaries,’’ J. Acoust. Soc. Am. 91, 1707–1717. Zanten, E. van, Damen, L., and Houten, E. van ͑1991͒, ‘‘The ASSP Speech Database,’’ SPIN/ASSP-report 41 ͑Speech Technology Foundation, Utrecht͒. Zwicker, E., and Feldtkeller, R. ͑1967͒. Das Ohr als Nachrichtenempfanger ͑Hirzel, Stuttgart͒.
+
+2485 J. Acoust. Soc. Am., Vol. 100, No. 4, Pt. 1, October 1996
+
+A. M. C. Sluijter and V. J. van Heuven: Spectral balance 2485
+
