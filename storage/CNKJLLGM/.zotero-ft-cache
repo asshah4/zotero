@@ -1,0 +1,510 @@
+Brain Stimulation 15 (2022) 523e531
+Contents lists available at ScienceDirect
+Brain Stimulation
+journal homepage: http://www.journals.elsevier.com/brain-stimulation
+
+Closed-loop optimization of transcranial magnetic stimulation with
+electroencephalography feedback
+Aino E. Tervo a, b, c, 1, Jaakko O. Nieminen a, b, 1, *, Pantelis Lioumis a, b, d, Johanna Metsomaa a, e, Victor H. Souza a, b, Heikki Sinisalo a, b, Matti Stenroos a, Jukka Sarvas a, 2, Risto J. Ilmoniemi a, b
+a Department of Neuroscience and Biomedical Engineering, Aalto University School of Science, Espoo, Finland b BioMag Laboratory, HUS Medical Imaging Center, University of Helsinki and Helsinki University Hospital, Helsinki, Finland c AMI Centre, Aalto NeuroImaging, Aalto University School of Science, Espoo, Finland d Cognitive Brain Research Unit, Department of Psychology and Logopedics, Faculty of Medicine, University of Helsinki, Helsinki, Finland e Department of Neurology & Stroke and Hertie Institute for Clinical Brain Research, University of Tübingen, Tübingen, Germany
+
+article info
+Article history: Received 27 August 2021 Received in revised form 17 December 2021 Accepted 28 January 2022 Available online 14 February 2022
+Keywords: Transcranial magnetic stimulation Electroencephalography Closed-loop Multi-locus TMS Multi-channel TMS Bayesian optimization
+
+abstract
+Background: Transcranial magnetic stimulation (TMS) is widely used in brain research and treatment of various brain dysfunctions. However, the optimal way to target stimulation and administer TMS therapies, for example, where and in which electric ﬁeld direction the stimuli should be given, is yet to be determined. Objective: To develop an automated closed-loop system for adjusting TMS parameters (in this work, the stimulus orientation) online based on TMS-evoked brain activity measured with electroencephalography (EEG). Methods: We developed an automated closed-loop TMSeEEG set-up. In this set-up, the stimulus parameters are electronically adjusted with multi-locus TMS. As a proof of concept, we developed an algorithm that automatically optimizes the stimulation orientation based on single-trial EEG responses. We applied the algorithm to determine the electric ﬁeld orientation that maximizes the amplitude of the TMSeEEG responses. The validation of the algorithm was performed with six healthy volunteers, repeating the search twenty times for each subject. Results: The validation demonstrated that the closed-loop control worked as desired despite the large variation in the single-trial EEG responses. We were often able to get close to the orientation that maximizes the EEG amplitude with only a few tens of pulses. Conclusion: Optimizing stimulation with EEG feedback in a closed-loop manner is feasible and enables effective coupling to brain activity. © 2022 The Author(s). Published by Elsevier Inc. This is an open access article under the CC BY-NC-ND
+license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+1. Introduction
+Transcranial magnetic stimulation (TMS) [1] has shown therapeutic promise in various brain disorders [2] with almost no side effects [3]. Rapidly repeated magnetic pulses can modulate neuronal activity and yield, for instance, anti-depressant effects and improved recovery from stroke [2]. Although TMS has been
+* Corresponding author. Department of Neuroscience and Biomedical Engineering, Aalto University School of Science, P.O. Box 12200, FI-00076 AALTO, Finland.
+E-mail address: jaakko.nieminen@aalto.ﬁ (J.O. Nieminen). 1 These authors contributed equally. 2 Deceased October 26, 2021.
+
+investigated for decades and applied in therapeutic use for several years, the optimal way to deliver TMS therapy in different clinical conditions and individuals is still unclear.
+TMS-induced brain activation is produced by inducing a focused electric ﬁeld (E-ﬁeld) in the brain with a coil placed on the head. Targeting the stimulating E-ﬁeld, i.e., selecting the location and orientation of its estimated focus on the cortex, is a key step in TMS. Other stimulus parameters include, for example, the stimulation intensity and the time between consecutive pulses, making the space of available TMS parameters huge. In TMS treatments and TMS studies investigating brain mechanisms, these parameters have been chosen in different ways. A common approach has been to observe and map functional responses to TMS, including motor-
+
+https://doi.org/10.1016/j.brs.2022.01.016 1935-861X/© 2022 The Author(s). Published by Elsevier Inc. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/ ).
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+Brain Stimulation 15 (2022) 523e531
+
+evoked potentials measured with electromyography when stimulating the motor cortex [1], subject-reported phosphenes or visual suppression upon stimulating the occipital cortex [4], and speech disruptions when perturbing language areas [5]. Stimulation locations have also been selected based on bony landmarks [6] or standard electroencephalography (EEG) electrode positions [7,8]. TMS targeting and mapping of functional responses got more precise with the introduction of neuronavigation systems [9,10], which guide and record the selection of the locations and orientations of the E-ﬁeld focus based on individual structural brain scans.
+Accurate TMS target selection is crucial: TMSeelectromyography studies have shown that even subtle changes in the stimulation parameters may lead to large changes in the motor responses [11e14]. There are changes also in TMS-evoked potentials (TEPs) measured with EEG when the stimulation parameters change signiﬁcantly [15e19], although detailed mappings of TEPs are lacking. Detailed TEP maps as a function of different stimulus parameters would increase understanding of the brain dynamics underlying TMSeEEG, which provides a direct measure of evoked brain activity. TMSeEEG is effective in investigating brain mechanisms and neuronal connections [20,21]; it has shown promise as a biomarker in predicting the outcome and monitoring the clinical efﬁcacy of TMS or other neuromodulatory treatments [21e23].
+Given the varying practices in TMS targeting and the sensitivity of the TMS responses to the stimulus parameters, it is unsurprising that the observed TMS effects are often different and difﬁcult to interpret; sometimes they even appear contradictory [2,24,25]. To make TMS more effective and more comparable, the stimulation parameters should be adjusted with neurophysiological feedback, regardless of the cortical target region. This concerns not only the initial stimulation parameters selected at the beginning of a TMS session but also the real-time adjustment of the TMS parameters during treatment sessions to maximize the desired plastic effects. It has been suggested that TMS parameters could be adjusted with feedback from EEG [21,22,26], which provides a readout signal from superﬁcial brain areas. Procedures for selecting initial stimulation parameters in TMSeEEG measurements by visually inspecting averaged EEG responses and manually adjusting the TMS settings have been applied, e.g., in Refs. [27e29] to acquire high-quality, artifact-free TEPs. There are, however, also other situations, such as selecting stimulus parameters for TMS treatments, that could beneﬁt from EEG-based targeting. To make EEG-guided TMS practical and generally applicable, the analysis of EEG data and the adjustment of TMS parameters must be easy and fastdleaving automated closed-loop control [30] as the only feasible approach. Previously, the timing of TMS pulses has been automatically adjusted based on the phase of the pre-stimulus EEG [31,32]. Such methods are, however, considered only as state-dependent stimulation, not closed-loop stimulation that would utilize TMS responses in the process [33]. We hypothesized that TMS parameters could be automatically and adaptively adjusted based on the cortical effects of TMS as measured by EEG, even though TEPs exhibit high variation.
+In this paper, we show that guiding TMS with online EEG responses is possible and present an automated algorithm for determining an optimal stimulation orientation based on TEPs. In our closed-loop set-up, the stimulation parameters are adjusted electronically with multi-locus TMS [14], which avoids conventionally required manual coil positioning by simultaneously operated overlapping coils (see Fig. 1a). We show how TEPs depend on the stimulation orientation on the left pre-supplementary motor area (pre-SMA). Moreover, we demonstrate the functioning of the automated TMSeEEG targeting (Fig. 1b) in the search of an optimal stimulation orientation to maximize the peak-to-peak amplitude of
+
+the early TEP deﬂections. The presented algorithm enables userindependent and individually optimized TMS targeting, especially outside the primary motor cortex. Furthermore, the possibility for automatic tuning of stimulus parameters with EEG feedback during TMS sessions has great potential for increasing the efﬁcacy of TMS treatments.
+2. Methods
+We performed two experiments. In Experiment 1, we systematically recorded TEPs as a function of stimulation orientation. Experiment 2 comprised repeated testing of the automated optimization of the stimulus orientation with EEG feedback. At the beginning of the TMSeEEG measurements, we performed a preparatory experiment comprising testing of the auditory noise masking and selection of the stimulation location and intensity.
+Six healthy participants (2 males, 1 left-handed [34], aged 22e42) volunteered for the study. The participants were divided into two groups of three subjects. Group A had the preparatory experiment and Experiment 1 in a single session, and the corresponding data were used to tune the algorithm validated in Experiment 2 about 1e2 months later. For the Group B subjects, Experiment 2 was performed ﬁrst to provide an independent validation of the algorithm, and Experiment 1 was carried out about one week later. Prior to the TMSeEEG experiments, the subjects underwent structural magnetic resonance imaging (MRI) with T1-, fat-suppressed T1-, and T2-weighted sequences (cubic voxel size 1 mm3). The study was accepted by the ethical committee of the Hospital District of Helsinki and Uusimaa and carried out in accordance with the Declaration of Helsinki. The subjects signed a consent form before the experiments.
+2.1. Measurement set-up for TMSeEEG
+With our multi-locus TMS system [14] and a 2-coil transducer
+[35], we applied a monophasic magnetic pulse (60-ms rise time, 30ms hold period, and 44-ms fall time [36]), producing a biphasic E-
+ﬁeld in the cortex. The multi-channel TMS system allowed electronic adjustment of the stimulus orientation, here deﬁned as the direction of the peak E-ﬁeld computed on the cortex at 15-mm depth in a spherical head model of 85-mm radius. We attached a thin foam pad under the transducer to reduce the vibration of the electrodes and bone-conducted transmission of the stimulus sound. The transducer placement relative to the subject's head was tracked with an eXimia NBS 3 neuronavigation system (Nexstim Plc, Finland), which during repeated stimulation helped to keep the transducer within 2 mm and 2 from the intended coil placement.
+EEG signals were recorded with BrainAmp DC ampliﬁers (Brain Products GmbH, Germany). The signals were low-pass ﬁltered with a 1000-Hz cut-off frequency and sampled at 5000 Hz. During TMSeEEG data acquisition, subjects were instructed to be relaxed, avoid swallowing, keep their sight ﬁxated to a point, and when needed, blink preferably about 1 s after the pulses. To minimize the auditory responses evoked by the click sound of the TMS pulse, subjects were presented via earbuds auditory masking that contained white noise and randomly jittering click noise from a recorded coil click [37] (https://github.com/iTCf/TAAC). Subjects wore earmuffs to additionally attenuate the TMS click.
+2.2. Preparatory step: selecting ﬁxed experimental parameters
+Suitable auditory noise masking was determined by delivering TMS with the maximum intensity with the transducer a few centimetres above the head while the noise volume was increased until the subject did not hear the coil click. The effectiveness of the
+
+524
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+Brain Stimulation 15 (2022) 523e531
+
+Fig. 1. Beneﬁt of multi-locus TMS in closed-loop TMSeEEG. a Instead of manual coil operation (left), multi-locus TMS (right) allows electronic adjustment of stimulus parameters (in this example, the stimulation orientation (middle)) with no delay. The transducer consists of two tailored overlapping coils (top right). b In automated TMSeEEG targeting, the evoked EEG responses are analysed in real-time and used to decide on the stimulation parameters for the next pulse in such a way that the optimal stimulation parameters are found with the least number of iterations. The stimulation parameters are effortlessly adjusted with multi-locus TMS. The loop is repeated until the optimal stimulation parameters are found.
+
+noise masking was tested by recording sets of 20 TEPs, which were evaluated with the help of a TMSeEEG data visualization tool presented and shared in Ref. [29] (https://github.com/iTCf/rt-TEP). This tool allowed cutting out the high-amplitude TMS pulse artifact within the ﬁrst few milliseconds after the pulse and showing average-referenced signals to ease the visual inspection of the data. If auditory components were present, the noise masking volume was increased until the auditory components were negligible or the subject's comfort limit or a 90-dB safety limit (measured with an SM20-A sound meter, Amprobe, USA, in a plastic ear canal) was reached.
+The stimulation location (site of the estimated E-ﬁeld maximum) on the left pre-SMA was placed over the superior frontal gyrus approximately 1e1.5 cm anterior to the vertical anterior commissure line [38]. The stimulation intensity was adjusted until in 20 trials, the average peak-to-peak amplitude of
+the deﬂections 15e50 ms after the pulse was 5e10 mV (similar
+approach as in Refs. [28,29]). We assessed the signal quality with the data visualization tool [29] with the induced peak E-ﬁeld in the posterioreanterior and medialelateral directions. If large stimulation artifacts were present in the electrodes close to the stimulation site, the location was changed a few millimetres to reduce the artifacts.
+2.3. Experiment 1: systematic mapping of orientation dependency of TEPs
+In Experiment 1, 48 TMS pulses were delivered in each of the 36 orientations (with 10 steps) on the left pre-SMA, with the stimulus placement and intensity being as determined in the preparatory experiment. The 1728 pulses were divided into 12 blocks (a few minutes break between), each of them including four pulses in all 36 orientations in a pseudorandom order. At the beginning of each block, we gave one additional pulse in a random orientation; the corresponding data were excluded from the analysis. The interstimulus interval (ISI) was 2.4e2.7 s.
+The EEG data were processed and analysed with Matlab scripts (version R2020b or newer; The MathWorks, Inc., USA). In each trial
+
+(À600 … 600 ms around the TMS pulses), the stimulation artifact in the time interval of À2 … 8 ms was removed and replaced by signals obtained by piecewise cubic interpolation. The signals were high-pass ﬁltered with a third-order Butterworth ﬁlter (cut-off frequency 1 Hz) in the forward and backward directions. Bad trials containing eye blinks or an excessive amount of muscle activity were manually removed. The signals were baseline-corrected by subtracting the mean of the signal at À200 … À10 ms from the whole trial. Then, we applied the source-estimate-utilizing noisediscarding (SOUND) algorithm [39,40] to diminish artifactual signal components, such as muscle activity. SOUND was applied separately for each pool of trials with the same stimulation orientation and with the tuning factor for the regularization parameter set to 0.1, channel C6 serving as a high-quality reference electrode, and the number of iterations being 10. In the minimum-norm estimation included in SOUND, the lead ﬁelds were based on the individual realistic head geometry. Structures of the head were segmented from fat-suppressed T1 and T2 MRIs with the SimNIBS headreco pipeline [41], followed by mesh downsampling and smoothing. The conductivity model consisted of scalp, skull, and intracranial volume, with conductivities of 0.33, 0.0066, and 0.33 S/ m, respectively. The lead ﬁelds were computed with the boundary element method using a linear-collocation isolated-source approach [42,43] (https://github.com/MattiStenroos/hbf_lc_p) for source space on the greyewhite matter boundary discretized to 25,000 dipoles normal to the surface of the cortex. The SOUND step was followed by low-pass ﬁltering (cut-off frequency 45 Hz) and downsampling of the signals to 1000 Hz. Finally, the data were average referenced by subtracting the mean of all channels from each channel.
+The peak-to-peak amplitude of the P20eN40 complex (subtraction of the signal minimum within the 35 … 45 ms interval from the signal maximum within the 15 … 25 ms interval) in channel FC1 was extracted separately for each trial (see an example TEP trial in Fig. 1b with the corresponding peaks and time intervals highlighted). The dependence of the average P20eN40 amplitude as a function of the stimulus orientation was computed for the 36 stimulation orientations as an average of the responses within 30
+
+525
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+Brain Stimulation 15 (2022) 523e531
+
+(inclusive) from the computation point. Between the sampled orientations, the mean curve was generated by cubic interpolation. The standard deviation of the P20eN40 amplitudes was determined by ﬁrst computing the variance over the single-trial P20eN40 amplitudes separately for each stimulus orientation, followed by averaging the variances and taking the square root. The signal-to-noise ratio (SNR) of the P20eN40 amplitude was determined as the ratio of the amplitude range of the mean curve over different stimulation orientations and the standard deviation of the single-trial P20eN40 amplitudes.
+
+2.4. Experiment 2: automated orientation search
+
+In Experiment 2, we performed 20 times the automated search
+
+of the optimal stimulation orientation on the left pre-SMA with EEG
+
+feedback. In this experiment, we had 360 possible stimulation orientations separated with 1 steps; the ISI was in the range of
+
+2e6 s. The stimulus placement and intensity were as determined in the preparatory experiment. The automated orientation search al-
+
+gorithm was based on our previously developed algorithm for
+
+optimizing TMS parameters with the motor response as the feed-
+
+back signal to be maximized [44]. Here, we made that algorithm
+
+work for maximizing TEP amplitudes (see Fig. 1b). Our adaptive
+
+search algorithm is founded on Bayesian optimization [45], which
+
+is an efﬁcient approach to ﬁnd a global optimum (e.g., maximum or
+
+minimum) of an unknown function. The EEG feature to be opti-
+
+mized was selected as the peak-to-peak amplitude of the P20eN40 complex in the FC1 electrode, as it showed orientation dependency
+
+consistently across the Group A data (Subjects 1e3) in Experiment 1.
+
+The search process started by delivering a TMS pulse at a
+
+random E-ﬁeld orientation followed by a pulse in the opposite
+
+orientation. Subsequently, we gave stimuli at orientations indicated
+
+by a guiding function called knowledge gradient, which was
+
+computed on a logarithmic scale for numerical accuracy [46]. The
+
+knowledge gradient suggests sampling points balancing high ex-
+
+pected amplitude and large uncertainty so that the optimum is
+
+found with a minimal number of pulses. We modelled the depen-
+
+dence of the P20eN40 amplitude as a function of the stimulation orientation with Gaussian process regression, which estimates the
+
+underlying function by smoothly linking the neighbouring data
+
+points with the help of a covariance function [47]. We applied the
+
+following periodic (periodicity of 360) covariance kernel function
+
+[47]: kðxn; xmÞ ¼ a0 exp
+
+À 4a1sin 2
+
+jxn Àxm j 2
+
+, where xn and xm are
+
+the orientations for which the covariance is computed for, a0 determines the amplitude variance, and a1 the smoothness of the function to be ﬁtted. The covariance parameters a0 and a1 along with the other parameters for the prior and the likelihood models
+
+were deﬁned as by Tervo et al. [44]. The posterior mean curve (see
+
+examples in Fig. 3a,d), whose maximum indicated the estimated
+
+optimal stimulation orientation, was computed with a grid spacing of 0.25. The minimum and the maximum number of samples in
+
+the search were set to 30 and 60, respectively. We considered the
+
+search converged when the estimated optimal stimulation orientation had not changed more than 5 during 10 consecutive
+
+iterations.
+
+The EEG signals were transferred in real-time to another com-
+
+puter running our Matlab-based algorithm with the help of the
+
+code examples provided by Brain Products (https://www.
+
+brainproducts.com/downloads.php?kid¼2&amp;tab¼5). The real-
+
+time processing of the EEG signals was similar to that in Experi-
+
+ment 1. However, we did not apply the SOUND algorithm, and the
+
+ﬁltering was combined into a sixth-order band-pass Butterworth
+
+ﬁlter (1e45 Hz). The baseline correction (mean-computation
+
+interval À500 … À10 ms) was applied as the second-to-last step before average referencing. If the signal range of a processed TEP in
+any channel exceeded 75 mV within the time interval of À500 …
+500 ms, the trial was rejected and a new trial acquired (on average 1.8 rejected trials per search; subject-wise averages ranging from 0.1 to 5.6). However, for Subject 3, the rejection threshold was
+increased to 150 mV, as the data were excessively noisy (9.7 re-
+jections per search on average). The performance of the EEG-based orientation search algorithm
+was evaluated by comparing the search outcomes with the mean curve computed from the data measured in Experiment 1 (see Fig. 4aef); the error of each search run was deﬁned as the absolute difference of the optimized stimulation orientation and the closest maximum of the individual mean curve.
+3. Results
+3.1. Experiment 1: orientation dependency of the TMSeEEG responses
+Fig. 2a,d,e shows how the averaged TEPs of Subject 1 varied as a function of the E-ﬁeld orientation (Fig. 2c). As expected, the largest early responses were evoked in the channels close to the stimulation site, and their amplitude varied with the stimulation direction.
+Fig. 2d visualizes the time course of the TEPs in channel FC1 sited near the stimulation location. The ﬁrst deﬂections after the stimulus onset peaked at around 10 ms (negative), 20 ms (positive deﬂection, named P20), and 40 ms (negative, N40). The amplitudes of these early components depended on the stimulation orientation as clearly seen in Fig. 2e. In addition, the peak-to-peak amplitude of the P20ÀN40 complex varied as a function of the stimulation orientation in a sinusoidal way, having maxima at around À90 and 90 (see Fig. 2f), when the reference orientation 0 was in the posterior-to-anterior direction. The orientation dependency of the P20ÀN40 amplitude with all six subjects is presented in Fig. 4aef.
+3.2. Experiment 2: automated EEG-based orientation search
+Fig. 3 presents two examples of the automated EEG-based orientation search with Subject 1. The ﬁrst example (Fig. 3aec) displays how the search rapidly converged to one of the maxima of the P20eN40 response curve while the second example (Fig. 3def) demonstrates an additional switch from one maximum to another one during the search process. Fig. 3c,f reveals that the sampling was guided in such a way that about the ﬁrst ten samples were almost evenly distributed across the orientations, whereas the rest of the samples were mainly centred around the current estimate of the optimal orientation. The example search outcomes are visualized in Fig. 3a,d, which also illustrates the large variation of the single-trial responses.
+The ability of the closed-loop search to ﬁnd the optimal stimulus orientation is visualized in Fig. 4, which illustrates how the single search outcomes (optimized stimulus orientation) grouped around the ground-truth orientations (maxima of the mean curves determined in Experiment 1). The convergence of the single search runs is presented in Fig. 4g. The average accuracy of the EEG-based orientation search over the 120 repetitions was 18 (individual average accuracies 5e43; median 10). When excluding Subject 3, whose EEG data were excessively noisy, the average accuracy was 13 (median 9). This 13 deviation from the ground truths corre-
+sponds on average to a 0.25-mV or 3% decrease in the amplitudes of
+the P20eN40 mean curve maxima. Eighty-eight per cent of the optimization results were closer than 25 to the ground truth (77% when including Subject 3). The average number of TMS pulses needed in the search was 42 (range 33e48 among the subjects;
+
+526
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+Brain Stimulation 15 (2022) 523e531
+
+Fig. 2. Orientation dependency of the TMS-evoked EEG responses on the left pre-SMA (Subject 1). a Time courses of the TEPs in all channels with selected stimulation orientations (À90, 0, 90). The black cross marks the position of the transducer center relative to the electrode locations (a) and the stimulation site relative to the brain anatomy (b). In b, the left superior frontal gyrus is highlighted in red. c The 36 stimulation orientations. The colours and line styles of the arrows indicate the corresponding stimulation orientations in a and d. d Enlarged TEP time courses of the channel FC1 with all stimulation orientations. e Isocolour plot of the TEP time courses with different stimulus orientations in FC1. f Peakto-peak amplitudes of the P20ÀN40 complex in FC1 with different stimulation orientations. The dots depict the single-trial responses, the solid trace is a mean curve, and the shaded area illustrates the standard deviation. (For interpretation of the references to colour in this ﬁgure legend, the reader is referred to the Web version of this article.)
+
+median 37). The accuracy of the estimated optimal orientation and the number of pulses needed in the search tended to depend on the SNR of the optimized TEP feature as can be seen in Fig. 4h and i: the better the SNR, the less error there was in the search outcomes and the smaller number of stimuli needed for convergence.
+4. Discussion
+The ability to adjust TMS parameters automatically based on online EEG feedback opens new prospects for scientiﬁc and clinical applications of TMS. The results of our algorithm performance evaluations (Experiment 2) demonstrate that our automated closed-loop search provides an easy, fast, and user-independent way to determine TMS targets based on evoked EEG signals. This is, to our knowledge, the ﬁrst time that post-stimulus EEG responses helped to optimize TMS efﬁcacy in a closed-loop manner.
+The automated orientation search (Experiment 2) performed well in all subjects except one whose EEG was contaminated by excessive scalp muscle activity present throughout the measurements. The differences in the algorithm performance are explained by the alterations in the SNR of the data: better SNR increases the accuracy (Fig. 4h) and reduces the number of required iterations in the search process (Fig. 4i). The accuracy of the optimized orientations would likely get better by increasing the number of iterations in the search, at the cost of increasing the search time. Depending on the application, different criteria can be chosen to terminate the search.
+
+Even though the EEG-based orientation search worked well in most cases, there are a few erroneous search results visible in Fig. 4aeg. These outliers resulted from the fact that single-trial TEPs, and thus the extracted P20ÀN40 amplitudes, are very variable (see example distributions in Figs. 2f and 3a,b). This variation makes the optimization challenging, as sometimes stimulation with the optimal orientation may evoke small P20ÀN40 amplitudes, and, with non-optimal orientation, the amplitudes can be large by chance. The changes in the single-trial EEG responses with different stimulation orientations are difﬁcult or even impossible to register and interpret visually by the operator. However, our userindependent algorithm uncovers the optimal orientation often even with a few tens of pulses in different directions. This is remarkably few in contrast to traditional TMSeEEG in which several tens or even a few hundred trials with the same stimulation parameters are averaged together for the ofﬂine analysis and interpretations. The performance of our closed-loop algorithm shows that even single-trial TEPs contain useful information when combined across different TMS parameters in a meaningful way.
+The EEG feature we selected for the optimization was the amplitude of the P20eN40 complex, as it showed apparent orientation dependency in Experiment 1 across the Group A subjects (algorithm test data). The amplitudes of the early components (within the ﬁrst 50 ms after the pulse) have been used also in other studies to adjust TMS parameters [28,29], as the early TEP deﬂections are thought to reﬂect cortical excitability [29,48e50]. Furthermore, peak-to-peak amplitudes are less susceptible to baseline drifting than the amplitudes of single peaks. In this study,
+
+527
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+Brain Stimulation 15 (2022) 523e531
+
+Fig. 3. Two examples (aec and def) of the EEG-based orientation search (Subject 1). a,d The search outcome, i.e., the found optimal orientation is marked with a black cross. The acquired single-trial P20eN40 amplitudes are presented with black dots. The blue trace illustrates the ﬁnal posterior mean curve (modelled behaviour of the response curve). b,e The progress of the estimated optimal orientation during the search run. The posterior mean curves computed based on the gathered P20eN40 responses are encoded with coloured rows (grey to blue), and the black crosses indicate the estimated optimal orientation (maximum of the posterior mean curve) on each iteration. The uppermost row (indicated with a black rectangle) correspond to the blue posterior mean curve in a and d. c,f The sampling order. After two randomly sampled orientations (with a 180 difference), we sampled the orientation where the knowledge-gradient function (grey-to-red-coloured rows) reached its maximum (black dots). (For interpretation of the references to colour in this ﬁgure legend, the reader is referred to the Web version of this article.)
+we applied the automated search for the peak-to-peak amplitudes in one channel, namely FC1. However, there are many other aspects in the EEG signal that could be optimizable features in closed-loop TMSeEEG. For example, one could employ the signal from several channels in form of a spatial ﬁlter [32] to capture the signal from a desired cortical area or utilize the multi-channel EEG to follow and optimize the signal propagation between different cortical areas.
+We tested the automated orientation search on pre-SMA since it is often easy to acquire high-quality artifact-free TMSeEEG data from that area [51]. In addition, pre-SMA is relevant when studying, for example, cognitive control [52] or motor learning [53] with TMS; it has been studied as a potential target for treating patients with obsessive-compulsive disorder and essential tremor [2]. We presume that this kind of orientation search would work also on other brain areas, but it would require further systematic mapping to ﬁnd out what are the suitable time intervals for detecting the peak amplitudes, as the number of TEP deﬂections and their latencies vary across the brain [18]. Other stimulation sites, especially lateral ones, may be more prone to muscle artifacts and require sophisticated artifact removal methods to ensure reliable functioning of closed-loop TMSeEEG algorithms. As in this work we stimulated in all directions, we unsurprisingly observed some muscle artifacts with certain stimulation directions with two subjects (1 and 6) when visually inspecting the averaged raw signals from Experiment 1. The muscle artifacts were relatively small
+(maximum amplitude 20e30 mV) and appeared only in a few
+channels (up to four) lateral or anterior to the channel of interest (FC1). The SOUND algorithm applied ofﬂine for the data of Experiment 1 diminished these muscle artifacts; the artifacts were, however, not necessarily completely removed. Despite possible residual artifacts with some of the subjects, the observed sinusoidal
+
+orientation dependency in the amplitude of the P20eN40 complex was consistent across all subjects (Fig. 4aef). Therefore, we believe that the observed effect originates from the brain and not from artifacts. The online preprocessing in Experiment 2 included no artifact cleaning. Therefore, some of the single-trial responses of Subjects 1 and 6 contained minor TMS-related muscle artifacts in channels other than the channel of interest (FC1). All search outcomes of these subjects were close to the ground truth optima determined from SOUND-cleaned data (see Fig. 4a,f); thus, muscle artifacts seem not to have affected the performance of the closedloop optimization.
+In addition to the stimulation orientation, our algorithm could optimize EEG responses as a function of other stimulation parameters, such as the stimulation location, intensity, or timing (with respect to ongoing brain activity), or all of them simultaneously. In this work, we determined the stimulation location and intensity manually based on visual inspection of averaged TEPs [29]. We believe that the whole procedure can, however, be automated by combining the presented closed-loop algorithm, for example, with a 5-coil multi-locus TMS system that allows adjusting the stimulation location and orientation without coil movement [54]. An advanced algorithmic implementation may thus make visual evaluation and manual assessment redundant in the future. Such an implementation needs, however, to be highly reliable to avoid erroneous results. Basically, the presented automated approach is suitable for optimizing any feature derived from EEG with respect to one or more parameters.
+We controlled the stimulation orientation with a two-coil transducer comprising two simultaneously operated overlapping ﬁgure-of-eight coils. This provides an easy and effortless adjustment of the stimulation orientation, as it requires no manual movement of the transducer. The EEG-based target automation presented here could be implemented with a robot-controlled TMS system or with manual coil placement. However, the physical coil shift takes time, and the movement of the coil between the consecutive pulses causes motion artifacts in EEG data that require a few additional seconds to get stabilized, increasing the search time.
+The systematic mappings of TMSeEEG responses as a function of the stimulation orientation in Experiment 1 revealed that the amplitudes of the TEP peaks depend on the stimulation direction on the pre-SMA in a sinusoidal way. There are a few examples in the literature showing that the stimulation orientations 45 or 90 apart result in dissimilar TEPs on the primary motor cortex [15] and occipital areas [16]. Thus, it was foreseeable to observe an orientation dependency, but this is the ﬁrst study showing examples of the behaviour of the TEP responses when varying the stimulation orientation systematically in all directions. The optimal stimulus orientations that produce maxima of the P20eN40 curves were reached with E-ﬁelds directed approximately along the medialelateral direction. These directions are perpendicular to the global orientation (posterioreanterior) of the targeted superior frontal gyrus (Fig. 2b). This is in line with the behaviour of motor responses when stimulating the motor cortex [6] and the E-ﬁeld modelling on other areas [55], which have shown that TMS is most effective when the stimulating E-ﬁeld is directed normal to the sulcal walls. Additionally, we found that the sinusoidal form of the TEP amplitude curve supports the cosine model for TMS [56], which suggests that the TMS effect in any part of the cortex depends on the cosine of the angle between the cortical column orientation (normal to the cortical surface) and the direction of the E-ﬁeld. Eﬁeld can be precisely oriented based on anatomy with the help of existing neuronavigation systems. There are, however, tight curvatures in the folded structures of individual cortices, necessitating stimulus guiding with neurophysiological feedback such as EEG.
+
+528
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+Brain Stimulation 15 (2022) 523e531
+
+Fig. 4. Results of the validation of the EEG-based orientation search. aef Subject-wise search results. Optimized orientations from single searches are depicted with red and blue markers. Mean curves of the optimized P20eN40 amplitudes constructed from the data measured in Experiment 1 are visualized with solid black lines, and the vertical dashed lines illustrate the maxima of the mean curves (ground-truth optimal orientations). Shaded grey areas indicate the standard deviation of the single-trial P20eN40 amplitudes. Subjects of Group A are presented in aec and subjects of Group B in def. g Convergence of the automated orientation searches. Red (Group A) and blue (Group B) lines depict the convergences of the single search runs, and the black curve represents the average error until the minimal number of samples (30) is reached. The end results are presented with red and blue markers. The horizontal dotted line marks an error of 25. h Average error in the search results as a function of the signal-to-noise ratio. i Average number of samples needed as a function of the signal-to-noise ratio. The marker shapes and colours in gei corresponds the subject-wise marker styles in aef. (For interpretation of the references to colour in this ﬁgure legend, the reader is referred to the Web version of this article.)
+
+We anticipate that the presented closed-loop optimization maximizing the TMS effect based on EEG signal would increase the comparability of TMS research by decreasing the variation in experimental designs. Targeting based on the amplitudes of the early TEP deﬂections resembles the motor-response-based selection of stimulus location and orientation (often called hotspot search) in the primary motor cortex. In contrast, EEG-based guiding enables setting the stimulation parameters with neurophysiological feedback in any part of the superﬁcial cortex. Being able to analyse EEG signals online and utilize them to adjust TMS delivery enables guiding TMS therapies so that the desired plastic effects are maximized. This is an indispensable step towards making TMS a more effective clinical tool.
+5. Conclusions
+
+Prior presentation
+A poster related to this work was presented at the 4th International Brain Stimulation Conference.
+Funding
+This project has received funding from the Finnish Cultural Foundation, Academy of Finland (decisions No. 294625, 306845, and 327326), Instrumentarium Science Foundation, Emil Aaltonen Foundation, Finnish Science Foundation for Technology and Economics, Jane and Aatos Erkko Foundation, and European Research Council (ERC Synergy) under the European Union's Horizon 2020 research and innovation programme (ConnectToBrain; grant agreement No. 810377).
+
+We demonstrated that it is possible to adjust the stimulation orientation based on EEG signals effortlessly with multi-locus TMS and showed that even single-trial TEPs contain features that can be optimized. The presented method provides a way for automated and individualized TMS targeting with neurophysiological feedback over a large part of the cortex. Moreover, closed-loop TMSeEEG holds great promise for making TMS treatments more effective.
+Informed consent and patient details
+The authors conﬁrm that the individuals shown in Fig. 1 have given consent to have their pictures published in the article without any anonymization.
+
+CRediT authorship contribution statement
+Aino E. Tervo: Conceptualization, Methodology, Investigation, Formal analysis, Software, Visualization, Writing e original draft, Writing e review & editing. Jaakko O. Nieminen: Conceptualization, Methodology, Investigation, Software, Resources, Writing e review & editing. Pantelis Lioumis: Conceptualization, Methodology, Investigation, Writing e review & editing. Johanna Metsomaa: Conceptualization, Methodology, Software, Writing e review & editing. Victor H. Souza: Investigation, Software, Resources, Writing e review & editing. Heikki Sinisalo: Resources, Writing e review & editing. Matti Stenroos: Software, Visualization, Writing e review & editing. Jukka Sarvas: Methodology, Software, Writing
+
+529
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+Brain Stimulation 15 (2022) 523e531
+
+e review & editing. Risto J. Ilmoniemi: Conceptualization, Writing e review & editing.
+Declaration of competing interest
+The authors declare the following ﬁnancial interests/personal relationships which may be considered as potential competing interests:
+P.L. has received consulting fees (unrelated to this work) from Nexstim Plc. R.J.I. is an advisor and a minority shareholder of Nexstim Plc. The other authors declare no competing interests.
+Acknowledgements
+We thank Baran Aydogan for helping with the acquisition of the MRIs, Science-IT at Aalto University School of Science for the computational resources, Mikko Raskinen (Aalto University) for the photos, and Prof. Massimini's group at the University of Milan for providing Matlab tools for generating noise-masking audio tracks and visualizing TMSeEEG responses.
+References
+[1] Barker AT, Jalinous R, Freeston IL. Non-invasive magnetic stimulation of human motor cortex. Lancet 1985;325:1106e7. https://doi.org/10.1016/S01406736(85)92413-4.
+[2] Lefaucheur J-P, Aleman A, Baeken C, Benninger DH, Brunelin J, Di Lazzaro V, et al. Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS): an update (2014e2018). Clin Neurophysiol 2020;131:474e528. https://doi.org/10.1016/j.clinph.2019.11.002.
+[3] Rossi S, Antal A, Bestmann S, Bikson M, Brewer C, Brockmo€ller J, et al. Safety and recommendations for TMS use in healthy subjects and patient populations, with updates on training, ethical and regulatory issues: expert guidelines. Clin Neurophysiol 2021;132:269e306. https://doi.org/10.1016/ j.clinph.2020.10.003.
+[4] Amassian VE, Cracco RQ, Maccabee PJ, Cracco JB, Rudell A, Eberle L. Suppression of visual perception by magnetic coil stimulation of human occipital cortex. Electroencephalogr Clin Neurophysiol 1989;74:458e62. https:// doi.org/10.1016/0168-5597(89)90036-1.
+[5] Pascual-Leone A, Gates JR, Dhuna A. Induction of speech arrest and counting errors with rapid-rate transcranial magnetic stimulation. Neurology 1991;41: 697e702. https://doi.org/10.1212/WNL.41.5.697.
+[6] Mills KR, Boniface SJ, Schubert M. Magnetic brain stimulation with a double coil: the importance of coil orientation. Electroencephalogr Clin Neurophysiol 1992;85:17e21. https://doi.org/10.1016/0168-5597(92)90096-T.
+[7] Herwig U, Satrapi P, Scho€nfeldt-Lecuona C. Using the international 10-20 EEG system for positioning of transcranial magnetic stimulation. Brain Topogr 2003;16:95e9. https://doi.org/10.1023/B:BRAT.0000006333.93597.9d.
+[8] Beam W, Borckardt JJ, Reeves ST, George MS. An efﬁcient and accurate new method for locating the F3 position for prefrontal TMS applications. Brain Stimul 2009;2:50e4. https://doi.org/10.1016/j.brs.2008.09.006.
+[9] Ilmoniemi RJ, Ruohonen J, Karhu J. Transcranial magnetic stimulation d a new tool for functional imaging of the brain. Crit Rev Biomed Eng 1999;27:241e84.
+[10] Ruohonen J, Karhu J. Navigated transcranial magnetic stimulation. Clin Neurophysiol 2010;40:7e17. https://doi.org/10.1016/j.neucli.2010.01.006.
+[11] Kallioniemi E, Ko€no€nen M, Sa€isa€nen L, Gro€hn H, Julkunen P. Functional neuronal anisotropy assessed with neuronavigated transcranial magnetic stimulation. J Neurosci Methods 2015;256:82e90. https://doi.org/10.1016/ j.jneumeth.2015.08.028.
+[12] Miranda PC, de Carvalho M, Conceiça~o I, Sales Luis ML, Ducla-Soares E. A new method for reproducible coil positioning in transcranial magnetic stimulation mapping. Electroencephalogr Clin Neurophysiol 1997;105:116e23. https:// doi.org/10.1016/S0924-980X(97)95720-9.
+[13] Devanne H, Lavoie BA, Capaday C. Input-output properties and gain changes in the human corticospinal pathway. Exp Brain Res 1997;114:329e38. https:// doi.org/10.1007/PL00005641.
+[14] Koponen LM, Nieminen JO, Ilmoniemi RJ. Multi-locus transcranial magnetic stimulationdtheory and implementation. Brain Stimul 2018;11:849e55. https://doi.org/10.1016/j.brs.2018.03.014.
+[15] Bonato C, Miniussi C, Rossini PM. Transcranial magnetic stimulation and cortical evoked potentials: a TMS/EEG co-registration study. Clin Neurophysiol 2006;117:1699e707. https://doi.org/10.1016/j.clinph.2006.05.006.
+[16] Casarotto S, Romero Lauro LJ, Bellina V, Casali AG, Rosanova M, Pigorini A, et al. EEG responses to TMS are sensitive to changes in the perturbation parameters and repeatable over time. PLoS One 2010;5:e10281. https://doi.org/ 10.1371/journal.pone.0010281.
+
+[17] Komssi S, Ka€hko€nen S, Ilmoniemi RJ. The effect of stimulus intensity on brain
+
+responses evoked by transcranial magnetic stimulation. Hum Brain Mapp
+
+2004;21:154e64. https://doi.org/10.1002/hbm.10159.
+
+[18] Rosanova M, Casali A, Bellina V, Resta F, Mariotti M, Massimini M. Natural
+
+frequencies of human corticothalamic circuits. J Neurosci 2009;29:7679e85.
+
+https://doi.org/10.1523/JNEUROSCI.0445-09.2009.
+
+[19] Harquel S, Bacle T, Beynel L, Marendaz C, Chauvin A, David O. Mapping
+
+dynamical properties of cortical microcircuits using robotized TMS and EEG:
+
+towards functional cytoarchitectonics. Neuroimage 2016;135:115e24.
+
+https://doi.org/10.1016/j.neuroimage.2016.05.009.
+
+[20] Ilmoniemi RJ, Virtanen J, Ruohonen J, Karhu J, Aronen HJ, N€a€at€anen R, et al.
+
+Neuronal responses to magnetic stimulation reveal cortical reactivity and
+
+connectivity. Neuroreport 1997;8:3537e40. https://doi.org/10.1097/
+
+00001756-199711100-00024.
+
+[21] Tremblay S, Rogasch NC, Premoli I, Blumberger DM, Casarotto S, Chen R, et al.
+
+Clinical utility and prospective of TMSeEEG. Clin Neurophysiol 2019;130:
+
+802e44. https://doi.org/10.1016/j.clinph.2019.01.001.
+
+[22] Farzan F, Vernet M, Shaﬁ MMD, Rotenberg A, Daskalakis ZJ, Pascual-Leone A.
+
+Characterizing and modulating brain circuitry through transcranial magnetic
+
+stimulation combined with electroencephalography. Front Neural Circ
+
+2016;10:73. https://doi.org/10.3389/fncir.2016.00073.
+
+[23] Cao K-X, Ma M-L, Wang C-Z, Iqbal J, Si J-J, Xue Y-X, et al. TMS-EEG: an
+
+emerging tool to study the neurophysiologic biomarkers of psychiatric dis-
+
+orders. Neuropharmacology 2021;197:108574. https://doi.org/10.1016/
+
+j.neuropharm.2021.108574.
+
+[24] Huang Y-Z, Lu M-K, Antal A, Classen J, Nitsche M, Ziemann U, et al. Plasticity
+
+induced by non-invasive transcranial brain stimulation: a position paper. Clin
+
+Neurophysiol
+
+2017;128:2318e29.
+
+https://doi.org/10.1016/
+
+j.clinph.2017.09.007.
+
+[25] Guerra A, Lopez-Alonso V, Cheeran B, Suppa A. Variability in non-invasive
+
+brain stimulation studies: reasons and results. Neurosci Lett 2020;719:
+
+133330. https://doi.org/10.1016/j.neulet.2017.12.058.
+
+[26] Belardinelli P, Biabani M, Blumberger DM, Bortoletto M, Casarotto S, David O,
+
+et al. Reproducibility in TMSeEEG studies: a call for data sharing, standard
+
+procedures and effective experimental control. Brain Stimul 2019;12:787e90.
+
+https://doi.org/10.1016/j.brs.2019.01.010.
+
+[27] Casali AG, Casarotto S, Rosanova M, Mariotti M, Massimini M. General indices
+
+to characterize the electrical response of the cerebral cortex to TMS. Neuro-
+
+image 2010;49:1459e68. https://doi.org/10.1016/j.neuroimage.2009.09.026.
+
+[28] Casarotto S, Comanducci A, Rosanova M, Sarasso S, Fecchio M, Napolitani M,
+
+et al. Stratiﬁcation of unresponsive patients by an independently validated
+
+index of brain complexity. Ann Neurol 2016;80:718e29. https://doi.org/
+
+10.1002/ana.24779.
+
+[29] Casarotto S, Fecchio M, Rosanova M, Varone G, D’Ambrosio S, Sarasso S, et al.
+
+The rt-TEP tool: real-time visualization of TMS-evoked potentials to maximize
+
+cortical activation and minimize artifacts. J Neurosci Methods 2022;370:
+
+109486. https://doi.org/10.1016/j.jneumeth.2022.109486.
+
+[30] Ilmoniemi R, Karhu J, Ruohonen J, Virtanen J. Method and apparatus for
+
+mapping cortical connections. 2001. US Patent 6,256,531 B1.
+
+[31] Bergmann TO, Mo€lle M, Schmidt MA, Lindner C, Marshall L, Born J, et al. EEG-
+
+guided transcranial magnetic stimulation reveals rapid shifts in motor cortical
+
+excitability during the human sleep slow oscillation. J Neurosci 2012;32:
+
+243e53. https://doi.org/10.1523/JNEUROSCI.4792-11.2012.
+
+[32] Zrenner C, Desideri D, Belardinelli P, Ziemann U. Real-time EEG-deﬁned
+
+excitability states determine efﬁcacy of TMS-induced plasticity in human
+
+motor cortex. Brain Stimul 2018;11:374e89. https://doi.org/10.1016/
+
+j.brs.2017.11.016.
+
+[33] Karabanov A, Thielscher A, Siebner HR. Transcranial brain stimulation: closing
+
+the loop between brain and stimulation. Curr Opin Neurol 2016;29:397e404.
+
+https://doi.org/10.1097/WCO.0000000000000342.
+
+[34] Oldﬁeld RC. The assessment and analysis of handedness: the Edinburgh in-
+
+ventory. Neuropsychologia 1971;9:97e113. https://doi.org/10.1016/0028-
+
+3932(71)90067-4.
+
+[35] Souza VH, Nieminen JO, Tugin S, Koponen LM, Baffa O, Ilmoniemi RJ. TMS with
+
+fast and accurate electronic control: measuring the orientation sensitivity of
+
+corticomotor pathways. Brain Stimul 2022;15:306e15. https://doi.org/
+
+10.1016/j.brs.2022.01.009.
+
+[36] Koponen LM, Nieminen JO, Mutanen TP, Ilmoniemi RJ. Noninvasive extraction
+
+of microsecond-scale dynamics from human motor cortex. Hum Brain Mapp
+
+2018;39:2405e11. https://doi.org/10.1002/hbm.24010.
+
+[37] Russo S, Sarasso S, Puglisi GE, Dal Palù D, Pigorini A, Casarotto S, et al. TAAC -
+
+TMS adaptable auditory control: a universal tool to mask TMS click. J Neurosci
+
+Methods 2022:109491. https://doi.org/10.1016/j.jneumeth.2022.109491. In
+
+press.
+
+[38] Picard N, Strick PL. Motor areas of the medial wall: a review of their location
+
+and functional activation. Cerebr Cortex 1996;6:342e53. https://doi.org/
+
+10.1093/cercor/6.3.342.
+
+[39] Mutanen TP, Metsomaa J, Liljander S, Ilmoniemi RJ. Automatic and robust
+
+noise suppression in EEG and MEG: the SOUND algorithm. Neuroimage
+
+2018;166:135e51. https://doi.org/10.1016/j.neuroimage.2017.10.021.
+
+[40] Mutanen TP, Biabani M, Sarvas J, Ilmoniemi RJ, Rogasch NC. Source-based
+
+artifact-rejection techniques available in TESA, an open-source TMSeEEG
+
+toolbox. Brain Stimul 2020;13:1349e51. https://doi.org/10.1016/
+
+j.brs.2020.06.079.
+
+530
+
+A.E. Tervo, J.O. Nieminen, P. Lioumis et al.
+
+[41] Nielsen JD, Madsen KH, Puonti O, Siebner HR, Bauer C, Madsen CG, et al.
+
+Automatic skull segmentation from MR images for realistic volume conductor
+
+models of the head: assessment of the state-of-the-art. Neuroimage
+
+2018;174:587e98. https://doi.org/10.1016/j.neuroimage.2018.03.001. [42] Stenroos M, Ma€ntynen V, Nenonen J. A Matlab library for solving quasi-static
+
+volume conduction problems using the boundary element method. Comput
+
+Methods Progr Biomed 2007;88:256e63. https://doi.org/10.1016/
+
+j.cmpb.2007.09.004.
+
+[43] Stenroos M, Sarvas J. Bioelectromagnetic forward problem: isolated source
+
+approach revis(it)ed. Phys Med Biol 2012;57:3517e35. https://doi.org/
+
+10.1088/0031-9155/57/11/3517.
+
+[44] Tervo AE, Metsomaa J, Nieminen JO, Sarvas J, Ilmoniemi RJ. Automated search
+
+of stimulation targets with closed-loop transcranial magnetic stimulation.
+
+Neuroimage
+
+2020;220:117082.
+
+https://doi.org/10.1016/
+
+j.neuroimage.2020.117082.
+
+[45] Shahriari B, Swersky K, Wang Z, Adams RP, de Freitas N. Taking the human out
+
+of the loop: a review of Bayesian optimization. Proc IEEE 2016;104:148e75.
+
+https://doi.org/10.1109/JPROC.2015.2494218.
+
+[46] Frazier P, Powell W, Dayanik S. The knowledge-gradient policy for correlated
+
+normal beliefs. Inf J Comput 2009;21:599e613. https://doi.org/10.1287/
+
+ijoc.1080.0314.
+
+[47] Rasmussen CE, Williams CKI. Gaussian Processes for Machine Learning. The
+
+MIT Press; 2006.
+
+[48] M€aki H, Ilmoniemi RJ. The relationship between peripheral and early cortical
+
+activation induced by transcranial magnetic stimulation. Neurosci Lett
+
+2010;478:24e8. https://doi.org/10.1016/j.neulet.2010.04.059.
+
+Brain Stimulation 15 (2022) 523e531
+[49] Casarotto S, Canali P, Rosanova M, Pigorini A, Fecchio M, Mariotti M, et al. Assessing the effects of electroconvulsive therapy on cortical excitability by means of transcranial magnetic stimulation and electroencephalography. Brain Topogr 2013;26:326e37. https://doi.org/10.1007/s10548-012-0256-8.
+[50] Huber R, Ma€ki H, Rosanova M, Casarotto S, Canali P, Casali AG, et al. Human cortical excitability increases with time awake. Cerebr Cortex 2013;23:332e8. https://doi.org/10.1093/cercor/bhs014.
+[51] Mutanen T, Ma€ki H, Ilmoniemi RJ. The effect of stimulus parameters on TMSeEEG muscle artifacts. Brain Stimul 2013;6:371e6. https://doi.org/ 10.1016/j.brs.2012.07.005.
+[52] Chouinard PA, Paus T. What have we learned from “perturbing” the human cortical motor system with transcranial magnetic stimulation? Front Hum Neurosci 2010;4:173. https://doi.org/10.3389/fnhum.2010.00173.
+[53] Shimizu T, Hanajima R, Shirota Y, Tsutsumi R, Tanaka N, Terao Y, et al. Plasticity induction in the pre-supplementary motor area (pre-SMA) and SMAproper differentially affects visuomotor sequence learning. Brain Stimul 2020;13:229e38. https://doi.org/10.1016/j.brs.2019.08.001.
+[54] Nieminen JO, Sinisalo H, Souza VH, Malmi M, Yuryev M, Tervo AE, et al. Multilocus transcranial magnetic stimulation system for electronically targeted brain stimulation. Brain Stimul 2022;15:116e24. https://doi.org/10.1016/ j.brs.2021.11.014.
+[55] Janssen AM, Oostendorp TF, Stegeman DF. The coil orientation dependency of the electric ﬁeld induced by TMS for M1 and other brain areas. J NeuroEng Rehabil 2015;12:47. https://doi.org/10.1186/s12984-015-0036-2.
+[56] Fox PT, Narayana S, Tandon N, Sandoval H, Fox SP, Kochunov P, et al. Columnbased model of electric ﬁeld excitation of cerebral cortex. Hum Brain Mapp 2004;22:1e14. https://doi.org/10.1002/hbm.20006.
+
+531
+
